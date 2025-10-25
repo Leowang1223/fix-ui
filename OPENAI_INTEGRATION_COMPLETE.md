@@ -17,7 +17,7 @@ npm install openai
 
 ### 3. 更新 API Key 配置 ✅
 - **文件**: `apps/backend/.env`
-- **OpenAI API Key**: `sk-proj-Ol1R4...` ✅
+- **OpenAI API Key**: `[REDACTED]`
 - **評分服務**: 設置為 `openai` ✅
 
 ### 4. 更新路由邏輯 ✅
