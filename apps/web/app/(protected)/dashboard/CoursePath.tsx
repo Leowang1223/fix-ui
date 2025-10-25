@@ -34,33 +34,18 @@ export default function CoursePath({ lessons = [], progress = 0, onStart, onSubm
   return (
     <div className="w-full overflow-x-auto">
       <div className="min-w-[720px] relative">
+        {/* track + nodes: gray base track with blue fill overlay */}
         <div className="relative py-8">
-        {/* track: 灰色基底 + 藍色已解鎖覆蓋（覆蓋寬度由 progress 控制） */}
-        <div className="absolute inset-x-6 top-8 h-2 rounded-full" aria-hidden>
-          {/* 灰色基底（全長） */}
-          <div className="absolute inset-0 bg-slate-100 rounded-full" />
-          {/* 藍色已解鎖區段：從左至右覆蓋，視覺上與節點對齊 */}
+          {/* full gray track across node centers */}
+          <div className="absolute left-6 right-6 top-10 h-2 bg-slate-100 rounded-full" aria-hidden />
+          {/* blue fill overlay (width controlled by progress) */}
           <div
-            className="absolute left-0 top-0 h-full rounded-full overflow-hidden"
+            className="absolute left-6 top-10 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"
             style={{ width: `${progress}%`, transition: 'width 900ms cubic-bezier(.22,.9,.32,1)' }}
             aria-hidden
-          >
-            <div className="h-full w-full bg-gradient-to-r from-blue-500 to-blue-600 relative overflow-hidden">
-              {/* 裝飾性移動箭頭（不新增互動按鈕） */}
-              <div className="absolute top-0 left-2 h-full w-6 opacity-70 transform rotate-45 animate-course-arrow pointer-events-none">
-                <svg viewBox="0 0 24 24" className="w-full h-full">
-                  <rect x="0" y="0" width="24" height="24" fill="white" opacity="0.12" />
-                </svg>
-              </div>
-              <div className="absolute top-0 left-24 h-full w-6 opacity-60 transform rotate-45 animate-course-arrow delay-1500 pointer-events-none">
-                <svg viewBox="0 0 24 24" className="w-full h-full">
-                  <rect x="0" y="0" width="24" height="24" fill="white" opacity="0.08" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
+          />
 
+          {/* stations row (nodes are flex distributed so track covers between centers) */}
           <div className="relative flex items-center justify-between px-2">
               {lessons.map((ls, i) => (
                 <Station
@@ -85,10 +70,12 @@ export default function CoursePath({ lessons = [], progress = 0, onStart, onSubm
 
       {/* Start button removed per request — entry via double-click on station number. */}
 
+      {/* Inline keyframes & styles (arrows removed to match simplified visual) */}
       <style jsx>{`
-        .animate-course-arrow { animation: courseArrow 3s linear infinite; }
-        .delay-1500 { animation-delay: 1.5s; }
-        @keyframes courseArrow { 0% { transform: translateX(0) rotate(45deg); opacity: .8; } 50% { transform: translateX(160px) rotate(45deg); opacity: .2; } 100% { transform: translateX(0) rotate(45deg); opacity: .8; } }
+        /* keep waveShift etc for station internal waves if any */
+        @keyframes waveShift { 0% { transform: translateX(0); } 100% { transform: translateX(-24px); } }
+        @keyframes flash { 0% { box-shadow: none } 50% { box-shadow: 0 0 14px rgba(255,255,255,0.6) } 100% { box-shadow: none } }
+        @keyframes ripple { 0% { transform: scale(0.6); opacity: .6 } 100% { transform: scale(2.2); opacity: 0 } }
       `}</style>
     </div>
   )
