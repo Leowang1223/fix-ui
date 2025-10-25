@@ -35,7 +35,7 @@ npm run dev
 3. **檢查 .env 文件**
 確保 `apps/backend/.env` 包含：
 ```
-GEMINI_API_KEY=AIzaSyAoRBCkGe86_wJXl4Of_Fos26bw6uLXk14
+GEMINI_API_KEY=你的API_KEY
 ```
 
 ### 測試流程

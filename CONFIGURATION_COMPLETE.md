@@ -4,7 +4,7 @@
 
 ### API Key 更新
 - **舊 Key**: `AIzaSyAoRB...` ❌ (配額超限)
-- **新 Key**: `AIzaSyBczY1Xv_GjgVEAMQ1jbWp9QPBfIlZAyjc` ✅
+- **新 Key**: `[REDACTED]` ✅
 - **狀態**: 已更新到 `apps/backend/.env`
 
 ### 服務器狀態
@@ -34,7 +34,7 @@
 **預期結果**：
 ```bash
 # 後端日誌應該顯示：
-🔑 API Key 狀態: 已設定 (AIzaSyBczY...)
+🔑 API Key 狀態: 已設定 ([REDACTED])
 🤖 使用 Gemini 1.5 Flash 進行語音評分
 ✅ Gemini 評分成功
 

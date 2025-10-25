@@ -3,7 +3,7 @@
 ## ✅ 已完成配置
 
 1. **✅ 新 API Key 已設置**
-   - 新 Key: `AIzaSyBczY1Xv_GjgVEAMQ1jbWp9QPBfIlZAyjc`
+   - 新 Key: `[REDACTED]`
    - 文件: `apps/backend/.env`
    - 狀態: 已保存並重啟
 
@@ -50,7 +50,7 @@
 
    **✅ 成功標準**：
    ```
-   🔑 API Key 狀態: 已設定 (AIzaSyBczY...)
+   🔑 API Key 狀態: 已設定 ([REDACTED])
    🤖 使用 Gemini 1.5 Flash 進行語音評分
    ✅ Gemini 評分成功
    transcript: "你叫什麼名字"
