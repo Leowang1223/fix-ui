@@ -22,7 +22,7 @@ export default function DashboardPage() {
           </div>
 
           {/* 統計卡片 */}
-          <section className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <section className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="rounded-2xl shadow-md p-6 bg-white">
               <div className="text-sm text-slate-600">已完成課程</div>
               <div className="mt-3 text-3xl font-semibold text-slate-900">0</div>
