@@ -13,6 +13,49 @@ interface LessonSummary {
   stepCount: number
 }
 
+// Try to trigger the existing page "start" flow without changing any handlers.
+function triggerExistingStart(lesson: { index: number; title?: string }) {
+  try {
+    const globals = (window as any)
+    if (typeof globals.startLesson === 'function') {
+      globals.startLesson(lesson)
+      return true
+    }
+    if (typeof globals.onStartLesson === 'function') {
+      globals.onStartLesson(lesson)
+      return true
+    }
+
+    const selectors = [
+      '[data-testid="course-start"]',
+      '[data-testid="course-start-btn"]',
+      '[data-testid="coursepath-start"]',
+      'button:where([data-testid])',
+      'button',
+      'a',
+    ]
+    const candidates = Array.from(document.querySelectorAll(selectors.join(',')))
+    const match = candidates.find((el) => {
+      const aria = el.getAttribute('aria-label') || ''
+      const tid = el.getAttribute('data-testid') || ''
+      const txt = (el.textContent || '').trim()
+      if (tid && /start|開始|start lesson|開始課程/i.test(tid)) return true
+      if (aria && /start|開始|start lesson|開始課程/i.test(aria)) return true
+      if (txt && /^(開始|Start|開始課程|Start Lesson)/i.test(txt)) return true
+      return false
+    }) as HTMLElement | undefined
+    if (match) {
+      match.click()
+      return true
+    }
+
+    return false
+  } catch (e) {
+    console.warn('triggerExistingStart failed', e)
+    return false
+  }
+}
+
 // 中文課程列表組件
 function ChineseLessonsList() {
   const [expanded, setExpanded] = useState(false)
@@ -168,7 +211,10 @@ export default function DashboardPage() {
                   ]}
                   progress={33}
                   onStart={(lesson) => {
-                    console.log('CoursePath onStart:', lesson)
+                    const ok = triggerExistingStart(lesson as any)
+                    if (!ok) {
+                      console.log('CoursePath onStart (fallback):', lesson)
+                    }
                   }}
                   onSubmit={(lesson) => {
                     console.log('CoursePath onSubmit:', lesson)
