@@ -251,34 +251,32 @@ export default function FlashcardsPage() {
         </button>
 
         {/* Deck selector */}
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {deckOptions.map(name => {
-            const count =
-              name === 'all'
-                ? allCards.length
-                : allCards.filter(
-                    card => (card.deckName || 'General').toLowerCase() === name.toLowerCase()
-                  ).length
-            const isActive = activeDeck.toLowerCase() === name.toLowerCase()
-            return (
-              <button
-                key={name}
-                type="button"
-                onClick={() => {
-                  setActiveDeck(name)
-                  applyDeckFilter(allCards, name)
-                }}
-                className={`rounded-2xl border px-4 py-3 text-left shadow-sm transition ${
-                  isActive
-                    ? 'border-blue-200 bg-blue-50 text-blue-700'
-                    : 'border-slate-200 bg-white text-slate-600 hover:border-blue-100'
-                }`}
-              >
-                <p className="text-sm font-semibold">{name === 'all' ? 'All Cards' : name}</p>
-                <p className="text-xs opacity-70">{count} cards</p>
-              </button>
-            )
-          })}
+        <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+          <label className="block text-sm font-semibold text-slate-700 mb-2">
+            Select Deck
+          </label>
+          <select
+            value={activeDeck}
+            onChange={(e) => {
+              setActiveDeck(e.target.value)
+              applyDeckFilter(allCards, e.target.value)
+            }}
+            className="w-full rounded-xl border border-slate-200 px-4 py-2 text-sm text-slate-700 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
+          >
+            {deckOptions.map(name => {
+              const count =
+                name === 'all'
+                  ? allCards.length
+                  : allCards.filter(
+                      card => (card.deckName || 'General').toLowerCase() === name.toLowerCase()
+                    ).length
+              return (
+                <option key={name} value={name}>
+                  {name === 'all' ? 'All Cards' : name} ({count} cards)
+                </option>
+              )
+            })}
+          </select>
         </div>
         <div className="mt-4">
           {showDeckForm ? (
