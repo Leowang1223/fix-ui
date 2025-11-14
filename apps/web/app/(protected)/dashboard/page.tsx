@@ -285,58 +285,63 @@ export default function DashboardPage() {
                   完成每個步驟，課程節奏會幫你從日常對話帶進高難度情境。
                 </p>
 
-                {/* 章节选择器 */}
+                {/* 章节选择器 - 添加横向滚动 */}
                 {chapters.length > 0 && (
-                  <div className="flex gap-2">
-                    {chapters.map(chapter => {
-                      const isActive = selectedChapter === chapter.id
-                      return (
-                        <button
-                          key={chapter.id}
-                          onClick={() => setSelectedChapter(chapter.id)}
-                          className={`rounded-xl px-4 py-2 text-xs font-semibold transition ${
-                            isActive
-                              ? 'bg-blue-500 text-white shadow-lg'
-                              : 'border border-blue-200 text-blue-600 hover:bg-blue-50'
-                          }`}
-                        >
-                          {CHAPTER_TITLES[chapter.id] || chapter.id}
-                        </button>
-                      )
-                    })}
+                  <div className="relative -mx-2 px-2">
+                    <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-track-slate-100 scrollbar-thumb-slate-300 hover:scrollbar-thumb-slate-400">
+                      {chapters.map(chapter => {
+                        const isActive = selectedChapter === chapter.id
+                        return (
+                          <button
+                            key={chapter.id}
+                            onClick={() => setSelectedChapter(chapter.id)}
+                            className={`flex-shrink-0 rounded-xl px-4 py-2 text-xs font-semibold transition ${
+                              isActive
+                                ? 'bg-blue-500 text-white shadow-lg'
+                                : 'border border-blue-200 text-blue-600 hover:bg-blue-50'
+                            }`}
+                          >
+                            {CHAPTER_TITLES[chapter.id] || chapter.id}
+                          </button>
+                        )
+                      })}
+                    </div>
                   </div>
                 )}
               </div>
 
-              <div className="flex items-end justify-between gap-5">
-                {lessons.filter(l => l.chapterId === selectedChapter).map((lesson) => {
-                  const progress = lessonProgress[lesson.lesson_id] || 0
-                  const completed = progress >= 100
-                  return (
-                    <button
-                      key={lesson.lesson_id}
-                      onClick={() => handleLessonClick(lesson.lesson_id)}
-                      className="group flex min-w-[90px] flex-col items-center gap-2"
-                    >
-                      <div
-                        className={`relative flex h-14 w-14 items-center justify-center rounded-full text-sm font-semibold transition group-hover:scale-110 ${
-                          completed
-                            ? "bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-[0_12px_30px_rgba(37,99,235,0.45)]"
-                            : "border-[3px] border-blue-200 bg-white text-blue-500"
-                        }`}
+              {/* 课程卡片 - 添加横向滚动 */}
+              <div className="relative -mx-2 px-2">
+                <div className="flex items-end gap-5 overflow-x-auto pb-2 scrollbar-thin scrollbar-track-slate-100 scrollbar-thumb-slate-300 hover:scrollbar-thumb-slate-400">
+                  {lessons.filter(l => l.chapterId === selectedChapter).map((lesson) => {
+                    const progress = lessonProgress[lesson.lesson_id] || 0
+                    const completed = progress >= 100
+                    return (
+                      <button
+                        key={lesson.lesson_id}
+                        onClick={() => handleLessonClick(lesson.lesson_id)}
+                        className="group flex min-w-[90px] flex-shrink-0 flex-col items-center gap-2"
                       >
-                        <span className="relative z-10">{lesson.lessonNumber}</span>
-                        {!completed && <div className="absolute inset-[3px] rounded-full bg-slate-50" />}
-                      </div>
-                      <div className="text-center leading-tight">
-                        <p className="text-[11px] font-medium text-slate-700 group-hover:text-blue-600">
-                          {lesson.title}
-                        </p>
-                        <p className="text-[10px] text-slate-400">{completed ? "100%" : `${progress}%`}</p>
-                      </div>
-                    </button>
-                  )
-                })}
+                        <div
+                          className={`relative flex h-14 w-14 items-center justify-center rounded-full text-sm font-semibold transition group-hover:scale-110 ${
+                            completed
+                              ? "bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-[0_12px_30px_rgba(37,99,235,0.45)]"
+                              : "border-[3px] border-blue-200 bg-white text-blue-500"
+                          }`}
+                        >
+                          <span className="relative z-10">{lesson.lessonNumber}</span>
+                          {!completed && <div className="absolute inset-[3px] rounded-full bg-slate-50" />}
+                        </div>
+                        <div className="text-center leading-tight">
+                          <p className="text-[11px] font-medium text-slate-700 group-hover:text-blue-600">
+                            {lesson.title}
+                          </p>
+                          <p className="text-[10px] text-slate-400">{completed ? "100%" : `${progress}%`}</p>
+                        </div>
+                      </button>
+                    )
+                  })}
+                </div>
               </div>
             </section>
           </div>

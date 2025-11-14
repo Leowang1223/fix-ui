@@ -802,8 +802,8 @@ interface LessonStep {
   expected_answer: string[]
   pinyin?: string | string[]
   pinyin_examples?: string[]
-  english_hint: string
-  encouragement: string
+  english_hint?: string
+  encouragement?: string
   video_url?: string
   captions?: {
     text: string
@@ -819,11 +819,11 @@ interface Lesson {
   chapter_id?: string
   lesson_number?: number
   title: string
-  description: string
+  description?: string
   steps: LessonStep[]
   review?: {
-    summary: string
-    mission: string
+    summary?: string
+    mission?: string
   }
 }
 
@@ -985,14 +985,26 @@ export default function LessonPage() {
     async function loadLesson() {
       try {
         setLoading(true)
-  const response = await fetch(`${API_BASE}/api/lessons/${lessonId}`)
+        const response = await fetch(`${API_BASE}/api/lessons/${lessonId}`)
         if (!response.ok) throw new Error('課程載入失敗')
         const data = await response.json()
-        setLesson(data)
-        if (data.steps && data.steps.length > 0) {
-          setCurrentSubtitle(data.steps[0].teacher)
+
+        console.log('📚 課程數據載入:', {
+          lesson_id: data.lesson_id,
+          chapter_id: data.chapter_id,
+          title: data.title,
+          steps_count: data.steps?.length || 0
+        })
+
+        // 檢查課程數據是否有效
+        if (!data.steps || !Array.isArray(data.steps) || data.steps.length === 0) {
+          throw new Error('課程沒有題目')
         }
+
+        setLesson(data)
+        setCurrentSubtitle(data.steps[0].teacher)
       } catch (err) {
+        console.error('❌ 課程載入失敗:', err)
         setError(err instanceof Error ? err.message : '未知錯誤')
       } finally {
         setLoading(false)
@@ -1685,24 +1697,34 @@ export default function LessonPage() {
         
         // 🔧 修改：評分後直接進入下一題，不顯示單題反饋
         console.log('📝 評分完成，準備進入下一題...')
-        
+        console.log('當前題目索引:', currentStepIndex)
+        console.log('總題目數:', lesson.steps.length)
+        console.log('是否有下一題:', currentStepIndex < lesson.steps.length - 1)
+
         // 檢查是否還有下一題
         if (currentStepIndex < lesson.steps.length - 1) {
           // 有下一題：短暫延遲後進入下一題
           console.log(`  → 進入下一題 (${currentStepIndex + 1}/${lesson.steps.length})`)
           setTimeout(() => {
-            setCurrentStepIndex(prev => prev + 1)
+            console.log('⏰ 延遲結束，開始切換到下一題...')
+            setCurrentStepIndex(prev => {
+              console.log('  更新索引: 從', prev, '到', prev + 1)
+              return prev + 1
+            })
             setSessionState('question')
             setIsRecording(false)
             setIsRetrying(false)
             setAttempts(0)
             setNeedsManualPlay(false)
             setCurrentCaption('')
-            
+
             // 設置新題目的字幕
             const nextStep = lesson.steps[currentStepIndex + 1]
             if (nextStep) {
+              console.log('  設置新字幕:', nextStep.teacher)
               setCurrentSubtitle(nextStep.teacher)
+            } else {
+              console.warn('  ⚠️ 找不到下一題數據!')
             }
           }, 800)
         } else {
