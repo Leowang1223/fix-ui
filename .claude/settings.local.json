@@ -12,7 +12,14 @@
       "Bash(taskkill //F //PID 6564)",
       "Bash(taskkill //F //PID 39544)",
       "Bash(npm run dev:frontend:*)",
-      "Bash(npm run dev:backend:*)"
+      "Bash(npm run dev:backend:*)",
+      "Bash(if exist nul del /f nul 2)",
+      "Bash(NUL)",
+      "Bash(dir:*)",
+      "Bash(git rm:*)",
+      "Bash(git add:*)",
+      "Bash(git clean:*)",
+      "Bash(.gitignore)"
     ],
     "deny": [],
     "ask": []
