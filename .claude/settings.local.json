@@ -19,7 +19,9 @@
       "Bash(git rm:*)",
       "Bash(git add:*)",
       "Bash(git clean:*)",
-      "Bash(.gitignore)"
+      "Bash(.gitignore)",
+      "Bash(npm run build:frontend:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
