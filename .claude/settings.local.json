@@ -26,7 +26,17 @@
       "Bash(timeout /t 3 /nobreak)",
       "Bash(nul)",
       "Bash(exit 0)",
-      "Bash(timeout /t 2 /nobreak)"
+      "Bash(timeout /t 2 /nobreak)",
+      "Bash(timeout:*)",
+      "Bash(tasklist:*)",
+      "Bash(powershell -Command \"Stop-Process -Id 20500 -Force\")",
+      "Bash(powershell \"Stop-Process -Id 20500 -Force\")",
+      "Bash(grep:*)",
+      "Bash(powershell:*)",
+      "Bash(node:*)",
+      "Bash(git checkout:*)",
+      "Bash(wc:*)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []

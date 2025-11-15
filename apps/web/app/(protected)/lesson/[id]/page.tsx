@@ -954,6 +954,14 @@ export default function LessonPage() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const hasAutoplayedForStep = useRef<string>('') // �O���w�۰ʼ��񪺨B�J
   const flashcardStatusTimeout = useRef<number | null>(null)
+  const reportSessionIdRef = useRef<string | null>(null)
+  const hasGeneratedReportRef = useRef(false)
+
+  useEffect(() => {
+    hasGeneratedReportRef.current = false
+    reportSessionIdRef.current = null
+  }, [lessonId])
+
 
   // 🔧 修復：過濾掉括號內的拼音
   const removePinyin = (text: string): string => {
@@ -1384,8 +1392,7 @@ export default function LessonPage() {
     const currentStep = lesson.steps[currentStepIndex]
     const { score, detailedScores, fullResult } = currentFeedback
     
-    // 保存結果
-    const newResult: StepResult = {
+    const baseResult: StepResult = {
       stepId: currentStep.id,
       question: currentStep.teacher,
       score: Math.round(score),
@@ -1405,10 +1412,13 @@ export default function LessonPage() {
       apiResponse: fullResult
     }
     
-    const allResults = [...stepResults, newResult]
-    setStepResults(allResults)
+    const existingIndex = stepResults.findIndex(result => result.stepId === currentStep.id)
+    let allResults = stepResults
+    if (existingIndex === -1) {
+      allResults = [...stepResults, baseResult]
+      setStepResults(allResults)
+    }
     
-    // 重置狀態
     setSessionState('question')
     setCurrentAudioBlob(null)
     setCurrentFeedback(null)
@@ -1417,19 +1427,21 @@ export default function LessonPage() {
     setIsPlayingUserAudio(false)
     setIsPlayingCorrectAudio(false)
     
-    // 停止任何正在播放的音頻
     window.speechSynthesis.cancel()
     
-    // 前進到下一題或顯示報表
+    if (allResults.length >= lesson.steps.length) {
+      console.log('✅ Course completed! Total results:', allResults.length)
+      finalizeLesson(allResults.slice(0, lesson.steps.length))
+      return
+    }
+    
     if (currentStepIndex < lesson.steps.length - 1) {
       setCurrentStepIndex(currentStepIndex + 1)
       setAttempts(0)
-    } else {
-      // 課程完成
-      console.log('✅ Course completed! Total results:', allResults.length)
-      generateFullReport(allResults)
     }
   }
+
+
 
   // 開始錄音
   const startRecording = async () => {
@@ -1533,7 +1545,11 @@ export default function LessonPage() {
         
         // 檢查 1：轉錄結果長度
         if (!userTranscript || userTranscript.length < 1) {
-          console.error('轉錄結果為空或太短')
+          console.error('❌❌❌ 轉錄結果為空！流程中斷！❌❌❌')
+          console.error('  原始轉錄:', rawTranscript)
+          console.error('  清理後:', userTranscript)
+          console.error('  → 這會導致評分流程中斷，不會保存結果！')
+
           setRecordingError('Speech recognition failed: No valid speech detected. Please speak clearly and try again.')
           setIsRetrying(false)
           setNeedsManualPlay(false)
@@ -1544,18 +1560,26 @@ export default function LessonPage() {
         const qSim = calculateSimilarity(currentStep.teacher, userTranscript)
         const wordConfidences = result.word_confidence || []
         const lowConfidenceCount = wordConfidences.filter((wc: any) => wc.confidence < 0.6).length
-        const lowConfidence = wordConfidences.length > 0 
+        const lowConfidence = wordConfidences.length > 0
           ? (lowConfidenceCount / wordConfidences.length) > 0.7
           : false
-        
+
         console.log('🔍 問題文字:', currentStep.teacher)
         console.log('📝 轉錄文字:', userTranscript)
         console.log('📊 問題相似度:', (qSim * 100).toFixed(1) + '%')
         console.log('⚠️ 低信心度比例:', lowConfidence)
-        
-        // 只在幾乎完全相同且信心度低時才拒絕
-        if (qSim >= 0.98 && (lowConfidence || wordConfidences.length === 0)) {
-          console.error('可能誤讀題面')
+        console.log('⚠️ Word confidence 數據:', wordConfidences.length > 0 ? '有' : '無')
+
+        // 🔧 修復：只在極端情況下才拒絕（99.9% 相似且有信心度數據顯示低信心）
+        // 移除 wordConfidences.length === 0 條件，避免誤判
+        if (qSim >= 0.999 && lowConfidence) {
+          console.error('❌❌❌ 誤讀題面檢查觸發！流程中斷！❌❌❌')
+          console.error('  問題相似度:', (qSim * 100).toFixed(1) + '%')
+          console.error('  低信心度:', lowConfidence)
+          console.error('  題目:', currentStep.teacher)
+          console.error('  回答:', userTranscript)
+          console.error('  → 這會導致評分流程中斷，不會保存結果！')
+
           setRecordingError('Speech recognition anomaly: The system may have confused your answer with the question. Please try recording again.')
           setIsRetrying(false)
           setNeedsManualPlay(false)
@@ -1724,6 +1748,7 @@ export default function LessonPage() {
         })
         
         // 添加到結果列表
+        const allResults = [...stepResults, currentStepResult]
         setStepResults(prev => [...prev, currentStepResult])
 
         // 🆕 失敗題目加入單字卡（去重）
@@ -1752,16 +1777,39 @@ export default function LessonPage() {
         console.log('是否有下一題:', currentStepIndex < lesson.steps.length - 1)
 
         // 檢查是否還有下一題
-        if (currentStepIndex < lesson.steps.length - 1) {
-          // 有下一題：直接進入下一題（不使用setTimeout）
+        if (allResults.length >= lesson.steps.length) {
+          console.log('🚀 所有題目已完成，準備顯示最終報表')
+          console.log('  📊 狀態檢查:', {
+            allResultsLength: allResults.length,
+            stepResultsLength: stepResults.length,
+            lessonStepsLength: lesson.steps.length,
+            hasGeneratedReportRef: hasGeneratedReportRef.current,
+            currentShowReport: showReport,
+            hasLesson: !!lesson,
+            lessonId: lesson?.lesson_id,
+            lessonTitle: lesson?.title
+          })
+
+          // 🔍 關鍵檢查：確保 lesson 存在
+          if (!lesson) {
+            console.error('❌ 致命錯誤：lesson 在課程完成時為 null!')
+            console.error('  → 這不應該發生，請檢查代碼邏輯')
+            alert('錯誤：課程數據丟失，請重新整理頁面')
+            return
+          }
+
+          console.log('  ✅ lesson 檢查通過，立即調用 finalizeLesson')
+
+          // 立即調用，不使用 setTimeout
+          finalizeLesson(allResults)
+        } else {
           console.log(`  → 進入下一題 (${currentStepIndex + 1}/${lesson.steps.length})`)
-          const nextIndex = currentStepIndex + 1
+          const nextIndex = Math.min(currentStepIndex + 1, lesson.steps.length - 1)
           const nextStep = lesson.steps[nextIndex]
 
           console.log('  更新索引: 從', currentStepIndex, '到', nextIndex)
           console.log('  下一題數據:', nextStep ? nextStep.teacher : '無')
 
-          // 立即更新所有狀態
           setCurrentStepIndex(nextIndex)
           setCurrentSubtitle(nextStep?.teacher || '')
           setSessionState('question')
@@ -1773,81 +1821,6 @@ export default function LessonPage() {
           setRecordingError(null)
 
           console.log('✅ 已切換到題目', nextIndex + 1)
-        } else {
-          // 沒有下一題：顯示最終報表
-          console.log('  → 所有題目完成，顯示最終報表')
-          console.log('  → stepResults 總數:', stepResults.length + 1) // +1 因為這是最後一題剛加入的
-          
-          // 🔧 生成最終報表數據
-          setTimeout(() => {
-            // 計算所有題目的平均分數（包括剛剛完成的這一題）
-            const allResults = [...stepResults, currentStepResult]
-            console.log('📊 生成最終報表，題目數量:', allResults.length)
-            
-            // 計算五維平均分數
-            let totalPronunciation = 0
-            let totalFluency = 0
-            let totalAccuracy = 0
-            let totalComprehension = 0
-            let totalConfidence = 0
-            let totalScore = 0
-            
-            allResults.forEach((result, index) => {
-              console.log(`  題目 ${index + 1}:`, {
-                score: result.score,
-                detailedScores: result.detailedScores
-              })
-              
-              if (result.detailedScores) {
-                totalPronunciation += result.detailedScores.pronunciation
-                totalFluency += result.detailedScores.fluency
-                totalAccuracy += result.detailedScores.accuracy
-                totalComprehension += result.detailedScores.comprehension
-                totalConfidence += result.detailedScores.confidence
-              }
-              totalScore += result.score
-            })
-            
-            const count = allResults.length
-            const report: FullReport = {
-              overview: {
-                total_score: Math.round(totalScore / count),
-                radar: {
-                  pronunciation: Math.round(totalPronunciation / count),
-                  fluency: Math.round(totalFluency / count),
-                  accuracy: Math.round(totalAccuracy / count),
-                  comprehension: Math.round(totalComprehension / count),
-                  confidence: Math.round(totalConfidence / count)
-                }
-              },
-              per_question: allResults.map(result => ({
-                scores: {
-                  pronunciation: result.detailedScores?.pronunciation || 0,
-                  fluency: result.detailedScores?.fluency || 0,
-                  accuracy: result.detailedScores?.accuracy || 0,
-                  comprehension: result.detailedScores?.comprehension || 0,
-                  confidence: result.detailedScores?.confidence || 0,
-                  total: result.score
-                },
-                advice: result.overallPractice || ''
-              })),
-              recommendations: [
-                'Continue practicing pronunciation',
-                'Focus on tone accuracy',
-                'Practice speaking more fluently'
-              ]
-            }
-            
-            console.log('✅ 最終報表已生成:', report)
-            // 🔧 立即保存到學習歷史（確保歷史頁可看到）
-            try {
-              saveToHistory(report, allResults)
-            } catch (e) {
-              console.warn('保存學習歷史時發生警告:', e)
-            }
-            setFullReport(report)
-            setShowReport(true)
-          }, 800)
         }
         
       } catch (err) {
@@ -1865,15 +1838,32 @@ export default function LessonPage() {
   // 🔧 已移除 handleScore 函數，邏輯轉移到 handleNextQuestion 和即時反饋彈窗
 
   // 生成完整報表（調用 analysis-core 邏輯）
-  const generateFullReport = async (finalResults?: typeof stepResults) => {
+  const generateFullReport = async (
+    finalResults?: typeof stepResults,
+    options?: {
+      sessionId?: string | null
+      skipImmediateFallback?: boolean
+    }
+  ) => {
     if (!lesson) return
 
-    // 🔧 使用傳入的結果或當前狀態的結果
     const resultsToUse = finalResults || stepResults
     console.log('📊 Generating report for', resultsToUse.length, 'questions')
 
+    const sessionId = options?.sessionId || `lesson-${lessonId}-${Date.now()}`
+    const skipFallback = options?.skipImmediateFallback ?? false
+
+    const runFallback = () => {
+      const simpleReport = generateSimpleReport(resultsToUse)
+      setFullReport(simpleReport)
+      const savedId = saveToHistory(simpleReport, resultsToUse, sessionId)
+      if (savedId) {
+        reportSessionIdRef.current = savedId
+      }
+      setShowReport(true)
+    }
+
     try {
-      const sessionId = `lesson-${lessonId}-${Date.now()}`
       const items = resultsToUse.map((result, index) => ({
         index: index,
         question: result.question,
@@ -1895,24 +1885,26 @@ export default function LessonPage() {
         })
       })
 
-      if (!response.ok) throw new Error('報表生成失敗')
+      if (!response.ok) throw new Error('完整報表產生失敗')
       
       const report = await response.json()
       setFullReport(report)
       
-      // 🔧 儲存到 localStorage，使用實際的結果
-      saveToHistory(report, resultsToUse)
+      const savedId = saveToHistory(report, resultsToUse, sessionId)
+      if (savedId) {
+        reportSessionIdRef.current = savedId
+      }
       
       setShowReport(true)
     } catch (err) {
-      console.error('報表生成錯誤:', err)
-      // 使用簡易報表（手動計算雷達圖數據）
-      const simpleReport = generateSimpleReport(resultsToUse)
-      setFullReport(simpleReport)
-      saveToHistory(simpleReport, resultsToUse)
-      setShowReport(true)
+      console.error('完整報表產生失敗:', err)
+      if (!skipFallback) {
+        runFallback()
+      }
     }
   }
+
+
 
   // 生成簡易報表（當後端失敗時）
   const generateSimpleReport = (resultsToUse?: typeof stepResults): FullReport => {
@@ -1978,16 +1970,20 @@ export default function LessonPage() {
   }
 
   // 儲存到 localStorage 學習歷史
-  const saveToHistory = (report: any, resultsToUse?: typeof stepResults) => {
-    if (!lesson) return
+  const saveToHistory = (
+    report: any,
+    resultsToUse?: typeof stepResults,
+    existingSessionId?: string | null
+  ): string | null => {
+    if (!lesson) return null
 
-    // 🔧 使用傳入的結果或當前狀態的結果
     const results = resultsToUse || stepResults
     console.log('💾 Saving to history:', results.length, 'questions')
 
     const totalAttempts = results.reduce((sum, r) => sum + r.attempts, 0)
+    const sessionId = existingSessionId || `lesson-${lessonId}-${Date.now()}`
     const sessionData = {
-      sessionId: `lesson-${lessonId}-${Date.now()}`,
+      sessionId,
       lessonId: lessonId,
       lessonTitle: lesson.title,
       completedAt: new Date().toISOString(),
@@ -2008,7 +2004,6 @@ export default function LessonPage() {
           comprehension: r.score,
           confidence: r.score
         },
-        // 🔧 新增：儲存 suggestions 和 overallPractice
         suggestions: r.suggestions || null,
         detailedSuggestions: r.detailedSuggestions || null,
         overallPractice: r.overallPractice || null,
@@ -2025,23 +2020,157 @@ export default function LessonPage() {
     try {
       const existingHistory = localStorage.getItem('lessonHistory')
       const history = existingHistory ? JSON.parse(existingHistory) : []
-      history.push(sessionData)
+      if (existingSessionId) {
+        const idx = history.findIndex((entry: any) => entry.sessionId === existingSessionId)
+        if (idx >= 0) {
+          history[idx] = sessionData
+        } else {
+          history.push(sessionData)
+        }
+      } else {
+        history.push(sessionData)
+      }
       localStorage.setItem('lessonHistory', JSON.stringify(history))
-      
-      console.log('✅ 已保存到學習歷史:', {
+
+      console.log('✅ 已儲存到學習歷史:', {
         sessionId: sessionData.sessionId,
         questionsCount: sessionData.questionsCount,
         resultsLength: sessionData.results.length
       })
-      
-      // Debug: 列出每個問題
+
       sessionData.results.forEach((result, index) => {
         console.log(`  Question ${index + 1}: ${result.question} (Score: ${result.score})`)
       })
     } catch (err) {
       console.error('❌ 儲存學習歷史失敗:', err)
     }
+
+    return sessionData.sessionId
   }
+
+  const finalizeLesson = (results: StepResult[]) => {
+    console.log('🔔 ========== finalizeLesson 被調用 ==========')
+    console.log('  📊 參數:', {
+      resultsLength: results.length,
+      resultsPreview: results.slice(0, 2).map(r => ({ stepId: r.stepId, score: r.score }))
+    })
+    console.log('  📊 當前狀態:', {
+      hasLesson: !!lesson,
+      lessonId: lesson?.lesson_id,
+      lessonStepsLength: lesson?.steps?.length,
+      hasGeneratedReportRef: hasGeneratedReportRef.current,
+      currentStepResultsLength: stepResults.length,
+      currentShowReport: showReport
+    })
+
+    // 檢查 1: lesson 是否存在
+    if (!lesson) {
+      console.error('❌ 無法生成報表：lesson 不存在')
+      console.error('  → 這不應該發生，請檢查 lesson 狀態')
+      return
+    }
+
+    // 檢查 2: results 是否有數據
+    if (results.length === 0) {
+      console.error('❌ 無法生成報表：results 為空')
+      console.error('  → 請確認評分流程是否正確執行')
+      return
+    }
+
+    // 檢查 3: 是否已經生成過報表
+    if (hasGeneratedReportRef.current) {
+      console.warn('⚠️ 報表已生成，跳過重複生成')
+      console.warn('  → 這是正常的，避免重複調用')
+      console.warn('  → 當前 showReport:', showReport)
+      return
+    }
+
+    try {
+      console.log('✅ 所有檢查通過，開始生成報表...')
+      hasGeneratedReportRef.current = true
+
+      // 步驟 1: 生成簡易報表
+      console.log('  📝 步驟 1/4: 調用 generateSimpleReport')
+      const simpleReport = generateSimpleReport(results)
+      console.log('  ✅ 報表生成成功:', {
+        totalScore: simpleReport.overview.total_score,
+        radarData: simpleReport.overview.radar,
+        questionsCount: simpleReport.per_question.length
+      })
+
+      // 步驟 2: 設置 fullReport 狀態
+      console.log('  📝 步驟 2/4: 調用 setFullReport')
+      setFullReport(simpleReport)
+      console.log('  ✅ setFullReport 已調用')
+
+      // 步驟 3: 設置 showReport 狀態 (關鍵!)
+      console.log('  📝 步驟 3/4: 調用 setShowReport(true) ⭐⭐⭐')
+      setShowReport(true)
+      console.log('  ✅ setShowReport(true) 已調用!')
+      console.log('  ⏳ 等待 React 重新渲染...')
+
+      // 驗證狀態是否更新 (延遲檢查)
+      setTimeout(() => {
+        console.log('  🔍 狀態驗證 (延遲100ms後):', {
+          showReport,
+          hasLesson: !!lesson,
+          fullReport: !!fullReport
+        })
+      }, 100)
+
+      // 步驟 4: 保存歷史記錄
+      console.log('  📝 步驟 4/4: 保存歷史記錄')
+      const sessionId = saveToHistory(simpleReport, results, reportSessionIdRef.current)
+      if (sessionId) {
+        reportSessionIdRef.current = sessionId
+        console.log('  ✅ 歷史記錄已保存，sessionId:', sessionId)
+      }
+
+      // 背景任務: 生成完整報表 (從後端獲取)
+      console.log('  🔄 背景任務: 調用 generateFullReport')
+      generateFullReport(results, {
+        sessionId: sessionId || undefined,
+        skipImmediateFallback: true
+      })
+
+      console.log('🎉 ========== finalizeLesson 執行完成 ==========')
+
+    } catch (error) {
+      console.error('❌ ========== finalizeLesson 執行失敗 ==========')
+      console.error('  錯誤詳情:', error)
+      console.error('  錯誤堆疊:', error instanceof Error ? error.stack : '無堆疊')
+
+      // 重置標記，允許重試
+      hasGeneratedReportRef.current = false
+      console.log('  🔄 已重置 hasGeneratedReportRef，允許重試')
+
+      // 用戶提示
+      alert('報表生成失敗，請重新整理頁面或聯繫支援。\n\n錯誤: ' + (error instanceof Error ? error.message : String(error)))
+    }
+  }
+
+  useEffect(() => {
+    // 簡化日誌，只在關鍵時刻打印
+    if (!lesson || hasGeneratedReportRef.current || !lesson.steps || lesson.steps.length === 0) {
+      return
+    }
+
+    const shouldFinalize = stepResults.length >= lesson.steps.length && stepResults.length > 0
+
+    if (shouldFinalize) {
+      console.log('🔄 ========== useEffect 檢測到課程完成 ==========')
+      console.log('  📊 狀態:', {
+        stepResultsLength: stepResults.length,
+        lessonStepsLength: lesson.steps.length
+      })
+      console.log('  ✅ 調用 finalizeLesson (from useEffect)')
+
+      const resultsToUse = stepResults.slice(0, lesson.steps.length)
+      finalizeLesson(resultsToUse)
+    }
+  }, [lesson, stepResults])
+
+
 
   // 手動播放按鈕
   const handleManualPlay = () => {
@@ -2132,8 +2261,44 @@ export default function LessonPage() {
     return Math.round(total / stepResults.length)
   }
 
+  // 🛠️ 調試工具：將狀態暴露到 window 供檢查
+  if (typeof window !== 'undefined') {
+    (window as any).__debugLessonState = {
+      showReport,
+      hasLesson: !!lesson,
+      lessonId: lesson?.lesson_id,
+      loading,
+      error: !!error,
+      stepResultsLength: stepResults.length,
+      hasFullReport: !!fullReport,
+      hasGeneratedReport: hasGeneratedReportRef.current,
+      checkStatus: () => {
+        console.log('📊 當前狀態檢查:', {
+          showReport,
+          hasLesson: !!lesson,
+          loading,
+          stepResults: stepResults.length,
+          hasFullReport: !!fullReport,
+          條件: `showReport=${showReport} && lesson=${!!lesson} = ${showReport && !!lesson}`
+        })
+      }
+    }
+  }
+
   // 報表頁面
   if (showReport && lesson) {
+    console.log('✅ ========== 渲染報表頁面 ==========')
+    console.log('  📊 報表詳情:', {
+      showReport,
+      lessonId: lesson.lesson_id,
+      lessonTitle: lesson.title,
+      fullReportExists: !!fullReport,
+      fullReportScore: fullReport?.overview?.total_score,
+      stepResultsCount: stepResults.length,
+      hasRadarData: !!fullReport?.overview?.radar
+    })
+    console.log('  ✅ 條件滿足: showReport && lesson = true')
+    
     const avgScore = fullReport?.overview.total_score || calculateAverageScore()
     
     // 構建報表數據
@@ -2237,6 +2402,8 @@ export default function LessonPage() {
                   setAttempts(0)
                   setFullReport(null)
                   setNeedsManualPlay(false)
+                  hasGeneratedReportRef.current = false
+                  reportSessionIdRef.current = null
                 }}
                 className="px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium text-sm transition-all shadow-sm hover:shadow"
               >
