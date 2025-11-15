@@ -1308,7 +1308,57 @@ export default function LessonPage() {
     setNeedsManualPlay(false)  // 🔧 改為 false，允許立即錄音
     setIsPlayingUserAudio(false)
     setIsPlayingCorrectAudio(false)
-    
+
+    // 停止任何正在播放的音頻
+    window.speechSynthesis.cancel()
+  }
+
+  // 🎯 手動控制 - 上一題
+  const handlePreviousQuestion = () => {
+    if (!lesson || currentStepIndex <= 0) return
+
+    const prevIndex = currentStepIndex - 1
+    const prevStep = lesson.steps[prevIndex]
+
+    console.log('⬅️ 手動切換到上一題:', prevIndex + 1)
+
+    setCurrentStepIndex(prevIndex)
+    setCurrentSubtitle(prevStep?.teacher || '')
+    setSessionState('question')
+    setIsRecording(false)
+    setIsRetrying(false)
+    setAttempts(0)
+    setNeedsManualPlay(false)
+    setCurrentCaption('')
+    setRecordingError(null)
+    setCurrentAudioBlob(null)
+    setCurrentFeedback(null)
+
+    // 停止任何正在播放的音頻
+    window.speechSynthesis.cancel()
+  }
+
+  // 🎯 手動控制 - 下一題
+  const handleManualNextQuestion = () => {
+    if (!lesson || currentStepIndex >= lesson.steps.length - 1) return
+
+    const nextIndex = currentStepIndex + 1
+    const nextStep = lesson.steps[nextIndex]
+
+    console.log('➡️ 手動切換到下一題:', nextIndex + 1)
+
+    setCurrentStepIndex(nextIndex)
+    setCurrentSubtitle(nextStep?.teacher || '')
+    setSessionState('question')
+    setIsRecording(false)
+    setIsRetrying(false)
+    setAttempts(0)
+    setNeedsManualPlay(false)
+    setCurrentCaption('')
+    setRecordingError(null)
+    setCurrentAudioBlob(null)
+    setCurrentFeedback(null)
+
     // 停止任何正在播放的音頻
     window.speechSynthesis.cancel()
     
@@ -1703,30 +1753,26 @@ export default function LessonPage() {
 
         // 檢查是否還有下一題
         if (currentStepIndex < lesson.steps.length - 1) {
-          // 有下一題：短暫延遲後進入下一題
+          // 有下一題：直接進入下一題（不使用setTimeout）
           console.log(`  → 進入下一題 (${currentStepIndex + 1}/${lesson.steps.length})`)
-          setTimeout(() => {
-            console.log('⏰ 延遲結束，開始切換到下一題...')
-            setCurrentStepIndex(prev => {
-              console.log('  更新索引: 從', prev, '到', prev + 1)
-              return prev + 1
-            })
-            setSessionState('question')
-            setIsRecording(false)
-            setIsRetrying(false)
-            setAttempts(0)
-            setNeedsManualPlay(false)
-            setCurrentCaption('')
+          const nextIndex = currentStepIndex + 1
+          const nextStep = lesson.steps[nextIndex]
 
-            // 設置新題目的字幕
-            const nextStep = lesson.steps[currentStepIndex + 1]
-            if (nextStep) {
-              console.log('  設置新字幕:', nextStep.teacher)
-              setCurrentSubtitle(nextStep.teacher)
-            } else {
-              console.warn('  ⚠️ 找不到下一題數據!')
-            }
-          }, 800)
+          console.log('  更新索引: 從', currentStepIndex, '到', nextIndex)
+          console.log('  下一題數據:', nextStep ? nextStep.teacher : '無')
+
+          // 立即更新所有狀態
+          setCurrentStepIndex(nextIndex)
+          setCurrentSubtitle(nextStep?.teacher || '')
+          setSessionState('question')
+          setIsRecording(false)
+          setIsRetrying(false)
+          setAttempts(0)
+          setNeedsManualPlay(false)
+          setCurrentCaption('')
+          setRecordingError(null)
+
+          console.log('✅ 已切換到題目', nextIndex + 1)
         } else {
           // 沒有下一題：顯示最終報表
           console.log('  → 所有題目完成，顯示最終報表')
@@ -2244,271 +2290,8 @@ export default function LessonPage() {
   const currentStep = lesson.steps[currentStepIndex]
   const progress = ((currentStepIndex + 1) / lesson.steps.length) * 100
 
-  // 🎯 反饋頁面渲染
-  if (sessionState === 'feedback' && currentFeedback) {
-    const expectedAnswer = Array.isArray(currentFeedback.expectedAnswer)
-      ? currentFeedback.expectedAnswer[0]
-      : currentFeedback.expectedAnswer
 
-    return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-4">
-        {/* 進度條 */}
-        <div className="w-full max-w-4xl mb-6">
-          <h1 className="text-2xl font-bold text-center mb-2">{lesson.title}</h1>
-          <div className="w-full bg-gray-200 rounded-full h-2.5">
-            <div className="bg-blue-600 h-2.5 rounded-full transition-all duration-500" style={{ width: `${progress}%` }} />
-          </div>
-          <div className="text-center text-sm text-gray-600 mt-2">
-            Question {currentStepIndex + 1} / {lesson.steps.length} - Feedback
-          </div>
-        </div>
-
-        {/* 反饋內容 */}
-        <div className="w-full max-w-4xl bg-white rounded-2xl shadow-2xl p-8">
-          {/* 標題 */}
-          <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl p-6 text-white mb-6">
-            <h2 className="text-3xl font-bold text-center">
-              Your Performance
-            </h2>
-          </div>
-
-          {/* 分數顯示 */}
-          <div className="mb-8 text-center">
-            <div className="text-6xl font-bold text-gray-800 mb-2">
-              {Math.round(currentFeedback.score)}
-            </div>
-            
-            {/* 相似度顯示 */}
-            {currentFeedback.similarity !== undefined && (
-              <div className="text-lg text-gray-600 mb-2">
-                Similarity: {(currentFeedback.similarity * 100).toFixed(1)}%
-              </div>
-            )}
-            
-            <div className="text-xl text-gray-600 mb-4">
-              {currentFeedback.score >= 90 ? 'Excellent!' :
-               currentFeedback.score >= 75 ? 'Great!' :
-               currentFeedback.score >= 60 ? 'Good!' :
-               'Keep Practicing!'}
-            </div>
-            <div className={`inline-block px-6 py-2 rounded-full text-white font-bold ${
-              currentFeedback.passed ? 'bg-green-500' : 'bg-yellow-500'
-            }`}>
-              {currentFeedback.passed ? 'Passed' : 'Try Again'}
-            </div>
-          </div>
-
-          {/* 正確答案 */}
-          <div className="mb-6 p-6 bg-green-50 rounded-xl border-2 border-green-200">
-            <h3 className="text-lg font-bold text-green-800 mb-3">Correct Answer:</h3>
-            <div className="space-y-2">
-              <p className="text-2xl text-gray-800 font-medium">
-                {currentFeedback.bestMatchAnswer || expectedAnswer}
-              </p>
-              {currentStep?.pinyin && (
-                <p className="text-lg text-green-600">{currentStep.pinyin}</p>
-              )}
-            </div>
-          </div>
-
-          {/* 你的回答 */}
-          {currentFeedback.transcript && (
-            <div className="mb-6 p-6 bg-blue-50 rounded-xl border-2 border-blue-200">
-              <h3 className="text-lg font-bold text-blue-800 mb-3">Your Answer:</h3>
-              <p className="text-xl text-gray-800">{currentFeedback.transcript}</p>
-            </div>
-          )}
-
-          {/* 🔧 槽位錯誤警告（最優先顯示） */}
-          {currentFeedback.slotErrors && currentFeedback.slotErrors.length > 0 && (
-            <div className="mb-6 p-6 bg-red-100 rounded-xl border-4 border-red-400">
-              <div className="flex items-start gap-3 mb-4">
-                <span className="text-3xl">🚨</span>
-                <div>
-                  <h3 className="text-xl font-bold text-red-900 mb-2">Critical Error: Key Word Position Mismatch</h3>
-                  <p className="text-red-800 font-medium">
-                    You used the wrong pronoun or key word. Please check the differences carefully:
-                  </p>
-                </div>
-              </div>
-              
-              <div className="bg-white p-4 rounded-lg space-y-2">
-                {currentFeedback.slotErrors.map((error, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-red-900">
-                    <span className="text-xl">❌</span>
-                    <span className="font-mono text-sm">{error}</span>
-                  </div>
-                ))}
-              </div>
-              
-              {currentFeedback.slotMismatchPositions && currentFeedback.slotMismatchPositions.length > 0 && (
-                <div className="mt-4 p-3 bg-yellow-50 rounded border-2 border-yellow-300">
-                  <p className="text-sm text-yellow-900">
-                    <strong>Error Position(s):</strong> Character {currentFeedback.slotMismatchPositions.join(', ')}
-                  </p>
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* 🆕 詳細逐字分析 */}
-          {currentFeedback.detailedAnalysis && (
-            <div className="mb-6 p-6 bg-purple-50 rounded-xl border-2 border-purple-200">
-              <h3 className="text-lg font-bold text-purple-800 mb-4">Character-by-Character Analysis:</h3>
-              
-              {/* 總體評價 */}
-              <div className="mb-4 p-4 bg-white rounded-lg">
-                <p className="text-gray-700">{currentFeedback.detailedAnalysis.overallFeedback}</p>
-              </div>
-              
-              {/* 逐字比對 */}
-              <div className="p-4 bg-white rounded-lg font-mono text-sm">
-                <pre className="whitespace-pre-wrap leading-relaxed text-gray-800">
-                  {currentFeedback.detailedAnalysis.characterByCharacterAnalysis}
-                </pre>
-              </div>
-            </div>
-          )}
-
-          {/* 錯誤分析 - 英文糾正 (向後兼容) */}
-          {!currentFeedback.detailedAnalysis && currentFeedback.correctionFeedback && (
-            <div className="mb-6 p-6 bg-red-50 rounded-xl border-2 border-red-200">
-              <h3 className="text-lg font-bold text-red-800 mb-3">Pronunciation Analysis:</h3>
-              <pre className="text-sm text-gray-700 whitespace-pre-wrap font-sans leading-relaxed">
-                {currentFeedback.correctionFeedback}
-              </pre>
-            </div>
-          )}
-
-          {/* 詳細評分 */}
-          {currentFeedback.detailedScores && (
-            <div className="mb-6 p-6 bg-gray-50 rounded-xl">
-              <h3 className="text-lg font-bold text-gray-800 mb-4">📊 Detailed Scores:</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {Object.entries(currentFeedback.detailedScores).map(([key, value]) => {
-                  const score = typeof value === 'number' ? value : 0
-                  return (
-                    <div key={key} className="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
-                      <span className="font-medium text-gray-700 capitalize">{key}:</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-32 bg-gray-200 rounded-full h-2">
-                          <div
-                            className={`h-2 rounded-full ${
-                              score >= 90 ? 'bg-green-500' :
-                              score >= 75 ? 'bg-blue-500' :
-                              score >= 60 ? 'bg-yellow-500' : 'bg-red-500'
-                            }`}
-                            style={{ width: `${score}%` }}
-                          />
-                        </div>
-                        <span className="font-bold text-gray-800 min-w-[3rem] text-right">{score}</span>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* 建議 */}
-          {currentFeedback.suggestions && Object.keys(currentFeedback.suggestions).length > 0 && (
-            <div className="mb-6 p-6 bg-purple-50 rounded-xl border-2 border-purple-200">
-              <h3 className="text-lg font-bold text-purple-800 mb-4">Suggestions:</h3>
-              <div className="space-y-3">
-                {Object.entries(currentFeedback.suggestions).map(([key, value]) => {
-                  const suggestion = typeof value === 'string' ? value : ''
-                  return suggestion ? (
-                    <div key={key} className="flex gap-3">
-                      <span className="font-semibold text-purple-600 capitalize min-w-[140px]">{key}:</span>
-                      <span className="text-gray-700">{suggestion}</span>
-                    </div>
-                  ) : null
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* 整體練習方法 */}
-          {currentFeedback.overallPractice && (
-            <div className="mb-8 p-6 bg-yellow-50 rounded-xl border-2 border-yellow-200">
-              <h3 className="text-lg font-bold text-yellow-800 mb-3">Practice Method:</h3>
-              <p className="text-gray-700 leading-relaxed">{currentFeedback.overallPractice}</p>
-            </div>
-          )}
-
-          {/* 音頻播放按鈕 */}
-          <div className="mb-6 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border-2 border-blue-200">
-            <h3 className="text-sm font-semibold text-gray-700 mb-4 flex items-center gap-2">
-              <span className="text-lg">🎧</span>
-              Audio Playback:
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {/* 播放自己的錄音 */}
-              <button
-                onClick={playUserRecording}
-                disabled={!currentAudioBlob || isPlayingUserAudio}
-                className={`py-3 px-4 rounded-lg font-medium text-sm transition-all flex items-center justify-center gap-2 ${
-                  isPlayingUserAudio
-                    ? 'bg-blue-400 cursor-wait text-white'
-                    : currentAudioBlob
-                    ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg'
-                    : 'bg-gray-300 cursor-not-allowed text-gray-500'
-                }`}
-              >
-                <span className="text-lg">🔊</span>
-                <span>{isPlayingUserAudio ? 'Playing...' : 'My Recording'}</span>
-              </button>
-
-              {/* 播放正確答案 TTS */}
-              <button
-                onClick={playCorrectAnswer}
-                disabled={isPlayingCorrectAudio}
-                className={`py-3 px-4 rounded-lg font-medium text-sm transition-all flex items-center justify-center gap-2 ${
-                  isPlayingCorrectAudio
-                    ? 'bg-blue-400 cursor-wait text-white'
-                    : 'bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg'
-                }`}
-              >
-                <span className="text-lg">🔊</span>
-                <span>{isPlayingCorrectAudio ? 'Playing...' : 'Correct Answer'}</span>
-              </button>
-            </div>
-          </div>
-
-          {/* 操作按鈕區 */}
-          <div className="space-y-3">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {/* 重新錄音 */}
-              <button
-                onClick={handleRetryRecording}
-                className="py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-sm transition-all shadow-sm hover:shadow-md"
-              >
-                Retry Recording
-              </button>
-
-              {/* 下一題 */}
-              <button
-                onClick={handleNextQuestion}
-                className="py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-sm transition-all shadow-sm hover:shadow-md"
-              >
-                {currentStepIndex < lesson.steps.length - 1 ? 'Next Question' : 'Finish Lesson'}
-              </button>
-            </div>
-
-            {/* 返回課程列表 */}
-            <div className="text-center pt-2">
-              <button
-                onClick={() => router.push('/dashboard')}
-                className="px-6 py-2.5 bg-gray-500 hover:bg-gray-600 text-white rounded-lg font-medium text-sm transition-all shadow-sm hover:shadow"
-              >
-                Back to Courses
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-  }
+  // Feedback page removed - auto-advance to next question instead
 
   // 🎯 問題頁面渲染
   return (
@@ -2725,12 +2508,47 @@ export default function LessonPage() {
         </div>
       )}
 
-      <button
-        onClick={() => router.push('/dashboard')}
-        className="mt-6 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium text-sm transition-all shadow-sm hover:shadow"
-      >
-        Back to Courses
-      </button>
+      {/* 導航按鈕組 - Previous / Back to Dashboard / Next */}
+      <div className="mt-6 flex items-center justify-center gap-3">
+        <button
+          onClick={handlePreviousQuestion}
+          disabled={currentStepIndex === 0}
+          className={`px-5 py-2.5 rounded-lg font-medium text-sm transition-all shadow-sm hover:shadow flex items-center gap-2 ${
+            currentStepIndex === 0
+              ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              : 'bg-gray-600 hover:bg-gray-700 text-white'
+          }`}
+          title="Previous Question"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Previous
+        </button>
+
+        <button
+          onClick={() => router.push('/dashboard')}
+          className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium text-sm transition-all shadow-sm hover:shadow"
+        >
+          Back to Dashboard
+        </button>
+
+        <button
+          onClick={handleManualNextQuestion}
+          disabled={currentStepIndex === lesson.steps.length - 1}
+          className={`px-5 py-2.5 rounded-lg font-medium text-sm transition-all shadow-sm hover:shadow flex items-center gap-2 ${
+            currentStepIndex === lesson.steps.length - 1
+              ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              : 'bg-gray-600 hover:bg-gray-700 text-white'
+          }`}
+          title="Next Question"
+        >
+          Next
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
     </div>
   )
 }

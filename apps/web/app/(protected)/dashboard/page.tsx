@@ -43,13 +43,27 @@ const NAV_ITEMS = [
 const CHAPTER_TITLES: Record<string, string> = {
   'C1': 'Chapter 1: Basic Chinese',
   'C2': 'Chapter 2: Intermediate Conversations',
-  'C3': 'Chapter 3: Advanced Topics'
+  'C3': 'Chapter 3: Advanced Topics',
+  'C4': 'Chapter 4: Daily Life',
+  'C5': 'Chapter 5: Social Situations',
+  'C6': 'Chapter 6: Business Chinese',
+  'C7': 'Chapter 7: Travel & Leisure',
+  'C8': 'Chapter 8: Cultural Topics',
+  'C9': 'Chapter 9: Professional Communication',
+  'C10': 'Chapter 10: Advanced Mastery'
 }
 
 const CHAPTER_DESCRIPTIONS: Record<string, string> = {
   'C1': 'Master fundamental Chinese conversation skills',
   'C2': 'Expand your speaking abilities with practical scenarios',
-  'C3': 'Handle complex conversations with confidence'
+  'C3': 'Handle complex conversations with confidence',
+  'C4': 'Learn to discuss everyday activities and routines',
+  'C5': 'Navigate social interactions with ease',
+  'C6': 'Communicate effectively in business settings',
+  'C7': 'Discuss travel plans and leisure activities',
+  'C8': 'Explore Chinese culture and traditions',
+  'C9': 'Master professional workplace communication',
+  'C10': 'Achieve fluency in advanced Chinese topics'
 }
 
 export default function DashboardPage() {
