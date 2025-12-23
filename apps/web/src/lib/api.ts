@@ -143,4 +143,82 @@ export async function apiGenerateReport(payload: {
   return fetchJson(`/v1/generate-report`, { method: 'POST', body: JSON.stringify(payload) });
 }
 
+// ========== Scenario Mode APIs ==========
+
+export interface ScenarioCheckpoint {
+  id: number
+  description: string
+  chineseDescription: string
+  completed: boolean
+  completedAt?: string
+}
+
+export interface Scenario {
+  scenario_id: string
+  title: string
+  chineseTitle: string
+  description: string
+  chineseDescription: string
+  difficulty: 'A0-A1' | 'A2-B1' | 'B2+'
+  category: string
+  objective: string
+  chineseObjective: string
+  estimatedTurns: number
+  checkpoints: Array<{
+    id: number
+    description: string
+    chineseDescription: string
+    keywords?: string[]
+    weight: number
+  }>
+  roles: Array<{
+    id: string
+    name: string
+    chineseName: string
+    systemPrompt: string
+  }>
+  suggestions: {
+    byRole: Record<string, Array<{
+      chinese: string
+      pinyin: string
+      english: string
+      type: 'safe' | 'advanced' | 'alternative'
+      context?: string
+      checkpointId?: number
+    }>>
+  }
+  keyVocabulary: Array<{ chinese: string; pinyin: string; english: string }>
+  keyPatterns: Array<{ pattern: string; example: string; english: string }>
+  tags: string[]
+  createdAt: string
+  isCustom: boolean
+}
+
+export async function apiGetScenarios(): Promise<{ scenarios: Scenario[] }> {
+  return fetchJson(`/api/scenarios`)
+}
+
+export async function apiGetScenarioById(scenarioId: string): Promise<{ scenario: Scenario }> {
+  return fetchJson(`/api/scenarios/${encodeURIComponent(scenarioId)}`)
+}
+
+export async function apiGenerateCustomScenario(payload: {
+  title: string
+  description: string
+  difficulty: 'A0-A1' | 'A2-B1' | 'B2+'
+  objective: string
+}): Promise<{ scenario: Scenario }> {
+  return fetchJson(`/api/scenarios/generate`, {
+    method: 'POST',
+    body: JSON.stringify(payload)
+  })
+}
+
+export async function apiSaveCustomScenario(scenario: Scenario): Promise<{ success: boolean; scenarioId: string }> {
+  return fetchJson(`/api/scenarios/custom`, {
+    method: 'POST',
+    body: JSON.stringify({ scenario })
+  })
+}
+
 

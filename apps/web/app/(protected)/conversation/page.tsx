@@ -5,6 +5,9 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { Mic, Video, VideoOff, CheckCircle2, AlertCircle, MessageSquare } from 'lucide-react'
 import { InterviewerSelector, getInterviewerImagePath, DEFAULT_INTERVIEWER } from '../lesson/components/InterviewerSelector'
+import ScenarioSelector from './components/ScenarioSelector'
+import RoleSelector from './components/RoleSelector'
+import { apiGetScenarioById, type Scenario } from '@/lib/api'
 
 interface LessonHistoryEntry {
   sessionId: string
@@ -13,10 +16,10 @@ interface LessonHistoryEntry {
   completedAt: string
 }
 
-interface CompletedLesson {
-  lessonId: string
-  title: string
+interface CompletedChapter {
   chapterId: string
+  title: string
+  lessonCount: number
 }
 
 export default function ConversationSetupPage() {
@@ -27,14 +30,20 @@ export default function ConversationSetupPage() {
   const [cameraPermission, setCameraPermission] = useState<'pending' | 'granted' | 'denied'>('pending')
   const [enableCamera, setEnableCamera] = useState(false)
 
-  // Topic selection
-  const [completedLessons, setCompletedLessons] = useState<CompletedLesson[]>([])
-  const [selectedTopics, setSelectedTopics] = useState<string[]>([])
-  const [topicMode, setTopicMode] = useState<'selected' | 'all' | 'free'>('all')
+  // Chapter selection
+  const [completedChapters, setCompletedChapters] = useState<CompletedChapter[]>([])
+  const [selectedChapters, setSelectedChapters] = useState<string[]>([])
+  const [topicMode, setTopicMode] = useState<'selected' | 'all' | 'free' | 'scenario'>('all')
 
   // Interviewer selection
   const [currentInterviewer, setCurrentInterviewer] = useState<string>(DEFAULT_INTERVIEWER)
   const [showInterviewerSelector, setShowInterviewerSelector] = useState(false)
+
+  // Scenario mode
+  const [showScenarioSelector, setShowScenarioSelector] = useState(false)
+  const [selectedScenario, setSelectedScenario] = useState<Scenario | null>(null)
+  const [showRoleSelector, setShowRoleSelector] = useState(false)
+  const [selectedRole, setSelectedRole] = useState<string | null>(null)
 
   // Load completed lessons from history
   useEffect(() => {
@@ -48,19 +57,27 @@ export default function ConversationSetupPage() {
       try {
         const history: LessonHistoryEntry[] = JSON.parse(historyStr)
 
-        // Extract unique completed lessons
-        const uniqueLessons = new Map<string, CompletedLesson>()
+        // Extract unique chapters from completed lessons
+        const chapterMap = new Map<string, { lessonCount: number }>()
         history.forEach(entry => {
-          if (!uniqueLessons.has(entry.lessonId)) {
-            uniqueLessons.set(entry.lessonId, {
-              lessonId: entry.lessonId,
-              title: entry.lessonTitle,
-              chapterId: entry.lessonId.split('-')[0] // Extract C1, C2, etc.
-            })
+          const chapterId = entry.lessonId.split('-')[0] // Extract C1, C2, etc.
+          if (chapterId) {
+            const existing = chapterMap.get(chapterId)
+            if (existing) {
+              existing.lessonCount++
+            } else {
+              chapterMap.set(chapterId, { lessonCount: 1 })
+            }
           }
         })
 
-        setCompletedLessons(Array.from(uniqueLessons.values()))
+        const chapters = Array.from(chapterMap.entries()).map(([chapterId, data]) => ({
+          chapterId,
+          title: `Chapter ${chapterId.substring(1)}`,
+          lessonCount: data.lessonCount
+        }))
+
+        setCompletedChapters(chapters)
       } catch (error) {
         console.error('Failed to load lesson history:', error)
       }
@@ -110,13 +127,32 @@ export default function ConversationSetupPage() {
     }
   }
 
-  // Handle topic selection
-  const toggleTopic = (lessonId: string) => {
-    setSelectedTopics(prev =>
-      prev.includes(lessonId)
-        ? prev.filter(id => id !== lessonId)
-        : [...prev, lessonId]
+  // Handle chapter selection
+  const toggleChapter = (chapterId: string) => {
+    setSelectedChapters(prev =>
+      prev.includes(chapterId)
+        ? prev.filter(id => id !== chapterId)
+        : [...prev, chapterId]
     )
+  }
+
+  // Handle scenario selection
+  const handleScenarioSelect = async (scenarioId: string) => {
+    try {
+      const { scenario } = await apiGetScenarioById(scenarioId)
+      setSelectedScenario(scenario)
+      setShowScenarioSelector(false)
+      setShowRoleSelector(true)
+    } catch (error) {
+      console.error('Failed to load scenario:', error)
+      alert('Failed to load scenario. Please try again.')
+    }
+  }
+
+  // Handle role selection
+  const handleRoleSelect = (roleId: string) => {
+    setSelectedRole(roleId)
+    setShowRoleSelector(false)
   }
 
   // Handle start conversation
@@ -126,12 +162,20 @@ export default function ConversationSetupPage() {
       return
     }
 
+    // Validate scenario mode
+    if (topicMode === 'scenario' && (!selectedScenario || !selectedRole)) {
+      alert('Please select a scenario and role first.')
+      return
+    }
+
     // Save settings to localStorage
     const conversationSettings = {
       interviewerId: currentInterviewer,
       enableCamera,
       topicMode,
-      selectedTopics: topicMode === 'selected' ? selectedTopics : [],
+      selectedTopics: topicMode === 'selected' ? selectedChapters : [],
+      scenarioId: topicMode === 'scenario' ? selectedScenario?.scenario_id : undefined,
+      userRole: topicMode === 'scenario' ? selectedRole : undefined,
     }
     localStorage.setItem('conversationSettings', JSON.stringify(conversationSettings))
 
@@ -274,10 +318,10 @@ export default function ConversationSetupPage() {
             </div>
 
             <div className="space-y-4">
-              <div className="flex gap-2">
+              <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => setTopicMode('all')}
-                  className={`flex-1 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all ${
+                  className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all ${
                     topicMode === 'all'
                       ? 'border-blue-500 bg-blue-50 text-blue-700'
                       : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
@@ -287,17 +331,17 @@ export default function ConversationSetupPage() {
                 </button>
                 <button
                   onClick={() => setTopicMode('selected')}
-                  className={`flex-1 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all ${
+                  className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all ${
                     topicMode === 'selected'
                       ? 'border-blue-500 bg-blue-50 text-blue-700'
                       : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
                   }`}
                 >
-                  Select Specific Lessons
+                  Select Specific Chapters
                 </button>
                 <button
                   onClick={() => setTopicMode('free')}
-                  className={`flex-1 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all ${
+                  className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all ${
                     topicMode === 'free'
                       ? 'border-blue-500 bg-blue-50 text-blue-700'
                       : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
@@ -305,31 +349,44 @@ export default function ConversationSetupPage() {
                 >
                   Free Talk
                 </button>
+                <button
+                  onClick={() => {
+                    setTopicMode('scenario')
+                    setShowScenarioSelector(true)
+                  }}
+                  className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all ${
+                    topicMode === 'scenario'
+                      ? 'border-purple-500 bg-purple-50 text-purple-700'
+                      : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
+                  }`}
+                >
+                  Scenario Mode
+                </button>
               </div>
 
               {topicMode === 'selected' && (
                 <div className="rounded-lg border border-gray-200 p-4">
                   <p className="mb-3 text-sm font-medium text-gray-700">
-                    Select lessons to focus on:
+                    Select chapters to focus on:
                   </p>
-                  {completedLessons.length === 0 ? (
+                  {completedChapters.length === 0 ? (
                     <p className="text-sm text-gray-500">
-                      No completed lessons yet. Complete some lessons first to unlock topic-based conversations.
+                      No completed chapters yet. Complete some lessons first to unlock chapter-based conversations.
                     </p>
                   ) : (
-                    <div className="grid grid-cols-2 gap-2 max-h-48 overflow-y-auto">
-                      {completedLessons.map(lesson => (
+                    <div className="grid grid-cols-3 gap-2 max-h-48 overflow-y-auto">
+                      {completedChapters.map(chapter => (
                         <button
-                          key={lesson.lessonId}
-                          onClick={() => toggleTopic(lesson.lessonId)}
-                          className={`rounded-lg border px-3 py-2 text-left text-sm transition-all ${
-                            selectedTopics.includes(lesson.lessonId)
+                          key={chapter.chapterId}
+                          onClick={() => toggleChapter(chapter.chapterId)}
+                          className={`rounded-lg border px-3 py-2 text-center text-sm transition-all ${
+                            selectedChapters.includes(chapter.chapterId)
                               ? 'border-blue-500 bg-blue-50 text-blue-700'
                               : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
                           }`}
                         >
-                          <div className="font-medium">{lesson.lessonId}</div>
-                          <div className="text-xs opacity-75">{lesson.title}</div>
+                          <div className="font-bold text-lg">{chapter.chapterId}</div>
+                          <div className="text-xs opacity-75">{chapter.lessonCount} lessons</div>
                         </button>
                       ))}
                     </div>
@@ -343,6 +400,29 @@ export default function ConversationSetupPage() {
                     <strong>Free Talk Mode:</strong> The AI instructor will have open-ended conversations
                     without focusing on specific lesson content.
                   </p>
+                </div>
+              )}
+
+              {topicMode === 'scenario' && selectedScenario && selectedRole && (
+                <div className="rounded-lg border border-purple-200 bg-purple-50 p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <div>
+                      <p className="text-sm font-bold text-purple-900">{selectedScenario.title}</p>
+                      <p className="text-xs text-purple-700">{selectedScenario.description}</p>
+                    </div>
+                    <button
+                      onClick={() => setShowScenarioSelector(true)}
+                      className="text-xs text-purple-600 hover:text-purple-800 underline"
+                    >
+                      Change
+                    </button>
+                  </div>
+                  <div className="mt-2 flex items-center gap-2">
+                    <span className="text-xs font-medium text-purple-900">Your Role:</span>
+                    <span className="text-xs bg-purple-200 text-purple-900 px-2 py-1 rounded">
+                      {selectedScenario.roles.find(r => r.id === selectedRole)?.name}
+                    </span>
+                  </div>
                 </div>
               )}
             </div>
@@ -376,6 +456,26 @@ export default function ConversationSetupPage() {
             setShowInterviewerSelector(false)
           }}
           onClose={() => setShowInterviewerSelector(false)}
+        />
+      )}
+
+      {/* Scenario Selector Modal */}
+      {showScenarioSelector && (
+        <ScenarioSelector
+          onSelect={handleScenarioSelect}
+          onClose={() => setShowScenarioSelector(false)}
+        />
+      )}
+
+      {/* Role Selector Modal */}
+      {showRoleSelector && selectedScenario && (
+        <RoleSelector
+          scenario={selectedScenario}
+          onSelect={handleRoleSelect}
+          onBack={() => {
+            setShowRoleSelector(false)
+            setShowScenarioSelector(true)
+          }}
         />
       )}
     </div>

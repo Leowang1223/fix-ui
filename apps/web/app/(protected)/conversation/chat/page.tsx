@@ -7,6 +7,9 @@ import { Mic, MicOff, PhoneOff, Loader2, AlertCircle } from 'lucide-react'
 import { DialogSidebar, type Message, type Suggestion } from '../components/DialogSidebar'
 import { InterviewerSelector, getInterviewerImagePath, getInterviewerVoice, DEFAULT_INTERVIEWER } from '../../lesson/components/InterviewerSelector'
 import { API_BASE } from '../../config'
+import ProgressTracker from '../components/ProgressTracker'
+import CompletionPrompt from '../components/CompletionPrompt'
+import { type ScenarioCheckpoint } from '@/lib/api'
 
 // TTS utility functions (copied from lesson page)
 function removePinyin(text: string): string {
@@ -38,8 +41,10 @@ function removePunctuation(text: string): string {
 interface ConversationSettings {
   interviewerId: string
   enableCamera: boolean
-  topicMode: 'selected' | 'all' | 'free'
+  topicMode: 'selected' | 'all' | 'free' | 'scenario'
   selectedTopics: string[]
+  scenarioId?: string
+  userRole?: string
 }
 
 export default function ConversationChatPage() {
@@ -66,6 +71,17 @@ export default function ConversationChatPage() {
   // Video stream
   const [videoStream, setVideoStream] = useState<MediaStream | null>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
+
+  // Scenario mode
+  const [scenarioInfo, setScenarioInfo] = useState<{
+    scenarioId: string
+    title: string
+    objective: string
+    userRole: string
+    aiRole: string
+  } | null>(null)
+  const [checkpoints, setCheckpoints] = useState<ScenarioCheckpoint[]>([])
+  const [allCheckpointsCompleted, setAllCheckpointsCompleted] = useState(false)
 
   // Load settings
   useEffect(() => {
@@ -123,20 +139,81 @@ export default function ConversationChatPage() {
     }
   }, [videoStream])
 
+  // Get all completed chapter IDs from lesson history
+  const getAllCompletedChapterIds = (): string[] => {
+    if (typeof window === 'undefined') return []
+
+    try {
+      const historyStr = localStorage.getItem('lessonHistory')
+      if (!historyStr) return []
+
+      const history: any[] = JSON.parse(historyStr)
+      const chapterSet = new Set<string>()
+
+      history.forEach(entry => {
+        if (entry.lessonId) {
+          let chapterId: string | null = null
+
+          // Handle different lesson ID formats:
+          // - New format: "C1-L01" -> extract "C1"
+          // - Old format: "L10" -> map to chapter based on lesson number
+          if (entry.lessonId.includes('-')) {
+            // New format: C1-L01
+            chapterId = entry.lessonId.split('-')[0]
+          } else if (entry.lessonId.match(/^L(\d+)$/)) {
+            // Old format: L10 -> map to C1
+            // Assuming L1-L10 = C1, L11-L20 = C2, etc.
+            const lessonNum = parseInt(entry.lessonId.replace('L', ''))
+            const chapterNum = Math.ceil(lessonNum / 10)
+            chapterId = `C${chapterNum}`
+          }
+
+          // Only add valid chapter IDs (C1, C2, etc.)
+          if (chapterId && chapterId.match(/^C\d+$/)) {
+            chapterSet.add(chapterId)
+          }
+        }
+      })
+
+      const chapters = Array.from(chapterSet)
+      console.log('Extracted chapter IDs:', chapters)
+      return chapters
+    } catch (error) {
+      console.error('Failed to load completed chapters:', error)
+      return []
+    }
+  }
+
   // Start conversation with backend
   const startConversation = async (loadedSettings: ConversationSettings) => {
     setIsLoading(true)
     setError(null)
 
     try {
+      // Determine topics to send
+      let topics: string[] = []
+      if (loadedSettings.topicMode === 'selected') {
+        topics = loadedSettings.selectedTopics
+      } else if (loadedSettings.topicMode === 'all') {
+        topics = getAllCompletedChapterIds()
+      }
+
+      const requestBody: any = {
+        topics,
+        topicMode: loadedSettings.topicMode,
+        interviewerId: loadedSettings.interviewerId,
+      }
+
+      // Add scenario mode parameters
+      if (loadedSettings.topicMode === 'scenario') {
+        requestBody.scenarioId = loadedSettings.scenarioId
+        requestBody.userRole = loadedSettings.userRole
+      }
+
       const response = await fetch(`${API_BASE}/api/conversation/start`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          topics: loadedSettings.topicMode === 'selected' ? loadedSettings.selectedTopics : [],
-          topicMode: loadedSettings.topicMode,
-          interviewerId: loadedSettings.interviewerId,
-        }),
+        body: JSON.stringify(requestBody),
       })
 
       if (!response.ok) {
@@ -145,6 +222,18 @@ export default function ConversationChatPage() {
 
       const data = await response.json()
       setSessionId(data.sessionId)
+
+      // Set scenario info and checkpoints if in scenario mode
+      if (data.scenario) {
+        setScenarioInfo({
+          scenarioId: data.scenario.scenarioId,
+          title: data.scenario.title,
+          objective: data.scenario.objective,
+          userRole: data.scenario.userRole,
+          aiRole: data.scenario.aiRole,
+        })
+        setCheckpoints(data.scenario.checkpoints)
+      }
 
       // Add first instructor message
       const firstMessage: Message = {
@@ -277,6 +366,15 @@ export default function ConversationChatPage() {
       }
       setMessages(prev => [...prev, userMessage])
 
+      // Update checkpoint progress if in scenario mode
+      if (data.scenarioProgress) {
+        setCheckpoints(data.scenarioProgress.checkpoints)
+        // Check if all checkpoints are completed
+        if (data.allCheckpointsCompleted && !allCheckpointsCompleted) {
+          setAllCheckpointsCompleted(true)
+        }
+      }
+
       // Add instructor response
       setTimeout(() => {
         const instructorMessage: Message = {
@@ -353,9 +451,8 @@ export default function ConversationChatPage() {
       history.unshift(conversationHistory)
       localStorage.setItem('conversationHistory', JSON.stringify(history))
 
-      // Show success message and return to dashboard
-      alert(`Conversation ended! Overall score: ${data.analysis?.overallScore || 'N/A'}`)
-      router.push('/history')
+      // Navigate to report page
+      router.push(`/conversation/report/${data.reportId}`)
     } catch (error: any) {
       console.error('Failed to end conversation:', error)
       if (error.message.includes('session') || error.message.includes('SESSION')) {
@@ -391,7 +488,11 @@ export default function ConversationChatPage() {
           <div>
             <h1 className="text-lg font-semibold text-gray-900">AI Conversation</h1>
             <p className="text-sm text-gray-500">
-              {settings.topicMode === 'free' ? 'Free Talk' : `${settings.topicMode === 'all' ? 'All' : settings.selectedTopics.length} Topics`}
+              {settings.topicMode === 'scenario' && scenarioInfo
+                ? scenarioInfo.title
+                : settings.topicMode === 'free'
+                ? 'Free Talk'
+                : `${settings.topicMode === 'all' ? 'All' : settings.selectedTopics.length} Topics`}
             </p>
           </div>
 
@@ -492,6 +593,8 @@ export default function ConversationChatPage() {
             suggestions={suggestions}
             onPlayTTS={playTTS}
             isLoading={isLoading}
+            scenarioInfo={settings.topicMode === 'scenario' ? scenarioInfo : null}
+            checkpoints={settings.topicMode === 'scenario' ? checkpoints : undefined}
           />
         </div>
       </div>
@@ -512,6 +615,15 @@ export default function ConversationChatPage() {
           currentInterviewer={currentInterviewer}
           onSelect={handleSelectInterviewer}
           onClose={() => setShowInterviewerSelector(false)}
+        />
+      )}
+
+      {/* Auto-completion prompt for scenario mode */}
+      {settings.topicMode === 'scenario' && (
+        <CompletionPrompt
+          isAllCompleted={allCheckpointsCompleted}
+          onContinue={() => setAllCheckpointsCompleted(false)} // 關閉提示，繼續對話
+          onEnd={handleEndConversation}
         />
       )}
     </div>

@@ -3,6 +3,8 @@
 import { useEffect, useRef } from 'react'
 import { Volume2, User, Bot } from 'lucide-react'
 import { SuggestionCard } from './SuggestionCard'
+import ProgressTracker from './ProgressTracker'
+import { type ScenarioCheckpoint } from '@/lib/api'
 
 export interface Message {
   id: string
@@ -24,9 +26,14 @@ interface DialogSidebarProps {
   suggestions: Suggestion[]
   onPlayTTS: (text: string) => void
   isLoading?: boolean
+  scenarioInfo?: {
+    title: string
+    objective: string
+  } | null
+  checkpoints?: ScenarioCheckpoint[]
 }
 
-export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading }: DialogSidebarProps) {
+export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading, scenarioInfo, checkpoints }: DialogSidebarProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   // Auto-scroll to latest message
@@ -41,6 +48,17 @@ export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading }: D
         <h2 className="text-lg font-semibold text-gray-900">Conversation</h2>
         <p className="text-sm text-gray-600">Real-time chat with AI instructor</p>
       </div>
+
+      {/* Scenario Progress Tracker - Below Conversation Title */}
+      {scenarioInfo && checkpoints && checkpoints.length > 0 && (
+        <div className="border-b border-gray-200 p-3">
+          <ProgressTracker
+            checkpoints={checkpoints}
+            objective={scenarioInfo.objective}
+            scenarioTitle={scenarioInfo.title}
+          />
+        </div>
+      )}
 
       {/* Messages */}
       <div className="flex-1 space-y-4 overflow-y-auto p-6">
