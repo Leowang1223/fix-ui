@@ -164,6 +164,8 @@ export interface Scenario {
   objective: string
   chineseObjective: string
   estimatedTurns: number
+  firstSpeaker?: 'user' | 'ai'
+  defaultUserRole?: string
   checkpoints: Array<{
     id: number
     description: string

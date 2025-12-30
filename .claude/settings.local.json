@@ -43,7 +43,11 @@
       "Bash(do curl -X POST http://localhost:8082/api/conversation/message -H \"Content-Type: application/json\" -d \"{\"\"sessionId\"\":\"\"67ba3e65-879e-4726-8d83-1144e4952204\"\",\"\"message\"\":\"\"好的\"\"}\")",
       "Bash(done)",
       "Bash(npm run build:backend)",
-      "Bash(ping:*)"
+      "Bash(ping:*)",
+      "Bash(git submodule status:*)",
+      "Bash(xargs -I {} bash -c 'echo \"\"Dir: {}\"\" && ls \"\"c:\\\\Users\\\\wls09\\\\Desktop\\\\chiness-interview-main\\\\apps\\\\web\\\\app\\\\{}\"\" | head -5')",
+      "Bash(cat:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

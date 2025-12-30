@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { ArrowLeft, CheckCircle, Clock, Target, TrendingUp, BookOpen, Lightbulb, Award, Plus } from 'lucide-react'
-import { addCustomFlashcard } from '../../../flashcards/utils/flashcards'
+import { addCustomFlashcard, getDeckNames, addDeckName } from '../../../flashcards/utils/flashcards'
 
 interface CheckpointDetail {
   id: number
@@ -44,6 +44,10 @@ interface ScenarioAnalysis {
   scenarioTitle: string
   userRole: string
   completedAt: string
+  // Review mode properties (optional)
+  reviewedLessons?: string[]
+  reviewType?: string
+  vocabularyCount?: number
 }
 
 interface ConversationHistory {
@@ -65,6 +69,33 @@ export default function ReportPage() {
   const [report, setReport] = useState<ConversationHistory | null>(null)
   const [loading, setLoading] = useState(true)
   const [flashcardsSaved, setFlashcardsSaved] = useState(false)
+  const [savedWords, setSavedWords] = useState<Set<string>>(new Set())
+
+  // Deck selector states
+  const [selectedDeck, setSelectedDeck] = useState<string>('')
+  const [availableDecks, setAvailableDecks] = useState<string[]>([])
+  const [showNewDeckInput, setShowNewDeckInput] = useState(false)
+  const [newDeckName, setNewDeckName] = useState('')
+
+  const handleCreateNewDeck = () => {
+    const trimmedName = newDeckName.trim()
+    if (!trimmedName) {
+      alert('Deck name cannot be empty')
+      return
+    }
+
+    if (availableDecks.includes(trimmedName)) {
+      alert('Deck already exists')
+      return
+    }
+
+    // 添加新 deck
+    addDeckName(trimmedName)
+    setAvailableDecks([...availableDecks, trimmedName])
+    setSelectedDeck(trimmedName)
+    setNewDeckName('')
+    setShowNewDeckInput(false)
+  }
 
   const handleSaveToFlashcards = () => {
     if (!report || !report.conversationData?.analysis) return
@@ -77,7 +108,14 @@ export default function ReportPage() {
       return
     }
 
-    const deckName = `Scenario: ${analysis.scenarioTitle}`
+    // Check if a deck is selected
+    if (!selectedDeck) {
+      alert('Please select a deck first')
+      return
+    }
+
+    // Use the user-selected deck name
+    const deckName = selectedDeck
 
     // Save each vocabulary word as a flashcard with full details
     if (analysis.vocabularyDetails && analysis.vocabularyDetails.length > 0) {
@@ -104,7 +142,40 @@ export default function ReportPage() {
     }
 
     setFlashcardsSaved(true)
-    alert(`Successfully saved ${analysis.vocabularyUsed.length} vocabulary words to flashcards!`)
+    alert(`Successfully saved ${analysis.vocabularyUsed.length} vocabulary words to "${deckName}" deck!`)
+  }
+
+  const handleSaveSingleWord = (vocab: { chinese: string; pinyin?: string; english?: string } | string) => {
+    if (!report || !report.conversationData?.analysis) return
+
+    // Check if a deck is selected
+    if (!selectedDeck) {
+      alert('Please select a deck first')
+      return
+    }
+
+    // Use the user-selected deck name
+    const deckName = selectedDeck
+
+    // Handle both detailed vocab object and simple string
+    if (typeof vocab === 'string') {
+      addCustomFlashcard({
+        prompt: vocab,
+        expectedAnswer: vocab,
+        language: 'zh-CN',
+        deckName: deckName
+      })
+      setSavedWords(prev => new Set(prev).add(vocab))
+    } else {
+      addCustomFlashcard({
+        prompt: `${vocab.chinese} ${vocab.pinyin ? `(${vocab.pinyin})` : ''}`,
+        expectedAnswer: vocab.english || vocab.chinese,
+        language: 'zh-CN',
+        pinyin: vocab.pinyin,
+        deckName: deckName
+      })
+      setSavedWords(prev => new Set(prev).add(vocab.chinese))
+    }
   }
 
   useEffect(() => {
@@ -126,6 +197,15 @@ export default function ReportPage() {
       }
 
       setReport(foundReport)
+
+      // Load available decks from localStorage
+      const decks = getDeckNames()
+      setAvailableDecks(decks)
+
+      // Set default deck to 'General' (first deck in the list)
+      if (decks.length > 0) {
+        setSelectedDeck(decks[0])
+      }
     } catch (error) {
       console.error('Failed to load report:', error)
       router.push('/history')
@@ -163,6 +243,9 @@ export default function ReportPage() {
 
   const analysis = report.conversationData.analysis as ScenarioAnalysis
   const isScenarioMode = analysis.scenarioTitle !== undefined
+
+  // Check if vocabulary should be displayed (any mode with vocabulary data)
+  const shouldShowVocabulary = analysis.vocabularyUsed && analysis.vocabularyUsed.length > 0
 
   // Score color helper
   const getScoreColor = (score: number) => {
@@ -225,6 +308,34 @@ export default function ReportPage() {
             </div>
           </div>
         </div>
+
+        {/* Review Mode Info */}
+        {analysis.reviewedLessons && analysis.reviewedLessons.length > 0 && (
+          <div className="bg-white rounded-xl border shadow-sm p-6">
+            <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <BookOpen className="h-5 w-5" />
+              複習課程
+            </h2>
+            <div className="mb-3">
+              <p className="text-sm text-gray-600">
+                複習類型：<span className="font-medium text-gray-900">{analysis.reviewType}</span>
+              </p>
+              <p className="text-sm text-gray-600 mt-1">
+                詞彙數量：<span className="font-medium text-gray-900">{analysis.vocabularyCount || 0} 個詞彙</span>
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {analysis.reviewedLessons.map((lessonId: string) => (
+                <span
+                  key={lessonId}
+                  className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"
+                >
+                  {lessonId}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Score Breakdown (Scenario Mode Only) */}
         {isScenarioMode && (
@@ -404,37 +515,161 @@ export default function ReportPage() {
           </div>
         )}
 
-        {/* Vocabulary Used (Scenario Mode Only) */}
-        {isScenarioMode && analysis.vocabularyUsed && analysis.vocabularyUsed.length > 0 && (
+        {/* Vocabulary Used (Scenario Mode & Review Mode) */}
+        {shouldShowVocabulary && analysis.vocabularyUsed && analysis.vocabularyUsed.length > 0 && (
           <div className="bg-white rounded-xl border shadow-sm p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
+            <div className="mb-4">
+              <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2 mb-3">
                 <BookOpen className="h-5 w-5 text-purple-600" />
                 Vocabulary Used
               </h2>
-              <button
-                onClick={handleSaveToFlashcards}
-                disabled={flashcardsSaved}
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
-                  flashcardsSaved
-                    ? 'bg-green-100 text-green-700 border border-green-300 cursor-not-allowed'
-                    : 'bg-purple-600 text-white hover:bg-purple-700'
-                }`}
-              >
-                <Plus className="h-4 w-4" />
-                <span>{flashcardsSaved ? 'Saved to Flashcards' : 'Save to Flashcards'}</span>
-              </button>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {analysis.vocabularyUsed.map((word, idx) => (
-                <span
-                  key={idx}
-                  className="px-3 py-1 bg-purple-50 border border-purple-200 rounded-full text-sm text-purple-700"
+
+              {/* Deck Selector */}
+              <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg border border-gray-200">
+                <label className="text-sm font-medium text-gray-700 whitespace-nowrap">
+                  Save to Deck:
+                </label>
+
+                <select
+                  value={selectedDeck}
+                  onChange={(e) => setSelectedDeck(e.target.value)}
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
                 >
-                  {word}
-                </span>
-              ))}
+                  {availableDecks.map(deck => (
+                    <option key={deck} value={deck}>{deck}</option>
+                  ))}
+                </select>
+
+                <button
+                  onClick={() => setShowNewDeckInput(!showNewDeckInput)}
+                  className="px-3 py-2 text-sm font-medium text-purple-600 hover:bg-purple-50 rounded-lg border border-purple-300 transition"
+                >
+                  + New Deck
+                </button>
+
+                <button
+                  onClick={handleSaveToFlashcards}
+                  disabled={flashcardsSaved || !selectedDeck}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
+                    flashcardsSaved || !selectedDeck
+                      ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                      : 'bg-purple-600 text-white hover:bg-purple-700'
+                  }`}
+                >
+                  <Plus className="h-4 w-4 inline mr-1" />
+                  {flashcardsSaved ? 'All Saved' : 'Save All'}
+                </button>
+              </div>
+
+              {/* New Deck Input */}
+              {showNewDeckInput && (
+                <div className="flex items-center gap-2 mt-2 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                  <input
+                    type="text"
+                    value={newDeckName}
+                    onChange={(e) => setNewDeckName(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') handleCreateNewDeck()
+                      if (e.key === 'Escape') {
+                        setShowNewDeckInput(false)
+                        setNewDeckName('')
+                      }
+                    }}
+                    placeholder="Enter new deck name..."
+                    className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    autoFocus
+                  />
+                  <button
+                    onClick={handleCreateNewDeck}
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition"
+                  >
+                    Create
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShowNewDeckInput(false)
+                      setNewDeckName('')
+                    }}
+                    className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-300 transition"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              )}
             </div>
+
+            {/* Vocabulary with individual save buttons */}
+            {analysis.vocabularyDetails && analysis.vocabularyDetails.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {analysis.vocabularyDetails.map((vocab, idx) => {
+                  const isSaved = savedWords.has(vocab.chinese)
+                  return (
+                    <div
+                      key={idx}
+                      className="flex items-center justify-between p-3 bg-purple-50 border border-purple-200 rounded-lg hover:bg-purple-100 transition"
+                    >
+                      <div className="flex-1">
+                        <div className="font-medium text-purple-900">{vocab.chinese}</div>
+                        {vocab.pinyin && (
+                          <div className="text-xs text-purple-600 mt-0.5">{vocab.pinyin}</div>
+                        )}
+                        {vocab.english && (
+                          <div className="text-xs text-gray-600 mt-0.5">{vocab.english}</div>
+                        )}
+                      </div>
+                      <button
+                        onClick={() => handleSaveSingleWord(vocab)}
+                        disabled={isSaved}
+                        className={`ml-3 p-2 rounded-lg text-xs font-medium transition ${
+                          isSaved
+                            ? 'bg-green-100 text-green-700 cursor-not-allowed'
+                            : 'bg-purple-600 text-white hover:bg-purple-700'
+                        }`}
+                        title={isSaved ? 'Already saved' : 'Add to flashcards'}
+                      >
+                        {isSaved ? (
+                          <span className="flex items-center gap-1">
+                            <span>✓</span>
+                          </span>
+                        ) : (
+                          <Plus className="h-4 w-4" />
+                        )}
+                      </button>
+                    </div>
+                  )
+                })}
+              </div>
+            ) : (
+              <div className="flex flex-wrap gap-2">
+                {analysis.vocabularyUsed.map((word, idx) => {
+                  const isSaved = savedWords.has(word)
+                  return (
+                    <div
+                      key={idx}
+                      className="flex items-center gap-2 px-3 py-2 bg-purple-50 border border-purple-200 rounded-full text-sm"
+                    >
+                      <span className="text-purple-700">{word}</span>
+                      <button
+                        onClick={() => handleSaveSingleWord(word)}
+                        disabled={isSaved}
+                        className={`p-1 rounded-full transition ${
+                          isSaved
+                            ? 'bg-green-100 text-green-700 cursor-not-allowed'
+                            : 'bg-purple-600 text-white hover:bg-purple-700'
+                        }`}
+                        title={isSaved ? 'Already saved' : 'Add to flashcards'}
+                      >
+                        {isSaved ? (
+                          <span className="text-xs">✓</span>
+                        ) : (
+                          <Plus className="h-3 w-3" />
+                        )}
+                      </button>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
           </div>
         )}
 

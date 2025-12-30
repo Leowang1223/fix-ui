@@ -488,19 +488,12 @@ export default function HistoryPage() {
                       icon={BookOpen}
                       onClick={(e) => {
                         e.stopPropagation()
-                        const summary = `Conversation Summary\n\n` +
-                          `Messages: ${convo.messages}\n` +
-                          `Mode: ${convo.settings?.topicMode || 'Unknown'}\n` +
-                          `Completed: ${new Date(convo.completedAt).toLocaleString()}\n\n` +
-                          (convo.conversationData?.analysis ?
-                            `Score: ${convo.conversationData.analysis.overallScore}\n` +
-                            `Feedback: ${convo.conversationData.analysis.feedback}` :
-                            'Analysis data not available for past conversations.')
-                        alert(summary)
+                        // Navigate to conversation report page
+                        router.push(`/conversation/report/${convo.reportId}`)
                       }}
                       className="max-w-none w-full"
                     >
-                      View Summary
+                      View Report
                     </AppButton>
                     <AppButton
                       icon={Trash2}

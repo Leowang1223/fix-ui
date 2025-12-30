@@ -364,6 +364,29 @@ export default function ConversationSetupPage() {
                 </button>
               </div>
 
+              {topicMode === 'all' && (
+                <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
+                  {(() => {
+                    const lessonHistory = JSON.parse(localStorage.getItem('lessonHistory') || '[]')
+                    const completedCount = lessonHistory.length
+
+                    if (completedCount === 0) {
+                      return (
+                        <p className="text-sm text-amber-600">
+                          尚未完成任何課程，請先完成一些課程後再使用此功能。
+                        </p>
+                      )
+                    }
+
+                    return (
+                      <p className="text-sm text-blue-700">
+                        將從 {completedCount} 個已完成課程中隨機選擇最多 5 個進行複習對話
+                      </p>
+                    )
+                  })()}
+                </div>
+              )}
+
               {topicMode === 'selected' && (
                 <div className="rounded-lg border border-gray-200 p-4">
                   <p className="mb-3 text-sm font-medium text-gray-700">

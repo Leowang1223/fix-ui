@@ -13,10 +13,12 @@ import { type ScenarioCheckpoint } from '@/lib/api'
 
 // TTS utility functions (copied from lesson page)
 function removePinyin(text: string): string {
+  if (!text) return ''
   return text.replace(/\([^)]*\)/g, '').trim()
 }
 
 function convertSymbolsToWords(text: string): string {
+  if (!text) return ''
   const symbolMap: Record<string, string> = {
     '%': 'percent',
     '&': 'and',
@@ -35,6 +37,7 @@ function convertSymbolsToWords(text: string): string {
 }
 
 function removePunctuation(text: string): string {
+  if (!text) return ''
   return text.replace(/[，。！？；：、""''《》【】（）]/g, ' ').replace(/\s+/g, ' ').trim()
 }
 
@@ -139,6 +142,67 @@ export default function ConversationChatPage() {
     }
   }, [videoStream])
 
+  // Preload TTS voices on page mount
+  useEffect(() => {
+    if ('speechSynthesis' in window) {
+      console.log('🎤 Initializing TTS voice preload...')
+
+      const loadVoices = () => {
+        const voices = window.speechSynthesis.getVoices()
+        if (voices.length > 0) {
+          console.log('✅ TTS voices loaded:', voices.length, 'voices available')
+          // Log Chinese voices for debugging
+          const chineseVoices = voices.filter(v => v.lang.includes('zh'))
+          console.log('🇨🇳 Chinese voices:', chineseVoices.map(v => v.name).join(', '))
+        }
+      }
+
+      // Try loading immediately (some browsers have voices ready)
+      loadVoices()
+
+      // Listen for the event when voices become available
+      window.speechSynthesis.addEventListener('voiceschanged', loadVoices)
+
+      return () => {
+        window.speechSynthesis.removeEventListener('voiceschanged', loadVoices)
+      }
+    }
+  }, [])
+
+  // Get all available chapter IDs from API
+  const getAllAvailableChapterIds = async (): Promise<string[]> => {
+    try {
+      const apiBase =
+        (typeof window !== 'undefined' && localStorage.getItem('api_base')) ||
+        process.env.NEXT_PUBLIC_API_BASE ||
+        'http://localhost:8082'
+
+      const response = await fetch(`${apiBase}/api/lessons`)
+      if (!response.ok) {
+        console.error('Failed to fetch lessons from API')
+        return []
+      }
+
+      const lessons = await response.json()
+      const chapterSet = new Set<string>()
+
+      lessons.forEach((lesson: any) => {
+        if (lesson.chapterId) {
+          chapterSet.add(lesson.chapterId)
+        }
+      })
+
+      return Array.from(chapterSet).sort((a, b) => {
+        const numA = parseInt(a.replace('C', ''))
+        const numB = parseInt(b.replace('C', ''))
+        return numA - numB
+      })
+    } catch (error) {
+      console.error('Error fetching available chapters:', error)
+      return []
+    }
+  }
+
   // Get all completed chapter IDs from lesson history
   const getAllCompletedChapterIds = (): string[] => {
     if (typeof window === 'undefined') return []
@@ -195,7 +259,9 @@ export default function ConversationChatPage() {
       if (loadedSettings.topicMode === 'selected') {
         topics = loadedSettings.selectedTopics
       } else if (loadedSettings.topicMode === 'all') {
-        topics = getAllCompletedChapterIds()
+        // Fetch all available chapters from API
+        topics = await getAllAvailableChapterIds()
+        console.log('📚 All available chapters:', topics)
       }
 
       const requestBody: any = {
@@ -208,6 +274,19 @@ export default function ConversationChatPage() {
       if (loadedSettings.topicMode === 'scenario') {
         requestBody.scenarioId = loadedSettings.scenarioId
         requestBody.userRole = loadedSettings.userRole
+      }
+
+      // Add review mode parameters
+      if (loadedSettings.topicMode === 'all') {
+        // 從 localStorage 讀取已完成課程清單
+        const lessonHistory = JSON.parse(localStorage.getItem('lessonHistory') || '[]')
+        const completedLessons = lessonHistory.map((h: any) => h.lessonId)
+        requestBody.completedLessons = completedLessons
+        console.log('📚 Review mode (all): Sending', completedLessons.length, 'completed lessons')
+      } else if (loadedSettings.topicMode === 'selected') {
+        // 使用已選擇的章節
+        requestBody.selectedChapters = loadedSettings.selectedTopics || []
+        console.log('📚 Review mode (selected): Sending chapters', requestBody.selectedChapters)
       }
 
       const response = await fetch(`${API_BASE}/api/conversation/start`, {
@@ -235,23 +314,34 @@ export default function ConversationChatPage() {
         setCheckpoints(data.scenario.checkpoints)
       }
 
-      // Add first instructor message
-      const firstMessage: Message = {
-        id: `msg-${Date.now()}`,
-        role: 'instructor',
-        chinese: data.firstMessage.chinese,
-        english: data.firstMessage.english,
-        timestamp: new Date(),
+      // Handle first message - may be null if user speaks first
+      if (data.firstMessage) {
+        // AI speaks first
+        const firstMessage: Message = {
+          id: `msg-${Date.now()}`,
+          role: 'instructor',
+          chinese: data.firstMessage.chinese,
+          english: data.firstMessage.english,
+          timestamp: new Date(),
+        }
+        setMessages([firstMessage])
+
+        // Play TTS with a small delay to ensure voices are loaded
+        console.log('🎬 Preparing to play first message TTS...')
+        setTimeout(() => {
+          console.log('🔊 Playing first message:', data.firstMessage.chinese.substring(0, 30) + '...')
+          playTTS(data.firstMessage.chinese)
+        }, 200)
+      } else {
+        // User speaks first - no initial message
+        setMessages([])
+        console.log('👤 User should speak first')
       }
-      setMessages([firstMessage])
 
       // Set initial suggestions
       if (data.suggestions) {
         setSuggestions(data.suggestions)
       }
-
-      // Play TTS for first message
-      playTTS(data.firstMessage.chinese)
     } catch (error) {
       console.error('Failed to start conversation:', error)
       setError('Failed to start conversation. Please try again.')
@@ -262,16 +352,31 @@ export default function ConversationChatPage() {
 
   // TTS playback with interviewer voice
   const playTTS = (text: string) => {
-    if (!('speechSynthesis' in window)) return
+    if (!text || !('speechSynthesis' in window)) {
+      console.log('⚠️ TTS unavailable: text or speechSynthesis missing')
+      return
+    }
 
+    // Cancel any ongoing speech
     window.speechSynthesis.cancel()
 
+    // Clean the text
     let cleanText = removePinyin(text)
     cleanText = convertSymbolsToWords(cleanText)
     cleanText = removePunctuation(cleanText)
 
+    if (!cleanText.trim()) {
+      console.log('⚠️ TTS skipped: no text after cleaning')
+      return
+    }
+
+    // Get voices (should already be loaded from useEffect)
     const voiceConfig = getInterviewerVoice(currentInterviewer)
     const voices = window.speechSynthesis.getVoices()
+
+    if (voices.length === 0) {
+      console.warn('⚠️ TTS voices not loaded yet, speech may use default voice')
+    }
 
     // Try to find preferred Chinese voice
     let chineseVoice: SpeechSynthesisVoice | undefined
@@ -288,13 +393,21 @@ export default function ConversationChatPage() {
       chineseVoice = voices.find(voice => voice.lang.includes(voiceConfig.lang))
     }
 
+    // Create and configure utterance
     const utterance = new SpeechSynthesisUtterance(cleanText)
-    if (chineseVoice) utterance.voice = chineseVoice
+    if (chineseVoice) {
+      utterance.voice = chineseVoice
+      console.log('🔊 Using voice:', chineseVoice.name)
+    } else {
+      console.log('🔊 Using default voice (no Chinese voice found)')
+    }
     utterance.lang = voiceConfig.lang
     utterance.rate = voiceConfig.rate
     utterance.pitch = voiceConfig.pitch
     utterance.volume = 1.0
 
+    // Log and play
+    console.log('🔊 Playing TTS:', cleanText.substring(0, 30) + '...')
     window.speechSynthesis.speak(utterance)
   }
 
