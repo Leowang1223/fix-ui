@@ -48,16 +48,25 @@ interface LessonHistoryEntry {
 function WaterCup({ progress, lessonNumber, isCompleted }: { progress: number; lessonNumber: number; isCompleted: boolean }) {
   const waterHeight = Math.min(100, Math.max(0, progress))
 
+  // 🔍 調試：檢查水位計算
+  if (lessonNumber <= 3 && (isCompleted || progress > 90)) {
+    console.log(`💧 WaterCup L${lessonNumber}:`, {
+      progress,
+      waterHeight,
+      isCompleted,
+      heightStyle: `${waterHeight}%`
+    })
+  }
+
   return (
     <div className="relative h-20 w-16">
       {/* 玻璃杯外框 */}
-      <div className="absolute inset-0 rounded-b-2xl rounded-t-lg border-2 border-blue-300 bg-gradient-to-b from-blue-50/30 to-transparent">
-        {/* 水位 */}
-        <div className="absolute bottom-0 left-0 right-0 overflow-hidden rounded-b-2xl">
-          <div
-            className="transition-all duration-700 ease-out"
-            style={{ height: `${waterHeight}%` }}
-          >
+      <div className="absolute inset-0 rounded-b-2xl rounded-t-lg border-2 border-blue-300 bg-gradient-to-b from-blue-50/30 to-transparent overflow-hidden">
+        {/* 水位 - 從底部開始，高度由 waterHeight 控制 */}
+        <div
+          className="absolute bottom-0 left-0 right-0 transition-all duration-700 ease-out rounded-b-2xl"
+          style={{ height: `${waterHeight}%` }}
+        >
             {/* 水的漸變效果 */}
             <div className={`h-full w-full ${
               isCompleted
@@ -75,7 +84,6 @@ function WaterCup({ progress, lessonNumber, isCompleted }: { progress: number; l
                 />
               </div>
             </div>
-          </div>
         </div>
 
         {/* 課程編號 */}
@@ -454,36 +462,16 @@ export default function DashboardPage() {
               <div className="relative -mx-2 px-2">
                 <div className="flex items-end gap-6 overflow-x-auto pb-2 scrollbar-thin scrollbar-track-slate-100 scrollbar-thumb-slate-300 hover:scrollbar-thumb-slate-400">
                   {lessons.filter(l => l.chapterId === selectedChapter).map((lesson) => {
-                    // 🔧 智能匹配：嘗試多種 ID 格式
-                    let progress = lessonProgress[lesson.lesson_id] || 0
+                    // 🔒 只使用精確的 lesson_id 匹配，避免跨章節混淆
+                    const progress = lessonProgress[lesson.lesson_id] || 0
+                    const completed = progress === 100
 
-                    // 如果沒找到，嘗試其他可能的格式
-                    if (progress === 0) {
-                      // 嘗試 L1, L2, ... 格式
-                      const altId1 = `L${lesson.lessonNumber}`
-                      if (lessonProgress[altId1]) {
-                        progress = lessonProgress[altId1]
-                        console.log(`✅ 找到替代 ID: ${altId1} = ${progress}%`)
-                      }
-
-                      // 嘗試 C1-1, C1-2, ... 格式
-                      const altId2 = `${lesson.chapterId}-${lesson.lessonNumber}`
-                      if (progress === 0 && lessonProgress[altId2]) {
-                        progress = lessonProgress[altId2]
-                        console.log(`✅ 找到替代 ID: ${altId2} = ${progress}%`)
-                      }
-                    }
-
-                    const completed = progress >= 100
-
-                    // 調試日誌
-                    if (lesson.lessonNumber === 1) {
-                      console.log('🔍 L1 課程詳情:', {
-                        lesson_id: lesson.lesson_id,
-                        title: lesson.title,
+                    // 🔍 調試：檢查進度和完成狀態
+                    if (lesson.lessonNumber <= 3) {
+                      console.log(`📊 ${lesson.lesson_id} (${lesson.title}):`, {
                         progress,
                         completed,
-                        availableProgressKeys: Object.keys(lessonProgress)
+                        displayText: completed ? '✓ Complete' : `${progress}%`
                       })
                     }
 
