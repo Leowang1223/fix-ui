@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C3-L8",
+  "chapter_id": "C3",
+  "lesson_number": 8,
+  "title": "At the Restaurant",
+  "description": "Use simple Chinese in a restaurant.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "請給我菜單。",
+      "expected_answer": [
+        "請給我菜單。"
+      ],
+      "pinyin": "qǐng gěi wǒ cài dān.",
+      "english_hint": "Please give me the menu.",
+      "encouragement": "Great start!"
+    },
+    {
+      "id": 2,
+      "teacher": "我們有幾個人。",
+      "expected_answer": [
+        "我們有幾個人。"
+      ],
+      "pinyin": "wǒ men yǒu jǐ gè rén.",
+      "english_hint": "We have several people (we are ... people).",
+      "encouragement": "Nice sentence!"
+    },
+    {
+      "id": 3,
+      "teacher": "我要一杯水。",
+      "expected_answer": [
+        "我要一杯水。"
+      ],
+      "pinyin": "wǒ yào yì bēi shuǐ.",
+      "english_hint": "I want a glass of water.",
+      "encouragement": "Good order!"
+    },
+    {
+      "id": 4,
+      "teacher": "不要太辣。",
+      "expected_answer": [
+        "不要太辣。"
+      ],
+      "pinyin": "bú yào tài là.",
+      "english_hint": "Not too spicy.",
+      "encouragement": "Very useful phrase!"
+    },
+    {
+      "id": 5,
+      "teacher": "這道菜很好吃。",
+      "expected_answer": [
+        "這道菜很好吃。"
+      ],
+      "pinyin": "zhè dào cài hěn hǎo chī.",
+      "english_hint": "This dish is delicious.",
+      "encouragement": "Excellent compliment!"
+    },
+    {
+      "id": 6,
+      "teacher": "可以打包嗎？",
+      "expected_answer": [
+        "可以打包嗎？"
+      ],
+      "pinyin": "kě yǐ dǎ bāo ma?",
+      "english_hint": "Can I take it to go?",
+      "encouragement": "Great question!"
+    },
+    {
+      "id": 7,
+      "teacher": "請結帳。",
+      "expected_answer": [
+        "請結帳。"
+      ],
+      "pinyin": "qǐng jié zhàng.",
+      "english_hint": "Check, please.",
+      "encouragement": "Short and powerful!"
+    },
+    {
+      "id": 8,
+      "teacher": "我們要分開付。",
+      "expected_answer": [
+        "我們要分開付。"
+      ],
+      "pinyin": "wǒ men yào fēn kāi fù.",
+      "english_hint": "We want to pay separately.",
+      "encouragement": "Nice and clear!"
+    },
+    {
+      "id": 9,
+      "teacher": "有推薦的菜嗎？",
+      "expected_answer": [
+        "有推薦的菜嗎？"
+      ],
+      "pinyin": "yǒu tuī jiàn de cài ma?",
+      "english_hint": "Do you have any recommendations?",
+      "encouragement": "Excellent sentence!"
+    },
+    {
+      "id": 10,
+      "teacher": "謝謝，今天很愉快。",
+      "expected_answer": [
+        "謝謝，今天很愉快。"
+      ],
+      "pinyin": "xiè xie, jīn tiān hěn yú kuài.",
+      "english_hint": "Thank you, today was very pleasant.",
+      "encouragement": "Fantastic closing line!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced common restaurant phrases and sentences.",
+    "mission": "Next lesson: Talk about your daily routine at home."
+  }
+}

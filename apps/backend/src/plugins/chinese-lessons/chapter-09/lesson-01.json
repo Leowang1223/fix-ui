@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C9-L1",
+  "chapter_id": "C9",
+  "lesson_number": 1,
+  "title": "Jobs & Work Vocabulary",
+  "description": "Learn B1-entry vocabulary related to jobs and work.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "職位",
+      "expected_answer": [
+        "職位"
+      ],
+      "pinyin": "zhí wèi",
+      "english_hint": "position (job)",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "面試",
+      "expected_answer": [
+        "面試"
+      ],
+      "pinyin": "miàn shì",
+      "english_hint": "interview",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "薪水",
+      "expected_answer": [
+        "薪水"
+      ],
+      "pinyin": "xīn shuǐ",
+      "english_hint": "salary",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "同事",
+      "expected_answer": [
+        "同事"
+      ],
+      "pinyin": "tóng shì",
+      "english_hint": "coworker",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "主管",
+      "expected_answer": [
+        "主管"
+      ],
+      "pinyin": "zhǔ guǎn",
+      "english_hint": "supervisor",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "會議",
+      "expected_answer": [
+        "會議"
+      ],
+      "pinyin": "huì yì",
+      "english_hint": "meeting",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "加班",
+      "expected_answer": [
+        "加班"
+      ],
+      "pinyin": "jiā bān",
+      "english_hint": "overtime work",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "休假",
+      "expected_answer": [
+        "休假"
+      ],
+      "pinyin": "xiū jià",
+      "english_hint": "day off / vacation",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "任務",
+      "expected_answer": [
+        "任務"
+      ],
+      "pinyin": "rèn wù",
+      "english_hint": "task / assignment",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "進度",
+      "expected_answer": [
+        "進度"
+      ],
+      "pinyin": "jìn dù",
+      "english_hint": "progress",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned important B1-entry job vocabulary.",
+    "mission": "Lesson 2: Practical work-related sentences!"
+  }
+}

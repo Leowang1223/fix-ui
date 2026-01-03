@@ -1,0 +1,125 @@
+{
+  "scenario_id": "convenience-store-01",
+  "title": "Checkout at a Taiwanese Convenience Store",
+  "chineseTitle": "便利商店結帳",
+  "description": "Practice checking out at a 7-11 or FamilyMart in Taiwan",
+  "chineseDescription": "練習在台灣便利商店（7-11、全家）結帳",
+  "difficulty": "A0-A1",
+  "category": "Daily Life (Taiwan)",
+  "objective": "Successfully complete a convenience store purchase",
+  "chineseObjective": "成功完成便利商店購物結帳",
+  "estimatedTurns": 7,
+  "firstSpeaker": "ai",
+  "defaultUserRole": "customer",
+  "checkpoints": [
+    {
+      "id": 1,
+      "description": "Start checkout",
+      "chineseDescription": "開始結帳",
+      "keywords": ["結帳", "買這個", "多少錢", "你好", "就這些"],
+      "weight": 15
+    },
+    {
+      "id": 2,
+      "description": "Respond to plastic bag question",
+      "chineseDescription": "回應塑膠袋詢問",
+      "keywords": ["要", "不用", "袋子", "環保袋", "塑膠袋", "需要", "好"],
+      "weight": 25
+    },
+    {
+      "id": 3,
+      "description": "Choose payment method",
+      "chineseDescription": "選擇付款方式",
+      "keywords": ["現金", "刷卡", "信用卡", "pay", "付款", "悠遊卡", "一卡通"],
+      "weight": 25
+    },
+    {
+      "id": 4,
+      "description": "Respond to receipt question",
+      "chineseDescription": "回應發票詢問",
+      "keywords": ["要發票", "不用", "載具", "手機條碼", "會員", "捐贈"],
+      "weight": 20
+    },
+    {
+      "id": 5,
+      "description": "Complete transaction",
+      "chineseDescription": "完成交易",
+      "keywords": ["謝謝", "好", "找錢", "收據"],
+      "weight": 15
+    }
+  ],
+  "roles": [
+    {
+      "id": "customer",
+      "name": "Customer",
+      "chineseName": "顧客",
+      "systemPrompt": "You are a customer checking out at a Taiwanese convenience store (7-11 or FamilyMart). You need to pay for your items and answer questions about bags, payment, and receipts. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Be polite."
+    },
+    {
+      "id": "clerk",
+      "name": "Store Clerk",
+      "chineseName": "店員",
+      "interviewerImage": "convinent store waiter.jpg",
+      "interviewerId": "man",
+      "systemPrompt": "You are a clerk at a Taiwanese convenience store (7-11 or FamilyMart). Greet customers, ask about plastic bags, payment method, and receipt/invoice preferences. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 塑膠袋, 發票, 載具). Keep responses professional and concise (1-2 sentences). Be friendly and efficient."
+    }
+  ],
+  "suggestions": {
+    "byRole": {
+      "customer": [
+        {
+          "chinese": "你好，我要結帳。",
+          "pinyin": "nǐ hǎo, wǒ yào jié zhàng.",
+          "english": "Hello, I want to check out.",
+          "type": "safe",
+          "checkpointId": 1
+        },
+        {
+          "chinese": "不用，我有環保袋。",
+          "pinyin": "bù yòng, wǒ yǒu huán bǎo dài.",
+          "english": "No need, I have a reusable bag.",
+          "type": "safe",
+          "checkpointId": 2
+        },
+        {
+          "chinese": "刷卡。",
+          "pinyin": "shuā kǎ.",
+          "english": "Credit card.",
+          "type": "safe",
+          "checkpointId": 3
+        },
+        {
+          "chinese": "發票捐贈，謝謝。",
+          "pinyin": "fā piào juān zèng, xiè xie.",
+          "english": "Donate the receipt, thank you.",
+          "type": "advanced",
+          "checkpointId": 4
+        },
+        {
+          "chinese": "好，謝謝。",
+          "pinyin": "hǎo, xiè xie.",
+          "english": "Okay, thank you.",
+          "type": "safe",
+          "checkpointId": 5
+        }
+      ],
+      "clerk": []
+    }
+  },
+  "keyVocabulary": [
+    { "chinese": "結帳", "pinyin": "jié zhàng", "english": "check out" },
+    { "chinese": "塑膠袋", "pinyin": "sù jiāo dài", "english": "plastic bag" },
+    { "chinese": "環保袋", "pinyin": "huán bǎo dài", "english": "reusable bag" },
+    { "chinese": "發票", "pinyin": "fā piào", "english": "receipt/invoice" },
+    { "chinese": "載具", "pinyin": "zài jù", "english": "digital receipt carrier" },
+    { "chinese": "刷卡", "pinyin": "shuā kǎ", "english": "use credit card" }
+  ],
+  "keyPatterns": [
+    { "pattern": "我要...", "example": "我要結帳", "english": "I want to..." },
+    { "pattern": "需不需要...?", "example": "需不需要塑膠袋?", "english": "Do you need...?" },
+    { "pattern": "不用，...", "example": "不用，我有袋子", "english": "No need, ..." }
+  ],
+  "tags": ["convenience-store", "shopping", "daily-life", "A0-A1", "taiwanese-culture"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "isCustom": false
+}

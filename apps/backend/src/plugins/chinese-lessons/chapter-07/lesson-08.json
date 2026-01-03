@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C7-L8",
+  "chapter_id": "C7",
+  "lesson_number": 8,
+  "title": "Navigation & Landmarks",
+  "description": "Learn how to describe locations and landmarks.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "銀行在郵局旁邊。",
+      "expected_answer": [
+        "銀行在郵局旁邊."
+      ],
+      "pinyin": "yín háng zài yóu jú páng biān.",
+      "english_hint": "The bank is next to the post office.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "圖書館在公園後面。",
+      "expected_answer": [
+        "圖書館在公園後面。"
+      ],
+      "pinyin": "tú shū guǎn zài gōng yuán hòu miàn.",
+      "english_hint": "The library is behind the park.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "從車站走過來大概五分鐘。",
+      "expected_answer": [
+        "從車站走過來大概五分鐘。"
+      ],
+      "pinyin": "cóng chē zhàn zǒu guò lái dà gài wǔ fēn zhōng.",
+      "english_hint": "It's about five minutes walking from the station.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "便利商店在第一個路口的右邊。",
+      "expected_answer": [
+        "便利商店在第一個路口的右邊。"
+      ],
+      "pinyin": "biàn lì shāng diàn zài dì yī gè lù kǒu de yòu biān.",
+      "english_hint": "The convenience store is on the right at the first intersection.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "你會看到一棟白色的大樓。",
+      "expected_answer": [
+        "你會看到一棟白色的大樓。"
+      ],
+      "pinyin": "nǐ huì kàn dào yí dòng bái sè de dà lóu.",
+      "english_hint": "You will see a big white building.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "學校在市場的對面。",
+      "expected_answer": [
+        "學校在市場的對面。"
+      ],
+      "pinyin": "xué xiào zài shì chǎng de duì miàn.",
+      "english_hint": "The school is across from the market.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 7,
+      "teacher": "餐館在第二個紅綠燈左轉的地方。",
+      "expected_answer": [
+        "餐館在第二個紅綠燈左轉的地方。"
+      ],
+      "pinyin": "cān guǎn zài dì èr gè hóng lǜ dēng zuǒ zhuǎn de dì fāng.",
+      "english_hint": "The restaurant is at the second traffic light on the left.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "沿著河邊一直走就到了。",
+      "expected_answer": [
+        "沿著河邊一直走就到了。"
+      ],
+      "pinyin": "yán zhe hé biān yī zhí zǒu jiù dào le.",
+      "english_hint": "Walk along the river and you'll reach it.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "博物館離這裡不遠，可以走路。",
+      "expected_answer": [
+        "博物館離這裡不遠，可以走路。"
+      ],
+      "pinyin": "bó wù guǎn lí zhè lǐ bù yuǎn, kě yǐ zǒu lù.",
+      "english_hint": "The museum is not far from here; you can walk.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 10,
+      "teacher": "火車站在市中心的東邊。",
+      "expected_answer": [
+        "火車站在市中心的東邊。"
+      ],
+      "pinyin": "huǒ chē zhàn zài shì zhōng xīn de dōng biān.",
+      "english_hint": "The train station is on the east side of downtown.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned A2-level navigation phrases.",
+    "mission": "Next lesson: City life conversation!"
+  }
+}

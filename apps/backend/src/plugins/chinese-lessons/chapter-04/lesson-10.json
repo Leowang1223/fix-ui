@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C4-L10",
+  "chapter_id": "C4",
+  "lesson_number": 10,
+  "title": "Travel Dialogue",
+  "description": "Practice short dialogues for travel situations.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "A：請問，博物館怎麼走？",
+      "expected_answer": [
+        "請問，博物館怎麼走？"
+      ],
+      "pinyin": "A: qǐng wèn, bó wù guǎn zěn me zǒu?",
+      "english_hint": "Excuse me, how do I get to the museum?",
+      "encouragement": "Great travel question!"
+    },
+    {
+      "id": 2,
+      "teacher": "B：一直走，然後左轉。",
+      "expected_answer": [
+        "一直走，然後左轉。"
+      ],
+      "pinyin": "B: yì zhí zǒu, rán hòu zuǒ zhuǎn.",
+      "english_hint": "Go straight, then turn left.",
+      "encouragement": "Nice clear direction!"
+    },
+    {
+      "id": 3,
+      "teacher": "A：遠嗎？",
+      "expected_answer": [
+        "遠嗎？"
+      ],
+      "pinyin": "A: yuǎn ma?",
+      "english_hint": "Is it far?",
+      "encouragement": "Simple and useful!"
+    },
+    {
+      "id": 4,
+      "teacher": "B：不遠，走五分鐘就到了。",
+      "expected_answer": [
+        "不遠，走五分鐘就到了。"
+      ],
+      "pinyin": "B: bù yuǎn, zǒu wǔ fēn zhōng jiù dào le.",
+      "english_hint": "Not far, only five minutes.",
+      "encouragement": "Great explanation!"
+    },
+    {
+      "id": 5,
+      "teacher": "A：謝謝你的幫忙！",
+      "expected_answer": [
+        "謝謝你的幫忙！"
+      ],
+      "pinyin": "A: xiè xie nǐ de bāng máng!",
+      "english_hint": "Thanks for your help!",
+      "encouragement": "Nice polite response!"
+    },
+    {
+      "id": 6,
+      "teacher": "B：不客氣。",
+      "expected_answer": [
+        "不客氣。"
+      ],
+      "pinyin": "B: bú kè qì.",
+      "english_hint": "You're welcome.",
+      "encouragement": "Great reply!"
+    },
+    {
+      "id": 7,
+      "teacher": "A：你來台灣玩嗎？",
+      "expected_answer": [
+        "你來台灣玩嗎？"
+      ],
+      "pinyin": "A: nǐ lái tái wān wán ma?",
+      "english_hint": "Are you visiting Taiwan?",
+      "encouragement": "Good conversation starter!"
+    },
+    {
+      "id": 8,
+      "teacher": "B：對，我第一次來。",
+      "expected_answer": [
+        "對，我第一次來。"
+      ],
+      "pinyin": "B: duì, wǒ dì yì cì lái.",
+      "english_hint": "Yes, it's my first time.",
+      "encouragement": "Nice answer!"
+    },
+    {
+      "id": 9,
+      "teacher": "A：希望你玩得開心。",
+      "expected_answer": [
+        "希望你玩得開心。"
+      ],
+      "pinyin": "A: xī wàng nǐ wán dé kāi xīn.",
+      "english_hint": "Hope you have fun.",
+      "encouragement": "Very natural!"
+    },
+    {
+      "id": 10,
+      "teacher": "B：謝謝，我很喜歡這裡！",
+      "expected_answer": [
+        "謝謝，我很喜歡這裡！"
+      ],
+      "pinyin": "B: xiè xie, wǒ hěn xǐ huān zhè lǐ!",
+      "english_hint": "Thanks, I really like it here!",
+      "encouragement": "Great ending!"
+    }
+  ],
+  "review": {
+    "summary": "You finished Chapter 4! You can now talk about places, directions, and basic travel conversations.",
+    "mission": "Next chapter: Chapter 5 — Food, shopping, lifestyle & simple comparisons!"
+  }
+}

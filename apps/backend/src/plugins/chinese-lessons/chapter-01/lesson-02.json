@@ -1,0 +1,133 @@
+{
+  "lesson_id": "C1-L02",
+  "chapter_id": "C1",
+  "lesson_number": 2,
+  "title": "Self Introduction",
+  "description": "Learn simple words for introducing yourself.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我",
+      "expected_answer": [
+        "我"
+      ],
+      "pinyin": "wǒ",
+      "english_hint": "I / me",
+      "encouragement": "Great start!",
+      "tts_text": "我",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 2,
+      "teacher": "你",
+      "expected_answer": [
+        "你"
+      ],
+      "pinyin": "nǐ",
+      "english_hint": "you",
+      "encouragement": "Nice! Basic pronouns are important!",
+      "tts_text": "你",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 3,
+      "teacher": "名字",
+      "expected_answer": [
+        "名字"
+      ],
+      "pinyin": "míng zi",
+      "english_hint": "name",
+      "encouragement": "Good job!",
+      "tts_text": "名字",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 4,
+      "teacher": "我是⋯⋯",
+      "expected_answer": [
+        "我是"
+      ],
+      "pinyin": "wǒ shì",
+      "english_hint": "I am...",
+      "encouragement": "Well done!",
+      "tts_text": "我是⋯⋯",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 5,
+      "teacher": "你的名字是什麼？",
+      "expected_answer": [
+        "你的名字是什麼？"
+      ],
+      "pinyin": "nǐ de míng zi shì shén me?",
+      "english_hint": "What is your name?",
+      "encouragement": "Excellent!",
+      "tts_text": "你的名字是什麼？",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 6,
+      "teacher": "很高興認識你",
+      "expected_answer": [
+        "很高興認識你"
+      ],
+      "pinyin": "hěn gāo xìng rèn shì nǐ",
+      "english_hint": "Nice to meet you",
+      "encouragement": "Great expression!",
+      "tts_text": "很高興認識你",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 7,
+      "teacher": "他",
+      "expected_answer": [
+        "他"
+      ],
+      "pinyin": "tā",
+      "english_hint": "he / him",
+      "encouragement": "Good job!",
+      "tts_text": "他",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 8,
+      "teacher": "她",
+      "expected_answer": [
+        "她"
+      ],
+      "pinyin": "tā",
+      "english_hint": "she / her",
+      "encouragement": "You're doing great!",
+      "tts_text": "她",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 9,
+      "teacher": "我們",
+      "expected_answer": [
+        "我們"
+      ],
+      "pinyin": "wǒ men",
+      "english_hint": "we / us",
+      "encouragement": "Nice work!",
+      "tts_text": "我們",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 10,
+      "teacher": "朋友",
+      "expected_answer": [
+        "朋友"
+      ],
+      "pinyin": "péng yǒu",
+      "english_hint": "friend",
+      "encouragement": "Perfect! Keep it up!",
+      "tts_text": "朋友",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    }
+  ],
+  "review": {
+    "summary": "You can now introduce yourself and talk about basic personal info.",
+    "mission": "Next lesson: Learn numbers and counting!"
+  }
+}

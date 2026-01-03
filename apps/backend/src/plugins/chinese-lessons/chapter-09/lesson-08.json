@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C9-L8",
+  "chapter_id": "C9",
+  "lesson_number": 8,
+  "title": "Emotions & Stress",
+  "description": "Learn B1-entry emotional expression for daily and work life.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "最近我有點累，事情有點多。",
+      "expected_answer": [
+        "最近我有點累，事情有點多。"
+      ],
+      "pinyin": "zuì jìn wǒ yǒu diǎn lèi, shì qíng yǒu diǎn duō.",
+      "english_hint": "I feel a bit tired lately; there's a lot going on.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "有時候我會覺得壓力很大。",
+      "expected_answer": [
+        "有時候我會覺得壓力很大。"
+      ],
+      "pinyin": "yǒu shí hòu wǒ huì jué dé yā lì hěn dà.",
+      "english_hint": "Sometimes I feel a lot of pressure.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我需要花一點時間讓自己冷靜下來。",
+      "expected_answer": [
+        "我需要花一點時間讓自己冷靜下來。"
+      ],
+      "pinyin": "wǒ xū yào huā yì diǎn shí jiān ràng zì jǐ lěng jìng xià lái.",
+      "english_hint": "I need some time to calm myself down.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "運動常常能幫我放鬆心情。",
+      "expected_answer": [
+        "運動常常能幫我放鬆心情。"
+      ],
+      "pinyin": "yùn dòng cháng cháng néng bāng wǒ fàng sōng xīn qíng.",
+      "english_hint": "Exercising often helps me relax.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我覺得跟朋友聊天很療癒。",
+      "expected_answer": [
+        "我覺得跟朋友聊天很療癒。"
+      ],
+      "pinyin": "wǒ jué dé gēn péng yǒu liáo tiān hěn liáo yù.",
+      "english_hint": "Chatting with friends feels healing to me.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "有時候我會提醒自己慢慢來。",
+      "expected_answer": [
+        "有時候我會提醒自己慢慢來。"
+      ],
+      "pinyin": "yǒu shí hòu wǒ huì tí xǐng zì jǐ màn màn lái.",
+      "english_hint": "Sometimes I remind myself to take it slow.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "我正在學習更好地管理時間。",
+      "expected_answer": [
+        "我正在學習更好地管理時間。"
+      ],
+      "pinyin": "wǒ zhèng zài xué xí gèng hǎo de guǎn lǐ shí jiān.",
+      "english_hint": "I'm learning to manage my time better.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "雖然有壓力，但我知道自己做得到。",
+      "expected_answer": [
+        "雖然有壓力，但我知道自己做得到。"
+      ],
+      "pinyin": "suī rán yǒu yā lì, dàn wǒ zhī dào zì jǐ zuò de dào.",
+      "english_hint": "Although there's pressure, I know I can do it.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "我需要一點安靜的時間休息。",
+      "expected_answer": [
+        "我需要一點安靜的時間休息。"
+      ],
+      "pinyin": "wǒ xū yào yì diǎn ān jìng de shí jiān xiū xí.",
+      "english_hint": "I need some quiet time to rest.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "我相信狀態會慢慢變好。",
+      "expected_answer": [
+        "我相信狀態會慢慢變好。"
+      ],
+      "pinyin": "wǒ xiāng xìn zhuàng tài huì màn màn biàn hǎo.",
+      "english_hint": "I believe things will get better gradually.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned natural B1-entry emotional expressions.",
+    "mission": "Next: short narrative skills."
+  }
+}

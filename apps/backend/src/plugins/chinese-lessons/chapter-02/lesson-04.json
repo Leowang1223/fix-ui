@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C2-L4",
+  "chapter_id": "C2",
+  "lesson_number": 4,
+  "title": "Basic Sentences",
+  "description": "Learn simple daily-use sentence patterns.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我想要⋯⋯",
+      "expected_answer": [
+        "我想要"
+      ],
+      "pinyin": "wǒ xiǎng yào",
+      "english_hint": "I want...",
+      "encouragement": "Good start!"
+    },
+    {
+      "id": 2,
+      "teacher": "我不要⋯⋯",
+      "expected_answer": [
+        "我不要"
+      ],
+      "pinyin": "wǒ bú yào",
+      "english_hint": "I don't want...",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我有⋯⋯",
+      "expected_answer": [
+        "我有"
+      ],
+      "pinyin": "wǒ yǒu",
+      "english_hint": "I have...",
+      "encouragement": "Great job!"
+    },
+    {
+      "id": 4,
+      "teacher": "我沒有⋯⋯",
+      "expected_answer": [
+        "我沒有"
+      ],
+      "pinyin": "wǒ méi yǒu",
+      "english_hint": "I don't have...",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "這是什麼？",
+      "expected_answer": [
+        "這是什麼？"
+      ],
+      "pinyin": "zhè shì shén me?",
+      "english_hint": "What is this?",
+      "encouragement": "You're doing well!"
+    },
+    {
+      "id": 6,
+      "teacher": "多少錢？",
+      "expected_answer": [
+        "多少錢？"
+      ],
+      "pinyin": "duō shǎo qián?",
+      "english_hint": "How much?",
+      "encouragement": "Nice job!"
+    },
+    {
+      "id": 7,
+      "teacher": "在哪裡？",
+      "expected_answer": [
+        "在哪裡？"
+      ],
+      "pinyin": "zài nǎ lǐ?",
+      "english_hint": "Where is it?",
+      "encouragement": "Awesome!"
+    },
+    {
+      "id": 8,
+      "teacher": "我要這個",
+      "expected_answer": [
+        "我要這個"
+      ],
+      "pinyin": "wǒ yào zhè ge",
+      "english_hint": "I want this.",
+      "encouragement": "Good work!"
+    },
+    {
+      "id": 9,
+      "teacher": "不要擔心",
+      "expected_answer": [
+        "不要擔心"
+      ],
+      "pinyin": "bú yào dān xīn",
+      "english_hint": "Don’t worry.",
+      "encouragement": "Perfect!"
+    },
+    {
+      "id": 10,
+      "teacher": "我明白",
+      "expected_answer": [
+        "我明白"
+      ],
+      "pinyin": "wǒ míng bái",
+      "english_hint": "I understand.",
+      "encouragement": "Excellent!"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 practical sentence patterns.",
+    "mission": "Next lesson: Learn emotions vocabulary!"
+  }
+}

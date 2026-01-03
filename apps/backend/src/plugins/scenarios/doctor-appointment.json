@@ -1,0 +1,110 @@
+{
+  "scenario_id": "doctor-appointment-01",
+  "title": "Visiting the Doctor",
+  "chineseTitle": "看醫生",
+  "description": "Practice describing symptoms and understanding medical advice",
+  "chineseDescription": "練習描述症狀和理解醫療建議",
+  "difficulty": "A2-B1",
+  "category": "Healthcare",
+  "objective": "Describe your symptoms and understand the doctor's advice",
+  "chineseObjective": "描述症狀並理解醫生的建議",
+  "estimatedTurns": 10,
+  "firstSpeaker": "ai",
+  "defaultUserRole": "patient",
+  "checkpoints": [
+    {
+      "id": 1,
+      "description": "Explain symptoms clearly",
+      "chineseDescription": "清楚說明症狀",
+      "keywords": ["咳嗽", "頭痛", "發燒", "不舒服", "痛", "症狀", "感覺", "最近", "一直", "喉嚨", "肚子", "流鼻水", "難受"],
+      "weight": 30
+    },
+    {
+      "id": 2,
+      "description": "Answer doctor's questions about medical history",
+      "chineseDescription": "回答醫生關於病史的問題",
+      "keywords": ["有", "沒有", "過敏", "藥物", "以前", "病史", "家族", "是", "不是", "幾天", "什麼時候", "從", "開始", "大概"],
+      "weight": 25
+    },
+    {
+      "id": 3,
+      "description": "Acknowledge diagnosis and confirm understanding",
+      "chineseDescription": "回應診斷並確認理解",
+      "keywords": ["明白", "了解", "知道了", "好的", "清楚", "懂了", "這樣啊", "原來", "需要", "好"],
+      "weight": 25
+    },
+    {
+      "id": 4,
+      "description": "Thank the doctor",
+      "chineseDescription": "感謝醫生",
+      "keywords": ["謝謝", "感謝", "麻煩你了", "辛苦了", "謝了"],
+      "weight": 20
+    }
+  ],
+  "roles": [
+    {
+      "id": "patient",
+      "name": "Patient",
+      "chineseName": "病人",
+      "systemPrompt": "You are a patient visiting the doctor in Taiwan because you don't feel well. Describe your symptoms clearly. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Be honest about how you feel."
+    },
+    {
+      "id": "doctor",
+      "name": "Doctor",
+      "chineseName": "醫生",
+      "interviewerImage": "Doctor.jpg",
+      "interviewerId": "john",
+      "systemPrompt": "You are a caring doctor in Taiwan. Ask about symptoms, when they started, and provide diagnosis and treatment advice. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (2-3 sentences). Be professional and reassuring."
+    }
+  ],
+  "suggestions": {
+    "byRole": {
+      "patient": [
+        {
+          "chinese": "我最近一直咳嗽，頭也很痛。",
+          "pinyin": "wǒ zuì jìn yī zhí ké sòu, tóu yě hěn tòng.",
+          "english": "I've been coughing a lot recently, and my head hurts a lot.",
+          "type": "safe",
+          "checkpointId": 1
+        },
+        {
+          "chinese": "從三天前開始的，有點發燒。",
+          "pinyin": "cóng sān tiān qián kāi shǐ de, yǒu diǎn fā shāo.",
+          "english": "It started three days ago, and I have a slight fever.",
+          "type": "safe",
+          "checkpointId": 2
+        },
+        {
+          "chinese": "好的，我明白了。",
+          "pinyin": "hǎo de, wǒ míng bái le.",
+          "english": "Okay, I understand.",
+          "type": "safe",
+          "checkpointId": 3
+        },
+        {
+          "chinese": "謝謝醫生，辛苦了。",
+          "pinyin": "xiè xie yī shēng, xīn kǔ le.",
+          "english": "Thank you doctor, you've worked hard.",
+          "type": "safe",
+          "checkpointId": 4
+        }
+      ],
+      "doctor": []
+    }
+  },
+  "keyVocabulary": [
+    { "chinese": "不舒服", "pinyin": "bù shū fu", "english": "not feeling well" },
+    { "chinese": "症狀", "pinyin": "zhèng zhuàng", "english": "symptoms" },
+    { "chinese": "頭痛", "pinyin": "tóu tòng", "english": "headache" },
+    { "chinese": "發燒", "pinyin": "fā shāo", "english": "fever" },
+    { "chinese": "吃藥", "pinyin": "chī yào", "english": "take medicine" }
+  ],
+  "keyPatterns": [
+    { "pattern": "我...", "example": "我頭痛", "english": "I have..." },
+    { "pattern": "從...開始", "example": "從昨天開始", "english": "Started from..." },
+    { "pattern": "有沒有...?", "example": "有沒有發燒?", "english": "Do you have...?" }
+  ],
+  "tags": ["healthcare", "doctor", "medical"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "isCustom": false
+}

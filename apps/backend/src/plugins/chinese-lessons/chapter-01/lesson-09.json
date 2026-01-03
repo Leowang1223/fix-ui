@@ -1,0 +1,133 @@
+{
+  "lesson_id": "C1-L09",
+  "chapter_id": "C1",
+  "lesson_number": 9,
+  "title": "Transportation",
+  "description": "Learn basic transportation vocabulary.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "車",
+      "expected_answer": [
+        "車"
+      ],
+      "pinyin": "chē",
+      "english_hint": "car",
+      "encouragement": "Great start!",
+      "tts_text": "車",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 2,
+      "teacher": "公車",
+      "expected_answer": [
+        "公車"
+      ],
+      "pinyin": "gōng chē",
+      "english_hint": "bus",
+      "encouragement": "Nice!",
+      "tts_text": "公車",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 3,
+      "teacher": "火車",
+      "expected_answer": [
+        "火車"
+      ],
+      "pinyin": "huǒ chē",
+      "english_hint": "train",
+      "encouragement": "Good job!",
+      "tts_text": "火車",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 4,
+      "teacher": "飛機",
+      "expected_answer": [
+        "飛機"
+      ],
+      "pinyin": "fēi jī",
+      "english_hint": "airplane",
+      "encouragement": "Excellent!",
+      "tts_text": "飛機",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 5,
+      "teacher": "船",
+      "expected_answer": [
+        "船"
+      ],
+      "pinyin": "chuán",
+      "english_hint": "boat",
+      "encouragement": "Great!",
+      "tts_text": "船",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 6,
+      "teacher": "腳踏車",
+      "expected_answer": [
+        "腳踏車"
+      ],
+      "pinyin": "jiǎo tà chē",
+      "english_hint": "bicycle",
+      "encouragement": "Nice work!",
+      "tts_text": "腳踏車",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 7,
+      "teacher": "摩托車",
+      "expected_answer": [
+        "摩托車"
+      ],
+      "pinyin": "mó tuō chē",
+      "english_hint": "motorcycle",
+      "encouragement": "Good!",
+      "tts_text": "摩托車",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 8,
+      "teacher": "計程車",
+      "expected_answer": [
+        "計程車"
+      ],
+      "pinyin": "jì chéng chē",
+      "english_hint": "taxi",
+      "encouragement": "Well done!",
+      "tts_text": "計程車",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 9,
+      "teacher": "地鐵",
+      "expected_answer": [
+        "地鐵"
+      ],
+      "pinyin": "dì tiě",
+      "english_hint": "subway",
+      "encouragement": "Great progress!",
+      "tts_text": "地鐵",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 10,
+      "teacher": "走路",
+      "expected_answer": [
+        "走路"
+      ],
+      "pinyin": "zǒu lù",
+      "english_hint": "to walk",
+      "encouragement": "Awesome job!",
+      "tts_text": "走路",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    }
+  ],
+  "review": {
+    "summary": "You learned common transportation words.",
+    "mission": "Final lesson of this chapter: basic verbs!"
+  }
+}

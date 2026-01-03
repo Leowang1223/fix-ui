@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C4-L5",
+  "chapter_id": "C4",
+  "lesson_number": 5,
+  "title": "Hotel & Booking",
+  "description": "Useful phrases for booking hotels and checking in.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我想訂房。",
+      "expected_answer": [
+        "我想訂房。"
+      ],
+      "pinyin": "wǒ xiǎng dìng fáng.",
+      "english_hint": "I want to book a room.",
+      "encouragement": "Great start!"
+    },
+    {
+      "id": 2,
+      "teacher": "有空房嗎？",
+      "expected_answer": [
+        "有空房嗎？"
+      ],
+      "pinyin": "yǒu kōng fáng ma?",
+      "english_hint": "Do you have available rooms?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我要住一晚。",
+      "expected_answer": [
+        "我要住一晚。"
+      ],
+      "pinyin": "wǒ yào zhù yì wǎn.",
+      "english_hint": "I want to stay for one night.",
+      "encouragement": "Good booking phrase!"
+    },
+    {
+      "id": 4,
+      "teacher": "請給我護照。",
+      "expected_answer": [
+        "請給我護照。"
+      ],
+      "pinyin": "qǐng gěi wǒ hù zhào.",
+      "english_hint": "Please give me your passport.",
+      "encouragement": "Useful check-in line!"
+    },
+    {
+      "id": 5,
+      "teacher": "早餐幾點開始？",
+      "expected_answer": [
+        "早餐幾點開始？"
+      ],
+      "pinyin": "zǎo cān jǐ diǎn kāi shǐ?",
+      "english_hint": "What time does breakfast start?",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 6,
+      "teacher": "有免費WiFi嗎？",
+      "expected_answer": [
+        "有免費WiFi嗎？"
+      ],
+      "pinyin": "yǒu miǎn fèi wēi fāi ma?",
+      "english_hint": "Is there free WiFi?",
+      "encouragement": "Great travel phrase!"
+    },
+    {
+      "id": 7,
+      "teacher": "我想退房。",
+      "expected_answer": [
+        "我想退房。"
+      ],
+      "pinyin": "wǒ xiǎng tuì fáng.",
+      "english_hint": "I want to check out.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 8,
+      "teacher": "可以寄放行李嗎？",
+      "expected_answer": [
+        "可以寄放行李嗎？"
+      ],
+      "pinyin": "kě yǐ jì fàng xíng lǐ ma?",
+      "english_hint": "Can I leave my luggage here?",
+      "encouragement": "Perfect!"
+    },
+    {
+      "id": 9,
+      "teacher": "請問房間在哪一樓？",
+      "expected_answer": [
+        "請問房間在哪一樓？"
+      ],
+      "pinyin": "qǐng wèn fáng jiān zài nǎ yì lóu?",
+      "english_hint": "Which floor is the room on?",
+      "encouragement": "Great question!"
+    },
+    {
+      "id": 10,
+      "teacher": "謝謝，你的服務很好。",
+      "expected_answer": [
+        "謝謝，你的服務很好。"
+      ],
+      "pinyin": "xiè xie, nǐ de fú wù hěn hǎo.",
+      "english_hint": "Thank you, your service is very good.",
+      "encouragement": "Wonderful compliment!"
+    }
+  ],
+  "review": {
+    "summary": "You learned basic hotel and booking phrases.",
+    "mission": "Next lesson: Learn restaurant and food ordering phrases!"
+  }
+}

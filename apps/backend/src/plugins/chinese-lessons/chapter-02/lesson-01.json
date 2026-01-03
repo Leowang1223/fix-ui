@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C2-L1",
+  "chapter_id": "C2",
+  "lesson_number": 1,
+  "title": "Daily Activities",
+  "description": "Learn common daily activity words.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "起床",
+      "expected_answer": [
+        "起床"
+      ],
+      "pinyin": "qǐ chuáng",
+      "english_hint": "to get up",
+      "encouragement": "Great start!"
+    },
+    {
+      "id": 2,
+      "teacher": "睡覺",
+      "expected_answer": [
+        "睡覺"
+      ],
+      "pinyin": "shuì jiào",
+      "english_hint": "to sleep",
+      "encouragement": "Nice job!"
+    },
+    {
+      "id": 3,
+      "teacher": "洗澡",
+      "expected_answer": [
+        "洗澡"
+      ],
+      "pinyin": "xǐ zǎo",
+      "english_hint": "to take a shower",
+      "encouragement": "Good work!"
+    },
+    {
+      "id": 4,
+      "teacher": "吃飯",
+      "expected_answer": [
+        "吃飯"
+      ],
+      "pinyin": "chī fàn",
+      "english_hint": "to eat a meal",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "上班",
+      "expected_answer": [
+        "上班"
+      ],
+      "pinyin": "shàng bān",
+      "english_hint": "to go to work",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "下班",
+      "expected_answer": [
+        "下班"
+      ],
+      "pinyin": "xià bān",
+      "english_hint": "to get off work",
+      "encouragement": "Perfect!"
+    },
+    {
+      "id": 7,
+      "teacher": "上課",
+      "expected_answer": [
+        "上課"
+      ],
+      "pinyin": "shàng kè",
+      "english_hint": "to attend class",
+      "encouragement": "You're doing great!"
+    },
+    {
+      "id": 8,
+      "teacher": "讀書",
+      "expected_answer": [
+        "讀書"
+      ],
+      "pinyin": "dú shū",
+      "english_hint": "to study",
+      "encouragement": "Nice work!"
+    },
+    {
+      "id": 9,
+      "teacher": "運動",
+      "expected_answer": [
+        "運動"
+      ],
+      "pinyin": "yùn dòng",
+      "english_hint": "to exercise",
+      "encouragement": "Awesome!"
+    },
+    {
+      "id": 10,
+      "teacher": "休息",
+      "expected_answer": [
+        "休息"
+      ],
+      "pinyin": "xiū xi",
+      "english_hint": "to rest",
+      "encouragement": "Wonderful progress!"
+    }
+  ],
+  "review": {
+    "summary": "You learned basic daily activity words.",
+    "mission": "Next lesson: Learn simple objects!"
+  }
+}

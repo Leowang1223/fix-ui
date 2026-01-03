@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C5-L5",
+  "chapter_id": "C5",
+  "lesson_number": 5,
+  "title": "Daily Actions",
+  "description": "Learn common verbs used in everyday life.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "洗手",
+      "expected_answer": [
+        "洗手"
+      ],
+      "pinyin": "xǐ shǒu",
+      "english_hint": "wash hands",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "洗臉",
+      "expected_answer": [
+        "洗臉"
+      ],
+      "pinyin": "xǐ liǎn",
+      "english_hint": "wash face",
+      "encouragement": "Nice job!"
+    },
+    {
+      "id": 3,
+      "teacher": "刷牙",
+      "expected_answer": [
+        "刷牙"
+      ],
+      "pinyin": "shuā yá",
+      "english_hint": "brush teeth",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "洗衣服",
+      "expected_answer": [
+        "洗衣服"
+      ],
+      "pinyin": "xǐ yī fú",
+      "english_hint": "wash clothes",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "掃地",
+      "expected_answer": [
+        "掃地"
+      ],
+      "pinyin": "sǎo dì",
+      "english_hint": "sweep the floor",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "拖地",
+      "expected_answer": [
+        "拖地"
+      ],
+      "pinyin": "tuō dì",
+      "english_hint": "mop the floor",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "煮飯",
+      "expected_answer": [
+        "煮飯"
+      ],
+      "pinyin": "zhǔ fàn",
+      "english_hint": "cook (make a meal)",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 8,
+      "teacher": "洗澡",
+      "expected_answer": [
+        "洗澡"
+      ],
+      "pinyin": "xǐ zǎo",
+      "english_hint": "take a shower",
+      "encouragement": "Awesome!"
+    },
+    {
+      "id": 9,
+      "teacher": "休息",
+      "expected_answer": [
+        "休息"
+      ],
+      "pinyin": "xiū xí",
+      "english_hint": "rest",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 10,
+      "teacher": "練習",
+      "expected_answer": [
+        "練習"
+      ],
+      "pinyin": "liàn xí",
+      "english_hint": "practice",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 daily action verbs.",
+    "mission": "Next lesson: Learn simple lifestyle sentences!"
+  }
+}

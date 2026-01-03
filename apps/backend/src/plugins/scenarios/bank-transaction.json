@@ -1,0 +1,131 @@
+{
+  "scenario_id": "bank-transaction-01",
+  "title": "Banking Transaction",
+  "chineseTitle": "銀行辦理業務",
+  "description": "Practice handling banking transactions in Chinese",
+  "chineseDescription": "練習中文銀行業務辦理對話",
+  "difficulty": "B2+",
+  "category": "Professional",
+  "objective": "Successfully complete a banking transaction",
+  "chineseObjective": "成功完成銀行業務辦理",
+  "estimatedTurns": 15,
+  "firstSpeaker": "ai",
+  "defaultUserRole": "customer",
+  "checkpoints": [
+    {
+      "id": 1,
+      "description": "Greet and state purpose",
+      "chineseDescription": "打招呼並說明需求",
+      "keywords": ["您好", "我想", "我要", "辦理", "開戶", "匯款", "存款", "請問", "麻煩", "想要"],
+      "weight": 15
+    },
+    {
+      "id": 2,
+      "description": "Provide identification",
+      "chineseDescription": "提供證件資料",
+      "keywords": ["身份證", "護照", "ID", "passport", "證件", "身分證", "這是", "給您"],
+      "weight": 20
+    },
+    {
+      "id": 3,
+      "description": "Discuss transaction details",
+      "chineseDescription": "詢問業務細節",
+      "keywords": ["手續費", "fee", "利率", "interest", "帳戶", "account", "金額", "要多少", "需要", "有什麼"],
+      "weight": 25
+    },
+    {
+      "id": 4,
+      "description": "Ask clarifying questions",
+      "chineseDescription": "確認交易內容",
+      "keywords": ["確認", "confirm", "對嗎", "是嗎", "correct", "需要", "是這樣嗎", "沒錯", "好的"],
+      "weight": 20
+    },
+    {
+      "id": 5,
+      "description": "Complete transaction",
+      "chineseDescription": "完成辦理",
+      "keywords": ["簽名", "sign", "完成", "好了", "done", "卡", "簽", "這裡", "辦好"],
+      "weight": 15
+    },
+    {
+      "id": 6,
+      "description": "Thank and leave",
+      "chineseDescription": "感謝離開",
+      "keywords": ["謝謝", "謝", "再見", "感謝", "拜拜", "謝啦"],
+      "weight": 5
+    }
+  ],
+  "roles": [
+    {
+      "id": "customer",
+      "name": "Bank Customer",
+      "chineseName": "客戶",
+      "systemPrompt": "You are a bank customer in Taiwan needing to complete a transaction (opening account, transfer, deposit, etc.). Be clear about your needs. Provide necessary documents and information. Ask questions if unclear. Be professional. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise but informative (2-3 sentences)."
+    },
+    {
+      "id": "teller",
+      "name": "Bank Teller",
+      "chineseName": "銀行員",
+      "interviewerImage": "bank clerk.png",
+      "interviewerId": "nina",
+      "systemPrompt": "You are a bank teller helping customers with transactions in Taiwan. Be professional and helpful. Ask for required documents. Explain fees, procedures, and requirements clearly. Confirm transaction details. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses clear and professional (2-3 sentences)."
+    }
+  ],
+  "suggestions": {
+    "byRole": {
+      "customer": [
+        {
+          "chinese": "您好，我想開一個新的帳戶。",
+          "pinyin": "nín hǎo, wǒ xiǎng kāi yí ge xīn de zhàng hù.",
+          "english": "Hello, I'd like to open a new account.",
+          "type": "safe",
+          "checkpointId": 1
+        },
+        {
+          "chinese": "這是我的護照和簽證。",
+          "pinyin": "zhè shì wǒ de hù zhào hé qiān zhèng.",
+          "english": "Here's my passport and visa.",
+          "type": "safe",
+          "checkpointId": 2
+        },
+        {
+          "chinese": "請問有什麼手續費嗎？",
+          "pinyin": "qǐng wèn yǒu shén me shǒu xù fèi ma?",
+          "english": "Are there any handling fees?",
+          "type": "advanced",
+          "checkpointId": 3
+        },
+        {
+          "chinese": "我需要簽在哪裡？",
+          "pinyin": "wǒ xū yào qiān zài nǎ lǐ?",
+          "english": "Where do I need to sign?",
+          "type": "safe",
+          "checkpointId": 5
+        },
+        {
+          "chinese": "謝謝你的幫助。",
+          "pinyin": "xiè xie nǐ de bāng zhù.",
+          "english": "Thank you for your help.",
+          "type": "safe",
+          "checkpointId": 6
+        }
+      ],
+      "teller": []
+    }
+  },
+  "keyVocabulary": [
+    { "chinese": "銀行", "pinyin": "yín háng", "english": "bank" },
+    { "chinese": "帳戶", "pinyin": "zhàng hù", "english": "account" },
+    { "chinese": "手續費", "pinyin": "shǒu xù fèi", "english": "handling fee" },
+    { "chinese": "匯款", "pinyin": "huì kuǎn", "english": "remittance/transfer" },
+    { "chinese": "身份證", "pinyin": "shēn fèn zhèng", "english": "ID card" }
+  ],
+  "keyPatterns": [
+    { "pattern": "我想...", "example": "我想開一個新的帳戶", "english": "I would like to..." },
+    { "pattern": "請問...", "example": "請問有什麼手續費嗎？", "english": "May I ask..." },
+    { "pattern": "需要...嗎？", "example": "需要簽名嗎？", "english": "Do I need to...?" }
+  ],
+  "tags": ["bank", "finance", "transaction", "professional"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "isCustom": false
+}

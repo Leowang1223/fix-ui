@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C7-L3",
+  "chapter_id": "C7",
+  "lesson_number": 3,
+  "title": "Transportation",
+  "description": "Learn transportation words and phrases.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "公車",
+      "expected_answer": [
+        "公車"
+      ],
+      "pinyin": "gōng chē",
+      "english_hint": "bus",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "地鐵",
+      "expected_answer": [
+        "地鐵"
+      ],
+      "pinyin": "dì tiě",
+      "english_hint": "metro / subway",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "火車",
+      "expected_answer": [
+        "火車"
+      ],
+      "pinyin": "huǒ chē",
+      "english_hint": "train",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "計程車",
+      "expected_answer": [
+        "計程車"
+      ],
+      "pinyin": "jì chéng chē",
+      "english_hint": "taxi",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "飛機",
+      "expected_answer": [
+        "飛機"
+      ],
+      "pinyin": "fēi jī",
+      "english_hint": "airplane",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "機場",
+      "expected_answer": [
+        "機場"
+      ],
+      "pinyin": "jī chǎng",
+      "english_hint": "airport",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "車站",
+      "expected_answer": [
+        "車站"
+      ],
+      "pinyin": "chē zhàn",
+      "english_hint": "station",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "上車",
+      "expected_answer": [
+        "上車"
+      ],
+      "pinyin": "shàng chē",
+      "english_hint": "get on (a vehicle)",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "下車",
+      "expected_answer": [
+        "下車"
+      ],
+      "pinyin": "xià chē",
+      "english_hint": "get off (a vehicle)",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "轉車",
+      "expected_answer": [
+        "轉車"
+      ],
+      "pinyin": "zhuǎn chē",
+      "english_hint": "transfer / switch buses/trains",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned transportation vocabulary.",
+    "mission": "Next: Asking for directions (A2 dialogues)."
+  }
+}

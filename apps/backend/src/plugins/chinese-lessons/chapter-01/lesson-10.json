@@ -1,0 +1,133 @@
+{
+  "lesson_id": "C1-L10",
+  "chapter_id": "C1",
+  "lesson_number": 10,
+  "title": "Basic Verbs",
+  "description": "Learn simple everyday action words.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "看",
+      "expected_answer": [
+        "看"
+      ],
+      "pinyin": "kàn",
+      "english_hint": "to see / to look",
+      "encouragement": "Great start!",
+      "tts_text": "看",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 2,
+      "teacher": "吃",
+      "expected_answer": [
+        "吃"
+      ],
+      "pinyin": "chī",
+      "english_hint": "to eat",
+      "encouragement": "Nice!",
+      "tts_text": "吃",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 3,
+      "teacher": "喝",
+      "expected_answer": [
+        "喝"
+      ],
+      "pinyin": "hē",
+      "english_hint": "to drink",
+      "encouragement": "Good job!",
+      "tts_text": "喝",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 4,
+      "teacher": "說",
+      "expected_answer": [
+        "說"
+      ],
+      "pinyin": "shuō",
+      "english_hint": "to speak",
+      "encouragement": "Excellent!",
+      "tts_text": "說",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 5,
+      "teacher": "走",
+      "expected_answer": [
+        "走"
+      ],
+      "pinyin": "zǒu",
+      "english_hint": "to walk",
+      "encouragement": "Great!",
+      "tts_text": "走",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 6,
+      "teacher": "來",
+      "expected_answer": [
+        "來"
+      ],
+      "pinyin": "lái",
+      "english_hint": "to come",
+      "encouragement": "Perfect!",
+      "tts_text": "來",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 7,
+      "teacher": "去",
+      "expected_answer": [
+        "去"
+      ],
+      "pinyin": "qù",
+      "english_hint": "to go",
+      "encouragement": "Nice work!",
+      "tts_text": "去",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 8,
+      "teacher": "寫",
+      "expected_answer": [
+        "寫"
+      ],
+      "pinyin": "xiě",
+      "english_hint": "to write",
+      "encouragement": "Good progress!",
+      "tts_text": "寫",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 9,
+      "teacher": "聽",
+      "expected_answer": [
+        "聽"
+      ],
+      "pinyin": "tīng",
+      "english_hint": "to listen",
+      "encouragement": "Awesome!",
+      "tts_text": "聽",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 10,
+      "teacher": "做",
+      "expected_answer": [
+        "做"
+      ],
+      "pinyin": "zuò",
+      "english_hint": "to do / to make",
+      "encouragement": "Fantastic work!",
+      "tts_text": "做",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    }
+  ],
+  "review": {
+    "summary": "Great job! You now know 100 common beginner words (10 lessons × 10 words).",
+    "mission": "Next chapter: Daily activities and simple conversations."
+  }
+}

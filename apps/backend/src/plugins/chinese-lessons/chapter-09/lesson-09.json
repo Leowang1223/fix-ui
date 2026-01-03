@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C9-L9",
+  "chapter_id": "C9",
+  "lesson_number": 9,
+  "title": "Short Narrative",
+  "description": "Learn to tell short B1-entry stories with clear sequence.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "昨天發生了一件有趣的事情。",
+      "expected_answer": [
+        "昨天發生了一件有趣的事情。"
+      ],
+      "pinyin": "zuó tiān fā shēng le yí jiàn yǒu qù de shì qíng.",
+      "english_hint": "Something interesting happened yesterday.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "我原本打算早點出門。",
+      "expected_answer": [
+        "我原本打算早點出門。"
+      ],
+      "pinyin": "wǒ yuán běn dǎ suàn zǎo diǎn chū mén.",
+      "english_hint": "I planned to leave early.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "結果因為下雨，我只好改搭地鐵。",
+      "expected_answer": [
+        "結果因為下雨，我只好改搭地鐵。"
+      ],
+      "pinyin": "jié guǒ yīn wèi xià yǔ, wǒ zhǐ hǎo gǎi dā dì tiě.",
+      "english_hint": "But because it rained, I took the subway instead.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "在地鐵上，我遇到一位很久沒見的朋友。",
+      "expected_answer": [
+        "在地鐵上，我遇到一位很久沒見的朋友。"
+      ],
+      "pinyin": "zài dì tiě shàng, wǒ yù dào yí wèi hěn jiǔ méi jiàn de péng yǒu.",
+      "english_hint": "On the subway, I met a long-lost friend.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我們簡單聊了一下近況。",
+      "expected_answer": [
+        "我們簡單聊了一下近況。"
+      ],
+      "pinyin": "wǒ men jiǎn dān liáo le yí xià jìn kuàng.",
+      "english_hint": "We briefly talked about our recent lives.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "他告訴我，他最近換了新工作。",
+      "expected_answer": [
+        "他告訴我，他最近換了新工作。"
+      ],
+      "pinyin": "tā gào sù wǒ, tā zuì jìn huàn le xīn gōng zuò.",
+      "english_hint": "He told me he recently changed jobs.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "我覺得這個巧遇非常特別。",
+      "expected_answer": [
+        "我覺得這個巧遇非常特別。"
+      ],
+      "pinyin": "wǒ jué dé zhè gè qiǎo yù fēi cháng tè bié.",
+      "english_hint": "I felt this unexpected meeting was very special.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我們約好下次再找時間好好聊聊。",
+      "expected_answer": [
+        "我們約好下次再找時間好好聊聊。"
+      ],
+      "pinyin": "wǒ men yuē hǎo xià cì zài zhǎo shí jiān hǎo hǎo liáo liáo.",
+      "english_hint": "We agreed to find time to chat again.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "雖然只是短短幾分鐘，但讓我很開心。",
+      "expected_answer": [
+        "雖然只是短短幾分鐘，但讓我很開心。"
+      ],
+      "pinyin": "suī rán zhǐ shì duǎn duǎn jǐ fēn zhōng, dàn ràng wǒ hěn kāi xīn.",
+      "english_hint": "Although it was just a few minutes, it made me happy.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "所以我覺得，有時候小事也能帶來驚喜。",
+      "expected_answer": [
+        "所以我覺得，有時候小事也能帶來驚喜。"
+      ],
+      "pinyin": "suǒ yǐ wǒ jué dé, yǒu shí hòu xiǎo shì yě néng dài lái jīng xǐ.",
+      "english_hint": "So I think sometimes small things can bring surprises.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced a complete B1-entry narrative structure.",
+    "mission": "Next: Full workplace + daily-life conversation."
+  }
+}

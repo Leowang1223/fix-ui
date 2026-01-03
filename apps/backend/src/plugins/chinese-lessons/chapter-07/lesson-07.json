@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C7-L7",
+  "chapter_id": "C7",
+  "lesson_number": 7,
+  "title": "Future Plans",
+  "description": "Learn A2-level future expressions with 要 / 會 / 打算.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我明天要去市中心。",
+      "expected_answer": [
+        "我明天要去市中心。"
+      ],
+      "pinyin": "wǒ míng tiān yào qù shì zhōng xīn.",
+      "english_hint": "I'm going to the city center tomorrow.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "我下週會開始新的課程。",
+      "expected_answer": [
+        "我下週會開始新的課程。"
+      ],
+      "pinyin": "wǒ xià zhōu huì kāi shǐ xīn de kè chéng.",
+      "english_hint": "I will start a new course next week.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我打算去參觀博物館。",
+      "expected_answer": [
+        "我打算去參觀博物館。"
+      ],
+      "pinyin": "wǒ dǎ suàn qù cān guān bó wù guǎn.",
+      "english_hint": "I plan to visit the museum.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "我明天會搭地鐵去公司。",
+      "expected_answer": [
+        "我明天會搭地鐵去公司。"
+      ],
+      "pinyin": "wǒ míng tiān huì dā dì tiě qù gōng sī.",
+      "english_hint": "I will take the metro to work tomorrow.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我週末打算跟朋友見面。",
+      "expected_answer": [
+        "我週末打算跟朋友見面。"
+      ],
+      "pinyin": "wǒ zhōu mò dǎ suàn gēn péng yǒu jiàn miàn.",
+      "english_hint": "I plan to meet friends this weekend.",
+      "encouragement": "Great plan!"
+    },
+    {
+      "id": 6,
+      "teacher": "下個月我會去旅行。",
+      "expected_answer": [
+        "下個月我會去旅行。"
+      ],
+      "pinyin": "xià gè yuè wǒ huì qù lǚ xíng.",
+      "english_hint": "I will travel next month.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "我打算學新的語言。",
+      "expected_answer": [
+        "我打算學新的語言。"
+      ],
+      "pinyin": "wǒ dǎ suàn xué xīn de yǔ yán.",
+      "english_hint": "I plan to learn a new language.",
+      "encouragement": "Good goal!"
+    },
+    {
+      "id": 8,
+      "teacher": "我明天要早起，因為有重要的會議。",
+      "expected_answer": [
+        "我明天要早起，因為有重要的會議。"
+      ],
+      "pinyin": "wǒ míng tiān yào zǎo qǐ, yīn wèi yǒu zhòng yào de huì yì.",
+      "english_hint": "I need to wake up early tomorrow because I have an important meeting.",
+      "encouragement": "Nice reasoning!"
+    },
+    {
+      "id": 9,
+      "teacher": "下週我會換新的手機。",
+      "expected_answer": [
+        "下週我會換新的手機。"
+      ],
+      "pinyin": "wǒ xià zhōu huì huàn xīn de shǒu jī.",
+      "english_hint": "I will change to a new phone next week.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 10,
+      "teacher": "我打算學會自己做早餐。",
+      "expected_answer": [
+        "我打算學會自己做早餐。"
+      ],
+      "pinyin": "wǒ dǎ suàn xué huì zì jǐ zuò zǎo cān.",
+      "english_hint": "I plan to learn to make my own breakfast.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned natural A2 future sentences.",
+    "mission": "Next lesson: Navigation & landmark descriptions!"
+  }
+}

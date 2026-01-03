@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C9-L10",
+  "chapter_id": "C9",
+  "lesson_number": 10,
+  "title": "Full Conversation",
+  "description": "Practice a full B1-entry conversation mixing work, plans, emotions, and small narratives.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "A：你今天看起來有點累，還好嗎？",
+      "expected_answer": [
+        "你今天看起來有點累，還好嗎？"
+      ],
+      "pinyin": "A: nǐ jīn tiān kàn qǐ lái yǒu diǎn lèi, hái hǎo ma?",
+      "english_hint": "You look a bit tired today, are you okay?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "B：還好，只是最近事情有點多。",
+      "expected_answer": [
+        "還好，只是最近事情有點多。"
+      ],
+      "pinyin": "B: hái hǎo, zhǐ shì zuì jìn shì qíng yǒu diǎn duō.",
+      "english_hint": "I'm okay, just a bit busy lately.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "A：需要我幫忙嗎？",
+      "expected_answer": [
+        "需要我幫忙嗎？"
+      ],
+      "pinyin": "A: xū yào wǒ bāng máng ma?",
+      "english_hint": "Need my help?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "B：謝謝，我正在整理資料，應該快好了。",
+      "expected_answer": [
+        "謝謝，我正在整理資料，應該快好了。"
+      ],
+      "pinyin": "B: xiè xie, wǒ zhèng zài zhěng lǐ zī liào, yīng gāi kuài hǎo le.",
+      "english_hint": "Thanks, I'm organizing the data—it should be done soon.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "A：對了，你上次說的專案進展如何？",
+      "expected_answer": [
+        "對了，你上次說的專案進展如何？"
+      ],
+      "pinyin": "A: duì le, nǐ shàng cì shuō de zhuān àn jìn zhǎn rú hé?",
+      "english_hint": "By the way, how is the project you mentioned last time?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "B：比我想像的順利，我已經完成第一階段了。",
+      "expected_answer": [
+        "比我想像的順利，我已經完成第一階段了。"
+      ],
+      "pinyin": "B: bǐ wǒ xiǎng xiàng de shùn lì, wǒ yǐ jīng wán chéng dì yī jiē duàn le.",
+      "english_hint": "It's smoother than I expected; I've finished the first stage.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "A：太好了！你有打算怎麼進行下一步嗎？",
+      "expected_answer": [
+        "太好了！你有打算怎麼進行下一步嗎？"
+      ],
+      "pinyin": "A: tài hǎo le! nǐ yǒu dǎ suàn zěn me jìn xíng xià yí bù ma?",
+      "english_hint": "That's great! Do you have plans for the next step?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "B：我想先蒐集更多意見，再做調整。",
+      "expected_answer": [
+        "我想先蒐集更多意見，再做調整。"
+      ],
+      "pinyin": "B: wǒ xiǎng xiān sōu jí gèng duō yì jiàn, zài zuò tiáo zhěng.",
+      "english_hint": "I want to gather more opinions first, then make adjustments.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "A：聽起來很周全，需要我幫你問問其他人嗎？",
+      "expected_answer": [
+        "聽起來很周全，需要我幫你問問其他人嗎？"
+      ],
+      "pinyin": "A: tīng qǐ lái hěn zhōu quán, xū yào wǒ bāng nǐ wèn wèn qí tā rén ma?",
+      "english_hint": "Sounds thorough. Want me to help ask others?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "B：好啊，那太棒了，謝謝你的幫忙！",
+      "expected_answer": [
+        "好啊，那太棒了，謝謝你的幫忙！"
+      ],
+      "pinyin": "B: hǎo a, nà tài bàng le, xiè xie nǐ de bāng máng!",
+      "english_hint": "Sure, that would be great. Thanks for your help!",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You completed a full B1-entry conversation mixing emotion, work, planning, and narrative elements.",
+    "mission": "Ready for CHAPTER 10 (B1 level, slightly harder, more natural and fluent)?"
+  }
+}

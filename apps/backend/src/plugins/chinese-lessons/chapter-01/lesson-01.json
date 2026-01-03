@@ -1,0 +1,134 @@
+{
+  "lesson_id": "C1-L01",
+  "chapter_id": "C1",
+  "lesson_number": 1,
+  "title": "Greetings",
+  "description": "Learn the most basic daily greetings.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "你好",
+      "expected_answer": [
+        "你好"
+      ],
+      "pinyin": "nǐ hǎo",
+      "english_hint": "hello",
+      "encouragement": "Great job! You're learning basic greetings!",
+      "tts_text": "你好",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 2,
+      "teacher": "謝謝",
+      "expected_answer": [
+        "謝謝"
+      ],
+      "pinyin": "xiè xie",
+      "english_hint": "thank you",
+      "encouragement": "Nice! Using polite words is important!",
+      "tts_text": "謝謝",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 3,
+      "teacher": "再見",
+      "expected_answer": [
+        "再見"
+      ],
+      "pinyin": "zài jiàn",
+      "english_hint": "goodbye",
+      "encouragement": "Perfect! You can say goodbye now!",
+      "tts_text": "再見",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 4,
+      "teacher": "對不起",
+      "expected_answer": [
+        "對不起"
+      ],
+      "pinyin": "duì bù qǐ",
+      "english_hint": "sorry",
+      "encouragement": "Well done! You're learning polite expressions!",
+      "tts_text": "對不起",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 5,
+      "teacher": "請",
+      "expected_answer": [
+        "請"
+      ],
+      "pinyin": "qǐng",
+      "english_hint": "please",
+      "encouragement": "Excellent! Keep going!",
+      "tts_text": "請",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 6,
+      "teacher": "早安",
+      "expected_answer": [
+        "早安"
+      ],
+      "pinyin": "zǎo ān",
+      "english_hint": "good morning",
+      "encouragement": "Great! You can greet people in the morning!",
+      "tts_text": "早安",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 7,
+      "teacher": "晚安",
+      "expected_answer": [
+        "晚安"
+      ],
+      "pinyin": "wǎn ān",
+      "english_hint": "good night",
+      "encouragement": "Good work! You’re doing well!",
+      "tts_text": "晚安",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 8,
+      "teacher": "你好嗎？",
+      "expected_answer": [
+        "你好嗎？",
+        "你好吗？"
+      ],
+      "pinyin": "nǐ hǎo ma?",
+      "english_hint": "how are you?",
+      "encouragement": "Awesome! You can start simple conversation!",
+      "tts_text": "你好嗎？",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 9,
+      "teacher": "我很好",
+      "expected_answer": [
+        "我很好"
+      ],
+      "pinyin": "wǒ hěn hǎo",
+      "english_hint": "I'm fine",
+      "encouragement": "Perfect answer!",
+      "tts_text": "我很好",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 10,
+      "teacher": "沒關係",
+      "expected_answer": [
+        "沒關係"
+      ],
+      "pinyin": "méi guān xi",
+      "english_hint": "it's okay",
+      "encouragement": "Nice! Your Chinese sounds natural!",
+      "tts_text": "沒關係",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    }
+  ],
+  "review": {
+    "summary": "You learned the most essential greetings and polite expressions.",
+    "mission": "Next lesson: Learn how to introduce yourself."
+  }
+}

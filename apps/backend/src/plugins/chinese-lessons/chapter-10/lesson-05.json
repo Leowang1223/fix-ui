@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C10-L5",
+  "chapter_id": "C10",
+  "lesson_number": 5,
+  "title": "Describing Problems",
+  "description": "Learn to clearly explain problems and situations at B1 level.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我遇到一件有點棘手的事情。",
+      "expected_answer": [
+        "我遇到一件有點棘手的事情。"
+      ],
+      "pinyin": "wǒ yù dào yí jiàn yǒu diǎn jí shǒu de shì qíng.",
+      "english_hint": "I ran into something a bit tricky.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "目前的進度比預期慢了一點。",
+      "expected_answer": [
+        "目前的進度比預期慢了一點。"
+      ],
+      "pinyin": "mù qián de jìn dù bǐ yù qī màn le yì diǎn.",
+      "english_hint": "The progress is slightly slower than expected.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我還在找問題出在哪裡。",
+      "expected_answer": [
+        "我還在找問題出在哪裡。"
+      ],
+      "pinyin": "wǒ hái zài zhǎo wèn tí chū zài nǎ lǐ.",
+      "english_hint": "I'm still figuring out what caused the problem.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "看起來需要多花一點時間處理。",
+      "expected_answer": [
+        "看起來需要多花一點時間處理。"
+      ],
+      "pinyin": "kàn qǐ lái xū yào duō huā yì diǎn shí jiān chǔ lǐ.",
+      "english_hint": "It seems this will take more time to handle.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "雖然事情變複雜了，但還是能解決。",
+      "expected_answer": [
+        "雖然事情變複雜了，但還是能解決。"
+      ],
+      "pinyin": "suī rán shì qíng biàn fù zá le, dàn hái shì néng jiě jué.",
+      "english_hint": "Although things got complicated, it’s still solvable.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "我正在一步一步排查問題。",
+      "expected_answer": [
+        "我正在一步一步排查問題。"
+      ],
+      "pinyin": "wǒ zhèng zài yí bù yí bù pái chá wèn tí.",
+      "english_hint": "I'm checking the issue step by step.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "我已經找到部分原因，但還需要再確認。",
+      "expected_answer": [
+        "我已經找到部分原因，但還需要再確認。"
+      ],
+      "pinyin": "wǒ yǐ jīng zhǎo dào bù fèn yuán yīn, dàn hái xū yào zài què rèn.",
+      "english_hint": "I found part of the reason but need to confirm more.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "主要的困難是時間安排不太夠。",
+      "expected_answer": [
+        "主要的困難是時間安排不太夠。"
+      ],
+      "pinyin": "zhǔ yào de kùn nán shì shí jiān ān pái bù tài gòu.",
+      "english_hint": "The main challenge is the lack of time.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "我需要一些協助才能更快解決問題。",
+      "expected_answer": [
+        "我需要一些協助才能更快解決問題。"
+      ],
+      "pinyin": "wǒ xū yào yì xiē xié zhù cái néng gèng kuài jiě jué wèn tí.",
+      "english_hint": "I need some help to solve the problem faster.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "我會盡快整理好情況，讓大家清楚了解。",
+      "expected_answer": [
+        "我會盡快整理好情況，讓大家清楚了解。"
+      ],
+      "pinyin": "wǒ huì jǐn kuài zhěng lǐ hǎo qíng kuàng, ràng dà jiā qīng chǔ liǎo jiě.",
+      "english_hint": "I'll organize the situation soon so everyone understands clearly.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned B1-level problem description.",
+    "mission": "Next: Social interactions & polite communication."
+  }
+}

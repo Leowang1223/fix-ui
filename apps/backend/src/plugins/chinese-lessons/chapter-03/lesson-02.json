@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C3-L2",
+  "chapter_id": "C3",
+  "lesson_number": 2,
+  "title": "Verb 有 (to have)",
+  "description": "Learn how to use 有 to talk about having things.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我有手機。",
+      "expected_answer": [
+        "我有手機。"
+      ],
+      "pinyin": "wǒ yǒu shǒu jī.",
+      "english_hint": "I have a phone.",
+      "encouragement": "Great! You used 有 correctly!"
+    },
+    {
+      "id": 2,
+      "teacher": "我沒有錢。",
+      "expected_answer": [
+        "我沒有錢。"
+      ],
+      "pinyin": "wǒ méi yǒu qián.",
+      "english_hint": "I don't have money.",
+      "encouragement": "Nice use of 沒有!"
+    },
+    {
+      "id": 3,
+      "teacher": "你有兄弟姐妹嗎？",
+      "expected_answer": [
+        "你有兄弟姐妹嗎？"
+      ],
+      "pinyin": "nǐ yǒu xiōng dì jiě mèi ma?",
+      "english_hint": "Do you have brothers or sisters?",
+      "encouragement": "Good question!"
+    },
+    {
+      "id": 4,
+      "teacher": "他有一隻狗。",
+      "expected_answer": [
+        "他有一隻狗。"
+      ],
+      "pinyin": "tā yǒu yì zhī gǒu.",
+      "english_hint": "He has a dog.",
+      "encouragement": "Excellent sentence!"
+    },
+    {
+      "id": 5,
+      "teacher": "我們有很多作業。",
+      "expected_answer": [
+        "我們有很多作業。"
+      ],
+      "pinyin": "wǒ men yǒu hěn duō zuò yè.",
+      "english_hint": "We have a lot of homework.",
+      "encouragement": "Great work!"
+    },
+    {
+      "id": 6,
+      "teacher": "這個房間有桌子。",
+      "expected_answer": [
+        "這個房間有桌子。"
+      ],
+      "pinyin": "zhè ge fáng jiān yǒu zhuō zi.",
+      "english_hint": "There is a table in this room.",
+      "encouragement": "Nice! Very useful pattern!"
+    },
+    {
+      "id": 7,
+      "teacher": "教室裡有很多椅子。",
+      "expected_answer": [
+        "教室裡有很多椅子。"
+      ],
+      "pinyin": "jiào shì lǐ yǒu hěn duō yǐ zi.",
+      "english_hint": "There are many chairs in the classroom.",
+      "encouragement": "Well done!"
+    },
+    {
+      "id": 8,
+      "teacher": "你有問題嗎？",
+      "expected_answer": [
+        "你有問題嗎？"
+      ],
+      "pinyin": "nǐ yǒu wèn tí ma?",
+      "english_hint": "Do you have any questions?",
+      "encouragement": "Great question sentence!"
+    },
+    {
+      "id": 9,
+      "teacher": "我沒有時間。",
+      "expected_answer": [
+        "我沒有時間。"
+      ],
+      "pinyin": "wǒ méi yǒu shí jiān.",
+      "english_hint": "I don't have time.",
+      "encouragement": "Perfect use of 沒有!"
+    },
+    {
+      "id": 10,
+      "teacher": "他們有車嗎？",
+      "expected_answer": [
+        "他們有車嗎？"
+      ],
+      "pinyin": "tā men yǒu chē ma?",
+      "english_hint": "Do they have a car?",
+      "encouragement": "Awesome! Keep it up!"
+    }
+  ],
+  "review": {
+    "summary": "You learned how to use 有 and 沒有 to talk about possession.",
+    "mission": "Next lesson: Learn how to use 在 to talk about location."
+  }
+}

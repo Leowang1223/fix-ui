@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C7-L9",
+  "chapter_id": "C7",
+  "lesson_number": 9,
+  "title": "City Life Conversation",
+  "description": "Learn A2 natural conversations about city life.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "A：你住的地方方便嗎？",
+      "expected_answer": [
+        "你住的地方方便嗎？"
+      ],
+      "pinyin": "A: nǐ zhù de dì fāng fāng biàn ma?",
+      "english_hint": "Is the place you live convenient?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "B：很方便，附近有超市和公園。",
+      "expected_answer": [
+        "很方便，附近有超市和公園。"
+      ],
+      "pinyin": "B: hěn fāng biàn, fù jìn yǒu chāo shì hé gōng yuán.",
+      "english_hint": "Very convenient—there's a supermarket and park nearby.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "A：你通常怎麼去上班？",
+      "expected_answer": [
+        "你通常怎麼去上班？"
+      ],
+      "pinyin": "A: nǐ tōng cháng zěn me qù shàng bān?",
+      "english_hint": "How do you usually go to work?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "B：我搭地鐵，很快也很方便。",
+      "expected_answer": [
+        "我搭地鐵，很快也很方便。"
+      ],
+      "pinyin": "B: wǒ dā dì tiě, hěn kuài yě hěn fāng biàn.",
+      "english_hint": "I take the metro. It's fast and convenient.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "A：你喜歡市中心嗎？",
+      "expected_answer": [
+        "你喜歡市中心嗎？"
+      ],
+      "pinyin": "A: nǐ xǐ huān shì zhōng xīn ma?",
+      "english_hint": "Do you like the city center?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "B：喜歡，但是人太多了。",
+      "expected_answer": [
+        "喜歡，但是人太多了。"
+      ],
+      "pinyin": "B: xǐ huān, dàn shì rén tài duō le.",
+      "english_hint": "I like it, but it's too crowded.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 7,
+      "teacher": "A：週末你會去哪裡？",
+      "expected_answer": [
+        "週末你會去哪裡？"
+      ],
+      "pinyin": "A: zhōu mò nǐ huì qù nǎ lǐ?",
+      "english_hint": "Where will you go on weekends?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 8,
+      "teacher": "B：我會去咖啡館看書。",
+      "expected_answer": [
+        "我會去咖啡館看書。"
+      ],
+      "pinyin": "B: wǒ huì qù kā fēi guǎn kàn shū.",
+      "english_hint": "I will go to a café to read.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "A：你最喜歡哪個地方？",
+      "expected_answer": [
+        "你最喜歡哪個地方？"
+      ],
+      "pinyin": "A: nǐ zuì xǐ huān nǎ gè dì fāng?",
+      "english_hint": "Which place do you like the most?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 10,
+      "teacher": "B：我最喜歡河邊，因為很安靜。",
+      "expected_answer": [
+        "我最喜歡河邊，因為很安靜。"
+      ],
+      "pinyin": "B: wǒ zuì xǐ huān hé biān, yīn wèi hěn ān jìng.",
+      "english_hint": "I like the riverside the most because it's quiet.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced A2-level conversation about city life.",
+    "mission": "Final lesson: Full A2 navigation dialogue!"
+  }
+}

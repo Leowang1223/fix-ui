@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C7-L6",
+  "chapter_id": "C7",
+  "lesson_number": 6,
+  "title": "Giving Suggestions",
+  "description": "Learn A2 suggestion sentences using 可以/應該/最好.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "你可以坐地鐵，會比較快。",
+      "expected_answer": [
+        "你可以坐地鐵，會比較快。"
+      ],
+      "pinyin": "nǐ kě yǐ zuò dì tiě, huì bǐ jiào kuài.",
+      "english_hint": "You can take the metro, it's faster.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "你應該帶雨傘，因為可能會下雨。",
+      "expected_answer": [
+        "你應該帶雨傘，因為可能會下雨。"
+      ],
+      "pinyin": "nǐ yīng gāi dài yǔ sǎn, yīn wèi kě néng huì xià yǔ.",
+      "english_hint": "You should bring an umbrella because it might rain.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "最好早一點出門，路上比較不塞。",
+      "expected_answer": [
+        "最好早一點出門，路上比較不塞。"
+      ],
+      "pinyin": "zuì hǎo zǎo yì diǎn chū mén, lù shàng bǐ jiào bù sāi.",
+      "english_hint": "It's best to leave earlier; the road is less busy.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "你可以在網路上查地圖。",
+      "expected_answer": [
+        "你可以在網路上查地圖。"
+      ],
+      "pinyin": "nǐ kě yǐ zài wǎng lù shàng chá dì tú.",
+      "english_hint": "You can check the map online.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "你應該問附近的人比較快。",
+      "expected_answer": [
+        "你應該問附近的人比較快。"
+      ],
+      "pinyin": "nǐ yīng gāi wèn fù jìn de rén bǐ jiào kuài.",
+      "english_hint": "You should ask someone nearby; it's faster.",
+      "encouragement": "Great advice!"
+    },
+    {
+      "id": 6,
+      "teacher": "如果你趕時間，最好叫計程車。",
+      "expected_answer": [
+        "如果你趕時間，最好叫計程車。"
+      ],
+      "pinyin": "rú guǒ nǐ gǎn shí jiān, zuì hǎo jiào jì chéng chē.",
+      "english_hint": "If you're in a hurry, it's best to take a taxi.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "你可以先看路牌，再決定往哪裡走。",
+      "expected_answer": [
+        "你可以先看路牌，再決定往哪裡走。"
+      ],
+      "pinyin": "nǐ kě yǐ xiān kàn lù pái, zài jué dìng wǎng nǎ lǐ zǒu.",
+      "english_hint": "You can look at the street signs first, then decide.",
+      "encouragement": "Good thinking!"
+    },
+    {
+      "id": 8,
+      "teacher": "如果太遠，你應該搭車，不要走路。",
+      "expected_answer": [
+        "如果太遠，你應該搭車，不要走路。"
+      ],
+      "pinyin": "rú guǒ tài yuǎn, nǐ yīng gāi dā chē, bú yào zǒu lù.",
+      "english_hint": "If it's too far, you should take transportation, not walk.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "最好帶水，不然會很渴。",
+      "expected_answer": [
+        "最好帶水，不然會很渴。"
+      ],
+      "pinyin": "zuì hǎo dài shuǐ, bù rán huì hěn kě.",
+      "english_hint": "You'd better bring water, or you'll get thirsty.",
+      "encouragement": "Great job!"
+    },
+    {
+      "id": 10,
+      "teacher": "你可以先休息一下，再繼續走。",
+      "expected_answer": [
+        "你可以先休息一下，再繼續走。"
+      ],
+      "pinyin": "nǐ kě yǐ xiān xiū xí yí xià, zài jì xù zǒu.",
+      "english_hint": "You can rest a bit before continuing.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced 10 natural A2 suggestion sentences.",
+    "mission": "Next lesson: Simple future tense with 要/會/打算!"
+  }
+}

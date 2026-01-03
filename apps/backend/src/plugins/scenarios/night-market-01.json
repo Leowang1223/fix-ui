@@ -1,0 +1,113 @@
+{
+  "scenario_id": "night-market-01",
+  "title": "Ordering Street Food at a Night Market",
+  "chineseTitle": "夜市小吃點餐",
+  "description": "Practice ordering food at a Taiwanese night market",
+  "chineseDescription": "練習在台灣夜市攤販點小吃",
+  "difficulty": "A0-A1",
+  "category": "Food & Beverage (Taiwan)",
+  "objective": "Successfully order street food at a night market",
+  "chineseObjective": "成功在夜市點小吃",
+  "estimatedTurns": 7,
+  "firstSpeaker": "ai",
+  "defaultUserRole": "customer",
+  "checkpoints": [
+    {
+      "id": 1,
+      "description": "Ask about food and order",
+      "chineseDescription": "詢問並點餐",
+      "keywords": ["有什麼", "我要", "臭豆腐", "雞排", "蚵仔煎", "來一份", "這個", "多少", "老闆"],
+      "weight": 30
+    },
+    {
+      "id": 2,
+      "description": "Choose spice level or flavor",
+      "chineseDescription": "選擇辣度或口味",
+      "keywords": ["辣", "不辣", "小辣", "中辣", "大辣", "蒜", "醬油", "胡椒", "要不要"],
+      "weight": 30
+    },
+    {
+      "id": 3,
+      "description": "Pay and receive food",
+      "chineseDescription": "付款取餐",
+      "keywords": ["多少錢", "這裡", "謝謝", "找錢", "拿", "給你"],
+      "weight": 25
+    },
+    {
+      "id": 4,
+      "description": "Thank vendor",
+      "chineseDescription": "感謝攤販",
+      "keywords": ["謝謝", "謝", "好"],
+      "weight": 15
+    }
+  ],
+  "roles": [
+    {
+      "id": "customer",
+      "name": "Customer",
+      "chineseName": "顧客",
+      "systemPrompt": "You are a customer at a Taiwanese night market (夜市) ordering street food. Ask about food, order items, and choose flavors. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary and casual expressions. Keep responses concise (1-2 sentences). Be friendly and casual."
+    },
+    {
+      "id": "vendor",
+      "name": "Street Vendor",
+      "chineseName": "攤販老闆",
+      "interviewerImage": "night market waitor.png",
+      "interviewerId": "man",
+      "systemPrompt": "You are a friendly street food vendor at a Taiwanese night market (夜市). Describe your food, take orders, and ask about preferences (spice level, toppings). IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary and casual Taiwanese expressions. Keep responses concise (1-2 sentences). Be warm and enthusiastic about your food."
+    }
+  ],
+  "suggestions": {
+    "byRole": {
+      "customer": [
+        {
+          "chinese": "老闆，這個臭豆腐多少錢？",
+          "pinyin": "lǎo bǎn, zhè ge chòu dòu fu duō shǎo qián?",
+          "english": "Boss, how much is this stinky tofu?",
+          "type": "safe",
+          "checkpointId": 1
+        },
+        {
+          "chinese": "我要一份，小辣。",
+          "pinyin": "wǒ yào yī fèn, xiǎo là.",
+          "english": "I want one portion, mild spicy.",
+          "type": "safe",
+          "checkpointId": 1
+        },
+        {
+          "chinese": "不要太辣。",
+          "pinyin": "bù yào tài là.",
+          "english": "Not too spicy.",
+          "type": "safe",
+          "checkpointId": 2
+        },
+        {
+          "chinese": "好，謝謝老闆！",
+          "pinyin": "hǎo, xiè xie lǎo bǎn!",
+          "english": "Okay, thank you boss!",
+          "type": "safe",
+          "checkpointId": 4
+        }
+      ],
+      "vendor": []
+    }
+  },
+  "keyVocabulary": [
+    { "chinese": "臭豆腐", "pinyin": "chòu dòu fu", "english": "stinky tofu" },
+    { "chinese": "蚵仔煎", "pinyin": "ô-á-chiān", "english": "oyster omelette" },
+    { "chinese": "雞排", "pinyin": "jī pái", "english": "fried chicken cutlet" },
+    { "chinese": "夜市", "pinyin": "yè shì", "english": "night market" },
+    { "chinese": "攤販", "pinyin": "tān fàn", "english": "street vendor" },
+    { "chinese": "小辣", "pinyin": "xiǎo là", "english": "mild spicy" },
+    { "chinese": "老闆", "pinyin": "lǎo bǎn", "english": "boss/owner" }
+  ],
+  "keyPatterns": [
+    { "pattern": "...多少錢?", "example": "這個多少錢?", "english": "How much is...?" },
+    { "pattern": "我要...", "example": "我要一份臭豆腐", "english": "I want..." },
+    { "pattern": "要不要...?", "example": "要不要加辣?", "english": "Do you want...?" },
+    { "pattern": "不要太...", "example": "不要太辣", "english": "Not too..." }
+  ],
+  "tags": ["night-market", "street-food", "taiwanese-food", "daily-life", "A0-A1"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "isCustom": false
+}

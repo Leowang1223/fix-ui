@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C7-L10",
+  "chapter_id": "C7",
+  "lesson_number": 10,
+  "title": "Full Navigation Dialogue",
+  "description": "Complete A2-level practical navigation dialogue.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "A：請問，你知道圖書館在哪裡嗎？",
+      "expected_answer": [
+        "請問，你知道圖書館在哪裡嗎？"
+      ],
+      "pinyin": "A: qǐng wèn, nǐ zhī dào tú shū guǎn zài nǎ lǐ ma?",
+      "english_hint": "Excuse me, do you know where the library is?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "B：知道，你先直走大概三分鐘。",
+      "expected_answer": [
+        "知道，你先直走大概三分鐘。"
+      ],
+      "pinyin": "B: zhī dào, nǐ xiān zhí zǒu dà gài sān fēn zhōng.",
+      "english_hint": "Yes, go straight for about three minutes.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "A：然後我要左轉還是右轉？",
+      "expected_answer": [
+        "然後我要左轉還是右轉？"
+      ],
+      "pinyin": "A: rán hòu wǒ yào zuǒ zhuǎn hái shì yòu zhuǎn?",
+      "english_hint": "Then should I turn left or right?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "B：在紅綠燈那裡右轉。",
+      "expected_answer": [
+        "在紅綠燈那裡右轉。"
+      ],
+      "pinyin": "B: zài hóng lǜ dēng nà lǐ yòu zhuǎn.",
+      "english_hint": "Turn right at the traffic light.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "A：會看到什麼建築嗎？",
+      "expected_answer": [
+        "會看到什麼建築嗎？"
+      ],
+      "pinyin": "A: huì kàn dào shén me jiàn zhú ma?",
+      "english_hint": "Will I see any buildings?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "B：你會看到一間大餐館，圖書館就在旁邊。",
+      "expected_answer": [
+        "你會看到一間大餐館，圖書館就在旁邊。"
+      ],
+      "pinyin": "B: nǐ huì kàn dào yì jiān dà cān guǎn, tú shū guǎn jiù zài páng biān.",
+      "english_hint": "You'll see a big restaurant; the library is right next to it.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 7,
+      "teacher": "A：從這裡走過去會很遠嗎？",
+      "expected_answer": [
+        "從這裡走過去會很遠嗎？"
+      ],
+      "pinyin": "A: cóng zhè lǐ zǒu guò qù huì hěn yuǎn ma?",
+      "english_hint": "Is it far to walk from here?",
+      "encouragement": "Good question!"
+    },
+    {
+      "id": 8,
+      "teacher": "B：不會，大概十分鐘而已。",
+      "expected_answer": [
+        "不會，大概十分鐘而已。"
+      ],
+      "pinyin": "B: bú huì, dà gài shí fēn zhōng é r yǐ.",
+      "english_hint": "No, only about ten minutes.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "A：謝謝你，我怕迷路。",
+      "expected_answer": [
+        "謝謝你，我怕迷路。"
+      ],
+      "pinyin": "A: xiè xiè nǐ, wǒ pà mí lù.",
+      "english_hint": "Thanks, I'm afraid of getting lost.",
+      "encouragement": "Good expression!"
+    },
+    {
+      "id": 10,
+      "teacher": "B：不用怕，如果迷路再問別人就好。",
+      "expected_answer": [
+        "不用怕，如果迷路再問別人就好。"
+      ],
+      "pinyin": "B: bú yòng pà, rú guǒ mí lù zài wèn bié rén jiù hǎo.",
+      "english_hint": "Don't worry, if you get lost just ask someone.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You completed Chapter 7 with full A2 navigation and city-life dialogues.",
+    "mission": "Ready for Chapter 8 with A2–B1 transition? Travel, shopping, and daily communication!"
+  }
+}

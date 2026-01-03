@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C5-L10",
+  "chapter_id": "C5",
+  "lesson_number": 10,
+  "title": "Dialogue Practice",
+  "description": "Practice simple lifestyle and shopping dialogues.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "A：你今天吃什麼？",
+      "expected_answer": [
+        "你今天吃什麼？"
+      ],
+      "pinyin": "A: nǐ jīn tiān chī shén me?",
+      "english_hint": "What did you eat today?",
+      "encouragement": "Good dialogue start!"
+    },
+    {
+      "id": 2,
+      "teacher": "B：我吃三明治。",
+      "expected_answer": [
+        "我吃三明治。"
+      ],
+      "pinyin": "B: wǒ chī sān míng zhì.",
+      "english_hint": "I ate a sandwich.",
+      "encouragement": "Nice reply!"
+    },
+    {
+      "id": 3,
+      "teacher": "A：你常常在家煮飯嗎？",
+      "expected_answer": [
+        "你常常在家煮飯嗎？"
+      ],
+      "pinyin": "A: nǐ cháng cháng zài jiā zhǔ fàn ma?",
+      "english_hint": "Do you often cook at home?",
+      "encouragement": "Good question!"
+    },
+    {
+      "id": 4,
+      "teacher": "B：不常，我比較喜歡外食。",
+      "expected_answer": [
+        "不常，我比較喜歡外食。"
+      ],
+      "pinyin": "B: bù cháng, wǒ bǐ jiào xǐ huān wài shí.",
+      "english_hint": "Not often, I prefer eating out.",
+      "encouragement": "Great comparison sentence!"
+    },
+    {
+      "id": 5,
+      "teacher": "A：今天的天氣很好。",
+      "expected_answer": [
+        "今天的天氣很好。"
+      ],
+      "pinyin": "A: jīn tiān de tiān qì hěn hǎo.",
+      "english_hint": "The weather is very good today.",
+      "encouragement": "Nice observation!"
+    },
+    {
+      "id": 6,
+      "teacher": "B：對，我想去散步。",
+      "expected_answer": [
+        "對，我想去散步。"
+      ],
+      "pinyin": "B: duì, wǒ xiǎng qù sàn bù.",
+      "english_hint": "Yes, I want to take a walk.",
+      "encouragement": "Great response!"
+    },
+    {
+      "id": 7,
+      "teacher": "A：你要買什麼？",
+      "expected_answer": [
+        "你要買什麼？"
+      ],
+      "pinyin": "A: nǐ yào mǎi shén me?",
+      "english_hint": "What do you want to buy?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "B：我想買新鞋子。",
+      "expected_answer": [
+        "我想買新鞋子。"
+      ],
+      "pinyin": "B: wǒ xiǎng mǎi xīn xié zi.",
+      "english_hint": "I want to buy new shoes.",
+      "encouragement": "Great shopping line!"
+    },
+    {
+      "id": 9,
+      "teacher": "A：那邊有一家便宜的店。",
+      "expected_answer": [
+        "那邊有一家便宜的店。"
+      ],
+      "pinyin": "A: nà biān yǒu yì jiā pián yí de diàn.",
+      "english_hint": "There's a cheap store over there.",
+      "encouragement": "Nice helpful sentence!"
+    },
+    {
+      "id": 10,
+      "teacher": "B：太好了，我們去看看！",
+      "expected_answer": [
+        "太好了，我們去看看！"
+      ],
+      "pinyin": "B: tài hǎo le, wǒ men qù kàn kàn!",
+      "english_hint": "Great, let's go check it out!",
+      "encouragement": "Fantastic closing line!"
+    }
+  ],
+  "review": {
+    "summary": "You completed Chapter 5! You learned food, shopping, lifestyle, adjectives, comparisons and dialogues.",
+    "mission": "Next chapter: Chapter 6 — Home, family, hobbies & simple past tense."
+  }
+}

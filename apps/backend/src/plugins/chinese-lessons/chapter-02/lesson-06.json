@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C2-L6",
+  "chapter_id": "C2",
+  "lesson_number": 6,
+  "title": "Weather",
+  "description": "Learn basic weather vocabulary.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "晴天",
+      "expected_answer": [
+        "晴天"
+      ],
+      "pinyin": "qíng tiān",
+      "english_hint": "sunny",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "陰天",
+      "expected_answer": [
+        "陰天"
+      ],
+      "pinyin": "yīn tiān",
+      "english_hint": "cloudy",
+      "encouragement": "Nice job!"
+    },
+    {
+      "id": 3,
+      "teacher": "下雨",
+      "expected_answer": [
+        "下雨"
+      ],
+      "pinyin": "xià yǔ",
+      "english_hint": "rainy",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "下雪",
+      "expected_answer": [
+        "下雪"
+      ],
+      "pinyin": "xià xuě",
+      "english_hint": "snowing",
+      "encouragement": "Wonderful!"
+    },
+    {
+      "id": 5,
+      "teacher": "颳風",
+      "expected_answer": [
+        "颳風"
+      ],
+      "pinyin": "guā fēng",
+      "english_hint": "windy",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 6,
+      "teacher": "熱",
+      "expected_answer": [
+        "熱"
+      ],
+      "pinyin": "rè",
+      "english_hint": "hot (weather)",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 7,
+      "teacher": "冷",
+      "expected_answer": [
+        "冷"
+      ],
+      "pinyin": "lěng",
+      "english_hint": "cold (weather)",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 8,
+      "teacher": "溫暖",
+      "expected_answer": [
+        "溫暖"
+      ],
+      "pinyin": "wēn nuǎn",
+      "english_hint": "warm",
+      "encouragement": "Good progress!"
+    },
+    {
+      "id": 9,
+      "teacher": "涼爽",
+      "expected_answer": [
+        "涼爽"
+      ],
+      "pinyin": "liáng shuǎng",
+      "english_hint": "cool",
+      "encouragement": "Great job!"
+    },
+    {
+      "id": 10,
+      "teacher": "天氣",
+      "expected_answer": [
+        "天氣"
+      ],
+      "pinyin": "tiān qì",
+      "english_hint": "weather",
+      "encouragement": "Awesome!"
+    }
+  ],
+  "review": {
+    "summary": "You learned common weather words.",
+    "mission": "Next lesson: Learn simple question words!"
+  }
+}

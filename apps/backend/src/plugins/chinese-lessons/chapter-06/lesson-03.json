@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C6-L3",
+  "chapter_id": "C6",
+  "lesson_number": 3,
+  "title": "Rooms",
+  "description": "Learn the names of rooms in a house.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "客廳",
+      "expected_answer": [
+        "客廳"
+      ],
+      "pinyin": "kè tīng",
+      "english_hint": "living room",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "廚房",
+      "expected_answer": [
+        "廚房"
+      ],
+      "pinyin": "chú fáng",
+      "english_hint": "kitchen",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "臥室",
+      "expected_answer": [
+        "臥室"
+      ],
+      "pinyin": "wò shì",
+      "english_hint": "bedroom",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "浴室",
+      "expected_answer": [
+        "浴室"
+      ],
+      "pinyin": "yù shì",
+      "english_hint": "bathroom",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 5,
+      "teacher": "書房",
+      "expected_answer": [
+        "書房"
+      ],
+      "pinyin": "shū fáng",
+      "english_hint": "study room",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 6,
+      "teacher": "餐廳",
+      "expected_answer": [
+        "餐廳"
+      ],
+      "pinyin": "cān tīng",
+      "english_hint": "dining room",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 7,
+      "teacher": "地下室",
+      "expected_answer": [
+        "地下室"
+      ],
+      "pinyin": "dì xià shì",
+      "english_hint": "basement",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 8,
+      "teacher": "走廊",
+      "expected_answer": [
+        "走廊"
+      ],
+      "pinyin": "zǒu láng",
+      "english_hint": "hallway",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "客房",
+      "expected_answer": [
+        "客房"
+      ],
+      "pinyin": "kè fáng",
+      "english_hint": "guest room",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 10,
+      "teacher": "儲藏室",
+      "expected_answer": [
+        "儲藏室"
+      ],
+      "pinyin": "chú cáng shì",
+      "english_hint": "storage room",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 names of rooms.",
+    "mission": "Next lesson: Furniture vocabulary!"
+  }
+}

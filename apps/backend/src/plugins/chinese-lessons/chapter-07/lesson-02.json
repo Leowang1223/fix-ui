@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C7-L2",
+  "chapter_id": "C7",
+  "lesson_number": 2,
+  "title": "Directions",
+  "description": "Learn A2-level direction words and walking instructions.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "往左走",
+      "expected_answer": [
+        "往左走"
+      ],
+      "pinyin": "wǎng zuǒ zǒu",
+      "english_hint": "go left",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "往右轉",
+      "expected_answer": [
+        "往右轉"
+      ],
+      "pinyin": "wǎng yòu zhuǎn",
+      "english_hint": "turn right",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "直走",
+      "expected_answer": [
+        "直走"
+      ],
+      "pinyin": "zhí zǒu",
+      "english_hint": "go straight",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "過馬路",
+      "expected_answer": [
+        "過馬路"
+      ],
+      "pinyin": "guò mǎ lù",
+      "english_hint": "cross the street",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "在紅綠燈那裡左轉",
+      "expected_answer": [
+        "在紅綠燈那裡左轉"
+      ],
+      "pinyin": "zài hóng lǜ dēng nà lǐ zuǒ zhuǎn",
+      "english_hint": "turn left at the traffic light",
+      "encouragement": "Great direction!"
+    },
+    {
+      "id": 6,
+      "teacher": "走到路口",
+      "expected_answer": [
+        "走到路口"
+      ],
+      "pinyin": "zǒu dào lù kǒu",
+      "english_hint": "walk to the intersection",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "在右邊的第二棟",
+      "expected_answer": [
+        "在右邊的第二棟"
+      ],
+      "pinyin": "zài yòu biān de dì èr dòng",
+      "english_hint": "the second building on the right",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "你會看到一個公園",
+      "expected_answer": [
+        "你會看到一個公園"
+      ],
+      "pinyin": "nǐ huì kàn dào yí gè gōng yuán",
+      "english_hint": "you will see a park",
+      "encouragement": "Nice description!"
+    },
+    {
+      "id": 9,
+      "teacher": "沿著河邊走",
+      "expected_answer": [
+        "沿著河邊走"
+      ],
+      "pinyin": "yán zhe hé biān zǒu",
+      "english_hint": "walk along the river",
+      "encouragement": "Great phrase!"
+    },
+    {
+      "id": 10,
+      "teacher": "它在學校的對面",
+      "expected_answer": [
+        "它在學校的對面"
+      ],
+      "pinyin": "tā zài xué xiào de duì miàn",
+      "english_hint": "it's across from the school",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned natural direction-giving phrases.",
+    "mission": "Next lesson: Transportation!"
+  }
+}

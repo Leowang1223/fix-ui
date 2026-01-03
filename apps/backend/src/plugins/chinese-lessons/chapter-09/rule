@@ -1,0 +1,65 @@
+{
+  "playbackMode": "tts",
+  "lessons": [
+    {
+      "lesson_id": "L1",
+      "title": "Self Introduction",
+      "description": "Learn how to say hello and introduce yourself in Chinese.",
+      "enable": true
+    },
+    {
+      "lesson_id": "L2",
+      "title": "Greetings and Responses",
+      "description": "Learn basic greetings and how to respond politely.",
+      "enable": true
+    },
+    {
+      "lesson_id": "L3",
+      "title": "Asking for Names",
+      "description": "Learn how to ask someone's name and introduce your own.",
+      "enable": true
+    },
+    {
+      "lesson_id": "L4",
+      "title": "Numbers and Age",
+      "description": "Learn basic numbers and how to talk about age.",
+      "enable": true
+    },
+    {
+      "lesson_id": "L5",
+      "title": "Family Members",
+      "description": "Learn how to talk about your family members.",
+      "enable": true
+    },
+    {
+      "lesson_id": "L6",
+      "title": "Time and Days",
+      "description": "Learn how to say days of the week and tell time.",
+      "enable": true
+    },
+    {
+      "lesson_id": "L7",
+      "title": "Food and Drinks",
+      "description": "Learn how to name and order food and drinks.",
+      "enable": true
+    },
+    {
+      "lesson_id": "L8",
+      "title": "At a Restaurant",
+      "description": "Practice ordering and asking for the bill.",
+      "enable": true
+    },
+    {
+      "lesson_id": "L9",
+      "title": "Shopping",
+      "description": "Learn how to ask for prices and sizes.",
+      "enable": true
+    },
+    {
+      "lesson_id": "L10",
+      "title": "Directions and Transportation",
+      "description": "Learn how to ask for directions and use transport words.",
+      "enable": true
+    }
+  ]
+}

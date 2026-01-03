@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C2-L10",
+  "chapter_id": "C2",
+  "lesson_number": 10,
+  "title": "Useful Phrases",
+  "description": "Learn short, common daily expressions.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "等一下",
+      "expected_answer": [
+        "等一下"
+      ],
+      "pinyin": "děng yí xià",
+      "english_hint": "wait a moment",
+      "encouragement": "Great start!"
+    },
+    {
+      "id": 2,
+      "teacher": "沒問題",
+      "expected_answer": [
+        "沒問題"
+      ],
+      "pinyin": "méi wèn tí",
+      "english_hint": "no problem",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "真的嗎？",
+      "expected_answer": [
+        "真的嗎？"
+      ],
+      "pinyin": "zhēn de ma?",
+      "english_hint": "really?",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 4,
+      "teacher": "當然",
+      "expected_answer": [
+        "當然"
+      ],
+      "pinyin": "dāng rán",
+      "english_hint": "of course",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "走吧",
+      "expected_answer": [
+        "走吧"
+      ],
+      "pinyin": "zǒu ba",
+      "english_hint": "let's go",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "一起",
+      "expected_answer": [
+        "一起"
+      ],
+      "pinyin": "yì qǐ",
+      "english_hint": "together",
+      "encouragement": "Perfect!"
+    },
+    {
+      "id": 7,
+      "teacher": "加油",
+      "expected_answer": [
+        "加油"
+      ],
+      "pinyin": "jiā yóu",
+      "english_hint": "you can do it / keep going",
+      "encouragement": "Awesome!"
+    },
+    {
+      "id": 8,
+      "teacher": "小心",
+      "expected_answer": [
+        "小心"
+      ],
+      "pinyin": "xiǎo xīn",
+      "english_hint": "be careful",
+      "encouragement": "Great work!"
+    },
+    {
+      "id": 9,
+      "teacher": "快一點",
+      "expected_answer": [
+        "快一點"
+      ],
+      "pinyin": "kuài yì diǎn",
+      "english_hint": "faster",
+      "encouragement": "Good progress!"
+    },
+    {
+      "id": 10,
+      "teacher": "慢慢來",
+      "expected_answer": [
+        "慢慢來"
+      ],
+      "pinyin": "màn màn lái",
+      "english_hint": "take your time",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You finished Chapter 2! Great work learning 100 new items.",
+    "mission": "Next chapter: Daily conversations & simple grammar!"
+  }
+}

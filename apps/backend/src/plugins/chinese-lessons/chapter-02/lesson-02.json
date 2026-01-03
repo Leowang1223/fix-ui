@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C2-L2",
+  "chapter_id": "C2",
+  "lesson_number": 2,
+  "title": "Objects",
+  "description": "Learn simple words for common objects.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "桌子",
+      "expected_answer": [
+        "桌子"
+      ],
+      "pinyin": "zhuō zi",
+      "english_hint": "table",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "椅子",
+      "expected_answer": [
+        "椅子"
+      ],
+      "pinyin": "yǐ zi",
+      "english_hint": "chair",
+      "encouragement": "Nice job!"
+    },
+    {
+      "id": 3,
+      "teacher": "手機",
+      "expected_answer": [
+        "手機"
+      ],
+      "pinyin": "shǒu jī",
+      "english_hint": "phone",
+      "encouragement": "Good work!"
+    },
+    {
+      "id": 4,
+      "teacher": "電腦",
+      "expected_answer": [
+        "電腦"
+      ],
+      "pinyin": "diàn nǎo",
+      "english_hint": "computer",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "書",
+      "expected_answer": [
+        "書"
+      ],
+      "pinyin": "shū",
+      "english_hint": "book",
+      "encouragement": "You're doing well!"
+    },
+    {
+      "id": 6,
+      "teacher": "筆",
+      "expected_answer": [
+        "筆"
+      ],
+      "pinyin": "bǐ",
+      "english_hint": "pen",
+      "encouragement": "Perfect!"
+    },
+    {
+      "id": 7,
+      "teacher": "杯子",
+      "expected_answer": [
+        "杯子"
+      ],
+      "pinyin": "bēi zi",
+      "english_hint": "cup",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 8,
+      "teacher": "包包",
+      "expected_answer": [
+        "包包"
+      ],
+      "pinyin": "bāo bāo",
+      "english_hint": "bag",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "衣服",
+      "expected_answer": [
+        "衣服"
+      ],
+      "pinyin": "yī fú",
+      "english_hint": "clothes",
+      "encouragement": "Awesome!"
+    },
+    {
+      "id": 10,
+      "teacher": "鞋子",
+      "expected_answer": [
+        "鞋子"
+      ],
+      "pinyin": "xié zi",
+      "english_hint": "shoes",
+      "encouragement": "Excellent job!"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 common object nouns.",
+    "mission": "Next lesson: Learn simple adjectives!"
+  }
+}

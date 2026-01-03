@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C4-L8",
+  "chapter_id": "C4",
+  "lesson_number": 8,
+  "title": "Airport Phrases",
+  "description": "Learn simple airport and boarding expressions.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我要辦理登機。",
+      "expected_answer": [
+        "我要辦理登機。"
+      ],
+      "pinyin": "wǒ yào bàn lǐ dēng jī.",
+      "english_hint": "I want to check in.",
+      "encouragement": "Great travel phrase!"
+    },
+    {
+      "id": 2,
+      "teacher": "這是我的護照。",
+      "expected_answer": [
+        "這是我的護照。"
+      ],
+      "pinyin": "zhè shì wǒ de hù zhào.",
+      "english_hint": "This is my passport.",
+      "encouragement": "Nice and clear!"
+    },
+    {
+      "id": 3,
+      "teacher": "行李要托運嗎？",
+      "expected_answer": [
+        "行李要托運嗎？"
+      ],
+      "pinyin": "xíng lǐ yào tuō yùn ma?",
+      "english_hint": "Do you need to check luggage?",
+      "encouragement": "Good question!"
+    },
+    {
+      "id": 4,
+      "teacher": "請把行李放上去。",
+      "expected_answer": [
+        "請把行李放上去。"
+      ],
+      "pinyin": "qǐng bǎ xíng lǐ fàng shàng qù.",
+      "english_hint": "Please put your luggage up here.",
+      "encouragement": "Great instruction!"
+    },
+    {
+      "id": 5,
+      "teacher": "我的登機口在哪裡？",
+      "expected_answer": [
+        "我的登機口在哪裡？"
+      ],
+      "pinyin": "wǒ de dēng jī kǒu zài nǎ lǐ?",
+      "english_hint": "Where is my boarding gate?",
+      "encouragement": "Useful travel line!"
+    },
+    {
+      "id": 6,
+      "teacher": "飛機延誤了。",
+      "expected_answer": [
+        "飛機延誤了。"
+      ],
+      "pinyin": "fēi jī yán wù le.",
+      "english_hint": "The flight is delayed.",
+      "encouragement": "Good sentence!"
+    },
+    {
+      "id": 7,
+      "teacher": "我們要開始登機了。",
+      "expected_answer": [
+        "我們要開始登機了。"
+      ],
+      "pinyin": "wǒ men yào kāi shǐ dēng jī le.",
+      "english_hint": "We are starting to board.",
+      "encouragement": "Great announcement phrase!"
+    },
+    {
+      "id": 8,
+      "teacher": "請出示你的登機證。",
+      "expected_answer": [
+        "請出示你的登機證。"
+      ],
+      "pinyin": "qǐng chū shì nǐ de dēng jī zhèng.",
+      "english_hint": "Please show your boarding pass.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 9,
+      "teacher": "飛機準時起飛。",
+      "expected_answer": [
+        "飛機準時起飛。"
+      ],
+      "pinyin": "fēi jī zhǔn shí qǐ fēi.",
+      "english_hint": "The plane takes off on time.",
+      "encouragement": "Nice sentence!"
+    },
+    {
+      "id": 10,
+      "teacher": "祝你旅途愉快！",
+      "expected_answer": [
+        "祝你旅途愉快！"
+      ],
+      "pinyin": "zhù nǐ lǚ tú yú kuài!",
+      "english_hint": "Have a nice trip!",
+      "encouragement": "Fantastic expression!"
+    }
+  ],
+  "review": {
+    "summary": "You learned basic airport check-in and boarding expressions.",
+    "mission": "Next lesson: Learn emergency and safety phrases."
+  }
+}

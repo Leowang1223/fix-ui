@@ -1,0 +1,133 @@
+{
+  "lesson_id": "C1-L05",
+  "chapter_id": "C1",
+  "lesson_number": 5,
+  "title": "Family",
+  "description": "Learn simple family-related words.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "家",
+      "expected_answer": [
+        "家"
+      ],
+      "pinyin": "jiā",
+      "english_hint": "home / family",
+      "encouragement": "Great start!",
+      "tts_text": "家",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 2,
+      "teacher": "爸爸",
+      "expected_answer": [
+        "爸爸"
+      ],
+      "pinyin": "bà ba",
+      "english_hint": "father",
+      "encouragement": "Good job!",
+      "tts_text": "爸爸",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 3,
+      "teacher": "媽媽",
+      "expected_answer": [
+        "媽媽"
+      ],
+      "pinyin": "mā ma",
+      "english_hint": "mother",
+      "encouragement": "Nice work!",
+      "tts_text": "媽媽",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 4,
+      "teacher": "哥哥",
+      "expected_answer": [
+        "哥哥"
+      ],
+      "pinyin": "gē ge",
+      "english_hint": "older brother",
+      "encouragement": "Well done!",
+      "tts_text": "哥哥",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 5,
+      "teacher": "姐姐",
+      "expected_answer": [
+        "姐姐"
+      ],
+      "pinyin": "jiě jie",
+      "english_hint": "older sister",
+      "encouragement": "Great!",
+      "tts_text": "姐姐",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 6,
+      "teacher": "弟弟",
+      "expected_answer": [
+        "弟弟"
+      ],
+      "pinyin": "dì di",
+      "english_hint": "younger brother",
+      "encouragement": "Excellent!",
+      "tts_text": "弟弟",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 7,
+      "teacher": "妹妹",
+      "expected_answer": [
+        "妹妹"
+      ],
+      "pinyin": "mèi mei",
+      "english_hint": "younger sister",
+      "encouragement": "Good work!",
+      "tts_text": "妹妹",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 8,
+      "teacher": "家人",
+      "expected_answer": [
+        "家人"
+      ],
+      "pinyin": "jiā rén",
+      "english_hint": "family members",
+      "encouragement": "You're doing great!",
+      "tts_text": "家人",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 9,
+      "teacher": "孩子",
+      "expected_answer": [
+        "孩子"
+      ],
+      "pinyin": "hái zi",
+      "english_hint": "child",
+      "encouragement": "Nice!",
+      "tts_text": "孩子",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 10,
+      "teacher": "朋友",
+      "expected_answer": [
+        "朋友"
+      ],
+      "pinyin": "péng yǒu",
+      "english_hint": "friend",
+      "encouragement": "Fantastic!",
+      "tts_text": "朋友",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    }
+  ],
+  "review": {
+    "summary": "You learned basic family vocabulary.",
+    "mission": "Next: Learn colors!"
+  }
+}

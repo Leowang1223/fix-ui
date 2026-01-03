@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C10-L2",
+  "chapter_id": "C10",
+  "lesson_number": 2,
+  "title": "Understanding People",
+  "description": "Learn how to express understanding, empathy, and perspective-taking.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我能理解你的感受，這種事情真的不容易。",
+      "expected_answer": [
+        "我能理解你的感受，這種事情真的不容易。"
+      ],
+      "pinyin": "wǒ néng lǐ jiě nǐ de gǎn shòu, zhè zhǒng shì qíng zhēn de bù róng yì.",
+      "english_hint": "I understand how you feel; it's really not easy.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "有時候大家需要的只是被聽見。",
+      "expected_answer": [
+        "有時候大家需要的只是被聽見。"
+      ],
+      "pinyin": "yǒu shí hòu dà jiā xū yào de zhǐ shì bèi tīng jiàn.",
+      "english_hint": "Sometimes what people need is simply to be heard.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我知道你已經很努力了。",
+      "expected_answer": [
+        "我知道你已經很努力了."
+      ],
+      "pinyin": "wǒ zhī dào nǐ yǐ jīng hěn nǔ lì le.",
+      "english_hint": "I know you've already worked very hard.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "如果你需要休息，告訴我一聲就好。",
+      "expected_answer": [
+        "如果你需要休息，告訴我一聲就好。"
+      ],
+      "pinyin": "rú guǒ nǐ xū yào xiū xí, gào sù wǒ yì shēng jiù hǎo.",
+      "english_hint": "If you need a break, just let me know.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "每個人面對壓力的方式都不太一樣。",
+      "expected_answer": [
+        "每個人面對壓力的方式都不太一樣。"
+      ],
+      "pinyin": "měi gè rén miàn duì yā lì de fāng shì dōu bù tài yí yàng.",
+      "english_hint": "Everyone handles pressure differently.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "我尊重你的選擇，也希望你能做得開心。",
+      "expected_answer": [
+        "我尊重你的選擇，也希望你能做得開心。"
+      ],
+      "pinyin": "wǒ zūn zhòng nǐ de xuǎn zé, yě xī wàng nǐ néng zuò de kāi xīn.",
+      "english_hint": "I respect your choice and hope you feel good about it.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "如果你願意，我可以陪你一起面對。",
+      "expected_answer": [
+        "如果你願意，我可以陪你一起面對。"
+      ],
+      "pinyin": "rú guǒ nǐ yuàn yì, wǒ kě yǐ péi nǐ yì qǐ miàn duì.",
+      "english_hint": "If you're willing, I can face it with you.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "先讓自己平靜下來，事情會更清楚。",
+      "expected_answer": [
+        "先讓自己平靜下來，事情會更清楚。"
+      ],
+      "pinyin": "xiān ràng zì jǐ píng jìng xià lái, shì qíng huì gèng qīng chǔ.",
+      "english_hint": "Calm yourself first; everything becomes clearer.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "我願意聽聽你的想法，不用急著回答。",
+      "expected_answer": [
+        "我願意聽聽你的想法，不用急著回答。"
+      ],
+      "pinyin": "wǒ yuàn yì tīng tīng nǐ de xiǎng fǎ, bù yòng jí zhe huí dá.",
+      "english_hint": "I’m willing to hear your thoughts—you don’t need to answer right away.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "我相信你會找到最好的方式處理這件事。",
+      "expected_answer": [
+        "我相信你會找到最好的方式處理這件事。"
+      ],
+      "pinyin": "wǒ xiāng xìn nǐ huì zhǎo dào zuì hǎo de fāng shì chǔ lǐ zhè jiàn shì.",
+      "english_hint": "I believe you'll find the best way to handle this.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned B1 expressions for empathy, support, and understanding.",
+    "mission": "Next lesson: Communication & explaining viewpoints."
+  }
+}

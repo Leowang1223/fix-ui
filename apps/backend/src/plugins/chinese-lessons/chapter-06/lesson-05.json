@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C6-L5",
+  "chapter_id": "C6",
+  "lesson_number": 5,
+  "title": "Home Activities",
+  "description": "Learn verbs describing activities at home.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "看電視",
+      "expected_answer": [
+        "看電視"
+      ],
+      "pinyin": "kàn diàn shì",
+      "english_hint": "watch TV",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "整理房間",
+      "expected_answer": [
+        "整理房間"
+      ],
+      "pinyin": "zhěng lǐ fáng jiān",
+      "english_hint": "tidy the room",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "澆花",
+      "expected_answer": [
+        "澆花"
+      ],
+      "pinyin": "jiāo huā",
+      "english_hint": "water flowers",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "開燈",
+      "expected_answer": [
+        "開燈"
+      ],
+      "pinyin": "kāi dēng",
+      "english_hint": "turn on the light",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "關燈",
+      "expected_answer": [
+        "關燈"
+      ],
+      "pinyin": "guān dēng",
+      "english_hint": "turn off the light",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "開門",
+      "expected_answer": [
+        "開門"
+      ],
+      "pinyin": "kāi mén",
+      "english_hint": "open the door",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 7,
+      "teacher": "關門",
+      "expected_answer": [
+        "關門"
+      ],
+      "pinyin": "guān mén",
+      "english_hint": "close the door",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 8,
+      "teacher": "吃點心",
+      "expected_answer": [
+        "吃點心"
+      ],
+      "pinyin": "chī diǎn xīn",
+      "english_hint": "eat snacks",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "喝水",
+      "expected_answer": [
+        "喝水"
+      ],
+      "pinyin": "hē shuǐ",
+      "english_hint": "drink water",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 10,
+      "teacher": "午睡",
+      "expected_answer": [
+        "午睡"
+      ],
+      "pinyin": "wǔ shuì",
+      "english_hint": "take a nap",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned common home actions.",
+    "mission": "Next lesson: Hobbies (new set)!"
+  }
+}

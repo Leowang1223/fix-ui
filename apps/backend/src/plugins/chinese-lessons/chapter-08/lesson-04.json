@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C8-L4",
+  "chapter_id": "C8",
+  "lesson_number": 4,
+  "title": "Eating Out",
+  "description": "Learn A2+ sentences for ordering food and dining out.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "請給我菜單，謝謝。",
+      "expected_answer": [
+        "請給我菜單，謝謝。"
+      ],
+      "pinyin": "qǐng gěi wǒ cài dān, xiè xie.",
+      "english_hint": "Please give me the menu, thank you.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "我想點一份不太辣的料理。",
+      "expected_answer": [
+        "我想點一份不太辣的料理。"
+      ],
+      "pinyin": "wǒ xiǎng diǎn yí fèn bú tài là de liào lǐ.",
+      "english_hint": "I'd like to order something not too spicy.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "這道菜大概需要等多久？",
+      "expected_answer": [
+        "這道菜大概需要等多久？"
+      ],
+      "pinyin": "zhè dào cài dà gài xū yào děng duō jiǔ?",
+      "english_hint": "How long does this dish take?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "可以少冰嗎？我怕太冷。",
+      "expected_answer": [
+        "可以少冰嗎？我怕太冷。"
+      ],
+      "pinyin": "kě yǐ shǎo bīng ma? wǒ pà tài lěng.",
+      "english_hint": "Can you put less ice? I'm afraid it's too cold.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "如果可以，我想加一碗湯。",
+      "expected_answer": [
+        "如果可以，我想加一碗湯。"
+      ],
+      "pinyin": "rú guǒ kě yǐ, wǒ xiǎng jiā yì wǎn tāng.",
+      "english_hint": "If possible, I'd like to add a bowl of soup.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "你們有推薦的料理嗎？",
+      "expected_answer": [
+        "你們有推薦的料理嗎？"
+      ],
+      "pinyin": "nǐ men yǒu tuī jiàn de liào lǐ ma?",
+      "english_hint": "Do you have any recommended dishes?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "這杯飲料有點太甜了。",
+      "expected_answer": [
+        "這杯飲料有點太甜了。"
+      ],
+      "pinyin": "zhè bēi yǐn liào yǒu diǎn tài tián le.",
+      "english_hint": "This drink is a bit too sweet.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "可以幫我再加一點水嗎？",
+      "expected_answer": [
+        "可以幫我再加一點水嗎？"
+      ],
+      "pinyin": "kě yǐ bāng wǒ zài jiā yì diǎn shuǐ ma?",
+      "english_hint": "Can you add some water for me?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "我們想分開結帳。",
+      "expected_answer": [
+        "我們想分開結帳。"
+      ],
+      "pinyin": "wǒ men xiǎng fēn kāi jié zhàng.",
+      "english_hint": "We want to split the bill.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "謝謝，今天的餐點很好吃。",
+      "expected_answer": [
+        "謝謝，今天的餐點很好吃。"
+      ],
+      "pinyin": "xiè xie, jīn tiān de cān diǎn hěn hǎo chī.",
+      "english_hint": "Thank you, today's meal was delicious.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned A2+ dining-out expressions.",
+    "mission": "Next lesson: Asking questions while traveling!"
+  }
+}

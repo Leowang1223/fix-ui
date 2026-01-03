@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C5-L9",
+  "chapter_id": "C5",
+  "lesson_number": 9,
+  "title": "Conversation Questions",
+  "description": "Learn basic questions for simple conversations.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "你在做什麼？",
+      "expected_answer": [
+        "你在做什麼？"
+      ],
+      "pinyin": "nǐ zài zuò shén me?",
+      "english_hint": "What are you doing?",
+      "encouragement": "Great start!"
+    },
+    {
+      "id": 2,
+      "teacher": "你喜歡吃什麼？",
+      "expected_answer": [
+        "你喜歡吃什麼？"
+      ],
+      "pinyin": "nǐ xǐ huān chī shén me?",
+      "english_hint": "What do you like to eat?",
+      "encouragement": "Nice question!"
+    },
+    {
+      "id": 3,
+      "teacher": "你住在哪裡？",
+      "expected_answer": [
+        "你住在哪裡？"
+      ],
+      "pinyin": "nǐ zhù zài nǎ lǐ?",
+      "english_hint": "Where do you live?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "你有幾個朋友？",
+      "expected_answer": [
+        "你有幾個朋友？"
+      ],
+      "pinyin": "nǐ yǒu jǐ gè péng yǒu?",
+      "english_hint": "How many friends do you have?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 5,
+      "teacher": "你幾點起床？",
+      "expected_answer": [
+        "你幾點起床？"
+      ],
+      "pinyin": "nǐ jǐ diǎn qǐ chuáng?",
+      "english_hint": "What time do you get up?",
+      "encouragement": "Nice question!"
+    },
+    {
+      "id": 6,
+      "teacher": "你週末做什麼？",
+      "expected_answer": [
+        "你週末做什麼？"
+      ],
+      "pinyin": "nǐ zhōu mò zuò shén me?",
+      "english_hint": "What do you do on weekends?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 7,
+      "teacher": "你喜歡哪一種音樂？",
+      "expected_answer": [
+        "你喜歡哪一種音樂？"
+      ],
+      "pinyin": "nǐ xǐ huān nǎ yì zhǒng yīn yuè?",
+      "english_hint": "Which kind of music do you like?",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 8,
+      "teacher": "你會說幾種語言？",
+      "expected_answer": [
+        "你會說幾種語言？"
+      ],
+      "pinyin": "nǐ huì shuō jǐ zhǒng yǔ yán?",
+      "english_hint": "How many languages can you speak?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "你喜歡旅行嗎？",
+      "expected_answer": [
+        "你喜歡旅行嗎？"
+      ],
+      "pinyin": "nǐ xǐ huān lǚ xíng ma?",
+      "english_hint": "Do you like to travel?",
+      "encouragement": "Nice conversation question!"
+    },
+    {
+      "id": 10,
+      "teacher": "你平常幾點睡覺？",
+      "expected_answer": [
+        "你平常幾點睡覺？"
+      ],
+      "pinyin": "nǐ píng cháng jǐ diǎn shuì jiào?",
+      "english_hint": "What time do you usually sleep?",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 useful conversation questions.",
+    "mission": "Final lesson: Dialogue practice!"
+  }
+}

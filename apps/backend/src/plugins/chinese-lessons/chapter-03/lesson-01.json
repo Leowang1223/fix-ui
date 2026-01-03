@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C3-L1",
+  "chapter_id": "C3",
+  "lesson_number": 1,
+  "title": "Verb 是 (to be)",
+  "description": "Learn how to use 是 in simple sentences.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我是學生。",
+      "expected_answer": [
+        "我是學生。"
+      ],
+      "pinyin": "wǒ shì xué shēng.",
+      "english_hint": "I am a student.",
+      "encouragement": "Great! You used 是 correctly!"
+    },
+    {
+      "id": 2,
+      "teacher": "你是老師嗎？",
+      "expected_answer": [
+        "你是老師嗎？"
+      ],
+      "pinyin": "nǐ shì lǎo shī ma?",
+      "english_hint": "Are you a teacher?",
+      "encouragement": "Nice question sentence!"
+    },
+    {
+      "id": 3,
+      "teacher": "他是我的朋友。",
+      "expected_answer": [
+        "他是我的朋友。"
+      ],
+      "pinyin": "tā shì wǒ de péng yǒu.",
+      "english_hint": "He is my friend.",
+      "encouragement": "Good job forming a simple sentence!"
+    },
+    {
+      "id": 4,
+      "teacher": "她是醫生。",
+      "expected_answer": [
+        "她是醫生。"
+      ],
+      "pinyin": "tā shì yī shēng.",
+      "english_hint": "She is a doctor.",
+      "encouragement": "Excellent! Keep going!"
+    },
+    {
+      "id": 5,
+      "teacher": "我們是同學。",
+      "expected_answer": [
+        "我們是同學。"
+      ],
+      "pinyin": "wǒ men shì tóng xué.",
+      "english_hint": "We are classmates.",
+      "encouragement": "Great sentence!"
+    },
+    {
+      "id": 6,
+      "teacher": "這是我的家。",
+      "expected_answer": [
+        "這是我的家。"
+      ],
+      "pinyin": "zhè shì wǒ de jiā.",
+      "english_hint": "This is my home.",
+      "encouragement": "Nice! Very natural Chinese!"
+    },
+    {
+      "id": 7,
+      "teacher": "那是學校。",
+      "expected_answer": [
+        "那是學校。"
+      ],
+      "pinyin": "nà shì xué xiào.",
+      "english_hint": "That is the school.",
+      "encouragement": "Well done!"
+    },
+    {
+      "id": 8,
+      "teacher": "今天是星期一。",
+      "expected_answer": [
+        "今天是星期一。"
+      ],
+      "pinyin": "jīn tiān shì xīng qī yī.",
+      "english_hint": "Today is Monday.",
+      "encouragement": "Great! You used time with 是!"
+    },
+    {
+      "id": 9,
+      "teacher": "現在是早上。",
+      "expected_answer": [
+        "現在是早上。"
+      ],
+      "pinyin": "xiàn zài shì zǎo shàng.",
+      "english_hint": "It is morning now.",
+      "encouragement": "Perfect sentence!"
+    },
+    {
+      "id": 10,
+      "teacher": "這是什麼？",
+      "expected_answer": [
+        "這是什麼？"
+      ],
+      "pinyin": "zhè shì shén me?",
+      "english_hint": "What is this?",
+      "encouragement": "Awesome question!"
+    }
+  ],
+  "review": {
+    "summary": "You learned how to use 是 in basic sentences and questions.",
+    "mission": "Next lesson: Practice the verb 有 (to have)."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C9-L7",
+  "chapter_id": "C9",
+  "lesson_number": 7,
+  "title": "Explaining & Clarifying",
+  "description": "Learn B1-entry sentences for explaining and clarifying information.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我的意思是，我們可以先嘗試簡單的方法。",
+      "expected_answer": [
+        "我的意思是，我們可以先嘗試簡單的方法。"
+      ],
+      "pinyin": "wǒ de yì si shì, wǒ men kě yǐ xiān cháng shì jiǎn dān de fāng fǎ.",
+      "english_hint": "What I mean is, we can try the simple method first.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "讓我再確認一次，避免解錯。",
+      "expected_answer": [
+        "讓我再確認一次，避免解錯。"
+      ],
+      "pinyin": "ràng wǒ zài què rèn yí cì, bì miǎn jiě cuò.",
+      "english_hint": "Let me confirm again to avoid mistakes.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "你可以再說得慢一點嗎？",
+      "expected_answer": [
+        "你可以再說得慢一點嗎？"
+      ],
+      "pinyin": "nǐ kě yǐ zài shuō de màn yì diǎn ma?",
+      "english_hint": "Could you speak a bit slower?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "我想解釋一下原因。",
+      "expected_answer": [
+        "我想解釋一下原因。"
+      ],
+      "pinyin": "wǒ xiǎng jiě shì yí xià yuán yīn.",
+      "english_hint": "I'd like to explain the reason.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我的理解是這樣的，我再說一次。",
+      "expected_answer": [
+        "我的理解是這樣的，我再說一次。"
+      ],
+      "pinyin": "wǒ de lǐ jiě shì zhè yàng de, wǒ zài shuō yí cì.",
+      "english_hint": "Here is how I understand it; let me repeat.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "如果我說錯，請馬上提醒我。",
+      "expected_answer": [
+        "如果我說錯，請馬上提醒我。"
+      ],
+      "pinyin": "rú guǒ wǒ shuō cuò, qǐng mǎ shàng tí xǐng wǒ.",
+      "english_hint": "If I say something wrong, please let me know.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "簡單來說，我們需要更多資訊。",
+      "expected_answer": [
+        "簡單來說，我們需要更多資訊。"
+      ],
+      "pinyin": "jiǎn dān lái shuō, wǒ men xū yào gèng duō zī xùn.",
+      "english_hint": "Simply put, we need more information.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我只是想確定我們的想法一樣。",
+      "expected_answer": [
+        "我只是想確定我們的想法一樣。"
+      ],
+      "pinyin": "wǒ zhǐ shì xiǎng què dìng wǒ men de xiǎng fǎ yí yàng.",
+      "english_hint": "I just want to make sure we have the same idea.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "那我換一種方式說。",
+      "expected_answer": [
+        "那我換一種方式說。"
+      ],
+      "pinyin": "nà wǒ huàn yì zhǒng fāng shì shuō.",
+      "english_hint": "Let me put it in another way.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 10,
+      "teacher": "希望這樣的說明有幫助。",
+      "expected_answer": [
+        "希望這樣的說明有幫助。"
+      ],
+      "pinyin": "xī wàng zhè yàng de shuō míng yǒu bāng zhù.",
+      "english_hint": "I hope this explanation helps.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You can now explain, clarify, and reorganize thoughts in Chinese.",
+    "mission": "Next: talking about emotions & stress."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C8-L2",
+  "chapter_id": "C8",
+  "lesson_number": 2,
+  "title": "Shopping Vocabulary",
+  "description": "Learn useful A2+ shopping words.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "價格",
+      "expected_answer": [
+        "價格"
+      ],
+      "pinyin": "jià gé",
+      "english_hint": "price",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "尺寸",
+      "expected_answer": [
+        "尺寸"
+      ],
+      "pinyin": "chǐ cùn",
+      "english_hint": "size",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "試穿",
+      "expected_answer": [
+        "試穿"
+      ],
+      "pinyin": "shì chuān",
+      "english_hint": "try on (clothes)",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "折扣",
+      "expected_answer": [
+        "折扣"
+      ],
+      "pinyin": "zhé kòu",
+      "english_hint": "discount",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "收據",
+      "expected_answer": [
+        "收據"
+      ],
+      "pinyin": "shōu jù",
+      "english_hint": "receipt",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "購物袋",
+      "expected_answer": [
+        "購物袋"
+      ],
+      "pinyin": "gòu wù dài",
+      "english_hint": "shopping bag",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 7,
+      "teacher": "結帳",
+      "expected_answer": [
+        "結帳"
+      ],
+      "pinyin": "jié zhàng",
+      "english_hint": "checkout/pay",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 8,
+      "teacher": "換貨",
+      "expected_answer": [
+        "換貨"
+      ],
+      "pinyin": "huàn huò",
+      "english_hint": "exchange goods",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "品質",
+      "expected_answer": [
+        "品質"
+      ],
+      "pinyin": "pǐn zhì",
+      "english_hint": "quality",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 10,
+      "teacher": "試用",
+      "expected_answer": [
+        "試用"
+      ],
+      "pinyin": "shì yòng",
+      "english_hint": "try/use",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned A2+ shopping vocabulary.",
+    "mission": "Next lesson: Real shopping sentences!"
+  }
+}

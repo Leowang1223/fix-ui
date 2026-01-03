@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C2-L3",
+  "chapter_id": "C2",
+  "lesson_number": 3,
+  "title": "Adjectives",
+  "description": "Learn basic adjectives for describing things.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "大",
+      "expected_answer": [
+        "大"
+      ],
+      "pinyin": "dà",
+      "english_hint": "big",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "小",
+      "expected_answer": [
+        "小"
+      ],
+      "pinyin": "xiǎo",
+      "english_hint": "small",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "多",
+      "expected_answer": [
+        "多"
+      ],
+      "pinyin": "duō",
+      "english_hint": "many / much",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 4,
+      "teacher": "少",
+      "expected_answer": [
+        "少"
+      ],
+      "pinyin": "shǎo",
+      "english_hint": "few / little",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "快",
+      "expected_answer": [
+        "快"
+      ],
+      "pinyin": "kuài",
+      "english_hint": "fast",
+      "encouragement": "Great progress!"
+    },
+    {
+      "id": 6,
+      "teacher": "慢",
+      "expected_answer": [
+        "慢"
+      ],
+      "pinyin": "màn",
+      "english_hint": "slow",
+      "encouragement": "You're doing great!"
+    },
+    {
+      "id": 7,
+      "teacher": "冷",
+      "expected_answer": [
+        "冷"
+      ],
+      "pinyin": "lěng",
+      "english_hint": "cold",
+      "encouragement": "Perfect!"
+    },
+    {
+      "id": 8,
+      "teacher": "熱",
+      "expected_answer": [
+        "熱"
+      ],
+      "pinyin": "rè",
+      "english_hint": "hot",
+      "encouragement": "Nice job!"
+    },
+    {
+      "id": 9,
+      "teacher": "高",
+      "expected_answer": [
+        "高"
+      ],
+      "pinyin": "gāo",
+      "english_hint": "tall / high",
+      "encouragement": "Awesome!"
+    },
+    {
+      "id": 10,
+      "teacher": "低",
+      "expected_answer": [
+        "低"
+      ],
+      "pinyin": "dī",
+      "english_hint": "low",
+      "encouragement": "Fantastic work!"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 useful adjectives.",
+    "mission": "Next lesson: Learn basic sentence patterns!"
+  }
+}

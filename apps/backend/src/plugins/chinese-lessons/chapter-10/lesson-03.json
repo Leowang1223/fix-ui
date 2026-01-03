@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C10-L3",
+  "chapter_id": "C10",
+  "lesson_number": 3,
+  "title": "Explaining Viewpoints",
+  "description": "Learn how to express and support opinions politely at B1 level.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我覺得每個選擇都有它的好處與限制。",
+      "expected_answer": [
+        "我覺得每個選擇都有它的好處與限制。"
+      ],
+      "pinyin": "wǒ jué dé měi gè xuǎn zé dōu yǒu tā de hǎo chù yǔ xiàn zhì.",
+      "english_hint": "I think every choice has its advantages and limitations.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "在我看來，穩定比速度更重要。",
+      "expected_answer": [
+        "在我看來，穩定比速度更重要。"
+      ],
+      "pinyin": "zài wǒ kàn lái, wěn dìng bǐ sù dù gèng zhòng yào.",
+      "english_hint": "In my view, stability is more important than speed.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我想先聽聽大家的意見，再做決定。",
+      "expected_answer": [
+        "我想先聽聽大家的意見，再做決定。"
+      ],
+      "pinyin": "wǒ xiǎng xiān tīng tīng dà jiā de yì jiàn, zài zuò jué dìng.",
+      "english_hint": "I want to hear everyone’s opinions before deciding.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "我同意你的部分想法，不過我有不同的看法。",
+      "expected_answer": [
+        "我同意你的部分想法，不過我有不同的看法。"
+      ],
+      "pinyin": "wǒ tóng yì nǐ de bù fèn xiǎng fǎ, bú guò wǒ yǒu bù tóng de kàn fǎ.",
+      "english_hint": "I agree with part of your idea, but I have a different viewpoint.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我認為最重要的是找到平衡。",
+      "expected_answer": [
+        "我認為最重要的是找到平衡。"
+      ],
+      "pinyin": "wǒ rèn wéi zuì zhòng yào de shì zhǎo dào píng héng.",
+      "english_hint": "I believe the most important thing is to find balance.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "你的建議很有道理，我會再仔細想想。",
+      "expected_answer": [
+        "你的建議很有道理，我會再仔細想想。"
+      ],
+      "pinyin": "nǐ de jiàn yì hěn yǒu dào lǐ, wǒ huì zài zǐ xì xiǎng xiǎng.",
+      "english_hint": "Your suggestion makes sense; I’ll think about it more.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "我想用另一個角度來說明。",
+      "expected_answer": [
+        "我想用另一個角度來說明。"
+      ],
+      "pinyin": "wǒ xiǎng yòng lìng yí gè jiǎo dù lái shuō míng.",
+      "english_hint": "I’d like to explain from another angle.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我並不是不同意，只是想再補充一些細節。",
+      "expected_answer": [
+        "我並不是不同意，只是想再補充一些細節。"
+      ],
+      "pinyin": "wǒ bìng bú shì bù tóng yì, zhǐ shì xiǎng zài bǔ chōng yì xiē xì jié.",
+      "english_hint": "I'm not disagreeing; I just want to add some details.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "如果我們能整合不同想法，結果會更好。",
+      "expected_answer": [
+        "如果我們能整合不同想法，結果會更好。"
+      ],
+      "pinyin": "rú guǒ wǒ men néng zhěng hé bù tóng xiǎng fǎ, jié guǒ huì gèng hǎo.",
+      "english_hint": "If we combine different ideas, the result will be better.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "總之，我覺得討論越完整，決定就越清楚。",
+      "expected_answer": [
+        "總之，我覺得討論越完整，決定就越清楚。"
+      ],
+      "pinyin": "zǒng zhī, wǒ jué dé tǎo lùn yuè wán zhěng, jué dìng jiù yuè qīng chǔ.",
+      "english_hint": "In short, the more complete our discussion is, the clearer the decision becomes.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned B1 expressions for explaining and organizing viewpoints.",
+    "mission": "Next lesson: Conversations involving reasoning and suggestions."
+  }
+}

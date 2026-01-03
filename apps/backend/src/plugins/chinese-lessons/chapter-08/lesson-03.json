@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C8-L3",
+  "chapter_id": "C8",
+  "lesson_number": 3,
+  "title": "Shopping Sentences",
+  "description": "Learn A2+ shopping-related sentences.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "這件衣服有其他尺寸嗎？",
+      "expected_answer": [
+        "這件衣服有其他尺寸嗎？"
+      ],
+      "pinyin": "zhè jiàn yī fú yǒu qí tā chǐ cùn ma?",
+      "english_hint": "Does this clothing have other sizes?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "我想試穿這件外套。",
+      "expected_answer": [
+        "我想試穿這件外套。"
+      ],
+      "pinyin": "wǒ xiǎng shì chuān zhè jiàn wài tào.",
+      "english_hint": "I want to try on this jacket.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "請問有沒有折扣？",
+      "expected_answer": [
+        "請問有沒有折扣？"
+      ],
+      "pinyin": "qǐng wèn yǒu méi yǒu zhé kòu?",
+      "english_hint": "Is there a discount?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "這個價格比我想像的便宜。",
+      "expected_answer": [
+        "這個價格比我想像的便宜。"
+      ],
+      "pinyin": "zhè gè jià gé bǐ wǒ xiǎng xiàng de pián yí.",
+      "english_hint": "This price is cheaper than I expected.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我可以用信用卡付款嗎？",
+      "expected_answer": [
+        "我可以用信用卡付款嗎？"
+      ],
+      "pinyin": "wǒ kě yǐ yòng xìn yòng kǎ fù kuǎn ma?",
+      "english_hint": "Can I pay by credit card?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "請把收據給我，我要留著。",
+      "expected_answer": [
+        "請把收據給我，我要留著。"
+      ],
+      "pinyin": "qǐng bǎ shōu jù gěi wǒ, wǒ yào liú zhe.",
+      "english_hint": "Please give me the receipt; I need to keep it.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 7,
+      "teacher": "我想換貨，因為尺寸不太合適。",
+      "expected_answer": [
+        "我想換貨，因為尺寸不太合適。"
+      ],
+      "pinyin": "wǒ xiǎng huàn huò, yīn wèi chǐ cùn bú tài hé shì.",
+      "english_hint": "I want to exchange this because the size doesn't fit.",
+      "encouragement": "Good reasoning!"
+    },
+    {
+      "id": 8,
+      "teacher": "請問有試用的產品嗎？",
+      "expected_answer": [
+        "請問有試用的產品嗎？"
+      ],
+      "pinyin": "qǐng wèn yǒu shì yòng de chǎn pǐn ma?",
+      "english_hint": "Do you have product samples?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "這個品質看起來不錯。",
+      "expected_answer": [
+        "這個品質看起來不錯。"
+      ],
+      "pinyin": "zhè gè pǐn zhì kàn qǐ lái bú cuò.",
+      "english_hint": "The quality looks good.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 10,
+      "teacher": "我再想一想，等一下再決定。",
+      "expected_answer": [
+        "我再想一想，等一下再決定。"
+      ],
+      "pinyin": "wǒ zài xiǎng yì xiǎng, děng yí xià zài jué dìng.",
+      "english_hint": "I'll think about it and decide later.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced natural A2+ shopping sentences.",
+    "mission": "Next lesson: Eating out & restaurant interactions!"
+  }
+}

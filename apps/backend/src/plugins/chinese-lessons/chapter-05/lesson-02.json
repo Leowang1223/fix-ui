@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C5-L2",
+  "chapter_id": "C5",
+  "lesson_number": 2,
+  "title": "Drinks and Desserts",
+  "description": "Learn basic drinks and desserts vocabulary.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "果汁",
+      "expected_answer": [
+        "果汁"
+      ],
+      "pinyin": "guǒ zhī",
+      "english_hint": "juice",
+      "encouragement": "Great start!"
+    },
+    {
+      "id": 2,
+      "teacher": "汽水",
+      "expected_answer": [
+        "汽水"
+      ],
+      "pinyin": "qì shuǐ",
+      "english_hint": "soda",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "冰淇淋",
+      "expected_answer": [
+        "冰淇淋"
+      ],
+      "pinyin": "bīng qí lín",
+      "english_hint": "ice cream",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 4,
+      "teacher": "蛋糕",
+      "expected_answer": [
+        "蛋糕"
+      ],
+      "pinyin": "dàn gāo",
+      "english_hint": "cake",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "餅乾",
+      "expected_answer": [
+        "餅乾"
+      ],
+      "pinyin": "bǐng gān",
+      "english_hint": "cookies",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "巧克力",
+      "expected_answer": [
+        "巧克力"
+      ],
+      "pinyin": "qiǎo kè lì",
+      "english_hint": "chocolate",
+      "encouragement": "Great choice!"
+    },
+    {
+      "id": 7,
+      "teacher": "熱水",
+      "expected_answer": [
+        "熱水"
+      ],
+      "pinyin": "rè shuǐ",
+      "english_hint": "hot water",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "冷水",
+      "expected_answer": [
+        "冷水"
+      ],
+      "pinyin": "lěng shuǐ",
+      "english_hint": "cold water",
+      "encouragement": "Nice work!"
+    },
+    {
+      "id": 9,
+      "teacher": "奶茶",
+      "expected_answer": [
+        "奶茶"
+      ],
+      "pinyin": "nǎi chá",
+      "english_hint": "milk tea",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 10,
+      "teacher": "布丁",
+      "expected_answer": [
+        "布丁"
+      ],
+      "pinyin": "bù dīng",
+      "english_hint": "pudding",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned drinks and desserts vocabulary.",
+    "mission": "Next lesson: Learn shopping vocabulary!"
+  }
+}

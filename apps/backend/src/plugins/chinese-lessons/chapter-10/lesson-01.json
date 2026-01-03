@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C10-L1",
+  "chapter_id": "C10",
+  "lesson_number": 1,
+  "title": "Making Decisions",
+  "description": "Learn stable B1 expressions for choosing, comparing, and deciding.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我正在考慮要不要換一份工作。",
+      "expected_answer": [
+        "我正在考慮要不要換一份工作。"
+      ],
+      "pinyin": "wǒ zhèng zài kǎo lǜ yào bù yào huàn yí fèn gōng zuò.",
+      "english_hint": "I'm considering whether to change jobs.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "我想比較一下不同的選擇。",
+      "expected_answer": [
+        "我想比較一下不同的選擇。"
+      ],
+      "pinyin": "wǒ xiǎng bǐ jiào yí xià bù tóng de xuǎn zé.",
+      "english_hint": "I want to compare the different options.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "做決定之前，我通常會先收集資料。",
+      "expected_answer": [
+        "做決定之前，我通常會先收集資料。"
+      ],
+      "pinyin": "zuò jué dìng zhī qián, wǒ tōng cháng huì xiān shōu jí zī liào.",
+      "english_hint": "Before making decisions, I usually collect information first.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "我希望找到最適合自己的方向。",
+      "expected_answer": [
+        "我希望找到最適合自己的方向。"
+      ],
+      "pinyin": "wǒ xī wàng zhǎo dào zuì shì hé zì jǐ de fāng xiàng.",
+      "english_hint": "I hope to find the direction that suits me best.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "雖然有風險，但我覺得值得一試。",
+      "expected_answer": [
+        "雖然有風險，但我覺得值得一試。"
+      ],
+      "pinyin": "suī rán yǒu fēng xiǎn, dàn wǒ jué dé zhí dé yí shì.",
+      "english_hint": "Although there's risk, I think it's worth trying.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "我會先把重要的因素列出來。",
+      "expected_answer": [
+        "我會先把重要的因素列出來。"
+      ],
+      "pinyin": "wǒ huì xiān bǎ zhòng yào de yīn sù liè chū lái.",
+      "english_hint": "I'll list the important factors first.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "如果有更好的建議，我也願意聽聽看。",
+      "expected_answer": [
+        "如果有更好的建議，我也願意聽聽看。"
+      ],
+      "pinyin": "rú guǒ yǒu gèng hǎo de jiàn yì, wǒ yě yuàn yì tīng tīng kàn.",
+      "english_hint": "If there are better suggestions, I’m willing to listen.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我需要一點時間思考，不想太匆忙。",
+      "expected_answer": [
+        "我需要一點時間思考，不想太匆忙。"
+      ],
+      "pinyin": "wǒ xū yào yì diǎn shí jiān sī kǎo, bù xiǎng tài cōng máng.",
+      "english_hint": "I need some time to think; I don’t want to rush.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "做出選擇後，我會盡力做到最好。",
+      "expected_answer": [
+        "做出選擇後，我會盡力做到最好。"
+      ],
+      "pinyin": "zuò chū xuǎn zé hòu, wǒ huì jìn lì zuò dào zuì hǎo.",
+      "english_hint": "After choosing, I will try my best.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "最重要的是要相信自己的判斷。",
+      "expected_answer": [
+        "最重要的是要相信自己的判斷。"
+      ],
+      "pinyin": "zuì zhòng yào de shì yào xiāng xìn zì jǐ de pàn duàn.",
+      "english_hint": "The most important thing is to trust your own judgement.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned stable B1 expressions about making decisions.",
+    "mission": "Next lesson: Understanding people & relationships."
+  }
+}

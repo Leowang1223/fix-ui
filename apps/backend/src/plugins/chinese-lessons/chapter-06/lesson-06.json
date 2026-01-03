@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C6-L6",
+  "chapter_id": "C6",
+  "lesson_number": 6,
+  "title": "Hobbies 2",
+  "description": "Learn a new set of hobby words.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "拍照",
+      "expected_answer": [
+        "拍照"
+      ],
+      "pinyin": "pāi zhào",
+      "english_hint": "take photos",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "寫字",
+      "expected_answer": [
+        "寫字"
+      ],
+      "pinyin": "xiě zì",
+      "english_hint": "write",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "學語言",
+      "expected_answer": [
+        "學語言"
+      ],
+      "pinyin": "xué yǔ yán",
+      "english_hint": "learn languages",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "看漫畫",
+      "expected_answer": [
+        "看漫畫"
+      ],
+      "pinyin": "kàn màn huà",
+      "english_hint": "read comics",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "做菜",
+      "expected_answer": [
+        "做菜"
+      ],
+      "pinyin": "zuò cài",
+      "english_hint": "cook (prepare dishes)",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "散步",
+      "expected_answer": [
+        "散步"
+      ],
+      "pinyin": "sàn bù",
+      "english_hint": "take a walk",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 7,
+      "teacher": "寫日記",
+      "expected_answer": [
+        "寫日記"
+      ],
+      "pinyin": "xiě rì jì",
+      "english_hint": "write a diary",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 8,
+      "teacher": "做運動",
+      "expected_answer": [
+        "做運動"
+      ],
+      "pinyin": "zuò yùn dòng",
+      "english_hint": "work out",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "聽故事",
+      "expected_answer": [
+        "聽故事"
+      ],
+      "pinyin": "tīng gù shì",
+      "english_hint": "listen to stories",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 10,
+      "teacher": "看風景",
+      "expected_answer": [
+        "看風景"
+      ],
+      "pinyin": "kàn fēng jǐng",
+      "english_hint": "look at scenery",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned new hobby vocabulary.",
+    "mission": "Next lesson: Simple past tense!"
+  }
+}

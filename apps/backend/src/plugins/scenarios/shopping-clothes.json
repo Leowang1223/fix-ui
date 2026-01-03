@@ -1,0 +1,117 @@
+{
+  "scenario_id": "shopping-clothes-01",
+  "title": "Shopping for Clothes",
+  "chineseTitle": "買衣服",
+  "description": "Practice shopping for clothes and asking about sizes, colors, and prices",
+  "chineseDescription": "練習買衣服，詢問尺寸、顏色和價格",
+  "difficulty": "A0-A1",
+  "category": "Shopping",
+  "objective": "Successfully find and buy clothing items",
+  "chineseObjective": "成功找到並購買衣物",
+  "estimatedTurns": 10,
+  "firstSpeaker": "ai",
+  "defaultUserRole": "customer",
+  "checkpoints": [
+    {
+      "id": 1,
+      "description": "Greet the shop assistant",
+      "chineseDescription": "向店員打招呼",
+      "keywords": ["你好", "您好", "不好意思", "請問"],
+      "weight": 10
+    },
+    {
+      "id": 2,
+      "description": "Ask about clothing items",
+      "chineseDescription": "詢問衣物",
+      "keywords": ["有沒有", "想買", "看看", "衣服", "褲子", "鞋子", "找", "我要", "想找"],
+      "weight": 25
+    },
+    {
+      "id": 3,
+      "description": "Ask about size",
+      "chineseDescription": "詢問尺寸",
+      "keywords": ["size", "尺寸", "大", "小", "中", "號", "大號", "中號", "小號", "S", "M", "L"],
+      "weight": 20
+    },
+    {
+      "id": 4,
+      "description": "Ask about color or try on",
+      "chineseDescription": "詢問顏色或試穿",
+      "keywords": ["顏色", "試穿", "可以", "紅色", "藍色", "黑色", "白色", "試", "穿穿看", "試試"],
+      "weight": 20
+    },
+    {
+      "id": 5,
+      "description": "Ask about price and complete purchase",
+      "chineseDescription": "詢問價格並完成購買",
+      "keywords": ["多少錢", "價格", "買", "付錢", "便宜", "貴", "幾塊", "刷卡", "現金"],
+      "weight": 25
+    }
+  ],
+  "roles": [
+    {
+      "id": "customer",
+      "name": "Customer",
+      "chineseName": "顧客",
+      "systemPrompt": "You are a customer shopping for clothes in Taiwan. You want to find the right size and color. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Ask about sizes, colors, and prices."
+    },
+    {
+      "id": "shop-assistant",
+      "name": "Shop Assistant",
+      "chineseName": "店員",
+      "interviewerImage": "clothes waitress.jpg",
+      "interviewerId": "cendy",
+      "systemPrompt": "You are a helpful shop assistant in a clothing store in Taiwan. Help customers find what they need, suggest sizes and colors. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Be friendly and helpful."
+    }
+  ],
+  "suggestions": {
+    "byRole": {
+      "customer": [
+        {
+          "chinese": "你好，我想買一件衣服。",
+          "pinyin": "nǐ hǎo, wǒ xiǎng mǎi yī jiàn yī fu.",
+          "english": "Hello, I want to buy some clothes.",
+          "type": "safe",
+          "checkpointId": 1
+        },
+        {
+          "chinese": "有沒有中號的？",
+          "pinyin": "yǒu méi yǒu zhōng hào de?",
+          "english": "Do you have medium size?",
+          "type": "safe",
+          "checkpointId": 3
+        },
+        {
+          "chinese": "我可以試穿嗎？",
+          "pinyin": "wǒ kě yǐ shì chuān ma?",
+          "english": "Can I try it on?",
+          "type": "safe",
+          "checkpointId": 4
+        },
+        {
+          "chinese": "這個多少錢？",
+          "pinyin": "zhè ge duō shǎo qián?",
+          "english": "How much is this?",
+          "type": "safe",
+          "checkpointId": 5
+        }
+      ],
+      "shop-assistant": []
+    }
+  },
+  "keyVocabulary": [
+    { "chinese": "衣服", "pinyin": "yī fu", "english": "clothes" },
+    { "chinese": "尺寸", "pinyin": "chǐ cùn", "english": "size" },
+    { "chinese": "試穿", "pinyin": "shì chuān", "english": "try on" },
+    { "chinese": "顏色", "pinyin": "yán sè", "english": "color" },
+    { "chinese": "多少錢", "pinyin": "duō shǎo qián", "english": "how much" }
+  ],
+  "keyPatterns": [
+    { "pattern": "有沒有...?", "example": "有沒有中號的?", "english": "Do you have...?" },
+    { "pattern": "我可以...嗎?", "example": "我可以試穿嗎?", "english": "Can I...?" },
+    { "pattern": "這個...", "example": "這個多少錢?", "english": "This..." }
+  ],
+  "tags": ["shopping", "clothes", "daily-life"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "isCustom": false
+}

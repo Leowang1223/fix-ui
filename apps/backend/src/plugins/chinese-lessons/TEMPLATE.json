@@ -1,0 +1,35 @@
+{
+  "lesson_id": "L99",
+  "title": "課程標題（顯示在Dashboard）",
+  "description": "課程描述",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "教師說明：解釋這個題目要學什麼，並給予範例",
+      "expected_answer": "預期答案",
+      "pinyin": "yù qī dá àn",
+      "english_hint": "Expected answer",
+      "encouragement": "答對時的鼓勵語 👏"
+    },
+    {
+      "id": 2,
+      "teacher": "第二題的教師說明",
+      "expected_answer": "第二題答案",
+      "pinyin": "dì èr tí dá àn",
+      "english_hint": "Second answer",
+      "encouragement": "很好！繼續加油 🎉"
+    },
+    {
+      "id": 3,
+      "teacher": "多重答案範例：請說出你喜歡的水果",
+      "expected_answer": ["蘋果", "香蕉", "橘子"],
+      "pinyin_examples": ["píng guǒ", "xiāng jiāo", "jú zi"],
+      "english_hint": "apple, banana, or orange",
+      "encouragement": "完美！你學會了 ✨"
+    }
+  ],
+  "review": {
+    "summary": "課程總結：你學到了...",
+    "mission": "下次任務提示"
+  }
+}

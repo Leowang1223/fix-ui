@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C8-L6",
+  "chapter_id": "C8",
+  "lesson_number": 6,
+  "title": "Asking for Help & Small Complaints",
+  "description": "Learn polite A2+ help requests and mild complaints.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "不好意思，你可以幫我一下嗎？",
+      "expected_answer": [
+        "不好意思，你可以幫我一下嗎？"
+      ],
+      "pinyin": "bù hǎo yì si, nǐ kě yǐ bāng wǒ yí xià ma?",
+      "english_hint": "Excuse me, can you help me?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "這裡的網路好像不太穩定。",
+      "expected_answer": [
+        "這裡的網路好像不太穩定。"
+      ],
+      "pinyin": "zhè lǐ de wǎng lù hǎo xiàng bú tài wěn dìng.",
+      "english_hint": "The internet here seems unstable.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我的房卡不能用，可以幫我看一下嗎？",
+      "expected_answer": [
+        "我的房卡不能用，可以幫我看一下嗎？"
+      ],
+      "pinyin": "wǒ de fáng kǎ bù néng yòng, kě yǐ bāng wǒ kàn yí xià ma?",
+      "english_hint": "My room card doesn't work, can you check it?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "空調有點太冷了，可以調高一點嗎？",
+      "expected_answer": [
+        "空調有點太冷了，可以調高一點嗎？"
+      ],
+      "pinyin": "kōng tiáo yǒu diǎn tài lěng le, kě yǐ tiáo gāo yì diǎn ma?",
+      "english_hint": "The AC is too cold, can you turn it up?",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我找不到路，你可以告訴我方向嗎？",
+      "expected_answer": [
+        "我找不到路，你可以告訴我方向嗎？"
+      ],
+      "pinyin": "wǒ zhǎo bú dào lù, nǐ kě yǐ gào sù wǒ fāng xiàng ma?",
+      "english_hint": "I can't find the way, can you tell me the direction?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "我覺得有點太吵了。",
+      "expected_answer": [
+        "我覺得有點太吵了。"
+      ],
+      "pinyin": "wǒ jué dé yǒu diǎn tài chǎo le.",
+      "english_hint": "I feel it's a bit too noisy.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 7,
+      "teacher": "可以幫我換一個位置嗎？",
+      "expected_answer": [
+        "可以幫我換一個位置嗎？"
+      ],
+      "pinyin": "kě yǐ bāng wǒ huàn yí gè wèi zhì ma?",
+      "english_hint": "Can you change my seat?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 8,
+      "teacher": "我的手機快沒電了，有插座嗎？",
+      "expected_answer": [
+        "我的手機快沒電了，有插座嗎？"
+      ],
+      "pinyin": "wǒ de shǒu jī kuài méi diàn le, yǒu chā zuò ma?",
+      "english_hint": "My phone is low on battery; is there a socket?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "我聽不太清楚，可以再說一次嗎？",
+      "expected_answer": [
+        "我聽不太清楚，可以再說一次嗎？"
+      ],
+      "pinyin": "wǒ tīng bú tài qīng chǔ, kě yǐ zài shuō yí cì ma?",
+      "english_hint": "I can't hear clearly; can you say it again?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 10,
+      "teacher": "抱歉，我不太懂，可以換一種說法嗎？",
+      "expected_answer": [
+        "抱歉，我不太懂，可以換一種說法嗎？"
+      ],
+      "pinyin": "bào qiàn, wǒ bú tài dǒng, kě yǐ huàn yì zhǒng shuō fǎ ma?",
+      "english_hint": "Sorry, I don't quite understand. Can you say it differently?",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned polite A2+ help & complaint sentences.",
+    "mission": "Next lesson: Invitations & making plans!"
+  }
+}

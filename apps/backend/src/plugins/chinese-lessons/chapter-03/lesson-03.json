@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C3-L3",
+  "chapter_id": "C3",
+  "lesson_number": 3,
+  "title": "Location with 在",
+  "description": "Use 在 to say where people or things are.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我在家。",
+      "expected_answer": [
+        "我在家。"
+      ],
+      "pinyin": "wǒ zài jiā.",
+      "english_hint": "I am at home.",
+      "encouragement": "Great location sentence!"
+    },
+    {
+      "id": 2,
+      "teacher": "他在學校。",
+      "expected_answer": [
+        "他在學校。"
+      ],
+      "pinyin": "tā zài xué xiào.",
+      "english_hint": "He is at school.",
+      "encouragement": "Nice job!"
+    },
+    {
+      "id": 3,
+      "teacher": "我們在餐廳。",
+      "expected_answer": [
+        "我們在餐廳。"
+      ],
+      "pinyin": "wǒ men zài cān tīng.",
+      "english_hint": "We are at the restaurant.",
+      "encouragement": "Good work!"
+    },
+    {
+      "id": 4,
+      "teacher": "手機在桌子上。",
+      "expected_answer": [
+        "手機在桌子上。"
+      ],
+      "pinyin": "shǒu jī zài zhuō zi shàng.",
+      "english_hint": "The phone is on the table.",
+      "encouragement": "Excellent sentence!"
+    },
+    {
+      "id": 5,
+      "teacher": "貓在椅子下面。",
+      "expected_answer": [
+        "貓在椅子下面。"
+      ],
+      "pinyin": "māo zài yǐ zi xià miàn.",
+      "english_hint": "The cat is under the chair.",
+      "encouragement": "Great use of location word!"
+    },
+    {
+      "id": 6,
+      "teacher": "他們在公園裡。",
+      "expected_answer": [
+        "他們在公園裡。"
+      ],
+      "pinyin": "tā men zài gōng yuán lǐ.",
+      "english_hint": "They are in the park.",
+      "encouragement": "Nice and clear!"
+    },
+    {
+      "id": 7,
+      "teacher": "你在哪裡？",
+      "expected_answer": [
+        "你在哪裡？"
+      ],
+      "pinyin": "nǐ zài nǎ lǐ?",
+      "english_hint": "Where are you?",
+      "encouragement": "Great question!"
+    },
+    {
+      "id": 8,
+      "teacher": "書在包包裡。",
+      "expected_answer": [
+        "書在包包裡。"
+      ],
+      "pinyin": "shū zài bāo bāo lǐ.",
+      "english_hint": "The book is in the bag.",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 9,
+      "teacher": "我在路上。",
+      "expected_answer": [
+        "我在路上。"
+      ],
+      "pinyin": "wǒ zài lù shàng.",
+      "english_hint": "I am on the way.",
+      "encouragement": "Excellent expression!"
+    },
+    {
+      "id": 10,
+      "teacher": "他在公司工作。",
+      "expected_answer": [
+        "他在公司工作。"
+      ],
+      "pinyin": "tā zài gōng sī gōng zuò.",
+      "english_hint": "He works at a company.",
+      "encouragement": "Fantastic sentence!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced using 在 for locations and places.",
+    "mission": "Next lesson: Practice time sentences with 上午, 下午, and 晚上."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C8-L1",
+  "chapter_id": "C8",
+  "lesson_number": 1,
+  "title": "Travel Preparation",
+  "description": "Learn A2+ sentences about preparing for a trip.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我準備下週出去旅行。",
+      "expected_answer": [
+        "我準備下週出去旅行。"
+      ],
+      "pinyin": "wǒ zhǔn bèi xià zhōu chū qù lǚ xíng.",
+      "english_hint": "I'm preparing to travel next week.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "我需要先訂飯店，不然可能沒有房間。",
+      "expected_answer": [
+        "我需要先訂飯店，不然可能沒有房間。"
+      ],
+      "pinyin": "wǒ xū yào xiān dìng fàn diàn, bù rán kě néng méi yǒu fáng jiān.",
+      "english_hint": "I need to book a hotel first, otherwise there may be no rooms.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我打算帶一些方便的衣服。",
+      "expected_answer": [
+        "我打算帶一些方便的衣服。"
+      ],
+      "pinyin": "wǒ dǎ suàn dài yì xiē fāng biàn de yī fú.",
+      "english_hint": "I plan to bring some comfortable clothes.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "因為天氣可能變化大，我會帶外套。",
+      "expected_answer": [
+        "因為天氣可能變化大，我會帶外套。"
+      ],
+      "pinyin": "yīn wèi tiān qì kě néng biàn huà dà, wǒ huì dài wài tào.",
+      "english_hint": "Because the weather may change a lot, I'll bring a jacket.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我會先查一下當地的交通方式。",
+      "expected_answer": [
+        "我會先查一下當地的交通方式。"
+      ],
+      "pinyin": "wǒ huì xiān chá yí xià dāng dì de jiāo tōng fāng shì.",
+      "english_hint": "I will check the local transportation first.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "出門前我會把手機充滿電。",
+      "expected_answer": [
+        "出門前我會把手機充滿電。"
+      ],
+      "pinyin": "chū mén qián wǒ huì bǎ shǒu jī chōng mǎn diàn.",
+      "english_hint": "Before leaving, I will fully charge my phone.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 7,
+      "teacher": "我會帶一些零食，路上比較方便。",
+      "expected_answer": [
+        "我會帶一些零食，路上比較方便。"
+      ],
+      "pinyin": "wǒ huì dài yì xiē líng shí, lù shàng bǐ jiào fāng biàn.",
+      "english_hint": "I'll bring some snacks; it's more convenient on the way.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 8,
+      "teacher": "如果時間夠，我想去幾個景點看看。",
+      "expected_answer": [
+        "如果時間夠，我想去幾個景點看看。"
+      ],
+      "pinyin": "rú guǒ shí jiān gòu, wǒ xiǎng qù jǐ gè jǐng diǎn kàn kàn.",
+      "english_hint": "If there's enough time, I want to visit a few attractions.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "我會帶水瓶，這樣比較環保。",
+      "expected_answer": [
+        "我會帶水瓶，這樣比較環保。"
+      ],
+      "pinyin": "wǒ huì dài shuǐ píng, zhè yàng bǐ jiào huán bǎo.",
+      "english_hint": "I'll bring a water bottle; it's more eco-friendly.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 10,
+      "teacher": "我已經把重要的文件放進包包裡了。",
+      "expected_answer": [
+        "我已經把重要的文件放進包包裡了。"
+      ],
+      "pinyin": "wǒ yǐ jīng bǎ zhòng yào de wén jiàn fàng jìn bāo bao lǐ le.",
+      "english_hint": "I already put the important documents in my bag.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned natural A2+ travel preparation sentences.",
+    "mission": "Next lesson: Shopping vocabulary and sentences!"
+  }
+}

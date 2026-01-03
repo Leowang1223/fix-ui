@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C5-L6",
+  "chapter_id": "C5",
+  "lesson_number": 6,
+  "title": "Lifestyle Sentences",
+  "description": "Learn simple sentences used in daily life.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我每天喝一杯咖啡。",
+      "expected_answer": [
+        "我每天喝一杯咖啡。"
+      ],
+      "pinyin": "wǒ měi tiān hē yì bēi kā fēi.",
+      "english_hint": "I drink a cup of coffee every day.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "我週末喜歡睡覺。",
+      "expected_answer": [
+        "我週末喜歡睡覺."
+      ],
+      "pinyin": "wǒ zhōu mò xǐ huān shuì jiào.",
+      "english_hint": "I like to sleep on weekends.",
+      "encouragement": "Nice sentence!"
+    },
+    {
+      "id": 3,
+      "teacher": "我晚上常常看影片。",
+      "expected_answer": [
+        "我晚上常常看影片."
+      ],
+      "pinyin": "wǒ wǎn shàng cháng cháng kàn yǐng piàn.",
+      "english_hint": "I often watch videos at night.",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 4,
+      "teacher": "我早上會運動。",
+      "expected_answer": [
+        "我早上會運動."
+      ],
+      "pinyin": "wǒ zǎo shàng huì yùn dòng.",
+      "english_hint": "I exercise in the morning.",
+      "encouragement": "Great healthy habit!"
+    },
+    {
+      "id": 5,
+      "teacher": "我喜歡聽音樂。",
+      "expected_answer": [
+        "我喜歡聽音樂."
+      ],
+      "pinyin": "wǒ xǐ huān tīng yīn yuè.",
+      "english_hint": "I like listening to music.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "我想多學一點中文。",
+      "expected_answer": [
+        "我想多學一點中文."
+      ],
+      "pinyin": "wǒ xiǎng duō xué yì diǎn zhōng wén.",
+      "english_hint": "I want to learn more Chinese.",
+      "encouragement": "Excellent motivation!"
+    },
+    {
+      "id": 7,
+      "teacher": "今天我不想出門。",
+      "expected_answer": [
+        "今天我不想出門."
+      ],
+      "pinyin": "jīn tiān wǒ bù xiǎng chū mén.",
+      "english_hint": "I don't want to go out today.",
+      "encouragement": "Good expression!"
+    },
+    {
+      "id": 8,
+      "teacher": "我在找新的興趣。",
+      "expected_answer": [
+        "我在找新的興趣."
+      ],
+      "pinyin": "wǒ zài zhǎo xīn de xìng qù.",
+      "english_hint": "I'm looking for a new hobby.",
+      "encouragement": "Great sentence!"
+    },
+    {
+      "id": 9,
+      "teacher": "我想多休息一下。",
+      "expected_answer": [
+        "我想多休息一下."
+      ],
+      "pinyin": "wǒ xiǎng duō xiū xí yí xià.",
+      "english_hint": "I want to take more rest.",
+      "encouragement": "Nice expression!"
+    },
+    {
+      "id": 10,
+      "teacher": "今天我很忙。",
+      "expected_answer": [
+        "今天我很忙."
+      ],
+      "pinyin": "jīn tiān wǒ hěn máng.",
+      "english_hint": "I am very busy today.",
+      "encouragement": "Perfect!"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 simple lifestyle sentences.",
+    "mission": "Next lesson: Learn adjectives and descriptions!"
+  }
+}

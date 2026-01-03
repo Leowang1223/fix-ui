@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C2-L8",
+  "chapter_id": "C2",
+  "lesson_number": 8,
+  "title": "Hobbies",
+  "description": "Learn simple hobby-related words.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "唱歌",
+      "expected_answer": [
+        "唱歌"
+      ],
+      "pinyin": "chàng gē",
+      "english_hint": "to sing",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "跳舞",
+      "expected_answer": [
+        "跳舞"
+      ],
+      "pinyin": "tiào wǔ",
+      "english_hint": "to dance",
+      "encouragement": "Nice job!"
+    },
+    {
+      "id": 3,
+      "teacher": "畫畫",
+      "expected_answer": [
+        "畫畫"
+      ],
+      "pinyin": "huà huà",
+      "english_hint": "to draw",
+      "encouragement": "Good work!"
+    },
+    {
+      "id": 4,
+      "teacher": "看書",
+      "expected_answer": [
+        "看書"
+      ],
+      "pinyin": "kàn shū",
+      "english_hint": "to read",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "玩遊戲",
+      "expected_answer": [
+        "玩遊戲"
+      ],
+      "pinyin": "wán yóu xì",
+      "english_hint": "to play games",
+      "encouragement": "You're doing great!"
+    },
+    {
+      "id": 6,
+      "teacher": "跑步",
+      "expected_answer": [
+        "跑步"
+      ],
+      "pinyin": "pǎo bù",
+      "english_hint": "to run",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "游泳",
+      "expected_answer": [
+        "游泳"
+      ],
+      "pinyin": "yóu yǒng",
+      "english_hint": "to swim",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "旅行",
+      "expected_answer": [
+        "旅行"
+      ],
+      "pinyin": "lǚ xíng",
+      "english_hint": "to travel",
+      "encouragement": "Fantastic!"
+    },
+    {
+      "id": 9,
+      "teacher": "聽音樂",
+      "expected_answer": [
+        "聽音樂"
+      ],
+      "pinyin": "tīng yīn yuè",
+      "english_hint": "to listen to music",
+      "encouragement": "Great progress!"
+    },
+    {
+      "id": 10,
+      "teacher": "看電影",
+      "expected_answer": [
+        "看電影"
+      ],
+      "pinyin": "kàn diàn yǐng",
+      "english_hint": "to watch movies",
+      "encouragement": "Awesome!"
+    }
+  ],
+  "review": {
+    "summary": "You learned hobby and free-time vocabulary.",
+    "mission": "Next lesson: Learn simple occupations!"
+  }
+}

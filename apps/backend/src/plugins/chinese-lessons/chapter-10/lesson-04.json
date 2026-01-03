@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C5-L4",
+  "chapter_id": "C10",
+  "lesson_number": 4,
+  "title": "Shopping Sentences",
+  "description": "Learn simple sentences used when shopping.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我想買這件衣服。",
+      "expected_answer": [
+        "我想買這件衣服。"
+      ],
+      "pinyin": "wǒ xiǎng mǎi zhè jiàn yī fú.",
+      "english_hint": "I want to buy this piece of clothing.",
+      "encouragement": "Great sentence!"
+    },
+    {
+      "id": 2,
+      "teacher": "有小一點的尺寸嗎？",
+      "expected_answer": [
+        "有小一點的尺寸嗎？"
+      ],
+      "pinyin": "yǒu xiǎo yì diǎn de chí cùn ma?",
+      "english_hint": "Do you have a smaller size?",
+      "encouragement": "Nice question!"
+    },
+    {
+      "id": 3,
+      "teacher": "我想看看別的款式。",
+      "expected_answer": [
+        "我想看看別的款式。"
+      ],
+      "pinyin": "wǒ xiǎng kàn kan bié de kuǎn shì.",
+      "english_hint": "I want to look at other styles.",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 4,
+      "teacher": "可以試戴嗎？",
+      "expected_answer": [
+        "可以試戴嗎？"
+      ],
+      "pinyin": "kě yǐ shì dài ma?",
+      "english_hint": "Can I try it on?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 5,
+      "teacher": "這個顏色很漂亮。",
+      "expected_answer": [
+        "這個顏色很漂亮。"
+      ],
+      "pinyin": "zhè ge yán sè hěn piào liang.",
+      "english_hint": "This color is very pretty.",
+      "encouragement": "Nice compliment!"
+    },
+    {
+      "id": 6,
+      "teacher": "可以給我新的一件嗎？",
+      "expected_answer": [
+        "可以給我新的一件嗎？"
+      ],
+      "pinyin": "kě yǐ gěi wǒ xīn de yí jiàn ma?",
+      "english_hint": "Can you give me a new one?",
+      "encouragement": "Perfect!"
+    },
+    {
+      "id": 7,
+      "teacher": "這裡可以退貨嗎？",
+      "expected_answer": [
+        "這裡可以退貨嗎？"
+      ],
+      "pinyin": "zhè lǐ kě yǐ tuì huò ma?",
+      "english_hint": "Can I return this here?",
+      "encouragement": "Good question!"
+    },
+    {
+      "id": 8,
+      "teacher": "我只是在看看。",
+      "expected_answer": [
+        "我只是在看看。"
+      ],
+      "pinyin": "wǒ zhǐ shì zài kàn kan.",
+      "english_hint": "I'm just browsing.",
+      "encouragement": "Nice casual line!"
+    },
+    {
+      "id": 9,
+      "teacher": "可以給我收據嗎？",
+      "expected_answer": [
+        "可以給我收據嗎？"
+      ],
+      "pinyin": "kě yǐ gěi wǒ shōu jù ma?",
+      "english_hint": "Can I have a receipt?",
+      "encouragement": "Great practical phrase!"
+    },
+    {
+      "id": 10,
+      "teacher": "我想用現金付款。",
+      "expected_answer": [
+        "我想用現金付款。"
+      ],
+      "pinyin": "wǒ xiǎng yòng xiàn jīn fù kuǎn.",
+      "english_hint": "I want to pay with cash.",
+      "encouragement": "Excellent sentence!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced useful basic shopping sentences.",
+    "mission": "Next lesson: Learn daily routine action verbs."
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "scenario_id": "restaurant-ordering-01",
+  "title": "Ordering Food at a Restaurant",
+  "chineseTitle": "在餐廳點餐",
+  "description": "Practice ordering food and drinks in a Chinese restaurant",
+  "chineseDescription": "練習在中餐廳點餐和飲料",
+  "difficulty": "A0-A1",
+  "category": "Daily Life",
+  "objective": "Successfully order a meal and drinks",
+  "chineseObjective": "成功點餐和飲料",
+  "estimatedTurns": 8,
+  "firstSpeaker": "ai",
+  "defaultUserRole": "customer",
+  "checkpoints": [
+    {
+      "id": 1,
+      "description": "Greet the waiter",
+      "chineseDescription": "向服務生打招呼",
+      "keywords": ["你好", "您好", "晚上好", "早上好", "午安", "不好意思", "服務生"],
+      "weight": 15
+    },
+    {
+      "id": 2,
+      "description": "Request the menu",
+      "chineseDescription": "要求看菜單",
+      "keywords": ["菜單", "menu", "看看", "給我", "我想看", "有什麼", "麻煩給我"],
+      "weight": 20
+    },
+    {
+      "id": 3,
+      "description": "Order main dish",
+      "chineseDescription": "點主菜",
+      "keywords": ["我要", "想吃", "來一份", "點菜", "點", "給我", "要一個", "想點"],
+      "weight": 30
+    },
+    {
+      "id": 4,
+      "description": "Order drinks",
+      "chineseDescription": "點飲料",
+      "keywords": ["飲料", "水", "茶", "可樂", "juice", "喝", "飲品", "來杯", "要喝"],
+      "weight": 20
+    },
+    {
+      "id": 5,
+      "description": "Request the bill",
+      "chineseDescription": "要求買單",
+      "keywords": ["買單", "結帳", "check", "付錢", "多少錢", "帳單", "算帳", "埋單"],
+      "weight": 15
+    }
+  ],
+  "roles": [
+    {
+      "id": "customer",
+      "name": "Customer",
+      "chineseName": "顧客",
+      "systemPrompt": "You are a customer at a Taiwanese restaurant. You want to order food and drinks. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Guide the conversation through the checkpoints: greeting, requesting menu, ordering food, ordering drinks, and requesting the bill."
+    },
+    {
+      "id": "waiter",
+      "name": "Waiter",
+      "chineseName": "服務生",
+      "interviewerImage": "resturant waitor.jpg",
+      "interviewerId": "man",
+      "systemPrompt": "You are a friendly waiter at a Taiwanese restaurant. Greet customers warmly, take orders, and be helpful. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Recommend popular dishes when asked."
+    }
+  ],
+  "suggestions": {
+    "byRole": {
+      "customer": [
+        {
+          "chinese": "你好，我想看菜單。",
+          "pinyin": "nǐ hǎo, wǒ xiǎng kàn cài dān.",
+          "english": "Hello, I'd like to see the menu.",
+          "type": "safe",
+          "checkpointId": 1
+        },
+        {
+          "chinese": "我要一份炒飯。",
+          "pinyin": "wǒ yào yī fèn chǎo fàn.",
+          "english": "I want a fried rice.",
+          "type": "safe",
+          "checkpointId": 3
+        },
+        {
+          "chinese": "請給我一杯水。",
+          "pinyin": "qǐng gěi wǒ yī bēi shuǐ.",
+          "english": "Please give me a glass of water.",
+          "type": "safe",
+          "checkpointId": 4
+        },
+        {
+          "chinese": "請買單。",
+          "pinyin": "qǐng mǎi dān.",
+          "english": "Check please.",
+          "type": "safe",
+          "checkpointId": 5
+        }
+      ],
+      "waiter": []
+    }
+  },
+  "keyVocabulary": [
+    { "chinese": "菜單", "pinyin": "cài dān", "english": "menu" },
+    { "chinese": "點餐", "pinyin": "diǎn cān", "english": "order food" },
+    { "chinese": "炒飯", "pinyin": "chǎo fàn", "english": "fried rice" },
+    { "chinese": "飲料", "pinyin": "yǐn liào", "english": "beverage" },
+    { "chinese": "買單", "pinyin": "mǎi dān", "english": "pay the bill" }
+  ],
+  "keyPatterns": [
+    { "pattern": "我要...", "example": "我要一份炒飯", "english": "I want..." },
+    { "pattern": "請給我...", "example": "請給我一杯水", "english": "Please give me..." },
+    { "pattern": "有沒有...?", "example": "有沒有菜單?", "english": "Do you have...?" }
+  ],
+  "tags": ["restaurant", "food", "ordering", "daily-life"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "isCustom": false
+}

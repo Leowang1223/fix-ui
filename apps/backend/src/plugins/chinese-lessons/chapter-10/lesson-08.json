@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C10-L8",
+  "chapter_id": "C10",
+  "lesson_number": 8,
+  "title": "Teamwork & Collaboration",
+  "description": "Useful B1 expressions for team discussions and cooperation.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我覺得我們可以把工作分配得更平均。",
+      "expected_answer": [
+        "我覺得我們可以把工作分配得更平均。"
+      ],
+      "pinyin": "wǒ jué dé wǒ men kě yǐ bǎ gōng zuò fēn pèi dé gèng píng jūn.",
+      "english_hint": "I think we can divide the work more evenly.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "如果有想法，可以直接提出來。",
+      "expected_answer": [
+        "如果有想法，可以直接提出來。"
+      ],
+      "pinyin": "rú guǒ yǒu xiǎng fǎ, kě yǐ zhí jiē tí chū lái.",
+      "english_hint": "If you have ideas, feel free to bring them up.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我覺得大家一起討論會比較有效率。",
+      "expected_answer": [
+        "我覺得大家一起討論會比較有效率。"
+      ],
+      "pinyin": "wǒ jué dé dà jiā yì qǐ tǎo lùn huì bǐ jiào yǒu xiào lǜ.",
+      "english_hint": "I think discussing together is more efficient.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "我們可以把每個人的長處都利用起來。",
+      "expected_answer": [
+        "我們可以把每個人的長處都利用起來。"
+      ],
+      "pinyin": "wǒ men kě yǐ bǎ měi gè rén de cháng chù dōu lì yòng qǐ lái.",
+      "english_hint": "We can make use of everyone's strengths.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "如果遇到問題，我們彼此可以互相支援。",
+      "expected_answer": [
+        "如果遇到問題，我們彼此可以互相支援。"
+      ],
+      "pinyin": "rú guǒ yù dào wèn tí, wǒ men bǐ cǐ kě yǐ hù xiāng zhī yuán.",
+      "english_hint": "If we face issues, we can support each other.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "大家保持好的溝通會讓合作更順利。",
+      "expected_answer": [
+        "大家保持好的溝通會讓合作更順利。"
+      ],
+      "pinyin": "dà jiā bǎo chí hǎo de gōu tōng huì ràng hé zuò gèng shùn lì.",
+      "english_hint": "Good communication helps teamwork go smoothly.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "我會負責整理意見，讓大家都知道進度。",
+      "expected_answer": [
+        "我會負責整理意見，讓大家都知道進度。"
+      ],
+      "pinyin": "wǒ huì fù zé zhěng lǐ yì jiàn, ràng dà jiā dōu zhī dào jìn dù.",
+      "english_hint": "I'll organize the feedback so everyone knows the progress.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我們一起努力的話，一定能達成。",
+      "expected_answer": [
+        "我們一起努力的話，一定能達成。"
+      ],
+      "pinyin": "wǒ men yì qǐ nǔ lì de huà, yí dìng néng dá chéng.",
+      "english_hint": "If we work together, we can definitely achieve it.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "需要協助時，不用害羞，可以直接說。",
+      "expected_answer": [
+        "需要協助時，不用害羞，可以直接說。"
+      ],
+      "pinyin": "xū yào xié zhù shí, bù yòng hài xiū, kě yǐ zhí jiē shuō.",
+      "english_hint": "If you need help, don’t be shy—just say it.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "我相信只要大家願意合作，問題都能解決。",
+      "expected_answer": [
+        "我相信只要大家願意合作，問題都能解決。"
+      ],
+      "pinyin": "wǒ xiāng xìn zhǐ yào dà jiā yuàn yì hé zuò, wèn tí dōu néng jiě jué.",
+      "english_hint": "I believe as long as we cooperate, we can solve everything.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned natural teamwork expressions.",
+    "mission": "Next: Advanced emotions & self-expression."
+  }
+}

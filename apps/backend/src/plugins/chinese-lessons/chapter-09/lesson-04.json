@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C9-L4",
+  "chapter_id": "C9",
+  "lesson_number": 4,
+  "title": "Talking About Experience",
+  "description": "Learn how to talk about past experiences with simple B1-entry structures.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我以前做過類似的工作。",
+      "expected_answer": [
+        "我以前做過類似的工作。"
+      ],
+      "pinyin": "wǒ yǐ qián zuò guò lèi sì de gōng zuò.",
+      "english_hint": "I have done similar work before.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "我曾經參加過一個短期的培訓。",
+      "expected_answer": [
+        "我曾經參加過一個短期的培訓。"
+      ],
+      "pinyin": "wǒ céng jīng cān jiā guò yí gè duǎn qī de péi xùn.",
+      "english_hint": "I once joined a short training program.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "那次經驗讓我學到很多東西。",
+      "expected_answer": [
+        "那次經驗讓我學到很多東西。"
+      ],
+      "pinyin": "nà cì jīng yàn ràng wǒ xué dào hěn duō dōng xī.",
+      "english_hint": "That experience taught me a lot.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "我曾經在國外生活過半年。",
+      "expected_answer": [
+        "我曾經在國外生活過半年。"
+      ],
+      "pinyin": "wǒ céng jīng zài guó wài shēng huó guò bàn nián.",
+      "english_hint": "I once lived abroad for half a year.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "那段時間讓我變得更獨立。",
+      "expected_answer": [
+        "那段時間讓我變得更獨立。"
+      ],
+      "pinyin": "nà duàn shí jiān ràng wǒ biàn dé gèng dú lì.",
+      "english_hint": "That period made me more independent.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "我以前學過一點相關的技能。",
+      "expected_answer": [
+        "我以前學過一點相關的技能。"
+      ],
+      "pinyin": "wǒ yǐ qián xué guò yì diǎn xiāng guān de jì néng.",
+      "english_hint": "I learned some related skills before.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "我做過志工，所以習慣跟人溝通。",
+      "expected_answer": [
+        "我做過志工，所以習慣跟人溝通。"
+      ],
+      "pinyin": "wǒ zuò guò zhì gōng, suǒ yǐ xí guàn gēn rén gōu tōng.",
+      "english_hint": "I have done volunteer work, so I'm used to talking with people.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我以前遇過類似的問題。",
+      "expected_answer": [
+        "我以前遇過類似的問題。"
+      ],
+      "pinyin": "wǒ yǐ qián yù guò lèi sì de wèn tí.",
+      "english_hint": "I have encountered similar problems before.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "那次失敗讓我學會更仔細一點。",
+      "expected_answer": [
+        "那次失敗讓我學會更仔細一點。"
+      ],
+      "pinyin": "nà cì shī bài ràng wǒ xué huì gèng zǐ xì yì diǎn.",
+      "english_hint": "That failure taught me to be more careful.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "總的來說，我的經驗都很有幫助。",
+      "expected_answer": [
+        "總的來說，我的經驗都很有幫助。"
+      ],
+      "pinyin": "zǒng de lái shuō, wǒ de jīng yàn dōu hěn yǒu bāng zhù.",
+      "english_hint": "Overall, my experiences have been very helpful.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned B1-entry ways to talk about past experience.",
+    "mission": "Next: solving problems at work."
+  }
+}

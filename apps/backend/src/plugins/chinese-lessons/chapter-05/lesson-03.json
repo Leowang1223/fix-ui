@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C5-L3",
+  "chapter_id": "C5",
+  "lesson_number": 3,
+  "title": "Shopping Items",
+  "description": "Learn basic nouns used when shopping.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "衣服",
+      "expected_answer": [
+        "衣服"
+      ],
+      "pinyin": "yī fú",
+      "english_hint": "clothes",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "鞋子",
+      "expected_answer": [
+        "鞋子"
+      ],
+      "pinyin": "xié zi",
+      "english_hint": "shoes",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "褲子",
+      "expected_answer": [
+        "褲子"
+      ],
+      "pinyin": "kù zi",
+      "english_hint": "pants",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 4,
+      "teacher": "帽子",
+      "expected_answer": [
+        "帽子"
+      ],
+      "pinyin": "mào zi",
+      "english_hint": "hat",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "手錶",
+      "expected_answer": [
+        "手錶"
+      ],
+      "pinyin": "shǒu biǎo",
+      "english_hint": "watch",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "包包",
+      "expected_answer": [
+        "包包"
+      ],
+      "pinyin": "bāo bāo",
+      "english_hint": "bag",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 7,
+      "teacher": "眼鏡",
+      "expected_answer": [
+        "眼鏡"
+      ],
+      "pinyin": "yǎn jìng",
+      "english_hint": "glasses",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "手機殼",
+      "expected_answer": [
+        "手機殼"
+      ],
+      "pinyin": "shǒu jī ké",
+      "english_hint": "phone case",
+      "encouragement": "Nice work!"
+    },
+    {
+      "id": 9,
+      "teacher": "雨傘",
+      "expected_answer": [
+        "雨傘"
+      ],
+      "pinyin": "yǔ sǎn",
+      "english_hint": "umbrella",
+      "encouragement": "Awesome!"
+    },
+    {
+      "id": 10,
+      "teacher": "禮物",
+      "expected_answer": [
+        "禮物"
+      ],
+      "pinyin": "lǐ wù",
+      "english_hint": "gift",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned basic product nouns used when shopping.",
+    "mission": "Next lesson: Learn simple shopping sentences!"
+  }
+}

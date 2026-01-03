@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C3-L5",
+  "chapter_id": "C3",
+  "lesson_number": 5,
+  "title": "Time Expressions",
+  "description": "Make simple sentences with time words.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我早上七點起床。",
+      "expected_answer": [
+        "我早上七點起床。"
+      ],
+      "pinyin": "wǒ zǎo shàng qī diǎn qǐ chuáng.",
+      "english_hint": "I get up at 7 a.m.",
+      "encouragement": "Great detailed sentence!"
+    },
+    {
+      "id": 2,
+      "teacher": "我中午十二點吃飯。",
+      "expected_answer": [
+        "我中午十二點吃飯。"
+      ],
+      "pinyin": "wǒ zhōng wǔ shí èr diǎn chī fàn.",
+      "english_hint": "I eat lunch at 12 p.m.",
+      "encouragement": "Nice use of time and action!"
+    },
+    {
+      "id": 3,
+      "teacher": "我下午三點上課。",
+      "expected_answer": [
+        "我下午三點上課。"
+      ],
+      "pinyin": "wǒ xià wǔ sān diǎn shàng kè.",
+      "english_hint": "I have class at 3 p.m.",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 4,
+      "teacher": "我晚上十點睡覺。",
+      "expected_answer": [
+        "我晚上十點睡覺。"
+      ],
+      "pinyin": "wǒ wǎn shàng shí diǎn shuì jiào.",
+      "english_hint": "I go to sleep at 10 p.m.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "今天早上很冷。",
+      "expected_answer": [
+        "今天早上很冷。"
+      ],
+      "pinyin": "jīn tiān zǎo shàng hěn lěng.",
+      "english_hint": "It was very cold this morning.",
+      "encouragement": "Great use of description!"
+    },
+    {
+      "id": 6,
+      "teacher": "昨天晚上下雨。",
+      "expected_answer": [
+        "昨天晚上下雨。"
+      ],
+      "pinyin": "zuó tiān wǎn shàng xià yǔ.",
+      "english_hint": "It rained last night.",
+      "encouragement": "Nice sentence!"
+    },
+    {
+      "id": 7,
+      "teacher": "明天早上我要上班。",
+      "expected_answer": [
+        "明天早上我要上班。"
+      ],
+      "pinyin": "míng tiān zǎo shàng wǒ yào shàng bān.",
+      "english_hint": "I have to work tomorrow morning.",
+      "encouragement": "Good future time sentence!"
+    },
+    {
+      "id": 8,
+      "teacher": "我們週末不上課。",
+      "expected_answer": [
+        "我們週末不上課。"
+      ],
+      "pinyin": "wǒ men zhōu mò bú shàng kè.",
+      "english_hint": "We don't have class on weekends.",
+      "encouragement": "Excellent job!"
+    },
+    {
+      "id": 9,
+      "teacher": "現在是下午三點。",
+      "expected_answer": [
+        "現在是下午三點。"
+      ],
+      "pinyin": "xiàn zài shì xià wǔ sān diǎn.",
+      "english_hint": "It is 3 p.m. now.",
+      "encouragement": "Perfect!"
+    },
+    {
+      "id": 10,
+      "teacher": "你什麼時候有空？",
+      "expected_answer": [
+        "你什麼時候有空？"
+      ],
+      "pinyin": "nǐ shén me shí hòu yǒu kòng?",
+      "english_hint": "When are you free?",
+      "encouragement": "Awesome question!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced time + action sentence patterns.",
+    "mission": "Next lesson: Learn how to say you like or can do something."
+  }
+}

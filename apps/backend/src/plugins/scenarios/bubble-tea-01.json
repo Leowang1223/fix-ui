@@ -1,0 +1,112 @@
+{
+  "scenario_id": "bubble-tea-01",
+  "title": "Ordering at a Taiwanese Bubble Tea Shop",
+  "chineseTitle": "手搖飲料店點餐",
+  "description": "Practice ordering drinks at a Taiwanese bubble tea shop",
+  "chineseDescription": "練習在台灣手搖飲料店點飲料",
+  "difficulty": "A0-A1",
+  "category": "Food & Beverage (Taiwan)",
+  "objective": "Successfully order a customized bubble tea drink",
+  "chineseObjective": "成功訂製並購買手搖飲料",
+  "estimatedTurns": 8,
+  "firstSpeaker": "ai",
+  "defaultUserRole": "customer",
+  "checkpoints": [
+    {
+      "id": 1,
+      "description": "Order drink type",
+      "chineseDescription": "點飲料種類",
+      "keywords": ["珍珠奶茶", "紅茶", "綠茶", "烏龍", "多多", "我要", "來一杯", "點"],
+      "weight": 25
+    },
+    {
+      "id": 2,
+      "description": "Choose sweetness level",
+      "chineseDescription": "選擇甜度",
+      "keywords": ["無糖", "微糖", "半糖", "少糖", "全糖", "正常", "甜度"],
+      "weight": 25
+    },
+    {
+      "id": 3,
+      "description": "Choose ice level",
+      "chineseDescription": "選擇冰量",
+      "keywords": ["去冰", "微冰", "少冰", "正常冰", "熱的", "冰量", "溫的"],
+      "weight": 25
+    },
+    {
+      "id": 4,
+      "description": "Confirm and pay",
+      "chineseDescription": "確認並付款",
+      "keywords": ["好", "對", "沒錯", "多少錢", "現金", "刷卡", "謝謝"],
+      "weight": 25
+    }
+  ],
+  "roles": [
+    {
+      "id": "customer",
+      "name": "Customer",
+      "chineseName": "顧客",
+      "systemPrompt": "You are a customer ordering drinks at a Taiwanese bubble tea shop (手搖飲料店). Choose your drink, sweetness level, and ice level. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 珍珠奶茶, 微糖, 去冰). Keep responses concise (1-2 sentences). Be casual and friendly."
+    },
+    {
+      "id": "staff",
+      "name": "Staff Member",
+      "chineseName": "店員",
+      "interviewerImage": "bubble tea shop waitress.png",
+      "interviewerId": "elmily",
+      "systemPrompt": "You are staff at a Taiwanese bubble tea shop (手搖飲料店). Take orders, ask about sweetness level (甜度) and ice level (冰量). IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise and efficient (1-2 sentences). Be friendly and helpful."
+    }
+  ],
+  "suggestions": {
+    "byRole": {
+      "customer": [
+        {
+          "chinese": "我要一杯珍珠奶茶。",
+          "pinyin": "wǒ yào yī bēi zhēn zhū nǎi chá.",
+          "english": "I want a bubble milk tea.",
+          "type": "safe",
+          "checkpointId": 1
+        },
+        {
+          "chinese": "微糖。",
+          "pinyin": "wēi táng.",
+          "english": "Less sugar.",
+          "type": "safe",
+          "checkpointId": 2
+        },
+        {
+          "chinese": "去冰，謝謝。",
+          "pinyin": "qù bīng, xiè xie.",
+          "english": "No ice, thank you.",
+          "type": "safe",
+          "checkpointId": 3
+        },
+        {
+          "chinese": "對，就這樣。多少錢？",
+          "pinyin": "duì, jiù zhè yàng. duō shǎo qián?",
+          "english": "Yes, that's it. How much?",
+          "type": "safe",
+          "checkpointId": 4
+        }
+      ],
+      "staff": []
+    }
+  },
+  "keyVocabulary": [
+    { "chinese": "珍珠奶茶", "pinyin": "zhēn zhū nǎi chá", "english": "bubble milk tea" },
+    { "chinese": "珍珠", "pinyin": "zhēn zhū", "english": "tapioca pearls/boba" },
+    { "chinese": "甜度", "pinyin": "tián dù", "english": "sweetness level" },
+    { "chinese": "冰量", "pinyin": "bīng liàng", "english": "ice level" },
+    { "chinese": "微糖", "pinyin": "wēi táng", "english": "less sugar" },
+    { "chinese": "去冰", "pinyin": "qù bīng", "english": "no ice" },
+    { "chinese": "半糖", "pinyin": "bàn táng", "english": "half sugar" }
+  ],
+  "keyPatterns": [
+    { "pattern": "我要...", "example": "我要一杯珍珠奶茶", "english": "I want..." },
+    { "pattern": "甜度...冰量...", "example": "甜度微糖，冰量去冰", "english": "Sweetness... ice level..." },
+    { "pattern": "...，謝謝", "example": "去冰，謝謝", "english": "..., thank you" }
+  ],
+  "tags": ["bubble-tea", "drinks", "taiwanese-food", "daily-life", "A0-A1"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "isCustom": false
+}

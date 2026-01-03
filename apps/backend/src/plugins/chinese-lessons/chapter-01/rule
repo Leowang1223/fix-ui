@@ -1,0 +1,75 @@
+{
+  "playbackMode": "tts",
+  "lessons": [
+    {
+      "lesson_id": "C1-L01",
+      "title": "Greetings",
+      "description": "Learn the most basic daily greetings.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C1-L02",
+      "title": "Self Introduction",
+      "description": "Learn simple words for introducing yourself.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C1-L03",
+      "title": "Numbers",
+      "description": "Learn basic numbers used in daily life.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C1-L04",
+      "title": "Time",
+      "description": "Learn basic time expressions.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C1-L05",
+      "title": "Family",
+      "description": "Learn simple family-related words.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C1-L06",
+      "title": "Colors",
+      "description": "Learn basic color words.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C1-L07",
+      "title": "Food",
+      "description": "Learn simple food-related words.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C1-L08",
+      "title": "Places",
+      "description": "Learn common place-related words.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C1-L09",
+      "title": "Transportation",
+      "description": "Learn basic transportation vocabulary.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C1-L10",
+      "title": "Basic Verbs",
+      "description": "Learn simple everyday action words.",
+      "stepCount": 10,
+      "enable": true
+    }
+  ]
+}

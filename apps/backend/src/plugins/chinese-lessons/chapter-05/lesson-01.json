@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C5-L1",
+  "chapter_id": "C5",
+  "lesson_number": 1,
+  "title": "Basic Food Words",
+  "description": "Learn simple food vocabulary.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "飯",
+      "expected_answer": [
+        "飯"
+      ],
+      "pinyin": "fàn",
+      "english_hint": "rice / meal",
+      "encouragement": "Great start!"
+    },
+    {
+      "id": 2,
+      "teacher": "麵",
+      "expected_answer": [
+        "麵"
+      ],
+      "pinyin": "miàn",
+      "english_hint": "noodles",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "肉",
+      "expected_answer": [
+        "肉"
+      ],
+      "pinyin": "ròu",
+      "english_hint": "meat",
+      "encouragement": "Good vocabulary!"
+    },
+    {
+      "id": 4,
+      "teacher": "魚",
+      "expected_answer": [
+        "魚"
+      ],
+      "pinyin": "yú",
+      "english_hint": "fish",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "水果",
+      "expected_answer": [
+        "水果"
+      ],
+      "pinyin": "shuǐ guǒ",
+      "english_hint": "fruits",
+      "encouragement": "Great word!"
+    },
+    {
+      "id": 6,
+      "teacher": "蔬菜",
+      "expected_answer": [
+        "蔬菜"
+      ],
+      "pinyin": "shū cài",
+      "english_hint": "vegetables",
+      "encouragement": "Nice job!"
+    },
+    {
+      "id": 7,
+      "teacher": "湯",
+      "expected_answer": [
+        "湯"
+      ],
+      "pinyin": "tāng",
+      "english_hint": "soup",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "蛋",
+      "expected_answer": [
+        "蛋"
+      ],
+      "pinyin": "dàn",
+      "english_hint": "egg",
+      "encouragement": "Perfect!"
+    },
+    {
+      "id": 9,
+      "teacher": "麵包",
+      "expected_answer": [
+        "麵包"
+      ],
+      "pinyin": "miàn bāo",
+      "english_hint": "bread",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 10,
+      "teacher": "沙拉",
+      "expected_answer": [
+        "沙拉"
+      ],
+      "pinyin": "shā lā",
+      "english_hint": "salad",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 common food words.",
+    "mission": "Next lesson: Drinks vocabulary!"
+  }
+}

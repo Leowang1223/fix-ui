@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C4-L2",
+  "chapter_id": "C4",
+  "lesson_number": 2,
+  "title": "Directions",
+  "description": "Learn basic direction words.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "左邊",
+      "expected_answer": [
+        "左邊"
+      ],
+      "pinyin": "zuǒ biān",
+      "english_hint": "left",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "右邊",
+      "expected_answer": [
+        "右邊"
+      ],
+      "pinyin": "yòu biān",
+      "english_hint": "right",
+      "encouragement": "Nice job!"
+    },
+    {
+      "id": 3,
+      "teacher": "前面",
+      "expected_answer": [
+        "前面"
+      ],
+      "pinyin": "qián miàn",
+      "english_hint": "in front",
+      "encouragement": "Good work!"
+    },
+    {
+      "id": 4,
+      "teacher": "後面",
+      "expected_answer": [
+        "後面"
+      ],
+      "pinyin": "hòu miàn",
+      "english_hint": "behind",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "旁邊",
+      "expected_answer": [
+        "旁邊"
+      ],
+      "pinyin": "páng biān",
+      "english_hint": "beside",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "對面",
+      "expected_answer": [
+        "對面"
+      ],
+      "pinyin": "duì miàn",
+      "english_hint": "across from",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 7,
+      "teacher": "上面",
+      "expected_answer": [
+        "上面"
+      ],
+      "pinyin": "shàng miàn",
+      "english_hint": "on top",
+      "encouragement": "Great progress!"
+    },
+    {
+      "id": 8,
+      "teacher": "下面",
+      "expected_answer": [
+        "下面"
+      ],
+      "pinyin": "xià miàn",
+      "english_hint": "under",
+      "encouragement": "Awesome!"
+    },
+    {
+      "id": 9,
+      "teacher": "附近",
+      "expected_answer": [
+        "附近"
+      ],
+      "pinyin": "fù jìn",
+      "english_hint": "nearby",
+      "encouragement": "Perfect!"
+    },
+    {
+      "id": 10,
+      "teacher": "遠",
+      "expected_answer": [
+        "遠"
+      ],
+      "pinyin": "yuǎn",
+      "english_hint": "far",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You mastered basic direction vocabulary.",
+    "mission": "Next lesson: Learn how to ask for directions!"
+  }
+}

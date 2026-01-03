@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C3-L6",
+  "chapter_id": "C3",
+  "lesson_number": 6,
+  "title": "Polite Requests",
+  "description": "Use 請, 可以, and 好嗎 to make polite sentences.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "請給我一杯水。",
+      "expected_answer": [
+        "請給我一杯水。"
+      ],
+      "pinyin": "qǐng gěi wǒ yì bēi shuǐ.",
+      "english_hint": "Please give me a glass of water.",
+      "encouragement": "Great polite sentence!"
+    },
+    {
+      "id": 2,
+      "teacher": "請再說一次。",
+      "expected_answer": [
+        "請再說一次。"
+      ],
+      "pinyin": "qǐng zài shuō yí cì.",
+      "english_hint": "Please say it again.",
+      "encouragement": "Nice and useful!"
+    },
+    {
+      "id": 3,
+      "teacher": "你可以慢一點說嗎？",
+      "expected_answer": [
+        "你可以慢一點說嗎？"
+      ],
+      "pinyin": "nǐ kě yǐ màn yì diǎn shuō ma?",
+      "english_hint": "Can you speak a bit slower?",
+      "encouragement": "Excellent request!"
+    },
+    {
+      "id": 4,
+      "teacher": "我們一起去，好嗎？",
+      "expected_answer": [
+        "我們一起去，好嗎？"
+      ],
+      "pinyin": "wǒ men yì qǐ qù, hǎo ma?",
+      "english_hint": "Let's go together, okay?",
+      "encouragement": "Great suggestion sentence!"
+    },
+    {
+      "id": 5,
+      "teacher": "請坐。",
+      "expected_answer": [
+        "請坐。"
+      ],
+      "pinyin": "qǐng zuò.",
+      "english_hint": "Please sit.",
+      "encouragement": "Short and polite!"
+    },
+    {
+      "id": 6,
+      "teacher": "請等一下。",
+      "expected_answer": [
+        "請等一下。"
+      ],
+      "pinyin": "qǐng děng yí xià.",
+      "english_hint": "Please wait a moment.",
+      "encouragement": "Very natural expression!"
+    },
+    {
+      "id": 7,
+      "teacher": "可以幫我開門嗎？",
+      "expected_answer": [
+        "可以幫我開門嗎？"
+      ],
+      "pinyin": "kě yǐ bāng wǒ kāi mén ma?",
+      "english_hint": "Can you help me open the door?",
+      "encouragement": "Good polite question!"
+    },
+    {
+      "id": 8,
+      "teacher": "請小聲一點。",
+      "expected_answer": [
+        "請小聲一點。"
+      ],
+      "pinyin": "qǐng xiǎo shēng yì diǎn.",
+      "english_hint": "Please be quieter.",
+      "encouragement": "Nice polite request!"
+    },
+    {
+      "id": 9,
+      "teacher": "別擔心，好嗎？",
+      "expected_answer": [
+        "別擔心，好嗎？"
+      ],
+      "pinyin": "bié dān xīn, hǎo ma?",
+      "english_hint": "Don't worry, okay?",
+      "encouragement": "Great comforting sentence!"
+    },
+    {
+      "id": 10,
+      "teacher": "今天早一點睡，好嗎？",
+      "expected_answer": [
+        "今天早一點睡，好嗎？"
+      ],
+      "pinyin": "jīn tiān zǎo yì diǎn shuì, hǎo ma?",
+      "english_hint": "Sleep earlier today, okay?",
+      "encouragement": "Fantastic suggestion!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced polite requests and soft suggestions.",
+    "mission": "Next lesson: Use Chinese in shopping situations."
+  }
+}

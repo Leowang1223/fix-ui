@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C7-L1",
+  "chapter_id": "C7",
+  "lesson_number": 1,
+  "title": "Places in Town",
+  "description": "Learn A2-level town and public place vocabulary.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "郵局",
+      "expected_answer": [
+        "郵局"
+      ],
+      "pinyin": "yóu jú",
+      "english_hint": "post office",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "圖書館",
+      "expected_answer": [
+        "圖書館"
+      ],
+      "pinyin": "tú shū guǎn",
+      "english_hint": "library",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "公園",
+      "expected_answer": [
+        "公園"
+      ],
+      "pinyin": "gōng yuán",
+      "english_hint": "park",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "超市",
+      "expected_answer": [
+        "超市"
+      ],
+      "pinyin": "chāo shì",
+      "english_hint": "supermarket",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "藥局",
+      "expected_answer": [
+        "藥局"
+      ],
+      "pinyin": "yào jú",
+      "english_hint": "pharmacy",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "百貨公司",
+      "expected_answer": [
+        "百貨公司"
+      ],
+      "pinyin": "bǎi huò gōng sī",
+      "english_hint": "department store",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 7,
+      "teacher": "銀行",
+      "expected_answer": [
+        "銀行"
+      ],
+      "pinyin": "yín háng",
+      "english_hint": "bank",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "便利商店",
+      "expected_answer": [
+        "便利商店"
+      ],
+      "pinyin": "biàn lì shāng diàn",
+      "english_hint": "convenience store",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "餐館",
+      "expected_answer": [
+        "餐館"
+      ],
+      "pinyin": "cān guǎn",
+      "english_hint": "restaurant",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 10,
+      "teacher": "市場",
+      "expected_answer": [
+        "市場"
+      ],
+      "pinyin": "shì chǎng",
+      "english_hint": "market",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned useful town-related places.",
+    "mission": "Next lesson: Directions with movement verbs!"
+  }
+}

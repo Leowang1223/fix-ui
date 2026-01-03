@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C6-L2",
+  "chapter_id": "C6",
+  "lesson_number": 2,
+  "title": "Home Vocabulary",
+  "description": "Learn simple words related to home.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "家",
+      "expected_answer": [
+        "家"
+      ],
+      "pinyin": "jiā",
+      "english_hint": "home",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "房子",
+      "expected_answer": [
+        "房子"
+      ],
+      "pinyin": "fáng zi",
+      "english_hint": "house",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "門",
+      "expected_answer": [
+        "門"
+      ],
+      "pinyin": "mén",
+      "english_hint": "door",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "窗戶",
+      "expected_answer": [
+        "窗戶"
+      ],
+      "pinyin": "chuāng hù",
+      "english_hint": "window",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 5,
+      "teacher": "樓上",
+      "expected_answer": [
+        "樓上"
+      ],
+      "pinyin": "lóu shàng",
+      "english_hint": "upstairs",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "樓下",
+      "expected_answer": [
+        "樓下"
+      ],
+      "pinyin": "lóu xià",
+      "english_hint": "downstairs",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 7,
+      "teacher": "陽台",
+      "expected_answer": [
+        "陽台"
+      ],
+      "pinyin": "yáng tái",
+      "english_hint": "balcony",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 8,
+      "teacher": "花園",
+      "expected_answer": [
+        "花園"
+      ],
+      "pinyin": "huā yuán",
+      "english_hint": "garden",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "大門",
+      "expected_answer": [
+        "大門"
+      ],
+      "pinyin": "dà mén",
+      "english_hint": "main door",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "牆",
+      "expected_answer": [
+        "牆"
+      ],
+      "pinyin": "qiáng",
+      "english_hint": "wall",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 home-related words.",
+    "mission": "Next lesson: Learn room vocabulary!"
+  }
+}

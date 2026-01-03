@@ -1,0 +1,133 @@
+{
+  "lesson_id": "C1-L04",
+  "chapter_id": "C1",
+  "lesson_number": 4,
+  "title": "Time",
+  "description": "Learn basic time expressions.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "今天",
+      "expected_answer": [
+        "今天"
+      ],
+      "pinyin": "jīn tiān",
+      "english_hint": "today",
+      "encouragement": "Great start!",
+      "tts_text": "今天",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 2,
+      "teacher": "明天",
+      "expected_answer": [
+        "明天"
+      ],
+      "pinyin": "míng tiān",
+      "english_hint": "tomorrow",
+      "encouragement": "Nice! Keep going!",
+      "tts_text": "明天",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 3,
+      "teacher": "昨天",
+      "expected_answer": [
+        "昨天"
+      ],
+      "pinyin": "zuó tiān",
+      "english_hint": "yesterday",
+      "encouragement": "Good job!",
+      "tts_text": "昨天",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 4,
+      "teacher": "早上",
+      "expected_answer": [
+        "早上"
+      ],
+      "pinyin": "zǎo shàng",
+      "english_hint": "morning",
+      "encouragement": "Well done!",
+      "tts_text": "早上",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 5,
+      "teacher": "下午",
+      "expected_answer": [
+        "下午"
+      ],
+      "pinyin": "xià wǔ",
+      "english_hint": "afternoon",
+      "encouragement": "Great work!",
+      "tts_text": "下午",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 6,
+      "teacher": "晚上",
+      "expected_answer": [
+        "晚上"
+      ],
+      "pinyin": "wǎn shàng",
+      "english_hint": "evening",
+      "encouragement": "Excellent!",
+      "tts_text": "晚上",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 7,
+      "teacher": "現在",
+      "expected_answer": [
+        "現在"
+      ],
+      "pinyin": "xiàn zài",
+      "english_hint": "now",
+      "encouragement": "Perfect!",
+      "tts_text": "現在",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 8,
+      "teacher": "等等",
+      "expected_answer": [
+        "等等"
+      ],
+      "pinyin": "děng děng",
+      "english_hint": "later / wait",
+      "encouragement": "You're doing well!",
+      "tts_text": "等等",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 9,
+      "teacher": "小時",
+      "expected_answer": [
+        "小時"
+      ],
+      "pinyin": "xiǎo shí",
+      "english_hint": "hour",
+      "encouragement": "Nice job!",
+      "tts_text": "小時",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 10,
+      "teacher": "分鐘",
+      "expected_answer": [
+        "分鐘"
+      ],
+      "pinyin": "fēn zhōng",
+      "english_hint": "minute",
+      "encouragement": "Awesome!",
+      "tts_text": "分鐘",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    }
+  ],
+  "review": {
+    "summary": "You learned common time-related words.",
+    "mission": "Next: Learn basic family vocabulary!"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C10-L10",
+  "chapter_id": "C10",
+  "lesson_number": 10,
+  "title": "Full Integrated Conversation",
+  "description": "A complete B1 conversation combining emotions, plans, teamwork, reasoning, and narrative.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "A：你今天看起來心事重重，還好嗎？",
+      "expected_answer": [
+        "你今天看起來心事重重，還好嗎？"
+      ],
+      "pinyin": "A: nǐ jīn tiān kàn qǐ lái xīn shì zhòng zhòng, hái hǎo ma?",
+      "english_hint": "You look worried today. Are you okay?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "B：還好，只是最近事情有點多，我有點壓力。",
+      "expected_answer": [
+        "還好，只是最近事情有點多，我有點壓力。"
+      ],
+      "pinyin": "B: hái hǎo, zhǐ shì zuì jìn shì qíng yǒu diǎn duō, wǒ yǒu diǎn yā lì.",
+      "english_hint": "I'm okay, just a bit stressed with lots of things going on.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "A：需要我幫忙分擔一點嗎？",
+      "expected_answer": [
+        "需要我幫忙分擔一點嗎？"
+      ],
+      "pinyin": "A: xū yào wǒ bāng máng fēn dān yì diǎn ma?",
+      "english_hint": "Need me to help share some of the work?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "B：謝謝你，我正在把事情分成幾個步驟處理。",
+      "expected_answer": [
+        "謝謝你，我正在把事情分成幾個步驟處理。"
+      ],
+      "pinyin": "B: xiè xie nǐ, wǒ zhèng zài bǎ shì qíng fēn chéng jǐ gè bù zhòu chǔ lǐ.",
+      "english_hint": "Thanks. I'm breaking things into steps to handle them.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "A：聽起來方法不錯，你想先完成哪一部分？",
+      "expected_answer": [
+        "聽起來方法不錯，你想先完成哪一部分？"
+      ],
+      "pinyin": "A: tīng qǐ lái fāng fǎ bù cuò, nǐ xiǎng xiān wán chéng nǎ yí bù fèn?",
+      "english_hint": "Sounds good. Which part do you want to finish first?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "B：我想先把簡單的部分做完，這樣比較有成就感。",
+      "expected_answer": [
+        "我想先把簡單的部分做完，這樣比較有成就感。"
+      ],
+      "pinyin": "B: wǒ xiǎng xiān bǎ jiǎn dān de bù fèn zuò wán, zhè yàng bǐ jiào yǒu chéng jiù gǎn.",
+      "english_hint": "I want to finish the easier parts first—it gives me motivation.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "A：如果需要，我可以幫你確認後面的內容。",
+      "expected_answer": [
+        "如果需要，我可以幫你確認後面的內容。"
+      ],
+      "pinyin": "A: rú guǒ xū yào, wǒ kě yǐ bāng nǐ què rèn hòu miàn de nèi róng.",
+      "english_hint": "If needed, I can help check the later content.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "B：那太好了，有人一起合作真的輕鬆很多。",
+      "expected_answer": [
+        "那太好了，有人一起合作真的輕鬆很多。"
+      ],
+      "pinyin": "B: nà tài hǎo le, yǒu rén yì qǐ hé zuò zhēn de qīng sōng hěn duō.",
+      "english_hint": "That's great. Working together really makes things easier.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "A：那我們等一下一起排一下流程吧。",
+      "expected_answer": [
+        "那我們等一下一起排一下流程吧。"
+      ],
+      "pinyin": "A: nà wǒ men děng yí xià yì qǐ pái yí xià liú chéng ba.",
+      "english_hint": "Then we can plan the workflow together later.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "B：好啊，有你的幫忙，我覺得今天會順利多了！",
+      "expected_answer": [
+        "好啊，有你的幫忙，我覺得今天會順利多了！"
+      ],
+      "pinyin": "B: hǎo a, yǒu nǐ de bāng máng, wǒ jué dé jīn tiān huì shùn lì duō le!",
+      "english_hint": "Sure! With your help, I think today will go much smoother!",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You completed a fully integrated B1 conversation mixing emotions, collaboration, planning, and problem solving.",
+    "mission": "Great job finishing Chapter 10!"
+  }
+}

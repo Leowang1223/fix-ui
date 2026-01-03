@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C8-L8",
+  "chapter_id": "C8",
+  "lesson_number": 8,
+  "title": "Daily Life with Reasons",
+  "description": "Learn A2+ daily-life sentences using '因為/所以/為了'.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我早上七點起床，因為八點要上班。",
+      "expected_answer": [
+        "我早上七點起床，因為八點要上班。"
+      ],
+      "pinyin": "wǒ zǎo shàng qī diǎn qǐ chuáng, yīn wèi bā diǎn yào shàng bān.",
+      "english_hint": "I get up at 7 because I work at 8.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "我通常搭地鐵，因為比公車快。",
+      "expected_answer": [
+        "我通常搭地鐵，因為比公車快。"
+      ],
+      "pinyin": "wǒ tōng cháng dā dì tiě, yīn wèi bǐ gōng chē kuài.",
+      "english_hint": "I usually take the metro because it's faster than the bus.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我中午會出去買午餐。",
+      "expected_answer": [
+        "我中午會出去買午餐。"
+      ],
+      "pinyin": "wǒ zhōng wǔ huì chū qù mǎi wǔ cān.",
+      "english_hint": "I go out to buy lunch at noon.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "下班後我會運動一下，為了保持健康。",
+      "expected_answer": [
+        "下班後我會運動一下，為了保持健康。"
+      ],
+      "pinyin": "xià bān hòu wǒ huì yùn dòng yí xià, wèi le bǎo chí jiàn kāng.",
+      "english_hint": "I exercise after work to stay healthy.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我晚上會看一點書，放鬆一下。",
+      "expected_answer": [
+        "我晚上會看一點書，放鬆一下。"
+      ],
+      "pinyin": "wǒ wǎn shàng huì kàn yì diǎn shū, fàng sōng yí xià.",
+      "english_hint": "In the evening I read a bit to relax.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "我喜歡散步，因為可以清醒頭腦。",
+      "expected_answer": [
+        "我喜歡散步，因為可以清醒頭腦。"
+      ],
+      "pinyin": "wǒ xǐ huān sàn bù, yīn wèi kě yǐ qīng xǐng tóu nǎo.",
+      "english_hint": "I like walking because it clears my mind.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 7,
+      "teacher": "我通常十一點睡覺。",
+      "expected_answer": [
+        "我通常十一點睡覺。"
+      ],
+      "pinyin": "wǒ tōng cháng shí yī diǎn shuì jiào.",
+      "english_hint": "I usually sleep at 11.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 8,
+      "teacher": "週末我會整理房間，因為平日太忙。",
+      "expected_answer": [
+        "週末我會整理房間，因為平日太忙。"
+      ],
+      "pinyin": "zhōu mò wǒ huì zhěng lǐ fáng jiān, yīn wèi píng rì tài máng.",
+      "english_hint": "I clean my room on weekends because weekdays are too busy.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 9,
+      "teacher": "有時候我會看電影放鬆。",
+      "expected_answer": [
+        "有時候我會看電影放鬆。"
+      ],
+      "pinyin": "yǒu shí hòu wǒ huì kàn diàn yǐng fàng sōng.",
+      "english_hint": "Sometimes I watch movies to relax.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 10,
+      "teacher": "為了提升自己，我每天都學一點新東西。",
+      "expected_answer": [
+        "為了提升自己，我每天都學一點新東西。"
+      ],
+      "pinyin": "wèi le tí shēng zì jǐ, wǒ měi tiān dōu xué yì diǎn xīn dōng xī.",
+      "english_hint": "To improve myself, I learn something new every day.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced A2+ daily-life sentences with reasons.",
+    "mission": "Next lesson: Social interactions & opinions!"
+  }
+}

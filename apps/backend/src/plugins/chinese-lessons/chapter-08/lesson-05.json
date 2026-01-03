@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C8-L5",
+  "chapter_id": "C8",
+  "lesson_number": 5,
+  "title": "Travel Questions",
+  "description": "Learn how to ask practical travel questions at A2+ level.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "到市中心大概要多久？",
+      "expected_answer": [
+        "到市中心大概要多久？"
+      ],
+      "pinyin": "dào shì zhōng xīn dà gài yào duō jiǔ?",
+      "english_hint": "How long does it take to get downtown?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "這附近有推薦的景點嗎？",
+      "expected_answer": [
+        "這附近有推薦的景點嗎？"
+      ],
+      "pinyin": "zhè fù jìn yǒu tuī jiàn de jǐng diǎn ma?",
+      "english_hint": "Are there any recommended attractions nearby?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "請問哪裡可以買一日票？",
+      "expected_answer": [
+        "請問哪裡可以買一日票？"
+      ],
+      "pinyin": "qǐng wèn nǎ lǐ kě yǐ mǎi yí rì piào?",
+      "english_hint": "Where can I buy a day pass?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "如果迷路了，我應該怎麼做？",
+      "expected_answer": [
+        "如果迷路了，我應該怎麼做？"
+      ],
+      "pinyin": "rú guǒ mí lù le, wǒ yīng gāi zěn me zuò?",
+      "english_hint": "If I get lost, what should I do?",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "這班車會到機場嗎？",
+      "expected_answer": [
+        "這班車會到機場嗎？"
+      ],
+      "pinyin": "zhè bān chē huì dào jī chǎng ma?",
+      "english_hint": "Does this bus go to the airport?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "附近有可以換錢的地方嗎？",
+      "expected_answer": [
+        "附近有可以換錢的地方嗎？"
+      ],
+      "pinyin": "fù jìn yǒu kě yǐ huàn qián de dì fāng ma?",
+      "english_hint": "Is there a place to exchange money nearby?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 7,
+      "teacher": "我想知道下一班車的時間。",
+      "expected_answer": [
+        "我想知道下一班車的時間。"
+      ],
+      "pinyin": "wǒ xiǎng zhī dào xià yì bān chē de shí jiān.",
+      "english_hint": "I'd like to know the time of the next bus.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 8,
+      "teacher": "車票是在哪裡買的？",
+      "expected_answer": [
+        "車票是在哪裡買的？"
+      ],
+      "pinyin": "chē piào shì zài nǎ lǐ mǎi de?",
+      "english_hint": "Where did you buy the ticket?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "你知道哪裡可以寄明信片嗎？",
+      "expected_answer": [
+        "你知道哪裡可以寄明信片嗎？"
+      ],
+      "pinyin": "nǐ zhī dào nǎ lǐ kě yǐ jì míng xìn piàn ma?",
+      "english_hint": "Do you know where I can send postcards?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 10,
+      "teacher": "到這裡要不要換車？",
+      "expected_answer": [
+        "到這裡要不要換車？"
+      ],
+      "pinyin": "dào zhè lǐ yào bù yào huàn chē?",
+      "english_hint": "Do I need to transfer to get here?",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced useful A2+ travel questions.",
+    "mission": "Next lesson: Asking for help & small complaints."
+  }
+}

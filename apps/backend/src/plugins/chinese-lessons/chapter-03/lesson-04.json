@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C3-L4",
+  "chapter_id": "C3",
+  "lesson_number": 4,
+  "title": "Like and Can",
+  "description": "Use 喜歡, 會, and 可以 in simple sentences.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我喜歡喝咖啡。",
+      "expected_answer": [
+        "我喜歡喝咖啡。"
+      ],
+      "pinyin": "wǒ xǐ huān hē kā fēi.",
+      "english_hint": "I like to drink coffee.",
+      "encouragement": "Great! Very natural sentence!"
+    },
+    {
+      "id": 2,
+      "teacher": "她喜歡看書。",
+      "expected_answer": [
+        "她喜歡看書。"
+      ],
+      "pinyin": "tā xǐ huān kàn shū.",
+      "english_hint": "She likes reading.",
+      "encouragement": "Nice job!"
+    },
+    {
+      "id": 3,
+      "teacher": "我不喜歡下雨天。",
+      "expected_answer": [
+        "我不喜歡下雨天。"
+      ],
+      "pinyin": "wǒ bù xǐ huān xià yǔ tiān.",
+      "english_hint": "I don't like rainy days.",
+      "encouragement": "Good use of 不喜歡!"
+    },
+    {
+      "id": 4,
+      "teacher": "我會說一點中文。",
+      "expected_answer": [
+        "我會說一點中文。"
+      ],
+      "pinyin": "wǒ huì shuō yì diǎn zhōng wén.",
+      "english_hint": "I can speak a little Chinese.",
+      "encouragement": "Excellent sentence for learners!"
+    },
+    {
+      "id": 5,
+      "teacher": "他會游泳。",
+      "expected_answer": [
+        "他會游泳。"
+      ],
+      "pinyin": "tā huì yóu yǒng.",
+      "english_hint": "He can swim.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "我不會跳舞。",
+      "expected_answer": [
+        "我不會跳舞。"
+      ],
+      "pinyin": "wǒ bú huì tiào wǔ.",
+      "english_hint": "I can't dance.",
+      "encouragement": "Nice and clear!"
+    },
+    {
+      "id": 7,
+      "teacher": "我可以問一個問題嗎？",
+      "expected_answer": [
+        "我可以問一個問題嗎？"
+      ],
+      "pinyin": "wǒ kě yǐ wèn yí gè wèn tí ma?",
+      "english_hint": "May I ask a question?",
+      "encouragement": "Good polite question!"
+    },
+    {
+      "id": 8,
+      "teacher": "你可以幫我嗎？",
+      "expected_answer": [
+        "你可以幫我嗎？"
+      ],
+      "pinyin": "nǐ kě yǐ bāng wǒ ma?",
+      "english_hint": "Can you help me?",
+      "encouragement": "Excellent request sentence!"
+    },
+    {
+      "id": 9,
+      "teacher": "今天不可以太晚睡。",
+      "expected_answer": [
+        "今天不可以太晚睡。"
+      ],
+      "pinyin": "jīn tiān bù kě yǐ tài wǎn shuì.",
+      "english_hint": "You can't go to bed too late today.",
+      "encouragement": "Great use of 不可以!"
+    },
+    {
+      "id": 10,
+      "teacher": "我很喜歡學中文。",
+      "expected_answer": [
+        "我很喜歡學中文。"
+      ],
+      "pinyin": "wǒ hěn xǐ huān xué zhōng wén.",
+      "english_hint": "I really like learning Chinese.",
+      "encouragement": "Fantastic! Keep going!"
+    }
+  ],
+  "review": {
+    "summary": "You learned how to express likes and abilities.",
+    "mission": "Next lesson: Practice polite requests and suggestions."
+  }
+}

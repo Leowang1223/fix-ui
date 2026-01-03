@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C6-L7",
+  "chapter_id": "C6",
+  "lesson_number": 7,
+  "title": "Simple Past 1",
+  "description": "Learn basic past tense using 昨天 (yesterday).",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我昨天去了超市。",
+      "expected_answer": [
+        "我昨天去了超市。"
+      ],
+      "pinyin": "wǒ zuó tiān qù le chāo shì.",
+      "english_hint": "I went to the supermarket yesterday.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "我昨天做了晚餐。",
+      "expected_answer": [
+        "我昨天做了晚餐。"
+      ],
+      "pinyin": "wǒ zuó tiān zuò le wǎn cān.",
+      "english_hint": "I cooked dinner yesterday.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我昨天看了一本書。",
+      "expected_answer": [
+        "我昨天看了一本書。"
+      ],
+      "pinyin": "wǒ zuó tiān kàn le yì běn shū.",
+      "english_hint": "I read a book yesterday.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "我昨天早起。",
+      "expected_answer": [
+        "我昨天早起。"
+      ],
+      "pinyin": "wǒ zuó tiān zǎo qǐ.",
+      "english_hint": "I woke up early yesterday.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我昨天打掃了房間。",
+      "expected_answer": [
+        "我昨天打掃了房間。"
+      ],
+      "pinyin": "wǒ zuó tiān dǎ sǎo le fáng jiān.",
+      "english_hint": "I cleaned my room yesterday.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "我昨天買了一些水果。",
+      "expected_answer": [
+        "我昨天買了一些水果。"
+      ],
+      "pinyin": "wǒ zuó tiān mǎi le yì xiē shuǐ guǒ.",
+      "english_hint": "I bought some fruit yesterday.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "我昨天聽了音樂。",
+      "expected_answer": [
+        "我昨天聽了音樂。"
+      ],
+      "pinyin": "wǒ zuó tiān tīng le yīn yuè.",
+      "english_hint": "I listened to music yesterday.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我昨天見了朋友。",
+      "expected_answer": [
+        "我昨天見了朋友。"
+      ],
+      "pinyin": "wǒ zuó tiān jiàn le péng yǒu.",
+      "english_hint": "I met a friend yesterday.",
+      "encouragement": "Great job!"
+    },
+    {
+      "id": 9,
+      "teacher": "我昨天很忙。",
+      "expected_answer": [
+        "我昨天很忙。"
+      ],
+      "pinyin": "wǒ zuó tiān hěn máng.",
+      "english_hint": "I was busy yesterday.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "我昨天休息了一下。",
+      "expected_answer": [
+        "我昨天休息了一下。"
+      ],
+      "pinyin": "wǒ zuó tiān xiū xí le yí xià.",
+      "english_hint": "I rested a bit yesterday.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced 10 simple past tense sentences with 昨天.",
+    "mission": "Next lesson: Past tense with 上週／上個週末!"
+  }
+}

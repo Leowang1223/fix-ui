@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C5-L8",
+  "chapter_id": "C5",
+  "lesson_number": 8,
+  "title": "Comparisons",
+  "description": "Learn simple comparison sentences using 更, 比.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "這個比那個便宜。",
+      "expected_answer": [
+        "這個比那個便宜。"
+      ],
+      "pinyin": "zhè ge bǐ nà ge pián yí.",
+      "english_hint": "This is cheaper than that.",
+      "encouragement": "Great comparison!"
+    },
+    {
+      "id": 2,
+      "teacher": "我今天比昨天忙。",
+      "expected_answer": [
+        "我今天比昨天忙。"
+      ],
+      "pinyin": "wǒ jīn tiān bǐ zuó tiān máng.",
+      "english_hint": "I am busier today than yesterday.",
+      "encouragement": "Nice sentence!"
+    },
+    {
+      "id": 3,
+      "teacher": "咖啡比茶苦。",
+      "expected_answer": [
+        "咖啡比茶苦。"
+      ],
+      "pinyin": "kā fēi bǐ chá kǔ.",
+      "english_hint": "Coffee is more bitter than tea.",
+      "encouragement": "Good comparison!"
+    },
+    {
+      "id": 4,
+      "teacher": "這條路更快。",
+      "expected_answer": [
+        "這條路更快。"
+      ],
+      "pinyin": "zhè tiáo lù gèng kuài.",
+      "english_hint": "This road is faster.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "今天更冷。",
+      "expected_answer": [
+        "今天更冷。"
+      ],
+      "pinyin": "jīn tiān gèng lěng.",
+      "english_hint": "Today is colder.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "這裡比那裡安靜。",
+      "expected_answer": [
+        "這裡比那裡安靜。"
+      ],
+      "pinyin": "zhè lǐ bǐ nà lǐ ān jìng.",
+      "english_hint": "Here is quieter than there.",
+      "encouragement": "Nice comparison!"
+    },
+    {
+      "id": 7,
+      "teacher": "晚上比早上涼。",
+      "expected_answer": [
+        "晚上比早上涼。"
+      ],
+      "pinyin": "wǎn shàng bǐ zǎo shàng liáng.",
+      "english_hint": "Evening is cooler than morning.",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 8,
+      "teacher": "他跑得更快。",
+      "expected_answer": [
+        "他跑得更快。"
+      ],
+      "pinyin": "tā pǎo de gèng kuài.",
+      "english_hint": "He runs even faster.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 9,
+      "teacher": "這件衣服更舒服。",
+      "expected_answer": [
+        "這件衣服更舒服。"
+      ],
+      "pinyin": "zhè jiàn yī fú gèng shū fú.",
+      "english_hint": "This clothing item is more comfortable.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 10,
+      "teacher": "我現在更累。",
+      "expected_answer": [
+        "我現在更累. "
+      ],
+      "pinyin": "wǒ xiàn zài gèng lèi.",
+      "english_hint": "I'm more tired now.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned basic comparison patterns using 比 and 更.",
+    "mission": "Next lesson: Learn simple conversation questions!"
+  }
+}

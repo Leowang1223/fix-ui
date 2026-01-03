@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C6-L4",
+  "chapter_id": "C6",
+  "lesson_number": 4,
+  "title": "Furniture",
+  "description": "Learn common furniture vocabulary.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "沙發",
+      "expected_answer": [
+        "沙發"
+      ],
+      "pinyin": "shā fā",
+      "english_hint": "sofa",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "床",
+      "expected_answer": [
+        "床"
+      ],
+      "pinyin": "chuáng",
+      "english_hint": "bed",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "衣櫃",
+      "expected_answer": [
+        "衣櫃"
+      ],
+      "pinyin": "yī guì",
+      "english_hint": "wardrobe",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "書桌",
+      "expected_answer": [
+        "書桌"
+      ],
+      "pinyin": "shū zhuō",
+      "english_hint": "desk",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "椅子",
+      "expected_answer": [
+        "椅子"
+      ],
+      "pinyin": "yǐ zi",
+      "english_hint": "chair",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "茶几",
+      "expected_answer": [
+        "茶几"
+      ],
+      "pinyin": "chá jī",
+      "english_hint": "coffee table",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 7,
+      "teacher": "床頭櫃",
+      "expected_answer": [
+        "床頭櫃"
+      ],
+      "pinyin": "chuáng tóu guì",
+      "english_hint": "bedside table",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "書架",
+      "expected_answer": [
+        "書架"
+      ],
+      "pinyin": "shū jià",
+      "english_hint": "bookshelf",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "燈",
+      "expected_answer": [
+        "燈"
+      ],
+      "pinyin": "dēng",
+      "english_hint": "lamp / light",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 10,
+      "teacher": "地毯",
+      "expected_answer": [
+        "地毯"
+      ],
+      "pinyin": "dì tǎn",
+      "english_hint": "carpet / rug",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned important furniture vocabulary.",
+    "mission": "Next lesson: Home activities!"
+  }
+}

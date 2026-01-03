@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C8-L10",
+  "chapter_id": "C8",
+  "lesson_number": 10,
+  "title": "Full Daily-Life Dialogue",
+  "description": "Practice a full A2+ conversation involving plans, opinions, reasons, and small requests.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "A：你今天下班後有什麼打算？",
+      "expected_answer": [
+        "你今天下班後有什麼打算？"
+      ],
+      "pinyin": "A: nǐ jīn tiān xià bān hòu yǒu shén me dǎ suàn?",
+      "english_hint": "What are your plans after work today?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "B：我想先吃個晚餐，再去散步。",
+      "expected_answer": [
+        "我想先吃個晚餐，再去散步。"
+      ],
+      "pinyin": "B: wǒ xiǎng xiān chī gè wǎn cān, zài qù sàn bù.",
+      "english_hint": "I want to have dinner first, then take a walk.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "A：那你要不要一起喝杯飲料？",
+      "expected_answer": [
+        "那你要不要一起喝杯飲料？"
+      ],
+      "pinyin": "A: nà nǐ yào bù yào yì qǐ hē bēi yǐn liào?",
+      "english_hint": "Do you want to grab a drink together?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "B：可以啊，但我不想喝太甜的。",
+      "expected_answer": [
+        "可以啊，但我不想喝太甜的。"
+      ],
+      "pinyin": "B: kě yǐ a, dàn wǒ bù xiǎng hē tài tián de.",
+      "english_hint": "Sure, but I don't want something too sweet.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 5,
+      "teacher": "A：那我們去那家新的咖啡館吧。",
+      "expected_answer": [
+        "那我們去那家新的咖啡館吧。"
+      ],
+      "pinyin": "A: nà wǒ men qù nà jiā xīn de kā fēi guǎn ba.",
+      "english_hint": "Then let's go to that new café.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "B：好啊，我聽說那裡很安靜。",
+      "expected_answer": [
+        "好啊，我聽說那裡很安靜。"
+      ],
+      "pinyin": "B: hǎo a, wǒ tīng shuō nà lǐ hěn ān jìng.",
+      "english_hint": "Sure, I heard it's quiet there.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 7,
+      "teacher": "A：你要不要看一下地圖？",
+      "expected_answer": [
+        "你要不要看一下地圖？"
+      ],
+      "pinyin": "A: nǐ yào bù yào kàn yí xià dì tú?",
+      "english_hint": "Do you want to check the map?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 8,
+      "teacher": "B：好，我怕走錯路。",
+      "expected_answer": [
+        "好，我怕走錯路。"
+      ],
+      "pinyin": "B: hǎo, wǒ pà zǒu cuò lù.",
+      "english_hint": "Sure, I'm afraid of taking the wrong path.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "A：沒關係，走錯再問別人就好。",
+      "expected_answer": [
+        "沒關係，走錯再問別人就好。"
+      ],
+      "pinyin": "A: méi guān xì, zǒu cuò zài wèn bié rén jiù hǎo.",
+      "english_hint": "It's okay, just ask someone if we take the wrong way.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 10,
+      "teacher": "B：好，那待會見！",
+      "expected_answer": [
+        "好，那待會見！"
+      ],
+      "pinyin": "B: hǎo, nà dāi huǐ jiàn!",
+      "english_hint": "Okay, see you later!",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You completed a full natural A2+ conversation involving plans, reasons, invitations and daily habits.",
+    "mission": "Ready for Chapter 9 (A2+ → B1 entry)? Topics: jobs, communication, problem solving, short narratives."
+  }
+}

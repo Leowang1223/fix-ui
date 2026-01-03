@@ -1,0 +1,103 @@
+{
+  "scenario_id": "asking-directions-01",
+  "title": "Asking for Directions",
+  "chineseTitle": "問路",
+  "description": "Learn to ask for and understand directions to various locations",
+  "chineseDescription": "學習詢問和理解到各種地點的方向",
+  "difficulty": "A2-B1",
+  "category": "Travel",
+  "objective": "Successfully get directions to your destination",
+  "chineseObjective": "成功獲得到目的地的方向",
+  "estimatedTurns": 12,
+  "firstSpeaker": "user",
+  "defaultUserRole": "tourist",
+  "checkpoints": [
+    {
+      "id": 1,
+      "description": "Politely ask for help and state destination",
+      "chineseDescription": "禮貌地請求幫助並說明目的地",
+      "keywords": ["請問", "excuse me", "麻煩", "不好意思", "抱歉", "打擾", "去", "到", "找", "在哪裡", "怎麼走", "怎麼去"],
+      "weight": 30
+    },
+    {
+      "id": 2,
+      "description": "Acknowledge directions and confirm understanding",
+      "chineseDescription": "回應並確認理解方向指示",
+      "keywords": ["明白", "懂了", "知道了", "了解", "清楚", "好的", "對", "是", "這樣", "再說一次"],
+      "weight": 40
+    },
+    {
+      "id": 3,
+      "description": "Thank the person",
+      "chineseDescription": "感謝對方",
+      "keywords": ["謝謝", "thank you", "麻煩你了", "感謝", "多謝", "謝啦", "謝了"],
+      "weight": 30
+    }
+  ],
+  "roles": [
+    {
+      "id": "tourist",
+      "name": "Tourist",
+      "chineseName": "遊客",
+      "systemPrompt": "You are a tourist in Taiwan trying to find a location. You need to ask for directions politely and confirm you understand. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 捷運 not 地鐵). Keep responses concise (1-2 sentences)."
+    },
+    {
+      "id": "local",
+      "name": "Local Resident",
+      "chineseName": "本地人",
+      "interviewerImage": "jan.png",
+      "interviewerId": "jan",
+      "systemPrompt": "You are a helpful Taiwan local resident. Give clear directions using landmarks and cardinal directions. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 捷運 not 地鐵, 公車 not 公交車). Keep responses concise (2-3 sentences). Be patient and helpful."
+    }
+  ],
+  "suggestions": {
+    "byRole": {
+      "tourist": [
+        {
+          "chinese": "請問，怎麼去台北 101？",
+          "pinyin": "qǐng wèn, zěn me qù tái běi yī líng yī?",
+          "english": "Excuse me, how do I get to Taipei 101?",
+          "type": "safe",
+          "checkpointId": 1
+        },
+        {
+          "chinese": "不好意思，捷運站在哪裡？",
+          "pinyin": "bù hǎo yì sī, jié yùn zhàn zài nǎ lǐ?",
+          "english": "Excuse me, where is the MRT station?",
+          "type": "safe",
+          "checkpointId": 1
+        },
+        {
+          "chinese": "好的，我明白了。",
+          "pinyin": "hǎo de, wǒ míng bái le.",
+          "english": "Okay, I understand.",
+          "type": "safe",
+          "checkpointId": 2
+        },
+        {
+          "chinese": "了解，謝謝你的幫忙！",
+          "pinyin": "liǎo jiě, xiè xie nǐ de bāng máng!",
+          "english": "I see, thank you for your help!",
+          "type": "safe",
+          "checkpointId": 3
+        }
+      ],
+      "local": []
+    }
+  },
+  "keyVocabulary": [
+    { "chinese": "請問", "pinyin": "qǐng wèn", "english": "excuse me (asking)" },
+    { "chinese": "怎麼走", "pinyin": "zěn me zǒu", "english": "how to get there" },
+    { "chinese": "直走", "pinyin": "zhí zǒu", "english": "go straight" },
+    { "chinese": "轉", "pinyin": "zhuǎn", "english": "turn" },
+    { "chinese": "在哪裡", "pinyin": "zài nǎ lǐ", "english": "where is" }
+  ],
+  "keyPatterns": [
+    { "pattern": "...怎麼走?", "example": "地鐵站怎麼走?", "english": "How do I get to...?" },
+    { "pattern": "...在哪裡?", "example": "銀行在哪裡?", "english": "Where is...?" },
+    { "pattern": "請問...", "example": "請問，這裡是哪裡?", "english": "Excuse me, ..." }
+  ],
+  "tags": ["directions", "travel", "navigation"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "isCustom": false
+}

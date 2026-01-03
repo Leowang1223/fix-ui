@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C10-L6",
+  "chapter_id": "C10",
+  "lesson_number": 6,
+  "title": "Social Communication",
+  "description": "B1-level polite social interactions and natural expressions.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "很高興再次見到你，最近過得怎麼樣？",
+      "expected_answer": [
+        "很高興再次見到你，最近過得怎麼樣？"
+      ],
+      "pinyin": "hěn gāo xìng zài cì jiàn dào nǐ, zuì jìn guò de zěn me yàng?",
+      "english_hint": "Nice to see you again. How have you been?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "聽起來你最近忙得不可開交。",
+      "expected_answer": [
+        "聽起來你最近忙得不可開交。"
+      ],
+      "pinyin": "tīng qǐ lái nǐ zuì jìn máng de bù kě kāi jiāo.",
+      "english_hint": "Sounds like you've been extremely busy.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "如果你有空，我們可以找一天聊聊天。",
+      "expected_answer": [
+        "如果你有空，我們可以找一天聊聊天。"
+      ],
+      "pinyin": "rú guǒ nǐ yǒu kòng, wǒ men kě yǐ zhǎo yì tiān liáo liáo tiān.",
+      "english_hint": "If you're free, we can chat another day.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "謝謝你今天的幫忙，我真的很感激。",
+      "expected_answer": [
+        "謝謝你今天的幫忙，我真的很感激。"
+      ],
+      "pinyin": "xiè xie nǐ jīn tiān de bāng máng, wǒ zhēn de hěn gǎn jī.",
+      "english_hint": "Thank you for your help today—I'm truly grateful.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我覺得跟你聊天很輕鬆。",
+      "expected_answer": [
+        "我覺得跟你聊天很輕鬆。"
+      ],
+      "pinyin": "wǒ jué dé gēn nǐ liáo tiān hěn qīng sōng.",
+      "english_hint": "I feel relaxed when talking with you.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "如果你不方便，可以直接告訴我。",
+      "expected_answer": [
+        "如果你不方便，可以直接告訴我。"
+      ],
+      "pinyin": "rú guǒ nǐ bù fāng biàn, kě yǐ zhí jiē gào sù wǒ.",
+      "english_hint": "If it's inconvenient for you, just let me know.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "我很期待下次再見面。",
+      "expected_answer": [
+        "我很期待下次再見面。"
+      ],
+      "pinyin": "wǒ hěn qí dài xià cì zài jiàn miàn.",
+      "english_hint": "I'm looking forward to seeing you again.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我覺得你最近的想法很有啟發性。",
+      "expected_answer": [
+        "我覺得你最近的想法很有啟發性。"
+      ],
+      "pinyin": "wǒ jué dé nǐ zuì jìn de xiǎng fǎ hěn yǒu qǐ fā xìng.",
+      "english_hint": "I think your recent ideas are very inspiring.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "希望我們之後有更多合作的機會。",
+      "expected_answer": [
+        "希望我們之後有更多合作的機會。"
+      ],
+      "pinyin": "xī wàng wǒ men zhī hòu yǒu gèng duō hé zuò de jī huì.",
+      "english_hint": "I hope we’ll have more chances to collaborate.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "祝你今天順利，有什麼需要再跟我說。",
+      "expected_answer": [
+        "祝你今天順利，有什麼需要再跟我說。"
+      ],
+      "pinyin": "zhù nǐ jīn tiān shùn lì, yǒu shén me xū yào zài gēn wǒ shuō.",
+      "english_hint": "Hope everything goes well today. Let me know if you need anything.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned how to interact socially at B1 fluency.",
+    "mission": "Next: narrative flow & sequencing."
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "playbackMode": "tts",
+  "lessons": [
+    {
+      "lesson_id": "C2-L01",
+      "title": "Daily Activities",
+      "description": "Learn common daily activity words.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C2-L02",
+      "title": "Objects",
+      "description": "Learn simple words for common objects.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C2-L03",
+      "title": "Adjectives",
+      "description": "Learn basic adjectives for describing things.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C2-L04",
+      "title": "Basic Sentences",
+      "description": "Learn simple daily-use sentence patterns.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C2-L05",
+      "title": "Emotions",
+      "description": "Learn basic words for expressing emotions.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C2-L06",
+      "title": "Weather",
+      "description": "Learn basic weather vocabulary.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C2-L07",
+      "title": "Question Words",
+      "description": "Learn simple Chinese question words.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C2-L08",
+      "title": "Hobbies",
+      "description": "Learn simple hobby-related words.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C2-L09",
+      "title": "Occupations",
+      "description": "Learn basic job and profession words.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C2-L10",
+      "title": "Useful Phrases",
+      "description": "Learn short, common daily expressions.",
+      "stepCount": 10,
+      "enable": true
+    }
+  ]
+}

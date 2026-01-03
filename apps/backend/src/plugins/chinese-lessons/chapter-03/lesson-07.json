@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C3-L7",
+  "chapter_id": "C3",
+  "lesson_number": 7,
+  "title": "Shopping Phrases",
+  "description": "Use simple Chinese to shop and ask prices.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "這個多少錢？",
+      "expected_answer": [
+        "這個多少錢？"
+      ],
+      "pinyin": "zhè ge duō shǎo qián?",
+      "english_hint": "How much is this?",
+      "encouragement": "Great basic shopping phrase!"
+    },
+    {
+      "id": 2,
+      "teacher": "太貴了。",
+      "expected_answer": [
+        "太貴了。"
+      ],
+      "pinyin": "tài guì le.",
+      "english_hint": "It's too expensive.",
+      "encouragement": "Nice reaction sentence!"
+    },
+    {
+      "id": 3,
+      "teacher": "可以便宜一點嗎？",
+      "expected_answer": [
+        "可以便宜一點嗎？"
+      ],
+      "pinyin": "kě yǐ pián yí yì diǎn ma?",
+      "english_hint": "Can it be a little cheaper?",
+      "encouragement": "Excellent bargaining phrase!"
+    },
+    {
+      "id": 4,
+      "teacher": "我要這個。",
+      "expected_answer": [
+        "我要這個。"
+      ],
+      "pinyin": "wǒ yào zhè ge.",
+      "english_hint": "I want this one.",
+      "encouragement": "Good and simple!"
+    },
+    {
+      "id": 5,
+      "teacher": "不要那個，謝謝。",
+      "expected_answer": [
+        "不要那個，謝謝。"
+      ],
+      "pinyin": "bú yào nà ge, xiè xie.",
+      "english_hint": "I don't want that one, thank you.",
+      "encouragement": "Nice polite refusal!"
+    },
+    {
+      "id": 6,
+      "teacher": "有別的顏色嗎？",
+      "expected_answer": [
+        "有別的顏色嗎？"
+      ],
+      "pinyin": "yǒu bié de yán sè ma?",
+      "english_hint": "Do you have other colors?",
+      "encouragement": "Great question!"
+    },
+    {
+      "id": 7,
+      "teacher": "可以試穿嗎？",
+      "expected_answer": [
+        "可以試穿嗎？"
+      ],
+      "pinyin": "kě yǐ shì chuān ma?",
+      "english_hint": "Can I try it on?",
+      "encouragement": "Very practical phrase!"
+    },
+    {
+      "id": 8,
+      "teacher": "我只看看。",
+      "expected_answer": [
+        "我只看看。"
+      ],
+      "pinyin": "wǒ zhǐ kàn kàn.",
+      "english_hint": "I'm just looking.",
+      "encouragement": "Nice casual sentence!"
+    },
+    {
+      "id": 9,
+      "teacher": "可以刷卡嗎？",
+      "expected_answer": [
+        "可以刷卡嗎？"
+      ],
+      "pinyin": "kě yǐ shuā kǎ ma?",
+      "english_hint": "Can I pay by card?",
+      "encouragement": "Excellent question!"
+    },
+    {
+      "id": 10,
+      "teacher": "謝謝，慢走。",
+      "expected_answer": [
+        "謝謝，慢走。"
+      ],
+      "pinyin": "xiè xie, màn zǒu.",
+      "english_hint": "Thank you, take care.",
+      "encouragement": "Great polite ending!"
+    }
+  ],
+  "review": {
+    "summary": "You learned key phrases for shopping in Chinese.",
+    "mission": "Next lesson: Practice simple restaurant conversations."
+  }
+}

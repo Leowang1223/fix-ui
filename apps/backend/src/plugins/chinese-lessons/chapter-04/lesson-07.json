@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C4-L7",
+  "chapter_id": "C4",
+  "lesson_number": 7,
+  "title": "Small Talk",
+  "description": "Learn to make simple small talk in Chinese.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "你今天怎麼樣？",
+      "expected_answer": [
+        "你今天怎麼樣？"
+      ],
+      "pinyin": "nǐ jīn tiān zěn me yàng?",
+      "english_hint": "How are you today?",
+      "encouragement": "Great question!"
+    },
+    {
+      "id": 2,
+      "teacher": "我很好，你呢？",
+      "expected_answer": [
+        "我很好，你呢？"
+      ],
+      "pinyin": "wǒ hěn hǎo, nǐ ne?",
+      "english_hint": "I'm good, and you?",
+      "encouragement": "Nice reply!"
+    },
+    {
+      "id": 3,
+      "teacher": "今天天氣很好。",
+      "expected_answer": [
+        "今天天氣很好。"
+      ],
+      "pinyin": "jīn tiān tiān qì hěn hǎo.",
+      "english_hint": "The weather is great today.",
+      "encouragement": "Good observation!"
+    },
+    {
+      "id": 4,
+      "teacher": "你喜歡這裡嗎？",
+      "expected_answer": [
+        "你喜歡這裡嗎？"
+      ],
+      "pinyin": "nǐ xǐ huān zhè lǐ ma?",
+      "english_hint": "Do you like it here?",
+      "encouragement": "Excellent question!"
+    },
+    {
+      "id": 5,
+      "teacher": "你從哪裡來？",
+      "expected_answer": [
+        "你從哪裡來？"
+      ],
+      "pinyin": "nǐ cóng nǎ lǐ lái?",
+      "english_hint": "Where are you from?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "我從美國來。",
+      "expected_answer": [
+        "我從美國來。"
+      ],
+      "pinyin": "wǒ cóng měi guó lái.",
+      "english_hint": "I'm from the U.S.",
+      "encouragement": "Nice answer!"
+    },
+    {
+      "id": 7,
+      "teacher": "你喜歡做什麼？",
+      "expected_answer": [
+        "你喜歡做什麼？"
+      ],
+      "pinyin": "nǐ xǐ huān zuò shén me?",
+      "english_hint": "What do you like to do?",
+      "encouragement": "Good question!"
+    },
+    {
+      "id": 8,
+      "teacher": "我喜歡旅行。",
+      "expected_answer": [
+        "我喜歡旅行。"
+      ],
+      "pinyin": "wǒ xǐ huān lǚ xíng.",
+      "english_hint": "I like traveling.",
+      "encouragement": "Great hobby sentence!"
+    },
+    {
+      "id": 9,
+      "teacher": "你工作忙嗎？",
+      "expected_answer": [
+        "你工作忙嗎？"
+      ],
+      "pinyin": "nǐ gōng zuò máng ma?",
+      "english_hint": "Are you busy at work?",
+      "encouragement": "Nice conversation starter!"
+    },
+    {
+      "id": 10,
+      "teacher": "還好，不算太忙。",
+      "expected_answer": [
+        "還好，不算太忙。"
+      ],
+      "pinyin": "hái hǎo, bú suàn tài máng.",
+      "english_hint": "It's okay, not too busy.",
+      "encouragement": "Great natural answer!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced simple small talk sentences.",
+    "mission": "Next lesson: Learn airport and travel check-in phrases!"
+  }
+}

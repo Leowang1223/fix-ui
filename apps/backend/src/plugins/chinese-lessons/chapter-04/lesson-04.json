@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C4-L4",
+  "chapter_id": "C4",
+  "lesson_number": 4,
+  "title": "Transportation Sentences",
+  "description": "Use transportation words in real sentences.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我坐公車上班。",
+      "expected_answer": [
+        "我坐公車上班。"
+      ],
+      "pinyin": "wǒ zuò gōng chē shàng bān.",
+      "english_hint": "I take the bus to work.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "他坐火車回家。",
+      "expected_answer": [
+        "他坐火車回家。"
+      ],
+      "pinyin": "tā zuò huǒ chē huí jiā.",
+      "english_hint": "He takes the train home.",
+      "encouragement": "Nice sentence!"
+    },
+    {
+      "id": 3,
+      "teacher": "我們騎腳踏車去公園。",
+      "expected_answer": [
+        "我們騎腳踏車去公園。"
+      ],
+      "pinyin": "wǒ men qí jiǎo tà chē qù gōng yuán.",
+      "english_hint": "We ride bikes to the park.",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 4,
+      "teacher": "我要叫計程車。",
+      "expected_answer": [
+        "我要叫計程車。"
+      ],
+      "pinyin": "wǒ yào jiào jì chéng chē.",
+      "english_hint": "I want to call a taxi.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "飛機八點起飛。",
+      "expected_answer": [
+        "飛機八點起飛。"
+      ],
+      "pinyin": "fēi jī bā diǎn qǐ fēi.",
+      "english_hint": "The plane takes off at 8.",
+      "encouragement": "Nice travel sentence!"
+    },
+    {
+      "id": 6,
+      "teacher": "請問，下一班公車幾點？",
+      "expected_answer": [
+        "請問，下一班公車幾點？"
+      ],
+      "pinyin": "qǐng wèn, xià yì bān gōng chē jǐ diǎn?",
+      "english_hint": "Excuse me, what time is the next bus?",
+      "encouragement": "Great question!"
+    },
+    {
+      "id": 7,
+      "teacher": "我在車站等你。",
+      "expected_answer": [
+        "我在車站等你。"
+      ],
+      "pinyin": "wǒ zài chē zhàn děng nǐ.",
+      "english_hint": "I will wait for you at the station.",
+      "encouragement": "Great job!"
+    },
+    {
+      "id": 8,
+      "teacher": "這裡不能停車。",
+      "expected_answer": [
+        "這裡不能停車。"
+      ],
+      "pinyin": "zhè lǐ bù néng tíng chē.",
+      "english_hint": "You can't park here.",
+      "encouragement": "Perfect!"
+    },
+    {
+      "id": 9,
+      "teacher": "地鐵很快。",
+      "expected_answer": [
+        "地鐵很快。"
+      ],
+      "pinyin": "dì tiě hěn kuài.",
+      "english_hint": "The subway is fast.",
+      "encouragement": "Nice adjective sentence!"
+    },
+    {
+      "id": 10,
+      "teacher": "我們要去機場。",
+      "expected_answer": [
+        "我們要去機場。"
+      ],
+      "pinyin": "wǒ men yào qù jī chǎng.",
+      "english_hint": "We are going to the airport.",
+      "encouragement": "Fantastic travel expression!"
+    }
+  ],
+  "review": {
+    "summary": "You learned useful transportation sentences.",
+    "mission": "Next lesson: Learn hotel and travel booking expressions!"
+  }
+}

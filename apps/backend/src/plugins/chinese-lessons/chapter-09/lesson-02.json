@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C9-L2",
+  "chapter_id": "C9",
+  "lesson_number": 2,
+  "title": "Work-related Sentences",
+  "description": "Practice B1-entry sentences used in daily work situations.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我今天有三個重要的任務要完成。",
+      "expected_answer": [
+        "我今天有三個重要的任務要完成。"
+      ],
+      "pinyin": "wǒ jīn tiān yǒu sān gè zhòng yào de rèn wù yào wán chéng.",
+      "english_hint": "I have three important tasks to finish today.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "下午兩點我有一場會議，不能遲到。",
+      "expected_answer": [
+        "下午兩點我有一場會議，不能遲到。"
+      ],
+      "pinyin": "xià wǔ liǎng diǎn wǒ yǒu yì chǎng huì yì, bù néng chí dào.",
+      "english_hint": "I have a meeting at 2 PM and cannot be late.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我需要向主管報告專案的最新進度。",
+      "expected_answer": [
+        "我需要向主管報告專案的最新進度。"
+      ],
+      "pinyin": "wǒ xū yào xiàng zhǔ guǎn bào gào zhuān àn de zuì xīn jìn dù.",
+      "english_hint": "I need to report the latest project progress to my supervisor.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "因為資料還沒整理好，我可能需要多一點時間。",
+      "expected_answer": [
+        "因為資料還沒整理好，我可能需要多一點時間。"
+      ],
+      "pinyin": "yīn wèi zī liào hái méi zhěng lǐ hǎo, wǒ kě néng xū yào duō yì diǎn shí jiān.",
+      "english_hint": "Because the data is not ready, I may need more time.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "如果你方便，可以幫我檢查一下嗎？",
+      "expected_answer": [
+        "如果你方便，可以幫我檢查一下嗎？"
+      ],
+      "pinyin": "rú guǒ nǐ fāng biàn, kě yǐ bāng wǒ jiǎn chá yí xià ma?",
+      "english_hint": "If it's convenient, can you help me check it?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "我今天有點忙，可能無法準時完成。",
+      "expected_answer": [
+        "我今天有點忙，可能無法準時完成。"
+      ],
+      "pinyin": "wǒ jīn tiān yǒu diǎn máng, kě néng wú fǎ zhǔn shí wán chéng.",
+      "english_hint": "I'm a bit busy today, so I might not finish on time.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "我們稍後再討論細節會比較好。",
+      "expected_answer": [
+        "我們稍後再討論細節會比較好。"
+      ],
+      "pinyin": "wǒ men shāo hòu zài tǎo lùn xì jié huì bǐ jiào hǎo.",
+      "english_hint": "It might be better if we discuss the details later.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我會把文件整理好再寄給你。",
+      "expected_answer": [
+        "我會把文件整理好再寄給你。"
+      ],
+      "pinyin": "wǒ huì bǎ wén jiàn zhěng lǐ hǎo zài jì gěi nǐ.",
+      "english_hint": "I will organize the documents before sending them to you.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "雖然有點累，但我會盡量做完。",
+      "expected_answer": [
+        "雖然有點累，但我會盡量做完。"
+      ],
+      "pinyin": "suī rán yǒu diǎn lèi, dàn wǒ huì jìn liàng zuò wán.",
+      "english_hint": "Although I'm tired, I will try my best to finish it.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 10,
+      "teacher": "如果有問題，我會再跟你說。",
+      "expected_answer": [
+        "如果有問題，我會再跟你說。"
+      ],
+      "pinyin": "rú guǒ yǒu wèn tí, wǒ huì zài gēn nǐ shuō.",
+      "english_hint": "If there's any issue, I will let you know.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced B1-entry work-related sentences.",
+    "mission": "Next: real workplace conversation patterns!"
+  }
+}

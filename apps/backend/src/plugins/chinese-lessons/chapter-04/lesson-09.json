@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C4-L9",
+  "chapter_id": "C4",
+  "lesson_number": 9,
+  "title": "Emergency Phrases",
+  "description": "Learn simple phrases for emergency situations.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "救命！",
+      "expected_answer": [
+        "救命！"
+      ],
+      "pinyin": "jiù mìng!",
+      "english_hint": "Help!",
+      "encouragement": "Important phrase!"
+    },
+    {
+      "id": 2,
+      "teacher": "我需要幫助。",
+      "expected_answer": [
+        "我需要幫助。"
+      ],
+      "pinyin": "wǒ xū yào bāng zhù.",
+      "english_hint": "I need help.",
+      "encouragement": "Good emergency sentence!"
+    },
+    {
+      "id": 3,
+      "teacher": "請叫警察。",
+      "expected_answer": [
+        "請叫警察。"
+      ],
+      "pinyin": "qǐng jiào jǐng chá.",
+      "english_hint": "Please call the police.",
+      "encouragement": "Good! Very important!"
+    },
+    {
+      "id": 4,
+      "teacher": "我迷路了。",
+      "expected_answer": [
+        "我迷路了。"
+      ],
+      "pinyin": "wǒ mí lù le.",
+      "english_hint": "I'm lost.",
+      "encouragement": "Useful emergency phrase!"
+    },
+    {
+      "id": 5,
+      "teacher": "我的東西不見了。",
+      "expected_answer": [
+        "我的東西不見了。"
+      ],
+      "pinyin": "wǒ de dōng xi bú jiàn le.",
+      "english_hint": "My stuff is missing.",
+      "encouragement": "Important to know!"
+    },
+    {
+      "id": 6,
+      "teacher": "你還好嗎？",
+      "expected_answer": [
+        "你還好嗎？"
+      ],
+      "pinyin": "nǐ hái hǎo ma?",
+      "english_hint": "Are you okay?",
+      "encouragement": "Great caring question!"
+    },
+    {
+      "id": 7,
+      "teacher": "我受傷了。",
+      "expected_answer": [
+        "我受傷了。"
+      ],
+      "pinyin": "wǒ shòu shāng le.",
+      "english_hint": "I’m hurt.",
+      "encouragement": "Good to know!"
+    },
+    {
+      "id": 8,
+      "teacher": "請帶我去醫院。",
+      "expected_answer": [
+        "請帶我去醫院。"
+      ],
+      "pinyin": "qǐng dài wǒ qù yī yuàn.",
+      "english_hint": "Please take me to the hospital.",
+      "encouragement": "Important emergency sentence!"
+    },
+    {
+      "id": 9,
+      "teacher": "我找不到我的朋友。",
+      "expected_answer": [
+        "我找不到我的朋友。"
+      ],
+      "pinyin": "wǒ zhǎo bú dào wǒ de péng yǒu.",
+      "english_hint": "I can't find my friend.",
+      "encouragement": "Good emergency phrase!"
+    },
+    {
+      "id": 10,
+      "teacher": "請快一點！",
+      "expected_answer": [
+        "請快一點！"
+      ],
+      "pinyin": "qǐng kuài yì diǎn!",
+      "english_hint": "Please hurry!",
+      "encouragement": "Great urgent expression!"
+    }
+  ],
+  "review": {
+    "summary": "You learned very useful emergency vocabulary.",
+    "mission": "Final lesson: Mixed travel and direction dialogues!"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "scenario_id": "taxi-ride-01",
+  "title": "Taking a Taxi",
+  "chineseTitle": "搭計程車",
+  "description": "Practice taking a taxi and giving directions in Chinese",
+  "chineseDescription": "練習搭計程車和中文指路對話",
+  "difficulty": "A2-B1",
+  "category": "Travel",
+  "objective": "Successfully communicate with taxi driver to reach destination",
+  "chineseObjective": "成功與計程車司機溝通到達目的地",
+  "estimatedTurns": 12,
+  "firstSpeaker": "user",
+  "defaultUserRole": "passenger",
+  "checkpoints": [
+    {
+      "id": 1,
+      "description": "State destination and any preferences",
+      "chineseDescription": "說明目的地和偏好",
+      "keywords": ["去", "到", "要去", "我想去", "麻煩", "載我到", "師傅", "您好", "高速公路", "快一點", "不趕時間"],
+      "weight": 30
+    },
+    {
+      "id": 2,
+      "description": "Respond to driver's questions or suggestions",
+      "chineseDescription": "回應司機的問題或建議",
+      "keywords": ["好", "可以", "對", "沒問題", "不用", "隨便", "你決定", "OK", "都可以", "聽你的"],
+      "weight": 25
+    },
+    {
+      "id": 3,
+      "description": "Pay and handle transaction",
+      "chineseDescription": "付款並處理交易",
+      "keywords": ["多少錢", "幾塊", "這裡", "找錢", "不用找", "刷卡", "現金", "悠遊卡", "付", "給你"],
+      "weight": 30
+    },
+    {
+      "id": 4,
+      "description": "Thank the driver",
+      "chineseDescription": "感謝司機",
+      "keywords": ["謝謝", "麻煩了", "再見", "感謝", "拜拜"],
+      "weight": 15
+    }
+  ],
+  "roles": [
+    {
+      "id": "passenger",
+      "name": "Passenger",
+      "chineseName": "乘客",
+      "systemPrompt": "You are a passenger taking a taxi (計程車) in Taiwan. Tell the driver your destination clearly. Give directions if needed. Be polite. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 計程車 not 出租車). Keep responses concise (1-2 sentences)."
+    },
+    {
+      "id": "driver",
+      "name": "Taxi Driver",
+      "chineseName": "司機",
+      "interviewerImage": "taxi driver.jpg",
+      "interviewerId": "bob",
+      "systemPrompt": "You are a taxi driver (計程車司機) in Taiwan. Confirm the destination, suggest routes, and provide updates. Be friendly and helpful. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 計程車 not 出租車/的士). Keep responses concise (1-2 sentences)."
+    }
+  ],
+  "suggestions": {
+    "byRole": {
+      "passenger": [
+        {
+          "chinese": "您好，我要去台北車站。",
+          "pinyin": "nín hǎo, wǒ yào qù tái běi chē zhàn.",
+          "english": "Hello, I want to go to Taipei Main Station.",
+          "type": "safe",
+          "checkpointId": 1
+        },
+        {
+          "chinese": "麻煩你，載我到信義區，走快一點的路。",
+          "pinyin": "má fán nǐ, zǎi wǒ dào xìn yì qū, zǒu kuài yī diǎn de lù.",
+          "english": "Please take me to Xinyi District, take a faster route.",
+          "type": "advanced",
+          "checkpointId": 1
+        },
+        {
+          "chinese": "好的，沒問題。",
+          "pinyin": "hǎo de, méi wèn tí.",
+          "english": "Okay, no problem.",
+          "type": "safe",
+          "checkpointId": 2
+        },
+        {
+          "chinese": "都可以，你決定就好。",
+          "pinyin": "dōu kě yǐ, nǐ jué dìng jiù hǎo.",
+          "english": "Either way is fine, you decide.",
+          "type": "safe",
+          "checkpointId": 2
+        },
+        {
+          "chinese": "多少錢？",
+          "pinyin": "duō shǎo qián?",
+          "english": "How much?",
+          "type": "safe",
+          "checkpointId": 3
+        },
+        {
+          "chinese": "我刷卡可以嗎？",
+          "pinyin": "wǒ shuā kǎ kě yǐ ma?",
+          "english": "Can I pay by card?",
+          "type": "safe",
+          "checkpointId": 3
+        },
+        {
+          "chinese": "謝謝你，再見。",
+          "pinyin": "xiè xie nǐ, zài jiàn.",
+          "english": "Thank you, goodbye.",
+          "type": "safe",
+          "checkpointId": 4
+        }
+      ],
+      "driver": []
+    }
+  },
+  "keyVocabulary": [
+    { "chinese": "計程車", "pinyin": "jì chéng chē", "english": "taxi" },
+    { "chinese": "司機", "pinyin": "sī jī", "english": "driver" },
+    { "chinese": "目的地", "pinyin": "mù dì dì", "english": "destination" },
+    { "chinese": "路線", "pinyin": "lù xiàn", "english": "route" },
+    { "chinese": "多少錢", "pinyin": "duō shǎo qián", "english": "how much" }
+  ],
+  "keyPatterns": [
+    { "pattern": "我要去...", "example": "我要去台北車站", "english": "I want to go to..." },
+    { "pattern": "在...轉", "example": "在下一個路口右轉", "english": "Turn at..." },
+    { "pattern": "多少錢？", "example": "多少錢？", "english": "How much?" }
+  ],
+  "tags": ["taxi", "travel", "transportation", "daily-life"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "isCustom": false
+}

@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C6-L10",
+  "chapter_id": "C6",
+  "lesson_number": 10,
+  "title": "Dialogue Practice: Home Life",
+  "description": "Practice a complete home & family dialogue.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "A：你家的客廳大嗎？",
+      "expected_answer": [
+        "你家的客廳大嗎？"
+      ],
+      "pinyin": "A: nǐ jiā de kè tīng dà ma?",
+      "english_hint": "Is your living room big?",
+      "encouragement": "Great start!"
+    },
+    {
+      "id": 2,
+      "teacher": "B：不大，但是很明亮。",
+      "expected_answer": [
+        "不大，但是很明亮。"
+      ],
+      "pinyin": "B: bú dà, dàn shì hěn míng liàng.",
+      "english_hint": "Not big, but very bright.",
+      "encouragement": "Nice answer!"
+    },
+    {
+      "id": 3,
+      "teacher": "A：你喜歡在家做什麼？",
+      "expected_answer": [
+        "你喜歡在家做什麼？"
+      ],
+      "pinyin": "A: nǐ xǐ huān zài jiā zuò shén me?",
+      "english_hint": "What do you like to do at home?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "B：我喜歡做菜。",
+      "expected_answer": [
+        "我喜歡做菜。"
+      ],
+      "pinyin": "B: wǒ xǐ huān zuò cài.",
+      "english_hint": "I like to cook.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 5,
+      "teacher": "A：你房間裡有什麼家具？",
+      "expected_answer": [
+        "你房間裡有什麼家具？"
+      ],
+      "pinyin": "A: nǐ fáng jiān lǐ yǒu shén me jiā jù?",
+      "english_hint": "What furniture do you have in your room?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "B：有床、書桌和書架。",
+      "expected_answer": [
+        "有床、書桌和書架。"
+      ],
+      "pinyin": "B: yǒu chuáng, shū zhuō hé shū jià.",
+      "english_hint": "A bed, a desk, and a bookshelf.",
+      "encouragement": "Good listing!"
+    },
+    {
+      "id": 7,
+      "teacher": "A：你昨天在家做了什麼？",
+      "expected_answer": [
+        "你昨天在家做了什麼？"
+      ],
+      "pinyin": "A: nǐ zuó tiān zài jiā zuò le shén me?",
+      "english_hint": "What did you do at home yesterday?",
+      "encouragement": "Great past tense question!"
+    },
+    {
+      "id": 8,
+      "teacher": "B：我昨天整理了房間。",
+      "expected_answer": [
+        "我昨天整理了房間。"
+      ],
+      "pinyin": "B: wǒ zuó tiān zhěng lǐ le fáng jiān.",
+      "english_hint": "I cleaned my room yesterday.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 9,
+      "teacher": "A：週末你想做什麼？",
+      "expected_answer": [
+        "週末你想做什麼？"
+      ],
+      "pinyin": "A: zhōu mò nǐ xiǎng zuò shén me?",
+      "english_hint": "What do you want to do this weekend?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 10,
+      "teacher": "B：我想休息一下。",
+      "expected_answer": [
+        "我想休息一下。"
+      ],
+      "pinyin": "B: wǒ xiǎng xiū xí yí xià.",
+      "english_hint": "I want to rest a bit.",
+      "encouragement": "Fantastic closing!"
+    }
+  ],
+  "review": {
+    "summary": "You finished Chapter 6! Great work on home, family, hobbies, and past tense.",
+    "mission": "Next chapter: Chapter 7 — Town, directions, transportation, and simple future tense."
+  }
+}

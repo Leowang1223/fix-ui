@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C3-L9",
+  "chapter_id": "C3",
+  "lesson_number": 9,
+  "title": "Home Routine",
+  "description": "Talk about simple daily routine at home.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我在家看電視。",
+      "expected_answer": [
+        "我在家看電視。"
+      ],
+      "pinyin": "wǒ zài jiā kàn diàn shì.",
+      "english_hint": "I watch TV at home.",
+      "encouragement": "Great home sentence!"
+    },
+    {
+      "id": 2,
+      "teacher": "我常常在房間讀書。",
+      "expected_answer": [
+        "我常常在房間讀書。"
+      ],
+      "pinyin": "wǒ cháng cháng zài fáng jiān dú shū.",
+      "english_hint": "I often study in my room.",
+      "encouragement": "Nice use of 常常!"
+    },
+    {
+      "id": 3,
+      "teacher": "我有時候在客廳工作。",
+      "expected_answer": [
+        "我有時候在客廳工作。"
+      ],
+      "pinyin": "wǒ yǒu shí hòu zài kè tīng gōng zuò.",
+      "english_hint": "Sometimes I work in the living room.",
+      "encouragement": "Good time word usage!"
+    },
+    {
+      "id": 4,
+      "teacher": "我在廚房做飯。",
+      "expected_answer": [
+        "我在廚房做飯。"
+      ],
+      "pinyin": "wǒ zài chú fáng zuò fàn.",
+      "english_hint": "I cook in the kitchen.",
+      "encouragement": "Excellent routine sentence!"
+    },
+    {
+      "id": 5,
+      "teacher": "他在陽台喝咖啡。",
+      "expected_answer": [
+        "他在陽台喝咖啡。"
+      ],
+      "pinyin": "tā zài yáng tái hē kā fēi.",
+      "english_hint": "He drinks coffee on the balcony.",
+      "encouragement": "Great detail!"
+    },
+    {
+      "id": 6,
+      "teacher": "我們在家吃晚餐。",
+      "expected_answer": [
+        "我們在家吃晚餐。"
+      ],
+      "pinyin": "wǒ men zài jiā chī wǎn cān.",
+      "english_hint": "We eat dinner at home.",
+      "encouragement": "Nice and simple!"
+    },
+    {
+      "id": 7,
+      "teacher": "我喜歡在沙發上休息。",
+      "expected_answer": [
+        "我喜歡在沙發上休息。"
+      ],
+      "pinyin": "wǒ xǐ huān zài shā fā shàng xiū xí.",
+      "english_hint": "I like to rest on the sofa.",
+      "encouragement": "Very natural sentence!"
+    },
+    {
+      "id": 8,
+      "teacher": "睡覺前我會看手機。",
+      "expected_answer": [
+        "睡覺前我會看手機。"
+      ],
+      "pinyin": "shuì jiào qián wǒ huì kàn shǒu jī.",
+      "english_hint": "Before sleeping, I look at my phone.",
+      "encouragement": "Good use of 前!"
+    },
+    {
+      "id": 9,
+      "teacher": "他早上整理房間。",
+      "expected_answer": [
+        "他早上整理房間。"
+      ],
+      "pinyin": "tā zǎo shàng zhěng lǐ fáng jiān.",
+      "english_hint": "He tidies his room in the morning.",
+      "encouragement": "Excellent routine sentence!"
+    },
+    {
+      "id": 10,
+      "teacher": "今天我在家放鬆。",
+      "expected_answer": [
+        "今天我在家放鬆。"
+      ],
+      "pinyin": "jīn tiān wǒ zài jiā fàng sōng.",
+      "english_hint": "Today I relax at home.",
+      "encouragement": "Fantastic! Very natural!"
+    }
+  ],
+  "review": {
+    "summary": "You can now describe your simple home routine in Chinese.",
+    "mission": "Final lesson of this chapter: mixed practice with short dialogues."
+  }
+}

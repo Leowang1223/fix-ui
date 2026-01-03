@@ -1,0 +1,133 @@
+{
+  "lesson_id": "C1-L03",
+  "chapter_id": "C1",
+  "lesson_number": 3,
+  "title": "Numbers",
+  "description": "Learn basic numbers used in daily life.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "一",
+      "expected_answer": [
+        "一"
+      ],
+      "pinyin": "yī",
+      "english_hint": "one",
+      "encouragement": "Great job! Keep counting!",
+      "tts_text": "一",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 2,
+      "teacher": "二",
+      "expected_answer": [
+        "二"
+      ],
+      "pinyin": "èr",
+      "english_hint": "two",
+      "encouragement": "Nice! You're learning!",
+      "tts_text": "二",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 3,
+      "teacher": "三",
+      "expected_answer": [
+        "三"
+      ],
+      "pinyin": "sān",
+      "english_hint": "three",
+      "encouragement": "Good! Continue!",
+      "tts_text": "三",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 4,
+      "teacher": "四",
+      "expected_answer": [
+        "四"
+      ],
+      "pinyin": "sì",
+      "english_hint": "four",
+      "encouragement": "Excellent!",
+      "tts_text": "四",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 5,
+      "teacher": "五",
+      "expected_answer": [
+        "五"
+      ],
+      "pinyin": "wǔ",
+      "english_hint": "five",
+      "encouragement": "You're doing great!",
+      "tts_text": "五",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 6,
+      "teacher": "六",
+      "expected_answer": [
+        "六"
+      ],
+      "pinyin": "liù",
+      "english_hint": "six",
+      "encouragement": "Perfect!",
+      "tts_text": "六",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 7,
+      "teacher": "七",
+      "expected_answer": [
+        "七"
+      ],
+      "pinyin": "qī",
+      "english_hint": "seven",
+      "encouragement": "Good work!",
+      "tts_text": "七",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 8,
+      "teacher": "八",
+      "expected_answer": [
+        "八"
+      ],
+      "pinyin": "bā",
+      "english_hint": "eight",
+      "encouragement": "Great progress!",
+      "tts_text": "八",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 9,
+      "teacher": "九",
+      "expected_answer": [
+        "九"
+      ],
+      "pinyin": "jiǔ",
+      "english_hint": "nine",
+      "encouragement": "Awesome!",
+      "tts_text": "九",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 10,
+      "teacher": "十",
+      "expected_answer": [
+        "十"
+      ],
+      "pinyin": "shí",
+      "english_hint": "ten",
+      "encouragement": "Fantastic job!",
+      "tts_text": "十",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    }
+  ],
+  "review": {
+    "summary": "You learned numbers from 1 to 10.",
+    "mission": "Next: Learn time-related words!"
+  }
+}

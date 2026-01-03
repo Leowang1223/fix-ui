@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C10-L9",
+  "chapter_id": "C10",
+  "lesson_number": 9,
+  "title": "Emotional Expression",
+  "description": "More detailed and expressive B1 emotional sentences.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "最近我有點緊張，但同時也覺得很期待。",
+      "expected_answer": [
+        "最近我有點緊張，但同時也覺得很期待。"
+      ],
+      "pinyin": "zuì jìn wǒ yǒu diǎn jǐn zhāng, dàn tóng shí yě jué dé hěn qī dài.",
+      "english_hint": "Lately I'm a bit nervous, but also excited.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "有些事情讓我有點失望，但我還是想試著理解。",
+      "expected_answer": [
+        "有些事情讓我有點失望，但我還是想試著理解。"
+      ],
+      "pinyin": "yǒu xiē shì qíng ràng wǒ yǒu diǎn shī wàng, dàn wǒ hái shì xiǎng shì zhe lǐ jiě.",
+      "english_hint": "Some things disappointed me a bit, but I still want to understand.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我覺得今天的心情比前幾天放鬆多了。",
+      "expected_answer": [
+        "我覺得今天的心情比前幾天放鬆多了。"
+      ],
+      "pinyin": "wǒ jué dé jīn tiān de xīn qíng bǐ qián jǐ tiān fàng sōng duō le.",
+      "english_hint": "I feel much more relaxed today than the past few days.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "有時候我會對自己太嚴格。",
+      "expected_answer": [
+        "有時候我會對自己太嚴格。"
+      ],
+      "pinyin": "yǒu shí hòu wǒ huì duì zì jǐ tài yán gé.",
+      "english_hint": "Sometimes I'm too strict with myself.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "當有人支持我時，我會覺得更有力量。",
+      "expected_answer": [
+        "當有人支持我時，我會覺得更有力量。"
+      ],
+      "pinyin": "dāng yǒu rén zhī chí wǒ shí, wǒ huì jué dé gèng yǒu lì liàng.",
+      "english_hint": "I feel stronger when someone supports me.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "我正在學習如何把壓力放下。",
+      "expected_answer": [
+        "我正在學習如何把壓力放下。"
+      ],
+      "pinyin": "wǒ zhèng zài xué xí rú hé bǎ yā lì fàng xià.",
+      "english_hint": "I'm learning how to let go of stress.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "有些擔心是正常的，我接受這一點。",
+      "expected_answer": [
+        "有些擔心是正常的，我接受這一點。"
+      ],
+      "pinyin": "yǒu xiē dān xīn shì zhèng cháng de, wǒ jiē shòu zhè yì diǎn.",
+      "english_hint": "Feeling worried is normal; I accept that.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我覺得自己正在慢慢變得更堅強。",
+      "expected_answer": [
+        "我覺得自己正在慢慢變得更堅強。"
+      ],
+      "pinyin": "wǒ jué dé zì jǐ zhèng zài màn màn biàn dé gèng jiān qiáng.",
+      "english_hint": "I feel I’m slowly becoming stronger.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "我正在努力調整心態，希望能更平穩。",
+      "expected_answer": [
+        "我正在努力調整心態，希望能更平穩。"
+      ],
+      "pinyin": "wǒ zhèng zài nǔ lì tiáo zhěng xīn tài, xī wàng néng gèng píng wěn.",
+      "english_hint": "I'm working on adjusting my mindset to stay calmer.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "雖然偶爾會低落，但我知道自己會好起來。",
+      "expected_answer": [
+        "雖然偶爾會低落，但我知道自己會好起來。"
+      ],
+      "pinyin": "suī rán ǒu ěr huì dī luò, dàn wǒ zhī dào zì jǐ huì hǎo qǐ lái.",
+      "english_hint": "Although I feel down sometimes, I know I’ll get better.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned advanced emotional expressions at B1.",
+    "mission": "Final lesson next: full dialogue & integrated skills!"
+  }
+}

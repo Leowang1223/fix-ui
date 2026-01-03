@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C3-L10",
+  "chapter_id": "C3",
+  "lesson_number": 10,
+  "title": "Short Dialogue Practice",
+  "description": "Practice short, everyday dialogues.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "A：你好，你是新同學嗎？",
+      "expected_answer": [
+        "你好，你是新同學嗎？"
+      ],
+      "pinyin": "A: nǐ hǎo, nǐ shì xīn tóng xué ma?",
+      "english_hint": "Hi, are you a new classmate?",
+      "encouragement": "Great opening line!"
+    },
+    {
+      "id": 2,
+      "teacher": "B：對，我是新來的。",
+      "expected_answer": [
+        "對，我是新來的。"
+      ],
+      "pinyin": "B: duì, wǒ shì xīn lái de.",
+      "english_hint": "Yes, I am new here.",
+      "encouragement": "Nice reply!"
+    },
+    {
+      "id": 3,
+      "teacher": "A：你叫什麼名字？",
+      "expected_answer": [
+        "你叫什麼名字？"
+      ],
+      "pinyin": "A: nǐ jiào shén me míng zi?",
+      "english_hint": "What is your name?",
+      "encouragement": "Very useful question!"
+    },
+    {
+      "id": 4,
+      "teacher": "B：我叫小明。",
+      "expected_answer": [
+        "我叫小明。"
+      ],
+      "pinyin": "B: wǒ jiào xiǎo míng.",
+      "english_hint": "My name is Xiaoming.",
+      "encouragement": "Good self-introduction!"
+    },
+    {
+      "id": 5,
+      "teacher": "A：你喜歡這裡嗎？",
+      "expected_answer": [
+        "你喜歡這裡嗎？"
+      ],
+      "pinyin": "A: nǐ xǐ huān zhè lǐ ma?",
+      "english_hint": "Do you like it here?",
+      "encouragement": "Great follow-up question!"
+    },
+    {
+      "id": 6,
+      "teacher": "B：我很喜歡，大家都很友善。",
+      "expected_answer": [
+        "我很喜歡，大家都很友善。"
+      ],
+      "pinyin": "B: wǒ hěn xǐ huān, dà jiā dōu hěn yǒu shàn.",
+      "english_hint": "I like it a lot, everyone is very friendly.",
+      "encouragement": "Excellent, natural answer!"
+    },
+    {
+      "id": 7,
+      "teacher": "A：下課以後一起去吃飯，好嗎？",
+      "expected_answer": [
+        "下課以後一起去吃飯，好嗎？"
+      ],
+      "pinyin": "A: xià kè yǐ hòu yì qǐ qù chī fàn, hǎo ma?",
+      "english_hint": "After class, shall we go eat together?",
+      "encouragement": "Great invitation sentence!"
+    },
+    {
+      "id": 8,
+      "teacher": "B：好啊，謝謝你。",
+      "expected_answer": [
+        "好啊，謝謝你。"
+      ],
+      "pinyin": "B: hǎo a, xiè xie nǐ.",
+      "english_hint": "Sure, thank you.",
+      "encouragement": "Nice and friendly answer!"
+    },
+    {
+      "id": 9,
+      "teacher": "A：沒問題，我們十二點在門口見。",
+      "expected_answer": [
+        "沒問題，我們十二點在門口見。"
+      ],
+      "pinyin": "A: méi wèn tí, wǒ men shí èr diǎn zài mén kǒu jiàn.",
+      "english_hint": "No problem, let's meet at the door at twelve.",
+      "encouragement": "Excellent detailed plan!"
+    },
+    {
+      "id": 10,
+      "teacher": "B：好的，待會兒見！",
+      "expected_answer": [
+        "好的，待會兒見！"
+      ],
+      "pinyin": "B: hǎo de, dài huìr jiàn!",
+      "english_hint": "Okay, see you later!",
+      "encouragement": "Fantastic closing line!"
+    }
+  ],
+  "review": {
+    "summary": "You completed Chapter 3 and practiced simple but natural dialogues.",
+    "mission": "Next chapter will focus on places, directions, and short travel-related phrases."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C10-L7",
+  "chapter_id": "C10",
+  "lesson_number": 7,
+  "title": "Storytelling & Sequence",
+  "description": "Learn how to tell stories and describe sequence naturally.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "一開始，一切都比我想的順利。",
+      "expected_answer": [
+        "一開始，一切都比我想的順利。"
+      ],
+      "pinyin": "yì kāi shǐ, yí qiè dōu bǐ wǒ xiǎng de shùn lì.",
+      "english_hint": "At first, everything went smoother than I expected.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "接著，事情慢慢變得複雜。",
+      "expected_answer": [
+        "接著，事情慢慢變得複雜。"
+      ],
+      "pinyin": "jiē zhe, shì qíng màn màn biàn de fù zá.",
+      "english_hint": "Then things slowly became complicated.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "途中我遇到幾個意想不到的問題。",
+      "expected_answer": [
+        "途中我遇到幾個意想不到的問題。"
+      ],
+      "pinyin": "tú zhōng wǒ yù dào jǐ gè yì xiǎng bù dào de wèn tí.",
+      "english_hint": "Along the way, I ran into a few unexpected problems.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "幸好我有提前準備，所以沒有太慌張。",
+      "expected_answer": [
+        "幸好我有提前準備，所以沒有太慌張。"
+      ],
+      "pinyin": "xìng hǎo wǒ yǒu tí qián zhǔn bèi, suǒ yǐ méi yǒu tài huāng zhāng.",
+      "english_hint": "Luckily, I prepared in advance, so I didn’t panic.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "後來我找到一個更有效的方式處理。",
+      "expected_answer": [
+        "後來我找到一個更有效的方式處理。"
+      ],
+      "pinyin": "hòu lái wǒ zhǎo dào yí gè gèng yǒu xiào de fāng shì chǔ lǐ.",
+      "english_hint": "Later, I found a more effective way to handle it.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "最後，事情比我預期的更快解決。",
+      "expected_answer": [
+        "最後，事情比我預期的更快解決。"
+      ],
+      "pinyin": "zuì hòu, shì qíng bǐ wǒ yù qī de gèng kuài jiě jué.",
+      "english_hint": "In the end, things were solved faster than I expected.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "整體來說，這次經驗讓我學到不少。",
+      "expected_answer": [
+        "整體來說，這次經驗讓我學到不少。"
+      ],
+      "pinyin": "zhěng tǐ lái shuō, zhè cì jīng yàn ràng wǒ xué dào bù shǎo.",
+      "english_hint": "Overall, I learned a lot from this experience.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "如果再來一次，我會用更好的方式處理。",
+      "expected_answer": [
+        "如果再來一次，我會用更好的方式處理。"
+      ],
+      "pinyin": "rú guǒ zài lái yí cì, wǒ huì yòng gèng hǎo de fāng shì chǔ lǐ.",
+      "english_hint": "If it happened again, I’d handle it better.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "這件事讓我更有信心面對困難。",
+      "expected_answer": [
+        "這件事讓我更有信心面對困難。"
+      ],
+      "pinyin": "zhè jiàn shì ràng wǒ gèng yǒu xìn xīn miàn duì kùn nán.",
+      "english_hint": "This made me more confident facing challenges.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "也因為這樣，我變得更能冷靜處理問題。",
+      "expected_answer": [
+        "也因為這樣，我變得更能冷靜處理問題。"
+      ],
+      "pinyin": "yě yīn wèi zhè yàng, wǒ biàn de gèng néng lěng jìng chǔ lǐ wèn tí.",
+      "english_hint": "Because of this, I became better at dealing with problems calmly.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned natural sequencing & storytelling at B1.",
+    "mission": "Next: Longer communication & teamwork."
+  }
+}

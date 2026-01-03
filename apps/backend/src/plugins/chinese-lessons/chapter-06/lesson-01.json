@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C6-L1",
+  "chapter_id": "C6",
+  "lesson_number": 1,
+  "title": "Family Members",
+  "description": "Learn basic family-related vocabulary.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "爸爸",
+      "expected_answer": [
+        "爸爸"
+      ],
+      "pinyin": "bà ba",
+      "english_hint": "father",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "媽媽",
+      "expected_answer": [
+        "媽媽"
+      ],
+      "pinyin": "mā ma",
+      "english_hint": "mother",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "哥哥",
+      "expected_answer": [
+        "哥哥"
+      ],
+      "pinyin": "gē ge",
+      "english_hint": "older brother",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "姐姐",
+      "expected_answer": [
+        "姐姐"
+      ],
+      "pinyin": "jiě jie",
+      "english_hint": "older sister",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "弟弟",
+      "expected_answer": [
+        "弟弟"
+      ],
+      "pinyin": "dì di",
+      "english_hint": "younger brother",
+      "encouragement": "Great job!"
+    },
+    {
+      "id": 6,
+      "teacher": "妹妹",
+      "expected_answer": [
+        "妹妹"
+      ],
+      "pinyin": "mèi mei",
+      "english_hint": "younger sister",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "兒子",
+      "expected_answer": [
+        "兒子"
+      ],
+      "pinyin": "ér zi",
+      "english_hint": "son",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "女兒",
+      "expected_answer": [
+        "女兒"
+      ],
+      "pinyin": "nǚ ér",
+      "english_hint": "daughter",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "家人",
+      "expected_answer": [
+        "家人"
+      ],
+      "pinyin": "jiā rén",
+      "english_hint": "family members",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "父母",
+      "expected_answer": [
+        "父母"
+      ],
+      "pinyin": "fù mǔ",
+      "english_hint": "parents",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 family-related words.",
+    "mission": "Next lesson: Learn home & house vocabulary!"
+  }
+}

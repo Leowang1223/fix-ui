@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C2-L7",
+  "chapter_id": "C2",
+  "lesson_number": 7,
+  "title": "Question Words",
+  "description": "Learn simple Chinese question words.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "什麼",
+      "expected_answer": [
+        "什麼"
+      ],
+      "pinyin": "shén me",
+      "english_hint": "what",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "誰",
+      "expected_answer": [
+        "誰"
+      ],
+      "pinyin": "shuí / shéi",
+      "english_hint": "who",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "哪裡",
+      "expected_answer": [
+        "哪裡"
+      ],
+      "pinyin": "nǎ lǐ",
+      "english_hint": "where",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 4,
+      "teacher": "什麼時候",
+      "expected_answer": [
+        "什麼時候"
+      ],
+      "pinyin": "shén me shí hòu",
+      "english_hint": "when",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "為什麼",
+      "expected_answer": [
+        "為什麼"
+      ],
+      "pinyin": "wèi shén me",
+      "english_hint": "why",
+      "encouragement": "You're doing well!"
+    },
+    {
+      "id": 6,
+      "teacher": "怎麼",
+      "expected_answer": [
+        "怎麼"
+      ],
+      "pinyin": "zěn me",
+      "english_hint": "how",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "哪一個",
+      "expected_answer": [
+        "哪一個"
+      ],
+      "pinyin": "nǎ yí gè",
+      "english_hint": "which one",
+      "encouragement": "Great work!"
+    },
+    {
+      "id": 8,
+      "teacher": "多少",
+      "expected_answer": [
+        "多少"
+      ],
+      "pinyin": "duō shǎo",
+      "english_hint": "how many / how much",
+      "encouragement": "Good progress!"
+    },
+    {
+      "id": 9,
+      "teacher": "怎麼樣",
+      "expected_answer": [
+        "怎麼樣"
+      ],
+      "pinyin": "zěn me yàng",
+      "english_hint": "how about / how is it",
+      "encouragement": "Awesome!"
+    },
+    {
+      "id": 10,
+      "teacher": "哪裡人",
+      "expected_answer": [
+        "哪裡人"
+      ],
+      "pinyin": "nǎ lǐ rén",
+      "english_hint": "where (are you) from?",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned key Chinese question words.",
+    "mission": "Next lesson: Learn simple hobbies vocabulary!"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C6-L8",
+  "chapter_id": "C6",
+  "lesson_number": 8,
+  "title": "Simple Past 2",
+  "description": "Learn past tense using 上週 / 上個週末.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我上週看了電影。",
+      "expected_answer": [
+        "我上週看了電影。"
+      ],
+      "pinyin": "wǒ shàng zhōu kàn le diàn yǐng.",
+      "english_hint": "I watched a movie last week.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "我上週買了新衣服。",
+      "expected_answer": [
+        "我上週買了新衣服。"
+      ],
+      "pinyin": "wǒ shàng zhōu mǎi le xīn yī fú.",
+      "english_hint": "I bought new clothes last week.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我上週末去了海邊。",
+      "expected_answer": [
+        "我上週末去了海邊。"
+      ],
+      "pinyin": "wǒ shàng zhōu mò qù le hǎi biān.",
+      "english_hint": "I went to the beach last weekend.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "我上週末運動了。",
+      "expected_answer": [
+        "我上週末運動了。"
+      ],
+      "pinyin": "wǒ shàng zhōu mò yùn dòng le.",
+      "english_hint": "I exercised last weekend.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我上週寫了報告。",
+      "expected_answer": [
+        "我上週寫了報告。"
+      ],
+      "pinyin": "wǒ shàng zhōu xiě le bào gào.",
+      "english_hint": "I wrote a report last week.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "我上週煮了新的料理。",
+      "expected_answer": [
+        "我上週煮了新的料理。"
+      ],
+      "pinyin": "wǒ shàng zhōu zhǔ le xīn de liào lǐ.",
+      "english_hint": "I cooked a new dish last week.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "我上週玩了桌遊。",
+      "expected_answer": [
+        "我上週玩了桌遊。"
+      ],
+      "pinyin": "wǒ shàng zhōu wán le zhuō yóu.",
+      "english_hint": "I played board games last week.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我上週末睡得很多。",
+      "expected_answer": [
+        "我上週末睡得很多。"
+      ],
+      "pinyin": "wǒ shàng zhōu mò shuì de hěn duō.",
+      "english_hint": "I slept a lot last weekend.",
+      "encouragement": "Great job!"
+    },
+    {
+      "id": 9,
+      "teacher": "我上週買了禮物。",
+      "expected_answer": [
+        "我上週買了禮物。"
+      ],
+      "pinyin": "wǒ shàng zhōu mǎi le lǐ wù.",
+      "english_hint": "I bought a gift last week.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "我上週聽了一個故事。",
+      "expected_answer": [
+        "我上週聽了一個故事。"
+      ],
+      "pinyin": "wǒ shàng zhōu tīng le yí gè gù shì.",
+      "english_hint": "I listened to a story last week.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced past tense for last week and last weekend.",
+    "mission": "Next lesson: Home + family conversation!"
+  }
+}

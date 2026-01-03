@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C7-L4",
+  "chapter_id": "C7",
+  "lesson_number": 4,
+  "title": "Asking for Directions",
+  "description": "Learn natural A2 questions for asking directions.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "請問車站怎麼走？",
+      "expected_answer": [
+        "請問車站怎麼走？"
+      ],
+      "pinyin": "qǐng wèn chē zhàn zěn me zǒu?",
+      "english_hint": "Excuse me, how do I get to the station?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "附近有銀行嗎？",
+      "expected_answer": [
+        "附近有銀行嗎？"
+      ],
+      "pinyin": "fù jìn yǒu yín háng ma?",
+      "english_hint": "Is there a bank nearby?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我要去圖書館，應該往哪裡走？",
+      "expected_answer": [
+        "我要去圖書館，應該往哪裡走？"
+      ],
+      "pinyin": "wǒ yào qù tú shū guǎn, yīng gāi wǎng nǎ lǐ zǒu?",
+      "english_hint": "I want to go to the library. Which way should I go?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "從這裡到公園要多久？",
+      "expected_answer": [
+        "從這裡到公園要多久？"
+      ],
+      "pinyin": "cóng zhè lǐ dào gōng yuán yào duō jiǔ?",
+      "english_hint": "How long does it take to get to the park from here?",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "路口在哪裡？",
+      "expected_answer": [
+        "路口在哪裡？"
+      ],
+      "pinyin": "lù kǒu zài nǎ lǐ?",
+      "english_hint": "Where is the intersection?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 6,
+      "teacher": "我迷路了，你可以幫我嗎？",
+      "expected_answer": [
+        "我迷路了，你可以幫我嗎？"
+      ],
+      "pinyin": "wǒ mí lù le, nǐ kě yǐ bāng wǒ ma?",
+      "english_hint": "I'm lost, can you help me?",
+      "encouragement": "Great expression!"
+    },
+    {
+      "id": 7,
+      "teacher": "還要走很遠嗎？",
+      "expected_answer": [
+        "還要走很遠嗎？"
+      ],
+      "pinyin": "hái yào zǒu hěn yuǎn ma?",
+      "english_hint": "Do I still need to walk far?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 8,
+      "teacher": "是往前還是往後？",
+      "expected_answer": [
+        "是往前還是往後？"
+      ],
+      "pinyin": "shì wǎng qián hái shì wǎng hòu?",
+      "english_hint": "Is it forward or backward?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 9,
+      "teacher": "在便利商店旁邊嗎？",
+      "expected_answer": [
+        "在便利商店旁邊嗎？"
+      ],
+      "pinyin": "zài biàn lì shāng diàn páng biān ma?",
+      "english_hint": "Is it next to the convenience store?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 10,
+      "teacher": "你可以畫地圖給我嗎？",
+      "expected_answer": [
+        "你可以畫地圖給我嗎？"
+      ],
+      "pinyin": "nǐ kě yǐ huà dì tú gěi wǒ ma?",
+      "english_hint": "Can you draw a map for me?",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned A2-level direction questions.",
+    "mission": "Next: Transportation sentences."
+  }
+}

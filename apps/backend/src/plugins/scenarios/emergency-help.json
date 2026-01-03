@@ -1,0 +1,138 @@
+{
+  "scenario_id": "emergency-help-01",
+  "title": "Emergency Assistance",
+  "chineseTitle": "緊急求助",
+  "description": "Practice asking for emergency help in Chinese",
+  "chineseDescription": "練習中文緊急求助對話",
+  "difficulty": "A2-B1",
+  "category": "Emergency",
+  "objective": "Successfully communicate an emergency situation and get help",
+  "chineseObjective": "成功說明緊急情況並獲得幫助",
+  "estimatedTurns": 10,
+  "firstSpeaker": "user",
+  "defaultUserRole": "caller",
+  "checkpoints": [
+    {
+      "id": 1,
+      "description": "State emergency clearly",
+      "chineseDescription": "說明緊急情況",
+      "keywords": ["救命", "help", "emergency", "緊急", "需要幫助", "出事", "快來", "趕快"],
+      "weight": 25
+    },
+    {
+      "id": 2,
+      "description": "Provide location",
+      "chineseDescription": "提供位置",
+      "keywords": ["在", "地址", "location", "這裡", "附近", "street", "路", "我在", "位置"],
+      "weight": 25
+    },
+    {
+      "id": 3,
+      "description": "Describe the problem",
+      "chineseDescription": "描述問題",
+      "keywords": ["受傷", "injured", "生病", "sick", "accident", "意外", "火災", "偷", "流血", "暈倒", "昏迷"],
+      "weight": 20
+    },
+    {
+      "id": 4,
+      "description": "Answer questions from responder",
+      "chineseDescription": "回答詢問",
+      "keywords": ["是的", "yes", "沒有", "no", "不知道", "有", "幾個", "是", "對", "嗯"],
+      "weight": 15
+    },
+    {
+      "id": 5,
+      "description": "Confirm help is coming",
+      "chineseDescription": "確認救援",
+      "keywords": ["多久", "how long", "什麼時候", "when", "來", "到", "幾分鐘", "快到"],
+      "weight": 10
+    },
+    {
+      "id": 6,
+      "description": "Thank responder",
+      "chineseDescription": "感謝",
+      "keywords": ["謝謝", "謝", "好的", "知道了", "明白"],
+      "weight": 5
+    }
+  ],
+  "roles": [
+    {
+      "id": "caller",
+      "name": "Emergency Caller",
+      "chineseName": "求助者",
+      "systemPrompt": "You are calling for emergency help in Taiwan. Clearly state what happened and where you are. Describe the problem urgently but clearly. Answer questions from the responder. Stay calm. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses clear (1-2 sentences)."
+    },
+    {
+      "id": "responder",
+      "name": "Emergency Responder",
+      "chineseName": "急救人員",
+      "interviewerImage": "emergency  helper.png",
+      "interviewerId": "john",
+      "systemPrompt": "You are an emergency responder (119 operator) in Taiwan. Stay calm and professional. Ask for the location first, then details about the emergency. Reassure the caller that help is on the way. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep instructions clear and concise (1-2 sentences)."
+    }
+  ],
+  "suggestions": {
+    "byRole": {
+      "caller": [
+        {
+          "chinese": "救命！我需要幫助！",
+          "pinyin": "jiù mìng! wǒ xū yào bāng zhù!",
+          "english": "Help! I need assistance!",
+          "type": "safe",
+          "checkpointId": 1
+        },
+        {
+          "chinese": "我在中山路一號，靠近捷運站。",
+          "pinyin": "wǒ zài zhōng shān lù yī hào, kào jìn jié yùn zhàn.",
+          "english": "I'm at No. 1 Zhongshan Road, near the MRT station.",
+          "type": "safe",
+          "checkpointId": 2
+        },
+        {
+          "chinese": "有人受傷了！",
+          "pinyin": "yǒu rén shòu shāng le!",
+          "english": "Someone is injured!",
+          "type": "safe",
+          "checkpointId": 3
+        },
+        {
+          "chinese": "他在流血，呼吸困難。",
+          "pinyin": "tā zài liú xiě, hū xī kùn nán.",
+          "english": "He's bleeding and having difficulty breathing.",
+          "type": "advanced",
+          "checkpointId": 3
+        },
+        {
+          "chinese": "救護車多久會到？",
+          "pinyin": "jiù hù chē duō jiǔ huì dào?",
+          "english": "How long until the ambulance arrives?",
+          "type": "safe",
+          "checkpointId": 5
+        },
+        {
+          "chinese": "謝謝！我會等著。",
+          "pinyin": "xiè xie! wǒ huì děng zhe.",
+          "english": "Thank you! I'll wait.",
+          "type": "safe",
+          "checkpointId": 6
+        }
+      ],
+      "responder": []
+    }
+  },
+  "keyVocabulary": [
+    { "chinese": "救命", "pinyin": "jiù mìng", "english": "help/save me" },
+    { "chinese": "緊急", "pinyin": "jǐn jí", "english": "emergency" },
+    { "chinese": "受傷", "pinyin": "shòu shāng", "english": "injured" },
+    { "chinese": "救護車", "pinyin": "jiù hù chē", "english": "ambulance" },
+    { "chinese": "地址", "pinyin": "dì zhǐ", "english": "address" }
+  ],
+  "keyPatterns": [
+    { "pattern": "我需要...", "example": "我需要幫助", "english": "I need..." },
+    { "pattern": "有人...", "example": "有人受傷了", "english": "Someone..." },
+    { "pattern": "多久...？", "example": "救護車多久會到？", "english": "How long...?" }
+  ],
+  "tags": ["emergency", "health", "safety", "urgent"],
+  "createdAt": "2025-01-01T00:00:00Z",
+  "isCustom": false
+}

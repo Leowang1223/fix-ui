@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C4-L3",
+  "chapter_id": "C4",
+  "lesson_number": 3,
+  "title": "Asking Directions",
+  "description": "Learn simple phrases for asking and giving directions.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "請問，車站怎麼走？",
+      "expected_answer": [
+        "請問，車站怎麼走？"
+      ],
+      "pinyin": "qǐng wèn, chē zhàn zěn me zǒu?",
+      "english_hint": "Excuse me, how do I get to the station?",
+      "encouragement": "Great question!"
+    },
+    {
+      "id": 2,
+      "teacher": "一直走。",
+      "expected_answer": [
+        "一直走。"
+      ],
+      "pinyin": "yì zhí zǒu.",
+      "english_hint": "Go straight.",
+      "encouragement": "Nice and simple!"
+    },
+    {
+      "id": 3,
+      "teacher": "左轉。",
+      "expected_answer": [
+        "左轉。"
+      ],
+      "pinyin": "zuǒ zhuǎn.",
+      "english_hint": "Turn left.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "右轉。",
+      "expected_answer": [
+        "右轉。"
+      ],
+      "pinyin": "yòu zhuǎn.",
+      "english_hint": "Turn right.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "在右邊。",
+      "expected_answer": [
+        "在右邊。"
+      ],
+      "pinyin": "zài yòu biān.",
+      "english_hint": "It's on the right.",
+      "encouragement": "Great answer!"
+    },
+    {
+      "id": 6,
+      "teacher": "走五分鐘就到了。",
+      "expected_answer": [
+        "走五分鐘就到了。"
+      ],
+      "pinyin": "zǒu wǔ fēn zhōng jiù dào le.",
+      "english_hint": "Walk for five minutes and you’ll arrive.",
+      "encouragement": "Nice direction sentence!"
+    },
+    {
+      "id": 7,
+      "teacher": "在附近。",
+      "expected_answer": [
+        "在附近。"
+      ],
+      "pinyin": "zài fù jìn.",
+      "english_hint": "It's nearby.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我迷路了。",
+      "expected_answer": [
+        "我迷路了。"
+      ],
+      "pinyin": "wǒ mí lù le.",
+      "english_hint": "I am lost.",
+      "encouragement": "Useful phrase!"
+    },
+    {
+      "id": 9,
+      "teacher": "可以帶我去嗎？",
+      "expected_answer": [
+        "可以帶我去嗎？"
+      ],
+      "pinyin": "kě yǐ dài wǒ qù ma?",
+      "english_hint": "Can you take me there?",
+      "encouragement": "Great polite request!"
+    },
+    {
+      "id": 10,
+      "teacher": "謝謝你的幫忙。",
+      "expected_answer": [
+        "謝謝你的幫忙。"
+      ],
+      "pinyin": "xiè xie nǐ de bāng máng.",
+      "english_hint": "Thank you for your help.",
+      "encouragement": "Fantastic closing line!"
+    }
+  ],
+  "review": {
+    "summary": "You learned useful expressions for asking directions.",
+    "mission": "Next lesson: Learn transportation-related expressions!"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "lesson_id": "C1-L07",
+  "chapter_id": "C1",
+  "lesson_number": 7,
+  "title": "Food",
+  "description": "Learn simple food-related words.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "水",
+      "expected_answer": [
+        "水"
+      ],
+      "pinyin": "shuǐ",
+      "english_hint": "water",
+      "encouragement": "Great start!",
+      "tts_text": "水",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 2,
+      "teacher": "飯",
+      "expected_answer": [
+        "飯"
+      ],
+      "pinyin": "fàn",
+      "english_hint": "rice / meal",
+      "encouragement": "Nice!",
+      "tts_text": "飯",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 3,
+      "teacher": "麵",
+      "expected_answer": [
+        "麵"
+      ],
+      "pinyin": "miàn",
+      "english_hint": "noodles",
+      "encouragement": "Good job!",
+      "tts_text": "麵",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 4,
+      "teacher": "水果",
+      "expected_answer": [
+        "水果"
+      ],
+      "pinyin": "shuǐ guǒ",
+      "english_hint": "fruit",
+      "encouragement": "Excellent!",
+      "tts_text": "水果",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 5,
+      "teacher": "蔬菜",
+      "expected_answer": [
+        "蔬菜"
+      ],
+      "pinyin": "shū cài",
+      "english_hint": "vegetables",
+      "encouragement": "You're doing great!",
+      "tts_text": "蔬菜",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 6,
+      "teacher": "肉",
+      "expected_answer": [
+        "肉"
+      ],
+      "pinyin": "ròu",
+      "english_hint": "meat",
+      "encouragement": "Perfect!",
+      "tts_text": "肉",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 7,
+      "teacher": "蛋",
+      "expected_answer": [
+        "蛋"
+      ],
+      "pinyin": "dàn",
+      "english_hint": "egg",
+      "encouragement": "Nice job!",
+      "tts_text": "蛋",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 8,
+      "teacher": "牛奶",
+      "expected_answer": [
+        "牛奶"
+      ],
+      "pinyin": "niú nǎi",
+      "english_hint": "milk",
+      "encouragement": "Good work!",
+      "tts_text": "牛奶",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 9,
+      "teacher": "麵包",
+      "expected_answer": [
+        "麵包"
+      ],
+      "pinyin": "miàn bāo",
+      "english_hint": "bread",
+      "encouragement": "Awesome!",
+      "tts_text": "麵包",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 10,
+      "teacher": "糖",
+      "expected_answer": [
+        "糖"
+      ],
+      "pinyin": "táng",
+      "english_hint": "sugar / candy",
+      "encouragement": "Fantastic!",
+      "tts_text": "糖",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 common food words.",
+    "mission": "Next: Learn common places!"
+  }
+}

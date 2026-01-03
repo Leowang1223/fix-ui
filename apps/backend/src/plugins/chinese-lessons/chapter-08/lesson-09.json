@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C8-L9",
+  "chapter_id": "C8",
+  "lesson_number": 9,
+  "title": "Giving Opinions",
+  "description": "Learn A2+ sentences expressing opinions politely.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我覺得這個地方很舒服。",
+      "expected_answer": [
+        "我覺得這個地方很舒服。"
+      ],
+      "pinyin": "wǒ jué dé zhè gè dì fāng hěn shū fú.",
+      "english_hint": "I think this place is comfortable.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "在我看來，這裡的食物不錯。",
+      "expected_answer": [
+        "在我看來，這裡的食物不錯。"
+      ],
+      "pinyin": "zài wǒ kàn lái, zhè lǐ de shí wù bú cuò.",
+      "english_hint": "In my opinion, the food here is good.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我覺得這個價格有點高。",
+      "expected_answer": [
+        "我覺得這個價格有點高。"
+      ],
+      "pinyin": "wǒ jué dé zhè gè jià gé yǒu diǎn gāo.",
+      "english_hint": "I think this price is a bit high.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "對我來說，位置比價格重要。",
+      "expected_answer": [
+        "對我來說，位置比價格重要。"
+      ],
+      "pinyin": "duì wǒ lái shuō, wèi zhì bǐ jià gé zhòng yào.",
+      "english_hint": "For me, the location is more important than the price.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我比較喜歡安靜的地方。",
+      "expected_answer": [
+        "我比較喜歡安靜的地方。"
+      ],
+      "pinyin": "wǒ bǐ jiào xǐ huān ān jìng de dì fāng.",
+      "english_hint": "I prefer quiet places.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "雖然有點遠，但我覺得值得。",
+      "expected_answer": [
+        "雖然有點遠，但我覺得值得。"
+      ],
+      "pinyin": "suī rán yǒu diǎn yuǎn, dàn wǒ jué dé zhí dé.",
+      "english_hint": "Although it's a bit far, I think it's worth it.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "我不太喜歡人太多的地方。",
+      "expected_answer": [
+        "我不太喜歡人太多的地方。"
+      ],
+      "pinyin": "wǒ bú tài xǐ huān rén tài duō de dì fāng.",
+      "english_hint": "I don't really like places that are too crowded.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我覺得這樣安排比較有效率。",
+      "expected_answer": [
+        "我覺得這樣安排比較有效率。"
+      ],
+      "pinyin": "wǒ jué dé zhè yàng ān pái bǐ jiào yǒu xiào lǜ.",
+      "english_hint": "I think this arrangement is more efficient.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 9,
+      "teacher": "從我的經驗來看，早點出門比較好。",
+      "expected_answer": [
+        "從我的經驗來看，早點出門比較好。"
+      ],
+      "pinyin": "cóng wǒ de jīng yàn lái kàn, zǎo diǎn chū mén bǐ jiào hǎo.",
+      "english_hint": "From my experience, it's better to leave early.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "總的來說，我覺得今天很順利。",
+      "expected_answer": [
+        "總的來說，我覺得今天很順利。"
+      ],
+      "pinyin": "zǒng de lái shuō, wǒ jué dé jīn tiān hěn shùn lì.",
+      "english_hint": "Overall, I think today went smoothly.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned how to politely express opinions in A2+ Chinese.",
+    "mission": "Next lesson: Full A2+ conversation!"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C7-L5",
+  "chapter_id": "C7",
+  "lesson_number": 5,
+  "title": "Transportation Sentences",
+  "description": "Learn A2 sentences about using transportation.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我每天搭公車去上班。",
+      "expected_answer": [
+        "我每天搭公車去上班。"
+      ],
+      "pinyin": "wǒ měi tiān dā gōng chē qù shàng bān.",
+      "english_hint": "I take the bus to work every day.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "我喜歡坐地鐵，因為很快。",
+      "expected_answer": [
+        "我喜歡坐地鐵，因為很快。"
+      ],
+      "pinyin": "wǒ xǐ huān zuò dì tiě, yīn wèi hěn kuài.",
+      "english_hint": "I like the metro because it's fast.",
+      "encouragement": "Nice reasoning!"
+    },
+    {
+      "id": 3,
+      "teacher": "我今天要去車站接朋友。",
+      "expected_answer": [
+        "我今天要去車站接朋友。"
+      ],
+      "pinyin": "wǒ jīn tiān yào qù chē zhàn jiē péng yǒu.",
+      "english_hint": "I will go to the station to pick up my friend today.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "下班時間公車常常很擠。",
+      "expected_answer": [
+        "下班時間公車常常很擠。"
+      ],
+      "pinyin": "xià bān shí jiān gōng chē cháng cháng hěn jǐ.",
+      "english_hint": "Buses are often crowded after work.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "如果下雨，我就叫計程車。",
+      "expected_answer": [
+        "如果下雨，我就叫計程車。"
+      ],
+      "pinyin": "rú guǒ xià yǔ, wǒ jiù jiào jì chéng chē.",
+      "english_hint": "If it rains, I'll call a taxi.",
+      "encouragement": "Great conditional!"
+    },
+    {
+      "id": 6,
+      "teacher": "我明天要搭火車去外地。",
+      "expected_answer": [
+        "我明天要搭火車去外地。"
+      ],
+      "pinyin": "wǒ míng tiān yào dā huǒ chē qù wài dì.",
+      "english_hint": "I'm taking a train out of town tomorrow.",
+      "encouragement": "Nice future tense!"
+    },
+    {
+      "id": 7,
+      "teacher": "我常常在車上聽音樂。",
+      "expected_answer": [
+        "我常常在車上聽音樂。"
+      ],
+      "pinyin": "wǒ cháng cháng zài chē shàng tīng yīn yuè.",
+      "english_hint": "I often listen to music on the bus/train.",
+      "encouragement": "Good habit sentence!"
+    },
+    {
+      "id": 8,
+      "teacher": "我要轉車一次才能到公司。",
+      "expected_answer": [
+        "我要轉車一次才能到公司。"
+      ],
+      "pinyin": "wǒ yào zhuǎn chē yí cì cái néng dào gōng sī.",
+      "english_hint": "I need to transfer once to get to my office.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "車票可以用手機買。",
+      "expected_answer": [
+        "車票可以用手機買。"
+      ],
+      "pinyin": "chē piào kě yǐ yòng shǒu jī mǎi.",
+      "english_hint": "You can buy the ticket with your phone.",
+      "encouragement": "Nice sentence!"
+    },
+    {
+      "id": 10,
+      "teacher": "我怕坐飛機，因為太高了。",
+      "expected_answer": [
+        "我怕坐飛機，因為太高了。"
+      ],
+      "pinyin": "wǒ pà zuò fēi jī, yīn wèi tài gāo le.",
+      "english_hint": "I'm afraid of flying because it's too high.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced A2 transportation sentences.",
+    "mission": "Next: Giving suggestions (A2)."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C9-L3",
+  "chapter_id": "C9",
+  "lesson_number": 3,
+  "title": "Workplace Conversation Patterns",
+  "description": "Learn useful B1-entry dialogue structures used in real work life.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "A：你看過我寄給你的文件了嗎？",
+      "expected_answer": [
+        "你看過我寄給你的文件了嗎？"
+      ],
+      "pinyin": "A: nǐ kàn guò wǒ jì gěi nǐ de wén jiàn le ma?",
+      "english_hint": "Did you see the file I sent you?",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "B：看過了，我等等會給你回覆。",
+      "expected_answer": [
+        "看過了，我等等會給你回覆。"
+      ],
+      "pinyin": "B: kàn guò le, wǒ děng děng huì gěi nǐ huí fù.",
+      "english_hint": "Yes, I’ll reply to you later.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "A：有沒有需要我再補充的資料？",
+      "expected_answer": [
+        "有沒有需要我再補充的資料？"
+      ],
+      "pinyin": "A: yǒu méi yǒu xū yào wǒ zài bǔ chōng de zī liào?",
+      "english_hint": "Do you need any extra information from me?",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "B：目前看起來沒有問題。",
+      "expected_answer": [
+        "目前看起來沒有問題。"
+      ],
+      "pinyin": "B: mù qián kàn qǐ lái méi yǒu wèn tí.",
+      "english_hint": "It seems fine at the moment.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "A：好的，有需要再跟我說。",
+      "expected_answer": [
+        "好的，有需要再跟我說。"
+      ],
+      "pinyin": "A: hǎo de, yǒu xū yào zài gēn wǒ shuō.",
+      "english_hint": "Alright, let me know if you need anything.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "B：明天的會議你有空嗎？",
+      "expected_answer": [
+        "明天的會議你有空嗎？"
+      ],
+      "pinyin": "B: míng tiān de huì yì nǐ yǒu kòng ma?",
+      "english_hint": "Are you available for tomorrow's meeting?",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "A：我應該可以，但我需要先調整一下行程。",
+      "expected_answer": [
+        "我應該可以，但我需要先調整一下行程。"
+      ],
+      "pinyin": "A: wǒ yīng gāi kě yǐ, dàn wǒ xū yào xiān tiáo zhěng yí xià xíng chéng.",
+      "english_hint": "I should be able to, but I need to adjust my schedule first.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "B：沒問題，我們再確認時間。",
+      "expected_answer": [
+        "沒問題，我們再確認時間。"
+      ],
+      "pinyin": "B: méi wèn tí, wǒ men zài què rèn shí jiān.",
+      "english_hint": "No problem, let's confirm the time later.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "A：如果有新的通知，我會馬上告訴你。",
+      "expected_answer": [
+        "如果有新的通知，我會馬上告訴你。"
+      ],
+      "pinyin": "A: rú guǒ yǒu xīn de tōng zhī, wǒ huì mǎ shàng gào sù nǐ.",
+      "english_hint": "If there's new information, I will let you know immediately.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "B：好，謝謝你的協助！",
+      "expected_answer": [
+        "好，謝謝你的協助！"
+      ],
+      "pinyin": "B: hǎo, xiè xie nǐ de xié zhù!",
+      "english_hint": "Okay, thank you for your help!",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You practiced natural workplace conversations at B1-entry level.",
+    "mission": "Next lesson: Expressing past experiences ('I once...')."
+  }
+}

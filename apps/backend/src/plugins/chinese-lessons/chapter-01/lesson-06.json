@@ -1,0 +1,133 @@
+{
+  "lesson_id": "C1-L06",
+  "chapter_id": "C1",
+  "lesson_number": 6,
+  "title": "Colors",
+  "description": "Learn basic color words.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "紅色",
+      "expected_answer": [
+        "紅色"
+      ],
+      "pinyin": "hóng sè",
+      "english_hint": "red",
+      "encouragement": "Great job!",
+      "tts_text": "紅色",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 2,
+      "teacher": "藍色",
+      "expected_answer": [
+        "藍色"
+      ],
+      "pinyin": "lán sè",
+      "english_hint": "blue",
+      "encouragement": "Nice!",
+      "tts_text": "藍色",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 3,
+      "teacher": "黃色",
+      "expected_answer": [
+        "黃色"
+      ],
+      "pinyin": "huáng sè",
+      "english_hint": "yellow",
+      "encouragement": "Good work!",
+      "tts_text": "黃色",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 4,
+      "teacher": "綠色",
+      "expected_answer": [
+        "綠色"
+      ],
+      "pinyin": "lǜ sè",
+      "english_hint": "green",
+      "encouragement": "Excellent!",
+      "tts_text": "綠色",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 5,
+      "teacher": "黑色",
+      "expected_answer": [
+        "黑色"
+      ],
+      "pinyin": "hēi sè",
+      "english_hint": "black",
+      "encouragement": "You're doing great!",
+      "tts_text": "黑色",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 6,
+      "teacher": "白色",
+      "expected_answer": [
+        "白色"
+      ],
+      "pinyin": "bái sè",
+      "english_hint": "white",
+      "encouragement": "Perfect!",
+      "tts_text": "白色",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 7,
+      "teacher": "橘色",
+      "expected_answer": [
+        "橘色"
+      ],
+      "pinyin": "jú sè",
+      "english_hint": "orange",
+      "encouragement": "Good job!",
+      "tts_text": "橘色",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 8,
+      "teacher": "粉紅色",
+      "expected_answer": [
+        "粉紅色"
+      ],
+      "pinyin": "fěn hóng sè",
+      "english_hint": "pink",
+      "encouragement": "Nice!",
+      "tts_text": "粉紅色",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 9,
+      "teacher": "紫色",
+      "expected_answer": [
+        "紫色"
+      ],
+      "pinyin": "zǐ sè",
+      "english_hint": "purple",
+      "encouragement": "Great!",
+      "tts_text": "紫色",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    },
+    {
+      "id": 10,
+      "teacher": "咖啡色",
+      "expected_answer": [
+        "咖啡色"
+      ],
+      "pinyin": "kā fēi sè",
+      "english_hint": "brown",
+      "encouragement": "Awesome!",
+      "tts_text": "咖啡色",
+      "tts_voice": "zh-TW-HsiaoChenNeural"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 basic colors.",
+    "mission": "Next: Learn food vocabulary!"
+  }
+}

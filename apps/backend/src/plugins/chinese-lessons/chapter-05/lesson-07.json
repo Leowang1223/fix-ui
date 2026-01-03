@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C5-L7",
+  "chapter_id": "C5",
+  "lesson_number": 7,
+  "title": "Adjectives",
+  "description": "Learn new adjectives to describe things.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "便宜",
+      "expected_answer": [
+        "便宜"
+      ],
+      "pinyin": "pián yí",
+      "english_hint": "cheap",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "漂亮",
+      "expected_answer": [
+        "漂亮"
+      ],
+      "pinyin": "piào liang",
+      "english_hint": "beautiful",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "難",
+      "expected_answer": [
+        "難"
+      ],
+      "pinyin": "nán",
+      "english_hint": "difficult",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "容易",
+      "expected_answer": [
+        "容易"
+      ],
+      "pinyin": "róng yì",
+      "english_hint": "easy",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "乾淨",
+      "expected_answer": [
+        "乾淨"
+      ],
+      "pinyin": "gān jìng",
+      "english_hint": "clean",
+      "encouragement": "Nice description!"
+    },
+    {
+      "id": 6,
+      "teacher": "髒",
+      "expected_answer": [
+        "髒"
+      ],
+      "pinyin": "zāng",
+      "english_hint": "dirty",
+      "encouragement": "Good use!"
+    },
+    {
+      "id": 7,
+      "teacher": "安靜",
+      "expected_answer": [
+        "安靜"
+      ],
+      "pinyin": "ān jìng",
+      "english_hint": "quiet",
+      "encouragement": "Great word!"
+    },
+    {
+      "id": 8,
+      "teacher": "吵",
+      "expected_answer": [
+        "吵"
+      ],
+      "pinyin": "chǎo",
+      "english_hint": "noisy",
+      "encouragement": "Nice adjective!"
+    },
+    {
+      "id": 9,
+      "teacher": "特別",
+      "expected_answer": [
+        "特別"
+      ],
+      "pinyin": "tè bié",
+      "english_hint": "special",
+      "encouragement": "Awesome!"
+    },
+    {
+      "id": 10,
+      "teacher": "普通",
+      "expected_answer": [
+        "普通"
+      ],
+      "pinyin": "pǔ tōng",
+      "english_hint": "ordinary",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 brand-new adjectives.",
+    "mission": "Next lesson: Learn comparisons!"
+  }
+}

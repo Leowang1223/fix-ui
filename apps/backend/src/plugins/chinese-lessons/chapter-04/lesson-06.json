@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C4-L6",
+  "chapter_id": "C4",
+  "lesson_number": 6,
+  "title": "Ordering Food",
+  "description": "Learn basic ordering phrases for restaurants.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "請給我菜單。",
+      "expected_answer": [
+        "請給我菜單。"
+      ],
+      "pinyin": "qǐng gěi wǒ cài dān.",
+      "english_hint": "Please give me the menu.",
+      "encouragement": "Great start!"
+    },
+    {
+      "id": 2,
+      "teacher": "我要點餐。",
+      "expected_answer": [
+        "我要點餐。"
+      ],
+      "pinyin": "wǒ yào diǎn cān.",
+      "english_hint": "I want to order food.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "這個好吃嗎？",
+      "expected_answer": [
+        "這個好吃嗎？"
+      ],
+      "pinyin": "zhè ge hǎo chī ma?",
+      "english_hint": "Is this delicious?",
+      "encouragement": "Good question!"
+    },
+    {
+      "id": 4,
+      "teacher": "我要一份炒飯。",
+      "expected_answer": [
+        "我要一份炒飯。"
+      ],
+      "pinyin": "wǒ yào yí fèn chǎo fàn.",
+      "english_hint": "I want one fried rice.",
+      "encouragement": "Excellent choice!"
+    },
+    {
+      "id": 5,
+      "teacher": "請不要太鹹。",
+      "expected_answer": [
+        "請不要太鹹。"
+      ],
+      "pinyin": "qǐng bú yào tài xián.",
+      "english_hint": "Please don't make it too salty.",
+      "encouragement": "Great request!"
+    },
+    {
+      "id": 6,
+      "teacher": "可以再來一杯水嗎？",
+      "expected_answer": [
+        "可以再來一杯水嗎？"
+      ],
+      "pinyin": "kě yǐ zài lái yì bēi shuǐ ma?",
+      "english_hint": "Can I have another glass of water?",
+      "encouragement": "Nice polite ask!"
+    },
+    {
+      "id": 7,
+      "teacher": "我要外帶。",
+      "expected_answer": [
+        "我要外帶。"
+      ],
+      "pinyin": "wǒ yào wài dài.",
+      "english_hint": "I want it to go.",
+      "encouragement": "Good phrase!"
+    },
+    {
+      "id": 8,
+      "teacher": "請快一點，謝謝。",
+      "expected_answer": [
+        "請快一點，謝謝。"
+      ],
+      "pinyin": "qǐng kuài yì diǎn, xiè xie.",
+      "english_hint": "Please be faster, thank you.",
+      "encouragement": "Great sentence!"
+    },
+    {
+      "id": 9,
+      "teacher": "可以結帳嗎？",
+      "expected_answer": [
+        "可以結帳嗎？"
+      ],
+      "pinyin": "kě yǐ jié zhàng ma?",
+      "english_hint": "Can I pay the bill?",
+      "encouragement": "Perfect!"
+    },
+    {
+      "id": 10,
+      "teacher": "謝謝，今天的餐很好吃！",
+      "expected_answer": [
+        "謝謝，今天的餐很好吃！"
+      ],
+      "pinyin": "xiè xie, jīn tiān de cān hěn hǎo chī!",
+      "english_hint": "Thank you, today's food was very good!",
+      "encouragement": "Fantastic compliment!"
+    }
+  ],
+  "review": {
+    "summary": "You learned essential phrases for ordering food.",
+    "mission": "Next lesson: Learn small talk phrases!"
+  }
+}

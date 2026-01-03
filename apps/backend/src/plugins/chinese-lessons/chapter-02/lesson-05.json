@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C2-L5",
+  "chapter_id": "C2",
+  "lesson_number": 5,
+  "title": "Emotions",
+  "description": "Learn basic words for expressing emotions.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "開心",
+      "expected_answer": [
+        "開心"
+      ],
+      "pinyin": "kāi xīn",
+      "english_hint": "happy",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "難過",
+      "expected_answer": [
+        "難過"
+      ],
+      "pinyin": "nán guò",
+      "english_hint": "sad",
+      "encouragement": "Nice job!"
+    },
+    {
+      "id": 3,
+      "teacher": "生氣",
+      "expected_answer": [
+        "生氣"
+      ],
+      "pinyin": "shēng qì",
+      "english_hint": "angry",
+      "encouragement": "Good work!"
+    },
+    {
+      "id": 4,
+      "teacher": "害怕",
+      "expected_answer": [
+        "害怕"
+      ],
+      "pinyin": "hài pà",
+      "english_hint": "scared",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "累",
+      "expected_answer": [
+        "累"
+      ],
+      "pinyin": "lèi",
+      "english_hint": "tired",
+      "encouragement": "You're doing great!"
+    },
+    {
+      "id": 6,
+      "teacher": "無聊",
+      "expected_answer": [
+        "無聊"
+      ],
+      "pinyin": "wú liáo",
+      "english_hint": "bored",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "緊張",
+      "expected_answer": [
+        "緊張"
+      ],
+      "pinyin": "jǐn zhāng",
+      "english_hint": "nervous",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 8,
+      "teacher": "興奮",
+      "expected_answer": [
+        "興奮"
+      ],
+      "pinyin": "xīng fèn",
+      "english_hint": "excited",
+      "encouragement": "Fantastic!"
+    },
+    {
+      "id": 9,
+      "teacher": "放心",
+      "expected_answer": [
+        "放心"
+      ],
+      "pinyin": "fàng xīn",
+      "english_hint": "relieved",
+      "encouragement": "Great progress!"
+    },
+    {
+      "id": 10,
+      "teacher": "生病",
+      "expected_answer": [
+        "生病"
+      ],
+      "pinyin": "shēng bìng",
+      "english_hint": "sick",
+      "encouragement": "Wonderful!"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 emotion words.",
+    "mission": "Next lesson: Learn weather words!"
+  }
+}

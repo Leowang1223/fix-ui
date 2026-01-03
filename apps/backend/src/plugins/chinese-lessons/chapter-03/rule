@@ -1,0 +1,75 @@
+{
+  "playbackMode": "tts",
+  "lessons": [
+    {
+      "lesson_id": "C3-L01",
+      "title": "Verb 是 (to be)",
+      "description": "Learn how to use 是 in simple sentences.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C3-L02",
+      "title": "Verb 有 (to have)",
+      "description": "Learn how to use 有 to talk about having things.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C3-L03",
+      "title": "Location with 在",
+      "description": "Use 在 to say where people or things are.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C3-L04",
+      "title": "Like and Can",
+      "description": "Use 喜歡, 會, and 可以 in simple sentences.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C3-L05",
+      "title": "Time Expressions",
+      "description": "Make simple sentences with time words.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C3-L06",
+      "title": "Polite Requests",
+      "description": "Use 請, 可以, and 好嗎 to make polite sentences.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C3-L07",
+      "title": "Shopping Phrases",
+      "description": "Use simple Chinese to shop and ask prices.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C3-L08",
+      "title": "At the Restaurant",
+      "description": "Use simple Chinese in a restaurant.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C3-L09",
+      "title": "Home Routine",
+      "description": "Talk about simple daily routine at home.",
+      "stepCount": 10,
+      "enable": true
+    },
+    {
+      "lesson_id": "C3-L10",
+      "title": "Short Dialogue Practice",
+      "description": "Practice short, everyday dialogues.",
+      "stepCount": 10,
+      "enable": true
+    }
+  ]
+}

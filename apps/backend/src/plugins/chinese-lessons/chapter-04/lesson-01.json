@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C4-L1",
+  "chapter_id": "C4",
+  "lesson_number": 1,
+  "title": "Common Buildings",
+  "description": "Learn names of frequent places in a city.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "郵局",
+      "expected_answer": [
+        "郵局"
+      ],
+      "pinyin": "yóu jú",
+      "english_hint": "post office",
+      "encouragement": "Great start!"
+    },
+    {
+      "id": 2,
+      "teacher": "銀行",
+      "expected_answer": [
+        "銀行"
+      ],
+      "pinyin": "yín háng",
+      "english_hint": "bank",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "便利商店",
+      "expected_answer": [
+        "便利商店"
+      ],
+      "pinyin": "biàn lì shāng diàn",
+      "english_hint": "convenience store",
+      "encouragement": "Good job!"
+    },
+    {
+      "id": 4,
+      "teacher": "圖書館",
+      "expected_answer": [
+        "圖書館"
+      ],
+      "pinyin": "tú shū guǎn",
+      "english_hint": "library",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "車站",
+      "expected_answer": [
+        "車站"
+      ],
+      "pinyin": "chē zhàn",
+      "english_hint": "station",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "百貨公司",
+      "expected_answer": [
+        "百貨公司"
+      ],
+      "pinyin": "bǎi huò gōng sī",
+      "english_hint": "department store",
+      "encouragement": "Nice work!"
+    },
+    {
+      "id": 7,
+      "teacher": "市場",
+      "expected_answer": [
+        "市場"
+      ],
+      "pinyin": "shì chǎng",
+      "english_hint": "market",
+      "encouragement": "Awesome!"
+    },
+    {
+      "id": 8,
+      "teacher": "公園",
+      "expected_answer": [
+        "公園"
+      ],
+      "pinyin": "gōng yuán",
+      "english_hint": "park",
+      "encouragement": "Great choice!"
+    },
+    {
+      "id": 9,
+      "teacher": "醫院",
+      "expected_answer": [
+        "醫院"
+      ],
+      "pinyin": "yī yuàn",
+      "english_hint": "hospital",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 10,
+      "teacher": "旅館",
+      "expected_answer": [
+        "旅館"
+      ],
+      "pinyin": "lǚ guǎn",
+      "english_hint": "hotel",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned 10 common building names.",
+    "mission": "Next lesson: Learn directions!"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "lesson_id": "C9-L6",
+  "chapter_id": "C9",
+  "lesson_number": 6,
+  "title": "Future Plans",
+  "description": "Learn B1-entry sentences about plans and preparation.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "我打算下個月開始新的專案。",
+      "expected_answer": [
+        "我打算下個月開始新的專案。"
+      ],
+      "pinyin": "wǒ dǎ suàn xià gè yuè kāi shǐ xīn de zhuān àn.",
+      "english_hint": "I plan to start a new project next month.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 2,
+      "teacher": "我希望能在半年內達成目標。",
+      "expected_answer": [
+        "我希望能在半年內達成目標。"
+      ],
+      "pinyin": "wǒ xī wàng néng zài bàn nián nèi dá chéng mù biāo.",
+      "english_hint": "I hope to reach my goal within half a year.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 3,
+      "teacher": "我會慢慢調整自己的步調。",
+      "expected_answer": [
+        "我會慢慢調整自己的步調。"
+      ],
+      "pinyin": "wǒ huì màn màn tiáo zhěng zì jǐ de bù diào.",
+      "english_hint": "I will gradually adjust my pace.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 4,
+      "teacher": "為了提升能力，我準備上幾個課程。",
+      "expected_answer": [
+        "為了提升能力，我準備上幾個課程。"
+      ],
+      "pinyin": "wèi le tí shēng néng lì, wǒ zhǔn bèi shàng jǐ gè kè chéng.",
+      "english_hint": "To improve my skills, I plan to take several courses.",
+      "encouragement": "Excellent!"
+    },
+    {
+      "id": 5,
+      "teacher": "我打算先完成重要的事情，再開始新的。",
+      "expected_answer": [
+        "我打算先完成重要的事情，再開始新的。"
+      ],
+      "pinyin": "wǒ dǎ suàn xiān wán chéng zhòng yào de shì qíng, zài kāi shǐ xīn de.",
+      "english_hint": "I plan to finish the important tasks before starting new ones.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 6,
+      "teacher": "如果一切順利，我會提前完成。",
+      "expected_answer": [
+        "如果一切順利，我會提前完成。"
+      ],
+      "pinyin": "rú guǒ yí qiè shùn lì, wǒ huì tí qián wán chéng.",
+      "english_hint": "If everything goes smoothly, I will finish early.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 7,
+      "teacher": "我希望能找到更有效率的方式工作。",
+      "expected_answer": [
+        "我希望能找到更有效率的方式工作。"
+      ],
+      "pinyin": "wǒ xī wàng néng zhǎo dào gèng yǒu xiào lǜ de fāng shì gōng zuò.",
+      "english_hint": "I hope to find a more efficient way to work.",
+      "encouragement": "Good!"
+    },
+    {
+      "id": 8,
+      "teacher": "我也打算增加休息時間，避免太累。",
+      "expected_answer": [
+        "我也打算增加休息時間，避免太累。"
+      ],
+      "pinyin": "wǒ yě dǎ suàn zēng jiā xiū xí shí jiān, bì miǎn tài lèi.",
+      "english_hint": "I also plan to increase rest time to avoid getting too tired.",
+      "encouragement": "Great!"
+    },
+    {
+      "id": 9,
+      "teacher": "我會把計畫寫下來，這樣比較清楚。",
+      "expected_answer": [
+        "我會把計畫寫下來，這樣比較清楚。"
+      ],
+      "pinyin": "wǒ huì bǎ jì huà xiě xià lái, zhè yàng bǐ jiào qīng chǔ.",
+      "english_hint": "I'll write down the plan so it becomes clearer.",
+      "encouragement": "Nice!"
+    },
+    {
+      "id": 10,
+      "teacher": "總之，我想一步一步做到最好。",
+      "expected_answer": [
+        "總之，我想一步一步做到最好。"
+      ],
+      "pinyin": "zǒng zhī, wǒ xiǎng yí bù yí bù zuò dào zuì hǎo.",
+      "english_hint": "In short, I want to do my best step by step.",
+      "encouragement": "Fantastic!"
+    }
+  ],
+  "review": {
+    "summary": "You learned B1-entry future planning expressions.",
+    "mission": "Next: explanations & clarifications."
+  }
+}

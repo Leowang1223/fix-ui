@@ -55,6 +55,7 @@ apps/backend/dist/
 apps/backend/server.log
 apps/backend/out.pcm
 apps/backend/out.wav
+apps/backend/logs/
 
 # Frontend (Next.js)
 apps/web/node_modules/
