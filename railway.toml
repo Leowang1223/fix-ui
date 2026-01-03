@@ -6,3 +6,7 @@ dockerfilePath = "Dockerfile"
 startCommand = "node apps/backend/dist/server.js"
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
+
+# Ensure Railway uses this configuration
+[env]
+# Railway should inject these from the dashboard

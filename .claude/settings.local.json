@@ -47,7 +47,15 @@
       "Bash(git submodule status:*)",
       "Bash(xargs -I {} bash -c 'echo \"\"Dir: {}\"\" && ls \"\"c:\\\\Users\\\\wls09\\\\Desktop\\\\chiness-interview-main\\\\apps\\\\web\\\\app\\\\{}\"\" | head -5')",
       "Bash(cat:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(git push:*)",
+      "Bash(git remote add:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(git reset:*)",
+      "Bash(git init:*)",
+      "Bash(test:*)",
+      "Bash(git ls-remote:*)",
+      "Bash(docker --version:*)"
     ],
     "deny": [],
     "ask": []
