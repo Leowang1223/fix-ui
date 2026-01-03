@@ -1,29 +1,29 @@
-﻿import path from 'path';
+import path from 'path';
 import { existsSync } from 'fs';
 
-// 解析插件目錄路徑
+// Resolve plugin directory path
 export function resolveInterviewDir(interviewType: string, baseDir: string): string {
-  // 檢查是否為中文課程
+  // Check if it's a Chinese lesson
   if (interviewType.startsWith('L') && /^\d+$/.test(interviewType.substring(1))) {
-    // 中文課程：L1, L2, etc.
+    // Chinese lessons: L1, L2, etc.
     const chineseLessonsDir = path.resolve(baseDir, 'plugins', 'chinese-lessons');
     if (existsSync(chineseLessonsDir)) return chineseLessonsDir;
   }
 
-  // 開發環境路徑
+  // Development environment path
   const devPath = path.resolve(baseDir, 'plugins', 'chinese-lessons', interviewType);
   if (existsSync(devPath)) return devPath;
 
-  // 生產環境路徑
+  // Production environment path
   const prodPath = path.resolve(baseDir, 'plugins', 'interview-types', interviewType);
   if (existsSync(prodPath)) return prodPath;
 
-  // 回退路徑
+  // Fallback path
   const fallbackPath = path.resolve(baseDir, '../../src', 'plugins', 'chinese-lessons', interviewType);
   return fallbackPath;
 }
 
-// 格式化 API 響應
+// Format API response
 export function formatApiResponse<T>(
   success: boolean,
   data?: T,
@@ -39,7 +39,7 @@ export function formatApiResponse<T>(
   };
 }
 
-// 處理 API 錯誤
+// Handle API error
 export function handleApiError(error: any): any {
   console.error('API Error:', error);
 
@@ -48,17 +48,17 @@ export function handleApiError(error: any): any {
   }
 
   if (error.name === 'ValidationError') {
-    return formatApiResponse(false, null, '輸入驗證錯誤', 'VALIDATION_ERROR');
+    return formatApiResponse(false, null, 'Input validation error', 'VALIDATION_ERROR');
   }
 
   if (error.code === 'ENOENT') {
-    return formatApiResponse(false, null, '檔案不存在', 'FILE_NOT_FOUND');
+    return formatApiResponse(false, null, 'File not found', 'FILE_NOT_FOUND');
   }
 
-  return formatApiResponse(false, null, '內部伺服器錯誤', 'INTERNAL_ERROR');
+  return formatApiResponse(false, null, 'Internal server error', 'INTERNAL_ERROR');
 }
 
-// 自定義 API 錯誤類
+// Custom API error class
 export class ApiError extends Error {
   statusCode: number;
   code?: string;

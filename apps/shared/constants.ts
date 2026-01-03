@@ -1,20 +1,20 @@
-// ?±‰∫´Â∏∏È?ÂÆöÁæ©
+// Shared constants definition
 
-// API Á´ØÈ?Â∏∏È?
+// API endpoints constants
 export const API_ENDPOINTS = {
-  // ?èÈ??∏È?
+  // Question bank management
   QUESTIONS: '/api/questions',
   QUESTIONS_BY_TYPE: '/api/questions/:type',
 
-  // ?ÜÊ??∏È?
+  // Analysis service
   ANALYZE: '/api/analyze',
   GENERATE_REPORT: '/api/generate-report',
 
-  // ?ÉË©±?∏È?
+  // Session management
   SESSION: '/api/session',
   SESSION_BY_ID: '/api/session/:id',
 
-  // ?àÊú¨??API
+  // Version 1 API
   V1: {
     ANALYZE: '/v1/analyze',
     GENERATE_REPORT: '/v1/generate-report',
@@ -22,7 +22,7 @@ export const API_ENDPOINTS = {
   }
 } as const;
 
-// HTTP ?Ä?ãÁ¢ºÂ∏∏È?
+// HTTP status codes constants
 export const HTTP_STATUS = {
   OK: 200,
   CREATED: 201,
@@ -34,7 +34,7 @@ export const HTTP_STATUS = {
   INTERNAL_SERVER_ERROR: 500
 } as const;
 
-// ?ØË™§‰ª?¢ºÂ∏∏È?
+// Error codes constants
 export const ERROR_CODES = {
   INVALID_INPUT: 'INVALID_INPUT',
   SESSION_NOT_FOUND: 'SESSION_NOT_FOUND',
@@ -45,7 +45,7 @@ export const ERROR_CODES = {
   API_KEY_MISSING: 'API_KEY_MISSING'
 } as const;
 
-// ?¢Ë©¶È°ûÂ?Â∏∏È?
+// Interview types constants
 export const INTERVIEW_TYPES = {
   SELF_INTRO: 'self_intro',
   CHINESE_TEST: 'chinese-lessons',
@@ -53,7 +53,7 @@ export const INTERVIEW_TYPES = {
   BEHAVIORAL: 'behavioral'
 } as const;
 
-// Ë©ïÂ?Ê®ôÊ?Â∏∏È?
+// Scoring criteria constants
 export const SCORING = {
   MAX_SCORE: 100,
   MIN_SCORE: 0,
@@ -66,14 +66,14 @@ export const SCORING = {
   }
 } as const;
 
-// ?ÇÈ?Â∏∏È?ÔºàÁ?Ôº?
+// Time constants (seconds)
 export const TIME_LIMITS = {
-  THINKING_TIME_MAX: 300, // 5?ÜÈ?
-  ANSWERING_TIME_MAX: 600, // 10?ÜÈ?
-  SESSION_TIMEOUT: 3600    // 1Â∞èÊ?
+  THINKING_TIME_MAX: 300, // 5 minutes
+  ANSWERING_TIME_MAX: 600, // 10 minutes
+  SESSION_TIMEOUT: 3600    // 1 hour
 } as const;
 
-// Ê™îÊ?Ë∑ØÂ?Â∏∏È?
+// File paths constants
 export const PATHS = {
   LOGS: 'logs',
   SESSIONS: 'logs/sessions',
@@ -81,7 +81,7 @@ export const PATHS = {
   CHINESE_TEST_CONTEXT: 'plugins/chinese-lessons'
 } as const;
 
-// ?∞Â?ËÆäÊï∏Â∏∏È?
+// Environment variables constants
 export const ENV_VARS = {
   NODE_ENV: 'NODE_ENV',
   PORT: 'PORT',
