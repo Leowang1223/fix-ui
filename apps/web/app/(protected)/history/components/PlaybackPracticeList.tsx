@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { Target, FileText, RefreshCw, Star, Lightbulb, ChevronDown, ChevronRight } from 'lucide-react'
 import type { PlaybackLesson } from '../utils/playbackStorage'
 
 interface Props {
@@ -29,7 +30,9 @@ export default function PlaybackPracticeList({ lessons }: Props) {
   if (lessons.length === 0) {
     return (
       <div className='text-center py-20'>
-        <div className='text-6xl mb-4'>🎯</div>
+        <div className='flex justify-center mb-4'>
+          <Target className='h-24 w-24 text-gray-400' />
+        </div>
         <h2 className='text-2xl font-bold text-gray-700 mb-2'>No Practice History</h2>
         <p className='text-gray-600 mb-6'>Complete some lessons to start practicing!</p>
         <button
@@ -68,14 +71,23 @@ export default function PlaybackPracticeList({ lessons }: Props) {
                     {lesson.lessonId}: {lesson.lessonTitle}
                   </h3>
                   <div className="flex gap-4 text-sm text-gray-600 mt-1">
-                    <span>📝 {lesson.questions.length} Questions</span>
-                    <span>🔄 {lesson.totalPracticeCount} Total Practices</span>
-                    <span>⭐ Avg: {lesson.averageScore}</span>
+                    <span className="flex items-center gap-1">
+                      <FileText className="h-4 w-4" />
+                      {lesson.questions.length} Questions
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <RefreshCw className="h-4 w-4" />
+                      {lesson.totalPracticeCount} Total Practices
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Star className="h-4 w-4" />
+                      Avg: {lesson.averageScore}
+                    </span>
                   </div>
                 </div>
               </div>
-              <div className="text-3xl text-gray-400">
-                {isExpanded ? '▼' : '▶'}
+              <div className="text-gray-400">
+                {isExpanded ? <ChevronDown className="h-8 w-8" /> : <ChevronRight className="h-8 w-8" />}
               </div>
             </div>
 
@@ -100,19 +112,21 @@ export default function PlaybackPracticeList({ lessons }: Props) {
                             </span>
                           </div>
                           {question.englishHint && (
-                            <div className="text-sm text-gray-500 mt-1 ml-10">
-                              💡 {question.englishHint}
+                            <div className="text-sm text-gray-500 mt-1 ml-10 flex items-center gap-1">
+                              <Lightbulb className="h-4 w-4" />
+                              {question.englishHint}
                             </div>
                           )}
                         </div>
                         <div className="flex items-center gap-4">
                           <div className="text-center">
-                            <div className={`text-2xl font-bold ${
+                            <div className={`text-2xl font-bold flex items-center gap-1 ${
                               question.highestScore >= 90 ? 'text-green-600' :
                               question.highestScore >= 75 ? 'text-blue-600' :
                               'text-orange-600'
                             }`}>
-                              ⭐ {question.highestScore}
+                              <Star className="h-6 w-6" fill="currentColor" />
+                              {question.highestScore}
                             </div>
                             <div className="text-xs text-gray-500">Highest</div>
                           </div>

@@ -1,120 +1,154 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { Mail, Lock, User, AlertCircle, Loader2 } from 'lucide-react'
 import FancyButton from '@/components/ui/FancyButton'
-import { setAuthCookies } from '@/lib/cookies'
+import { createClient } from '@/lib/supabase/client'
 
 export default function RegisterPage() {
-  const router = useRouter()
-  const [form, setForm] = useState({ name: '', email: '', password: '', confirm: '' })
+  const [form, setForm] = useState({ name: '', email: '', password: '' })
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+  const router = useRouter()
+  const supabase = createClient()
 
-  const updateField = (key: keyof typeof form) => (event: React.ChangeEvent<HTMLInputElement>) => {
-    setForm(prev => ({ ...prev, [key]: event.target.value }))
-  }
-
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault()
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
     setError('')
 
-    if (!form.name.trim()) {
-      setError('Please enter your name.')
-      return
-    }
-    if (form.password.length < 6) {
-      setError('Password must be at least 6 characters.')
-      return
-    }
-    if (form.password !== form.confirm) {
-      setError('Passwords do not match.')
-      return
-    }
+    try {
+      const { data, error: signUpError } = await supabase.auth.signUp({
+        email: form.email,
+        password: form.password,
+        options: {
+          data: { full_name: form.name },
+          emailRedirectTo: `${window.location.origin}/dashboard`
+        }
+      })
 
-    setLoading(true)
-    await new Promise(resolve => setTimeout(resolve, 600))
-    setAuthCookies(form.email.trim())
-    router.push('/dashboard')
+      if (signUpError) throw signUpError
+
+      if (data.user) {
+        const { error: profileError } = await supabase
+          .from('profiles')
+          .insert({
+            id: data.user.id,
+            email: form.email,
+            full_name: form.name,
+            provider: 'email'
+          })
+
+        if (profileError) console.error('Profile creation error:', profileError)
+      }
+
+      router.push('/dashboard')
+    } catch (err: any) {
+      setError(err.message || 'Registration failed')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center px-6 py-16">
-      <div className="glass-card w-full max-w-5xl p-10 grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-        <section className="space-y-6">
-          <p className="chip">Talk Learning</p>
-          <h1 className="hero-title text-left">sign up</h1>
-          <p className="hero-subtitle text-left">Build your personalised Mandarin journey with glass-smooth UI.</p>
-          <ul className="space-y-4">
-            <li className="glass-outline rounded-2xl p-4">
-              <p className="text-sm font-semibold text-slate-700">Structured lesson path</p>
-              <p className="text-sm text-slate-500 mt-1">Unlock lessons sequentially and watch the route glow in blue.</p>
-            </li>
-            <li className="glass-outline rounded-2xl p-4">
-              <p className="text-sm font-semibold text-slate-700">Smart flashcards</p>
-              <p className="text-sm text-slate-500 mt-1">Every low-score question becomes a flashcard automatically.</p>
-            </li>
-          </ul>
-        </section>
+    <main className="min-h-screen flex items-center justify-center px-6 py-16 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
 
-        <section>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="register-name" className="text-sm font-medium text-slate-600">Name</label>
-              <input id="register-name" className="input-field mt-2" value={form.name} onChange={updateField('name')} />
-            </div>
-            <div>
-              <label htmlFor="register-email" className="text-sm font-medium text-slate-600">Email</label>
-              <input
-                id="register-email"
-                type="email"
-                autoComplete="email"
-                className="input-field mt-2"
-                value={form.email}
-                onChange={updateField('email')}
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="register-password" className="text-sm font-medium text-slate-600">Password</label>
-              <input
-                id="register-password"
-                type="password"
-                autoComplete="new-password"
-                className="input-field mt-2"
-                value={form.password}
-                onChange={updateField('password')}
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="register-confirm" className="text-sm font-medium text-slate-600">Confirm password</label>
-              <input
-                id="register-confirm"
-                type="password"
-                autoComplete="new-password"
-                className="input-field mt-2"
-                value={form.confirm}
-                onChange={updateField('confirm')}
-                required
-              />
-            </div>
-            {error && (
-              <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600" role="alert">
-                {error}
-              </div>
-            )}
-            <FancyButton type="submit" variant="solid" className="w-full justify-center">
-              {loading ? 'creating account…' : 'create account'}
-            </FancyButton>
-          </form>
-
-          <p className="mt-6 text-center text-sm text-slate-500">
-            Already have an account?
-            <Link href="/login" className="brand-link ml-2 font-semibold">log in</Link>
+      <div className="glass-card w-full max-w-md p-10 space-y-8 shadow-2xl backdrop-blur-xl relative z-10 animate-fade-in">
+        <div className="space-y-3 text-center">
+          <p className="chip animate-slide-up">Talk Learning</p>
+          <h1 className="hero-title text-3xl font-bold animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            Create Account
+          </h1>
+          <p className="text-gray-600 text-base animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            Start your Chinese learning journey
           </p>
-        </section>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-5 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+          <div>
+            <label htmlFor="register-name" className="text-sm font-semibold text-gray-700 flex items-center gap-2 mb-2">
+              <User className="w-4 h-4" />
+              Full Name
+            </label>
+            <input
+              id="register-name"
+              type="text"
+              value={form.name}
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
+              className="input-field transition-all focus:ring-4 focus:ring-blue-100"
+              required
+              autoComplete="name"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="register-email" className="text-sm font-semibold text-gray-700 flex items-center gap-2 mb-2">
+              <Mail className="w-4 h-4" />
+              Email
+            </label>
+            <input
+              id="register-email"
+              type="email"
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              className="input-field transition-all focus:ring-4 focus:ring-blue-100"
+              required
+              autoComplete="email"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="register-password" className="text-sm font-semibold text-gray-700 flex items-center gap-2 mb-2">
+              <Lock className="w-4 h-4" />
+              Password
+            </label>
+            <input
+              id="register-password"
+              type="password"
+              value={form.password}
+              onChange={(e) => setForm({ ...form, password: e.target.value })}
+              className="input-field transition-all focus:ring-4 focus:ring-blue-100"
+              required
+              minLength={6}
+              autoComplete="new-password"
+            />
+            <p className="text-xs text-gray-500 mt-2">At least 6 characters</p>
+          </div>
+
+          {error && (
+            <div className="rounded-2xl border-2 border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 flex items-start gap-3 animate-slide-up" role="alert">
+              <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+              <span>{error}</span>
+            </div>
+          )}
+
+          <FancyButton
+            type="submit"
+            variant="solid"
+            className="w-full justify-center transform transition hover:scale-105"
+            disabled={loading}
+          >
+            {loading ? (
+              <span className="flex items-center gap-2">
+                <Loader2 className="animate-spin h-4 w-4" />
+                Creating account...
+              </span>
+            ) : (
+              'Sign Up'
+            )}
+          </FancyButton>
+        </form>
+
+        <p className="text-center text-sm text-gray-600 pt-2">
+          Already have an account?{' '}
+          <Link href="/login" className="brand-link font-semibold hover:text-blue-700 transition">
+            Log in
+          </Link>
+        </p>
       </div>
     </main>
   )

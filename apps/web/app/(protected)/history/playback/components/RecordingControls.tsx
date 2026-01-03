@@ -35,7 +35,10 @@ export function RecordingControls({
 
   return (
     <div className="bg-white rounded-xl shadow-lg p-8">
-      <h3 className="text-xl font-bold text-gray-800 mb-6">🎙️ Recording Controls</h3>
+      <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+        <Mic className="h-6 w-6" />
+        Recording Controls
+      </h3>
 
       <div className="space-y-4">
         {/* 播放錄音 */}

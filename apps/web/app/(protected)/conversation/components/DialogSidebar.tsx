@@ -6,6 +6,7 @@ import { Volume2, User, Bot, ChevronUp, ChevronDown } from 'lucide-react'
 import { SuggestionCard } from './SuggestionCard'
 import ProgressTracker from './ProgressTracker'
 import { type ScenarioCheckpoint } from '@/lib/api'
+import { getInterviewerImagePath } from '../../lesson/components/InterviewerSelector'
 
 export interface Message {
   id: string
@@ -27,6 +28,7 @@ interface DialogSidebarProps {
   suggestions: Suggestion[]
   onPlayTTS: (text: string) => void
   isLoading?: boolean
+  currentInterviewer?: string
   scenarioInfo?: {
     title: string
     objective: string
@@ -35,7 +37,7 @@ interface DialogSidebarProps {
   checkpoints?: ScenarioCheckpoint[]
 }
 
-export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading, scenarioInfo, checkpoints }: DialogSidebarProps) {
+export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading, currentInterviewer, scenarioInfo, checkpoints }: DialogSidebarProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const [suggestionsExpanded, setSuggestionsExpanded] = useState(true)
 
@@ -102,16 +104,18 @@ export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading, sce
                     : 'bg-gray-100'
                 }`}
               >
-                {message.role === 'instructor' && scenarioInfo?.interviewerImage ? (
+                {message.role === 'instructor' ? (
                   <Image
-                    src={`/interviewers/${scenarioInfo.interviewerImage}`}
+                    src={
+                      scenarioInfo?.interviewerImage
+                        ? `/interviewers/${scenarioInfo.interviewerImage}`
+                        : getInterviewerImagePath(currentInterviewer || 'teacher-female-1')
+                    }
                     alt="AI Instructor"
                     width={32}
                     height={32}
                     className="object-cover w-full h-full"
                   />
-                ) : message.role === 'instructor' ? (
-                  <Bot className="h-5 w-5 text-blue-600" />
                 ) : (
                   <User className="h-5 w-5 text-gray-600" />
                 )}

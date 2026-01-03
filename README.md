@@ -1,102 +1,536 @@
-# 🎓 Chinese Learning Platform
+# 🎓 AI 中文學習平台 (Chinese Learning Platform)
 
-一個基於 AI 的互動式中文學習平台，透過語音識別和智能評分系統，幫助學習者提升中文口語能力。
+一個基於 AI 的互動式中文學習平台，結合語音識別、智能評分、視頻教學和情境對話，全方位提升中文口語能力。
+
+<div align="center">
+
+![Node.js](https://img.shields.io/badge/Node.js-18+-green)
+![Next.js](https://img.shields.io/badge/Next.js-14-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue)
+![Gemini API](https://img.shields.io/badge/Gemini-2.0--flash-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+</div>
+
+---
 
 ## ✨ 核心特色
 
-- 🎯 **智能語音評分**: 使用 Google Gemini API 進行精確的發音、聲調和流暢度評估
-- 🗣️ **即時語音識別**: 支援語音轉文字，立即反饋學習成果
-- 📊 **多維度分析**: 從發音、流暢度、準確度、理解力等多個維度評估表現
-- 📚 **結構化課程**: 按章節組織的漸進式學習內容
-- 🎬 **視頻教學**: 整合 YouTube 教學視頻，提供視覺化學習體驗
-- 📖 **智能單字卡**: 自動收錄錯誤題目，支援分類管理和複習
-- 📈 **學習歷史**: 完整記錄學習過程，追蹤進步軌跡
-- 🎨 **現代化界面**: 響應式設計，支援桌面和移動設備
+### 🎯 智能評分系統
+- **多維度分析**: 發音準確度、聲調、流暢度、完整性、理解力五個維度評估
+- **即時反饋**: 使用 Google Gemini 2.0 Flash API 進行即時語音轉文字和評分
+- **拼音錯誤檢測**: 基於拼音的錯誤識別，精準指出發音問題
+- **台灣腔調支持**: 專為台灣中文學習者優化
+
+### 📚 結構化課程系統
+- **10 章節漸進式課程**: 從 A1 到 B1 級別，涵蓋日常對話到專業表達
+- **100+ 課程單元**: 每個章節包含 10 個精心設計的課程
+- **多種教學方式**: 支持 TTS 語音合成和視頻教學
+- **自動字幕同步**: 視頻課程配備實時字幕，幫助理解
+
+### 🎬 多媒體教學
+- **YouTube 視頻整合**: 支持本地視頻和 YouTube 視頻
+- **自動播放控制**: 每題自動播放一次，避免重複干擾
+- **講師切換**: 支持多位台灣中文講師語音切換
+- **視頻字幕同步**: 實時顯示字幕，輔助學習
+
+### 💬 情境對話系統
+- **AI 對話練習**: 與 AI 進行真實情境對話
+- **智能檢查點**: 系統自動判斷對話完整度，引導學習者完成關鍵信息
+- **詞彙本**: 自動記錄對話中的新詞彙，支持複習
+- **禮貌用語檢測**: 自動識別結束信號，自然流暢地切換話題
+
+### 📖 智能學習工具
+- **單字卡系統**: 
+  - 自動收錄錯誤題目
+  - 支持分類管理（按章節、難度）
+  - 複習模式，鞏固學習
+- **學習歷史追蹤**:
+  - 完整記錄每次練習
+  - 詳細的評分報告
+  - 錯誤分析和改進建議
+- **練習回放**:
+  - 重新練習歷史題目
+  - 對比歷史成績
+  - 追蹤進步軌跡
+
+### 📊 數據分析與報告
+- **課程完成報告**: 每課結束後生成詳細報告
+- **詞彙統計**: 記錄新學詞彙和掌握情況
+- **錯誤分析**: 拼音級別的錯誤診斷
+- **進度追蹤**: 章節、課程完成度可視化
+
+---
 
 ## 🚀 快速開始
 
 ### 環境要求
 
-- Node.js 18+ 
-- npm 或 yarn
-- Google Gemini API Key
+- **Node.js**: 18.0.0 或更高版本
+- **npm**: 8.0.0 或更高版本
+- **Google Gemini API Key**: [獲取 API Key](https://makersuite.google.com/app/apikey)
 
 ### 安裝步驟
 
-1. **克隆專案**
+#### 1. 克隆專案
 ```bash
 git clone <repository-url>
 cd chiness-interview-main
 ```
 
-2. **安裝依賴**
+#### 2. 安裝依賴
 ```bash
 npm install
 ```
 
-3. **配置環境變數**
+#### 3. 配置環境變數
 
 創建 `apps/backend/.env` 文件：
 ```env
+# Gemini API Key (必填)
 GEMINI_API_KEY=your_gemini_api_key_here
+
+# 服務器端口 (可選，默認 8082)
 PORT=8082
+
+# Node 環境 (可選，默認 development)
+NODE_ENV=development
 ```
 
-4. **啟動服務**
+#### 4. 啟動服務
 
-**方式一：同時啟動前後端**
+**方式一：同時啟動前後端（推薦）**
 ```bash
 npm run dev
 ```
 
 **方式二：分別啟動**
 ```bash
-# 後端 (Port 8082)
+# 終端 1 - 後端 (Port 8082)
 cd apps/backend
 npm run dev
 
-# 前端 (Port 3000)
+# 終端 2 - 前端 (Port 3000)
 cd apps/web
 npm run dev
 ```
 
-5. **訪問應用**
+#### 5. 訪問應用
 ```
-前端: http://localhost:3000
-後端: http://localhost:8082
+前端應用: http://localhost:3000
+後端 API: http://localhost:8082
+健康檢查: http://localhost:8082/health
 ```
+
+---
 
 ## 📁 專案架構
 
 ```
 chiness-interview-main/
 ├── apps/
-│   ├── backend/              # Express + TypeScript 後端
+│   ├── backend/                          # Express + TypeScript 後端
 │   │   ├── src/
-│   │   │   ├── routes/       # API 路由
-│   │   │   │   ├── score.ts  # 語音評分接口
-│   │   │   │   └── lesson.ts # 課程管理接口
-│   │   │   ├── plugins/      # 課程內容插件
-│   │   │   │   └── chinese-lessons/
-│   │   │   │       ├── chapter-1/  # 第一章課程
-│   │   │   │       ├── chapter-2/  # 第二章課程
-│   │   │   │       └── ...
-│   │   │   └── server.ts     # 服務器入口
-│   │   └── .env              # 環境變數配置
+│   │   │   ├── routes/                   # API 路由
+│   │   │   │   ├── analyze.ts            # 文本分析
+│   │   │   │   ├── conversation.ts       # 情境對話 API
+│   │   │   │   ├── lessons.ts            # 課程列表和內容
+│   │   │   │   ├── scenarios.ts          # 場景列表
+│   │   │   │   ├── score.ts              # 語音評分
+│   │   │   │   ├── sessions.ts           # 學習記錄
+│   │   │   │   └── qa.ts                 # 問答系統
+│   │   │   ├── plugins/                  # 課程內容
+│   │   │   │   ├── chinese-lessons/      # 中文課程
+│   │   │   │   │   ├── chapter-01/       # 第 1 章 (A1)
+│   │   │   │   │   ├── chapter-02/       # 第 2 章 (A1)
+│   │   │   │   │   ├── chapter-03/       # 第 3 章 (A2)
+│   │   │   │   │   ├── ...               # 章節 4-10
+│   │   │   │   │   └── TEMPLATE.json     # 課程模板
+│   │   │   │   └── scenarios/            # 對話場景
+│   │   │   ├── utils/                    # 工具函數
+│   │   │   │   ├── conversationStore.ts  # 對話狀態管理
+│   │   │   │   └── fileStore.ts          # 文件存儲
+│   │   │   ├── analysis-core/            # 分析引擎
+│   │   │   ├── geminiService.ts          # Gemini API 服務
+│   │   │   └── server.ts                 # 服務器入口
+│   │   ├── .env                          # 環境變數
+│   │   ├── package.json
+│   │   └── tsconfig.json
 │   │
-│   └── web/                  # Next.js 14 前端
+│   └── web/                              # Next.js 14 前端
 │       ├── app/
-│       │   ├── (protected)/  # 受保護路由
-│       │   │   ├── lesson/[id]/  # 課程學習頁面
-│       │   │   ├── dashboard/    # 儀表板
-│       │   │   ├── history/      # 學習歷史
-│       │   │   └── flashcards/   # 單字卡
-│       │   └── layout.tsx    # 全局布局
-│       └── components/       # React 組件
+│       │   ├── (protected)/              # 受保護路由（需登入）
+│       │   │   ├── lesson/[id]/          # 📚 課程學習頁面
+│       │   │   │   └── page.tsx          # 主要學習界面 (2900+ 行)
+│       │   │   ├── dashboard/            # 📊 儀表板
+│       │   │   ├── prepare/              # 🎥 設備準備頁面
+│       │   │   ├── conversation/         # 💬 情境對話
+│       │   │   ├── history/              # 📈 學習歷史
+│       │   │   │   ├── page.tsx          # 歷史列表
+│       │   │   │   └── playback/         # 回放練習
+│       │   │   ├── flashcards/           # 📖 單字卡系統
+│       │   │   ├── report/               # 📄 課程報告
+│       │   │   └── analysis/             # 📊 數據分析
+│       │   ├── (public)/                 # 公開路由
+│       │   ├── api/                      # API 代理路由
+│       │   ├── globals.css               # 全局樣式
+│       │   ├── layout.tsx                # 根布局
+│       │   └── providers.tsx             # 狀態提供者
+│       ├── components/                   # React 組件
+│       ├── public/
+│       │   └── videos/
+│       │       └── lessons/              # 本地課程視頻
+│       │           └── L1/               # 課程 1 視頻
+│       ├── package.json
+│       └── next.config.js
 │
-├── package.json              # 根專案配置
-└── README.md                # 本文件
+├── docker-compose.yml                    # Docker 部署配置
+├── package.json                          # Monorepo 根配置
+└── README.md                            # 本文件
 ```
+
+---
+
+## 🎯 主要功能模塊
+
+### 1. 課程學習系統 (`/lesson/[id]`)
+
+#### 功能特點
+- ✅ 自動播放題目（視頻或 TTS）
+- ✅ 語音錄製與評分
+- ✅ 實時字幕顯示
+- ✅ 講師切換（多位台灣講師）
+- ✅ 自動進入下一題
+- ✅ 錯誤題目自動加入單字卡
+- ✅ 課程完成報告生成
+
+#### 使用流程
+1. 選擇課程 → 2. 聽題目/看視頻 → 3. 錄音回答 → 4. 即時評分 → 5. 自動下一題 → 6. 完成報告
+
+### 2. 情境對話系統 (`/conversation`)
+
+#### 功能特點
+- ✅ 多場景對話練習（餐廳、酒店、購物等）
+- ✅ AI 智能回應
+- ✅ 檢查點系統（確保完成關鍵信息）
+- ✅ 詞彙本自動記錄
+- ✅ 禮貌用語檢測（自動切換話題）
+
+#### 對話流程
+1. 選擇場景 → 2. AI 提問 → 3. 語音回答 → 4. AI 回應 → 5. 檢查完成度 → 6. 下一話題
+
+### 3. 單字卡系統 (`/flashcards`)
+
+#### 功能特點
+- ✅ 自動收錄錯誤題目
+- ✅ 按章節、難度分類
+- ✅ 支持標記"已掌握"
+- ✅ 複習模式
+- ✅ 統計學習進度
+
+### 4. 學習歷史 (`/history`)
+
+#### 功能特點
+- ✅ 完整記錄所有練習
+- ✅ 詳細評分報告
+- ✅ 錯誤分析
+- ✅ 支持回放練習
+- ✅ 進度可視化
+
+### 5. 數據分析 (`/analysis`)
+
+#### 功能特點
+- ✅ 章節完成度統計
+- ✅ 平均分數趨勢
+- ✅ 詞彙掌握情況
+- ✅ 弱點分析
+- ✅ 學習建議
+
+---
+
+## 🔌 API 接口說明
+
+### 後端 API (Port 8082)
+
+| 端點 | 方法 | 說明 |
+|------|------|------|
+| `/health` | GET | 健康檢查 |
+| `/api/lessons` | GET | 獲取課程列表 |
+| `/api/lessons/:id` | GET | 獲取課程詳情 |
+| `/api/score` | POST | 語音評分 |
+| `/api/sessions` | GET | 獲取學習記錄 |
+| `/api/sessions/:sessionId` | GET | 獲取單次記錄詳情 |
+| `/api/scenarios` | GET | 獲取對話場景列表 |
+| `/api/scenarios/:id` | GET | 獲取場景詳情 |
+| `/api/conversation/*` | POST | 對話相關接口 |
+| `/api/analyze` | POST | 文本分析 |
+| `/api/qa` | POST | 問答系統 |
+
+### 評分 API 詳細說明
+
+**請求格式** (`POST /api/score`)
+```typescript
+Content-Type: multipart/form-data
+
+{
+  audio: File,              // 音頻文件 (webm/mp4)
+  expectedAnswer: string[], // 期望答案（JSON 字符串）
+  questionId: string,       // 題目 ID
+  lessonId: string         // 課程 ID
+}
+```
+
+**響應格式**
+```typescript
+{
+  transcript: string,       // 識別文本
+  overall_score: number,    // 總分 (0-100)
+  scores: {
+    pronunciation: number,  // 發音準確度
+    fluency: number,        // 流暢度
+    accuracy: number,       // 準確度
+    comprehension: number,  // 理解力
+    confidence: number      // 信心度
+  },
+  feedback: string,         // 詳細反饋
+  pinyin_errors?: Array<{   // 拼音錯誤（可選）
+    character: string,
+    correct_pinyin: string,
+    user_pinyin: string,
+    error_type: string
+  }>
+}
+```
+
+---
+
+## 🎨 技術棧
+
+### 前端
+- **框架**: Next.js 14 (App Router)
+- **語言**: TypeScript 5+
+- **樣式**: Tailwind CSS
+- **狀態管理**: React Hooks + Context
+- **語音**: Web Speech API
+- **視頻**: HTML5 Video API
+
+### 後端
+- **框架**: Express.js
+- **語言**: TypeScript
+- **AI**: Google Gemini 2.0 Flash
+- **文件處理**: Multer
+- **數據存儲**: JSON File System
+
+### 開發工具
+- **包管理**: npm workspaces (Monorepo)
+- **並發運行**: concurrently
+- **部署**: Docker + Docker Compose
+
+---
+
+## 📦 課程內容結構
+
+### 課程 JSON 格式
+```json
+{
+  "lesson_id": "C1-L01",
+  "chapter_id": "C1",
+  "lesson_number": 1,
+  "title": "Greetings",
+  "description": "Learn the most basic daily greetings.",
+  "steps": [
+    {
+      "id": 1,
+      "teacher": "你好",
+      "expected_answer": ["你好"],
+      "pinyin": "nǐ hǎo",
+      "english_hint": "hello",
+      "encouragement": "Great job!",
+      "tts_text": "你好",
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "video_url": "/videos/lessons/L1/step1.mp4",
+      "captions": [
+        {
+          "text": "你好",
+          "start": 0.0,
+          "end": 1.5
+        }
+      ]
+    }
+  ],
+  "review": {
+    "summary": "You learned basic greetings.",
+    "mission": "Next lesson: Introductions."
+  }
+}
+```
+
+### 章節規劃
+
+| 章節 | 級別 | 主題 | 課程數 |
+|------|------|------|--------|
+| Chapter 1 | A1 | 基本問候與自我介紹 | 10 |
+| Chapter 2 | A1 | 日常用語與數字 | 10 |
+| Chapter 3 | A2 | 時間與日期 | 10 |
+| Chapter 4 | A2 | 購物與交通 | 10 |
+| Chapter 5 | A2 | 飲食與健康 | 10 |
+| Chapter 6 | B1 | 旅遊與住宿 | 10 |
+| Chapter 7 | B1 | 工作與學習 | 10 |
+| Chapter 8 | B1 | 社交與娛樂 | 10 |
+| Chapter 9 | B1 | 情感與意見 | 10 |
+| Chapter 10 | B1 | 論述與推理 | 10 |
+
+---
+
+## 🐳 Docker 部署
+
+### 使用 Docker Compose
+
+```bash
+# 構建並啟動
+docker-compose up -d
+
+# 查看日誌
+docker-compose logs -f
+
+# 停止服務
+docker-compose down
+```
+
+### 訪問服務
+```
+前端: http://localhost:3000
+後端: http://localhost:8081
+```
+
+### 環境變數配置
+在 `docker-compose.yml` 中配置：
+```yaml
+environment:
+  - GEMINI_API_KEY=${GEMINI_API_KEY}
+```
+
+---
+
+## 🧪 開發指南
+
+### 添加新課程
+
+1. 在 `apps/backend/src/plugins/chinese-lessons/chapter-XX/` 創建 `lesson-XX.json`
+2. 按照 `TEMPLATE.json` 格式填寫課程內容
+3. 重啟後端服務，課程自動載入
+
+### 添加視頻課程
+
+1. 將視頻放置在 `apps/web/public/videos/lessons/LX/`
+2. 在課程 JSON 中添加 `video_url` 字段
+3. 可選：添加 `captions` 字段實現字幕同步
+
+### 添加對話場景
+
+1. 在 `apps/backend/src/plugins/scenarios/` 創建場景 JSON
+2. 定義場景信息、檢查點和詞彙
+3. 重啟後端服務
+
+### 自定義講師語音
+
+在 `apps/web/app/(protected)/lesson/[id]/page.tsx` 中修改：
+```typescript
+const VOICE_MAP: Record<string, string> = {
+  'female1': 'Microsoft HsiaoChen - Chinese (Taiwan)',
+  'female2': 'Microsoft Yating - Chinese (Taiwan)',
+  // 添加新的語音
+}
+```
+
+---
+
+## 📊 性能優化
+
+### 前端優化
+- ✅ 圖片懶加載
+- ✅ 組件按需加載
+- ✅ API 請求去抖動
+- ✅ 音頻預載入
+
+### 後端優化
+- ✅ API 響應緩存
+- ✅ 文件流式傳輸
+- ✅ 錯誤重試機制
+- ✅ 請求限流
+
+---
+
+## 🔧 故障排除
+
+### 常見問題
+
+#### 1. 自動播放被瀏覽器阻止
+**解決方案**: 點擊"手動播放"按鈕，或允許網站自動播放權限
+
+#### 2. 語音識別不準確
+**解決方案**: 
+- 確保麥克風權限已開啟
+- 在安靜環境中錄音
+- 說話清晰，避免過快或過慢
+
+#### 3. Gemini API 評分失敗
+**解決方案**:
+- 檢查 `.env` 文件中的 API Key 是否正確
+- 確認 API Key 額度未用盡
+- 查看後端日誌了解詳細錯誤
+
+#### 4. 視頻無法播放
+**解決方案**:
+- 確認視頻文件存在於 `public/videos/` 目錄
+- 檢查視頻格式（推薦 mp4）
+- 查看瀏覽器控制台錯誤信息
+
+---
+
+## 🤝 貢獻指南
+
+歡迎貢獻！請遵循以下步驟：
+
+1. Fork 本專案
+2. 創建功能分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 開啟 Pull Request
+
+---
+
+## 📄 授權協議
+
+本專案採用 MIT 授權協議 - 詳見 [LICENSE](LICENSE) 文件
+
+---
+
+## 📞 聯繫方式
+
+如有問題或建議，歡迎聯繫：
+
+- **Email**: your-email@example.com
+- **GitHub Issues**: [提交問題](https://github.com/your-repo/issues)
+
+---
+
+## 🙏 致謝
+
+- Google Gemini API 提供強大的 AI 能力
+- Next.js 和 React 團隊
+- 台灣中文教學社群
+- 所有貢獻者
+
+---
+
+<div align="center">
+
+**⭐ 如果這個專案對你有幫助，請給個星星！⭐**
+
+Made with ❤️ by Chinese Learning Team
+
+</div>
 
 ## 🎮 主要功能
 

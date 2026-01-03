@@ -327,6 +327,24 @@ export default function DashboardPage() {
     return streakCount
   }
 
+  // 數據遷移：首次登入時將 localStorage 數據遷移到 Supabase
+  useEffect(() => {
+    const checkMigration = async () => {
+      const migrated = localStorage.getItem('data_migrated')
+      if (!migrated) {
+        try {
+          const { migrateUserData } = await import('@/lib/migration/migrate')
+          await migrateUserData()
+          localStorage.setItem('data_migrated', 'true')
+        } catch (error) {
+          console.error('Migration failed:', error)
+        }
+      }
+    }
+
+    checkMigration()
+  }, [])
+
   // 從 localStorage 計算統計數據（客戶端計算，不需後端 API）
   useEffect(() => {
     const calculatedStats = calculateStats()
@@ -417,13 +435,6 @@ export default function DashboardPage() {
     <div className="w-full h-full flex flex-col text-slate-900">
       <div className="flex-1 space-y-8 rounded-[34px] border border-white/80 bg-white/90 px-10 py-10 shadow-[0_40px_80px_rgba(15,23,42,0.12)]">
             <div className="flex flex-wrap items-start justify-between gap-6">
-              <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
-                  Welcome back
-                </p>
-                <h1 className="text-2xl font-semibold tracking-tight">admin@test.com</h1>
-              </div>
-
               <div className="flex flex-wrap items-center gap-3 rounded-full border border-slate-100 bg-white px-5 py-2.5 shadow-[0_12px_32px_rgba(15,23,42,0.08)]">
                 <div className="flex items-center gap-2 text-xs text-slate-500">
                   <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-50 text-[11px] font-semibold text-blue-600">

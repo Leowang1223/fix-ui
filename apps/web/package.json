@@ -12,6 +12,8 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@interview-plus/shared": "file:../shared",
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "^2.89.0",
     "@types/multer": "^2.0.0",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.16",

@@ -3,6 +3,7 @@
  * 顯示歷史記錄、最高分、最新評分結果
  */
 
+import { BarChart3, Star, TrendingUp, PartyPopper, Lightbulb, Target } from 'lucide-react'
 import { type PlaybackQuestion, type PlaybackAttempt } from '../../utils/playbackStorage'
 
 interface ScoreDisplayProps {
@@ -13,12 +14,18 @@ interface ScoreDisplayProps {
 export function ScoreDisplay({ question, latestScore }: ScoreDisplayProps) {
   return (
     <div className="bg-white rounded-xl shadow-lg p-6 sticky top-8">
-      <h3 className="text-lg font-bold text-gray-800 mb-4">📊 Your Record</h3>
+      <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
+        <BarChart3 className="h-5 w-5" />
+        Your Record
+      </h3>
       
       <div className="space-y-4">
         {/* 最高分 */}
         <div className="bg-gradient-to-r from-yellow-400 to-orange-400 rounded-lg p-4 text-center">
-          <div className="text-sm text-yellow-900 mb-1">⭐ Highest Score</div>
+          <div className="text-sm text-yellow-900 mb-1 flex items-center justify-center gap-1">
+            <Star className="h-4 w-4" fill="currentColor" />
+            Highest Score
+          </div>
           <div className="text-4xl font-bold text-white">{question.highestScore}</div>
         </div>
 
@@ -42,7 +49,10 @@ export function ScoreDisplay({ question, latestScore }: ScoreDisplayProps) {
       {/* 最新評分結果 */}
       {latestScore && (
         <div className="mt-6 pt-6 border-t border-gray-200">
-          <h4 className="text-lg font-bold text-gray-800 mb-4">📈 Latest Score</h4>
+          <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
+            <TrendingUp className="h-5 w-5" />
+            Latest Score
+          </h4>
           
           {/* 總分 */}
           <div className={`rounded-lg p-4 text-center mb-4 ${
@@ -59,7 +69,10 @@ export function ScoreDisplay({ question, latestScore }: ScoreDisplayProps) {
               {latestScore.score}
             </div>
             {latestScore.score > question.highestScore - latestScore.score && (
-              <div className="text-sm text-green-600 mt-1">🎉 New High Score!</div>
+              <div className="text-sm text-green-600 mt-1 flex items-center justify-center gap-1">
+                <PartyPopper className="h-4 w-4" />
+                New High Score!
+              </div>
             )}
           </div>
 
@@ -90,7 +103,10 @@ export function ScoreDisplay({ question, latestScore }: ScoreDisplayProps) {
           {/* 建議 */}
           {latestScore.suggestions && (
             <div className="bg-blue-50 rounded-lg p-4 mb-4">
-              <div className="text-sm font-semibold text-blue-800 mb-2">💡 Suggestions:</div>
+              <div className="text-sm font-semibold text-blue-800 mb-2 flex items-center gap-1">
+                <Lightbulb className="h-4 w-4" />
+                Suggestions:
+              </div>
               <div className="space-y-2 text-xs text-gray-700">
                 {latestScore.suggestions.pronunciation && (
                   <div><strong>Pronunciation:</strong> {latestScore.suggestions.pronunciation}</div>
@@ -108,7 +124,10 @@ export function ScoreDisplay({ question, latestScore }: ScoreDisplayProps) {
           {/* 練習方法 */}
           {latestScore.overallPractice && (
             <div className="bg-green-50 rounded-lg p-4">
-              <div className="text-sm font-semibold text-green-800 mb-2">🎯 Practice Method:</div>
+              <div className="text-sm font-semibold text-green-800 mb-2 flex items-center gap-1">
+                <Target className="h-4 w-4" />
+                Practice Method:
+              </div>
               <div className="text-xs text-gray-700">{latestScore.overallPractice}</div>
             </div>
           )}

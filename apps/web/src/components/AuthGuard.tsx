@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { getCookie } from '@/lib/cookies'
+import { createClient } from '@/lib/supabase/client'
 
 interface AuthGuardProps {
   children: React.ReactNode
@@ -12,24 +12,34 @@ export default function AuthGuard({ children }: AuthGuardProps) {
   const [isLoading, setIsLoading] = useState(true)
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const router = useRouter()
+  const supabase = createClient()
 
   useEffect(() => {
-    const checkAuth = () => {
-      if (typeof window !== 'undefined') {
-        const isLoggedIn = getCookie('isLoggedIn')
-        if (isLoggedIn === 'true') {
-          setIsAuthenticated(true)
-        } else {
-          router.replace('/login')
-          return
-        }
+    const checkAuth = async () => {
+      const { data: { session } } = await supabase.auth.getSession()
+
+      if (!session) {
+        router.replace('/login')
+        return
       }
-      
+
+      setIsAuthenticated(true)
       setIsLoading(false)
     }
 
     checkAuth()
-  }, [router])
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'SIGNED_OUT') {
+        router.replace('/login')
+      } else if (event === 'SIGNED_IN') {
+        setIsAuthenticated(true)
+        setIsLoading(false)
+      }
+    })
+
+    return () => subscription.unsubscribe()
+  }, [router, supabase])
 
   if (isLoading) {
     return (

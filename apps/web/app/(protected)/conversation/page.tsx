@@ -62,6 +62,9 @@ export default function ConversationSetupPage() {
   const [showRoleSelector, setShowRoleSelector] = useState(false)
   const [selectedRole, setSelectedRole] = useState<string | null>(null)
 
+  // Track if any lessons completed
+  const [hasCompletedLessons, setHasCompletedLessons] = useState(false)
+
   // Load completed lessons from history
   useEffect(() => {
     const savedInterviewer = localStorage.getItem('selectedInterviewer')
@@ -76,6 +79,7 @@ export default function ConversationSetupPage() {
     if (historyStr) {
       try {
         const history: LessonHistoryEntry[] = JSON.parse(historyStr)
+        setHasCompletedLessons(history.length > 0)
 
         // 章節 ID 驗證正規表達式：只接受 C + 數字格式
         const VALID_CHAPTER_PATTERN = /^C\d{1,2}$/
@@ -179,6 +183,12 @@ export default function ConversationSetupPage() {
   const handleStartConversation = () => {
     if (micPermission !== 'granted') {
       alert('Microphone permission is required to start conversation.')
+      return
+    }
+
+    // Validate "all" mode has completed lessons
+    if (topicMode === 'all' && !hasCompletedLessons) {
+      alert('Please complete at least one lesson before using "All Completed Lessons" mode.')
       return
     }
 
@@ -341,10 +351,13 @@ export default function ConversationSetupPage() {
               <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => setTopicMode('all')}
+                  disabled={!hasCompletedLessons}
                   className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all ${
                     topicMode === 'all'
                       ? 'border-blue-500 bg-blue-50 text-blue-700'
-                      : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
+                      : !hasCompletedLessons
+                        ? 'border-gray-200 bg-gray-100 text-gray-400 cursor-not-allowed'
+                        : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
                   }`}
                 >
                   All Completed Lessons

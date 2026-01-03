@@ -1,6 +1,18 @@
+import { createClient } from './supabase/client'
+
 export async function fetchJson<T>(url: string, init?: RequestInit): Promise<T> {
+  const supabase = createClient()
+  const { data: { session } } = await supabase.auth.getSession()
+
+  const headers = new Headers(init?.headers || {})
+  headers.set('Content-Type', 'application/json')
+
+  if (session?.access_token) {
+    headers.set('Authorization', `Bearer ${session.access_token}`)
+  }
+
   const fullUrl = (url.startsWith('http://') || url.startsWith('https://')) ? url : `${getApiBase()}${url}`
-  const res = await fetch(fullUrl, { ...(init || {}), headers: { 'Content-Type': 'application/json', ...(init?.headers || {}) } });
+  const res = await fetch(fullUrl, { ...(init || {}), headers });
   if (!res.ok) {
     let body = ''
     try { body = await res.text() } catch {}

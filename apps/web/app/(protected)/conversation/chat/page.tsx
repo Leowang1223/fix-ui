@@ -6,10 +6,10 @@ import Image from 'next/image'
 import { Mic, MicOff, PhoneOff, Loader2, AlertCircle } from 'lucide-react'
 import { DialogSidebar, type Message, type Suggestion } from '../components/DialogSidebar'
 import { InterviewerSelector, getInterviewerImagePath, getInterviewerVoice, DEFAULT_INTERVIEWER } from '../../lesson/components/InterviewerSelector'
-import { API_BASE } from '../../config'
 import ProgressTracker from '../components/ProgressTracker'
 import CompletionPrompt from '../components/CompletionPrompt'
-import { type ScenarioCheckpoint, apiGetScenarioById } from '@/lib/api'
+import { type ScenarioCheckpoint, apiGetScenarioById, fetchJson, getApiBase } from '@/lib/api'
+import { createClient } from '@/lib/supabase/client'
 
 // TTS utility functions (copied from lesson page)
 function removePinyin(text: string): string {
@@ -86,6 +86,10 @@ export default function ConversationChatPage() {
   } | null>(null)
   const [checkpoints, setCheckpoints] = useState<ScenarioCheckpoint[]>([])
   const [allCheckpointsCompleted, setAllCheckpointsCompleted] = useState(false)
+
+  // Track if first message needs manual play (for browser autoplay restrictions)
+  const [needsManualPlay, setNeedsManualPlay] = useState(false)
+  const [firstMessageText, setFirstMessageText] = useState<string | null>(null)
 
   // Load settings
   useEffect(() => {
@@ -173,12 +177,7 @@ export default function ConversationChatPage() {
   // Get all available chapter IDs from API
   const getAllAvailableChapterIds = async (): Promise<string[]> => {
     try {
-      const apiBase =
-        (typeof window !== 'undefined' && localStorage.getItem('api_base')) ||
-        process.env.NEXT_PUBLIC_API_BASE ||
-        'http://localhost:8082'
-
-      const response = await fetch(`${apiBase}/api/lessons`)
+      const response = await fetch(`${getApiBase()}/api/lessons`)
       if (!response.ok) {
         console.error('Failed to fetch lessons from API')
         return []
@@ -302,17 +301,16 @@ export default function ConversationChatPage() {
         console.log('📚 Review mode (selected): Found', completedLessonsInSelectedChapters.length, 'completed lessons in these chapters')
       }
 
-      const response = await fetch(`${API_BASE}/api/conversation/start`, {
+      const data = await fetchJson<{
+        sessionId: string
+        scenario?: any
+        firstMessage?: { chinese: string; english: string }
+        suggestions?: any[]
+        reviewMode?: any
+      }>('/api/conversation/start', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(requestBody),
       })
-
-      if (!response.ok) {
-        throw new Error('Failed to start conversation')
-      }
-
-      const data = await response.json()
       setSessionId(data.sessionId)
 
       // Set scenario info and checkpoints if in scenario mode
@@ -355,6 +353,7 @@ export default function ConversationChatPage() {
 
         // Play TTS with dynamic voice detection
         console.log('🎬 Preparing to play first message TTS...')
+        const chineseText = firstMessage.chinese
         const playFirstMessageTTS = async () => {
           let attempts = 0
           const maxAttempts = 20  // 最多等待 2 秒
@@ -363,7 +362,7 @@ export default function ConversationChatPage() {
             const voices = window.speechSynthesis.getVoices()
             if (voices.length > 0) {
               console.log('✅ TTS voices loaded, playing first message')
-              playTTS(data.firstMessage.chinese)
+              playTTS(chineseText)
               return
             }
             await new Promise(r => setTimeout(r, 100))
@@ -372,7 +371,7 @@ export default function ConversationChatPage() {
 
           // 超時仍播放，使用默認聲音
           console.warn('⚠️ TTS voices not ready after 2s, playing with default voice')
-          playTTS(data.firstMessage.chinese)
+          playTTS(chineseText)
         }
 
         playFirstMessageTTS()
@@ -502,8 +501,18 @@ export default function ConversationChatPage() {
       formData.append('sessionId', sessionId)
       formData.append('audio', audioBlob, 'recording.webm')
 
-      const response = await fetch(`${API_BASE}/api/conversation/message`, {
+      // Get Supabase session for authentication
+      const supabase = createClient()
+      const { data: { session } } = await supabase.auth.getSession()
+
+      const headers = new Headers()
+      if (session?.access_token) {
+        headers.set('Authorization', `Bearer ${session.access_token}`)
+      }
+
+      const response = await fetch(`${getApiBase()}/api/conversation/message`, {
         method: 'POST',
+        headers,
         body: formData,
       })
 
@@ -572,18 +581,13 @@ export default function ConversationChatPage() {
         throw new Error('No active session found')
       }
 
-      const response = await fetch(`${API_BASE}/api/conversation/end`, {
+      const data = await fetchJson<{
+        reportId: string
+        analysis: any
+      }>('/api/conversation/end', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sessionId }),
+        body: JSON.stringify({ sessionId })
       })
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}))
-        throw new Error(errorData.message || 'Failed to end conversation')
-      }
-
-      const data = await response.json()
 
       // Save to history with conversation turns
       const conversationHistory = {
@@ -784,6 +788,7 @@ export default function ConversationChatPage() {
             suggestions={suggestions}
             onPlayTTS={playTTS}
             isLoading={isLoading}
+            currentInterviewer={currentInterviewer}
             scenarioInfo={settings.topicMode === 'scenario' ? scenarioInfo : null}
             checkpoints={settings.topicMode === 'scenario' ? checkpoints : undefined}
           />

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Radar } from 'react-chartjs-2'
-import { RefreshCw, Trash2, Layers, BookOpen, X, ArrowLeft, Home, MessageSquare } from 'lucide-react'
+import { RefreshCw, Trash2, Layers, BookOpen, X, ArrowLeft, Home, MessageSquare, BarChart3 } from 'lucide-react'
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -184,8 +184,9 @@ export default function HistoryPage() {
           </AppButton>
 
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">
-              📊 Course Completion Report
+            <h1 className="text-3xl font-bold text-gray-800 mb-2 flex items-center justify-center gap-2">
+              <BarChart3 className="h-8 w-8" />
+              Course Completion Report
             </h1>
             <h2 className="text-xl text-gray-600">{selectedSession.lessonTitle}</h2>
             <p className="text-sm text-gray-500 mt-2">
@@ -304,7 +305,10 @@ export default function HistoryPage() {
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8'>
       <div className='w-full'>
         <div className="flex justify-between items-center mb-8">
-          <h1 className='text-4xl font-bold text-gray-800'>📚 Learning History</h1>
+          <h1 className='text-4xl font-bold text-gray-800 flex items-center gap-3'>
+            <BookOpen className="h-10 w-10" />
+            Learning History
+          </h1>
           <div className="flex flex-wrap gap-4">
             <AppButton
               icon={Layers}
@@ -436,7 +440,9 @@ export default function HistoryPage() {
             </div>
           ) : conversationHistory.length === 0 ? (
             <div className='text-center py-20'>
-              <div className='text-6xl mb-4'>💬</div>
+              <div className='flex justify-center mb-4'>
+                <MessageSquare className='h-24 w-24 text-gray-400' />
+              </div>
               <h2 className='text-2xl font-bold text-gray-700 mb-2'>No Conversation History</h2>
               <p className='text-gray-600 mb-6'>Start an AI conversation to practice!</p>
               <AppButton
