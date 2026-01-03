@@ -73,15 +73,22 @@ export function getApiBase(): string {
       if (lsBase && lsBase.trim().length > 0) return lsBase.trim().replace(/\/$/, '');
     } catch {}
 
-    // 2) Runtime detection: if running locally, use port 8082; otherwise use same-origin
+    // 2) Check environment variable (production deployment)
+    const envApiBase = process.env.NEXT_PUBLIC_API_BASE;
+    if (envApiBase && envApiBase.trim().length > 0) return envApiBase.trim().replace(/\/$/, '');
+
+    // 3) Runtime detection: if running locally, use port 8082; otherwise use same-origin
     const { protocol, hostname } = window.location;
     const isLocalHost = hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '::1';
     if (isLocalHost) return `${protocol}//${hostname}:8082`;
+
+    // 4) Fallback: log warning and return empty (will cause relative paths)
+    console.warn('⚠️ No API base URL configured! Set NEXT_PUBLIC_API_BASE environment variable.');
     return '';
   }
 
-  // 3) SSR fallback: use relative path (requires reverse proxy)
-  return '';
+  // SSR fallback: check environment variable
+  return process.env.NEXT_PUBLIC_API_BASE?.trim().replace(/\/$/, '') || '';
 }
 
 export async function apiGetQuestions(type: string): Promise<{ questions: any[]; lessons?: any[]; playbackMode?: string }> {
