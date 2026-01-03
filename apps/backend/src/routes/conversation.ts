@@ -282,6 +282,11 @@ async function generateSuggestions(
     reviewVocabulary?: VocabularyItem[]  // 複習模式詞彙
   }
 ): Promise<Array<{ chinese: string; pinyin: string; english: string; type: string }>> {
+  console.log('🔧 generateSuggestions called')
+  console.log('   Context mode:', context.mode)
+  console.log('   AI last message:', context.aiLastMessage)
+  console.log('   Review vocabulary count:', context.reviewVocabulary?.length || 0)
+
   const historyText = context.conversationHistory
     .slice(-4) // 最近 4 輪對話
     .map(turn => `${turn.role === 'user' ? 'User' : 'AI'}: ${turn.text}`)
@@ -487,19 +492,28 @@ Return JSON array format with exactly 3 suggestions:
   }
 ]`
 
-  const result = await model.generateContent({
-    contents: [{ role: 'user', parts: [{ text: contextPrompt }] }],
-    generationConfig: {
-      temperature: 0.7,
-      responseMimeType: 'application/json'
-    }
-  })
+  console.log('🌐 Calling Gemini API for suggestions...')
+  try {
+    const result = await model.generateContent({
+      contents: [{ role: 'user', parts: [{ text: contextPrompt }] }],
+      generationConfig: {
+        temperature: 0.7,
+        responseMimeType: 'application/json'
+      }
+    })
 
-  const responseText = result.response.candidates?.[0]?.content?.parts?.[0]?.text || '[]'
-  const suggestions = JSON.parse(responseText)
+    const responseText = result.response.candidates?.[0]?.content?.parts?.[0]?.text || '[]'
+    console.log('📡 Gemini API response received, length:', responseText.length)
 
-  console.log('💡 Generated suggestions:', suggestions.length)
-  return suggestions.slice(0, 3) // 確保只返回 3 個
+    const suggestions = JSON.parse(responseText)
+    console.log('✅ Parsed suggestions successfully:', suggestions.length)
+    console.log('   First suggestion:', suggestions[0]?.chinese)
+
+    return suggestions.slice(0, 3) // 確保只返回 3 個
+  } catch (error) {
+    console.error('❌ Error in generateSuggestions Gemini call:', error)
+    throw error // 重新拋出錯誤，讓調用者處理
+  }
 }
 
 // ============================================================================
@@ -1456,6 +1470,11 @@ Return in JSON format:
 
     const nextCheckpoint = session.checkpoints?.find((cp: ScenarioCheckpoint) => !cp.completed)
 
+    console.log('💡 Generating suggestions...')
+    console.log('   Mode:', session.mode)
+    console.log('   AI last message:', reply.chinese || '好的。')
+    console.log('   Has review vocabulary:', !!session.reviewVocabulary)
+
     try {
       suggestions = await generateSuggestions(model, {
         mode: session.mode,
@@ -1474,8 +1493,10 @@ Return in JSON format:
         } : undefined,
         reviewVocabulary: session.reviewVocabulary  // 複習模式詞彙
       })
+      console.log('✅ Suggestions generated successfully:', suggestions.length)
     } catch (error) {
-      console.warn('⚠️ Gemini 失敗，使用靜態建議')
+      console.error('❌ Gemini generateSuggestions failed:', error)
+      console.warn('⚠️ Using fallback suggestions')
 
       // Fallback 1: 使用 scenario JSON 中的靜態建議
       if (scenarioData && session.userRole) {
@@ -1505,7 +1526,8 @@ Return in JSON format:
     }
 
     // 6. 更新 Supabase 會話數據
-    await supabase
+    console.log('💾 Updating Supabase session...')
+    const { data: updateData, error: updateError } = await supabase
       .from('conversation_sessions')
       .update({
         conversation_data: { history: session.conversationHistory },
@@ -1516,7 +1538,16 @@ Return in JSON format:
       .eq('session_id', sessionId)
       .eq('user_id', userId)
 
+    if (updateError) {
+      console.error('❌ Supabase update failed:', updateError)
+      // 不要因為 Supabase 更新失敗就讓整個請求失敗
+      // 繼續返回響應
+    } else {
+      console.log('✅ Supabase session updated successfully')
+    }
+
     // 7. 返回響應
+    console.log('✅ Message processed successfully')
     res.json({
       userTranscript: transcript,
       instructorReply: reply,
