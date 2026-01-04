@@ -40,8 +40,9 @@ RUN npm install --prefix apps/backend --legacy-peer-deps --production
 COPY --from=builder /app/apps/shared/dist ./apps/shared/dist
 COPY --from=builder /app/apps/backend/dist ./apps/backend/dist
 
-# Copy course data files (required for lessons API)
+# Copy course data files to both src/plugins (for backward compatibility) and dist/plugins
 COPY --from=builder /app/apps/backend/src/plugins ./apps/backend/src/plugins
+COPY --from=builder /app/apps/backend/src/plugins ./apps/backend/dist/plugins
 
 # Expose port (Railway will override this)
 EXPOSE 8082

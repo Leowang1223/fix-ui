@@ -4,20 +4,38 @@ import path from 'path'
 
 const router = express.Router()
 
+// Helper function to find the lessons directory
+function findLessonsDir(): string | null {
+  const possiblePaths = [
+    path.join(__dirname, '../plugins/chinese-lessons'),  // dist/plugins (production)
+    path.join(__dirname, '../../src/plugins/chinese-lessons'),  // src/plugins (fallback)
+    path.join(process.cwd(), 'apps/backend/dist/plugins/chinese-lessons'),  // absolute path (Railway)
+    path.join(process.cwd(), 'apps/backend/src/plugins/chinese-lessons')  // absolute path fallback
+  ]
+
+  for (const tryPath of possiblePaths) {
+    if (fs.existsSync(tryPath)) {
+      return tryPath
+    }
+  }
+
+  return null
+}
+
 // 獲取課程列表
 router.get('/', (req, res) => {
   try {
-    // __dirname in compiled code is dist/routes, need to go to src/plugins
-    const lessonsDir = path.join(__dirname, '../../src/plugins/chinese-lessons')
-
     console.log('📂 __dirname:', __dirname)
-    console.log('📂 lessonsDir:', lessonsDir)
-    console.log('📂 exists:', fs.existsSync(lessonsDir))
+    console.log('📂 cwd:', process.cwd())
 
-    if (!fs.existsSync(lessonsDir)) {
-      console.log('❌ lessonsDir does not exist!')
+    const lessonsDir = findLessonsDir()
+
+    if (!lessonsDir) {
+      console.log('❌ lessonsDir does not exist in any location!')
       return res.json([])
     }
+
+    console.log(`✅ Found lessons at: ${lessonsDir}`)
 
     const lessons: any[] = []
 
@@ -86,6 +104,12 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   try {
     const { id } = req.params
+    const lessonsDir = findLessonsDir()
+
+    if (!lessonsDir) {
+      return res.status(500).json({ error: 'Lessons directory not found' })
+    }
+
     let lessonPath: string
 
     // 支援新格式 "C1-L01" 和舊格式 "L1"
@@ -96,8 +120,7 @@ router.get('/:id', (req, res) => {
         const chapterNum = match[1].padStart(2, '0')
         const lessonNum = match[2].padStart(2, '0')
         lessonPath = path.join(
-          __dirname,
-          '../../src/plugins/chinese-lessons',
+          lessonsDir,
           `chapter-${chapterNum}`,
           `lesson-${lessonNum}.json`
         )
@@ -106,7 +129,7 @@ router.get('/:id', (req, res) => {
       }
     } else {
       // 舊格式：L1 -> L1.json (向後兼容)
-      lessonPath = path.join(__dirname, '../../src/plugins/chinese-lessons', `${id}.json`)
+      lessonPath = path.join(lessonsDir, `${id}.json`)
     }
 
     if (!fs.existsSync(lessonPath)) {
