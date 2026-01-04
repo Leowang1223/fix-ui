@@ -21,8 +21,20 @@ const NAV_ITEMS = [
 
 export default function CollapsibleSidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
+
+  // 偵測移動設備
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024) // lg breakpoint
+    }
+
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   // 從 localStorage 讀取折疊狀態
   useEffect(() => {
@@ -31,6 +43,13 @@ export default function CollapsibleSidebar() {
       setIsCollapsed(true)
     }
   }, [])
+
+  // 在小螢幕上自動折疊
+  useEffect(() => {
+    if (isMobile && !isCollapsed) {
+      setIsCollapsed(true)
+    }
+  }, [isMobile])
 
   // 切換折疊狀態
   const toggleSidebar = () => {
@@ -48,10 +67,11 @@ export default function CollapsibleSidebar() {
     <aside
       className={`
         relative border-r border-white/70 bg-[#f6f8fe]/90
-        py-10 shadow-[0_15px_40px_rgba(148,163,184,0.25)] backdrop-blur
+        py-6 sm:py-8 lg:py-10 shadow-[0_15px_40px_rgba(148,163,184,0.25)] backdrop-blur
         transition-all duration-300 ease-in-out
         flex-shrink-0
-        ${isCollapsed ? 'w-16' : 'w-72'}
+        ${isCollapsed ? 'w-14 sm:w-16' : 'w-60 sm:w-72'}
+        ${isMobile ? 'hidden lg:flex flex-col' : 'flex flex-col'}
       `}
     >
       {/* Logo / Title */}
@@ -94,16 +114,16 @@ export default function CollapsibleSidebar() {
                       ? 'bg-blue-600 text-white shadow-md'
                       : 'bg-white/60 text-slate-700 hover:bg-white hover:shadow-sm'
                     }
-                    ${isCollapsed ? 'justify-center px-3 py-3' : 'px-4 py-3'}
+                    ${isCollapsed ? 'justify-center px-2 py-2.5 sm:px-3 sm:py-3' : 'px-3 py-2.5 sm:px-4 sm:py-3'}
                   `}
                   title={isCollapsed ? item.label : ''}
                 >
-                  <Icon size={20} className="flex-shrink-0" />
+                  <Icon size={18} className="sm:w-5 sm:h-5 flex-shrink-0" />
                   {!isCollapsed && (
                     <div className="flex-1 text-left">
-                      <div className="text-sm font-medium">{item.label}</div>
+                      <div className="text-xs sm:text-sm font-medium">{item.label}</div>
                       {item.description && (
-                        <div className="text-[11px] opacity-70">{item.description}</div>
+                        <div className="text-[10px] sm:text-[11px] opacity-70">{item.description}</div>
                       )}
                     </div>
                   )}
@@ -133,19 +153,19 @@ export default function CollapsibleSidebar() {
       </button>
 
       {/* Logout Button (底部) */}
-      <div className={`absolute bottom-10 left-0 right-0 transition-all duration-300 ${isCollapsed ? 'px-2' : 'px-7'}`}>
+      <div className={`absolute bottom-6 sm:bottom-8 lg:bottom-10 left-0 right-0 transition-all duration-300 ${isCollapsed ? 'px-2' : 'px-5 sm:px-7'}`}>
         <button
           onClick={handleLogout}
           className={`
             w-full flex items-center gap-3 rounded-xl
             bg-red-50 text-red-600 hover:bg-red-100
             transition-all duration-200
-            ${isCollapsed ? 'justify-center px-3 py-3' : 'px-4 py-3'}
+            ${isCollapsed ? 'justify-center px-2 py-2.5 sm:px-3 sm:py-3' : 'px-3 py-2.5 sm:px-4 sm:py-3'}
           `}
           title={isCollapsed ? 'Logout' : ''}
         >
-          <LogOut size={20} className="flex-shrink-0" />
-          {!isCollapsed && <span className="text-sm font-medium">Logout</span>}
+          <LogOut size={18} className="sm:w-5 sm:h-5 flex-shrink-0" />
+          {!isCollapsed && <span className="text-xs sm:text-sm font-medium">Logout</span>}
         </button>
       </div>
     </aside>
