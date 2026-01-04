@@ -103,9 +103,9 @@ const INTERVIEWERS: Interviewer[] = [
     },
   },
   {
-    id: 'woman',
-    name: 'Professional Woman',
-    imagePath: '/interviewers/woman.png',
+    id: 'jan',
+    name: 'Jan',
+    imagePath: '/interviewers/Jan.png',
     voice: {
       lang: 'zh-TW',
       gender: 'female',
@@ -254,7 +254,7 @@ export function getInterviewerVoice(interviewerId: string) {
 }
 
 // 默認講師
-export const DEFAULT_INTERVIEWER = 'woman'
+export const DEFAULT_INTERVIEWER = 'jan'
 
 // 導出講師列表（供調試用）
 export { INTERVIEWERS }
