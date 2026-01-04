@@ -21,7 +21,7 @@ export const AppButton = ({
   className = ''
 }: AppButtonProps) => {
   const base =
-    'w-full max-w-md flex items-center justify-center gap-2 px-6 py-3 rounded-2xl font-semibold shadow-sm border transition-all active:scale-[0.97] text-sm disabled:opacity-50 disabled:cursor-not-allowed'
+    'w-full max-w-md sm:max-w-lg flex items-center justify-center gap-1.5 sm:gap-2 px-5 py-3 sm:px-6 sm:py-3.5 md:py-4 rounded-2xl text-sm sm:text-base font-semibold shadow-sm border transition-all active:scale-[0.97] touch-manipulation disabled:opacity-50 disabled:cursor-not-allowed'
 
   const styles =
     variant === 'primary'

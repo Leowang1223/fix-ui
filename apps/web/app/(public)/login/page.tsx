@@ -65,10 +65,10 @@ export default function LoginPage() {
   return (
     <main className="min-h-screen flex items-center justify-center px-6 py-16 relative overflow-hidden">
       {/* 背景装饰 */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-0 right-0 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
 
-      <div className="glass-card w-full max-w-5xl p-8 sm:p-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] shadow-2xl backdrop-blur-xl relative z-10 animate-fade-in">
+      <div className="glass-card w-full max-w-5xl p-6 sm:p-8 lg:p-10 grid gap-6 sm:gap-8 lg:gap-10 lg:grid-cols-[1.1fr_0.9fr] shadow-2xl backdrop-blur-xl relative z-10 animate-fade-in">
         {/* 左侧：信息区 */}
         <section className="space-y-6 text-left">
           <div className="space-y-4">
