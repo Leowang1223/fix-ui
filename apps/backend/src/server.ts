@@ -14,10 +14,14 @@ import path from 'path';
 const app = express();
 const PORT = process.env.PORT || 8082;
 
-// ������
+// CORS configuration
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-production-domain.com'] 
+  origin: process.env.NODE_ENV === 'production'
+    ? [
+        'https://fix-ui-web.vercel.app',
+        'https://fix-ui-leowang1223.vercel.app',
+        /\.vercel\.app$/  // Allow all vercel.app subdomains
+      ]
     : ['http://localhost:3000', 'http://127.0.0.1:3000'],
   credentials: true
 }));
@@ -25,10 +29,10 @@ app.use(cors({
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
-// �R�A�ɮתA��
+// Static file serving for logs
 app.use('/logs', express.static(path.join(__dirname, 'logs')));
 
-// API ����
+// API routes
 app.post('/api/analyze', analyzeHandler);
 app.post('/api/score', scoreUpload, scoreHandler);
 app.post('/api/qa', qaHandler);
@@ -39,23 +43,24 @@ app.use('/api/scenarios', scenariosRouter);
 app.use('/api/conversation', conversationRouter);
 app.use('/api/lesson-history', lessonHistoryRouter);
 
-// ���d�ˬd
+// Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// ���~�B�z������
+// Error handling middleware
 app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
   console.error('Server error:', err);
-  res.status(500).json({ 
-    code: 'INTERNAL_ERROR', 
+  res.status(500).json({
+    code: 'INTERNAL_ERROR',
     message: 'Internal server error',
     timestamp: new Date().toISOString()
   });
 });
 
-// �Ұʦ��A��
+// Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`CORS enabled for: ${process.env.NODE_ENV === 'production' ? 'Vercel domains' : 'localhost'}`);
 });
