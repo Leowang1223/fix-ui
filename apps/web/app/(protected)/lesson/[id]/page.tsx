@@ -2492,7 +2492,7 @@ export default function LessonPage() {
             <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
               <h3 className="text-lg font-bold text-gray-800 mb-4 text-center">Performance Radar</h3>
               {fullReport ? (
-                <div className="h-64">
+                <div className="h-48 sm:h-56 md:h-64">
                   <Radar
                     data={{
                       labels: ['Pronunciation', 'Fluency', 'Accuracy', 'Comprehension', 'Confidence'],
@@ -2632,7 +2632,7 @@ export default function LessonPage() {
         {/* 講師圖片 - 可點擊切換 */}
         <button
           onClick={() => setShowInterviewerSelector(true)}
-          className="group relative w-80 h-80 rounded-2xl overflow-hidden shadow-2xl transition-all hover:shadow-3xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-400"
+          className="group relative w-full max-w-xs sm:max-w-sm md:w-80 h-auto aspect-square rounded-2xl overflow-hidden shadow-2xl transition-all hover:shadow-3xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-400 mx-auto"
           title="Click to change interviewer"
         >
           <Image
@@ -2838,12 +2838,12 @@ export default function LessonPage() {
 
       <button
         onClick={handleRecording}
-        className={`w-20 h-20 rounded-full flex items-center justify-center transition-all shadow-lg transform hover:scale-110 ${
-          isRecording ? 'bg-red-500 hover:bg-red-600 animate-pulse' : 
+        className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all shadow-lg transform hover:scale-110 touch-manipulation ${
+          isRecording ? 'bg-red-500 hover:bg-red-600 animate-pulse' :
           'bg-blue-500 hover:bg-blue-600'
         }`}
       >
-        <div className={`rounded-full ${isRecording ? 'w-6 h-6 bg-white' : 'w-10 h-10 bg-white'}`}></div>
+        <div className={`rounded-full ${isRecording ? 'w-5 h-5 sm:w-6 sm:h-6 bg-white' : 'w-8 h-8 sm:w-10 sm:h-10 bg-white'}`}></div>
       </button>
 
       <p className="mt-4 text-gray-600 font-medium text-center">
