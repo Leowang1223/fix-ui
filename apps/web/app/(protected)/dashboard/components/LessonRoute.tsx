@@ -32,13 +32,13 @@ export default function LessonRoute({ stations, completedIndex, onStationClick }
       </header>
 
       <div className="relative mt-6 overflow-x-auto pb-4">
-        <div className="relative mx-4 h-24 min-w-[560px]">
+        <div className="relative mx-2 sm:mx-4 h-20 sm:h-24 min-w-full sm:min-w-[560px]">
           {/* 灰色底線 */}
-          <div className="absolute left-0 right-0 top-[40px] h-[4px] rounded-full bg-slate-200" />
+          <div className="absolute left-0 right-0 top-[30px] sm:top-[40px] h-[3px] sm:h-[4px] rounded-full bg-slate-200" />
 
           {/* 藍色進度線 */}
           <motion.div
-            className="absolute left-0 top-[40px] h-[4px] rounded-full bg-gradient-to-r from-blue-400 to-blue-600 shadow-[0_0_18px_rgba(37,99,235,0.7)]"
+            className="absolute left-0 top-[30px] sm:top-[40px] h-[3px] sm:h-[4px] rounded-full bg-gradient-to-r from-blue-400 to-blue-600 shadow-[0_0_18px_rgba(37,99,235,0.7)]"
             style={{ width: `${progressRatio * 100}%` }}
             initial={false}
             animate={{ width: `${progressRatio * 100}%` }}
@@ -55,20 +55,20 @@ export default function LessonRoute({ stations, completedIndex, onStationClick }
                 <motion.button
                   key={station.id}
                   type="button"
-                  className="flex flex-col items-center gap-2 text-xs text-slate-500 focus-visible:outline-none"
+                  className="flex flex-col items-center gap-1.5 sm:gap-2 text-xs text-slate-500 focus-visible:outline-none touch-manipulation"
                   whileHover={{ y: -4, scale: 1.04 }}
                   transition={{ type: 'spring', stiffness: 320, damping: 20 }}
                   onClick={() => onStationClick?.(station)}
                 >
                   <div
-                    className={`relative flex h-14 w-14 items-center justify-center rounded-full border-[3px] bg-white shadow-md ${
+                    className={`relative flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border-[2px] sm:border-[3px] bg-white shadow-md ${
                       isCompleted
                         ? 'border-blue-500 shadow-[0_10px_25px_rgba(37,99,235,0.45)]'
                         : 'border-slate-200'
                     }`}
                   >
                     <div
-                      className={`flex h-10 w-10 items-center justify-center rounded-full text-base font-semibold ${
+                      className={`flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full text-sm sm:text-base font-semibold ${
                         isCompleted
                           ? 'bg-gradient-to-b from-blue-400 to-blue-600 text-white'
                           : isCurrent
@@ -79,7 +79,7 @@ export default function LessonRoute({ stations, completedIndex, onStationClick }
                       {station.id}
                     </div>
                   </div>
-                  <span className="text-[11px] text-slate-500">{station.label}</span>
+                  <span className="text-[10px] sm:text-[11px] text-slate-500">{station.label}</span>
                 </motion.button>
               )
             })}
