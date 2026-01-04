@@ -140,7 +140,7 @@ export function InterviewerSelector({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-      <div className="relative w-full max-w-4xl rounded-3xl bg-white p-8 shadow-2xl">
+      <div className="relative w-full max-w-4xl mx-4 sm:mx-0 rounded-2xl sm:rounded-3xl bg-white p-5 sm:p-6 lg:p-8 shadow-2xl">
         {/* 標題 */}
         <div className="mb-6 flex items-center justify-between">
           <h2 className="text-2xl font-bold text-gray-800">
@@ -168,7 +168,7 @@ export function InterviewerSelector({
         </div>
 
         {/* 講師網格 */}
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
           {INTERVIEWERS.map((interviewer) => {
             const isSelected = selectedId === interviewer.id
 
@@ -183,7 +183,7 @@ export function InterviewerSelector({
                 }`}
               >
                 {/* 圖片容器 */}
-                <div className="relative h-32 w-32 overflow-hidden rounded-xl">
+                <div className="relative h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 overflow-hidden rounded-xl mx-auto">
                   <Image
                     src={interviewer.imagePath}
                     alt={interviewer.name}
@@ -196,7 +196,7 @@ export function InterviewerSelector({
                       <div className="rounded-full bg-blue-500 p-2">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6 text-white"
+                          className="h-5 w-5 sm:h-6 sm:w-6 text-white"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -215,7 +215,7 @@ export function InterviewerSelector({
 
                 {/* 名字 */}
                 <span
-                  className={`text-sm font-semibold ${
+                  className={`text-xs sm:text-sm font-semibold ${
                     isSelected ? 'text-blue-600' : 'text-gray-700'
                   }`}
                 >

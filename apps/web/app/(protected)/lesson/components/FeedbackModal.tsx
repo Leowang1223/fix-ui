@@ -145,25 +145,25 @@ export function FeedbackModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fadeIn">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-slideUp">
+      <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full mx-4 sm:mx-0 max-h-[90vh] overflow-y-auto animate-slideUp">
         {/* 標題區 */}
-        <div className={`p-6 rounded-t-2xl ${
-          passed 
-            ? 'bg-gradient-to-r from-green-500 to-emerald-500' 
+        <div className={`p-4 sm:p-5 md:p-6 rounded-t-2xl ${
+          passed
+            ? 'bg-gradient-to-r from-green-500 to-emerald-500'
             : 'bg-gradient-to-r from-orange-500 to-amber-500'
         }`}>
           <div className="flex items-center justify-between text-white">
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-xl sm:text-2xl font-bold">
               {passed ? '🎉 Great Job!' : '💪 Keep Practicing!'}
             </h2>
             <div className="text-right">
-              <div className="text-sm opacity-90">Score</div>
-              <div className="text-4xl font-bold">{score}</div>
+              <div className="text-xs sm:text-sm opacity-90">Score</div>
+              <div className="text-3xl sm:text-4xl font-bold">{score}</div>
             </div>
           </div>
         </div>
 
-        <div className="p-6 space-y-6">
+        <div className="p-4 sm:p-5 md:p-6 space-y-4 sm:space-y-5 md:space-y-6">
           {/* 答案對比 */}
           <div className="space-y-3">
             <div className="p-4 bg-blue-50 rounded-xl border-2 border-blue-200">
@@ -184,11 +184,11 @@ export function FeedbackModal({
           {characterAnalysis.length > 0 && (
             <div className="p-4 bg-gray-50 rounded-xl">
               <div className="text-sm font-semibold text-gray-700 mb-3">Character Analysis:</div>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {characterAnalysis.map((item, index) => (
                   <div
                     key={index}
-                    className={`px-4 py-2 rounded-lg font-medium ${
+                    className={`px-3 py-2 sm:px-4 sm:py-2 rounded-lg text-sm sm:text-base font-medium ${
                       item.status === 'correct'
                         ? 'bg-green-100 text-green-700 border-2 border-green-300'
                         : item.status === 'tone-error'
@@ -196,7 +196,7 @@ export function FeedbackModal({
                         : 'bg-red-100 text-red-700 border-2 border-red-300'
                     }`}
                   >
-                    <div className="text-lg">{item.char}</div>
+                    <div className="text-base sm:text-lg">{item.char}</div>
                     {item.pinyin && (
                       <div className="text-xs opacity-75">{item.pinyin}</div>
                     )}
@@ -210,7 +210,7 @@ export function FeedbackModal({
           {/* 五維度分數 */}
           <div className="p-4 bg-purple-50 rounded-xl">
             <div className="text-sm font-semibold text-purple-700 mb-3">Detailed Scores:</div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
               {Object.entries(detailedScores).map(([key, value]) => (
                 <div key={key} className="text-center">
                   <div className="text-xs text-gray-600 capitalize mb-1">{key}</div>
@@ -252,11 +252,11 @@ export function FeedbackModal({
           )}
 
           {/* 音頻播放按鈕 */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <button
               onClick={playUserRecording}
               disabled={!audioBlob || isPlayingUser}
-              className="px-6 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed font-semibold flex items-center justify-center gap-2"
+              className="px-4 py-3 sm:px-5 sm:py-3 md:px-6 md:py-4 text-sm sm:text-base bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed font-semibold flex items-center justify-center gap-2 touch-manipulation"
             >
               {isPlayingUser ? (
                 <>
@@ -274,7 +274,7 @@ export function FeedbackModal({
             <button
               onClick={playCorrectAnswer}
               disabled={isPlayingCorrect}
-              className="px-6 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:from-green-600 hover:to-green-700 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed font-semibold flex items-center justify-center gap-2"
+              className="px-4 py-3 sm:px-5 sm:py-3 md:px-6 md:py-4 text-sm sm:text-base bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:from-green-600 hover:to-green-700 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed font-semibold flex items-center justify-center gap-2 touch-manipulation"
             >
               {isPlayingCorrect ? (
                 <>
@@ -291,10 +291,10 @@ export function FeedbackModal({
           </div>
 
           {/* 操作按鈕 */}
-          <div className="grid grid-cols-2 gap-4 pt-4 border-t-2 border-gray-200">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-4 border-t-2 border-gray-200">
             <button
               onClick={onRetry}
-              className="px-6 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg font-semibold flex items-center justify-center gap-2"
+              className="px-4 py-3 sm:px-5 sm:py-3 md:px-6 md:py-4 text-sm sm:text-base bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg font-semibold flex items-center justify-center gap-2 touch-manipulation"
             >
               <span>🔄</span>
               <span>Retry</span>
@@ -302,7 +302,7 @@ export function FeedbackModal({
 
             <button
               onClick={onNext}
-              className="px-6 py-4 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl hover:from-purple-600 hover:to-purple-700 transition-all shadow-lg font-semibold flex items-center justify-center gap-2"
+              className="px-4 py-3 sm:px-5 sm:py-3 md:px-6 md:py-4 text-sm sm:text-base bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl hover:from-purple-600 hover:to-purple-700 transition-all shadow-lg font-semibold flex items-center justify-center gap-2 touch-manipulation"
             >
               <span>➡️</span>
               <span>Next Question</span>
