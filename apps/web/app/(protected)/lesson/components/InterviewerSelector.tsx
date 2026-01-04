@@ -105,7 +105,7 @@ const INTERVIEWERS: Interviewer[] = [
   {
     id: 'jan',
     name: 'Jan',
-    imagePath: '/interviewers/Jan.png',
+    imagePath: '/interviewers/jan.png',
     voice: {
       lang: 'zh-TW',
       gender: 'female',
