@@ -348,11 +348,11 @@ export default function ConversationSetupPage() {
             </div>
 
             <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <button
                   onClick={() => setTopicMode('all')}
                   disabled={!hasCompletedLessons}
-                  className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all ${
+                  className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all touch-manipulation ${
                     topicMode === 'all'
                       ? 'border-blue-500 bg-blue-50 text-blue-700'
                       : !hasCompletedLessons
@@ -364,7 +364,7 @@ export default function ConversationSetupPage() {
                 </button>
                 <button
                   onClick={() => setTopicMode('selected')}
-                  className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all ${
+                  className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all touch-manipulation ${
                     topicMode === 'selected'
                       ? 'border-blue-500 bg-blue-50 text-blue-700'
                       : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
@@ -374,7 +374,7 @@ export default function ConversationSetupPage() {
                 </button>
                 <button
                   onClick={() => setTopicMode('free')}
-                  className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all ${
+                  className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all touch-manipulation ${
                     topicMode === 'free'
                       ? 'border-blue-500 bg-blue-50 text-blue-700'
                       : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
@@ -387,7 +387,7 @@ export default function ConversationSetupPage() {
                     setTopicMode('scenario')
                     setShowScenarioSelector(true)
                   }}
-                  className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all ${
+                  className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all touch-manipulation ${
                     topicMode === 'scenario'
                       ? 'border-purple-500 bg-purple-50 text-purple-700'
                       : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
@@ -425,12 +425,12 @@ export default function ConversationSetupPage() {
                   <p className="mb-3 text-sm font-medium text-gray-700">
                     Select chapters to focus on:
                   </p>
-                  <div className="grid grid-cols-3 gap-2 max-h-48 overflow-y-auto">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-h-60 sm:max-h-48 overflow-y-auto">
                     {completedChapters.map(chapter => (
                       <button
                         key={chapter.chapterId}
                         onClick={() => toggleChapter(chapter.chapterId)}
-                        className={`rounded-lg border px-3 py-2 text-center text-sm transition-all ${
+                        className={`rounded-lg border px-3 py-2.5 sm:px-3 sm:py-2 text-center text-sm transition-all touch-manipulation ${
                           selectedChapters.includes(chapter.chapterId)
                             ? 'border-blue-500 bg-blue-50 text-blue-700'
                             : chapter.lessonCount === 0

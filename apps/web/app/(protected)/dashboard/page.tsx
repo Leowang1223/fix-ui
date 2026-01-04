@@ -433,34 +433,34 @@ export default function DashboardPage() {
 
   return (
     <div className="w-full h-full flex flex-col text-slate-900">
-      <div className="flex-1 space-y-8 rounded-[34px] border border-white/80 bg-white/90 px-10 py-10 shadow-[0_40px_80px_rgba(15,23,42,0.12)]">
+      <div className="flex-1 space-y-8 rounded-[34px] border border-white/80 bg-white/90 px-4 py-6 sm:px-6 sm:py-8 lg:px-10 lg:py-10 shadow-[0_40px_80px_rgba(15,23,42,0.12)]">
             <div className="flex flex-wrap items-start justify-between gap-6">
-              <div className="flex flex-wrap items-center gap-3 rounded-full border border-slate-100 bg-white px-5 py-2.5 shadow-[0_12px_32px_rgba(15,23,42,0.08)]">
-                <div className="flex items-center gap-2 text-xs text-slate-500">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-50 text-[11px] font-semibold text-blue-600">
+              <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 sm:gap-4 rounded-2xl sm:rounded-full border border-slate-100 bg-white px-4 py-3 sm:px-5 sm:py-2.5 shadow-[0_12px_32px_rgba(15,23,42,0.08)] w-full sm:w-auto">
+                <div className="flex items-center gap-2 text-xs sm:text-xs text-slate-500">
+                  <span className="flex h-8 w-8 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-50 text-xs sm:text-[11px] font-semibold text-blue-600">
                     S
                   </span>
                   <div className="leading-tight">
-                    <div className="text-[11px] font-semibold text-slate-600">Keep your streak</div>
-                    <div className="text-[10px] text-slate-400">Log one conversation today</div>
+                    <div className="text-xs sm:text-[11px] font-semibold text-slate-600">Keep your streak</div>
+                    <div className="text-xs sm:text-[10px] text-slate-400">Log one conversation today</div>
                   </div>
                 </div>
 
                 <button
                   onClick={handleStartLesson}
-                  className="rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-4 py-1.5 text-xs font-semibold text-white shadow-[0_10px_25px_rgba(37,99,235,0.45)] transition hover:shadow-[0_12px_28px_rgba(37,99,235,0.55)]"
+                  className="w-full sm:w-auto rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-5 py-2.5 sm:px-4 sm:py-1.5 text-sm sm:text-xs font-semibold text-white shadow-[0_10px_25px_rgba(37,99,235,0.45)] transition hover:shadow-[0_12px_28px_rgba(37,99,235,0.55)]"
                 >
                   Start lesson
                 </button>
 
                 <button
                   onClick={handleLogout}
-                  className="rounded-full px-2 py-1 text-[11px] text-slate-500 transition hover:bg-slate-100"
+                  className="rounded-full px-3 py-2 sm:px-2 sm:py-1 text-xs sm:text-[11px] text-slate-500 transition hover:bg-slate-100"
                 >
                   log out
                 </button>
 
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-200 text-xs font-semibold text-slate-600">
+                <div className="hidden sm:flex h-8 w-8 items-center justify-center rounded-full bg-slate-200 text-xs font-semibold text-slate-600">
                   A
                 </div>
               </div>
@@ -484,16 +484,16 @@ export default function DashboardPage() {
               </button>
             </section>
 
-            <section className="grid grid-cols-4 gap-5">
+            <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-5">
               {statCards.map((item) => (
                 <div
                   key={item.label}
-                  className="rounded-[26px] border border-white bg-white px-6 py-5 shadow-[0_15px_30px_rgba(15,23,42,0.08)]"
+                  className="rounded-[26px] border border-white bg-white px-4 py-4 sm:px-5 sm:py-4 lg:px-6 lg:py-5 shadow-[0_15px_30px_rgba(15,23,42,0.08)]"
                 >
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-500">
+                  <div className="text-xs sm:text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-500">
                     {item.label}
                   </div>
-                  <div className="mt-2 text-4xl font-semibold tracking-tight text-slate-900">
+                  <div className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-slate-900">
                     {item.value}
                   </div>
                 </div>
