@@ -58,12 +58,12 @@ export default function RegisterPage() {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
 
       <div className="glass-card w-full max-w-md p-10 space-y-8 shadow-2xl backdrop-blur-xl relative z-10 animate-fade-in">
-        <div className="space-y-3 text-center">
-          <p className="chip animate-slide-up">Talk Learning</p>
-          <h1 className="hero-title text-3xl font-bold animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            Create Account
+        <div className="space-y-6 text-center">
+          <p className="chip animate-slide-up mb-2">TALK LEARNING</p>
+          <h1 className="hero-title text-4xl font-bold leading-tight animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            Create<br />Account
           </h1>
-          <p className="text-gray-600 text-base animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-gray-600 text-base leading-relaxed mt-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             Start your Chinese learning journey
           </p>
         </div>
