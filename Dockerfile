@@ -23,6 +23,12 @@ RUN npm run build --prefix apps/shared
 # Build backend
 RUN npm run build --prefix apps/backend
 
+# CRITICAL: Copy course data files to dist/plugins DURING build
+RUN mkdir -p apps/backend/dist/plugins && \
+    cp -r apps/backend/src/plugins/chinese-lessons apps/backend/dist/plugins/ && \
+    echo "✅ Copied course files to dist/plugins" && \
+    ls -la apps/backend/dist/plugins/chinese-lessons/ | head -10
+
 # Production stage
 FROM node:20-alpine
 
