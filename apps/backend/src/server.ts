@@ -14,33 +14,14 @@ import path from 'path';
 const app = express();
 const PORT = process.env.PORT || 8082;
 
-// CORS configuration - Allow both local development and production
-const allowedOrigins = [
-  'http://localhost:3000',
-  'http://127.0.0.1:3000',
-  'https://fix-ui-web.vercel.app',
-  'https://fix-ui-leowang1223.vercel.app'
-];
+// CORS configuration - TEMPORARY: Allow all origins for debugging
+console.log('⚠️ CORS: Allowing ALL origins (temporary for debugging)')
 
 app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps or curl)
-    if (!origin) return callback(null, true);
-
-    // Check if origin is in allowed list
-    if (allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    }
-
-    // Check if origin matches vercel.app pattern
-    if (origin.match(/^https:\/\/.*\.vercel\.app$/)) {
-      return callback(null, true);
-    }
-
-    // Reject all other origins
-    callback(new Error('Not allowed by CORS'));
-  },
-  credentials: true
+  origin: true,  // Allow all origins
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.use(express.json({ limit: '50mb' }));
