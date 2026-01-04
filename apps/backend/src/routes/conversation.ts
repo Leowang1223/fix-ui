@@ -338,26 +338,53 @@ CHECKPOINT GUIDANCE:
       .join(', ')
 
     contextPrompt += `
-REVIEW MODE - CRITICAL RULES (按優先度排序):
+REVIEW MODE - CRITICAL RULES FOR NATURAL SUGGESTIONS:
 
-**第一優先：直接回答 AI 的問題**
-- 如果 AI 問「你吃早餐了嗎？」→ 建議「吃了」或「我吃了麵包」，不要「我喜歡早餐」
-- 如果 AI 問「最近怎麼樣？」→ 建議回答近況，不要隨機事實
-- 如果 AI 問「你最近吃什麼？」→ 建議具體食物，不要「我喜歡吃東西」
+🚫 **STRICTLY FORBIDDEN - META-CONVERSATION** (絕對禁止元對話):
+❌ "復習「XX」" (Don't talk about reviewing)
+❌ "今天要學新的" (Don't talk about learning)
+❌ "想學別的" (Don't talk about studying)
+❌ "準備好了嗎" (Don't talk about readiness)
+❌ ANY reference to "學習", "復習", "練習", "開始" in the context of lessons
+
+✅ **WHAT TO DO INSTEAD** (正確做法):
+This is a NATURAL CONVERSATION, not a classroom.
+User should respond as if chatting with a friend, NOT discussing the learning process.
+
+**第一優先：直接自然回答 AI 的話**
+- 如果 AI 說「你好！今天怎麼樣？」→ 建議「不錯！」「還好」「有點累」
+- 如果 AI 問「吃早餐了嗎？」→ 建議「吃了」「還沒吃」「我吃了麵包」
+- 如果 AI 問「最近做什麼？」→ 建議「在家休息」「去公園走走」「看電視」
+- 如果 AI 問「週末要去哪裡？」→ 建議「去看電影」「在家」「還沒決定」
 
 **第二優先：自然使用複習詞彙**
 - 可用詞彙: ${vocabList}
-- 在回答問題的同時，自然地使用 1-2 個詞彙
-- 例如：AI 問「你最近吃什麼？」，用「麵條」→「我最近吃麵條」
+- 在自然回答的同時，使用 1 個詞彙（不要強迫）
+- 例如：AI 問「最近吃什麼？」，詞彙「麵條」→「我吃麵條」
 
-**正確範例**:
-AI 說: "你最近吃什麼？"
-可用詞彙: 早餐, 麵條, 水果
+**CORRECT Examples** (自然對話):
+AI says: "你好！今天過得怎麼樣？"
+Available words: 學校, 朋友, 累
 
-✓ "我吃麵條" (回答問題 + 使用詞彙)
-✓ "最近喜歡吃水果" (回答問題 + 使用詞彙)
-✗ "我喜歡早餐" (使用詞彙但沒回答"最近吃什麼")
-✗ "早餐很好吃" (完全離題)
+✅ "還不錯！" (natural greeting response - simple)
+✅ "有點累" (natural + uses vocabulary naturally)
+✅ "去學校了" (natural + uses vocabulary)
+❌ "復習「學校」" (META-TALK - FORBIDDEN!)
+❌ "今天要學新的" (META-TALK - FORBIDDEN!)
+
+AI says: "吃早餐了嗎？"
+Available words: 早餐, 麵包, 牛奶
+
+✅ "吃了！" (natural simple answer)
+✅ "我吃了麵包" (natural + vocabulary)
+✅ "還沒吃" (natural alternative)
+❌ "復習「早餐」" (META-TALK - FORBIDDEN!)
+❌ "想學別的" (META-TALK - FORBIDDEN!)
+
+**CRITICAL RULE**:
+- Suggestions = what user would say in REAL LIFE conversation
+- NOT what they would say in a classroom setting
+- Act like friends chatting, not teacher-student
 `
   }
 
@@ -757,10 +784,11 @@ ${vocabList}
         })
       } catch (error) {
         console.warn('⚠️ Failed to generate suggestions for review mode')
+        // Natural fallback responses (避免元對話，使用自然日常回應)
         suggestions = [
-          { chinese: '好的，開始吧', pinyin: 'hǎo de, kāi shǐ ba', english: "Okay, let's start", type: 'safe' },
-          { chinese: '我準備好了', pinyin: 'wǒ zhǔn bèi hǎo le', english: "I'm ready", type: 'safe' },
-          { chinese: '可以開始', pinyin: 'kě yǐ kāi shǐ', english: 'Can start', type: 'safe' }
+          { chinese: '還不錯！', pinyin: 'hái bù cuò!', english: "Pretty good!", type: 'safe' },
+          { chinese: '有點累', pinyin: 'yǒu diǎn lèi', english: "A bit tired", type: 'safe' },
+          { chinese: '還好啊', pinyin: 'hái hǎo a', english: "Not bad", type: 'safe' }
         ]
       }
 
