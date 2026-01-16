@@ -23,7 +23,7 @@ import type { MispronouncedEntry, Suggestions } from '../../components/report/ty
 import { API_BASE } from '../../config'
 import { addOrUpdateFlashcard, getDeckNames as getFlashcardDecks, addDeckName as registerFlashcardDeck } from '../../flashcards/utils/flashcards'
 import { AppButton } from '@/components/ui/AppButton'
-import { BookmarkPlus } from 'lucide-react'
+import { BookmarkPlus, Volume2 } from 'lucide-react'
 
 // 講師選擇器
 import { InterviewerSelector, getInterviewerImagePath, getInterviewerVoice, DEFAULT_INTERVIEWER } from '../components/InterviewerSelector'
@@ -2731,14 +2731,37 @@ export default function LessonPage() {
         <div className="w-full max-w-2xl mb-6 p-6 bg-white rounded-xl shadow-lg space-y-4">
           <div className="space-y-3">
             <div className="flex items-start gap-3">
-              <span className="text-blue-600 font-semibold text-sm min-w-[100px]">Pinyin:</span>
+              <span className="text-blue-600 font-semibold text-sm min-w-[80px] sm:min-w-[100px]">Pinyin:</span>
               <span className="text-gray-700 flex-1">
                 {currentStep.pinyin || currentStep.pinyin_examples?.join(', ') || 'Free response'}
               </span>
+              <button
+                type="button"
+                onClick={() => {
+                  const answer = Array.isArray(currentStep.expected_answer)
+                    ? currentStep.expected_answer[0]
+                    : currentStep.expected_answer
+                  if (answer) playTTS(answer)
+                }}
+                className="flex-shrink-0 p-2 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600 transition-all touch-manipulation"
+                title="Play Chinese pronunciation"
+              >
+                <Volume2 size={18} />
+              </button>
             </div>
             <div className="flex items-start gap-3">
-              <span className="text-purple-600 font-semibold text-sm min-w-[100px]">English:</span>
+              <span className="text-purple-600 font-semibold text-sm min-w-[80px] sm:min-w-[100px]">English:</span>
               <span className="text-gray-700 flex-1">{currentStep.english_hint}</span>
+              <button
+                type="button"
+                onClick={() => {
+                  if (currentStep.english_hint) playTTS(currentStep.english_hint)
+                }}
+                className="flex-shrink-0 p-2 rounded-full bg-purple-50 hover:bg-purple-100 text-purple-600 transition-all touch-manipulation"
+                title="Play English hint"
+              >
+                <Volume2 size={18} />
+              </button>
             </div>
           </div>
           <div className="border-t border-slate-100 pt-4 space-y-3">
