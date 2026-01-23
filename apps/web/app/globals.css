@@ -214,3 +214,15 @@ body {
   animation: slideUp 0.6s ease-out;
   animation-fill-mode: both;
 }
+
+/* Safe area insets for iPhone notch/home indicator */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Mobile Tab Bar safe area */
+.mobile-tab-safe {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
