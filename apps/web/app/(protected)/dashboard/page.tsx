@@ -14,8 +14,12 @@ import {
   BookOpen,
   CheckCircle2,
   Clock,
-  Sparkles
+  Sparkles,
+  HelpCircle,
+  Map
 } from "lucide-react"
+import DailyGoalCard from "@/components/goals/DailyGoalCard"
+import LearningPathCard from "@/components/path/LearningPathCard"
 
 interface StatsState {
   lessons: number
@@ -588,6 +592,45 @@ export default function DashboardPage() {
               color="green"
             />
           </div>
+        </section>
+
+        {/* Daily Goals & Learning Path Grid */}
+        <div className="grid gap-4 lg:grid-cols-2">
+          <DailyGoalCard />
+          <LearningPathCard />
+        </div>
+
+        {/* Quick Actions */}
+        <section className="grid grid-cols-2 gap-3">
+          <motion.button
+            onClick={() => router.push('/quiz')}
+            className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-100 hover:border-purple-200 transition-all touch-manipulation"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="w-10 h-10 rounded-xl bg-purple-500 flex items-center justify-center">
+              <HelpCircle className="w-5 h-5 text-white" />
+            </div>
+            <div className="text-left">
+              <p className="text-sm font-bold text-purple-800">TOCFL Practice</p>
+              <p className="text-xs text-purple-600">Test your skills</p>
+            </div>
+          </motion.button>
+
+          <motion.button
+            onClick={() => router.push('/conversation')}
+            className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100 hover:border-emerald-200 transition-all touch-manipulation"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center">
+              <Map className="w-5 h-5 text-white" />
+            </div>
+            <div className="text-left">
+              <p className="text-sm font-bold text-emerald-800">AI Conversation</p>
+              <p className="text-xs text-emerald-600">Practice speaking</p>
+            </div>
+          </motion.button>
         </section>
 
         {/* Chapter List */}
