@@ -448,15 +448,15 @@ export default function DashboardPage() {
           const allLessons: LessonSummary[] = await response.json()
           setLessons(allLessons)
 
-          const chapterMap = new Map<string, LessonSummary[]>()
+          const chapterMap: Record<string, LessonSummary[]> = {}
           allLessons.forEach(lesson => {
-            if (!chapterMap.has(lesson.chapterId)) {
-              chapterMap.set(lesson.chapterId, [])
+            if (!chapterMap[lesson.chapterId]) {
+              chapterMap[lesson.chapterId] = []
             }
-            chapterMap.get(lesson.chapterId)!.push(lesson)
+            chapterMap[lesson.chapterId].push(lesson)
           })
 
-          const chapterList: Chapter[] = Array.from(chapterMap.entries()).map(([id, lessons]) => ({
+          const chapterList: Chapter[] = Object.entries(chapterMap).map(([id, lessons]) => ({
             id,
             title: CHAPTER_TITLES[id] || id,
             description: CHAPTER_DESCRIPTIONS[id],
