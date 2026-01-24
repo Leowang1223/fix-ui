@@ -55,7 +55,9 @@
       "Bash(git init:*)",
       "Bash(test:*)",
       "Bash(git ls-remote:*)",
-      "Bash(docker --version:*)"
+      "Bash(docker --version:*)",
+      "Bash(xargs cat:*)",
+      "Bash(xargs -I {} sh -c 'echo \"\"=== {} ===\"\" && head -50 \"\"{}\"\"')"
     ],
     "deny": [],
     "ask": []

@@ -139,7 +139,7 @@ function calculateProgressFromHistory(): Partial<LearningProgress> {
 
     // Get dates
     const dates = history.map((h: any) => new Date(h.completedAt).toISOString().split('T')[0])
-    const uniqueDates = [...new Set(dates)] as string[]
+    const uniqueDates = Array.from(new Set(dates)) as string[]
     const startDate = uniqueDates.length > 0 ? uniqueDates[uniqueDates.length - 1] : new Date().toISOString().split('T')[0]
     const lastActivityDate = uniqueDates.length > 0 ? uniqueDates[0] : new Date().toISOString().split('T')[0]
 

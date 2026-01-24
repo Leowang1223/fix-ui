@@ -128,7 +128,7 @@ export default function ConversationSetupPage() {
     }
 
     // 建立完成度對照表
-    const completionMap = new Map<string, number>()
+    const completionMap: Record<string, number> = {}
 
     const historyStr = localStorage.getItem('lessonHistory')
     if (historyStr) {
@@ -145,8 +145,7 @@ export default function ConversationSetupPage() {
 
           // 只計算有效的章節 ID（過濾掉 L10, L3 等舊格式）
           if (chapterId && VALID_CHAPTER_PATTERN.test(chapterId)) {
-            const existing = completionMap.get(chapterId)
-            completionMap.set(chapterId, (existing || 0) + 1)
+            completionMap[chapterId] = (completionMap[chapterId] || 0) + 1
           }
         })
       } catch (error) {
@@ -158,7 +157,7 @@ export default function ConversationSetupPage() {
     const chapters = ALL_CHAPTERS.map(chapterId => ({
       chapterId,
       title: CHAPTER_TITLES[chapterId],
-      lessonCount: completionMap.get(chapterId) || 0
+      lessonCount: completionMap[chapterId] || 0
     }))
 
     setCompletedChapters(chapters)
