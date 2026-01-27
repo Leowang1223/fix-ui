@@ -39,7 +39,7 @@ import { sounds } from '@/lib/sounds'
 import { haptic } from '@/lib/haptic'
 
 // 成就系統
-import { trackRecording, trackLessonComplete, checkAndUnlockAchievements, type UnlockedAchievement } from '@/lib/achievements'
+import { trackRecording, trackLessonComplete, type UnlockedAchievement } from '@/lib/achievements'
 import { AchievementToast } from '@/components/ui/AchievementToast'
 
 // 音頻對比
@@ -1693,8 +1693,6 @@ export default function LessonPage() {
       sounds.recordStart()
       haptic.recordStart()
 
-      // 📊 追蹤錄音次數（用於成就）
-      trackRecording()
     } catch (err) {
       console.error('無法啟動麥克風:', err)
       alert('請允許使用麥克風')
@@ -1921,6 +1919,9 @@ export default function LessonPage() {
       }
 
       console.log(`✅ 背景評分完成：題目 ${stepId}，分數 ${finalScore}`)
+
+      // 📊 追蹤錄音次數（用於成就）
+      trackRecording(finalScore)
 
       // 更新結果
       updateStepResult(stepId, finalResult)
@@ -2301,8 +2302,7 @@ export default function LessonPage() {
 
       // 🏆 步驟 4: 檢查並解鎖成就
       console.log('  📝 步驟 4: 檢查成就解鎖')
-      trackLessonComplete(simpleReport.overview.total_score)
-      const newAchievements = checkAndUnlockAchievements()
+      const newAchievements = trackLessonComplete()
       if (newAchievements.length > 0) {
         console.log('  🏆 解鎖新成就:', newAchievements.map(a => a.name))
         // 顯示第一個解鎖的成就
