@@ -73,11 +73,11 @@ export default function CoursePath({ lessons = [], progress = 0, onStart, onSubm
 
       {/* Start button removed per request — entry via double-click on station number. */}
 
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .animate-course-arrow { animation: courseArrow 3s linear infinite; }
         .delay-1500 { animation-delay: 1.5s; }
         @keyframes courseArrow { 0% { transform: translateX(0) rotate(45deg); opacity: .8; } 50% { transform: translateX(160px) rotate(45deg); opacity: .2; } 100% { transform: translateX(0) rotate(45deg); opacity: .8; } }
-      `}</style>
+      ` }} />
     </div>
   )
 }
@@ -147,11 +147,11 @@ function Station({ index, title, done, active, percent, flash, onSelect, onCompl
         </button>
       </div>
 
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @keyframes waveShift { 0% { transform: translateX(0); } 100% { transform: translateX(-24px); } }
         @keyframes flash { 0% { box-shadow: none } 50% { box-shadow: 0 0 14px rgba(255,255,255,0.6) } 100% { box-shadow: none } }
         @keyframes ripple { 0% { transform: scale(0.6); opacity: .6 } 100% { transform: scale(2.2); opacity: 0 } }
-      `}</style>
+      ` }} />
       {flash && (
         <>
           <div aria-hidden className="absolute -inset-1 rounded-full flash" style={{ animation: 'flash 420ms ease-out' }} />

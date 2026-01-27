@@ -1,8 +1,8 @@
+@import '../src/styles/dashboard.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import '../src/styles/dashboard.css';
 
 :root {
   --page-bg: #eef2ff;

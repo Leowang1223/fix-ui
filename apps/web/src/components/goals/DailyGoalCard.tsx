@@ -93,7 +93,7 @@ function GoalSettingsModal({ isOpen, onClose, currentGoals, onSave }: GoalSettin
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
           className="w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden"
-          onClick={e => e.stopPropagation()}
+          onClick={(e: React.MouseEvent) => e.stopPropagation()}
         >
           <div className="p-5 border-b border-slate-100">
             <h2 className="text-lg font-bold text-slate-900">Daily Goal Settings</h2>
