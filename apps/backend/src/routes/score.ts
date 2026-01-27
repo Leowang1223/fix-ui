@@ -58,12 +58,13 @@ export async function scoreHandler(req: Request, res: Response) {
         const audioBase64 = audioFile.buffer.toString('base64');
 
         const prompt = [
-          'You are a professional Chinese pronunciation scoring system.',
+          'You are a professional Chinese pronunciation scoring system with syllable-level analysis capability.',
           '',
           'Task:',
           '1. Listen to the Chinese pronunciation in the audio',
-          '2. Compare with the expected answer',
-          '3. Give a score from 0-100',
+          '2. Compare with the expected answer character by character',
+          '3. Give an overall score from 0-100',
+          '4. Provide detailed syllable-by-syllable analysis',
           '',
           `Expected answer: ${expectedAnswers.join(' or ')}`,
           '',
@@ -86,8 +87,37 @@ export async function scoreHandler(req: Request, res: Response) {
           '    "comprehension": 85,',
           '    "confidence": 83',
           '  },',
-          '  "feedback": "Detailed feedback in English"',
-          '}'
+          '  "feedback": "Detailed feedback in English",',
+          '  "syllables": [',
+          '    {',
+          '      "char": "你",',
+          '      "expectedPinyin": "ni3",',
+          '      "userPinyin": "ni3",',
+          '      "status": "correct",',
+          '      "expectedTone": 3,',
+          '      "userTone": 3',
+          '    },',
+          '    {',
+          '      "char": "好",',
+          '      "expectedPinyin": "hao3",',
+          '      "userPinyin": "hao2",',
+          '      "status": "tone-error",',
+          '      "expectedTone": 3,',
+          '      "userTone": 2',
+          '    }',
+          '  ]',
+          '}',
+          '',
+          'Syllable status values:',
+          '- "correct": pronunciation and tone are both correct',
+          '- "tone-error": pronunciation is correct but tone is wrong',
+          '- "wrong": pronunciation is incorrect',
+          '- "missing": expected character was not spoken',
+          '- "extra": user spoke a character not in expected answer',
+          '',
+          'Tone values: 1 (flat), 2 (rising), 3 (dipping), 4 (falling), 5 (neutral/light)',
+          '',
+          'Analyze EACH character in the expected answer. If user spoke extra characters, add them with status "extra".'
         ].join('\n');
 
         const result = await model.generateContent({
@@ -125,6 +155,7 @@ export async function scoreHandler(req: Request, res: Response) {
           },
           transcript: scoreData.transcript || '',
           feedback: scoreData.feedback || '',
+          syllables: scoreData.syllables || [],
           method: 'gemini'
         });
 
@@ -147,6 +178,26 @@ export async function scoreHandler(req: Request, res: Response) {
 
     const overall_score = Math.round((pronunciation + fluency + accuracy + comprehension + confidence) / 5);
 
+    // 生成模擬的音節數據
+    const expectedText = expectedAnswers[0] || '';
+    const mockSyllables = expectedText.split('').map((char) => {
+      const statuses = ['correct', 'correct', 'correct', 'tone-error', 'correct'] as const;
+      const status = statuses[Math.floor(Math.random() * statuses.length)];
+      const expectedTone = (Math.floor(Math.random() * 4) + 1) as 1 | 2 | 3 | 4;
+      const userTone = status === 'tone-error'
+        ? ((expectedTone % 4) + 1) as 1 | 2 | 3 | 4
+        : expectedTone;
+
+      return {
+        char,
+        expectedPinyin: `mock${expectedTone}`,
+        userPinyin: `mock${userTone}`,
+        status,
+        expectedTone,
+        userTone
+      };
+    });
+
     const mockResult = {
       overall_score: Math.max(60, Math.min(100, overall_score)),
       scores: {
@@ -158,10 +209,11 @@ export async function scoreHandler(req: Request, res: Response) {
       },
       transcript: expectedAnswers[0] || '',
       feedback: overall_score >= 90
-        ? 'Excellent pronunciation! Your tone and fluency are outstanding. Keep up the great work!' 
-        : overall_score >= 75 
-        ? 'Good job! Your pronunciation is clear and understandable. Continue practicing to perfect your tones.' 
+        ? 'Excellent pronunciation! Your tone and fluency are outstanding. Keep up the great work!'
+        : overall_score >= 75
+        ? 'Good job! Your pronunciation is clear and understandable. Continue practicing to perfect your tones.'
         : 'Keep practicing! Focus on pronunciation accuracy and tone. Try to speak more clearly and confidently.',
+      syllables: mockSyllables,
       method: 'mock'
     };
 

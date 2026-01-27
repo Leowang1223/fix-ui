@@ -226,3 +226,223 @@ body {
 .mobile-tab-safe {
   padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
 }
+
+/* 防止下拉刷新 (iOS/Android) */
+html, body {
+  overscroll-behavior-y: contain;
+}
+
+/* 安全區域輔助類 */
+.safe-top {
+  padding-top: max(1rem, env(safe-area-inset-top));
+}
+
+.safe-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.safe-left {
+  padding-left: max(1rem, env(safe-area-inset-left));
+}
+
+.safe-right {
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+/* 水平滾動漸變遮罩 */
+.scroll-gradient-left::before,
+.scroll-gradient-right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.scroll-gradient-left::before {
+  left: 0;
+  background: linear-gradient(to right, var(--page-bg, #eef2ff), transparent);
+}
+
+.scroll-gradient-right::after {
+  right: 0;
+  background: linear-gradient(to left, var(--page-bg, #eef2ff), transparent);
+}
+
+/* 音節卡片微弱脈動動畫 */
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+/* 觸控優化：增加點擊區域 */
+@media (hover: none) and (pointer: coarse) {
+  button, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* 禁止文字選取（在錄音等交互區域） */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* =============================================
+   鍵盤無障礙 (Keyboard Accessibility)
+   ============================================= */
+
+/* 全局焦點樣式 - 只在鍵盤導航時顯示 */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--accent, #2563eb);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* 按鈕和連結的焦點樣式 */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--accent, #2563eb);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+/* 輸入框焦點樣式 */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent, #2563eb);
+  outline-offset: 0;
+  border-color: var(--accent, #2563eb);
+}
+
+/* Skip Link - 跳過導航連結 */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1.5rem;
+  background: var(--accent, #2563eb);
+  color: white;
+  font-weight: 600;
+  border-radius: 0 0 8px 8px;
+  z-index: 9999;
+  transition: top 0.2s ease;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: none;
+}
+
+/* 屏幕閱讀器專用 (視覺隱藏但可訪問) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 焦點時顯示 (用於 skip link 等) */
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* 禁用焦點輪廓的類（謹慎使用） */
+.focus-none:focus,
+.focus-none:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* =============================================
+   減少動畫模式 (Reduced Motion)
+   ============================================= */
+
+/*
+ * 當用戶在系統設置中啟用「減少動態效果」時，
+ * 禁用所有動畫和過渡效果，改善前庭功能障礙用戶的體驗
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* 保留必要的視覺反饋（顏色變化） */
+  button:hover,
+  a:hover,
+  [role="button"]:hover {
+    transition: background-color 0.01ms, color 0.01ms, border-color 0.01ms !important;
+  }
+
+  /* 禁用脈動和旋轉動畫 */
+  .animate-pulse,
+  .animate-spin,
+  .animate-bounce,
+  .animate-pulse-subtle {
+    animation: none !important;
+  }
+
+  /* 禁用滾動動畫 */
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 當用戶允許動畫時的標記類 */
+@media (prefers-reduced-motion: no-preference) {
+  .motion-safe\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .motion-safe\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .motion-safe\:transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}

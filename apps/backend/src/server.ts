@@ -9,6 +9,7 @@ import lessonsRouter from './routes/lessons';
 import scenariosRouter from './routes/scenarios';
 import conversationRouter from './routes/conversation';
 import lessonHistoryRouter from './routes/lessonHistory';
+import userProgressRouter from './routes/userProgress';
 import path from 'path';
 
 const app = express();
@@ -40,6 +41,7 @@ app.use('/api/lessons', lessonsRouter);
 app.use('/api/scenarios', scenariosRouter);
 app.use('/api/conversation', conversationRouter);
 app.use('/api/lesson-history', lessonHistoryRouter);
+app.use('/api/user', userProgressRouter);
 
 // Health check
 app.get('/health', (req, res) => {

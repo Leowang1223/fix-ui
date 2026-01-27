@@ -52,10 +52,10 @@ export default function Home() {
         </div>
 
         <Link
-          href="/prepare"
+          href="/dashboard"
           className="text-sm text-slate-500 hover:text-blue-600 transition inline-flex items-center gap-2 group"
         >
-          <span>preview a lesson flow</span>
+          <span>start learning now</span>
           <ArrowRight className="w-4 h-4 transform transition-transform group-hover:translate-x-1" />
         </Link>
       </div>

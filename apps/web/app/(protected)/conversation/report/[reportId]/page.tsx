@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { ArrowLeft, CheckCircle, Clock, Target, TrendingUp, BookOpen, Lightbulb, Award, Plus } from 'lucide-react'
 import { addCustomFlashcard, getDeckNames, addDeckName } from '../../../flashcards/utils/flashcards'
+import { ConversationCorrectionReport, TurnCorrection, CorrectionSummary } from '@/components/reports/ConversationCorrectionReport'
 
 interface CheckpointDetail {
   id: number
@@ -48,6 +49,9 @@ interface ScenarioAnalysis {
   reviewedLessons?: string[]
   reviewType?: string
   vocabularyCount?: number
+  // Grammar correction data (optional)
+  turnCorrections?: TurnCorrection[]
+  correctionSummary?: CorrectionSummary
 }
 
 interface ConversationHistory {
@@ -512,6 +516,23 @@ export default function ReportPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        )}
+
+        {/* Grammar & Pronunciation Correction Report */}
+        {analysis.turnCorrections && analysis.correctionSummary && (
+          <div className="bg-white rounded-xl border shadow-sm p-6">
+            <ConversationCorrectionReport
+              turnCorrections={analysis.turnCorrections}
+              summary={analysis.correctionSummary}
+              onPlayTTS={(text) => {
+                const utterance = new SpeechSynthesisUtterance(text)
+                utterance.lang = 'zh-TW'
+                utterance.rate = 0.85
+                utterance.pitch = 1.05
+                window.speechSynthesis.speak(utterance)
+              }}
+            />
           </div>
         )}
 

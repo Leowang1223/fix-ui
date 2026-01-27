@@ -4,105 +4,106 @@
   "lesson_number": 5,
   "title": "Daily Actions",
   "description": "Learn common verbs used in everyday life.",
+  "context": "Action verbs for daily routines and household chores. These verbs describe activities you do at home every day.",
   "steps": [
     {
       "id": 1,
       "teacher": "洗手",
-      "expected_answer": [
-        "洗手"
-      ],
+      "expected_answer": ["洗手"],
       "pinyin": "xǐ shǒu",
       "english_hint": "wash hands",
+      "example_sentence": "吃飯前要洗手。",
+      "example_sentence_en": "Wash your hands before eating.",
       "encouragement": "Great!"
     },
     {
       "id": 2,
       "teacher": "洗臉",
-      "expected_answer": [
-        "洗臉"
-      ],
+      "expected_answer": ["洗臉"],
       "pinyin": "xǐ liǎn",
       "english_hint": "wash face",
+      "example_sentence": "早上起床要洗臉。",
+      "example_sentence_en": "Wash your face after getting up in the morning.",
       "encouragement": "Nice job!"
     },
     {
       "id": 3,
       "teacher": "刷牙",
-      "expected_answer": [
-        "刷牙"
-      ],
+      "expected_answer": ["刷牙"],
       "pinyin": "shuā yá",
       "english_hint": "brush teeth",
+      "example_sentence": "睡覺前記得刷牙。",
+      "example_sentence_en": "Remember to brush your teeth before bed.",
       "encouragement": "Good!"
     },
     {
       "id": 4,
       "teacher": "洗衣服",
-      "expected_answer": [
-        "洗衣服"
-      ],
+      "expected_answer": ["洗衣服"],
       "pinyin": "xǐ yī fú",
       "english_hint": "wash clothes",
+      "example_sentence": "我每週日洗衣服。",
+      "example_sentence_en": "I wash clothes every Sunday.",
       "encouragement": "Excellent!"
     },
     {
       "id": 5,
       "teacher": "掃地",
-      "expected_answer": [
-        "掃地"
-      ],
+      "expected_answer": ["掃地"],
       "pinyin": "sǎo dì",
       "english_hint": "sweep the floor",
+      "example_sentence": "媽媽在掃地。",
+      "example_sentence_en": "Mom is sweeping the floor.",
       "encouragement": "Great!"
     },
     {
       "id": 6,
       "teacher": "拖地",
-      "expected_answer": [
-        "拖地"
-      ],
+      "expected_answer": ["拖地"],
       "pinyin": "tuō dì",
       "english_hint": "mop the floor",
+      "example_sentence": "掃完地再拖地。",
+      "example_sentence_en": "Mop the floor after sweeping.",
       "encouragement": "Nice!"
     },
     {
       "id": 7,
       "teacher": "煮飯",
-      "expected_answer": [
-        "煮飯"
-      ],
+      "expected_answer": ["煮飯"],
       "pinyin": "zhǔ fàn",
       "english_hint": "cook (make a meal)",
+      "example_sentence": "爸爸今天煮飯。",
+      "example_sentence_en": "Dad is cooking today.",
       "encouragement": "Good job!"
     },
     {
       "id": 8,
       "teacher": "洗澡",
-      "expected_answer": [
-        "洗澡"
-      ],
+      "expected_answer": ["洗澡"],
       "pinyin": "xǐ zǎo",
       "english_hint": "take a shower",
+      "example_sentence": "運動後要洗澡。",
+      "example_sentence_en": "Take a shower after exercising.",
       "encouragement": "Awesome!"
     },
     {
       "id": 9,
       "teacher": "休息",
-      "expected_answer": [
-        "休息"
-      ],
+      "expected_answer": ["休息"],
       "pinyin": "xiū xí",
       "english_hint": "rest",
+      "example_sentence": "累了就休息一下。",
+      "example_sentence_en": "Take a rest when you're tired.",
       "encouragement": "Great!"
     },
     {
       "id": 10,
       "teacher": "練習",
-      "expected_answer": [
-        "練習"
-      ],
+      "expected_answer": ["練習"],
       "pinyin": "liàn xí",
       "english_hint": "practice",
+      "example_sentence": "每天練習中文。",
+      "example_sentence_en": "Practice Chinese every day.",
       "encouragement": "Fantastic!"
     }
   ],

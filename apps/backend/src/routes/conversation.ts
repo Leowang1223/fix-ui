@@ -1643,12 +1643,20 @@ router.post('/end', authenticateUser, async (req: AuthRequest, res) => {
           .map(turn => `${turn.role === 'user' ? 'User' : 'AI'}: ${turn.text}`)
           .join('\n')
 
+        // 為語法修正準備用戶輪次
+        const userTurns = session.conversationHistory
+          .filter(turn => turn.role === 'user')
+          .map((turn, index) => ({ turnIndex: index + 1, text: turn.text }))
+
         const analysisPrompt = `Analyze this Chinese conversation and provide scores (0-100):
 
 Conversation:
 ${conversationText}
 
-Provide a JSON analysis with:
+User turns for grammar analysis:
+${userTurns.map(t => `Turn ${t.turnIndex}: "${t.text}"`).join('\n')}
+
+Provide a JSON analysis with the following structure:
 {
   "fluency": score,
   "vocabulary": score,
@@ -1663,10 +1671,57 @@ Provide a JSON analysis with:
       "pinyin": "cí yǔ",
       "english": "vocabulary"
     }
-  ]
+  ],
+  "turnCorrections": [
+    {
+      "turnIndex": 1,
+      "userText": "user's original text",
+      "corrections": {
+        "grammar": [
+          {
+            "original": "incorrect phrase",
+            "corrected": "correct phrase",
+            "explanation": "explanation in English",
+            "explanationZh": "中文說明",
+            "type": "word-order|measure-word|tense|particle|vocabulary|other"
+          }
+        ],
+        "pronunciation": [
+          {
+            "word": "字",
+            "pinyin": "correct pinyin",
+            "issue": "tone|initial|final|missing|added",
+            "description": "issue description in English",
+            "descriptionZh": "中文描述",
+            "severity": "minor|moderate|major"
+          }
+        ],
+        "correctedText": "fully corrected sentence",
+        "correctedPinyin": "pinyin for corrected sentence",
+        "score": 0-100
+      }
+    }
+  ],
+  "correctionSummary": {
+    "totalTurns": number,
+    "turnsWithIssues": number,
+    "grammarIssueCount": number,
+    "pronunciationIssueCount": number,
+    "commonGrammarIssues": ["issue type 1", "issue type 2"],
+    "commonPronunciationIssues": ["issue type 1"],
+    "overallGrammarScore": 0-100,
+    "overallPronunciationScore": 0-100,
+    "recommendations": ["recommendation 1", "recommendation 2"]
+  }
 }
 
-IMPORTANT: Extract key Chinese vocabulary words/phrases that the user used during the conversation. Include both "vocabularyUsed" (simple array of Chinese words) and "vocabularyDetails" (detailed objects with Chinese, pinyin, and English translation). Focus on meaningful content words, not particles or common words like 我、是、的.`
+IMPORTANT INSTRUCTIONS:
+1. Extract key Chinese vocabulary words/phrases. Focus on meaningful content words, not particles or common words like 我、是、的.
+2. For each user turn, analyze grammar and potential pronunciation issues. If a turn is perfect, include it with empty grammar and pronunciation arrays.
+3. Grammar types: word-order (詞序), measure-word (量詞), tense (時態), particle (虛詞), vocabulary (詞彙), other
+4. Pronunciation severity: minor (輕微), moderate (中等), major (嚴重)
+5. The correctionSummary should aggregate data from all turnCorrections.
+6. Be thorough but not overly critical - focus on significant issues that affect communication.`
 
         const result = await model.generateContent({
           contents: [{ role: 'user', parts: [{ text: analysisPrompt }] }],

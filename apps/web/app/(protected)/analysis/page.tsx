@@ -1,6 +1,5 @@
 'use client';
 import { useEffect, useState, useRef } from 'react';
-import Link from 'next/link';
 import TopBar from '@/components/TopBar';
 import {
   Chart as ChartJS,
@@ -394,19 +393,13 @@ export default function AnalyzePage(){
           
           {/* Section 4: 已併入逐題卡片中，移除重複的逐字稿區塊 */}
           
-          <div className="text-center mt-10 space-x-4">
-            <button 
+          <div className="text-center mt-10">
+            <button
               onClick={downloadPDF}
-              className="px-5 py-2.5 bg-blue-600 text-white hover:bg-blue-700 transition-colors text-base"
+              className="px-5 py-2.5 bg-blue-600 text-white hover:bg-blue-700 transition-colors text-base rounded"
             >
               下載報告
             </button>
-            <Link
-              href="/report"
-              className="inline-block px-5 py-2.5 bg-green-600 text-white hover:bg-green-700 transition-colors text-base rounded"
-            >
-              生成 AI 學習報告
-            </Link>
           </div>
           
           <div className="text-center text-gray-500 text-sm mt-5">

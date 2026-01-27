@@ -28,6 +28,23 @@ import { BookmarkPlus, Volume2 } from 'lucide-react'
 // 講師選擇器
 import { InterviewerSelector, getInterviewerImagePath, getInterviewerVoice, DEFAULT_INTERVIEWER } from '../components/InterviewerSelector'
 
+// 音節反饋組件
+import { SyllableFeedbackPanel, type SyllableData } from '@/components/lesson'
+
+// 入門教程
+import { LessonTutorial, hasCompletedLessonTutorial } from '@/components/onboarding'
+
+// 音效與觸覺反饋
+import { sounds } from '@/lib/sounds'
+import { haptic } from '@/lib/haptic'
+
+// 成就系統
+import { trackRecording, trackLessonComplete, checkAndUnlockAchievements, type UnlockedAchievement } from '@/lib/achievements'
+import { AchievementToast } from '@/components/ui/AchievementToast'
+
+// 音頻對比
+import { AudioCompare } from '@/components/ui/AudioCompare'
+
 // 🔧 字串相似度計算工具（Levenshtein Distance）
 function normalizeText(text: string): string {
   return (text || '')
@@ -913,6 +930,7 @@ interface CurrentFeedback {
   mispronounced?: MispronouncedEntry[]
   passed: boolean
   fullResult?: any
+  syllables?: SyllableData[]
 }
 
 
@@ -961,9 +979,20 @@ export default function LessonPage() {
   // 🔧 新增：錄音錯誤狀態（取代 alert）
   const [recordingError, setRecordingError] = useState<string | null>(null)
 
+  // 🆕 音節反饋狀態
+  const [showSyllableFeedback, setShowSyllableFeedback] = useState(false)
+  const [currentSyllables, setCurrentSyllables] = useState<SyllableData[]>([])
+  const [currentFeedbackScore, setCurrentFeedbackScore] = useState(0)
+
   // 👤 講師選擇相關
   const [currentInterviewer, setCurrentInterviewer] = useState<string>(DEFAULT_INTERVIEWER)
   const [showInterviewerSelector, setShowInterviewerSelector] = useState(false)
+
+  // 📚 入門教程
+  const [showTutorial, setShowTutorial] = useState(false)
+
+  // 🏆 成就系統
+  const [unlockedAchievement, setUnlockedAchievement] = useState<UnlockedAchievement | null>(null)
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null)
   const audioChunksRef = useRef<Blob[]>([])
@@ -978,6 +1007,12 @@ export default function LessonPage() {
     reportSessionIdRef.current = null
   }, [lessonId])
 
+  // 📚 第一次進入時顯示教程
+  useEffect(() => {
+    if (!hasCompletedLessonTutorial()) {
+      setShowTutorial(true)
+    }
+  }, [])
 
   // 🔧 修復：過濾掉括號內的拼音
   const removePinyin = (text: string): string => {
@@ -1653,6 +1688,13 @@ export default function LessonPage() {
       mediaRecorder.start()
       setIsRecording(true)
       setAttempts(attempts + 1)
+
+      // 🔊 音效與觸覺反饋
+      sounds.recordStart()
+      haptic.recordStart()
+
+      // 📊 追蹤錄音次數（用於成就）
+      trackRecording()
     } catch (err) {
       console.error('無法啟動麥克風:', err)
       alert('請允許使用麥克風')
@@ -1667,6 +1709,10 @@ export default function LessonPage() {
     mediaRecorderRef.current.stop()
     setIsRecording(false)
     setRecordingError(null) // 🔧 清除之前的錯誤
+
+    // 🔊 音效與觸覺反饋
+    sounds.recordStop()
+    haptic.recordStop()
 
     mediaRecorderRef.current.onstop = async () => {
       const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' })
@@ -1712,44 +1758,37 @@ export default function LessonPage() {
         // ⭐ 更新狀態：評分中
         setScoreStatus(prev => new Map(prev).set(currentStep.id, 'pending'))
 
-        // ⭐ 啟動背景評分任務（不等待）
+        // ⭐ 啟動評分任務（等待結果以顯示音節反饋）
         const scorePromise = scoreInBackground(audioBlob, currentStep, currentStep.id, attempts)
         pendingScoresRef.current.set(currentStep.id, scorePromise)
 
-        console.log(`📡 背景評分已啟動：題目 ${currentStep.id}`)
+        console.log(`📡 評分已啟動：題目 ${currentStep.id}`)
 
-        // ⭐ 立即檢查是否為最後一題
-        if (allResults.length >= lesson.steps.length) {
-          console.log('🚀 所有題目已完成，立即顯示慶祝畫面！')
-          console.log('  📊 狀態:', {
-            resultsCount: allResults.length,
-            stepsCount: lesson.steps.length,
-            pendingScores: pendingScoresRef.current.size
-          })
+        // 🆕 等待評分結果以顯示音節反饋
+        try {
+          const scoreResult = await scorePromise
+          console.log('📊 評分結果:', scoreResult)
 
-          // ⭐ 立即觸發完成流程（背景評分會在 finalizeLesson 內等待）
-          console.log('  🎉 立即調用 finalizeLesson')
-          finalizeLesson(allResults.slice(0, lesson.steps.length))
-        } else {
-          // ⭐ 立即進入下一題（樂觀 UI）
-          const nextIndex = currentStepIndex + 1
-          const nextStep = lesson.steps[nextIndex]
+          // 🔊 根據分數播放音效和觸覺反饋
+          sounds.forScore(scoreResult.score)
+          haptic.forScore(scoreResult.score)
 
-          console.log(`⚡ 立即進入下一題 ${nextIndex + 1}/${lesson.steps.length}`)
-          console.log('  - 當前題評分狀態: 背景進行中')
-          console.log('  - 下一題:', nextStep?.teacher)
-
-          setCurrentStepIndex(nextIndex)
-          setCurrentSubtitle(nextStep?.teacher || '')
-          setSessionState('question')
-          setIsRecording(false)
-          setIsRetrying(false)
-          setAttempts(0)
-          setNeedsManualPlay(false)
-          setCurrentCaption('')
-          setRecordingError(null)
-
-          console.log('✅ 已切換到題目', nextIndex + 1, '（背景評分繼續進行）')
+          // 如果有音節數據，顯示音節反饋面板
+          if (scoreResult.apiResponse?.syllables && scoreResult.apiResponse.syllables.length > 0) {
+            setCurrentSyllables(scoreResult.apiResponse.syllables)
+            setCurrentFeedbackScore(scoreResult.score)
+            setShowSyllableFeedback(true)
+            console.log('🎯 顯示音節反饋面板')
+          } else {
+            // 沒有音節數據，直接進入下一題
+            handleNextAfterFeedback(allResults)
+          }
+        } catch (error) {
+          console.error('評分等待失敗:', error)
+          // 🔊 失敗音效
+          sounds.error()
+          // 評分失敗也進入下一題
+          handleNextAfterFeedback(allResults)
         }
         
       } catch (err) {
@@ -1764,9 +1803,51 @@ export default function LessonPage() {
     }
   }
 
-  // 🔧 已移除 handleScore 函數，邏輯轉移到 handleNextQuestion 和即時反饋彈窗
+  // 🆕 處理音節反饋後進入下一題
+  const handleNextAfterFeedback = (allResults: StepResult[]) => {
+    setShowSyllableFeedback(false)
+    setCurrentSyllables([])
+    setCurrentFeedbackScore(0)
 
-  // ⭐ 樂觀 UI：背景評分函數
+    // 檢查是否為最後一題
+    if (allResults.length >= lesson!.steps.length) {
+      console.log('🚀 所有題目已完成，顯示慶祝畫面！')
+      finalizeLesson(allResults.slice(0, lesson!.steps.length))
+    } else {
+      // 進入下一題
+      const nextIndex = currentStepIndex + 1
+      const nextStep = lesson!.steps[nextIndex]
+
+      console.log(`⚡ 進入下一題 ${nextIndex + 1}/${lesson!.steps.length}`)
+
+      setCurrentStepIndex(nextIndex)
+      setCurrentSubtitle(nextStep?.teacher || '')
+      setSessionState('question')
+      setIsRecording(false)
+      setIsRetrying(false)
+      setAttempts(0)
+      setNeedsManualPlay(false)
+      setCurrentCaption('')
+      setRecordingError(null)
+
+      console.log('✅ 已切換到題目', nextIndex + 1)
+    }
+  }
+
+  // 🆕 音節反饋面板的「下一題」按鈕處理
+  const handleSyllableFeedbackNext = () => {
+    handleNextAfterFeedback(stepResults)
+  }
+
+  // 🆕 音節反饋面板的「重試」按鈕處理
+  const handleSyllableFeedbackRetry = () => {
+    setShowSyllableFeedback(false)
+    setCurrentSyllables([])
+    setIsRetrying(true)
+    setAttempts(prev => prev + 1)
+  }
+
+  // ⭐ 背景評分函數
   const scoreInBackground = async (
     audioBlob: Blob,
     currentStep: any,
@@ -2215,6 +2296,20 @@ export default function LessonPage() {
       setCountdown(60)
       console.log('  ✅ 慶祝畫面已啟動!')
 
+      // 🎵 播放完成音效
+      sounds.achievement()
+
+      // 🏆 步驟 4: 檢查並解鎖成就
+      console.log('  📝 步驟 4: 檢查成就解鎖')
+      trackLessonComplete(simpleReport.overview.total_score)
+      const newAchievements = checkAndUnlockAchievements()
+      if (newAchievements.length > 0) {
+        console.log('  🏆 解鎖新成就:', newAchievements.map(a => a.name))
+        // 顯示第一個解鎖的成就
+        setUnlockedAchievement(newAchievements[0])
+        sounds.achievement()
+      }
+
       console.log('🎉 ========== finalizeLesson 執行完成 ==========')
 
     } catch (error) {
@@ -2619,11 +2714,35 @@ export default function LessonPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-4">
       <div className="w-full max-w-2xl mb-6">
-        <h1 className="text-2xl font-bold text-center mb-2">{lesson.title}</h1>
-        <div className="w-full bg-gray-200 rounded-full h-2.5">
+        <div className="flex items-center justify-between mb-2">
+          <div className="w-10" /> {/* Spacer for centering */}
+          <h1 className="text-2xl font-bold text-center flex-1">{lesson.title}</h1>
+          {/* 📚 幫助按鈕 - 重新顯示教程 */}
+          <button
+            onClick={() => setShowTutorial(true)}
+            className="w-10 h-10 rounded-full bg-white/80 hover:bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-blue-600 transition-colors"
+            title="Show tutorial"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </button>
+        </div>
+        <div
+          className="w-full bg-gray-200 rounded-full h-2.5"
+          role="progressbar"
+          aria-valuenow={Math.round(progress)}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-label={`Lesson progress: ${Math.round(progress)}%`}
+        >
           <div className="bg-blue-600 h-2.5 rounded-full transition-all duration-500" style={{ width: `${progress}%` }} />
         </div>
-        <div className="text-center text-sm text-gray-600 mt-2">
+        <div
+          className="text-center text-sm text-gray-600 mt-2"
+          aria-live="polite"
+          aria-atomic="true"
+        >
           Question {currentStepIndex + 1} / {lesson.steps.length}
         </div>
       </div>
@@ -2663,27 +2782,13 @@ export default function LessonPage() {
 
       {/* 🎥 視頻播放器（當有 video_url 時顯示） */}
       {currentStep?.video_url && (
-        <div 
-          className="w-full mb-6 flex items-center justify-center"
-          style={{ 
-            maxWidth: '900px',
-            height: '66vh',
-            maxHeight: '500px'
-          }}
-        >
-          <div 
-            className="relative rounded-2xl shadow-lg"
-            style={{ 
-              width: '100%',
-              height: '100%',
-              background: '#000',
-              overflow: 'hidden'
-            }}
-          >
+        <div className="w-full mb-6 flex items-center justify-center max-w-4xl mx-auto">
+          <div className="relative w-full aspect-video rounded-2xl shadow-lg bg-black overflow-hidden">
             <video
               key={currentStep.video_url}
               ref={videoRef}
               src={currentStep.video_url}
+              preload="metadata"
               playsInline
               disablePictureInPicture
               disableRemotePlayback
@@ -2859,19 +2964,36 @@ export default function LessonPage() {
         </div>
       )}
 
-      <button
-        onClick={handleRecording}
-        className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all shadow-lg transform hover:scale-110 touch-manipulation ${
-          isRecording ? 'bg-red-500 hover:bg-red-600 animate-pulse' :
-          'bg-blue-500 hover:bg-blue-600'
-        }`}
-      >
-        <div className={`rounded-full ${isRecording ? 'w-5 h-5 sm:w-6 sm:h-6 bg-white' : 'w-8 h-8 sm:w-10 sm:h-10 bg-white'}`}></div>
-      </button>
+      {/* 🆕 音節反饋面板 - 顯示在錄音按鈕位置 */}
+      {showSyllableFeedback ? (
+        <div className="w-full max-w-2xl">
+          <SyllableFeedbackPanel
+            syllables={currentSyllables}
+            overallScore={currentFeedbackScore}
+            onPlayTTS={(text) => playTTS(text)}
+            onRetry={handleSyllableFeedbackRetry}
+            onNext={handleSyllableFeedbackNext}
+            showToneCurve={true}
+            compact={false}
+          />
+        </div>
+      ) : (
+        <>
+          <button
+            onClick={handleRecording}
+            className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all shadow-lg transform hover:scale-110 touch-manipulation ${
+              isRecording ? 'bg-red-500 hover:bg-red-600 animate-pulse' :
+              'bg-blue-500 hover:bg-blue-600'
+            }`}
+          >
+            <div className={`rounded-full ${isRecording ? 'w-5 h-5 sm:w-6 sm:h-6 bg-white' : 'w-8 h-8 sm:w-10 sm:h-10 bg-white'}`}></div>
+          </button>
 
-      <p className="mt-4 text-gray-600 font-medium text-center">
-        {isRecording ? 'Recording...' : 'Click to start recording'}
-      </p>
+          <p className="mt-4 text-gray-600 font-medium text-center">
+            {isRecording ? 'Recording...' : 'Click to start recording'}
+          </p>
+        </>
+      )}
 
       {isRetrying && (
         <div className="mt-4 text-center max-w-md">
@@ -2945,6 +3067,19 @@ export default function LessonPage() {
           currentInterviewer={currentInterviewer}
           onSelect={handleSelectInterviewer}
           onClose={() => setShowInterviewerSelector(false)}
+        />
+      )}
+
+      {/* 📚 入門教程 */}
+      {showTutorial && (
+        <LessonTutorial onComplete={() => setShowTutorial(false)} />
+      )}
+
+      {/* 🏆 成就通知 */}
+      {unlockedAchievement && (
+        <AchievementToast
+          achievement={unlockedAchievement}
+          onClose={() => setUnlockedAchievement(null)}
         />
       )}
     </div>

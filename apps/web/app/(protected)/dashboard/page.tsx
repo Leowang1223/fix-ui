@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo } from "react"
 import { useRouter } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import {
@@ -15,11 +15,15 @@ import {
   CheckCircle2,
   Clock,
   Sparkles,
-  HelpCircle,
-  Map
+  MessageCircle
 } from "lucide-react"
 import DailyGoalCard from "@/components/goals/DailyGoalCard"
 import LearningPathCard from "@/components/path/LearningPathCard"
+import { TrendChart } from "@/components/ui/TrendChart"
+import { RecommendationCard, SmartRecommendationBanner } from "@/components/ui/RecommendationCard"
+import { getRecommendations, getTopRecommendation, Recommendation } from "@/lib/recommendations"
+import { EmptyState } from "@/components/ui/EmptyState"
+import { Tooltip } from "@/components/ui/Tooltip"
 
 interface StatsState {
   lessons: number
@@ -107,7 +111,7 @@ function StatCard({ icon: Icon, label, value, color }: {
   )
 }
 
-// Chapter accordion item
+// Chapter accordion item with accessibility and performance optimizations
 function ChapterItem({
   chapter,
   lessons,
@@ -123,20 +127,48 @@ function ChapterItem({
   onToggle: () => void
   onLessonClick: (lessonId: string) => void
 }) {
-  const chapterLessons = lessons.filter(l => l.chapterId === chapter.id)
-  const completedCount = chapterLessons.filter(l => (lessonProgress[l.lesson_id] || 0) === 100).length
-  const totalCount = chapterLessons.length
-  const progressPercent = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0
+  // 使用 useMemo 優化計算
+  const { chapterLessons, completedCount, totalCount, progressPercent } = useMemo<{
+    chapterLessons: LessonSummary[]
+    completedCount: number
+    totalCount: number
+    progressPercent: number
+  }>(() => {
+    const filtered = lessons.filter(l => l.chapterId === chapter.id)
+    const completed = filtered.filter(l => (lessonProgress[l.lesson_id] || 0) === 100).length
+    const total = filtered.length
+    const percent = total > 0 ? Math.round((completed / total) * 100) : 0
+    return { chapterLessons: filtered, completedCount: completed, totalCount: total, progressPercent: percent }
+  }, [lessons, chapter.id, lessonProgress])
+
+  const chapterId = `chapter-${chapter.id}`
+  const panelId = `panel-${chapter.id}`
+
+  // 鍵盤導航處理
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      onToggle()
+    }
+  }
 
   return (
-    <div className="rounded-2xl border border-slate-100 bg-white overflow-hidden shadow-sm">
+    <div
+      className="rounded-2xl border border-slate-100 bg-white overflow-hidden shadow-sm"
+      role="region"
+      aria-labelledby={chapterId}
+    >
       <button
+        id={chapterId}
         onClick={onToggle}
-        className="w-full flex items-center justify-between p-4 sm:p-5 hover:bg-slate-50 transition-colors touch-manipulation"
+        onKeyDown={handleKeyDown}
+        aria-expanded={isExpanded}
+        aria-controls={panelId}
+        className="w-full flex items-center justify-between p-4 sm:p-5 hover:bg-slate-50 transition-colors touch-manipulation min-h-[64px] focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
       >
         <div className="flex items-center gap-3 sm:gap-4">
           <div className={`
-            flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl font-bold text-sm sm:text-base
+            flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl font-bold text-sm sm:text-base
             ${progressPercent === 100
               ? 'bg-green-100 text-green-600'
               : progressPercent > 0
@@ -151,7 +183,14 @@ function ChapterItem({
               {CHAPTER_TITLES[chapter.id] || chapter.id}
             </h3>
             <div className="flex items-center gap-2 mt-1">
-              <div className="flex-1 h-1.5 w-20 sm:w-24 bg-slate-100 rounded-full overflow-hidden">
+              <div
+                className="flex-1 h-1.5 w-20 sm:w-24 bg-slate-100 rounded-full overflow-hidden"
+                role="progressbar"
+                aria-valuenow={progressPercent}
+                aria-valuemin={0}
+                aria-valuemax={100}
+                aria-label={`Chapter progress: ${progressPercent}%`}
+              >
                 <motion.div
                   className="h-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"
                   initial={{ width: 0 }}
@@ -159,13 +198,14 @@ function ChapterItem({
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 />
               </div>
-              <span className="text-xs text-slate-500">{completedCount}/{totalCount}</span>
+              <span className="text-xs text-slate-500" aria-hidden="true">{completedCount}/{totalCount}</span>
             </div>
           </div>
         </div>
         <motion.div
           animate={{ rotate: isExpanded ? 180 : 0 }}
           transition={{ duration: 0.2 }}
+          aria-hidden="true"
         >
           <ChevronDown size={20} className="text-slate-400" />
         </motion.div>
@@ -174,13 +214,16 @@ function ChapterItem({
       <AnimatePresence>
         {isExpanded && (
           <motion.div
+            id={panelId}
+            role="region"
+            aria-labelledby={chapterId}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="overflow-hidden"
           >
-            <div className="px-4 pb-4 sm:px-5 sm:pb-5 space-y-2">
+            <div className="px-4 pb-4 sm:px-5 sm:pb-5 space-y-2" role="list">
               {chapterLessons.map((lesson) => {
                 const progress = lessonProgress[lesson.lesson_id] || 0
                 const isCompleted = progress === 100
@@ -190,9 +233,12 @@ function ChapterItem({
                   <button
                     key={lesson.lesson_id}
                     onClick={() => onLessonClick(lesson.lesson_id)}
+                    role="listitem"
+                    aria-label={`${lesson.title}, ${lesson.stepCount} steps${isCompleted ? ', completed' : isInProgress ? `, ${progress}% complete` : ''}`}
                     className={`
                       w-full flex items-center justify-between p-3 sm:p-4 rounded-xl
-                      transition-all touch-manipulation
+                      transition-all touch-manipulation min-h-[56px]
+                      focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
                       ${isCompleted
                         ? 'bg-green-50 border border-green-100'
                         : isInProgress
@@ -203,7 +249,7 @@ function ChapterItem({
                   >
                     <div className="flex items-center gap-3">
                       <div className={`
-                        flex items-center justify-center w-8 h-8 rounded-lg text-xs font-semibold
+                        flex items-center justify-center w-9 h-9 rounded-lg text-xs font-semibold
                         ${isCompleted
                           ? 'bg-green-100 text-green-600'
                           : isInProgress
@@ -211,7 +257,7 @@ function ChapterItem({
                             : 'bg-slate-200 text-slate-500'
                         }
                       `}>
-                        {isCompleted ? <CheckCircle2 size={16} /> : lesson.lessonNumber}
+                        {isCompleted ? <CheckCircle2 size={16} aria-hidden="true" /> : lesson.lessonNumber}
                       </div>
                       <div className="text-left">
                         <span className={`text-sm font-medium ${isCompleted ? 'text-green-700' : 'text-slate-700'}`}>
@@ -228,7 +274,7 @@ function ChapterItem({
                           {progress}%
                         </span>
                       )}
-                      <ChevronRight size={18} className={isCompleted ? 'text-green-400' : 'text-slate-400'} />
+                      <ChevronRight size={18} className={isCompleted ? 'text-green-400' : 'text-slate-400'} aria-hidden="true" />
                     </div>
                   </button>
                 )
@@ -254,6 +300,9 @@ export default function DashboardPage() {
   const [lessonProgress, setLessonProgress] = useState<Record<string, number>>({})
   const [expandedChapter, setExpandedChapter] = useState<string | null>('C1')
   const [nextLesson, setNextLesson] = useState<LessonSummary | null>(null)
+  const [recommendations, setRecommendations] = useState<Recommendation[]>([])
+  const [topRecommendation, setTopRecommendation] = useState<Recommendation | null>(null)
+  const [showRecommendationBanner, setShowRecommendationBanner] = useState(true)
 
   // Calculate lesson progress from history
   const calculateLessonProgress = (): Record<string, number> => {
@@ -495,6 +544,14 @@ export default function DashboardPage() {
     setStats(calculatedStats)
   }, [lessonProgress])
 
+  // Load recommendations
+  useEffect(() => {
+    const recs = getRecommendations(5)
+    setRecommendations(recs)
+    const top = getTopRecommendation()
+    setTopRecommendation(top)
+  }, [lessonProgress])
+
   const handleLessonClick = (lessonId: string) => {
     router.push(`/lesson/${lessonId}`)
   }
@@ -505,6 +562,10 @@ export default function DashboardPage() {
     } else if (lessons.length > 0) {
       handleLessonClick(lessons[0].lesson_id)
     }
+  }
+
+  const handleRecommendationClick = (rec: Recommendation) => {
+    router.push(`/lesson/${rec.lessonId}`)
   }
 
   const todayGoal = stats.streak > 0 ? "Keep your streak going!" : "Complete 1 lesson today"
@@ -565,8 +626,20 @@ export default function DashboardPage() {
         </section>
 
         {/* Quick Stats - Horizontal Scroll on Mobile */}
-        <section className="overflow-x-auto -mx-3 px-3 sm:mx-0 sm:px-0">
-          <div className="flex gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4">
+        <section
+          className="relative sm:overflow-visible"
+          aria-label="Learning statistics"
+        >
+          {/* Mobile scroll gradient hints */}
+          <div className="sm:hidden absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-[#f7f9ff] to-transparent pointer-events-none z-10" />
+          <div className="sm:hidden absolute right-0 top-0 bottom-0 w-4 bg-gradient-to-l from-[#f7f9ff] to-transparent pointer-events-none z-10" />
+          <div className="overflow-x-auto -mx-3 px-3 sm:mx-0 sm:px-0 scrollbar-thin">
+            <div
+              className="flex gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 pb-2 sm:pb-0"
+              role="region"
+              aria-live="polite"
+              aria-atomic="true"
+            >
             <StatCard
               icon={BookOpen}
               label="Completed"
@@ -585,14 +658,28 @@ export default function DashboardPage() {
               value={stats.levelIndex.toString()}
               color="purple"
             />
-            <StatCard
-              icon={Flame}
-              label="Streak"
-              value={`${stats.streak} days`}
-              color="green"
-            />
+            <Tooltip content="Complete lessons daily to build your streak!" position="bottom">
+              <StatCard
+                icon={Flame}
+                label="Streak"
+                value={`${stats.streak} days`}
+                color="green"
+              />
+            </Tooltip>
+            </div>
           </div>
         </section>
+
+        {/* Smart Recommendation Banner */}
+        {showRecommendationBanner && topRecommendation && (
+          <section>
+            <SmartRecommendationBanner
+              recommendation={topRecommendation}
+              onStart={() => handleRecommendationClick(topRecommendation)}
+              onDismiss={() => setShowRecommendationBanner(false)}
+            />
+          </section>
+        )}
 
         {/* Daily Goals & Learning Path Grid */}
         <div className="grid gap-4 lg:grid-cols-2">
@@ -600,23 +687,34 @@ export default function DashboardPage() {
           <LearningPathCard />
         </div>
 
+        {/* Learning Trend Chart */}
+        <section className="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="font-semibold text-slate-800">Learning Trend</h3>
+            <span className="text-xs text-slate-400">Last 7 days</span>
+          </div>
+          <TrendChart days={7} height={140} showStats={true} />
+        </section>
+
+        {/* Personalized Recommendations */}
+        {recommendations.length > 0 && (
+          <section className="space-y-3">
+            <h3 className="font-semibold text-slate-800">Recommended for You</h3>
+            <div className="space-y-3">
+              {recommendations.slice(0, 3).map((rec) => (
+                <RecommendationCard
+                  key={rec.id}
+                  recommendation={rec}
+                  variant="compact"
+                  onClick={() => handleRecommendationClick(rec)}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Quick Actions */}
         <section className="grid grid-cols-2 gap-3">
-          <motion.button
-            onClick={() => router.push('/quiz')}
-            className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-100 hover:border-purple-200 transition-all touch-manipulation"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className="w-10 h-10 rounded-xl bg-purple-500 flex items-center justify-center">
-              <HelpCircle className="w-5 h-5 text-white" />
-            </div>
-            <div className="text-left">
-              <p className="text-sm font-bold text-purple-800">TOCFL Practice</p>
-              <p className="text-xs text-purple-600">Test your skills</p>
-            </div>
-          </motion.button>
-
           <motion.button
             onClick={() => router.push('/conversation')}
             className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100 hover:border-emerald-200 transition-all touch-manipulation"
@@ -624,11 +722,26 @@ export default function DashboardPage() {
             whileTap={{ scale: 0.98 }}
           >
             <div className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center">
-              <Map className="w-5 h-5 text-white" />
+              <MessageCircle className="w-5 h-5 text-white" />
             </div>
             <div className="text-left">
               <p className="text-sm font-bold text-emerald-800">AI Conversation</p>
               <p className="text-xs text-emerald-600">Practice speaking</p>
+            </div>
+          </motion.button>
+
+          <motion.button
+            onClick={() => router.push('/history')}
+            className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-100 hover:border-amber-200 transition-all touch-manipulation"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center">
+              <Clock className="w-5 h-5 text-white" />
+            </div>
+            <div className="text-left">
+              <p className="text-sm font-bold text-amber-800">Learning History</p>
+              <p className="text-xs text-amber-600">Review progress</p>
             </div>
           </motion.button>
         </section>
@@ -645,19 +758,29 @@ export default function DashboardPage() {
           </div>
 
           <div className="space-y-3">
-            {chapters.map((chapter) => (
-              <ChapterItem
-                key={chapter.id}
-                chapter={chapter}
-                lessons={lessons}
-                lessonProgress={lessonProgress}
-                isExpanded={expandedChapter === chapter.id}
-                onToggle={() => setExpandedChapter(
-                  expandedChapter === chapter.id ? null : chapter.id
-                )}
-                onLessonClick={handleLessonClick}
+            {chapters.length > 0 ? (
+              chapters.map((chapter) => (
+                <ChapterItem
+                  key={chapter.id}
+                  chapter={chapter}
+                  lessons={lessons}
+                  lessonProgress={lessonProgress}
+                  isExpanded={expandedChapter === chapter.id}
+                  onToggle={() => setExpandedChapter(
+                    expandedChapter === chapter.id ? null : chapter.id
+                  )}
+                  onLessonClick={handleLessonClick}
+                />
+              ))
+            ) : (
+              <EmptyState
+                type="lesson"
+                title="Loading courses..."
+                description="If this persists, please check your network connection"
+                actionLabel="Retry"
+                onAction={() => window.location.reload()}
               />
-            ))}
+            )}
           </div>
         </section>
       </div>

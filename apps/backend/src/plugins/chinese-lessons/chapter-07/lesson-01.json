@@ -4,105 +4,106 @@
   "lesson_number": 1,
   "title": "Places in Town",
   "description": "Learn A2-level town and public place vocabulary.",
+  "context": "Common places you can find in a town or city. Useful for asking and giving directions.",
   "steps": [
     {
       "id": 1,
       "teacher": "郵局",
-      "expected_answer": [
-        "郵局"
-      ],
+      "expected_answer": ["郵局"],
       "pinyin": "yóu jú",
       "english_hint": "post office",
+      "example_sentence": "我要去郵局寄信。",
+      "example_sentence_en": "I need to go to the post office to mail a letter.",
       "encouragement": "Great!"
     },
     {
       "id": 2,
       "teacher": "圖書館",
-      "expected_answer": [
-        "圖書館"
-      ],
+      "expected_answer": ["圖書館"],
       "pinyin": "tú shū guǎn",
       "english_hint": "library",
+      "example_sentence": "圖書館裡很安靜。",
+      "example_sentence_en": "The library is very quiet.",
       "encouragement": "Nice!"
     },
     {
       "id": 3,
       "teacher": "公園",
-      "expected_answer": [
-        "公園"
-      ],
+      "expected_answer": ["公園"],
       "pinyin": "gōng yuán",
       "english_hint": "park",
+      "example_sentence": "我們去公園散步吧。",
+      "example_sentence_en": "Let's go for a walk in the park.",
       "encouragement": "Good!"
     },
     {
       "id": 4,
       "teacher": "超市",
-      "expected_answer": [
-        "超市"
-      ],
+      "expected_answer": ["超市"],
       "pinyin": "chāo shì",
       "english_hint": "supermarket",
+      "example_sentence": "超市在學校旁邊。",
+      "example_sentence_en": "The supermarket is next to the school.",
       "encouragement": "Excellent!"
     },
     {
       "id": 5,
       "teacher": "藥局",
-      "expected_answer": [
-        "藥局"
-      ],
+      "expected_answer": ["藥局"],
       "pinyin": "yào jú",
       "english_hint": "pharmacy",
+      "example_sentence": "附近有藥局嗎？",
+      "example_sentence_en": "Is there a pharmacy nearby?",
       "encouragement": "Nice!"
     },
     {
       "id": 6,
       "teacher": "百貨公司",
-      "expected_answer": [
-        "百貨公司"
-      ],
+      "expected_answer": ["百貨公司"],
       "pinyin": "bǎi huò gōng sī",
       "english_hint": "department store",
+      "example_sentence": "百貨公司週末很多人。",
+      "example_sentence_en": "The department store is crowded on weekends.",
       "encouragement": "Great!"
     },
     {
       "id": 7,
       "teacher": "銀行",
-      "expected_answer": [
-        "銀行"
-      ],
+      "expected_answer": ["銀行"],
       "pinyin": "yín háng",
       "english_hint": "bank",
+      "example_sentence": "銀行幾點開門？",
+      "example_sentence_en": "What time does the bank open?",
       "encouragement": "Good!"
     },
     {
       "id": 8,
       "teacher": "便利商店",
-      "expected_answer": [
-        "便利商店"
-      ],
+      "expected_answer": ["便利商店"],
       "pinyin": "biàn lì shāng diàn",
       "english_hint": "convenience store",
+      "example_sentence": "便利商店二十四小時營業。",
+      "example_sentence_en": "The convenience store is open 24 hours.",
       "encouragement": "Nice!"
     },
     {
       "id": 9,
       "teacher": "餐館",
-      "expected_answer": [
-        "餐館"
-      ],
+      "expected_answer": ["餐館"],
       "pinyin": "cān guǎn",
       "english_hint": "restaurant",
+      "example_sentence": "這家餐館很有名。",
+      "example_sentence_en": "This restaurant is very famous.",
       "encouragement": "Great!"
     },
     {
       "id": 10,
       "teacher": "市場",
-      "expected_answer": [
-        "市場"
-      ],
+      "expected_answer": ["市場"],
       "pinyin": "shì chǎng",
       "english_hint": "market",
+      "example_sentence": "媽媽去市場買菜。",
+      "example_sentence_en": "Mom goes to the market to buy vegetables.",
       "encouragement": "Fantastic!"
     }
   ],
