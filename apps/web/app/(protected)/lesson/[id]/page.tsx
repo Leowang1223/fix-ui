@@ -45,6 +45,9 @@ import { AchievementToast } from '@/components/ui/AchievementToast'
 // 音頻對比
 import { AudioCompare } from '@/components/ui/AudioCompare'
 
+// 分數歷史記錄 (用於 Dashboard 更新)
+import { addScoreRecord } from '@/lib/scoreHistory'
+
 // 🔧 字串相似度計算工具（Levenshtein Distance）
 function normalizeText(text: string): string {
   return (text || '')
@@ -2289,6 +2292,45 @@ export default function LessonPage() {
       if (sessionId) {
         reportSessionIdRef.current = sessionId
         console.log('  ✅ 歷史記錄已保存，sessionId:', sessionId)
+      }
+
+      // 步驟 2.5: 更新 scoreHistory 和 dailyGoals (用於 Dashboard)
+      console.log('  📝 步驟 2.5: 更新 Dashboard 數據')
+      try {
+        // 2.5a: 為每個問題添加分數記錄 (這會自動更新 dailyStats)
+        results.forEach((result, index) => {
+          addScoreRecord({
+            lessonId: lesson.lesson_id,
+            lessonTitle: lesson.title,
+            questionIndex: index,
+            score: result.score,
+            type: 'lesson',
+            details: {
+              pronunciation: result.detailedScores?.pronunciation,
+              fluency: result.detailedScores?.fluency,
+              accuracy: result.detailedScores?.accuracy,
+            }
+          })
+        })
+        console.log('  ✅ scoreHistory 已更新，共', results.length, '筆記錄')
+
+        // 2.5b: 更新 dailyGoals 進度
+        const storedGoals = localStorage.getItem('dailyGoals')
+        if (storedGoals) {
+          const goals = JSON.parse(storedGoals)
+          const today = new Date().toISOString().split('T')[0]
+          if (goals.date === today) {
+            goals.progress.lessonsCompleted = (goals.progress.lessonsCompleted || 0) + 1
+            goals.progress.questionsAnswered = (goals.progress.questionsAnswered || 0) + results.length
+            localStorage.setItem('dailyGoals', JSON.stringify(goals))
+            console.log('  ✅ dailyGoals 已更新:', goals.progress)
+          } else {
+            console.log('  ⚠️ dailyGoals 日期不匹配，跳過更新')
+          }
+        }
+      } catch (dashboardError) {
+        console.error('  ⚠️ Dashboard 數據更新失敗:', dashboardError)
+        // 不影響主流程，繼續執行
       }
 
       // 步驟 3: 顯示完成慶祝畫面

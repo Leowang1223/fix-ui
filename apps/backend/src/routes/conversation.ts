@@ -956,20 +956,28 @@ router.post('/message', authenticateUser, upload.single('audio'), async (req: Au
 
     let transcript = ''
     try {
-      const sttPrompt = `Transcribe this Mandarin Chinese (Taiwan) audio accurately.
+      const sttPrompt = `You are a precise speech-to-text transcription tool. Transcribe EXACTLY what you hear in this audio.
 
-CRITICAL INSTRUCTIONS:
-1. Return ONLY Traditional Chinese text (繁體中文) - no formatting, no extra text
-2. Use Taiwan Mandarin vocabulary and pronunciation patterns
-3. This is conversational speech - prioritize natural, contextually appropriate phrases
-4. Pay careful attention to context to distinguish similar-sounding words:
-   - 去 (qù) vs 吃 (chī) vs 七 (qī)
-   - 上課 (shàng kè) vs 三課 (sān kè)
-   - 要 (yào) vs 有 (yǒu)
-5. Use common conversational patterns (e.g., "去上課" is more common than "吃三課")
-6. If uncertain between similar sounds, choose the phrase that makes more sense in context
+ABSOLUTE RULES - MUST FOLLOW:
+1. Transcribe ONLY the actual sounds you hear - do NOT guess, complete, or invent content
+2. Output ONLY Traditional Chinese text (繁體中文) - no punctuation, no formatting, no extra text
+3. If the audio is unclear, silent, or too noisy to understand, return EXACTLY: [UNCLEAR]
+4. Do NOT add words that are not clearly spoken in the audio
+5. Do NOT try to make the sentence "make sense" - just transcribe literally what you hear
+6. Short utterances are fine - if user only says 3 words, output only those 3 words
 
-Return the transcription only, nothing else.`
+WHAT TO DO:
+- Hear "老闆我要一份蛋餅" → Output: "老闆我要一份蛋餅"
+- Hear only "蛋餅" → Output: "蛋餅" (NOT a full sentence)
+- Hear nothing clear → Output: "[UNCLEAR]"
+
+WHAT NOT TO DO:
+❌ Do NOT complete partial sentences
+❌ Do NOT guess based on "what makes sense"
+❌ Do NOT add context or words the speaker didn't say
+❌ Do NOT generate random Chinese text if audio is unclear
+
+Return the exact transcription only.`
 
       const sttResult = await model.generateContent({
         contents: [{
@@ -984,11 +992,28 @@ Return the transcription only, nothing else.`
             }
           ]
         }],
-        generationConfig: { temperature: 0.3 }
+        generationConfig: { temperature: 0.1 }  // 降低 temperature 以減少創意發揮
       })
 
       transcript = sttResult.response.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || ''
       console.log('📝 Transcript:', transcript)
+
+      // 檢測幻覺指標：如果轉錄結果過長或包含可疑模式，記錄警告
+      if (transcript.length > 50) {
+        console.warn('⚠️ Unusually long transcript detected - potential hallucination:', transcript)
+      }
+      if (transcript.includes('然後') && transcript.includes('就') && transcript.length > 20) {
+        console.warn('⚠️ Suspicious narrative pattern detected - potential hallucination:', transcript)
+      }
+
+      // 處理 [UNCLEAR] 回應
+      if (transcript === '[UNCLEAR]' || transcript.includes('[UNCLEAR]')) {
+        console.warn('⚠️ Audio was unclear, could not transcribe')
+        return res.status(400).json({
+          code: 'UNCLEAR_AUDIO',
+          message: '音訊不清楚，請再試一次。Audio was unclear, please try again.'
+        })
+      }
     } catch (error) {
       console.error('❌ STT Error:', error)
       return res.status(503).json({
@@ -1721,7 +1746,13 @@ IMPORTANT INSTRUCTIONS:
 3. Grammar types: word-order (詞序), measure-word (量詞), tense (時態), particle (虛詞), vocabulary (詞彙), other
 4. Pronunciation severity: minor (輕微), moderate (中等), major (嚴重)
 5. The correctionSummary should aggregate data from all turnCorrections.
-6. Be thorough but not overly critical - focus on significant issues that affect communication.`
+6. Be thorough but not overly critical - focus on significant issues that affect communication.
+7. **IGNORE PUNCTUATION COMPLETELY**: Do NOT flag missing or incorrect punctuation (逗號、句號、問號、驚嘆號) as grammar issues. This is spoken conversation practice, not formal writing. Examples of what NOT to flag:
+   - Missing comma after address terms (e.g., "老闆我要..." is perfectly acceptable, do NOT suggest "老闆，我要...")
+   - Missing periods at end of sentences
+   - Missing question marks
+   - Any punctuation-related corrections
+   Focus ONLY on actual grammar errors like word order, measure words, tense, and vocabulary usage.`
 
         const result = await model.generateContent({
           contents: [{ role: 'user', parts: [{ text: analysisPrompt }] }],
