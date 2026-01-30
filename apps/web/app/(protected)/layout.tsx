@@ -3,6 +3,7 @@ import CollapsibleSidebar from '@/components/layout/CollapsibleSidebar'
 import MobileTabBar from '@/components/layout/MobileTabBar'
 import { Breadcrumb, BreadcrumbMobile } from '@/components/navigation'
 import { SkipLink } from '@/components/accessibility'
+import { WelcomeOnboarding } from '@/components/onboarding'
 
 export default function ProtectedLayout({
   children,
@@ -11,6 +12,9 @@ export default function ProtectedLayout({
 }) {
   return (
     <AuthGuard>
+      {/* Global welcome onboarding - shows once on first login */}
+      <WelcomeOnboarding />
+
       {/* Skip Link for keyboard accessibility */}
       <SkipLink />
 

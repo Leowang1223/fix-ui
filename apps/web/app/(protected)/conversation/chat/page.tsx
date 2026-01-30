@@ -552,137 +552,135 @@ export default function ConversationChatPage() {
         </div>
       </header>
 
-      {/* Main Content - Responsive Layout */}
-      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
-        {/* Interviewer Area - Top on mobile, Left on desktop */}
-        <div className="relative flex-shrink-0 h-[40vh] lg:h-auto lg:flex-1 lg:w-3/5 bg-gray-900">
-          {settings.topicMode === 'scenario' ? (
-            <div className="relative h-full w-full overflow-hidden">
-              <Image
-                src={scenarioInfo?.interviewerImage ? `/interviewers/${scenarioInfo.interviewerImage}` : getInterviewerImagePath(currentInterviewer)}
-                alt="AI Role"
-                fill
-                className="object-cover"
-                priority
-              />
-              {scenarioInfo && (
-                <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm rounded-xl px-3 py-2 sm:px-4 sm:py-3">
-                  <p className="text-xs sm:text-sm font-medium text-white">{scenarioInfo.aiRole}</p>
-                </div>
-              )}
-            </div>
-          ) : (
-            <button
-              onClick={() => setShowInterviewerSelector(true)}
-              className="group relative h-full w-full overflow-hidden"
-            >
-              <Image
-                src={getInterviewerImagePath(currentInterviewer)}
-                alt="AI Instructor"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-black/0 transition-all group-hover:bg-black/30 flex items-center justify-center">
-                <span className="text-sm font-medium text-white opacity-0 group-hover:opacity-100">
-                  Change Instructor
-                </span>
-              </div>
-            </button>
-          )}
-
-          {/* User Video - Top Right Corner */}
-          {settings.enableCamera && (
-            <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10">
-              <div className="relative h-20 w-28 sm:h-32 sm:w-44 overflow-hidden rounded-xl border-2 border-white/30 shadow-2xl">
-                <video
-                  ref={videoRef}
-                  autoPlay
-                  playsInline
-                  muted
-                  className="h-full w-full object-cover"
-                />
-                <div className="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 rounded-full bg-black/70 px-1.5 py-0.5 sm:px-2 sm:py-1 text-[10px] sm:text-xs text-white">
-                  You
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Recording Button - Center Overlay */}
-          <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
-            <motion.button
-              onMouseDown={startRecording}
-              onMouseUp={stopRecording}
-              onTouchStart={startRecording}
-              onTouchEnd={stopRecording}
-              disabled={isLoading || !sessionId}
-              className={`
-                relative h-16 w-16 sm:h-20 sm:w-20 rounded-full transition-all touch-manipulation
-                ${isRecording
-                  ? 'bg-red-600 shadow-2xl shadow-red-500/50 scale-110'
-                  : 'bg-blue-600 shadow-xl hover:bg-blue-700 hover:scale-105'
-                }
-                disabled:opacity-50 disabled:cursor-not-allowed
-              `}
-              whileTap={{ scale: 1.1 }}
-            >
-              {isRecording ? (
-                <MicOff className="h-6 w-6 sm:h-8 sm:w-8 text-white mx-auto" />
-              ) : (
-                <Mic className="h-6 w-6 sm:h-8 sm:w-8 text-white mx-auto" />
-              )}
-
-              {isRecording && (
-                <motion.div
-                  className="absolute -inset-2 rounded-full border-4 border-red-400"
-                  animate={{ scale: [1, 1.2, 1], opacity: [1, 0.5, 1] }}
-                  transition={{ duration: 1, repeat: Infinity }}
-                />
-              )}
-            </motion.button>
-
-            <p className="mt-2 sm:mt-3 text-center text-xs sm:text-sm text-white drop-shadow-lg bg-black/30 px-3 py-1 rounded-full">
-              {isRecording ? 'Release to send' : 'Hold to speak'}
-            </p>
-
-            {recordingError && (
-              <div className="mt-2 flex items-center gap-1 text-xs text-red-400 bg-black/70 px-3 py-1 rounded-lg">
-                <AlertCircle className="h-3 w-3" />
-                <span>{recordingError}</span>
+      {/* Main Content - Full screen interviewer with overlay chat */}
+      <div className="flex-1 relative overflow-hidden bg-gray-900">
+        {/* Full Screen Interviewer Image */}
+        {settings.topicMode === 'scenario' ? (
+          <div className="absolute inset-0">
+            <Image
+              src={scenarioInfo?.interviewerImage ? `/interviewers/${scenarioInfo.interviewerImage}` : getInterviewerImagePath(currentInterviewer)}
+              alt="AI Role"
+              fill
+              className="object-cover"
+              priority
+            />
+            {scenarioInfo && (
+              <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm rounded-xl px-3 py-2">
+                <p className="text-xs sm:text-sm font-medium text-white">{scenarioInfo.aiRole}</p>
               </div>
             )}
           </div>
+        ) : (
+          <button
+            onClick={() => setShowInterviewerSelector(true)}
+            className="group absolute inset-0"
+          >
+            <Image
+              src={getInterviewerImagePath(currentInterviewer)}
+              alt="AI Instructor"
+              fill
+              className="object-cover"
+              priority
+            />
+            {/* Change instructor hint - top left */}
+            <div className="absolute top-4 left-4 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1.5 opacity-60 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs font-medium text-white">Tap to change</span>
+            </div>
+          </button>
+        )}
+
+        {/* User Video - Top Left Corner (moved from right to avoid overlap with chat) */}
+        {settings.enableCamera && (
+          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-10">
+            <div className="relative h-20 w-28 sm:h-28 sm:w-40 overflow-hidden rounded-xl border-2 border-white/30 shadow-2xl">
+              <video
+                ref={videoRef}
+                autoPlay
+                playsInline
+                muted
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 rounded-full bg-black/70 px-1.5 py-0.5 sm:px-2 sm:py-1 text-[10px] sm:text-xs text-white">
+                You
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Recording Button - Bottom Center */}
+        <div className="absolute bottom-20 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
+          <motion.button
+            onMouseDown={startRecording}
+            onMouseUp={stopRecording}
+            onTouchStart={startRecording}
+            onTouchEnd={stopRecording}
+            disabled={isLoading || !sessionId}
+            className={`
+              relative h-16 w-16 sm:h-20 sm:w-20 rounded-full transition-all touch-manipulation
+              ${isRecording
+                ? 'bg-red-600 shadow-2xl shadow-red-500/50 scale-110'
+                : 'bg-blue-600/90 backdrop-blur-sm shadow-xl hover:bg-blue-700 hover:scale-105'
+              }
+              disabled:opacity-50 disabled:cursor-not-allowed
+            `}
+            whileTap={{ scale: 1.1 }}
+          >
+            {isRecording ? (
+              <MicOff className="h-6 w-6 sm:h-8 sm:w-8 text-white mx-auto" />
+            ) : (
+              <Mic className="h-6 w-6 sm:h-8 sm:w-8 text-white mx-auto" />
+            )}
+
+            {isRecording && (
+              <motion.div
+                className="absolute -inset-2 rounded-full border-4 border-red-400"
+                animate={{ scale: [1, 1.2, 1], opacity: [1, 0.5, 1] }}
+                transition={{ duration: 1, repeat: Infinity }}
+              />
+            )}
+          </motion.button>
+
+          <p className="mt-2 text-center text-xs sm:text-sm text-white drop-shadow-lg bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full">
+            {isRecording ? 'Release to send' : 'Hold to speak'}
+          </p>
+
+          {recordingError && (
+            <div className="mt-2 flex items-center gap-1 text-xs text-red-400 bg-black/70 px-3 py-1 rounded-lg">
+              <AlertCircle className="h-3 w-3" />
+              <span>{recordingError}</span>
+            </div>
+          )}
         </div>
 
-        {/* Chat Panel - Bottom sheet on mobile, Right sidebar on desktop */}
+        {/* Chat Overlay - Right side on desktop, Bottom on mobile */}
         {isMobile ? (
-          <>
-            {/* Mobile Toggle Button */}
+          /* Mobile: Bottom overlay chat panel */
+          <div className="absolute bottom-0 left-0 right-0 z-10">
+            {/* Toggle button */}
             <button
               onClick={() => setShowChatPanel(!showChatPanel)}
-              className="flex-shrink-0 flex items-center justify-center gap-2 py-3 bg-white border-t border-slate-200 touch-manipulation"
+              className="w-full flex items-center justify-center gap-2 py-2.5 bg-black/50 backdrop-blur-md border-t border-white/10 touch-manipulation"
             >
-              <MessageSquare size={18} className="text-blue-600" />
-              <span className="text-sm font-medium text-slate-700">
+              <MessageSquare size={16} className="text-white/80" />
+              <span className="text-sm font-medium text-white/90">
                 {messages.length} messages
               </span>
               {showChatPanel ? (
-                <ChevronDown size={18} className="text-slate-400" />
+                <ChevronDown size={16} className="text-white/60" />
               ) : (
-                <ChevronUp size={18} className="text-slate-400" />
+                <ChevronUp size={16} className="text-white/60" />
               )}
             </button>
 
-            {/* Mobile Chat Bottom Sheet */}
+            {/* Expandable chat panel */}
             <AnimatePresence>
               {showChatPanel && (
                 <motion.div
                   initial={{ height: 0 }}
-                  animate={{ height: '50vh' }}
+                  animate={{ height: '45vh' }}
                   exit={{ height: 0 }}
                   transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-                  className="flex-shrink-0 overflow-hidden border-t border-slate-200"
+                  className="overflow-hidden"
                 >
                   <DialogSidebar
                     messages={messages}
@@ -692,14 +690,15 @@ export default function ConversationChatPage() {
                     currentInterviewer={currentInterviewer}
                     scenarioInfo={settings.topicMode === 'scenario' ? scenarioInfo : null}
                     checkpoints={settings.topicMode === 'scenario' ? checkpoints : undefined}
+                    transparent
                   />
                 </motion.div>
               )}
             </AnimatePresence>
-          </>
+          </div>
         ) : (
-          /* Desktop Sidebar */
-          <div className="w-2/5 border-l border-gray-200 overflow-hidden">
+          /* Desktop: Right side overlay chat panel */
+          <div className="absolute top-0 right-0 bottom-0 w-[380px] xl:w-[420px] z-10">
             <DialogSidebar
               messages={messages}
               suggestions={suggestions}
@@ -708,6 +707,7 @@ export default function ConversationChatPage() {
               currentInterviewer={currentInterviewer}
               scenarioInfo={settings.topicMode === 'scenario' ? scenarioInfo : null}
               checkpoints={settings.topicMode === 'scenario' ? checkpoints : undefined}
+              transparent
             />
           </div>
         )}

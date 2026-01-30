@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Volume2, Check, X, AlertTriangle } from 'lucide-react'
+import { Volume2, Check, X, AlertTriangle, BookmarkPlus } from 'lucide-react'
 import { ToneCurve, ToneBadge } from './ToneCurve'
 
 export interface SyllableData {
@@ -16,9 +16,11 @@ export interface SyllableData {
 export interface SyllableFeedbackPanelProps {
   syllables: SyllableData[]
   overallScore: number
+  englishHint?: string
   onPlayTTS?: (text: string) => void
   onRetry?: () => void
   onNext?: () => void
+  onSaveFlashcard?: () => void
   showToneCurve?: boolean
   compact?: boolean
 }
@@ -169,10 +171,10 @@ function ScoreDisplay({ score }: { score: number }) {
   }
 
   const getMessage = () => {
-    if (score >= 90) return 'Excellent! 太棒了！'
-    if (score >= 70) return 'Good job! 很好！'
-    if (score >= 50) return 'Keep practicing! 繼續加油！'
-    return 'Try again! 再試一次！'
+    if (score >= 90) return 'Excellent!'
+    if (score >= 70) return 'Good job!'
+    if (score >= 50) return 'Keep practicing!'
+    return 'Try again!'
   }
 
   return (
@@ -184,13 +186,13 @@ function ScoreDisplay({ score }: { score: number }) {
     >
       <div
         className={`
-          w-20 h-20 rounded-full bg-gradient-to-br ${getScoreColor()}
+          w-16 h-16 rounded-full bg-gradient-to-br ${getScoreColor()}
           flex items-center justify-center shadow-lg
         `}
       >
-        <span className="text-2xl font-bold text-white">{score}</span>
+        <span className="text-xl font-bold text-white">{score}</span>
       </div>
-      <p className="mt-2 text-sm font-medium text-gray-600">{getMessage()}</p>
+      <p className="mt-1 text-xs font-medium text-gray-500">{getMessage()}</p>
     </motion.div>
   )
 }
@@ -198,20 +200,20 @@ function ScoreDisplay({ score }: { score: number }) {
 // Legend component
 function FeedbackLegend({ compact }: { compact?: boolean }) {
   const items = [
-    { status: 'correct', label: '正確' },
-    { status: 'tone-error', label: '聲調錯誤' },
-    { status: 'wrong', label: '發音錯誤' },
-    { status: 'missing', label: '缺失' },
+    { status: 'correct', label: 'Correct' },
+    { status: 'tone-error', label: 'Tone Error' },
+    { status: 'wrong', label: 'Wrong' },
+    { status: 'missing', label: 'Missing' },
   ]
 
   return (
-    <div className={`flex flex-wrap gap-2 ${compact ? 'text-[10px]' : 'text-xs'}`}>
+    <div className={`flex flex-wrap gap-2 justify-center ${compact ? 'text-[10px]' : 'text-xs'}`}>
       {items.map((item) => {
         const colors = STATUS_COLORS[item.status as keyof typeof STATUS_COLORS]
         return (
           <div key={item.status} className="flex items-center gap-1">
-            <div className={`w-3 h-3 rounded ${colors.bg} ${colors.border} border`} />
-            <span className="text-gray-500">{item.label}</span>
+            <div className={`w-2.5 h-2.5 rounded ${colors.bg} ${colors.border} border`} />
+            <span className="text-gray-400">{item.label}</span>
           </div>
         )
       })}
@@ -223,9 +225,11 @@ function FeedbackLegend({ compact }: { compact?: boolean }) {
 export function SyllableFeedbackPanel({
   syllables,
   overallScore,
+  englishHint,
   onPlayTTS,
   onRetry,
   onNext,
+  onSaveFlashcard,
   showToneCurve = true,
   compact = false,
 }: SyllableFeedbackPanelProps) {
@@ -248,18 +252,29 @@ export function SyllableFeedbackPanel({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
       className={`
-        bg-white rounded-2xl shadow-lg border border-gray-100
+        relative bg-white rounded-2xl shadow-lg border border-gray-100
         ${compact ? 'p-4' : 'p-6'}
       `}
     >
+      {/* Save to Flashcard icon button - top right */}
+      {onSaveFlashcard && (
+        <button
+          onClick={onSaveFlashcard}
+          className="absolute top-4 right-4 p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-600 transition-colors"
+          title="Save to Flashcards"
+        >
+          <BookmarkPlus size={18} />
+        </button>
+      )}
+
       {/* Header with score */}
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-4 pr-12">
         <div>
           <h3 className={`font-bold text-gray-800 ${compact ? 'text-base' : 'text-lg'}`}>
-            發音分析
+            Pronunciation
           </h3>
           <p className="text-sm text-gray-500">
-            {correctCount}/{totalCount} 正確
+            {correctCount}/{totalCount} Correct
           </p>
         </div>
         <ScoreDisplay score={overallScore} />
@@ -292,14 +307,22 @@ export function SyllableFeedbackPanel({
             className="flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-600 rounded-full hover:bg-blue-100 transition-colors"
           >
             <Volume2 size={16} />
-            <span className="text-sm font-medium">播放正確發音</span>
+            <span className="text-sm font-medium">Play Correct Pronunciation</span>
           </button>
+        </div>
+      )}
+
+      {/* English hint - at bottom */}
+      {englishHint && (
+        <div className="text-center mb-4 pt-3 border-t border-gray-100">
+          <span className="text-sm text-gray-500">English: </span>
+          <span className="text-sm font-medium text-gray-700">{englishHint}</span>
         </div>
       )}
 
       {/* Action buttons */}
       {(onRetry || onNext) && (
-        <div className="flex gap-3 justify-center">
+        <div className="flex gap-3 justify-center pt-2">
           {onRetry && (
             <button
               onClick={onRetry}
@@ -309,7 +332,7 @@ export function SyllableFeedbackPanel({
                 ${compact ? 'text-sm' : ''}
               `}
             >
-              重試
+              Retry
             </button>
           )}
           {onNext && (
@@ -322,7 +345,7 @@ export function SyllableFeedbackPanel({
                 ${compact ? 'text-sm' : ''}
               `}
             >
-              下一題
+              Next
             </button>
           )}
         </div>

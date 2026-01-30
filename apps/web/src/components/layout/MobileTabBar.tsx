@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname, useRouter } from 'next/navigation'
-import { Home, BookOpen, MessageSquare, BarChart3, User } from 'lucide-react'
+import { Home, Map, MessageSquare, Layers, History } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 interface TabItem {
@@ -17,7 +17,7 @@ const tabs: TabItem[] = [
   {
     id: 'home',
     label: 'Home',
-    labelZh: '首頁',
+    labelZh: 'Home',
     icon: Home,
     href: '/dashboard',
     matchPaths: ['/dashboard']
@@ -25,34 +25,34 @@ const tabs: TabItem[] = [
   {
     id: 'learn',
     label: 'Learn',
-    labelZh: '課程',
-    icon: BookOpen,
-    href: '/lesson/L1',
-    matchPaths: ['/lesson']
+    labelZh: 'Learn',
+    icon: Map,
+    href: '/learning-path',
+    matchPaths: ['/learning-path', '/lesson']
   },
   {
     id: 'talk',
     label: 'Talk',
-    labelZh: '對話',
+    labelZh: 'Talk',
     icon: MessageSquare,
     href: '/conversation',
     matchPaths: ['/conversation']
   },
   {
-    id: 'report',
-    label: 'Report',
-    labelZh: '報告',
-    icon: BarChart3,
-    href: '/history',
-    matchPaths: ['/history', '/report', '/analysis']
+    id: 'cards',
+    label: 'Cards',
+    labelZh: 'Cards',
+    icon: Layers,
+    href: '/flashcards',
+    matchPaths: ['/flashcards']
   },
   {
-    id: 'profile',
-    label: 'Profile',
-    labelZh: '我的',
-    icon: User,
-    href: '/profile',
-    matchPaths: ['/profile', '/settings']
+    id: 'history',
+    label: 'History',
+    labelZh: 'History',
+    icon: History,
+    href: '/history',
+    matchPaths: ['/history', '/analysis']
   }
 ]
 

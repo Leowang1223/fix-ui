@@ -2751,7 +2751,7 @@ export default function LessonPage() {
         {/* 講師圖片 - 可點擊切換 */}
         <button
           onClick={() => setShowInterviewerSelector(true)}
-          className="group relative w-full max-w-xs sm:max-w-sm md:w-80 h-auto aspect-square rounded-2xl overflow-hidden shadow-2xl transition-all hover:shadow-3xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-400 mx-auto"
+          className="group relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-2xl transition-all hover:shadow-3xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-400 mx-auto"
           title="Click to change interviewer"
         >
           <Image
@@ -2826,159 +2826,100 @@ export default function LessonPage() {
         </div>
       )}
 
-      <div className={`w-full max-w-2xl mb-6 p-6 rounded-xl shadow-lg transition-all duration-300 ${
-        isRetrying ? 'bg-yellow-100 border-2 border-yellow-400' : 'bg-white border-2 border-transparent'
-      }`}>
-        <p className="text-center text-lg font-medium text-gray-800">{currentSubtitle}</p>
-      </div>
-
-      {currentStep && (
-        <div className="w-full max-w-2xl mb-6 p-6 bg-white rounded-xl shadow-lg space-y-4">
-          <div className="space-y-3">
-            <div className="flex items-start gap-3">
-              <span className="text-blue-600 font-semibold text-sm min-w-[80px] sm:min-w-[100px]">Pinyin:</span>
-              <span className="text-gray-700 flex-1">
-                {currentStep.pinyin || currentStep.pinyin_examples?.join(', ') || 'Free response'}
-              </span>
-              <button
-                type="button"
-                onClick={() => {
-                  const answer = Array.isArray(currentStep.expected_answer)
-                    ? currentStep.expected_answer[0]
-                    : currentStep.expected_answer
-                  if (answer) playTTS(answer)
-                }}
-                className="flex-shrink-0 p-2 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600 transition-all touch-manipulation"
-                title="Play Chinese pronunciation"
-              >
-                <Volume2 size={18} />
-              </button>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="text-purple-600 font-semibold text-sm min-w-[80px] sm:min-w-[100px]">English:</span>
-              <span className="text-gray-700 flex-1">{currentStep.english_hint}</span>
-              <button
-                type="button"
-                onClick={() => {
-                  if (currentStep.english_hint) playTTS(currentStep.english_hint)
-                }}
-                className="flex-shrink-0 p-2 rounded-full bg-purple-50 hover:bg-purple-100 text-purple-600 transition-all touch-manipulation"
-                title="Play English hint"
-              >
-                <Volume2 size={18} />
-              </button>
-            </div>
-          </div>
-          <div className="border-t border-slate-100 pt-4 space-y-3">
-            <label className="text-sm font-semibold text-slate-600">Save to Deck</label>
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <select
-                value={selectedDeck}
-                onChange={(e) => setSelectedDeck(e.target.value)}
-                className="flex-1 rounded-xl border border-slate-200 px-4 py-2 text-sm text-slate-700 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
-              >
-                {(availableDecks.length ? availableDecks : ['General']).map((deck) => (
-                  <option key={deck} value={deck}>
-                    {deck}
-                  </option>
-                ))}
-              </select>
-              <button
-                type="button"
-                onClick={() => setIsDeckInputOpen((prev) => !prev)}
-                className="text-sm text-blue-600 font-semibold hover:underline"
-              >
-                {isDeckInputOpen ? 'Close' : 'New Deck'}
-              </button>
-            </div>
-            {isDeckInputOpen && (
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-                <input
-                  value={newDeckName}
-                  onChange={(e) => setNewDeckName(e.target.value)}
-                  className="flex-1 rounded-xl border border-slate-200 px-4 py-2 text-sm text-slate-700 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
-                  placeholder="Deck name"
-                />
-                <AppButton
-                  className="max-w-none w-auto px-4"
-                  onClick={handleCreateDeck}
-                >
-                  Save Deck
-                </AppButton>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-
-      {currentStep && (
-        <div className="w-full max-w-2xl mb-6">
-          {!showDeckSelector ? (
-            <>
-              <AppButton
-                icon={BookmarkPlus}
-                onClick={handleSaveFlashcard}
-                disabled={flashcardStatus === 'saving'}
-                className="max-w-none w-full"
-              >
-                Save to Flashcards
-              </AppButton>
-              {flashcardStatus === 'saved' && (
-                <p className="text-center text-sm text-green-600 mt-2">
-                  Added to &quot;{selectedDeck || 'General'}&quot; deck.
-                </p>
-              )}
-              {flashcardStatus === 'error' && (
-                <p className="text-center text-sm text-red-500 mt-2">
-                  Failed to save. Please try again.
-                </p>
-              )}
-            </>
-          ) : (
-            <>
-              {/* 確認和取消按鈕 */}
-              <div className="flex gap-3">
-                <AppButton
-                  icon={BookmarkPlus}
-                  onClick={confirmSaveFlashcard}
-                  disabled={flashcardStatus === 'saving'}
-                  className="max-w-none flex-1"
-                >
-                  {flashcardStatus === 'saving' ? 'Saving...' : 'Confirm Save'}
-                </AppButton>
-                <button
-                  type="button"
-                  onClick={cancelSaveFlashcard}
-                  className="flex-1 rounded-xl border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
-                >
-                  Cancel
-                </button>
-              </div>
-              {flashcardStatus === 'error' && (
-                <p className="text-center text-sm text-red-500 mt-2">
-                  Failed to save. Please try again.
-                </p>
-              )}
-            </>
-          )}
-        </div>
-      )}
-
-      {/* 🆕 音節反饋面板 - 顯示在錄音按鈕位置 */}
+      {/* 🎯 主要內容區：反饋面板（錄音後）或 提示卡片+錄音按鈕（錄音前） */}
       {showSyllableFeedback ? (
+        /* ====== 錄音後：顯示整合的反饋面板 ====== */
         <div className="w-full max-w-2xl">
           <SyllableFeedbackPanel
             syllables={currentSyllables}
             overallScore={currentFeedbackScore}
+            englishHint={currentStep?.english_hint}
             onPlayTTS={(text) => playTTS(text)}
             onRetry={handleSyllableFeedbackRetry}
             onNext={handleSyllableFeedbackNext}
+            onSaveFlashcard={handleSaveFlashcard}
             showToneCurve={true}
             compact={false}
           />
+          {flashcardStatus === 'saved' && (
+            <p className="text-center text-sm text-green-600 mt-2">
+              Added to &quot;{selectedDeck || 'General'}&quot; deck.
+            </p>
+          )}
         </div>
       ) : (
+        /* ====== 錄音前：顯示題目卡片 + 錄音按鈕 ====== */
         <>
+          {/* 題目卡片 */}
+          <div className={`w-full max-w-2xl mb-6 p-5 rounded-2xl shadow-lg transition-all duration-300 ${
+            isRetrying ? 'bg-yellow-50 border-2 border-yellow-300' : 'bg-white border border-gray-100'
+          }`}>
+            {/* 題目文字 */}
+            <p className="text-center text-2xl font-bold text-gray-800 mb-4">{currentSubtitle}</p>
+
+            {/* 提示區：Pinyin + English + TTS 按鈕 */}
+            {currentStep && (
+              <div className="flex items-center justify-center gap-4 text-sm">
+                <div className="flex items-center gap-2">
+                  <span className="text-gray-500">
+                    {currentStep.pinyin || currentStep.pinyin_examples?.join(', ') || ''}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const answer = Array.isArray(currentStep.expected_answer)
+                        ? currentStep.expected_answer[0]
+                        : currentStep.expected_answer
+                      if (answer) playTTS(answer)
+                    }}
+                    className="p-1.5 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600 transition-all touch-manipulation"
+                    title="Play Chinese"
+                  >
+                    <Volume2 size={14} />
+                  </button>
+                </div>
+                <span className="text-gray-300">|</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-gray-500">{currentStep.english_hint}</span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (currentStep.english_hint) playTTS(currentStep.english_hint)
+                    }}
+                    className="p-1.5 rounded-full bg-purple-50 hover:bg-purple-100 text-purple-600 transition-all touch-manipulation"
+                    title="Play English"
+                  >
+                    <Volume2 size={14} />
+                  </button>
+                </div>
+                {/* 儲存到 Flashcard 小圖標 */}
+                <button
+                  type="button"
+                  onClick={handleSaveFlashcard}
+                  disabled={flashcardStatus === 'saving'}
+                  className="p-1.5 rounded-full bg-gray-50 hover:bg-gray-100 text-gray-500 hover:text-blue-600 transition-all touch-manipulation ml-2"
+                  title="Save to Flashcards"
+                >
+                  <BookmarkPlus size={14} />
+                </button>
+              </div>
+            )}
+            {flashcardStatus === 'saved' && (
+              <p className="text-center text-xs text-green-600 mt-2">
+                Added to &quot;{selectedDeck || 'General'}&quot; deck.
+              </p>
+            )}
+          </div>
+
+          {/* 重試提示 */}
+          {isRetrying && (
+            <div className="mb-4 text-center max-w-md">
+              <p className="text-yellow-700 font-bold text-lg animate-bounce mb-1">Try Again!</p>
+              <p className="text-gray-500 text-sm">Listen carefully and practice the pronunciation.</p>
+            </div>
+          )}
+
+          {/* 錄音按鈕 */}
           <button
             onClick={handleRecording}
             className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all shadow-lg transform hover:scale-110 touch-manipulation ${
@@ -2989,77 +2930,68 @@ export default function LessonPage() {
             <div className={`rounded-full ${isRecording ? 'w-5 h-5 sm:w-6 sm:h-6 bg-white' : 'w-8 h-8 sm:w-10 sm:h-10 bg-white'}`}></div>
           </button>
 
-          <p className="mt-4 text-gray-600 font-medium text-center">
-            {isRecording ? 'Recording...' : 'Click to start recording'}
+          <p className="mt-3 text-gray-500 font-medium text-sm text-center">
+            {isRecording ? 'Recording...' : 'Tap to record'}
           </p>
         </>
       )}
 
-      {isRetrying && (
-        <div className="mt-4 text-center max-w-md">
-          <p className="text-yellow-700 font-bold text-lg animate-bounce mb-2">Try Again!</p>
-          <p className="text-gray-600 text-sm">Listen carefully and practice the pronunciation before recording.</p>
+      {/* 底部導航按鈕（只在非反饋狀態顯示，因為反饋面板有自己的按鈕） */}
+      {!showSyllableFeedback && (
+        <div className="mt-6 flex flex-col items-center justify-center gap-3">
+          <div className="flex items-center justify-center gap-3">
+            <button
+              onClick={handlePreviousQuestion}
+              disabled={currentStepIndex === 0}
+              className={`px-4 py-2 rounded-lg font-medium text-sm transition-all flex items-center gap-1.5 ${
+                currentStepIndex === 0
+                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                  : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+              }`}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Previous
+            </button>
+
+            <button
+              onClick={() => router.push('/learning-path')}
+              className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-medium text-sm transition-all"
+            >
+              Exit
+            </button>
+
+            <button
+              onClick={handleManualNextQuestion}
+              disabled={currentStepIndex === lesson.steps.length - 1}
+              className={`px-4 py-2 rounded-lg font-medium text-sm transition-all flex items-center gap-1.5 ${
+                currentStepIndex === lesson.steps.length - 1
+                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                  : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+              }`}
+            >
+              Skip
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* 結束課程按鈕 */}
+          {stepResults.length > 0 && (
+            <button
+              onClick={handleFinishLesson}
+              className="px-6 py-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-lg font-medium text-sm transition-all shadow-sm hover:shadow flex items-center gap-2"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Finish ({stepResults.length}/{lesson.steps.length})
+            </button>
+          )}
         </div>
       )}
-
-      {/* 導航按鈕組 - Previous / Back to Dashboard / Finish / Next */}
-      <div className="mt-6 flex flex-col items-center justify-center gap-3">
-        {/* 上排：主要導航按鈕 */}
-        <div className="flex items-center justify-center gap-3">
-          <button
-            onClick={handlePreviousQuestion}
-            disabled={currentStepIndex === 0}
-            className={`px-5 py-2.5 rounded-lg font-medium text-sm transition-all shadow-sm hover:shadow flex items-center gap-2 ${
-              currentStepIndex === 0
-                ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                : 'bg-gray-600 hover:bg-gray-700 text-white'
-            }`}
-            title="Previous Question"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            Previous
-          </button>
-
-          <button
-            onClick={() => router.push('/dashboard')}
-            className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium text-sm transition-all shadow-sm hover:shadow"
-          >
-            Back to Dashboard
-          </button>
-
-          <button
-            onClick={handleManualNextQuestion}
-            disabled={currentStepIndex === lesson.steps.length - 1}
-            className={`px-5 py-2.5 rounded-lg font-medium text-sm transition-all shadow-sm hover:shadow flex items-center gap-2 ${
-              currentStepIndex === lesson.steps.length - 1
-                ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                : 'bg-gray-600 hover:bg-gray-700 text-white'
-            }`}
-            title="Next Question"
-          >
-            Next
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-
-        {/* 下排：結束課程按鈕（只在有作答時顯示）*/}
-        {stepResults.length > 0 && (
-          <button
-            onClick={handleFinishLesson}
-            className="px-8 py-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-lg font-semibold text-sm transition-all shadow-sm hover:shadow-lg flex items-center gap-2"
-            title="結束課程並查看成績"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            Finish Lesson & View Results ({stepResults.length}/{lesson.steps.length})
-          </button>
-        )}
-      </div>
 
       {/* 👤 講師選擇器 */}
       {showInterviewerSelector && (

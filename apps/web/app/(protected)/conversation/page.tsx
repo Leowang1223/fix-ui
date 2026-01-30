@@ -5,13 +5,12 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Mic, Video, VideoOff, CheckCircle2, AlertCircle, MessageSquare,
-  BookOpen, Sparkles, Theater, ChevronRight, Check, ArrowLeft
+  Mic, Video, VideoOff, MessageSquare,
+  BookOpen, Sparkles, Theater, ChevronRight, Check, ArrowLeft, Loader2
 } from 'lucide-react'
 import { InterviewerSelector, getInterviewerImagePath, DEFAULT_INTERVIEWER } from '../lesson/components/InterviewerSelector'
-import ScenarioSelector from './components/ScenarioSelector'
-import RoleSelector from './components/RoleSelector'
-import { apiGetScenarioById, type Scenario } from '@/lib/api'
+import { apiGetScenarios, apiGetScenarioById, type Scenario } from '@/lib/api'
+import { PageGuide } from '@/components/onboarding'
 
 interface LessonHistoryEntry {
   sessionId: string
@@ -26,10 +25,8 @@ interface CompletedChapter {
   lessonCount: number
 }
 
-// 所有可用章節列表
 const ALL_CHAPTERS = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10'] as const
 
-// 章節標題對照
 const CHAPTER_TITLES: Record<string, string> = {
   'C1': 'Basic Greetings',
   'C2': 'Daily Conversations',
@@ -43,13 +40,11 @@ const CHAPTER_TITLES: Record<string, string> = {
   'C10': 'Advanced Topics'
 }
 
-// 三種對話模式定義
 type ConversationMode = 'practice' | 'free' | 'scenario'
 
 interface ModeOption {
   id: ConversationMode
   title: string
-  titleZh: string
   description: string
   icon: typeof BookOpen
   color: string
@@ -61,7 +56,6 @@ const CONVERSATION_MODES: ModeOption[] = [
   {
     id: 'practice',
     title: 'Course Practice',
-    titleZh: '課程練習',
     description: 'Review vocabulary and phrases from completed lessons',
     icon: BookOpen,
     color: 'text-blue-600',
@@ -71,7 +65,6 @@ const CONVERSATION_MODES: ModeOption[] = [
   {
     id: 'free',
     title: 'Free Talk',
-    titleZh: '自由對話',
     description: 'Open conversation on any topic you choose',
     icon: Sparkles,
     color: 'text-emerald-600',
@@ -81,7 +74,6 @@ const CONVERSATION_MODES: ModeOption[] = [
   {
     id: 'scenario',
     title: 'Scenario Mode',
-    titleZh: '情境模擬',
     description: 'Role-play real-life situations like ordering food',
     icon: Theater,
     color: 'text-purple-600',
@@ -89,6 +81,12 @@ const CONVERSATION_MODES: ModeOption[] = [
     borderColor: 'border-purple-500'
   }
 ]
+
+const DIFFICULTY_COLORS: Record<string, string> = {
+  'A0-A1': 'bg-green-100 text-green-800',
+  'A2-B1': 'bg-yellow-100 text-yellow-800',
+  'B2+': 'bg-red-100 text-red-800'
+}
 
 export default function ConversationSetupPage() {
   const router = useRouter()
@@ -103,17 +101,17 @@ export default function ConversationSetupPage() {
   const [selectedChapters, setSelectedChapters] = useState<string[]>([])
   const [useAllChapters, setUseAllChapters] = useState(true)
 
-  // 簡化為 3 種模式
+  // Mode
   const [topicMode, setTopicMode] = useState<ConversationMode>('practice')
 
   // Interviewer selection
   const [currentInterviewer, setCurrentInterviewer] = useState<string>(DEFAULT_INTERVIEWER)
   const [showInterviewerSelector, setShowInterviewerSelector] = useState(false)
 
-  // Scenario mode
-  const [showScenarioSelector, setShowScenarioSelector] = useState(false)
+  // Scenario mode - inline flow
+  const [scenarios, setScenarios] = useState<Scenario[]>([])
+  const [scenariosLoading, setScenariosLoading] = useState(false)
   const [selectedScenario, setSelectedScenario] = useState<Scenario | null>(null)
-  const [showRoleSelector, setShowRoleSelector] = useState(false)
   const [selectedRole, setSelectedRole] = useState<string | null>(null)
 
   // Track if any lessons completed
@@ -127,9 +125,7 @@ export default function ConversationSetupPage() {
       setCurrentInterviewer(savedInterviewer)
     }
 
-    // 建立完成度對照表
     const completionMap: Record<string, number> = {}
-
     const historyStr = localStorage.getItem('lessonHistory')
     if (historyStr) {
       try {
@@ -137,13 +133,9 @@ export default function ConversationSetupPage() {
         setHasCompletedLessons(history.length > 0)
         setCompletedLessonCount(history.length)
 
-        // 章節 ID 驗證正規表達式：只接受 C + 數字格式
         const VALID_CHAPTER_PATTERN = /^C\d{1,2}$/
-
         history.forEach(entry => {
           const chapterId = entry.lessonId.split('-')[0]
-
-          // 只計算有效的章節 ID（過濾掉 L10, L3 等舊格式）
           if (chapterId && VALID_CHAPTER_PATTERN.test(chapterId)) {
             completionMap[chapterId] = (completionMap[chapterId] || 0) + 1
           }
@@ -153,13 +145,11 @@ export default function ConversationSetupPage() {
       }
     }
 
-    // 建立章節列表：顯示所有章節並合併完成度資料
     const chapters = ALL_CHAPTERS.map(chapterId => ({
       chapterId,
       title: CHAPTER_TITLES[chapterId],
       lessonCount: completionMap[chapterId] || 0
     }))
-
     setCompletedChapters(chapters)
   }, [])
 
@@ -177,7 +167,25 @@ export default function ConversationSetupPage() {
     autoRequestMic()
   }, [])
 
-  // Request microphone permission
+  // Load scenarios when scenario mode is selected
+  useEffect(() => {
+    if (topicMode === 'scenario' && scenarios.length === 0 && !scenariosLoading) {
+      loadScenarios()
+    }
+  }, [topicMode])
+
+  async function loadScenarios() {
+    try {
+      setScenariosLoading(true)
+      const { scenarios: data } = await apiGetScenarios()
+      setScenarios(data)
+    } catch (error) {
+      console.error('Failed to load scenarios:', error)
+    } finally {
+      setScenariosLoading(false)
+    }
+  }
+
   const requestMicPermission = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
@@ -189,7 +197,6 @@ export default function ConversationSetupPage() {
     }
   }
 
-  // Toggle camera enable
   const toggleCamera = async () => {
     if (!enableCamera && cameraPermission === 'pending') {
       try {
@@ -208,7 +215,6 @@ export default function ConversationSetupPage() {
     }
   }
 
-  // Handle chapter selection
   const toggleChapter = (chapterId: string) => {
     setSelectedChapters(prev =>
       prev.includes(chapterId)
@@ -217,34 +223,37 @@ export default function ConversationSetupPage() {
     )
   }
 
-  // Handle scenario selection
-  const handleScenarioSelect = async (scenarioId: string) => {
-    try {
-      const { scenario } = await apiGetScenarioById(scenarioId)
-      setSelectedScenario(scenario)
-      setShowScenarioSelector(false)
-      setShowRoleSelector(true)
-    } catch (error) {
-      console.error('Failed to load scenario:', error)
-      alert('Failed to load scenario. Please try again.')
+  // Handle inline scenario selection
+  const handleScenarioClick = async (scenario: Scenario) => {
+    if (selectedScenario?.scenario_id === scenario.scenario_id) {
+      // Toggle off
+      setSelectedScenario(null)
+      setSelectedRole(null)
+      return
     }
+    // If scenario doesn't have full data (roles), fetch it
+    if (!scenario.roles || scenario.roles.length === 0) {
+      try {
+        const { scenario: fullScenario } = await apiGetScenarioById(scenario.scenario_id)
+        setSelectedScenario(fullScenario)
+      } catch {
+        setSelectedScenario(scenario)
+      }
+    } else {
+      setSelectedScenario(scenario)
+    }
+    setSelectedRole(null)
   }
 
-  // Handle role selection
-  const handleRoleSelect = (roleId: string) => {
-    setSelectedRole(roleId)
-    setShowRoleSelector(false)
-  }
-
-  // Handle mode selection
   const handleModeSelect = (mode: ConversationMode) => {
     setTopicMode(mode)
-    if (mode === 'scenario') {
-      setShowScenarioSelector(true)
+    // Reset scenario selection when switching modes
+    if (mode !== 'scenario') {
+      setSelectedScenario(null)
+      setSelectedRole(null)
     }
   }
 
-  // Check if can start
   const canStart = () => {
     if (micPermission !== 'granted') return false
 
@@ -260,17 +269,15 @@ export default function ConversationSetupPage() {
       return selectedScenario && selectedRole
     }
 
-    return true // free mode always ok
+    return true
   }
 
-  // Handle start conversation
   const handleStartConversation = () => {
     if (micPermission !== 'granted') {
       alert('Microphone permission is required to start conversation.')
       return
     }
 
-    // Validate practice mode
     if (topicMode === 'practice') {
       if (useAllChapters && !hasCompletedLessons) {
         alert('Please complete at least one lesson first.')
@@ -282,13 +289,11 @@ export default function ConversationSetupPage() {
       }
     }
 
-    // Validate scenario mode
     if (topicMode === 'scenario' && (!selectedScenario || !selectedRole)) {
       alert('Please select a scenario and role first.')
       return
     }
 
-    // 轉換為後端相容格式
     let backendTopicMode: 'all' | 'selected' | 'free' | 'scenario'
     if (topicMode === 'practice') {
       backendTopicMode = useAllChapters ? 'all' : 'selected'
@@ -296,7 +301,6 @@ export default function ConversationSetupPage() {
       backendTopicMode = topicMode
     }
 
-    // Save settings to localStorage
     const conversationSettings = {
       interviewerId: currentInterviewer,
       enableCamera,
@@ -307,7 +311,6 @@ export default function ConversationSetupPage() {
     }
     localStorage.setItem('conversationSettings', JSON.stringify(conversationSettings))
 
-    // Navigate to conversation chat page
     router.push('/conversation/chat')
   }
 
@@ -315,7 +318,7 @@ export default function ConversationSetupPage() {
 
   return (
     <div className="min-h-screen pb-24 lg:pb-8">
-      {/* Header - More compact on mobile */}
+      {/* Header */}
       <div className="sticky top-0 z-10 bg-white/80 backdrop-blur-lg border-b border-slate-100">
         <div className="px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center gap-3">
@@ -327,10 +330,9 @@ export default function ConversationSetupPage() {
             </button>
             <div className="flex-1 min-w-0">
               <h1 className="text-lg sm:text-xl font-bold text-slate-900 truncate">AI Conversation</h1>
-              <p className="text-xs sm:text-sm text-slate-500 truncate">Practice speaking Chinese</p>
+              <p className="text-xs sm:text-sm text-slate-500 truncate">Practice speaking Chinese with AI</p>
             </div>
 
-            {/* Instructor avatar in header */}
             <button
               onClick={() => setShowInterviewerSelector(true)}
               className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden border-2 border-slate-200 hover:border-blue-400 transition-colors touch-manipulation"
@@ -348,7 +350,7 @@ export default function ConversationSetupPage() {
 
       <div className="px-4 sm:px-6 py-4 sm:py-6 space-y-4 sm:space-y-6 max-w-2xl mx-auto">
 
-        {/* Microphone Permission - Compact card */}
+        {/* Microphone Permission */}
         {micPermission !== 'granted' && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
@@ -373,7 +375,7 @@ export default function ConversationSetupPage() {
           </motion.div>
         )}
 
-        {/* Mode Selection - 3 beautiful cards */}
+        {/* Mode Selection */}
         <div className="space-y-3">
           <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide px-1">
             Choose Mode
@@ -401,12 +403,9 @@ export default function ConversationSetupPage() {
                     </div>
 
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
-                        <span className={`text-base sm:text-lg font-bold ${isSelected ? mode.color : 'text-slate-900'}`}>
-                          {mode.titleZh}
-                        </span>
-                        <span className="text-xs sm:text-sm text-slate-400">{mode.title}</span>
-                      </div>
+                      <span className={`text-base sm:text-lg font-bold ${isSelected ? mode.color : 'text-slate-900'}`}>
+                        {mode.title}
+                      </span>
                       <p className="mt-0.5 text-xs sm:text-sm text-slate-500">{mode.description}</p>
                     </div>
 
@@ -440,7 +439,6 @@ export default function ConversationSetupPage() {
               <div className="rounded-2xl border border-slate-200 bg-white p-4 space-y-4">
                 <h3 className="text-sm font-semibold text-slate-700">Select Chapters</h3>
 
-                {/* All chapters toggle */}
                 <button
                   onClick={() => setUseAllChapters(!useAllChapters)}
                   className={`w-full flex items-center justify-between rounded-xl border-2 p-3 transition-all touch-manipulation ${
@@ -466,7 +464,6 @@ export default function ConversationSetupPage() {
                   )}
                 </button>
 
-                {/* Chapter grid - shown when not using all */}
                 {!useAllChapters && (
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -498,7 +495,6 @@ export default function ConversationSetupPage() {
                               {chapter.lessonCount} done
                             </div>
                           )}
-
                           {isSelected && (
                             <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center">
                               <Check className="w-2.5 h-2.5 text-white" />
@@ -537,51 +533,124 @@ export default function ConversationSetupPage() {
             </motion.div>
           )}
 
-          {/* Scenario Mode Info */}
+          {/* Scenario Mode - Inline combined flow */}
           {topicMode === 'scenario' && (
             <motion.div
-              key="scenario-info"
+              key="scenario-options"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className="overflow-hidden"
             >
-              {selectedScenario && selectedRole ? (
-                <div className="rounded-2xl border border-purple-200 bg-purple-50 p-4">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex-1">
-                      <p className="font-bold text-purple-900">{selectedScenario.title}</p>
-                      <p className="text-xs text-purple-700 mt-1">{selectedScenario.description}</p>
-                      <div className="mt-2 flex items-center gap-2">
-                        <span className="text-xs text-purple-700">Your role:</span>
-                        <span className="text-xs bg-purple-200 text-purple-900 px-2 py-0.5 rounded-full font-medium">
-                          {selectedScenario.roles.find(r => r.id === selectedRole)?.name}
-                        </span>
-                      </div>
-                    </div>
-                    <button
-                      onClick={() => setShowScenarioSelector(true)}
-                      className="text-xs text-purple-600 hover:text-purple-800 underline touch-manipulation"
-                    >
-                      Change
-                    </button>
+              <div className="rounded-2xl border border-slate-200 bg-white p-4 space-y-4">
+                <h3 className="text-sm font-semibold text-slate-700">Choose a Scenario & Role</h3>
+
+                {scenariosLoading ? (
+                  <div className="flex items-center justify-center py-8">
+                    <Loader2 className="w-6 h-6 animate-spin text-purple-500" />
+                    <span className="ml-2 text-sm text-slate-500">Loading scenarios...</span>
                   </div>
-                </div>
-              ) : (
-                <button
-                  onClick={() => setShowScenarioSelector(true)}
-                  className="w-full rounded-2xl border-2 border-dashed border-purple-300 bg-purple-50/50 p-6 text-center hover:border-purple-400 transition-colors touch-manipulation"
-                >
-                  <Theater className="w-8 h-8 mx-auto text-purple-400 mb-2" />
-                  <p className="text-sm font-medium text-purple-700">Select a Scenario</p>
-                  <p className="text-xs text-purple-500 mt-1">Choose a real-life situation to practice</p>
-                </button>
-              )}
+                ) : (
+                  <div className="space-y-3">
+                    {scenarios.map(scenario => {
+                      const isExpanded = selectedScenario?.scenario_id === scenario.scenario_id
+
+                      return (
+                        <div key={scenario.scenario_id} className="rounded-xl border border-slate-200 overflow-hidden">
+                          {/* Scenario card */}
+                          <button
+                            onClick={() => handleScenarioClick(scenario)}
+                            className={`w-full text-left p-3 sm:p-4 transition-all touch-manipulation ${
+                              isExpanded ? 'bg-purple-50 border-b border-purple-100' : 'bg-white hover:bg-slate-50'
+                            }`}
+                          >
+                            <div className="flex items-start justify-between gap-2">
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center gap-2 flex-wrap">
+                                  <span className="text-sm font-bold text-slate-900">{scenario.title}</span>
+                                  <span className={`px-2 py-0.5 rounded text-[10px] font-medium ${DIFFICULTY_COLORS[scenario.difficulty] || 'bg-slate-100 text-slate-700'}`}>
+                                    {scenario.difficulty}
+                                  </span>
+                                </div>
+                                <p className="text-xs text-slate-500 mt-1 line-clamp-2">{scenario.description}</p>
+                              </div>
+                              <motion.div
+                                animate={{ rotate: isExpanded ? 90 : 0 }}
+                                transition={{ duration: 0.15 }}
+                                className="flex-shrink-0 mt-1"
+                              >
+                                <ChevronRight size={16} className={isExpanded ? 'text-purple-500' : 'text-slate-400'} />
+                              </motion.div>
+                            </div>
+                          </button>
+
+                          {/* Inline role selection */}
+                          <AnimatePresence>
+                            {isExpanded && selectedScenario?.roles && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="overflow-hidden"
+                              >
+                                <div className="p-3 sm:p-4 bg-purple-50/50 space-y-3">
+                                  {/* Objective */}
+                                  <div className="text-xs text-purple-700 bg-purple-100 rounded-lg p-2">
+                                    <strong>Goal:</strong> {selectedScenario.objective}
+                                  </div>
+
+                                  {/* Role cards */}
+                                  <p className="text-xs font-semibold text-slate-600">Select your role:</p>
+                                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                    {selectedScenario.roles.map(role => {
+                                      const isRoleSelected = selectedRole === role.id
+                                      return (
+                                        <button
+                                          key={role.id}
+                                          onClick={() => setSelectedRole(role.id)}
+                                          className={`text-left rounded-xl border-2 p-3 transition-all touch-manipulation ${
+                                            isRoleSelected
+                                              ? 'border-purple-500 bg-purple-100'
+                                              : 'border-slate-200 bg-white hover:border-purple-300'
+                                          }`}
+                                        >
+                                          <div className="flex items-center justify-between">
+                                            <div>
+                                              <div className="text-sm font-bold text-slate-900">{role.name}</div>
+                                              {role.chineseName && (
+                                                <div className="text-xs text-slate-500">{role.chineseName}</div>
+                                              )}
+                                            </div>
+                                            {isRoleSelected && (
+                                              <div className="w-5 h-5 rounded-full bg-purple-500 flex items-center justify-center">
+                                                <Check className="w-3 h-3 text-white" />
+                                              </div>
+                                            )}
+                                          </div>
+                                        </button>
+                                      )
+                                    })}
+                                  </div>
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      )
+                    })}
+
+                    {scenarios.length === 0 && !scenariosLoading && (
+                      <p className="text-xs text-slate-500 text-center py-4">No scenarios available</p>
+                    )}
+                  </div>
+                )}
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
 
-        {/* Optional: Camera toggle */}
+        {/* Camera toggle */}
         <div className="rounded-2xl border border-slate-200 bg-white p-4">
           <button
             onClick={toggleCamera}
@@ -610,7 +679,7 @@ export default function ConversationSetupPage() {
           </button>
         </div>
 
-        {/* Start Button - Fixed on mobile */}
+        {/* Start Button */}
         <div className="fixed bottom-20 lg:bottom-6 left-0 right-0 px-4 sm:px-6 lg:relative lg:px-0 lg:bottom-auto">
           <div className="max-w-2xl mx-auto">
             <motion.button
@@ -629,7 +698,7 @@ export default function ConversationSetupPage() {
             >
               <div className="flex items-center justify-center gap-2">
                 <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />
-                <span>Start {selectedModeData?.titleZh}</span>
+                <span>Start {selectedModeData?.title}</span>
               </div>
             </motion.button>
           </div>
@@ -649,25 +718,27 @@ export default function ConversationSetupPage() {
         />
       )}
 
-      {/* Scenario Selector Modal */}
-      {showScenarioSelector && (
-        <ScenarioSelector
-          onSelect={handleScenarioSelect}
-          onClose={() => setShowScenarioSelector(false)}
-        />
-      )}
-
-      {/* Role Selector Modal */}
-      {showRoleSelector && selectedScenario && (
-        <RoleSelector
-          scenario={selectedScenario}
-          onSelect={handleRoleSelect}
-          onBack={() => {
-            setShowRoleSelector(false)
-            setShowScenarioSelector(true)
-          }}
-        />
-      )}
+      {/* First-visit feature guide */}
+      <PageGuide
+        pageId="conversation"
+        steps={[
+          {
+            title: 'Choose a Mode',
+            description: 'Pick from Free Talk, Lesson Practice, or Scenario Mode to start a conversation.',
+            icon: MessageSquare,
+          },
+          {
+            title: 'Scenario Practice',
+            description: 'Select real-world scenarios like ordering food or asking for directions, then pick a role to play.',
+            icon: Sparkles,
+          },
+          {
+            title: 'Camera & Settings',
+            description: 'Toggle video on/off and choose your AI conversation partner before starting.',
+            icon: Video,
+          },
+        ]}
+      />
     </div>
   )
 }

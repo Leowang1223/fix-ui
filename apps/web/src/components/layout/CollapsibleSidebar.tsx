@@ -5,17 +5,19 @@ import { useRouter, usePathname } from 'next/navigation'
 import {
   LayoutDashboard,
   MessageSquare,
-  BookOpen,
+  Layers,
   History,
+  Map,
   LogOut,
   ChevronLeft,
   ChevronRight
 } from 'lucide-react'
 
 const NAV_ITEMS = [
-  { href: '/dashboard', label: 'Dashboard', description: 'Overview & path', icon: LayoutDashboard },
+  { href: '/dashboard', label: 'Dashboard', description: 'Overview & stats', icon: LayoutDashboard },
+  { href: '/learning-path', label: 'Learning Path', description: 'Chapters & lessons', icon: Map },
   { href: '/conversation', label: 'AI Conversation', description: 'Practice with AI', icon: MessageSquare },
-  { href: '/flashcards', label: 'Flashcards', description: 'Review mistakes', icon: BookOpen },
+  { href: '/flashcards', label: 'Flashcards', description: 'Review vocabulary', icon: Layers },
   { href: '/history', label: 'History', description: 'Reports & playback', icon: History },
 ]
 

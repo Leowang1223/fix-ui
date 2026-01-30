@@ -16,6 +16,7 @@ import {
 import { LessonReportDisplay, type LessonReport } from '../components/report'
 import type { MispronouncedEntry, Suggestions } from '../components/report/types'
 import { AppButton } from '@/components/ui/AppButton'
+import { PageGuide } from '@/components/onboarding'
 
 ChartJS.register(
   RadialLinearScale,
@@ -523,6 +524,28 @@ export default function HistoryPage() {
           )
         }
       </div>
+
+      {/* First-visit feature guide */}
+      <PageGuide
+        pageId="history"
+        steps={[
+          {
+            title: 'Lesson History',
+            description: 'View all your completed lessons with scores. Tap any entry to see the full report.',
+            icon: BookOpen,
+          },
+          {
+            title: 'Conversation History',
+            description: 'Review past AI conversations. View detailed reports or delete old sessions.',
+            icon: MessageSquare,
+          },
+          {
+            title: 'Performance Stats',
+            description: 'See your skills radar chart showing strengths and areas for improvement.',
+            icon: BarChart3,
+          },
+        ]}
+      />
     </div>
   )
 }

@@ -10,6 +10,7 @@ import {
   type Transition,
 } from 'framer-motion'
 import { PlusIcon, SpeakerWaveIcon } from '@heroicons/react/24/outline'
+import { Layers } from 'lucide-react'
 
 import {
   addCustomFlashcard,
@@ -25,6 +26,7 @@ import {
 import { TTSService } from '../history/playback/services/ttsService'
 import { AppButton } from '@/components/ui/AppButton'
 import { useRouter } from 'next/navigation'
+import { PageGuide } from '@/components/onboarding'
 
 import styles from './flashcard.module.css'
 
@@ -510,8 +512,27 @@ export default function FlashcardsPage() {
           </ul>
         </div>
       </div>
+      {/* First-visit feature guide */}
+      <PageGuide
+        pageId="flashcards"
+        steps={[
+          {
+            title: 'Swipe to Review',
+            description: 'Swipe right if you know the card, left if you need more practice. Tap to flip.',
+            icon: Layers,
+          },
+          {
+            title: 'Create Custom Cards',
+            description: 'Use the + button to add your own vocabulary cards with Chinese characters and translations.',
+            icon: PlusIcon,
+          },
+          {
+            title: 'Listen to Pronunciation',
+            description: 'Tap the speaker icon on any card to hear the correct pronunciation.',
+            icon: SpeakerWaveIcon,
+          },
+        ]}
+      />
     </div>
   )
 }
-
-

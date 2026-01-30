@@ -1,29 +1,28 @@
 "use client"
 
-import { useEffect, useState, useMemo } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import {
   Play,
-  ChevronRight,
-  ChevronDown,
   Trophy,
   Flame,
   Target,
   TrendingUp,
   BookOpen,
-  CheckCircle2,
   Clock,
   Sparkles,
-  MessageCircle
+  MessageCircle,
+  Map,
+  Layers
 } from "lucide-react"
 import DailyGoalCard from "@/components/goals/DailyGoalCard"
 import LearningPathCard from "@/components/path/LearningPathCard"
 import { TrendChart } from "@/components/ui/TrendChart"
 import { RecommendationCard, SmartRecommendationBanner } from "@/components/ui/RecommendationCard"
 import { getRecommendations, getTopRecommendation, Recommendation } from "@/lib/recommendations"
-import { EmptyState } from "@/components/ui/EmptyState"
 import { Tooltip } from "@/components/ui/Tooltip"
+import { PageGuide } from "@/components/onboarding"
 
 interface StatsState {
   lessons: number
@@ -41,13 +40,6 @@ interface LessonSummary {
   stepCount: number
 }
 
-interface Chapter {
-  id: string
-  title: string
-  description?: string
-  lessons: LessonSummary[]
-}
-
 interface LessonHistoryEntry {
   sessionId: string
   lessonId: string
@@ -55,33 +47,7 @@ interface LessonHistoryEntry {
   completedAt: string
   totalScore: number
   questionsCount: number
-  results: any[]
-}
-
-const CHAPTER_TITLES: Record<string, string> = {
-  'C1': 'Basic Chinese',
-  'C2': 'Intermediate Conversations',
-  'C3': 'Advanced Topics',
-  'C4': 'Daily Life',
-  'C5': 'Social Situations',
-  'C6': 'Business Chinese',
-  'C7': 'Travel & Leisure',
-  'C8': 'Cultural Topics',
-  'C9': 'Professional Communication',
-  'C10': 'Advanced Mastery'
-}
-
-const CHAPTER_DESCRIPTIONS: Record<string, string> = {
-  'C1': 'Master fundamental Chinese conversation skills',
-  'C2': 'Expand your speaking abilities with practical scenarios',
-  'C3': 'Handle complex conversations with confidence',
-  'C4': 'Learn to discuss everyday activities and routines',
-  'C5': 'Navigate social interactions with ease',
-  'C6': 'Communicate effectively in business settings',
-  'C7': 'Discuss travel plans and leisure activities',
-  'C8': 'Explore Chinese culture and traditions',
-  'C9': 'Master professional workplace communication',
-  'C10': 'Achieve fluency in advanced Chinese topics'
+  results: unknown[]
 }
 
 // Quick stat card component
@@ -111,182 +77,6 @@ function StatCard({ icon: Icon, label, value, color }: {
   )
 }
 
-// Chapter accordion item with accessibility and performance optimizations
-function ChapterItem({
-  chapter,
-  lessons,
-  lessonProgress,
-  isExpanded,
-  onToggle,
-  onLessonClick
-}: {
-  chapter: Chapter
-  lessons: LessonSummary[]
-  lessonProgress: Record<string, number>
-  isExpanded: boolean
-  onToggle: () => void
-  onLessonClick: (lessonId: string) => void
-}) {
-  // 使用 useMemo 優化計算
-  const { chapterLessons, completedCount, totalCount, progressPercent } = useMemo<{
-    chapterLessons: LessonSummary[]
-    completedCount: number
-    totalCount: number
-    progressPercent: number
-  }>(() => {
-    const filtered = lessons.filter(l => l.chapterId === chapter.id)
-    const completed = filtered.filter(l => (lessonProgress[l.lesson_id] || 0) === 100).length
-    const total = filtered.length
-    const percent = total > 0 ? Math.round((completed / total) * 100) : 0
-    return { chapterLessons: filtered, completedCount: completed, totalCount: total, progressPercent: percent }
-  }, [lessons, chapter.id, lessonProgress])
-
-  const chapterId = `chapter-${chapter.id}`
-  const panelId = `panel-${chapter.id}`
-
-  // 鍵盤導航處理
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault()
-      onToggle()
-    }
-  }
-
-  return (
-    <div
-      className="rounded-2xl border border-slate-100 bg-white overflow-hidden shadow-sm"
-      role="region"
-      aria-labelledby={chapterId}
-    >
-      <button
-        id={chapterId}
-        onClick={onToggle}
-        onKeyDown={handleKeyDown}
-        aria-expanded={isExpanded}
-        aria-controls={panelId}
-        className="w-full flex items-center justify-between p-4 sm:p-5 hover:bg-slate-50 transition-colors touch-manipulation min-h-[64px] focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-      >
-        <div className="flex items-center gap-3 sm:gap-4">
-          <div className={`
-            flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl font-bold text-sm sm:text-base
-            ${progressPercent === 100
-              ? 'bg-green-100 text-green-600'
-              : progressPercent > 0
-                ? 'bg-blue-100 text-blue-600'
-                : 'bg-slate-100 text-slate-500'
-            }
-          `}>
-            {chapter.id.replace('C', '')}
-          </div>
-          <div className="text-left">
-            <h3 className="font-semibold text-slate-800 text-sm sm:text-base">
-              {CHAPTER_TITLES[chapter.id] || chapter.id}
-            </h3>
-            <div className="flex items-center gap-2 mt-1">
-              <div
-                className="flex-1 h-1.5 w-20 sm:w-24 bg-slate-100 rounded-full overflow-hidden"
-                role="progressbar"
-                aria-valuenow={progressPercent}
-                aria-valuemin={0}
-                aria-valuemax={100}
-                aria-label={`Chapter progress: ${progressPercent}%`}
-              >
-                <motion.div
-                  className="h-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"
-                  initial={{ width: 0 }}
-                  animate={{ width: `${progressPercent}%` }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                />
-              </div>
-              <span className="text-xs text-slate-500" aria-hidden="true">{completedCount}/{totalCount}</span>
-            </div>
-          </div>
-        </div>
-        <motion.div
-          animate={{ rotate: isExpanded ? 180 : 0 }}
-          transition={{ duration: 0.2 }}
-          aria-hidden="true"
-        >
-          <ChevronDown size={20} className="text-slate-400" />
-        </motion.div>
-      </button>
-
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            id={panelId}
-            role="region"
-            aria-labelledby={chapterId}
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="overflow-hidden"
-          >
-            <div className="px-4 pb-4 sm:px-5 sm:pb-5 space-y-2" role="list">
-              {chapterLessons.map((lesson) => {
-                const progress = lessonProgress[lesson.lesson_id] || 0
-                const isCompleted = progress === 100
-                const isInProgress = progress > 0 && progress < 100
-
-                return (
-                  <button
-                    key={lesson.lesson_id}
-                    onClick={() => onLessonClick(lesson.lesson_id)}
-                    role="listitem"
-                    aria-label={`${lesson.title}, ${lesson.stepCount} steps${isCompleted ? ', completed' : isInProgress ? `, ${progress}% complete` : ''}`}
-                    className={`
-                      w-full flex items-center justify-between p-3 sm:p-4 rounded-xl
-                      transition-all touch-manipulation min-h-[56px]
-                      focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
-                      ${isCompleted
-                        ? 'bg-green-50 border border-green-100'
-                        : isInProgress
-                          ? 'bg-blue-50 border border-blue-100'
-                          : 'bg-slate-50 border border-slate-100 hover:bg-slate-100'
-                      }
-                    `}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className={`
-                        flex items-center justify-center w-9 h-9 rounded-lg text-xs font-semibold
-                        ${isCompleted
-                          ? 'bg-green-100 text-green-600'
-                          : isInProgress
-                            ? 'bg-blue-100 text-blue-600'
-                            : 'bg-slate-200 text-slate-500'
-                        }
-                      `}>
-                        {isCompleted ? <CheckCircle2 size={16} aria-hidden="true" /> : lesson.lessonNumber}
-                      </div>
-                      <div className="text-left">
-                        <span className={`text-sm font-medium ${isCompleted ? 'text-green-700' : 'text-slate-700'}`}>
-                          {lesson.title}
-                        </span>
-                        <div className="text-xs text-slate-400 mt-0.5">
-                          {lesson.stepCount} steps
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      {isInProgress && (
-                        <span className="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-0.5 rounded-full">
-                          {progress}%
-                        </span>
-                      )}
-                      <ChevronRight size={18} className={isCompleted ? 'text-green-400' : 'text-slate-400'} aria-hidden="true" />
-                    </div>
-                  </button>
-                )
-              })}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  )
-}
-
 export default function DashboardPage() {
   const router = useRouter()
   const [stats, setStats] = useState<StatsState>({
@@ -295,10 +85,8 @@ export default function DashboardPage() {
     levelIndex: 0,
     streak: 0,
   })
-  const [chapters, setChapters] = useState<Chapter[]>([])
   const [lessons, setLessons] = useState<LessonSummary[]>([])
   const [lessonProgress, setLessonProgress] = useState<Record<string, number>>({})
-  const [expandedChapter, setExpandedChapter] = useState<string | null>('C1')
   const [nextLesson, setNextLesson] = useState<LessonSummary | null>(null)
   const [recommendations, setRecommendations] = useState<Recommendation[]>([])
   const [topRecommendation, setTopRecommendation] = useState<Recommendation | null>(null)
@@ -441,21 +229,18 @@ export default function DashboardPage() {
 
   // Find next lesson to continue
   const findNextLesson = (allLessons: LessonSummary[], progress: Record<string, number>): LessonSummary | null => {
-    // First, find in-progress lessons
     const inProgressLesson = allLessons.find(lesson => {
       const p = progress[lesson.lesson_id] || 0
       return p > 0 && p < 100
     })
     if (inProgressLesson) return inProgressLesson
 
-    // Then find first incomplete lesson
     const incompleteLesson = allLessons.find(lesson => {
       const p = progress[lesson.lesson_id] || 0
       return p < 100
     })
     if (incompleteLesson) return incompleteLesson
 
-    // If all complete, return first lesson
     return allLessons[0] || null
   }
 
@@ -497,38 +282,11 @@ export default function DashboardPage() {
           const allLessons: LessonSummary[] = await response.json()
           setLessons(allLessons)
 
-          const chapterMap: Record<string, LessonSummary[]> = {}
-          allLessons.forEach(lesson => {
-            if (!chapterMap[lesson.chapterId]) {
-              chapterMap[lesson.chapterId] = []
-            }
-            chapterMap[lesson.chapterId].push(lesson)
-          })
-
-          const chapterList: Chapter[] = Object.entries(chapterMap).map(([id, lessons]) => ({
-            id,
-            title: CHAPTER_TITLES[id] || id,
-            description: CHAPTER_DESCRIPTIONS[id],
-            lessons: lessons.sort((a, b) => a.lessonNumber - b.lessonNumber)
-          }))
-
-          setChapters(chapterList.sort((a, b) => {
-            const numA = parseInt(a.id.replace('C', ''))
-            const numB = parseInt(b.id.replace('C', ''))
-            return numA - numB
-          }))
-
           const progressData = calculateLessonProgress()
           setLessonProgress(progressData)
 
-          // Find and set next lesson
           const next = findNextLesson(allLessons, progressData)
           setNextLesson(next)
-
-          // Auto-expand chapter with next lesson
-          if (next) {
-            setExpandedChapter(next.chapterId)
-          }
         }
       } catch (error) {
         console.error("Failed to fetch lessons:", error)
@@ -576,15 +334,13 @@ export default function DashboardPage() {
       <div className="flex-1 space-y-6 sm:space-y-8">
         {/* Hero Section - Today's Goal */}
         <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-600 p-6 sm:p-8 text-white shadow-xl">
-          {/* Background decoration */}
           <div className="absolute top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-24 h-24 sm:w-32 sm:h-32 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />
 
           <div className="relative z-10">
-            {/* Daily Goal Badge */}
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 mb-4">
               <Target size={16} />
-              <span className="text-sm font-medium">Today's Goal</span>
+              <span className="text-sm font-medium">Today&apos;s Goal</span>
             </div>
 
             <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
@@ -600,7 +356,6 @@ export default function DashboardPage() {
               </p>
             )}
 
-            {/* Big CTA Button */}
             <motion.button
               onClick={handleStartLesson}
               className="
@@ -625,12 +380,11 @@ export default function DashboardPage() {
           </div>
         </section>
 
-        {/* Quick Stats - Horizontal Scroll on Mobile */}
+        {/* Quick Stats */}
         <section
           className="relative sm:overflow-visible"
           aria-label="Learning statistics"
         >
-          {/* Mobile scroll gradient hints */}
           <div className="sm:hidden absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-[#f7f9ff] to-transparent pointer-events-none z-10" />
           <div className="sm:hidden absolute right-0 top-0 bottom-0 w-4 bg-gradient-to-l from-[#f7f9ff] to-transparent pointer-events-none z-10" />
           <div className="overflow-x-auto -mx-3 px-3 sm:mx-0 sm:px-0 scrollbar-thin">
@@ -714,76 +468,98 @@ export default function DashboardPage() {
         )}
 
         {/* Quick Actions */}
-        <section className="grid grid-cols-2 gap-3">
-          <motion.button
-            onClick={() => router.push('/conversation')}
-            className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100 hover:border-emerald-200 transition-all touch-manipulation"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center">
-              <MessageCircle className="w-5 h-5 text-white" />
-            </div>
-            <div className="text-left">
-              <p className="text-sm font-bold text-emerald-800">AI Conversation</p>
-              <p className="text-xs text-emerald-600">Practice speaking</p>
-            </div>
-          </motion.button>
+        <section className="space-y-3">
+          <h3 className="font-semibold text-slate-800">Quick Actions</h3>
+          <div className="grid grid-cols-2 gap-3">
+            <motion.button
+              onClick={() => router.push('/learning-path')}
+              className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-indigo-50 to-violet-50 border border-indigo-100 hover:border-indigo-200 transition-all touch-manipulation"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="w-10 h-10 rounded-xl bg-indigo-500 flex items-center justify-center">
+                <Map className="w-5 h-5 text-white" />
+              </div>
+              <div className="text-left">
+                <p className="text-sm font-bold text-indigo-800">Learning Path</p>
+                <p className="text-xs text-indigo-600">Browse chapters</p>
+              </div>
+            </motion.button>
 
-          <motion.button
-            onClick={() => router.push('/history')}
-            className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-100 hover:border-amber-200 transition-all touch-manipulation"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center">
-              <Clock className="w-5 h-5 text-white" />
-            </div>
-            <div className="text-left">
-              <p className="text-sm font-bold text-amber-800">Learning History</p>
-              <p className="text-xs text-amber-600">Review progress</p>
-            </div>
-          </motion.button>
-        </section>
+            <motion.button
+              onClick={() => router.push('/conversation')}
+              className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100 hover:border-emerald-200 transition-all touch-manipulation"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center">
+                <MessageCircle className="w-5 h-5 text-white" />
+              </div>
+              <div className="text-left">
+                <p className="text-sm font-bold text-emerald-800">AI Conversation</p>
+                <p className="text-xs text-emerald-600">Practice speaking</p>
+              </div>
+            </motion.button>
 
-        {/* Chapter List */}
-        <section className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h2 className="text-lg sm:text-xl font-bold text-slate-800">
-              Learning Path
-            </h2>
-            <span className="text-xs text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
-              {chapters.length} Chapters
-            </span>
-          </div>
+            <motion.button
+              onClick={() => router.push('/flashcards')}
+              className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-sky-50 to-cyan-50 border border-sky-100 hover:border-sky-200 transition-all touch-manipulation"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center">
+                <Layers className="w-5 h-5 text-white" />
+              </div>
+              <div className="text-left">
+                <p className="text-sm font-bold text-sky-800">Flashcards</p>
+                <p className="text-xs text-sky-600">Review vocabulary</p>
+              </div>
+            </motion.button>
 
-          <div className="space-y-3">
-            {chapters.length > 0 ? (
-              chapters.map((chapter) => (
-                <ChapterItem
-                  key={chapter.id}
-                  chapter={chapter}
-                  lessons={lessons}
-                  lessonProgress={lessonProgress}
-                  isExpanded={expandedChapter === chapter.id}
-                  onToggle={() => setExpandedChapter(
-                    expandedChapter === chapter.id ? null : chapter.id
-                  )}
-                  onLessonClick={handleLessonClick}
-                />
-              ))
-            ) : (
-              <EmptyState
-                type="lesson"
-                title="Loading courses..."
-                description="If this persists, please check your network connection"
-                actionLabel="Retry"
-                onAction={() => window.location.reload()}
-              />
-            )}
+            <motion.button
+              onClick={() => router.push('/history')}
+              className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-100 hover:border-amber-200 transition-all touch-manipulation"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center">
+                <Clock className="w-5 h-5 text-white" />
+              </div>
+              <div className="text-left">
+                <p className="text-sm font-bold text-amber-800">History</p>
+                <p className="text-xs text-amber-600">Review progress</p>
+              </div>
+            </motion.button>
           </div>
         </section>
       </div>
+
+      {/* First-visit feature guide */}
+      <PageGuide
+        pageId="dashboard"
+        steps={[
+          {
+            title: 'Your Learning Overview',
+            description: 'See your progress stats, streak count, and current level at a glance.',
+            icon: TrendingUp,
+          },
+          {
+            title: 'Daily Goals',
+            description: 'Track your daily learning targets and build consistent study habits.',
+            icon: Target,
+          },
+          {
+            title: 'Quick Actions',
+            description: 'Jump straight to Learning Path, AI Conversation, Flashcards, or History.',
+            icon: Sparkles,
+          },
+          {
+            title: 'Smart Recommendations',
+            description: 'Get personalized suggestions based on your learning patterns and weak areas.',
+            icon: BookOpen,
+          },
+        ]}
+      />
     </div>
   )
 }
