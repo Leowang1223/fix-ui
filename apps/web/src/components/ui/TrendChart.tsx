@@ -90,11 +90,11 @@ export function TrendChart({
       {showStats && (
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-4">
-            {/* 連續學習天數 */}
+            {/* Streak days */}
             <div className="flex items-center gap-1.5">
               <Flame className={`w-4 h-4 ${streak > 0 ? 'text-orange-500' : 'text-gray-300'}`} />
               <span className="text-sm font-medium text-gray-700">{streak}</span>
-              <span className="text-xs text-gray-500">天</span>
+              <span className="text-xs text-gray-500">days</span>
             </div>
 
             {/* 趨勢指標 */}
@@ -106,10 +106,10 @@ export function TrendChart({
             </div>
           </div>
 
-          {/* 週期 */}
+          {/* Period */}
           <div className="flex items-center gap-1 text-xs text-gray-400">
             <Calendar className="w-3 h-3" />
-            <span>近 {days} 天</span>
+            <span>Last {days} days</span>
           </div>
         </div>
       )}
@@ -186,16 +186,16 @@ export function TrendChart({
               ))}
             </>
           ) : (
-            /* 無數據提示 */
-            <text
-              x={chartWidth / 2}
-              y={chartHeight / 2}
-              textAnchor="middle"
-              className="fill-gray-400 text-xs"
-              style={{ fontSize: '10px' }}
-            >
-              暫無學習數據
-            </text>
+            /* Empty state - just show dashed baseline */
+            <line
+              x1="0"
+              y1={chartHeight / 2}
+              x2={chartWidth}
+              y2={chartHeight / 2}
+              stroke="#e5e7eb"
+              strokeWidth="1"
+              strokeDasharray="4,4"
+            />
           )}
         </svg>
 

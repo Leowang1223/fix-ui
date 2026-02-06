@@ -22,27 +22,27 @@ const TYPE_CONFIG: Record<RecommendationType, {
   continue: {
     icon: PlayCircle,
     gradient: 'from-blue-500 to-blue-600',
-    badge: '繼續學習',
+    badge: 'Continue',
   },
   review: {
     icon: RefreshCw,
     gradient: 'from-orange-500 to-orange-600',
-    badge: '複習推薦',
+    badge: 'Review',
   },
   new: {
     icon: BookOpen,
     gradient: 'from-green-500 to-green-600',
-    badge: '新課程',
+    badge: 'New Lesson',
   },
   challenge: {
     icon: Zap,
     gradient: 'from-purple-500 to-purple-600',
-    badge: '挑戰',
+    badge: 'Challenge',
   },
   practice: {
     icon: Target,
     gradient: 'from-pink-500 to-pink-600',
-    badge: '練習',
+    badge: 'Practice',
   },
 }
 
@@ -94,33 +94,33 @@ export function RecommendationCard({
         {/* 原因 */}
         <p className="text-white/80 mb-4">{recommendation.reason}</p>
 
-        {/* 指標 */}
+        {/* Metrics */}
         {showMetrics && recommendation.metrics && (
           <div className="flex items-center gap-4 text-sm text-white/70 mb-4">
             {recommendation.metrics.lastScore !== undefined && (
               <div className="flex items-center gap-1">
                 <Star className="w-4 h-4" />
-                <span>上次 {recommendation.metrics.lastScore}分</span>
+                <span>Last: {recommendation.metrics.lastScore}%</span>
               </div>
             )}
             {recommendation.metrics.attempts !== undefined && recommendation.metrics.attempts > 0 && (
               <div className="flex items-center gap-1">
                 <RefreshCw className="w-4 h-4" />
-                <span>練習 {recommendation.metrics.attempts} 次</span>
+                <span>{recommendation.metrics.attempts} attempts</span>
               </div>
             )}
             {recommendation.metrics.averageScore !== undefined && (
               <div className="flex items-center gap-1">
                 <TrendingUp className="w-4 h-4" />
-                <span>平均 {recommendation.metrics.averageScore}分</span>
+                <span>Avg: {recommendation.metrics.averageScore}%</span>
               </div>
             )}
           </div>
         )}
 
-        {/* 行動按鈕 */}
+        {/* Action button */}
         <div className="flex items-center gap-2 text-lg font-semibold">
-          <span>開始學習</span>
+          <span>Start Learning</span>
           <ChevronRight className="w-5 h-5" />
         </div>
       </motion.div>
@@ -176,13 +176,13 @@ export function RecommendationCard({
           {/* 原因 */}
           <p className="text-sm text-gray-500 line-clamp-2">{recommendation.reason}</p>
 
-          {/* 指標 */}
+          {/* Metrics */}
           {showMetrics && recommendation.metrics && (
             <div className="flex items-center gap-3 mt-2 text-xs text-gray-400">
               {recommendation.metrics.lastScore !== undefined && (
                 <span className="flex items-center gap-1">
                   <Star className="w-3 h-3" />
-                  {recommendation.metrics.lastScore}分
+                  {recommendation.metrics.lastScore}%
                 </span>
               )}
               {recommendation.metrics.lastAttempt !== undefined && (
@@ -237,7 +237,7 @@ export function RecommendationList({
       {recommendations.length === 0 && (
         <div className="text-center py-8 text-gray-400">
           <BookOpen className="w-12 h-12 mx-auto mb-2 opacity-50" />
-          <p>開始學習後會出現推薦</p>
+          <p>Recommendations will appear after you start learning</p>
         </div>
       )}
     </div>
@@ -285,7 +285,7 @@ export function SmartRecommendationBanner({
           onClick={onStart}
           className="px-4 py-2 bg-white text-gray-800 rounded-lg font-medium hover:bg-gray-100 transition-colors flex-shrink-0"
         >
-          開始
+          Start
         </button>
       </div>
 
@@ -302,16 +302,16 @@ export function SmartRecommendationBanner({
   )
 }
 
-// 輔助函數：格式化時間
+// Helper: format time ago
 function formatTimeAgo(timestamp: number): string {
   const seconds = Math.floor((Date.now() - timestamp) / 1000)
 
-  if (seconds < 60) return '剛剛'
-  if (seconds < 3600) return `${Math.floor(seconds / 60)} 分鐘前`
-  if (seconds < 86400) return `${Math.floor(seconds / 3600)} 小時前`
-  if (seconds < 604800) return `${Math.floor(seconds / 86400)} 天前`
+  if (seconds < 60) return 'Just now'
+  if (seconds < 3600) return `${Math.floor(seconds / 60)}m ago`
+  if (seconds < 86400) return `${Math.floor(seconds / 3600)}h ago`
+  if (seconds < 604800) return `${Math.floor(seconds / 86400)}d ago`
 
-  return new Date(timestamp).toLocaleDateString('zh-TW')
+  return new Date(timestamp).toLocaleDateString('en-US')
 }
 
 export default RecommendationCard

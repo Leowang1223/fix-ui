@@ -132,10 +132,27 @@ function calculateProgressFromHistory(): Partial<LearningProgress> {
     if (!historyStr) return {}
 
     const history = JSON.parse(historyStr)
-    const totalLessonsCompleted = history.length
 
-    // Calculate vocabulary (estimate based on lessons)
-    const totalVocabLearned = totalLessonsCompleted * 10 // ~10 vocab per lesson
+    // Count unique completed lessons (100% progress)
+    const completedLessonIds = new Set<string>()
+    let totalVocabFromLessons = 0
+
+    history.forEach((entry: any) => {
+      const lessonId = entry.lessonId
+      const questionsCount = entry.questionsCount || 0
+      const answeredCount = entry.results?.length || 0
+
+      // Check if lesson is fully completed (all questions answered)
+      if (questionsCount > 0 && answeredCount >= questionsCount) {
+        if (!completedLessonIds.has(lessonId)) {
+          completedLessonIds.add(lessonId)
+          // Each lesson contributes ~10 vocab words
+          totalVocabFromLessons += 10
+        }
+      }
+    })
+
+    const totalLessonsCompleted = completedLessonIds.size
 
     // Get dates
     const dates = history.map((h: any) => new Date(h.completedAt).toISOString().split('T')[0])
@@ -145,7 +162,7 @@ function calculateProgressFromHistory(): Partial<LearningProgress> {
 
     return {
       totalLessonsCompleted,
-      totalVocabLearned,
+      totalVocabLearned: totalVocabFromLessons,
       startDate,
       lastActivityDate
     }

@@ -85,7 +85,7 @@ function MilestoneNode({
 
       {/* Label */}
       <div className={`mt-2 text-center ${isCurrent ? 'text-blue-600' : isCompleted ? 'text-emerald-600' : 'text-slate-500'}`}>
-        <p className="text-[10px] sm:text-xs font-semibold">{milestone.titleZh}</p>
+        <p className="text-[10px] sm:text-xs font-semibold">{milestone.title}</p>
         {isCurrent && (
           <p className="text-[9px] sm:text-[10px] text-blue-500">{progress}%</p>
         )}
@@ -288,7 +288,7 @@ export default function LearningPathCard() {
             <div>
               <h3 className="text-sm font-bold text-slate-800">Learning Path</h3>
               <p className="text-xs text-slate-500">
-                Target: {SKILL_LEVEL_NAMES[data.config.targetLevel].zh}
+                Target: {SKILL_LEVEL_NAMES[data.config.targetLevel].en}
               </p>
             </div>
           </div>
@@ -324,8 +324,8 @@ export default function LearningPathCard() {
         </div>
 
         {/* Path Visualization */}
-        <div className="overflow-x-auto -mx-2 px-2">
-          <div className="flex items-center min-w-max py-2">
+        <div className="overflow-x-auto -mx-2 px-2 scrollbar-thin">
+          <div className="flex items-center w-max py-2">
             {data.milestones.map((milestone, index) => {
               const isCompleted = milestone.isCompleted
               const isCurrent = index === data.currentMilestoneIndex
@@ -358,7 +358,7 @@ export default function LearningPathCard() {
                 <Target className="w-5 h-5 text-white" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-bold text-blue-800">{currentMilestone.titleZh}</p>
+                <p className="text-sm font-bold text-blue-800">{currentMilestone.title}</p>
                 <p className="text-xs text-blue-600 mt-0.5">{currentMilestone.description}</p>
                 <div className="flex items-center gap-3 mt-2 text-[10px] text-blue-700">
                   <span>{data.progress.totalLessonsCompleted}/{currentMilestone.requiredLessons} lessons</span>
@@ -401,7 +401,7 @@ export function LearningPathMini() {
       <div className="flex-1">
         <p className="text-sm font-medium text-indigo-700">Learning Path</p>
         <p className="text-xs text-indigo-500">
-          Target: {SKILL_LEVEL_NAMES[data.config.targetLevel].zh}
+          Target: {SKILL_LEVEL_NAMES[data.config.targetLevel].en}
         </p>
       </div>
       <ChevronRight className="w-5 h-5 text-indigo-400" />

@@ -296,7 +296,44 @@ function getChallengeRecommendation(
  */
 export function getTopRecommendation(): Recommendation | null {
   const recommendations = getRecommendations(1)
-  return recommendations[0] || null
+
+  if (recommendations.length > 0) {
+    return recommendations[0]
+  }
+
+  // Default: recommend first uncompleted lesson
+  const history = getScoreHistory()
+  const completedLessons = new Set(history.map(r => r.lessonId))
+  const nextLesson = LESSON_DATA.find(l => !completedLessons.has(l.id))
+
+  if (nextLesson) {
+    return {
+      id: `new-${nextLesson.id}`,
+      type: 'new',
+      lessonId: nextLesson.id,
+      lessonTitle: nextLesson.title,
+      reason: completedLessons.size === 0
+        ? 'Start your Chinese learning journey!'
+        : 'Continue to the next lesson',
+      priority: 10,
+      confidence: 100,
+      icon: 'book-open',
+      color: 'green',
+    }
+  }
+
+  // All lessons completed - recommend first lesson for review
+  return {
+    id: 'review-L1',
+    type: 'review',
+    lessonId: 'L1',
+    lessonTitle: LESSON_DATA[0].title,
+    reason: 'Review your first lesson to stay sharp!',
+    priority: 5,
+    confidence: 80,
+    icon: 'refresh-cw',
+    color: 'orange',
+  }
 }
 
 /**

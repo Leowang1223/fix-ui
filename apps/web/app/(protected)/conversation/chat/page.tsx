@@ -3,21 +3,22 @@
 import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import {
   Mic,
   MicOff,
   PhoneOff,
   Loader2,
   AlertCircle,
-  ChevronUp,
-  ChevronDown,
-  MessageSquare,
   X
 } from 'lucide-react'
 import { DialogSidebar, type Message, type Suggestion } from '../components/DialogSidebar'
 import { InterviewerSelector, getInterviewerImagePath, getInterviewerVoice, DEFAULT_INTERVIEWER } from '../../lesson/components/InterviewerSelector'
 import CompletionPrompt from '../components/CompletionPrompt'
+import { MobileConversationHeader } from '../components/MobileConversationHeader'
+import { FloatingMessageBubble } from '../components/FloatingMessageBubble'
+import { FullScreenChatModal } from '../components/FullScreenChatModal'
+import { HorizontalSuggestionPills } from '../components/HorizontalSuggestionPills'
 import { type ScenarioCheckpoint, apiGetScenarioById, fetchJson, getApiBase } from '@/lib/api'
 import { createClient } from '@/lib/supabase/client'
 
@@ -98,8 +99,8 @@ export default function ConversationChatPage() {
   const [allCheckpointsCompleted, setAllCheckpointsCompleted] = useState(false)
 
   // Mobile UI state
-  const [showChatPanel, setShowChatPanel] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [showFullChatModal, setShowFullChatModal] = useState(false)
 
   // Detect mobile
   useEffect(() => {
@@ -523,34 +524,52 @@ export default function ConversationChatPage() {
     )
   }
 
+  // Get the latest instructor message for floating bubble
+  const latestInstructorMessage = [...messages].reverse().find(m => m.role === 'instructor') || null
+
   return (
     <div className="flex h-screen flex-col bg-slate-100">
-      {/* Header - Responsive */}
-      <header className="flex-shrink-0 border-b bg-white px-4 py-3 sm:px-6 shadow-sm z-30">
-        <div className="flex items-center justify-between">
-          <div className="min-w-0 flex-1">
-            <h1 className="text-base sm:text-lg font-semibold text-gray-900 truncate">
-              {settings.topicMode === 'scenario' && scenarioInfo
-                ? scenarioInfo.title
-                : 'AI Conversation'}
-            </h1>
-            <p className="text-xs sm:text-sm text-gray-500 truncate">
-              {settings.topicMode === 'free'
-                ? 'Free Talk'
-                : `${settings.topicMode === 'all' ? 'All' : settings.selectedTopics.length} Topics`}
-            </p>
-          </div>
+      {/* Header - Different for mobile vs desktop */}
+      {isMobile ? (
+        <MobileConversationHeader
+          title="AI Conversation"
+          subtitle={
+            settings.topicMode === 'free'
+              ? 'Free Talk'
+              : `${settings.topicMode === 'all' ? 'All' : settings.selectedTopics.length} Topics`
+          }
+          scenarioInfo={settings.topicMode === 'scenario' ? scenarioInfo : null}
+          checkpoints={settings.topicMode === 'scenario' ? checkpoints : undefined}
+          onEndConversation={handleEndConversation}
+          isLoading={isLoading}
+        />
+      ) : (
+        <header className="flex-shrink-0 border-b bg-white px-4 py-3 sm:px-6 shadow-sm z-30">
+          <div className="flex items-center justify-between">
+            <div className="min-w-0 flex-1">
+              <h1 className="text-base sm:text-lg font-semibold text-gray-900 truncate">
+                {settings.topicMode === 'scenario' && scenarioInfo
+                  ? scenarioInfo.title
+                  : 'AI Conversation'}
+              </h1>
+              <p className="text-xs sm:text-sm text-gray-500 truncate">
+                {settings.topicMode === 'free'
+                  ? 'Free Talk'
+                  : `${settings.topicMode === 'all' ? 'All' : settings.selectedTopics.length} Topics`}
+              </p>
+            </div>
 
-          <button
-            onClick={handleEndConversation}
-            disabled={isLoading}
-            className="flex items-center gap-1.5 sm:gap-2 rounded-xl bg-red-500 px-3 py-2 sm:px-4 text-xs sm:text-sm font-medium text-white hover:bg-red-600 disabled:opacity-50 transition-colors touch-manipulation"
-          >
-            <PhoneOff className="h-4 w-4" />
-            <span className="hidden sm:inline">End</span>
-          </button>
-        </div>
-      </header>
+            <button
+              onClick={handleEndConversation}
+              disabled={isLoading}
+              className="flex items-center gap-1.5 sm:gap-2 rounded-xl bg-red-500 px-3 py-2 sm:px-4 text-xs sm:text-sm font-medium text-white hover:bg-red-600 disabled:opacity-50 transition-colors touch-manipulation"
+            >
+              <PhoneOff className="h-4 w-4" />
+              <span className="hidden sm:inline">End</span>
+            </button>
+          </div>
+        </header>
+      )}
 
       {/* Main Content - Full screen interviewer with overlay chat */}
       <div className="flex-1 relative overflow-hidden bg-gray-900">
@@ -564,7 +583,8 @@ export default function ConversationChatPage() {
               className="object-cover"
               priority
             />
-            {scenarioInfo && (
+            {/* AI Role badge - only show on desktop or when no camera */}
+            {scenarioInfo && !isMobile && (
               <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm rounded-xl px-3 py-2">
                 <p className="text-xs sm:text-sm font-medium text-white">{scenarioInfo.aiRole}</p>
               </div>
@@ -582,17 +602,19 @@ export default function ConversationChatPage() {
               className="object-cover"
               priority
             />
-            {/* Change instructor hint - top left */}
-            <div className="absolute top-4 left-4 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1.5 opacity-60 group-hover:opacity-100 transition-opacity">
-              <span className="text-xs font-medium text-white">Tap to change</span>
-            </div>
+            {/* Change instructor hint - only show on desktop */}
+            {!isMobile && (
+              <div className="absolute top-4 left-4 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1.5 opacity-60 group-hover:opacity-100 transition-opacity">
+                <span className="text-xs font-medium text-white">Tap to change</span>
+              </div>
+            )}
           </button>
         )}
 
-        {/* User Video - Top Left Corner (moved from right to avoid overlap with chat) */}
+        {/* User Video - Top Right Corner on mobile, Top Left on desktop */}
         {settings.enableCamera && (
-          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-10">
-            <div className="relative h-20 w-28 sm:h-28 sm:w-40 overflow-hidden rounded-xl border-2 border-white/30 shadow-2xl">
+          <div className={`absolute z-10 ${isMobile ? 'top-3 right-3' : 'top-4 left-4'}`}>
+            <div className={`relative overflow-hidden rounded-xl border-2 border-white/30 shadow-2xl ${isMobile ? 'h-16 w-24' : 'h-28 w-40'}`}>
               <video
                 ref={videoRef}
                 autoPlay
@@ -607,8 +629,27 @@ export default function ConversationChatPage() {
           </div>
         )}
 
+        {/* Mobile: Floating Message Bubble */}
+        {isMobile && (
+          <FloatingMessageBubble
+            message={latestInstructorMessage}
+            messageCount={messages.length}
+            onTap={() => setShowFullChatModal(true)}
+            onPlayTTS={playTTS}
+            isLoading={isLoading}
+          />
+        )}
+
+        {/* Mobile: Horizontal Suggestion Pills */}
+        {isMobile && suggestions.length > 0 && (
+          <HorizontalSuggestionPills
+            suggestions={suggestions}
+            onPlayTTS={playTTS}
+          />
+        )}
+
         {/* Recording Button - Bottom Center */}
-        <div className="absolute bottom-20 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
+        <div className={`absolute left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center ${isMobile ? 'bottom-6' : 'bottom-8'}`}>
           <motion.button
             onMouseDown={startRecording}
             onMouseUp={stopRecording}
@@ -616,7 +657,8 @@ export default function ConversationChatPage() {
             onTouchEnd={stopRecording}
             disabled={isLoading || !sessionId}
             className={`
-              relative h-16 w-16 sm:h-20 sm:w-20 rounded-full transition-all touch-manipulation
+              relative rounded-full transition-all touch-manipulation
+              ${isMobile ? 'h-16 w-16' : 'h-20 w-20'}
               ${isRecording
                 ? 'bg-red-600 shadow-2xl shadow-red-500/50 scale-110'
                 : 'bg-blue-600/90 backdrop-blur-sm shadow-xl hover:bg-blue-700 hover:scale-105'
@@ -626,9 +668,9 @@ export default function ConversationChatPage() {
             whileTap={{ scale: 1.1 }}
           >
             {isRecording ? (
-              <MicOff className="h-6 w-6 sm:h-8 sm:w-8 text-white mx-auto" />
+              <MicOff className={`text-white mx-auto ${isMobile ? 'h-6 w-6' : 'h-8 w-8'}`} />
             ) : (
-              <Mic className="h-6 w-6 sm:h-8 sm:w-8 text-white mx-auto" />
+              <Mic className={`text-white mx-auto ${isMobile ? 'h-6 w-6' : 'h-8 w-8'}`} />
             )}
 
             {isRecording && (
@@ -640,7 +682,7 @@ export default function ConversationChatPage() {
             )}
           </motion.button>
 
-          <p className="mt-2 text-center text-xs sm:text-sm text-white drop-shadow-lg bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full">
+          <p className={`mt-2 text-center text-white drop-shadow-lg bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full ${isMobile ? 'text-xs' : 'text-sm'}`}>
             {isRecording ? 'Release to send' : 'Hold to speak'}
           </p>
 
@@ -652,52 +694,8 @@ export default function ConversationChatPage() {
           )}
         </div>
 
-        {/* Chat Overlay - Right side on desktop, Bottom on mobile */}
-        {isMobile ? (
-          /* Mobile: Bottom overlay chat panel */
-          <div className="absolute bottom-0 left-0 right-0 z-10">
-            {/* Toggle button */}
-            <button
-              onClick={() => setShowChatPanel(!showChatPanel)}
-              className="w-full flex items-center justify-center gap-2 py-2.5 bg-black/50 backdrop-blur-md border-t border-white/10 touch-manipulation"
-            >
-              <MessageSquare size={16} className="text-white/80" />
-              <span className="text-sm font-medium text-white/90">
-                {messages.length} messages
-              </span>
-              {showChatPanel ? (
-                <ChevronDown size={16} className="text-white/60" />
-              ) : (
-                <ChevronUp size={16} className="text-white/60" />
-              )}
-            </button>
-
-            {/* Expandable chat panel */}
-            <AnimatePresence>
-              {showChatPanel && (
-                <motion.div
-                  initial={{ height: 0 }}
-                  animate={{ height: '45vh' }}
-                  exit={{ height: 0 }}
-                  transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-                  className="overflow-hidden"
-                >
-                  <DialogSidebar
-                    messages={messages}
-                    suggestions={suggestions}
-                    onPlayTTS={playTTS}
-                    isLoading={isLoading}
-                    currentInterviewer={currentInterviewer}
-                    scenarioInfo={settings.topicMode === 'scenario' ? scenarioInfo : null}
-                    checkpoints={settings.topicMode === 'scenario' ? checkpoints : undefined}
-                    transparent
-                  />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        ) : (
-          /* Desktop: Right side overlay chat panel */
+        {/* Desktop: Right side overlay chat panel */}
+        {!isMobile && (
           <div className="absolute top-0 right-0 bottom-0 w-[380px] xl:w-[420px] z-10">
             <DialogSidebar
               messages={messages}
@@ -728,6 +726,18 @@ export default function ConversationChatPage() {
           </div>
         </div>
       )}
+
+      {/* Mobile: Full Screen Chat Modal */}
+      <FullScreenChatModal
+        isOpen={showFullChatModal}
+        onClose={() => setShowFullChatModal(false)}
+        messages={messages}
+        suggestions={suggestions}
+        onPlayTTS={playTTS}
+        isLoading={isLoading}
+        currentInterviewer={currentInterviewer}
+        scenarioInfo={settings.topicMode === 'scenario' ? scenarioInfo : null}
+      />
 
       {/* Interviewer Selector Modal */}
       {showInterviewerSelector && (

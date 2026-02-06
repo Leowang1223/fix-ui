@@ -19,8 +19,8 @@ import {
 import DailyGoalCard from "@/components/goals/DailyGoalCard"
 import LearningPathCard from "@/components/path/LearningPathCard"
 import { TrendChart } from "@/components/ui/TrendChart"
-import { RecommendationCard, SmartRecommendationBanner } from "@/components/ui/RecommendationCard"
-import { getRecommendations, getTopRecommendation, Recommendation } from "@/lib/recommendations"
+import { SmartRecommendationBanner } from "@/components/ui/RecommendationCard"
+import { getTopRecommendation, Recommendation } from "@/lib/recommendations"
 import { Tooltip } from "@/components/ui/Tooltip"
 import { PageGuide } from "@/components/onboarding"
 
@@ -65,13 +65,13 @@ function StatCard({ icon: Icon, label, value, color }: {
   }
 
   return (
-    <div className={`flex items-center gap-3 px-4 py-3 rounded-2xl border ${colorClasses[color]} min-w-[140px]`}>
-      <div className={`p-2 rounded-xl ${color === 'blue' ? 'bg-blue-100' : color === 'amber' ? 'bg-amber-100' : color === 'green' ? 'bg-green-100' : 'bg-purple-100'}`}>
-        <Icon size={18} />
+    <div className={`flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-2xl border ${colorClasses[color]} flex-shrink-0 w-[110px] sm:w-auto sm:flex-1`}>
+      <div className={`p-1.5 sm:p-2 rounded-xl flex-shrink-0 ${color === 'blue' ? 'bg-blue-100' : color === 'amber' ? 'bg-amber-100' : color === 'green' ? 'bg-green-100' : 'bg-purple-100'}`}>
+        <Icon className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
       </div>
-      <div>
-        <div className="text-lg font-bold">{value}</div>
-        <div className="text-xs opacity-70">{label}</div>
+      <div className="min-w-0 flex-1">
+        <div className="text-sm sm:text-lg font-bold truncate">{value}</div>
+        <div className="text-[10px] sm:text-xs opacity-70 truncate">{label}</div>
       </div>
     </div>
   )
@@ -88,7 +88,6 @@ export default function DashboardPage() {
   const [lessons, setLessons] = useState<LessonSummary[]>([])
   const [lessonProgress, setLessonProgress] = useState<Record<string, number>>({})
   const [nextLesson, setNextLesson] = useState<LessonSummary | null>(null)
-  const [recommendations, setRecommendations] = useState<Recommendation[]>([])
   const [topRecommendation, setTopRecommendation] = useState<Recommendation | null>(null)
   const [showRecommendationBanner, setShowRecommendationBanner] = useState(true)
 
@@ -302,10 +301,8 @@ export default function DashboardPage() {
     setStats(calculatedStats)
   }, [lessonProgress])
 
-  // Load recommendations
+  // Load top recommendation for banner
   useEffect(() => {
-    const recs = getRecommendations(5)
-    setRecommendations(recs)
     const top = getTopRecommendation()
     setTopRecommendation(top)
   }, [lessonProgress])
@@ -330,8 +327,8 @@ export default function DashboardPage() {
   const nextLessonProgress = nextLesson ? (lessonProgress[nextLesson.lesson_id] || 0) : 0
 
   return (
-    <div className="w-full h-full flex flex-col text-slate-900">
-      <div className="flex-1 space-y-6 sm:space-y-8">
+    <div className="w-full h-full flex flex-col text-slate-900 overflow-x-hidden">
+      <div className="flex-1 space-y-6 sm:space-y-8 overflow-x-hidden">
         {/* Hero Section - Today's Goal */}
         <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-600 p-6 sm:p-8 text-white shadow-xl">
           <div className="absolute top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -449,23 +446,6 @@ export default function DashboardPage() {
           </div>
           <TrendChart days={7} height={140} showStats={true} />
         </section>
-
-        {/* Personalized Recommendations */}
-        {recommendations.length > 0 && (
-          <section className="space-y-3">
-            <h3 className="font-semibold text-slate-800">Recommended for You</h3>
-            <div className="space-y-3">
-              {recommendations.slice(0, 3).map((rec) => (
-                <RecommendationCard
-                  key={rec.id}
-                  recommendation={rec}
-                  variant="compact"
-                  onClick={() => handleRecommendationClick(rec)}
-                />
-              ))}
-            </div>
-          </section>
-        )}
 
         {/* Quick Actions */}
         <section className="space-y-3">
