@@ -37,7 +37,7 @@
       "id": 4,
       "description": "Confirm and pay",
       "chineseDescription": "確認並付款",
-      "keywords": ["好", "對", "沒錯", "多少錢", "現金", "刷卡", "謝謝"],
+      "keywords": ["多少錢", "現金", "刷卡", "付錢", "結帳", "付款", "好的謝謝", "沒問題", "可以"],
       "weight": 25
     }
   ],
@@ -86,6 +86,20 @@
           "pinyin": "duì, jiù zhè yàng. duō shǎo qián?",
           "english": "Yes, that's it. How much?",
           "type": "safe",
+          "checkpointId": 4
+        },
+        {
+          "chinese": "好的，現金。",
+          "pinyin": "hǎo de, xiàn jīn.",
+          "english": "Okay, cash.",
+          "type": "safe",
+          "checkpointId": 4
+        },
+        {
+          "chinese": "刷卡可以嗎？",
+          "pinyin": "shuā kǎ kě yǐ ma?",
+          "english": "Can I pay by card?",
+          "type": "advanced",
           "checkpointId": 4
         }
       ],

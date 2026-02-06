@@ -1293,6 +1293,34 @@ ROLE CONTEXT - YOU ARE A HOTEL RECEPTIONIST:
 
         // 針對服務場景的改進指導
         if (['restaurant-ordering-01', 'breakfast-shop-01', 'bubble-tea-01', 'convenience-store-01'].includes(scenario.scenario_id)) {
+          // 特別針對 bubble-tea 場景的結帳流程指導
+          const isBubbleTea = scenario.scenario_id === 'bubble-tea-01'
+          const completedCheckpointIds = (session.checkpoints || [])
+            .filter((cp: any) => cp.completed)
+            .map((cp: any) => cp.id)
+
+          // 檢查是否已完成點餐(1)、甜度(2)、冰量(3)，但尚未結帳(4)
+          const hasOrderDetails = completedCheckpointIds.includes(1) &&
+                                  completedCheckpointIds.includes(2) &&
+                                  completedCheckpointIds.includes(3) &&
+                                  !completedCheckpointIds.includes(4)
+
+          let paymentGuidance = ''
+          if (isBubbleTea && hasOrderDetails) {
+            paymentGuidance = `
+
+🛒 PAYMENT TIME - YOU MUST ANNOUNCE THE PRICE NOW:
+The customer has completed ordering (drink, sweetness, ice level).
+YOU MUST NOW:
+1. Confirm the order briefly: "好的，珍珠奶茶微糖去冰"
+2. ANNOUNCE THE PRICE: "總共 XX 元" or "一共 XX 元"
+3. Ask about payment method: "要現金還是刷卡？" or "怎麼付？"
+
+Example response: "好的！珍珠奶茶微糖去冰，一共65元。現金還是刷卡？"
+
+DO NOT just say "好的，請稍等" without announcing the price!`
+          }
+
           roleContext = `
 
 ROLE CONTEXT - YOU ARE SERVICE STAFF:
@@ -1320,6 +1348,7 @@ CRITICAL RULES:
 4. **Keep responses SHORT after polite signal**:
    - Brief acknowledgment: 5-15 characters maximum
    - Move forward efficiently
+${paymentGuidance}
 
 Taiwanese service is friendly but efficient. After polite signal, MOVE FORWARD.`
         }
