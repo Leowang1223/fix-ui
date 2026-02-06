@@ -1293,20 +1293,38 @@ ROLE CONTEXT - YOU ARE A HOTEL RECEPTIONIST:
 
         // 針對服務場景的改進指導
         if (['restaurant-ordering-01', 'breakfast-shop-01', 'bubble-tea-01', 'convenience-store-01'].includes(scenario.scenario_id)) {
-          // 特別針對 bubble-tea 場景的結帳流程指導
-          const isBubbleTea = scenario.scenario_id === 'bubble-tea-01'
           const completedCheckpointIds = (session.checkpoints || [])
             .filter((cp: any) => cp.completed)
             .map((cp: any) => cp.id)
 
-          // 檢查是否已完成點餐(1)、甜度(2)、冰量(3)，但尚未結帳(4)
-          const hasOrderDetails = completedCheckpointIds.includes(1) &&
-                                  completedCheckpointIds.includes(2) &&
-                                  completedCheckpointIds.includes(3) &&
-                                  !completedCheckpointIds.includes(4)
-
           let paymentGuidance = ''
-          if (isBubbleTea && hasOrderDetails) {
+
+          // 根據不同場景檢查是否到了結帳時機
+          const isBubbleTea = scenario.scenario_id === 'bubble-tea-01'
+          const isBreakfastShop = scenario.scenario_id === 'breakfast-shop-01'
+          const isRestaurant = scenario.scenario_id === 'restaurant-ordering-01'
+
+          // Bubble Tea: 完成點餐(1)、甜度(2)、冰量(3)，尚未結帳(4)
+          const bubbleTeaReadyForPayment = isBubbleTea &&
+            completedCheckpointIds.includes(1) &&
+            completedCheckpointIds.includes(2) &&
+            completedCheckpointIds.includes(3) &&
+            !completedCheckpointIds.includes(4)
+
+          // Breakfast Shop: 完成點主食(1)、配料(2)、飲料(3)，尚未結帳(4)
+          const breakfastReadyForPayment = isBreakfastShop &&
+            completedCheckpointIds.includes(1) &&
+            completedCheckpointIds.includes(2) &&
+            completedCheckpointIds.includes(3) &&
+            !completedCheckpointIds.includes(4)
+
+          // Restaurant: 完成點餐(3)、飲料(4)，尚未結帳(5)
+          const restaurantReadyForPayment = isRestaurant &&
+            completedCheckpointIds.includes(3) &&
+            completedCheckpointIds.includes(4) &&
+            !completedCheckpointIds.includes(5)
+
+          if (bubbleTeaReadyForPayment) {
             paymentGuidance = `
 
 🛒 PAYMENT TIME - YOU MUST ANNOUNCE THE PRICE NOW:
@@ -1319,6 +1337,28 @@ YOU MUST NOW:
 Example response: "好的！珍珠奶茶微糖去冰，一共65元。現金還是刷卡？"
 
 DO NOT just say "好的，請稍等" without announcing the price!`
+          } else if (breakfastReadyForPayment) {
+            paymentGuidance = `
+
+🛒 PAYMENT TIME - YOU MUST ANNOUNCE THE PRICE NOW:
+The customer has completed ordering (main item, fillings, drinks).
+YOU MUST NOW:
+1. Confirm the order briefly: "好的，蛋餅加蛋、熱豆漿微糖"
+2. ANNOUNCE THE PRICE: "總共 XX 元" or "一共 XX 元"
+
+Example response: "好！蛋餅加蛋、熱豆漿微糖，總共55元！"
+
+DO NOT just say "好的，稍等" without announcing the price!`
+          } else if (restaurantReadyForPayment) {
+            paymentGuidance = `
+
+🛒 AWAITING CUSTOMER PAYMENT REQUEST:
+The customer has ordered food and drinks.
+When they say "買單" or "結帳", respond with:
+1. ANNOUNCE THE PRICE: "好的，總共 XX 元"
+2. Handle payment naturally
+
+Example response: "好的！總共280元，現金還是刷卡？"`
           }
 
           roleContext = `

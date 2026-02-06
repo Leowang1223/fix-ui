@@ -50,7 +50,7 @@
       "id": 5,
       "description": "Thank and conclude",
       "chineseDescription": "感謝結束",
-      "keywords": ["謝謝", "謝", "好"],
+      "keywords": ["好的謝謝", "謝謝老闆", "謝謝再見", "掰掰", "再見"],
       "weight": 10
     }
   ],
@@ -102,9 +102,30 @@
           "checkpointId": 4
         },
         {
-          "chinese": "謝謝！",
-          "pinyin": "xiè xie!",
-          "english": "Thank you!",
+          "chinese": "好，現金。",
+          "pinyin": "hǎo, xiàn jīn.",
+          "english": "Okay, cash.",
+          "type": "safe",
+          "checkpointId": 4
+        },
+        {
+          "chinese": "可以刷卡嗎？",
+          "pinyin": "kě yǐ shuā kǎ ma?",
+          "english": "Can I pay by card?",
+          "type": "advanced",
+          "checkpointId": 4
+        },
+        {
+          "chinese": "謝謝老闆！",
+          "pinyin": "xiè xie lǎo bǎn!",
+          "english": "Thank you, boss!",
+          "type": "safe",
+          "checkpointId": 5
+        },
+        {
+          "chinese": "好的謝謝，掰掰！",
+          "pinyin": "hǎo de xiè xie, bāi bāi!",
+          "english": "Okay thanks, bye!",
           "type": "safe",
           "checkpointId": 5
         }

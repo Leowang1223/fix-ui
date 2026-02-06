@@ -23,7 +23,7 @@
       "id": 2,
       "description": "Respond to plastic bag question",
       "chineseDescription": "回應塑膠袋詢問",
-      "keywords": ["要", "不用", "袋子", "環保袋", "塑膠袋", "需要", "好"],
+      "keywords": ["要袋子", "不用袋子", "環保袋", "塑膠袋", "需要袋子", "一個袋子", "不需要"],
       "weight": 25
     },
     {
@@ -44,7 +44,7 @@
       "id": 5,
       "description": "Complete transaction",
       "chineseDescription": "完成交易",
-      "keywords": ["謝謝", "好", "找錢", "收據"],
+      "keywords": ["好的謝謝", "謝謝再見", "掰掰", "再見", "沒問題"],
       "weight": 15
     }
   ],
@@ -96,9 +96,30 @@
           "checkpointId": 4
         },
         {
-          "chinese": "好，謝謝。",
-          "pinyin": "hǎo, xiè xie.",
-          "english": "Okay, thank you.",
+          "chinese": "要發票。",
+          "pinyin": "yào fā piào.",
+          "english": "I want the receipt.",
+          "type": "safe",
+          "checkpointId": 4
+        },
+        {
+          "chinese": "載具，謝謝。",
+          "pinyin": "zài jù, xiè xie.",
+          "english": "Digital carrier, thanks.",
+          "type": "safe",
+          "checkpointId": 4
+        },
+        {
+          "chinese": "好的謝謝，再見！",
+          "pinyin": "hǎo de xiè xie, zài jiàn!",
+          "english": "Okay thanks, goodbye!",
+          "type": "safe",
+          "checkpointId": 5
+        },
+        {
+          "chinese": "謝謝，掰掰！",
+          "pinyin": "xiè xie, bāi bāi!",
+          "english": "Thanks, bye!",
           "type": "safe",
           "checkpointId": 5
         }
