@@ -81,6 +81,9 @@ export default function ConversationChatPage() {
   const [recordingError, setRecordingError] = useState<string | null>(null)
   const mediaRecorderRef = useRef<MediaRecorder | null>(null)
   const audioChunksRef = useRef<Blob[]>([])
+  const recordingStartTimeRef = useRef<number>(0)
+  const isStartingRecordingRef = useRef<boolean>(false)
+  const audioStreamRef = useRef<MediaStream | null>(null)
 
   // Video stream
   const [videoStream, setVideoStream] = useState<MediaStream | null>(null)
@@ -352,9 +355,24 @@ export default function ConversationChatPage() {
   }
 
   // Start recording
-  const startRecording = async () => {
+  const startRecording = async (e?: React.TouchEvent | React.MouseEvent) => {
+    // Prevent default to avoid scroll on mobile
+    if (e) {
+      e.preventDefault()
+    }
+
+    // Prevent double-start
+    if (isStartingRecordingRef.current || isRecording) {
+      return
+    }
+
+    isStartingRecordingRef.current = true
+    setRecordingError(null)
+
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+      audioStreamRef.current = stream
+
       const mediaRecorder = new MediaRecorder(stream)
       mediaRecorderRef.current = mediaRecorder
       audioChunksRef.current = []
@@ -366,26 +384,65 @@ export default function ConversationChatPage() {
       }
 
       mediaRecorder.onstop = async () => {
+        // Check minimum recording duration (300ms)
+        const recordingDuration = Date.now() - recordingStartTimeRef.current
+        if (recordingDuration < 300 || audioChunksRef.current.length === 0) {
+          console.log('Recording too short, ignoring')
+          setRecordingError('Recording too short. Hold longer to record.')
+          // Clean up stream
+          if (audioStreamRef.current) {
+            audioStreamRef.current.getTracks().forEach(track => track.stop())
+            audioStreamRef.current = null
+          }
+          return
+        }
+
         const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' })
         await sendAudioMessage(audioBlob)
-        stream.getTracks().forEach(track => track.stop())
+
+        // Clean up stream
+        if (audioStreamRef.current) {
+          audioStreamRef.current.getTracks().forEach(track => track.stop())
+          audioStreamRef.current = null
+        }
       }
 
-      mediaRecorder.start()
+      mediaRecorder.onerror = (event) => {
+        console.error('MediaRecorder error:', event)
+        setRecordingError('Recording failed. Please try again.')
+        setIsRecording(false)
+        isStartingRecordingRef.current = false
+      }
+
+      // Request data every 100ms for more reliable chunks
+      mediaRecorder.start(100)
+      recordingStartTimeRef.current = Date.now()
       setIsRecording(true)
-      setRecordingError(null)
+      isStartingRecordingRef.current = false
     } catch (error) {
       console.error('Failed to start recording:', error)
-      setRecordingError('Failed to access microphone')
+      setRecordingError('Failed to access microphone. Please allow microphone access.')
+      isStartingRecordingRef.current = false
     }
   }
 
   // Stop recording
-  const stopRecording = () => {
-    if (mediaRecorderRef.current && isRecording) {
-      mediaRecorderRef.current.stop()
-      setIsRecording(false)
+  const stopRecording = (e?: React.TouchEvent | React.MouseEvent) => {
+    // Prevent default to avoid issues on mobile
+    if (e) {
+      e.preventDefault()
     }
+
+    isStartingRecordingRef.current = false
+
+    if (mediaRecorderRef.current && mediaRecorderRef.current.state === 'recording') {
+      try {
+        mediaRecorderRef.current.stop()
+      } catch (error) {
+        console.error('Error stopping recording:', error)
+      }
+    }
+    setIsRecording(false)
   }
 
   // Send audio message
@@ -653,11 +710,14 @@ export default function ConversationChatPage() {
           <motion.button
             onMouseDown={startRecording}
             onMouseUp={stopRecording}
+            onMouseLeave={() => { if (isRecording) stopRecording() }}
             onTouchStart={startRecording}
             onTouchEnd={stopRecording}
+            onTouchCancel={stopRecording}
+            onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
             disabled={isLoading || !sessionId}
             className={`
-              relative rounded-full transition-all touch-manipulation
+              relative rounded-full transition-all touch-manipulation select-none
               ${isMobile ? 'h-16 w-16' : 'h-20 w-20'}
               ${isRecording
                 ? 'bg-red-600 shadow-2xl shadow-red-500/50 scale-110'

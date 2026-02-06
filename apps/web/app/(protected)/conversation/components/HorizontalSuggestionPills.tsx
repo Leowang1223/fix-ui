@@ -71,21 +71,27 @@ export function HorizontalSuggestionPills({ suggestions, onPlayTTS }: Horizontal
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.05 }}
               onClick={() => onPlayTTS(suggestion.chinese)}
-              className="flex-shrink-0 group relative"
+              className="flex-shrink-0 group"
             >
-              <div className="flex items-center gap-2 px-4 py-2.5 bg-white/90 backdrop-blur-sm rounded-full shadow-lg border border-white/50 hover:bg-white transition-colors">
-                {/* Chinese text */}
-                <span className="text-sm font-semibold text-slate-800 whitespace-nowrap">
-                  {suggestion.chinese}
-                </span>
+              <div className="flex items-center gap-2 px-3 py-2 bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg border border-white/50 hover:bg-white transition-colors min-w-[120px] max-w-[200px]">
+                {/* Text content - vertical stack */}
+                <div className="flex-1 text-left min-w-0">
+                  {/* Chinese text */}
+                  <p className="text-sm font-semibold text-slate-800 truncate">
+                    {suggestion.chinese}
+                  </p>
+                  {/* Pinyin */}
+                  <p className="text-[10px] text-blue-600 truncate">
+                    {suggestion.pinyin}
+                  </p>
+                  {/* English */}
+                  <p className="text-[9px] text-slate-500 truncate">
+                    {suggestion.english}
+                  </p>
+                </div>
 
                 {/* Speaker icon */}
-                <Volume2 size={14} className="text-blue-500 opacity-60 group-hover:opacity-100 transition-opacity" />
-              </div>
-
-              {/* Pinyin tooltip on hover/active */}
-              <div className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black/80 rounded text-xs text-white whitespace-nowrap opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity pointer-events-none">
-                {suggestion.pinyin}
+                <Volume2 size={14} className="text-blue-500 opacity-60 group-hover:opacity-100 transition-opacity flex-shrink-0" />
               </div>
             </motion.button>
           ))}
