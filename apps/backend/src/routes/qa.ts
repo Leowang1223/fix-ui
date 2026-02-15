@@ -3,6 +3,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import path from 'path';
 import { existsSync } from 'fs';
 import { readFile } from 'fs/promises';
+import { getLocaleFromRequest, getFeedbackLanguagePrompt } from '../utils/i18n';
 
 // 解析 interview 目錄的輔助函數
 function resolveInterviewDir(interviewType: string): string {
@@ -88,6 +89,9 @@ export async function qaHandler(req: Request, res: Response) {
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
 
+    const locale = getLocaleFromRequest(req);
+    const feedbackLangInstruction = getFeedbackLanguagePrompt(locale);
+
     const prompt = [
       '你是一個專業的中文學習助手。請根據以下課程內容回答學生的問題。',
       '',
@@ -102,7 +106,7 @@ export async function qaHandler(req: Request, res: Response) {
       '2. 如果相關，提供具體的例子',
       '3. 鼓勵學生的學習進度',
       '',
-      '回答請使用繁體中文，保持友善和專業的語氣。'
+      feedbackLangInstruction
     ].join('\n');
 
     const result = await model.generateContent({

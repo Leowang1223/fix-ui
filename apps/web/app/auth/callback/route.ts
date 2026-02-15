@@ -58,6 +58,6 @@ export async function GET(request: Request) {
     }
   }
 
-  // Redirect to dashboard
-  return NextResponse.redirect(new URL('/dashboard', request.url))
+  // Redirect to dashboard (locale will be added by middleware)
+  return NextResponse.redirect(new URL('/en/dashboard', request.url))
 }

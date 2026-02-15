@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   X,
@@ -19,8 +20,8 @@ const STORAGE_KEY = 'hasCompletedWelcomeOnboarding'
 
 interface OnboardingStep {
   id: number
-  title: string
-  description: string
+  titleKey: string
+  descKey: string
   icon: typeof LayoutDashboard
   gradient: string
   iconBg: string
@@ -29,56 +30,56 @@ interface OnboardingStep {
 const ONBOARDING_STEPS: OnboardingStep[] = [
   {
     id: 0,
-    title: 'Welcome to Talk Learning!',
-    description: 'Your AI-powered Chinese learning platform. Let us show you around the key features.',
+    titleKey: 'welcomeTitle',
+    descKey: 'welcomeDesc',
     icon: Sparkles,
     gradient: 'from-violet-500 to-purple-600',
     iconBg: 'from-violet-400 to-purple-500',
   },
   {
     id: 1,
-    title: 'Dashboard',
-    description: 'Your learning hub — view progress stats, daily goals, recent activity, and quick access to all features.',
+    titleKey: 'dashboardTitle',
+    descKey: 'dashboardDesc',
     icon: LayoutDashboard,
     gradient: 'from-blue-500 to-cyan-500',
     iconBg: 'from-blue-400 to-cyan-400',
   },
   {
     id: 2,
-    title: 'Learning Path',
-    description: 'Structured chapters and lessons with step-by-step pronunciation practice. Track your progress through each chapter.',
+    titleKey: 'learningPathTitle',
+    descKey: 'learningPathDesc',
     icon: Map,
     gradient: 'from-emerald-500 to-teal-500',
     iconBg: 'from-emerald-400 to-teal-400',
   },
   {
     id: 3,
-    title: 'AI Conversation',
-    description: 'Practice speaking Chinese with an AI partner. Choose from free talk, lesson practice, or real-world scenarios.',
+    titleKey: 'aiConversationTitle',
+    descKey: 'aiConversationDesc',
     icon: MessageSquare,
     gradient: 'from-orange-500 to-amber-500',
     iconBg: 'from-orange-400 to-amber-400',
   },
   {
     id: 4,
-    title: 'Flashcards',
-    description: 'Review vocabulary and phrases with spaced repetition. Reinforce what you\'ve learned in lessons.',
+    titleKey: 'flashcardsTitle',
+    descKey: 'flashcardsDesc',
     icon: Layers,
     gradient: 'from-pink-500 to-rose-500',
     iconBg: 'from-pink-400 to-rose-400',
   },
   {
     id: 5,
-    title: 'History',
-    description: 'Access detailed reports, replay past sessions, and track your improvement over time.',
+    titleKey: 'historyTitle',
+    descKey: 'historyDesc',
     icon: History,
     gradient: 'from-indigo-500 to-blue-600',
     iconBg: 'from-indigo-400 to-blue-500',
   },
   {
     id: 6,
-    title: 'You\'re all set!',
-    description: 'Start exploring and begin your Chinese learning journey. You can always revisit this guide from settings.',
+    titleKey: 'allSetTitle',
+    descKey: 'allSetDesc',
     icon: Rocket,
     gradient: 'from-green-500 to-emerald-500',
     iconBg: 'from-green-400 to-emerald-400',
@@ -91,6 +92,8 @@ interface WelcomeOnboardingProps {
 }
 
 export function WelcomeOnboarding({ onComplete, forceShow = false }: WelcomeOnboardingProps) {
+  const t = useTranslations('onboarding')
+  const tCommon = useTranslations('common')
   const [isVisible, setIsVisible] = useState(false)
   const [currentStep, setCurrentStep] = useState(0)
 
@@ -154,7 +157,7 @@ export function WelcomeOnboarding({ onComplete, forceShow = false }: WelcomeOnbo
             <button
               onClick={handleComplete}
               className="absolute top-5 right-5 p-2 rounded-full hover:bg-gray-100 transition-colors z-10"
-              title="Skip introduction"
+              title={t('skipIntro')}
             >
               <X size={20} className="text-gray-400" />
             </button>
@@ -197,10 +200,10 @@ export function WelcomeOnboarding({ onComplete, forceShow = false }: WelcomeOnbo
                 className="text-center"
               >
                 <h2 className="text-2xl font-bold text-gray-800 mb-3">
-                  {step.title}
+                  {t(step.titleKey)}
                 </h2>
                 <p className="text-gray-500 leading-relaxed max-w-sm mx-auto">
-                  {step.description}
+                  {t(step.descKey)}
                 </p>
               </motion.div>
 
@@ -212,7 +215,7 @@ export function WelcomeOnboarding({ onComplete, forceShow = false }: WelcomeOnbo
                   className="mt-4 flex justify-center"
                 >
                   <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${step.gradient}`}>
-                    Feature {currentStep} of 5
+                    {t('feature', { current: currentStep, total: 5 })}
                   </span>
                 </motion.div>
               )}
@@ -230,21 +233,21 @@ export function WelcomeOnboarding({ onComplete, forceShow = false }: WelcomeOnbo
                 }`}
               >
                 <ChevronLeft size={18} />
-                <span>Back</span>
+                <span>{tCommon('back')}</span>
               </button>
 
               <button
                 onClick={handleComplete}
                 className="text-sm text-gray-400 hover:text-gray-600 transition-colors"
               >
-                Skip
+                {tCommon('skip')}
               </button>
 
               <button
                 onClick={handleNext}
                 className={`flex items-center gap-1.5 px-6 py-2.5 rounded-xl text-white font-medium shadow-md transition-all hover:shadow-lg bg-gradient-to-r ${step.gradient}`}
               >
-                <span>{isLastStep ? 'Get Started' : 'Next'}</span>
+                <span>{isLastStep ? t('getStarted') : tCommon('next')}</span>
                 {!isLastStep && <ChevronRight size={18} />}
               </button>
             </div>

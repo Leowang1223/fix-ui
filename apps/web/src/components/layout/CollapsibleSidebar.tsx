@@ -1,7 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useRouter, usePathname } from 'next/navigation'
+import { useRouter, usePathname } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
+import { LanguageSwitcher } from '@/components/i18n/LanguageSelector'
 import {
   LayoutDashboard,
   MessageSquare,
@@ -14,11 +16,11 @@ import {
 } from 'lucide-react'
 
 const NAV_ITEMS = [
-  { href: '/dashboard', label: 'Dashboard', description: 'Overview & stats', icon: LayoutDashboard },
-  { href: '/learning-path', label: 'Learning Path', description: 'Chapters & lessons', icon: Map },
-  { href: '/conversation', label: 'AI Conversation', description: 'Practice with AI', icon: MessageSquare },
-  { href: '/flashcards', label: 'Flashcards', description: 'Review vocabulary', icon: Layers },
-  { href: '/history', label: 'History', description: 'Reports & playback', icon: History },
+  { href: '/dashboard' as const, labelKey: 'dashboard', descKey: 'dashboardDesc', icon: LayoutDashboard },
+  { href: '/learning-path' as const, labelKey: 'learningPath', descKey: 'learningPathDesc', icon: Map },
+  { href: '/conversation' as const, labelKey: 'aiConversation', descKey: 'aiConversationDesc', icon: MessageSquare },
+  { href: '/flashcards' as const, labelKey: 'flashcards', descKey: 'flashcardsDesc', icon: Layers },
+  { href: '/history' as const, labelKey: 'history', descKey: 'historyDesc', icon: History },
 ]
 
 export default function CollapsibleSidebar() {
@@ -26,6 +28,8 @@ export default function CollapsibleSidebar() {
   const [isMobile, setIsMobile] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
+  const t = useTranslations('nav')
+  const tAuth = useTranslations('auth')
 
   // 偵測移動設備
   useEffect(() => {
@@ -80,7 +84,7 @@ export default function CollapsibleSidebar() {
       <div className={`mb-7 transition-all duration-300 ${isCollapsed ? 'px-3' : 'px-7'}`}>
         {!isCollapsed && (
           <button className="self-start rounded-full border border-blue-100 bg-white px-4 py-1.5 text-sm font-semibold text-blue-600 shadow-sm transition-opacity duration-300">
-            Talk Learning
+            {t('dashboard')}
           </button>
         )}
         {isCollapsed && (
@@ -97,7 +101,7 @@ export default function CollapsibleSidebar() {
         <div>
           {!isCollapsed && (
             <div className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-3">
-              Navigate
+              {t('navigate')}
             </div>
           )}
 
@@ -105,6 +109,8 @@ export default function CollapsibleSidebar() {
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href
               const Icon = item.icon
+              const label = t(item.labelKey)
+              const description = t(item.descKey)
               return (
                 <button
                   key={item.href}
@@ -118,15 +124,13 @@ export default function CollapsibleSidebar() {
                     }
                     ${isCollapsed ? 'justify-center px-2 py-2.5 sm:px-3 sm:py-3' : 'px-3 py-2.5 sm:px-4 sm:py-3'}
                   `}
-                  title={isCollapsed ? item.label : ''}
+                  title={isCollapsed ? label : ''}
                 >
                   <Icon size={18} className="sm:w-5 sm:h-5 flex-shrink-0" />
                   {!isCollapsed && (
                     <div className="flex-1 text-left">
-                      <div className="text-xs sm:text-sm font-medium">{item.label}</div>
-                      {item.description && (
-                        <div className="text-[10px] sm:text-[11px] opacity-70">{item.description}</div>
-                      )}
+                      <div className="text-xs sm:text-sm font-medium">{label}</div>
+                      <div className="text-[10px] sm:text-[11px] opacity-70">{description}</div>
                     </div>
                   )}
                 </button>
@@ -149,13 +153,14 @@ export default function CollapsibleSidebar() {
           hover:scale-110
           z-10
         "
-        aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+        aria-label={isCollapsed ? t('expandSidebar') : t('collapseSidebar')}
       >
         {isCollapsed ? <ChevronRight size={14} /> : <ChevronLeft size={14} />}
       </button>
 
-      {/* Logout Button (底部) */}
-      <div className={`absolute bottom-6 sm:bottom-8 lg:bottom-10 left-0 right-0 transition-all duration-300 ${isCollapsed ? 'px-2' : 'px-5 sm:px-7'}`}>
+      {/* Language Switcher + Logout (底部) */}
+      <div className={`absolute bottom-6 sm:bottom-8 lg:bottom-10 left-0 right-0 space-y-3 transition-all duration-300 ${isCollapsed ? 'px-2' : 'px-5 sm:px-7'}`}>
+        {!isCollapsed && <LanguageSwitcher />}
         <button
           onClick={handleLogout}
           className={`
@@ -164,10 +169,10 @@ export default function CollapsibleSidebar() {
             transition-all duration-200
             ${isCollapsed ? 'justify-center px-2 py-2.5 sm:px-3 sm:py-3' : 'px-3 py-2.5 sm:px-4 sm:py-3'}
           `}
-          title={isCollapsed ? 'Logout' : ''}
+          title={isCollapsed ? tAuth('logout') : ''}
         >
           <LogOut size={18} className="sm:w-5 sm:h-5 flex-shrink-0" />
-          {!isCollapsed && <span className="text-xs sm:text-sm font-medium">Logout</span>}
+          {!isCollapsed && <span className="text-xs sm:text-sm font-medium">{tAuth('logout')}</span>}
         </button>
       </div>
     </aside>

@@ -4,6 +4,7 @@ import fs from 'fs'
 import path from 'path'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 import { conversationStore, ScenarioCheckpoint, VocabularyItem } from '../utils/conversationStore'
+import { getLocaleFromRequest, getFeedbackLanguagePrompt } from '../utils/i18n'
 import { authenticateUser, AuthRequest } from '../middleware/auth'
 import { supabase } from '../lib/supabase'
 
@@ -1742,6 +1743,9 @@ router.post('/end', authenticateUser, async (req: AuthRequest, res) => {
           .filter(turn => turn.role === 'user')
           .map((turn, index) => ({ turnIndex: index + 1, text: turn.text }))
 
+        const locale = getLocaleFromRequest(req);
+        const feedbackLangInstruction = getFeedbackLanguagePrompt(locale);
+
         const analysisPrompt = `Analyze this Chinese conversation and provide scores (0-100):
 
 Conversation:
@@ -1750,12 +1754,14 @@ ${conversationText}
 User turns for grammar analysis:
 ${userTurns.map(t => `Turn ${t.turnIndex}: "${t.text}"`).join('\n')}
 
+${feedbackLangInstruction}
+
 Provide a JSON analysis with the following structure:
 {
   "fluency": score,
   "vocabulary": score,
   "grammar": score,
-  "feedback": "detailed feedback in English",
+  "feedback": "detailed feedback in the learner's language",
   "strengths": ["strength 1", "strength 2"],
   "improvements": ["improvement 1", "improvement 2"],
   "vocabularyUsed": ["word1", "word2", "word3"],
@@ -1775,7 +1781,7 @@ Provide a JSON analysis with the following structure:
           {
             "original": "incorrect phrase",
             "corrected": "correct phrase",
-            "explanation": "explanation in English",
+            "explanation": "explanation in the learner's language",
             "explanationZh": "中文說明",
             "type": "word-order|measure-word|tense|particle|vocabulary|other"
           }
@@ -1785,7 +1791,7 @@ Provide a JSON analysis with the following structure:
             "word": "字",
             "pinyin": "correct pinyin",
             "issue": "tone|initial|final|missing|added",
-            "description": "issue description in English",
+            "description": "issue description in the learner's language",
             "descriptionZh": "中文描述",
             "severity": "minor|moderate|major"
           }

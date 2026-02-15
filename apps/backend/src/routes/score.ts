@@ -1,6 +1,7 @@
 import type { Request, Response } from 'express';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import multer from 'multer';
+import { getLocaleFromRequest, getFeedbackLanguagePrompt } from '../utils/i18n';
 
 // 設置 multer 來處理文件上傳
 const upload = multer({ storage: multer.memoryStorage() });
@@ -57,6 +58,9 @@ export async function scoreHandler(req: Request, res: Response) {
         // 將音頻轉為 base64
         const audioBase64 = audioFile.buffer.toString('base64');
 
+        const locale = getLocaleFromRequest(req);
+        const feedbackLangPrompt = getFeedbackLanguagePrompt(locale);
+
         const prompt = [
           'You are a professional Chinese pronunciation scoring system with syllable-level analysis capability.',
           '',
@@ -74,7 +78,7 @@ export async function scoreHandler(req: Request, res: Response) {
           '- Fluency (20%)',
           '- Completeness (20%)',
           '',
-          'IMPORTANT: Please provide feedback in English.',
+          feedbackLangPrompt,
           '',
           'Return in JSON format:',
           '{',

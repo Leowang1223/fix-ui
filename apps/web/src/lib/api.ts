@@ -11,6 +11,12 @@ export async function fetchJson<T>(url: string, init?: RequestInit): Promise<T> 
     headers.set('Authorization', `Bearer ${session.access_token}`)
   }
 
+  // Send the current locale to backend for locale-aware responses
+  if (typeof document !== 'undefined') {
+    const locale = document.cookie.match(/NEXT_LOCALE=(\w+)/)?.[1] || document.documentElement.lang || 'en'
+    headers.set('Accept-Language', locale)
+  }
+
   const fullUrl = (url.startsWith('http://') || url.startsWith('https://')) ? url : `${getApiBase()}${url}`
   const res = await fetch(fullUrl, { ...(init || {}), headers });
   if (!res.ok) {

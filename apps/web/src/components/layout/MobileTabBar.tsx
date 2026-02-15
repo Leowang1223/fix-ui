@@ -1,13 +1,13 @@
 'use client'
 
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname, useRouter } from '@/i18n/navigation'
 import { Home, Map, MessageSquare, Layers, History } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 interface TabItem {
   id: string
-  label: string
-  labelZh: string
+  labelKey: string
   icon: typeof Home
   href: string
   matchPaths: string[]
@@ -16,40 +16,35 @@ interface TabItem {
 const tabs: TabItem[] = [
   {
     id: 'home',
-    label: 'Home',
-    labelZh: 'Home',
+    labelKey: 'home',
     icon: Home,
     href: '/dashboard',
     matchPaths: ['/dashboard']
   },
   {
     id: 'learn',
-    label: 'Learn',
-    labelZh: 'Learn',
+    labelKey: 'learn',
     icon: Map,
     href: '/learning-path',
     matchPaths: ['/learning-path', '/lesson']
   },
   {
     id: 'talk',
-    label: 'Talk',
-    labelZh: 'Talk',
+    labelKey: 'talk',
     icon: MessageSquare,
     href: '/conversation',
     matchPaths: ['/conversation']
   },
   {
     id: 'cards',
-    label: 'Cards',
-    labelZh: 'Cards',
+    labelKey: 'cards',
     icon: Layers,
     href: '/flashcards',
     matchPaths: ['/flashcards']
   },
   {
     id: 'history',
-    label: 'History',
-    labelZh: 'History',
+    labelKey: 'history',
     icon: History,
     href: '/history',
     matchPaths: ['/history', '/analysis']
@@ -59,6 +54,7 @@ const tabs: TabItem[] = [
 export default function MobileTabBar() {
   const pathname = usePathname()
   const router = useRouter()
+  const t = useTranslations('tabs')
 
   const isActive = (tab: TabItem) => {
     return tab.matchPaths.some(path => pathname.startsWith(path))
@@ -133,7 +129,7 @@ export default function MobileTabBar() {
                   ${active ? 'text-blue-600' : 'text-slate-500'}
                 `}
               >
-                {tab.label}
+                {t(tab.labelKey)}
               </span>
             </motion.button>
           )

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter } from '@/i18n/navigation'
 import Topbar from './Topbar'
 import { getCookie, clearAuthCookies } from '@/lib/cookies'
 
