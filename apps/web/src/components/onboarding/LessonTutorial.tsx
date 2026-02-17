@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ChevronRight, ChevronLeft, Volume2, Mic, CheckCircle, BarChart3 } from 'lucide-react'
 
@@ -8,55 +9,17 @@ const STORAGE_KEY = 'hasCompletedLessonTutorial'
 
 interface TutorialStep {
   id: number
-  title: string
-  titleZh: string
-  description: string
-  descriptionZh: string
+  titleKey: string
+  descKey: string
   icon: typeof Volume2
-  highlight?: string // CSS selector to highlight
 }
 
 const TUTORIAL_STEPS: TutorialStep[] = [
-  {
-    id: 1,
-    title: 'Welcome to your lesson!',
-    titleZh: '歡迎來到課程！',
-    description: 'This tutorial will guide you through the learning experience.',
-    descriptionZh: '這個教程將引導你了解學習流程。',
-    icon: CheckCircle,
-  },
-  {
-    id: 2,
-    title: 'Listen to the teacher',
-    titleZh: '聽老師說',
-    description: 'Click the speaker icon or wait for the video/TTS to play the pronunciation.',
-    descriptionZh: '點擊喇叭圖標或等待視頻/TTS 播放正確發音。',
-    icon: Volume2,
-  },
-  {
-    id: 3,
-    title: 'Record your pronunciation',
-    titleZh: '錄製你的發音',
-    description: 'Click the big blue button to start recording. Click again to stop.',
-    descriptionZh: '點擊藍色大按鈕開始錄音，再次點擊停止。',
-    icon: Mic,
-  },
-  {
-    id: 4,
-    title: 'Get instant feedback',
-    titleZh: '獲得即時反饋',
-    description: 'After recording, you\'ll see syllable-by-syllable analysis with tone curves.',
-    descriptionZh: '錄音後，你會看到逐字分析和聲調曲線。',
-    icon: BarChart3,
-  },
-  {
-    id: 5,
-    title: 'Keep practicing!',
-    titleZh: '繼續練習！',
-    description: 'Use "Retry" to practice again or "Next" to move forward. Good luck!',
-    descriptionZh: '使用「重試」按鈕再次練習，或「下一題」繼續前進。加油！',
-    icon: CheckCircle,
-  },
+  { id: 1, titleKey: 'welcomeTitle', descKey: 'welcomeDesc', icon: CheckCircle },
+  { id: 2, titleKey: 'listenTitle', descKey: 'listenDesc', icon: Volume2 },
+  { id: 3, titleKey: 'recordTitle', descKey: 'recordDesc', icon: Mic },
+  { id: 4, titleKey: 'feedbackTitle', descKey: 'feedbackDesc', icon: BarChart3 },
+  { id: 5, titleKey: 'keepPracticingTitle', descKey: 'keepPracticingDesc', icon: CheckCircle },
 ]
 
 interface LessonTutorialProps {
@@ -65,6 +28,7 @@ interface LessonTutorialProps {
 }
 
 export function LessonTutorial({ onComplete, forceShow = false }: LessonTutorialProps) {
+  const t = useTranslations('tutorial')
   const [isVisible, setIsVisible] = useState(false)
   const [currentStep, setCurrentStep] = useState(0)
 
@@ -131,7 +95,7 @@ export function LessonTutorial({ onComplete, forceShow = false }: LessonTutorial
             <button
               onClick={handleSkip}
               className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 transition-colors z-10"
-              title="Skip tutorial"
+              title={t('skipTutorial')}
             >
               <X size={20} className="text-gray-500" />
             </button>
@@ -173,17 +137,11 @@ export function LessonTutorial({ onComplete, forceShow = false }: LessonTutorial
                 transition={{ delay: 0.1 }}
                 className="text-center"
               >
-                <h2 className="text-xl font-bold text-gray-800 mb-1">
-                  {step.title}
+                <h2 className="text-xl font-bold text-gray-800 mb-2">
+                  {t(step.titleKey)}
                 </h2>
-                <p className="text-lg text-blue-600 mb-4">
-                  {step.titleZh}
-                </p>
-                <p className="text-gray-600 mb-2">
-                  {step.description}
-                </p>
-                <p className="text-gray-500 text-sm">
-                  {step.descriptionZh}
+                <p className="text-gray-600">
+                  {t(step.descKey)}
                 </p>
               </motion.div>
             </div>
@@ -200,21 +158,21 @@ export function LessonTutorial({ onComplete, forceShow = false }: LessonTutorial
                 }`}
               >
                 <ChevronLeft size={18} />
-                <span>上一步</span>
+                <span>{t('previous')}</span>
               </button>
 
               <button
                 onClick={handleSkip}
                 className="text-sm text-gray-400 hover:text-gray-600 transition-colors"
               >
-                跳過教程
+                {t('skipTutorial')}
               </button>
 
               <button
                 onClick={handleNext}
                 className="flex items-center gap-1 px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-medium hover:from-blue-600 hover:to-indigo-600 transition-all shadow-md"
               >
-                <span>{isLastStep ? '開始學習' : '下一步'}</span>
+                <span>{isLastStep ? t('startLearning') : t('next')}</span>
                 {!isLastStep && <ChevronRight size={18} />}
               </button>
             </div>

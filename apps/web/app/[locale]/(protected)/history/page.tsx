@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 import { Radar } from 'react-chartjs-2'
 import { RefreshCw, Trash2, Layers, BookOpen, X, ArrowLeft, Home, MessageSquare, BarChart3 } from 'lucide-react'
 import {
@@ -83,6 +84,10 @@ interface ConversationHistory {
 
 export default function HistoryPage() {
   const router = useRouter()
+  const t = useTranslations('history')
+  const tReport = useTranslations('report')
+  const tGuide = useTranslations('guide')
+  const tCommon = useTranslations('common')
   const [history, setHistory] = useState<LessonHistory[]>([])
   const [conversationHistory, setConversationHistory] = useState<ConversationHistory[]>([])
   const [loading, setLoading] = useState(true)
@@ -116,7 +121,7 @@ export default function HistoryPage() {
   }, [])
 
   const clearHistory = () => {
-    if (confirm('Clear all learning history?')) {
+    if (confirm(t('clearHistoryConfirm'))) {
       localStorage.removeItem('lessonHistory')
       setHistory([])
       setSelectedSession(null)
@@ -124,7 +129,7 @@ export default function HistoryPage() {
   }
 
   const deleteSession = (sessionId: string) => {
-    if (confirm('Delete this record?')) {
+    if (confirm(t('deleteRecordConfirm'))) {
       const newHistory = history.filter(h => h.sessionId !== sessionId)
       localStorage.setItem('lessonHistory', JSON.stringify(newHistory))
       setHistory(newHistory)
@@ -137,7 +142,7 @@ export default function HistoryPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
-        <div className="text-xl text-gray-700">Loading...</div>
+        <div className="text-xl text-gray-700">{tCommon('loading')}</div>
       </div>
     )
   }
@@ -181,13 +186,13 @@ export default function HistoryPage() {
             onClick={() => setSelectedSession(null)}
             className="mb-6 max-w-none w-auto"
           >
-            Back to History
+            {tCommon('back')}
           </AppButton>
 
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-800 mb-2 flex items-center justify-center gap-2">
               <BarChart3 className="h-8 w-8" />
-              Course Completion Report
+              {t('courseCompletionReport')}
             </h1>
             <h2 className="text-xl text-gray-600">{selectedSession.lessonTitle}</h2>
             <p className="text-sm text-gray-500 mt-2">
@@ -206,31 +211,31 @@ export default function HistoryPage() {
             {/* 左側：總分 */}
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl p-6 text-white flex flex-col justify-center">
               <div className="text-center">
-                <p className="text-lg mb-2">Overall Average Score</p>
+                <p className="text-lg mb-2">{t('overallAvgScore')}</p>
                 <p className="text-6xl font-bold">{selectedSession.totalScore}</p>
                 <p className="text-sm mt-2">
-                  {selectedSession.totalScore >= 90 ? 'Excellent!' : 
-                   selectedSession.totalScore >= 75 ? 'Good!' : 
-                   'Keep practicing!'}
+                  {selectedSession.totalScore >= 90 ? t('excellentScore') :
+                   selectedSession.totalScore >= 75 ? t('goodScore') :
+                   t('keepPracticingScore')}
                 </p>
                 <div className="mt-4 text-sm opacity-90">
-                  <p>Questions: {selectedSession.questionsCount}</p>
-                  <p>Total Attempts: {selectedSession.totalAttempts}</p>
-                  <p>Avg Attempts: {(selectedSession.totalAttempts / selectedSession.questionsCount).toFixed(1)} per question</p>
+                  <p>{t('questionsLabel')} {selectedSession.questionsCount}</p>
+                  <p>{t('totalAttempts')} {selectedSession.totalAttempts}</p>
+                  <p>{t('avgAttempts')} {(selectedSession.totalAttempts / selectedSession.questionsCount).toFixed(1)}</p>
                 </div>
               </div>
             </div>
 
             {/* 右側：五向雷達圖 */}
             <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
-              <h3 className="text-lg font-bold text-gray-800 mb-4 text-center">Performance Radar</h3>
+              <h3 className="text-lg font-bold text-gray-800 mb-4 text-center">{t('performanceRadar')}</h3>
               {selectedSession.radar ? (
                 <div className="h-64">
                   <Radar
                     data={{
-                      labels: ['Pronunciation', 'Fluency', 'Accuracy', 'Comprehension', 'Confidence'],
+                      labels: [tReport('pronunciation'), tReport('fluency'), tReport('accuracy'), tReport('comprehension'), tReport('confidence')],
                       datasets: [{
-                        label: 'Your Performance',
+                        label: t('yourPerformance'),
                         data: [
                           selectedSession.radar.pronunciation,
                           selectedSession.radar.fluency,
@@ -265,7 +270,7 @@ export default function HistoryPage() {
                   />
                 </div>
               ) : (
-                <p className="text-gray-500 text-center py-20">Radar data not available</p>
+                <p className="text-gray-500 text-center py-20">{t('radarUnavailable')}</p>
               )}
             </div>
           </div>
@@ -285,7 +290,7 @@ export default function HistoryPage() {
               onClick={() => router.push(`/lesson/${selectedSession.lessonId}`)}
               className="max-w-none w-auto"
             >
-              Retry This Lesson
+              {t('retryLesson')}
             </AppButton>
             <AppButton
               icon={Trash2}
@@ -293,7 +298,7 @@ export default function HistoryPage() {
               onClick={() => deleteSession(selectedSession.sessionId)}
               className="max-w-none w-auto"
             >
-              Delete This Record
+              {t('deleteRecord')}
             </AppButton>
           </div>
         </div>
@@ -308,7 +313,7 @@ export default function HistoryPage() {
         <div className="flex justify-between items-center mb-8">
           <h1 className='text-4xl font-bold text-gray-800 flex items-center gap-3'>
             <BookOpen className="h-10 w-10" />
-            Learning History
+            {t('learningHistory')}
           </h1>
           <div className="flex flex-wrap gap-4">
             <AppButton
@@ -316,7 +321,7 @@ export default function HistoryPage() {
               className="max-w-none w-auto px-5"
               onClick={() => router.push('/flashcards')}
             >
-              Review Flashcards
+              {t('reviewFlashcards')}
             </AppButton>
             {history.length > 0 && (
               <AppButton
@@ -325,7 +330,7 @@ export default function HistoryPage() {
                 onClick={clearHistory}
                 className="max-w-none w-auto px-5"
               >
-                Clear All
+                {t('clearAll')}
               </AppButton>
             )}
             <AppButton
@@ -333,7 +338,7 @@ export default function HistoryPage() {
               onClick={() => router.push('/dashboard')}
               className="max-w-none w-auto px-5"
             >
-              Dashboard
+              {t('backToDashboard')}
             </AppButton>
           </div>
         </div>
@@ -348,7 +353,7 @@ export default function HistoryPage() {
                 : 'bg-white text-gray-600 hover:bg-gray-50'
             }`}
           >
-            Lessons ({history.length})
+            {t('lessonsTab', { count: history.length })}
           </button>
           <button
             onClick={() => setHistoryType('conversations')}
@@ -358,7 +363,7 @@ export default function HistoryPage() {
                 : 'bg-white text-gray-600 hover:bg-gray-50'
             }`}
           >
-            Conversations ({conversationHistory.length})
+            {t('conversationsTab', { count: conversationHistory.length })}
           </button>
         </div>
 
@@ -366,14 +371,14 @@ export default function HistoryPage() {
         {historyType === 'lessons' && history.length === 0 ? (
             <div className='text-center py-20'>
               <div className='text-6xl mb-4'>📭</div>
-              <h2 className='text-2xl font-bold text-gray-700 mb-2'>No Learning History</h2>
-              <p className='text-gray-600 mb-6'>Complete some lessons to see your progress!</p>
+              <h2 className='text-2xl font-bold text-gray-700 mb-2'>{t('noLearningHistory')}</h2>
+              <p className='text-gray-600 mb-6'>{t('completeLessons')}</p>
               <AppButton
                 icon={BookOpen}
                 onClick={() => router.push('/dashboard')}
                 className="max-w-none w-auto"
               >
-                Start Learning
+                {t('startLearning')}
               </AppButton>
             </div>
           ) : historyType === 'lessons' ? (
@@ -398,15 +403,15 @@ export default function HistoryPage() {
 
                   <div className="space-y-2 text-sm text-gray-600 mb-4">
                     <div className="flex justify-between">
-                      <span>Questions:</span>
+                      <span>{t('questionsLabel')}</span>
                       <span className="font-semibold">{session.questionsCount}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Attempts:</span>
+                      <span>{t('attemptsLabel')}</span>
                       <span className="font-semibold">{session.totalAttempts}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Completed:</span>
+                      <span>{t('completedLabel')}</span>
                       <span className="font-semibold">
                         {new Date(session.completedAt).toLocaleDateString()}
                       </span>
@@ -422,7 +427,7 @@ export default function HistoryPage() {
                       }}
                       className="max-w-none w-full"
                     >
-                      Retry
+                      {tCommon('retry')}
                     </AppButton>
                     <AppButton
                       icon={Trash2}
@@ -433,7 +438,7 @@ export default function HistoryPage() {
                       }}
                       className="max-w-none w-full"
                     >
-                      Delete
+                      {tCommon('delete')}
                     </AppButton>
                   </div>
                 </div>
@@ -444,14 +449,14 @@ export default function HistoryPage() {
               <div className='flex justify-center mb-4'>
                 <MessageSquare className='h-24 w-24 text-gray-400' />
               </div>
-              <h2 className='text-2xl font-bold text-gray-700 mb-2'>No Conversation History</h2>
-              <p className='text-gray-600 mb-6'>Start an AI conversation to practice!</p>
+              <h2 className='text-2xl font-bold text-gray-700 mb-2'>{t('noConversationHistory')}</h2>
+              <p className='text-gray-600 mb-6'>{t('startConversation')}</p>
               <AppButton
                 icon={MessageSquare}
                 onClick={() => router.push('/conversation')}
                 className="max-w-none w-auto"
               >
-                Start Conversation
+                {t('startConversationBtn')}
               </AppButton>
             </div>
           ) : (
@@ -468,22 +473,22 @@ export default function HistoryPage() {
                   </div>
 
                   <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    AI Conversation
+                    {t('aiConversationLabel')}
                   </h3>
 
                   <div className="space-y-2 text-sm text-gray-600 mb-4">
                     <div className="flex justify-between">
-                      <span>Messages:</span>
+                      <span>{t('messagesLabel')}</span>
                       <span className="font-semibold">{convo.messages}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Mode:</span>
+                      <span>{t('modeLabel')}</span>
                       <span className="font-semibold capitalize">
                         {convo.settings?.topicMode || 'Free'}
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Completed:</span>
+                      <span>{t('completedLabel')}</span>
                       <span className="font-semibold">
                         {new Date(convo.completedAt).toLocaleDateString()}
                       </span>
@@ -495,19 +500,18 @@ export default function HistoryPage() {
                       icon={BookOpen}
                       onClick={(e) => {
                         e.stopPropagation()
-                        // Navigate to conversation report page
                         router.push(`/conversation/report/${convo.reportId}`)
                       }}
                       className="max-w-none w-full"
                     >
-                      View Report
+                      {t('viewReport')}
                     </AppButton>
                     <AppButton
                       icon={Trash2}
                       variant="danger"
                       onClick={(e) => {
                         e.stopPropagation()
-                        if (confirm('Delete this conversation record?')) {
+                        if (confirm(t('deleteRecordConfirm'))) {
                           const newHistory = conversationHistory.filter(c => c.sessionId !== convo.sessionId)
                           localStorage.setItem('conversationHistory', JSON.stringify(newHistory))
                           setConversationHistory(newHistory)
@@ -515,7 +519,7 @@ export default function HistoryPage() {
                       }}
                       className="max-w-none w-full"
                     >
-                      Delete
+                      {tCommon('delete')}
                     </AppButton>
                   </div>
                 </div>
@@ -530,18 +534,18 @@ export default function HistoryPage() {
         pageId="history"
         steps={[
           {
-            title: 'Lesson History',
-            description: 'View all your completed lessons with scores. Tap any entry to see the full report.',
+            title: tGuide('lessonHistoryTitle'),
+            description: tGuide('lessonHistoryDesc'),
             icon: BookOpen,
           },
           {
-            title: 'Conversation History',
-            description: 'Review past AI conversations. View detailed reports or delete old sessions.',
+            title: tGuide('conversationHistoryTitle'),
+            description: tGuide('conversationHistoryDesc'),
             icon: MessageSquare,
           },
           {
-            title: 'Performance Stats',
-            description: 'See your skills radar chart showing strengths and areas for improvement.',
+            title: tGuide('performanceStatsTitle'),
+            description: tGuide('performanceStatsDesc'),
             icon: BarChart3,
           },
         ]}

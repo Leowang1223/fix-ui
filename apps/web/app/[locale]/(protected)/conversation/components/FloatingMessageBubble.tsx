@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Volume2, MessageCircle, ChevronRight } from 'lucide-react'
 import type { Message } from './DialogSidebar'
@@ -19,6 +20,7 @@ export function FloatingMessageBubble({
   onPlayTTS,
   isLoading
 }: FloatingMessageBubbleProps) {
+  const t = useTranslations('conversationUI')
   if (!message && !isLoading) return null
 
   return (
@@ -38,7 +40,7 @@ export function FloatingMessageBubble({
                 <div className="h-2 w-2 animate-bounce rounded-full bg-white/70" style={{ animationDelay: '150ms' }} />
                 <div className="h-2 w-2 animate-bounce rounded-full bg-white/70" style={{ animationDelay: '300ms' }} />
               </div>
-              <span className="text-sm text-white/70">AI is thinking...</span>
+              <span className="text-sm text-white/70">{t('aiThinking')}</span>
             </div>
           </motion.div>
         ) : message ? (
@@ -82,10 +84,10 @@ export function FloatingMessageBubble({
             <div className="flex items-center justify-between mt-3 pt-3 border-t border-white/10">
               <div className="flex items-center gap-1.5 text-white/50 text-xs">
                 <MessageCircle size={12} />
-                <span>{messageCount} messages</span>
+                <span>{t('messagesCount', { count: messageCount })}</span>
               </div>
               <div className="flex items-center gap-1 text-blue-300 text-xs font-medium">
-                <span>View all</span>
+                <span>{t('viewAll')}</span>
                 <ChevronRight size={14} />
               </div>
             </div>

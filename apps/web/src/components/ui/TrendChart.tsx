@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { TrendingUp, TrendingDown, Minus, Calendar, Target, Flame } from 'lucide-react'
 import { DailyStats, getRecentDailyStats, getStreak, getProgressTrend } from '@/lib/scoreHistory'
@@ -20,6 +21,7 @@ export function TrendChart({
   showStats = true,
   animated = true,
 }: TrendChartProps) {
+  const t = useTranslations('trendChart')
   const data = useMemo(() => getRecentDailyStats(days), [days])
   const streak = useMemo(() => getStreak(), [])
   const trend = useMemo(() => getProgressTrend(days), [days])
@@ -94,7 +96,7 @@ export function TrendChart({
             <div className="flex items-center gap-1.5">
               <Flame className={`w-4 h-4 ${streak > 0 ? 'text-orange-500' : 'text-gray-300'}`} />
               <span className="text-sm font-medium text-gray-700">{streak}</span>
-              <span className="text-xs text-gray-500">days</span>
+              <span className="text-xs text-gray-500">{t('days')}</span>
             </div>
 
             {/* 趨勢指標 */}
@@ -109,7 +111,7 @@ export function TrendChart({
           {/* Period */}
           <div className="flex items-center gap-1 text-xs text-gray-400">
             <Calendar className="w-3 h-3" />
-            <span>Last {days} days</span>
+            <span>{t('lastDays', { days })}</span>
           </div>
         </div>
       )}
@@ -269,15 +271,17 @@ interface DailyGoalProps {
 export function DailyGoal({
   current,
   goal,
-  label = '今日進度',
+  label,
 }: DailyGoalProps) {
+  const t = useTranslations('trendChart')
+  const displayLabel = label || t('todayProgress')
   const progress = Math.min((current / goal) * 100, 100)
   const isComplete = current >= goal
 
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between">
-        <span className="text-sm text-gray-600">{label}</span>
+        <span className="text-sm text-gray-600">{displayLabel}</span>
         <div className="flex items-center gap-1">
           <Target className={`w-4 h-4 ${isComplete ? 'text-green-500' : 'text-gray-400'}`} />
           <span className={`text-sm font-medium ${isComplete ? 'text-green-600' : 'text-gray-700'}`}>
@@ -302,7 +306,7 @@ export function DailyGoal({
           className="text-xs text-green-600 flex items-center gap-1"
         >
           <span>🎉</span>
-          <span>太棒了！今日目標已達成</span>
+          <span>{t('todayGoalReached')}</span>
         </motion.div>
       )}
     </div>
@@ -321,18 +325,19 @@ export function StatsSummary({
   showTrend = true,
   compact = false,
 }: StatsSummaryProps) {
+  const t = useTranslations('trendChart')
   const trend = getProgressTrend(7)
 
   if (compact) {
     return (
       <div className="flex items-center gap-4 text-sm">
         <div className="flex items-center gap-1">
-          <span className="text-gray-500">平均</span>
-          <span className="font-semibold text-gray-800">{stats.averageScore}分</span>
+          <span className="text-gray-500">{t('average')}</span>
+          <span className="font-semibold text-gray-800">{stats.averageScore}</span>
         </div>
         <div className="flex items-center gap-1">
-          <span className="text-gray-500">練習</span>
-          <span className="font-semibold text-gray-800">{stats.totalSessions}次</span>
+          <span className="text-gray-500">{t('practices')}</span>
+          <span className="font-semibold text-gray-800">{stats.totalSessions}</span>
         </div>
         {showTrend && (
           <div className={`flex items-center gap-1 ${trend >= 0 ? 'text-green-500' : 'text-red-500'}`}>
@@ -347,20 +352,20 @@ export function StatsSummary({
   return (
     <div className="grid grid-cols-2 gap-4">
       <div className="bg-blue-50 rounded-xl p-4">
-        <div className="text-sm text-blue-600 mb-1">平均分數</div>
+        <div className="text-sm text-blue-600 mb-1">{t('averageScore')}</div>
         <div className="text-2xl font-bold text-blue-700">{stats.averageScore}</div>
       </div>
       <div className="bg-green-50 rounded-xl p-4">
-        <div className="text-sm text-green-600 mb-1">最高分數</div>
+        <div className="text-sm text-green-600 mb-1">{t('bestScore')}</div>
         <div className="text-2xl font-bold text-green-700">{stats.bestScore}</div>
       </div>
       <div className="bg-purple-50 rounded-xl p-4">
-        <div className="text-sm text-purple-600 mb-1">練習次數</div>
+        <div className="text-sm text-purple-600 mb-1">{t('practiceCount')}</div>
         <div className="text-2xl font-bold text-purple-700">{stats.totalSessions}</div>
       </div>
       <div className="bg-orange-50 rounded-xl p-4">
-        <div className="text-sm text-orange-600 mb-1">學習時間</div>
-        <div className="text-2xl font-bold text-orange-700">{stats.totalMinutes}<span className="text-sm font-normal">分鐘</span></div>
+        <div className="text-sm text-orange-600 mb-1">{t('studyTime')}</div>
+        <div className="text-2xl font-bold text-orange-700">{stats.totalMinutes}<span className="text-sm font-normal">{t('minutes')}</span></div>
       </div>
     </div>
   )

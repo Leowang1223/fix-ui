@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Target, Flame, BookOpen, MessageSquare, Brain, HelpCircle,
@@ -63,6 +64,8 @@ interface GoalSettingsModalProps {
 }
 
 function GoalSettingsModal({ isOpen, onClose, currentGoals, onSave }: GoalSettingsModalProps) {
+  const t = useTranslations('goals')
+  const tCommon = useTranslations('common')
   const [goals, setGoals] = useState<DailyGoalConfig>(currentGoals)
 
   const handleSave = () => {
@@ -71,10 +74,10 @@ function GoalSettingsModal({ isOpen, onClose, currentGoals, onSave }: GoalSettin
   }
 
   const goalItems = [
-    { key: 'lessonsToComplete' as const, label: 'Lessons per day', icon: BookOpen, min: 1, max: 10, color: 'bg-blue-500' },
-    { key: 'vocabToReview' as const, label: 'Vocabulary words', icon: Brain, min: 5, max: 50, step: 5, color: 'bg-purple-500' },
-    { key: 'conversationMinutes' as const, label: 'Conversation (minutes)', icon: MessageSquare, min: 1, max: 30, color: 'bg-emerald-500' },
-    { key: 'practiceQuestions' as const, label: 'Practice questions', icon: HelpCircle, min: 5, max: 30, step: 5, color: 'bg-amber-500' }
+    { key: 'lessonsToComplete' as const, label: t('lessonsPerDay'), icon: BookOpen, min: 1, max: 10, color: 'bg-blue-500' },
+    { key: 'vocabToReview' as const, label: t('vocabWords'), icon: Brain, min: 5, max: 50, step: 5, color: 'bg-purple-500' },
+    { key: 'conversationMinutes' as const, label: t('conversationMinutes'), icon: MessageSquare, min: 1, max: 30, color: 'bg-emerald-500' },
+    { key: 'practiceQuestions' as const, label: t('practiceQuestions'), icon: HelpCircle, min: 5, max: 30, step: 5, color: 'bg-amber-500' }
   ]
 
   if (!isOpen) return null
@@ -96,8 +99,8 @@ function GoalSettingsModal({ isOpen, onClose, currentGoals, onSave }: GoalSettin
           onClick={(e: React.MouseEvent) => e.stopPropagation()}
         >
           <div className="p-5 border-b border-slate-100">
-            <h2 className="text-lg font-bold text-slate-900">Daily Goal Settings</h2>
-            <p className="text-sm text-slate-500 mt-1">Set your daily learning targets</p>
+            <h2 className="text-lg font-bold text-slate-900">{t('dailyGoalSettings')}</h2>
+            <p className="text-sm text-slate-500 mt-1">{t('setDailyTargets')}</p>
           </div>
 
           <div className="p-5 space-y-6">
@@ -132,13 +135,13 @@ function GoalSettingsModal({ isOpen, onClose, currentGoals, onSave }: GoalSettin
               onClick={onClose}
               className="flex-1 py-2.5 rounded-xl border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors"
             >
-              Cancel
+              {tCommon('cancel')}
             </button>
             <button
               onClick={handleSave}
               className="flex-1 py-2.5 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors"
             >
-              Save Goals
+              {t('saveGoals')}
             </button>
           </div>
         </motion.div>
@@ -148,6 +151,7 @@ function GoalSettingsModal({ isOpen, onClose, currentGoals, onSave }: GoalSettin
 }
 
 export default function DailyGoalCard() {
+  const t = useTranslations('goals')
   const {
     data,
     isLoading,
@@ -205,15 +209,14 @@ export default function DailyGoalCard() {
               )}
             </div>
             <div>
-              <h3 className="text-sm font-bold text-slate-800">Today&apos;s Goals</h3>
+              <h3 className="text-sm font-bold text-slate-800">{t('todaysGoals')}</h3>
               <p className="text-xs text-slate-500">
-                {isCompleted ? 'All goals completed!' : `${completionPercentage}% complete`}
+                {isCompleted ? t('allGoalsCompleted') : t('percentComplete', { percentage: completionPercentage })}
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-2">
-            {/* Streak badge */}
             {streak > 0 && (
               <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-orange-100 text-orange-600">
                 <Flame className="w-3.5 h-3.5" />
@@ -221,7 +224,6 @@ export default function DailyGoalCard() {
               </div>
             )}
 
-            {/* Settings button */}
             <button
               onClick={() => setShowSettings(true)}
               className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors touch-manipulation"
@@ -231,7 +233,6 @@ export default function DailyGoalCard() {
           </div>
         </div>
 
-        {/* Completion celebration */}
         {isCompleted && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -241,32 +242,20 @@ export default function DailyGoalCard() {
             <div className="flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-emerald-600" />
               <span className="text-sm font-medium text-emerald-700">
-                Great job! You completed all your goals today!
+                {t('greatJobCompleted')}
               </span>
             </div>
           </motion.div>
         )}
 
-        {/* Progress circle */}
         <div className="flex items-center gap-4 mb-4">
           <div className="relative w-16 h-16">
             <svg className="w-full h-full transform -rotate-90">
-              <circle
-                cx="32"
-                cy="32"
-                r="28"
-                stroke="#e2e8f0"
-                strokeWidth="6"
-                fill="none"
-              />
+              <circle cx="32" cy="32" r="28" stroke="#e2e8f0" strokeWidth="6" fill="none" />
               <motion.circle
-                cx="32"
-                cy="32"
-                r="28"
+                cx="32" cy="32" r="28"
                 stroke={isCompleted ? '#10b981' : '#3b82f6'}
-                strokeWidth="6"
-                fill="none"
-                strokeLinecap="round"
+                strokeWidth="6" fill="none" strokeLinecap="round"
                 initial={{ strokeDashoffset: 176 }}
                 animate={{ strokeDashoffset: 176 - (176 * completionPercentage) / 100 }}
                 strokeDasharray="176"
@@ -279,47 +268,18 @@ export default function DailyGoalCard() {
           </div>
 
           <div className="flex-1 text-sm text-slate-600">
-            <p>Complete your daily goals to build a streak and improve faster!</p>
+            <p>{t('completeDaily')}</p>
           </div>
         </div>
 
-        {/* Goal items */}
         <div className="space-y-3">
-          <GoalItem
-            icon={BookOpen}
-            label="Lessons"
-            current={lessonsProgress.current}
-            target={lessonsProgress.target}
-            color="bg-blue-500"
-          />
-          <GoalItem
-            icon={Brain}
-            label="Vocabulary"
-            current={vocabProgress.current}
-            target={vocabProgress.target}
-            color="bg-purple-500"
-            unit=" words"
-          />
-          <GoalItem
-            icon={MessageSquare}
-            label="Conversation"
-            current={conversationProgress.current}
-            target={conversationProgress.target}
-            color="bg-emerald-500"
-            unit=" min"
-          />
-          <GoalItem
-            icon={HelpCircle}
-            label="Practice"
-            current={questionsProgress.current}
-            target={questionsProgress.target}
-            color="bg-amber-500"
-            unit=" Q"
-          />
+          <GoalItem icon={BookOpen} label={t('lessons')} current={lessonsProgress.current} target={lessonsProgress.target} color="bg-blue-500" />
+          <GoalItem icon={Brain} label={t('vocabulary')} current={vocabProgress.current} target={vocabProgress.target} color="bg-purple-500" unit={` ${t('wordsUnit')}`} />
+          <GoalItem icon={MessageSquare} label={t('conversation')} current={conversationProgress.current} target={conversationProgress.target} color="bg-emerald-500" unit={` ${t('minUnit')}`} />
+          <GoalItem icon={HelpCircle} label={t('practiceLabel')} current={questionsProgress.current} target={questionsProgress.target} color="bg-amber-500" />
         </div>
       </motion.div>
 
-      {/* Settings Modal */}
       <GoalSettingsModal
         isOpen={showSettings}
         onClose={() => setShowSettings(false)}
@@ -330,8 +290,8 @@ export default function DailyGoalCard() {
   )
 }
 
-// Compact version for smaller spaces
 export function DailyGoalMini() {
+  const t = useTranslations('goals')
   const { data, isLoading, getCompletionPercentage, isTodayCompleted } = useDailyGoals()
 
   if (isLoading || !data) {
@@ -358,10 +318,10 @@ export function DailyGoalMini() {
 
       <div className="flex-1">
         <p className={`text-sm font-medium ${isCompleted ? 'text-emerald-700' : 'text-blue-700'}`}>
-          {isCompleted ? 'Goals Complete!' : 'Daily Progress'}
+          {isCompleted ? t('goalsComplete') : t('dailyProgress')}
         </p>
         <p className="text-xs text-slate-500">
-          {streak > 0 ? `${streak} day streak` : 'Start your streak!'}
+          {streak > 0 ? t('dayStreak', { count: streak }) : t('startStreak')}
         </p>
       </div>
 

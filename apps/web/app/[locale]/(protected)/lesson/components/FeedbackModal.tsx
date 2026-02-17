@@ -6,6 +6,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   ChevronDown,
@@ -170,6 +171,7 @@ export function FeedbackModal({
   onRetry,
   onNext
 }: FeedbackModalProps) {
+  const t = useTranslations('feedback')
   const [isPlayingUser, setIsPlayingUser] = useState(false)
   const [isPlayingCorrect, setIsPlayingCorrect] = useState(false)
   const [characterAnalysis, setCharacterAnalysis] = useState<CharacterAnalysis[]>([])
@@ -189,19 +191,19 @@ export function FeedbackModal({
         analysis.push({
           char: expectedChar,
           status: 'wrong',
-          message: 'Missing'
+          message: t('missing')
         })
       } else if (userChar === expectedChar) {
         analysis.push({
           char: userChar,
           status: 'correct',
-          message: 'Correct'
+          message: t('correct')
         })
       } else {
         analysis.push({
           char: userChar,
           status: 'wrong',
-          message: `Should be "${expectedChar}"`
+          message: t('shouldBe', { text: expectedChar })
         })
       }
     })
@@ -288,14 +290,14 @@ export function FeedbackModal({
               <ScoreCircle score={score} />
             </div>
             <h2 className="text-xl font-bold text-white mb-1">
-              {excellent ? 'Excellent!' : passed ? 'Great Job!' : 'Keep Practicing!'}
+              {excellent ? t('excellent') : passed ? t('greatJob') : t('keepPracticing')}
             </h2>
             <p className="text-white/80 text-sm">
               {excellent
-                ? 'Perfect pronunciation!'
+                ? t('perfectPronunciation')
                 : passed
-                  ? 'You\'re doing well!'
-                  : 'A little more practice needed'
+                  ? t('doingWell')
+                  : t('morePracticeNeeded')
               }
             </p>
           </div>
@@ -311,9 +313,9 @@ export function FeedbackModal({
                 <Mic size={16} />
               </div>
               <div className="flex-1 min-w-0">
-                <div className="text-xs font-semibold text-blue-600 mb-1">Your Answer</div>
+                <div className="text-xs font-semibold text-blue-600 mb-1">{t('yourAnswer')}</div>
                 <div className="text-base font-medium text-slate-800 break-words">
-                  {userTranscript || '(No speech detected)'}
+                  {userTranscript || t('noSpeechDetected')}
                 </div>
               </div>
               {audioBlob && (
@@ -339,7 +341,7 @@ export function FeedbackModal({
                 <CheckCircle2 size={16} />
               </div>
               <div className="flex-1 min-w-0">
-                <div className="text-xs font-semibold text-green-600 mb-1">Correct Answer</div>
+                <div className="text-xs font-semibold text-green-600 mb-1">{t('correctAnswer')}</div>
                 <div className="text-base font-medium text-slate-800 break-words">
                   {expectedAnswer}
                 </div>
@@ -368,14 +370,14 @@ export function FeedbackModal({
             {/* Character Analysis */}
             {characterAnalysis.length > 0 && (
               <CollapsibleSection
-                title="Character Analysis"
+                title={t('characterAnalysis')}
                 icon={MessageSquare}
                 badge={
                   <span className={`
                     text-xs font-medium px-2 py-0.5 rounded-full
                     ${wrongCount === 0 ? 'bg-green-100 text-green-600' : 'bg-orange-100 text-orange-600'}
                   `}>
-                    {correctCount}/{characterAnalysis.length} correct
+                    {correctCount}/{characterAnalysis.length} {t('correctCount')}
                   </span>
                 }
               >
@@ -403,7 +405,7 @@ export function FeedbackModal({
 
             {/* Detailed Scores */}
             <CollapsibleSection
-              title="Score Breakdown"
+              title={t('scoreBreakdown')}
               icon={BarChart3}
             >
               <div className="grid grid-cols-5 gap-2">
@@ -416,7 +418,7 @@ export function FeedbackModal({
             {/* Suggestions */}
             {hasSuggestions && (
               <CollapsibleSection
-                title="Improvement Tips"
+                title={t('improvementTips')}
                 icon={Lightbulb}
               >
                 <div className="space-y-2">
@@ -443,7 +445,7 @@ export function FeedbackModal({
               <div className="p-4 rounded-xl bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-100">
                 <div className="flex items-center gap-2 mb-2">
                   <Sparkles size={16} className="text-purple-500" />
-                  <span className="font-semibold text-purple-700 text-sm">Practice Tips</span>
+                  <span className="font-semibold text-purple-700 text-sm">{t('practiceTips')}</span>
                 </div>
                 <p className="text-sm text-slate-600 leading-relaxed">
                   {overallPractice.length > 150
@@ -474,7 +476,7 @@ export function FeedbackModal({
               whileTap={{ scale: 0.98 }}
             >
               <RotateCcw size={20} />
-              <span>Retry</span>
+              <span>{t('retryButton')}</span>
             </motion.button>
 
             <motion.button
@@ -493,7 +495,7 @@ export function FeedbackModal({
               `}
               whileTap={{ scale: 0.98 }}
             >
-              <span>Next</span>
+              <span>{t('nextButton')}</span>
               <ArrowRight size={20} />
             </motion.button>
           </div>

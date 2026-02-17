@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { usePathname } from '@/i18n/navigation'
 
@@ -10,12 +11,13 @@ interface TopbarProps {
 }
 
 export default function Topbar({ userEmail, onLogout }: TopbarProps) {
+  const t = useTranslations('topbar')
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
   const pathname = usePathname()
   const navLinks = [
-    { href: '/dashboard', label: 'dashboard' },
-    { href: '/history', label: 'history' },
-    { href: '/flashcards', label: 'flashcards' },
+    { href: '/dashboard', label: t('dashboard') },
+    { href: '/history', label: t('history') },
+    { href: '/flashcards', label: t('flashcards') },
   ]
 
   return (
@@ -51,13 +53,13 @@ export default function Topbar({ userEmail, onLogout }: TopbarProps) {
             <div className="absolute right-0 mt-2 w-48 bg-white rounded-2xl shadow-2xl border border-slate-100 z-50">
               <div className="px-4 py-3 border-b">
                 <div className="font-medium text-slate-700">{userEmail}</div>
-                <div className="text-xs text-slate-400">Signed in</div>
+                <div className="text-xs text-slate-400">{t('signedIn')}</div>
               </div>
               <button
                 onClick={onLogout}
                 className="w-full px-4 py-3 text-sm text-left text-red-500 hover:bg-slate-50"
               >
-                Log out
+                {t('logOut')}
               </button>
             </div>
           )}

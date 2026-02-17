@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { useRouter } from '@/i18n/navigation'
 import { Target, FileText, RefreshCw, Star, Lightbulb, ChevronDown, ChevronRight } from 'lucide-react'
 import type { PlaybackLesson } from '../utils/playbackStorage'
@@ -10,6 +11,7 @@ interface Props {
 }
 
 export default function PlaybackPracticeList({ lessons }: Props) {
+  const t = useTranslations('playbackList')
   const router = useRouter()
   const [expandedLessons, setExpandedLessons] = useState<Set<string>>(new Set())
 
@@ -33,13 +35,13 @@ export default function PlaybackPracticeList({ lessons }: Props) {
         <div className='flex justify-center mb-4'>
           <Target className='h-24 w-24 text-gray-400' />
         </div>
-        <h2 className='text-2xl font-bold text-gray-700 mb-2'>No Practice History</h2>
-        <p className='text-gray-600 mb-6'>Complete some lessons to start practicing!</p>
+        <h2 className='text-2xl font-bold text-gray-700 mb-2'>{t('noPracticeHistory')}</h2>
+        <p className='text-gray-600 mb-6'>{t('completeToStart')}</p>
         <button
           onClick={() => router.push('/dashboard')}
           className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
         >
-          Start Learning
+          {t('startLearning')}
         </button>
       </div>
     )
@@ -73,15 +75,15 @@ export default function PlaybackPracticeList({ lessons }: Props) {
                   <div className="flex gap-4 text-sm text-gray-600 mt-1">
                     <span className="flex items-center gap-1">
                       <FileText className="h-4 w-4" />
-                      {lesson.questions.length} Questions
+                      {lesson.questions.length} {t('questions')}
                     </span>
                     <span className="flex items-center gap-1">
                       <RefreshCw className="h-4 w-4" />
-                      {lesson.totalPracticeCount} Total Practices
+                      {lesson.totalPracticeCount} {t('totalPractices')}
                     </span>
                     <span className="flex items-center gap-1">
                       <Star className="h-4 w-4" />
-                      Avg: {lesson.averageScore}
+                      {t('avg')} {lesson.averageScore}
                     </span>
                   </div>
                 </div>
@@ -128,13 +130,13 @@ export default function PlaybackPracticeList({ lessons }: Props) {
                               <Star className="h-6 w-6" fill="currentColor" />
                               {question.highestScore}
                             </div>
-                            <div className="text-xs text-gray-500">Highest</div>
+                            <div className="text-xs text-gray-500">{t('highest')}</div>
                           </div>
                           <div className="text-center">
                             <div className="text-lg font-semibold text-gray-700">
                               {question.practiceCount}
                             </div>
-                            <div className="text-xs text-gray-500">Practices</div>
+                            <div className="text-xs text-gray-500">{t('practices')}</div>
                           </div>
                           <button
                             onClick={(e) => {
@@ -143,7 +145,7 @@ export default function PlaybackPracticeList({ lessons }: Props) {
                             }}
                             className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 text-sm font-medium"
                           >
-                            Practice →
+                            {t('practice')} →
                           </button>
                         </div>
                       </div>

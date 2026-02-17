@@ -26,6 +26,7 @@ import {
 import { TTSService } from '../history/playback/services/ttsService'
 import { AppButton } from '@/components/ui/AppButton'
 import { useRouter } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 import { PageGuide } from '@/components/onboarding'
 
 import styles from './flashcard.module.css'
@@ -63,6 +64,9 @@ export default function FlashcardsPage() {
   const [newDeckName, setNewDeckName] = useState('')
 
   const router = useRouter()
+  const t = useTranslations('flashcards')
+  const tGuide = useTranslations('guide')
+  const tCommon = useTranslations('common')
 
   const x = useMotionValue(0)
   const rotateZ = useTransform(x, [-180, 0, 180], [8, 0, -8])
@@ -221,7 +225,7 @@ export default function FlashcardsPage() {
   if (isLoading && cards.length === 0) {
     return (
       <div className="flex min-h-[70vh] w-full items-center justify-center bg-gradient-to-br from-[#f7faff] via-white to-[#eef3ff]">
-        <div className="text-slate-500">Loading cards...</div>
+        <div className="text-slate-500">{tCommon('loading')}</div>
       </div>
     )
   }
@@ -231,14 +235,14 @@ export default function FlashcardsPage() {
       <div className="w-full rounded-[40px] border border-white/70 bg-white/90 p-10 shadow-[0_40px_80px_rgba(15,23,42,0.08)] backdrop-blur-xl">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p className="text-sm uppercase tracking-[0.25em] text-slate-400">Practice Deck</p>
-            <h1 className="text-3xl font-bold text-slate-900 mt-2">Flashcards</h1>
+            <p className="text-sm uppercase tracking-[0.25em] text-slate-400">{t('practiceDeck')}</p>
+            <h1 className="text-3xl font-bold text-slate-900 mt-2">{t('title')}</h1>
           </div>
           <AppButton
             className="max-w-none w-auto px-5"
             onClick={() => router.push('/dashboard')}
           >
-            Back to Dashboard
+            {t('backToDashboard')}
           </AppButton>
         </div>
 
@@ -248,14 +252,14 @@ export default function FlashcardsPage() {
           onClick={() => setIsFormOpen((prev) => !prev)}
           className="mt-6 flex w-full items-center justify-between rounded-[28px] border border-slate-100 bg-white px-5 py-4 text-left text-slate-700 shadow-inner transition hover:shadow-lg"
         >
-          <span className="text-base font-semibold">Add New Card</span>
+          <span className="text-base font-semibold">{t('addNewCard')}</span>
           <PlusIcon className={`h-5 w-5 transition-transform ${isFormOpen ? 'rotate-45' : ''}`} />
         </button>
 
         {/* Deck selector */}
         <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
           <label className="block text-sm font-semibold text-slate-700 mb-2">
-            Select Deck
+            {t('selectDeck')}
           </label>
           <select
             value={activeDeck}
@@ -274,7 +278,7 @@ export default function FlashcardsPage() {
                     ).length
               return (
                 <option key={name} value={name}>
-                  {name === 'all' ? 'All Cards' : name} ({count} cards)
+                  {name === 'all' ? t('allCards') : name} {t('cardCount', { count })}
                 </option>
               )
             })}
@@ -287,13 +291,13 @@ export default function FlashcardsPage() {
                 value={newDeckName}
                 onChange={(e) => setNewDeckName(e.target.value)}
                 className="flex-1 rounded-xl border border-slate-200 px-4 py-2 text-sm text-slate-700 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
-                placeholder="Deck name"
+                placeholder={t('deckName')}
               />
               <AppButton
                 className="max-w-none w-auto px-4"
                 onClick={handleAddDeck}
               >
-                Save Deck
+                {t('saveDeck')}
               </AppButton>
               <button
                 type="button"
@@ -303,7 +307,7 @@ export default function FlashcardsPage() {
                 }}
                 className="text-sm text-slate-500 hover:text-slate-700"
               >
-                Cancel
+                {tCommon('cancel')}
               </button>
             </div>
           ) : (
@@ -312,7 +316,7 @@ export default function FlashcardsPage() {
               onClick={() => setShowDeckForm(true)}
               className="text-sm text-blue-600 font-semibold hover:underline"
             >
-              + Create Deck
+              {t('createDeck')}
             </button>
           )}
         </div>
@@ -348,7 +352,7 @@ export default function FlashcardsPage() {
                     />
                   </label>
                   <label className="flex flex-col gap-2 text-sm text-slate-600">
-                    <span>英文意思</span>
+                    <span>{t('englishMeaning')}</span>
                     <input
                       value={formValues.english}
                       onChange={(e) => setFormValues((v) => ({ ...v, english: e.target.value }))}
@@ -363,14 +367,14 @@ export default function FlashcardsPage() {
                     onClick={() => setIsFormOpen(false)}
                     className="rounded-xl border border-slate-200 px-5 py-3 text-sm text-slate-700 hover:bg-slate-50"
                   >
-                    Cancel
+                    {tCommon('cancel')}
                   </button>
                   <button
                     type="button"
                     onClick={handleFormSubmit}
                     className="rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-blue-700"
                   >
-                    Add
+                    {tCommon('add')}
                   </button>
                 </div>
               </div>
@@ -434,7 +438,7 @@ export default function FlashcardsPage() {
                           className={`${styles.face} ${styles.back} flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-blue-50 via-white to-blue-100 px-12 text-center`}
                         >
                           <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                            English Meaning
+                            {t('englishMeaning')}
                           </h3>
                           <p className="text-3xl font-bold text-slate-800">{activeCard.back}</p>
                         </div>
@@ -446,18 +450,18 @@ export default function FlashcardsPage() {
 
               {/* Tips 卡片 */}
               <div className="mx-auto mt-6 max-w-2xl rounded-[28px] border border-slate-200/70 bg-white/70 p-6 text-sm text-slate-500 shadow-inner">
-                <div className="font-semibold uppercase tracking-wide text-slate-400">Tips</div>
+                <div className="font-semibold uppercase tracking-wide text-slate-400">{t('tips')}</div>
                 <ul className="mt-3 space-y-2 text-slate-500">
-                  <li>- Click the card to flip between Chinese and English.</li>
-                  <li>- Drag left or right to cycle through the deck.</li>
-                  <li>- Use the audio button to hear the pronunciation.</li>
+                  <li>{t('tip1')}</li>
+                  <li>{t('tip2')}</li>
+                  <li>{t('tip3')}</li>
                 </ul>
               </div>
             </>
           ) : (
             <div className="flex h-72 w-full max-w-2xl flex-col items-center justify-center rounded-[32px] border border-dashed border-slate-300 bg-white/70 text-center text-slate-500">
-              <p>No flashcards ready for review.</p>
-              <p className="mt-2 text-sm">Try adding new cards to begin practicing.</p>
+              <p>{t('noCardsReview')}</p>
+              <p className="mt-2 text-sm">{t('addCardsHint')}</p>
             </div>
           )}
         </div>
@@ -470,44 +474,44 @@ export default function FlashcardsPage() {
               onClick={handlePrev}
               className="h-12 rounded-xl border border-blue-300 px-6 text-base font-semibold text-blue-500 transition hover:bg-blue-50"
             >
-              Prev
+              {tCommon('prev')}
             </button>
             <button
               type="button"
               onClick={handleFlip}
               className="h-12 rounded-xl bg-blue-600 px-8 text-base font-semibold text-white shadow-lg transition hover:bg-blue-700"
             >
-              Flip
+              {tCommon('flip')}
             </button>
             <button
               type="button"
               onClick={handleNext}
               className="h-12 rounded-xl border border-blue-300 px-6 text-base font-semibold text-blue-500 transition hover:bg-blue-50"
             >
-              Next
+              {tCommon('next')}
             </button>
           </div>
         )}
 
         {/* sources card */}
         <div className="mt-10 rounded-2xl bg-white/70 p-5 text-sm text-slate-600 shadow-inner">
-          <div className="font-semibold text-slate-800">Card Sources</div>
+          <div className="font-semibold text-slate-800">{t('cardSources')}</div>
           <ul className="mt-2 grid grid-cols-1 gap-1 sm:grid-cols-2">
             <li className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-blue-500" />
-              Course mistakes saved automatically
+              {t('sourceCourse')}
             </li>
             <li className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-indigo-400" />
-              Saved during practice sessions
+              {t('sourcePractice')}
             </li>
             <li className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-sky-300" />
-              Custom flashcards you create
+              {t('sourceCustom')}
             </li>
             <li className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-slate-300" />
-              Other synced content
+              {t('sourceSynced')}
             </li>
           </ul>
         </div>
@@ -517,18 +521,18 @@ export default function FlashcardsPage() {
         pageId="flashcards"
         steps={[
           {
-            title: 'Swipe to Review',
-            description: 'Swipe right if you know the card, left if you need more practice. Tap to flip.',
+            title: tGuide('swipeTitle'),
+            description: tGuide('swipeDesc'),
             icon: Layers,
           },
           {
-            title: 'Create Custom Cards',
-            description: 'Use the + button to add your own vocabulary cards with Chinese characters and translations.',
+            title: tGuide('createCardsTitle'),
+            description: tGuide('createCardsDesc'),
             icon: PlusIcon,
           },
           {
-            title: 'Listen to Pronunciation',
-            description: 'Tap the speaker icon on any card to hear the correct pronunciation.',
+            title: tGuide('listenTitle'),
+            description: tGuide('listenDesc'),
             icon: SpeakerWaveIcon,
           },
         ]}

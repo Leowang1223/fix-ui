@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
 import { useRouter } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 import { ArrowLeft, CheckCircle, Clock, Target, TrendingUp, BookOpen, Lightbulb, Award, Plus } from 'lucide-react'
 import { addCustomFlashcard, getDeckNames, addDeckName } from '../../../flashcards/utils/flashcards'
 import { ConversationCorrectionReport, TurnCorrection, CorrectionSummary } from '@/components/reports/ConversationCorrectionReport'
@@ -69,6 +70,8 @@ interface ConversationHistory {
 export default function ReportPage() {
   const params = useParams()
   const router = useRouter()
+  const t = useTranslations('conversationReport')
+  const tCommon = useTranslations('common')
   const reportId = params.reportId as string
 
   const [report, setReport] = useState<ConversationHistory | null>(null)
@@ -85,12 +88,12 @@ export default function ReportPage() {
   const handleCreateNewDeck = () => {
     const trimmedName = newDeckName.trim()
     if (!trimmedName) {
-      alert('Deck name cannot be empty')
+      alert(t('deckEmptyError'))
       return
     }
 
     if (availableDecks.includes(trimmedName)) {
-      alert('Deck already exists')
+      alert(t('deckExistsError'))
       return
     }
 
@@ -109,13 +112,13 @@ export default function ReportPage() {
 
     // Check if vocabulary exists
     if (!analysis.vocabularyUsed || analysis.vocabularyUsed.length === 0) {
-      alert('No vocabulary to save')
+      alert(t('noVocabError'))
       return
     }
 
     // Check if a deck is selected
     if (!selectedDeck) {
-      alert('Please select a deck first')
+      alert(t('selectDeckError'))
       return
     }
 
@@ -147,7 +150,7 @@ export default function ReportPage() {
     }
 
     setFlashcardsSaved(true)
-    alert(`Successfully saved ${analysis.vocabularyUsed.length} vocabulary words to "${deckName}" deck!`)
+    alert(t('saveSuccess', { count: analysis.vocabularyUsed.length, deck: deckName }))
   }
 
   const handleSaveSingleWord = (vocab: { chinese: string; pinyin?: string; english?: string } | string) => {
@@ -155,7 +158,7 @@ export default function ReportPage() {
 
     // Check if a deck is selected
     if (!selectedDeck) {
-      alert('Please select a deck first')
+      alert(t('selectDeckError'))
       return
     }
 
@@ -224,7 +227,7 @@ export default function ReportPage() {
       <div className="flex min-h-screen items-center justify-center bg-gray-50">
         <div className="text-center">
           <div className="h-12 w-12 animate-spin rounded-full border-4 border-blue-600 border-t-transparent mx-auto mb-4" />
-          <p className="text-gray-600">Loading report...</p>
+          <p className="text-gray-600">{t('loading')}</p>
         </div>
       </div>
     )
@@ -234,12 +237,12 @@ export default function ReportPage() {
     return (
       <div className="flex min-h-screen items-center justify-center bg-gray-50">
         <div className="text-center">
-          <p className="text-red-600 mb-4">Report not found</p>
+          <p className="text-red-600 mb-4">{t('notFound')}</p>
           <button
             onClick={() => router.push('/history')}
             className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
           >
-            Back to History
+            {t('backButton')}
           </button>
         </div>
       </div>
@@ -277,12 +280,12 @@ export default function ReportPage() {
             className="flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-2"
           >
             <ArrowLeft className="h-4 w-4" />
-            <span className="text-sm">Back to History</span>
+            <span className="text-sm">{t('backButton')}</span>
           </button>
-          <h1 className="text-2xl font-bold text-gray-900">Conversation Report</h1>
+          <h1 className="text-2xl font-bold text-gray-900">{t('title')}</h1>
           {isScenarioMode && (
             <p className="text-sm text-gray-500 mt-1">
-              Scenario: {analysis.scenarioTitle} • Role: {analysis.userRole}
+              {t('scenarioLabel')}{analysis.scenarioTitle} • {t('roleLabel')}{analysis.userRole}
             </p>
           )}
         </div>
@@ -296,7 +299,7 @@ export default function ReportPage() {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Award className="h-6 w-6 text-gray-700" />
-                <h2 className="text-lg font-bold text-gray-900">Overall Score</h2>
+                <h2 className="text-lg font-bold text-gray-900">{t('overallScoreTitle')}</h2>
               </div>
               <p className="text-sm text-gray-600">
                 Completed {new Date(report.completedAt).toLocaleString('en-US', {
@@ -309,7 +312,7 @@ export default function ReportPage() {
               <div className={`text-5xl font-bold ${getScoreColor(analysis.overallScore)}`}>
                 {analysis.overallScore}
               </div>
-              <div className="text-sm text-gray-600 mt-1">/ 100</div>
+              <div className="text-sm text-gray-600 mt-1">{t('outOf100')}</div>
             </div>
           </div>
         </div>
@@ -319,14 +322,14 @@ export default function ReportPage() {
           <div className="bg-white rounded-xl border shadow-sm p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
               <BookOpen className="h-5 w-5" />
-              複習課程
+              {t('reviewLessonsTitle')}
             </h2>
             <div className="mb-3">
               <p className="text-sm text-gray-600">
-                複習類型：<span className="font-medium text-gray-900">{analysis.reviewType}</span>
+                {t('reviewTypeLabel')}<span className="font-medium text-gray-900">{analysis.reviewType}</span>
               </p>
               <p className="text-sm text-gray-600 mt-1">
-                詞彙數量：<span className="font-medium text-gray-900">{analysis.vocabularyCount || 0} 個詞彙</span>
+                {t('vocabCountLabel')}<span className="font-medium text-gray-900">{t('vocabCountValue', { count: analysis.vocabularyCount || 0 })}</span>
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -347,23 +350,23 @@ export default function ReportPage() {
           <div className="bg-white rounded-xl border shadow-sm p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
-              Score Breakdown
+              {t('scoreBreakdownTitle')}
             </h2>
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center p-4 bg-blue-50 rounded-lg border border-blue-200">
                 <div className="text-2xl font-bold text-blue-600">{Math.round(analysis.checkpointScore)}</div>
-                <div className="text-xs text-gray-600 mt-1">Checkpoint Score</div>
-                <div className="text-xs text-gray-500 mt-1">(60% weight)</div>
+                <div className="text-xs text-gray-600 mt-1">{t('checkpointScore')}</div>
+                <div className="text-xs text-gray-500 mt-1">{t('checkpointWeight')}</div>
               </div>
               <div className="text-center p-4 bg-purple-50 rounded-lg border border-purple-200">
                 <div className="text-2xl font-bold text-purple-600">{Math.round(analysis.efficiencyScore)}</div>
-                <div className="text-xs text-gray-600 mt-1">Efficiency Score</div>
-                <div className="text-xs text-gray-500 mt-1">(15% weight)</div>
+                <div className="text-xs text-gray-600 mt-1">{t('efficiencyScore')}</div>
+                <div className="text-xs text-gray-500 mt-1">{t('efficiencyWeight')}</div>
               </div>
               <div className="text-center p-4 bg-green-50 rounded-lg border border-green-200">
                 <div className="text-2xl font-bold text-green-600">{Math.round(analysis.conversationQualityScore)}</div>
-                <div className="text-xs text-gray-600 mt-1">Quality Score</div>
-                <div className="text-xs text-gray-500 mt-1">(25% weight)</div>
+                <div className="text-xs text-gray-600 mt-1">{t('qualityScore')}</div>
+                <div className="text-xs text-gray-500 mt-1">{t('qualityWeight')}</div>
               </div>
             </div>
           </div>
@@ -376,21 +379,21 @@ export default function ReportPage() {
               <div className="bg-white rounded-lg border shadow-sm p-4">
                 <div className="flex items-center gap-2 text-gray-600 mb-2">
                   <Target className="h-4 w-4" />
-                  <span className="text-xs font-medium">Completion Rate</span>
+                  <span className="text-xs font-medium">{t('completionRate')}</span>
                 </div>
                 <div className="text-2xl font-bold text-gray-900">{Math.round(analysis.completionRate * 100)}%</div>
                 <div className="text-xs text-gray-500 mt-1">
-                  {analysis.completedCheckpoints}/{analysis.totalCheckpoints} checkpoints
+                  {analysis.completedCheckpoints}/{analysis.totalCheckpoints} {t('checkpointsLabel')}
                 </div>
               </div>
               <div className="bg-white rounded-lg border shadow-sm p-4">
                 <div className="flex items-center gap-2 text-gray-600 mb-2">
                   <Clock className="h-4 w-4" />
-                  <span className="text-xs font-medium">Efficiency</span>
+                  <span className="text-xs font-medium">{t('efficiency')}</span>
                 </div>
                 <div className="text-2xl font-bold text-gray-900">{Math.round(analysis.efficiency * 100)}%</div>
                 <div className="text-xs text-gray-500 mt-1">
-                  {analysis.totalTurns} turns (est. {analysis.estimatedTurns})
+                  {analysis.totalTurns} {t('turnsLabel')}{analysis.estimatedTurns})
                 </div>
               </div>
             </>
@@ -398,20 +401,20 @@ export default function ReportPage() {
           <div className="bg-white rounded-lg border shadow-sm p-4">
             <div className="flex items-center gap-2 text-gray-600 mb-2">
               <BookOpen className="h-4 w-4" />
-              <span className="text-xs font-medium">Total Turns</span>
+              <span className="text-xs font-medium">{t('totalTurns')}</span>
             </div>
-            <div className="text-2xl font-bold text-gray-900">{analysis.totalTurns || report.conversationData.turns.filter((t: any) => t.role === 'user').length}</div>
-            <div className="text-xs text-gray-500 mt-1">conversation exchanges</div>
+            <div className="text-2xl font-bold text-gray-900">{analysis.totalTurns || report.conversationData.turns.filter((turn: any) => turn.role === 'user').length}</div>
+            <div className="text-xs text-gray-500 mt-1">{t('conversationExchanges')}</div>
           </div>
           {isScenarioMode && analysis.vocabularyUsed && (
             <div className="bg-white rounded-lg border shadow-sm p-4">
               <div className="flex items-center gap-2 text-gray-600 mb-2">
                 <BookOpen className="h-4 w-4" />
-                <span className="text-xs font-medium">Vocabulary</span>
+                <span className="text-xs font-medium">{t('vocabularyLabel')}</span>
               </div>
               <div className="text-2xl font-bold text-gray-900">{analysis.vocabularyUsed.length}</div>
               <div className="text-xs text-gray-500 mt-1">
-                {Math.round(analysis.vocabularyCoverage * 100)}% coverage
+                {Math.round(analysis.vocabularyCoverage * 100)}{t('coverageLabel')}
               </div>
             </div>
           )}
@@ -422,7 +425,7 @@ export default function ReportPage() {
           <div className="bg-white rounded-xl border shadow-sm p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
               <CheckCircle className="h-5 w-5" />
-              Checkpoint Progress
+              {t('checkpointProgress')}
             </h2>
             <div className="space-y-3">
               {analysis.checkpointDetails.map((checkpoint, idx) => (
@@ -453,16 +456,16 @@ export default function ReportPage() {
                       </div>
                       {checkpoint.completed && checkpoint.completedAt && (
                         <div className="text-xs text-green-600 mt-2 font-medium">
-                          ✓ Completed at {new Date(checkpoint.completedAt).toLocaleTimeString('en-US', {
+                          ✓ {t('checkpointCompleted')}{new Date(checkpoint.completedAt).toLocaleTimeString('en-US', {
                             hour: '2-digit',
                             minute: '2-digit'
                           })}
-                          {checkpoint.turnsToComplete && ` • ${checkpoint.turnsToComplete} turns`}
+                          {checkpoint.turnsToComplete && ` • ${checkpoint.turnsToComplete}${t('turnsCount')}`}
                         </div>
                       )}
                       {checkpoint.triggerMessage && (
                         <div className="text-xs text-gray-600 mt-1 italic">
-                          Trigger: "{checkpoint.triggerMessage}"
+                          {t('triggerLabel')}{checkpoint.triggerMessage}"
                         </div>
                       )}
                     </div>
@@ -478,7 +481,7 @@ export default function ReportPage() {
           <div className="bg-white rounded-xl border shadow-sm p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
               <Award className="h-5 w-5 text-green-600" />
-              Strengths
+              {t('strengths')}
             </h2>
             <ul className="space-y-2">
               {analysis.strengths.map((strength, idx) => (
@@ -496,7 +499,7 @@ export default function ReportPage() {
           <div className="bg-white rounded-xl border shadow-sm p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
               <Lightbulb className="h-5 w-5 text-yellow-600" />
-              Feedback
+              {t('feedbackTitle')}
             </h2>
             <p className="text-sm text-gray-700 leading-relaxed">{analysis.feedback}</p>
           </div>
@@ -507,7 +510,7 @@ export default function ReportPage() {
           <div className="bg-white rounded-xl border shadow-sm p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
               <Lightbulb className="h-5 w-5 text-blue-600" />
-              Suggestions for Improvement
+              {t('suggestionsTitle')}
             </h2>
             <ul className="space-y-2">
               {analysis.suggestions.map((suggestion, idx) => (
@@ -543,13 +546,13 @@ export default function ReportPage() {
             <div className="mb-4">
               <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2 mb-3">
                 <BookOpen className="h-5 w-5 text-purple-600" />
-                Vocabulary Used
+                {t('vocabularyUsed')}
               </h2>
 
               {/* Deck Selector */}
               <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg border border-gray-200">
                 <label className="text-sm font-medium text-gray-700 whitespace-nowrap">
-                  Save to Deck:
+                  {t('saveToDeck')}
                 </label>
 
                 <select
@@ -566,7 +569,7 @@ export default function ReportPage() {
                   onClick={() => setShowNewDeckInput(!showNewDeckInput)}
                   className="px-3 py-2 text-sm font-medium text-purple-600 hover:bg-purple-50 rounded-lg border border-purple-300 transition"
                 >
-                  + New Deck
+                  {t('newDeckButton')}
                 </button>
 
                 <button
@@ -579,7 +582,7 @@ export default function ReportPage() {
                   }`}
                 >
                   <Plus className="h-4 w-4 inline mr-1" />
-                  {flashcardsSaved ? 'All Saved' : 'Save All'}
+                  {flashcardsSaved ? t('savedAll') : t('saveAll')}
                 </button>
               </div>
 
@@ -597,7 +600,7 @@ export default function ReportPage() {
                         setNewDeckName('')
                       }
                     }}
-                    placeholder="Enter new deck name..."
+                    placeholder={t('deckNamePlaceholder')}
                     className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                     autoFocus
                   />
@@ -605,7 +608,7 @@ export default function ReportPage() {
                     onClick={handleCreateNewDeck}
                     className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition"
                   >
-                    Create
+                    {tCommon('create')}
                   </button>
                   <button
                     onClick={() => {
@@ -614,7 +617,7 @@ export default function ReportPage() {
                     }}
                     className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-300 transition"
                   >
-                    Cancel
+                    {tCommon('cancel')}
                   </button>
                 </div>
               )}
@@ -647,7 +650,7 @@ export default function ReportPage() {
                             ? 'bg-green-100 text-green-700 cursor-not-allowed'
                             : 'bg-purple-600 text-white hover:bg-purple-700'
                         }`}
-                        title={isSaved ? 'Already saved' : 'Add to flashcards'}
+                        title={isSaved ? t('alreadySaved') : t('addToFlashcards')}
                       >
                         {isSaved ? (
                           <span className="flex items-center gap-1">
@@ -679,7 +682,7 @@ export default function ReportPage() {
                             ? 'bg-green-100 text-green-700 cursor-not-allowed'
                             : 'bg-purple-600 text-white hover:bg-purple-700'
                         }`}
-                        title={isSaved ? 'Already saved' : 'Add to flashcards'}
+                        title={isSaved ? t('alreadySaved') : t('addToFlashcards')}
                       >
                         {isSaved ? (
                           <span className="text-xs">✓</span>
@@ -701,13 +704,13 @@ export default function ReportPage() {
             onClick={() => router.push('/history')}
             className="flex-1 px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition font-medium"
           >
-            Back to History
+            {t('backButton')}
           </button>
           <button
             onClick={() => router.push('/conversation')}
             className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium"
           >
-            Start New Conversation
+            {t('startNewButton')}
           </button>
         </div>
       </div>

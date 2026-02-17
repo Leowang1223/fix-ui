@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import {
   PlayCircle,
@@ -14,36 +15,40 @@ import {
 } from 'lucide-react'
 import { Recommendation, RecommendationType } from '@/lib/recommendations'
 
-const TYPE_CONFIG: Record<RecommendationType, {
-  icon: typeof PlayCircle
-  gradient: string
-  badge: string
-}> = {
-  continue: {
-    icon: PlayCircle,
-    gradient: 'from-blue-500 to-blue-600',
-    badge: 'Continue',
-  },
-  review: {
-    icon: RefreshCw,
-    gradient: 'from-orange-500 to-orange-600',
-    badge: 'Review',
-  },
-  new: {
-    icon: BookOpen,
-    gradient: 'from-green-500 to-green-600',
-    badge: 'New Lesson',
-  },
-  challenge: {
-    icon: Zap,
-    gradient: 'from-purple-500 to-purple-600',
-    badge: 'Challenge',
-  },
-  practice: {
-    icon: Target,
-    gradient: 'from-pink-500 to-pink-600',
-    badge: 'Practice',
-  },
+function useTypeConfig() {
+  const t = useTranslations('recommendations')
+  const config: Record<RecommendationType, {
+    icon: typeof PlayCircle
+    gradient: string
+    badge: string
+  }> = {
+    continue: {
+      icon: PlayCircle,
+      gradient: 'from-blue-500 to-blue-600',
+      badge: t('continueBadge'),
+    },
+    review: {
+      icon: RefreshCw,
+      gradient: 'from-orange-500 to-orange-600',
+      badge: t('reviewBadge'),
+    },
+    new: {
+      icon: BookOpen,
+      gradient: 'from-green-500 to-green-600',
+      badge: t('newLesson'),
+    },
+    challenge: {
+      icon: Zap,
+      gradient: 'from-purple-500 to-purple-600',
+      badge: t('challenge'),
+    },
+    practice: {
+      icon: Target,
+      gradient: 'from-pink-500 to-pink-600',
+      badge: t('practice'),
+    },
+  }
+  return config
 }
 
 interface RecommendationCardProps {
@@ -61,7 +66,9 @@ export function RecommendationCard({
   showMetrics = true,
   animated = true,
 }: RecommendationCardProps) {
-  const config = TYPE_CONFIG[recommendation.type]
+  const t = useTranslations('recommendations')
+  const typeConfig = useTypeConfig()
+  const config = typeConfig[recommendation.type]
   const Icon = config.icon
 
   if (variant === 'hero') {
@@ -77,50 +84,43 @@ export function RecommendationCard({
           bg-gradient-to-br ${config.gradient} text-white shadow-lg
         `}
       >
-        {/* 背景裝飾 */}
         <div className="absolute top-0 right-0 w-40 h-40 -mr-10 -mt-10 opacity-20">
           <Icon className="w-full h-full" />
         </div>
 
-        {/* 徽章 */}
         <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/20 rounded-full text-sm font-medium mb-4">
           <Icon className="w-4 h-4" />
           <span>{config.badge}</span>
         </div>
 
-        {/* 標題 */}
         <h3 className="text-2xl font-bold mb-2">{recommendation.lessonTitle}</h3>
-
-        {/* 原因 */}
         <p className="text-white/80 mb-4">{recommendation.reason}</p>
 
-        {/* Metrics */}
         {showMetrics && recommendation.metrics && (
           <div className="flex items-center gap-4 text-sm text-white/70 mb-4">
             {recommendation.metrics.lastScore !== undefined && (
               <div className="flex items-center gap-1">
                 <Star className="w-4 h-4" />
-                <span>Last: {recommendation.metrics.lastScore}%</span>
+                <span>{t('lastScore', { score: recommendation.metrics.lastScore })}</span>
               </div>
             )}
             {recommendation.metrics.attempts !== undefined && recommendation.metrics.attempts > 0 && (
               <div className="flex items-center gap-1">
                 <RefreshCw className="w-4 h-4" />
-                <span>{recommendation.metrics.attempts} attempts</span>
+                <span>{t('attemptsCount', { count: recommendation.metrics.attempts })}</span>
               </div>
             )}
             {recommendation.metrics.averageScore !== undefined && (
               <div className="flex items-center gap-1">
                 <TrendingUp className="w-4 h-4" />
-                <span>Avg: {recommendation.metrics.averageScore}%</span>
+                <span>{t('avgScore', { score: recommendation.metrics.averageScore })}</span>
               </div>
             )}
           </div>
         )}
 
-        {/* Action button */}
         <div className="flex items-center gap-2 text-lg font-semibold">
-          <span>Start Learning</span>
+          <span>{t('startLearning')}</span>
           <ChevronRight className="w-5 h-5" />
         </div>
       </motion.div>
@@ -148,7 +148,6 @@ export function RecommendationCard({
     )
   }
 
-  // Default variant
   return (
     <motion.div
       initial={animated ? { opacity: 0, y: 10 } : false}
@@ -159,24 +158,17 @@ export function RecommendationCard({
       className="bg-white rounded-2xl p-5 border border-gray-100 hover:border-gray-200 shadow-sm hover:shadow-md cursor-pointer transition-all"
     >
       <div className="flex items-start gap-4">
-        {/* 圖標 */}
         <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${config.gradient} flex items-center justify-center flex-shrink-0`}>
           <Icon className="w-6 h-6 text-white" />
         </div>
 
         <div className="flex-1 min-w-0">
-          {/* 徽章 */}
           <div className="inline-flex items-center px-2 py-0.5 bg-gray-100 rounded-full text-xs text-gray-600 mb-1">
             {config.badge}
           </div>
-
-          {/* 標題 */}
           <h4 className="font-semibold text-gray-800 mb-1">{recommendation.lessonTitle}</h4>
-
-          {/* 原因 */}
           <p className="text-sm text-gray-500 line-clamp-2">{recommendation.reason}</p>
 
-          {/* Metrics */}
           {showMetrics && recommendation.metrics && (
             <div className="flex items-center gap-3 mt-2 text-xs text-gray-400">
               {recommendation.metrics.lastScore !== undefined && (
@@ -201,7 +193,6 @@ export function RecommendationCard({
   )
 }
 
-// 推薦列表
 interface RecommendationListProps {
   recommendations: Recommendation[]
   onSelect?: (rec: Recommendation) => void
@@ -215,6 +206,7 @@ export function RecommendationList({
   variant = 'default',
   maxItems = 5,
 }: RecommendationListProps) {
+  const t = useTranslations('recommendations')
   const displayItems = recommendations.slice(0, maxItems)
 
   return (
@@ -237,14 +229,13 @@ export function RecommendationList({
       {recommendations.length === 0 && (
         <div className="text-center py-8 text-gray-400">
           <BookOpen className="w-12 h-12 mx-auto mb-2 opacity-50" />
-          <p>Recommendations will appear after you start learning</p>
+          <p>{t('noRecommendations')}</p>
         </div>
       )}
     </div>
   )
 }
 
-// 智能推薦橫幅
 interface SmartRecommendationBannerProps {
   recommendation: Recommendation | null
   onStart?: () => void
@@ -256,9 +247,12 @@ export function SmartRecommendationBanner({
   onStart,
   onDismiss,
 }: SmartRecommendationBannerProps) {
+  const t = useTranslations('recommendations')
+  const typeConfig = useTypeConfig()
+
   if (!recommendation) return null
 
-  const config = TYPE_CONFIG[recommendation.type]
+  const config = typeConfig[recommendation.type]
   const Icon = config.icon
 
   return (
@@ -285,11 +279,10 @@ export function SmartRecommendationBanner({
           onClick={onStart}
           className="px-4 py-2 bg-white text-gray-800 rounded-lg font-medium hover:bg-gray-100 transition-colors flex-shrink-0"
         >
-          Start
+          {t('startNow')}
         </button>
       </div>
 
-      {/* 關閉按鈕 */}
       {onDismiss && (
         <button
           onClick={onDismiss}
@@ -302,7 +295,6 @@ export function SmartRecommendationBanner({
   )
 }
 
-// Helper: format time ago
 function formatTimeAgo(timestamp: number): string {
   const seconds = Math.floor((Date.now() - timestamp) / 1000)
 
@@ -311,7 +303,7 @@ function formatTimeAgo(timestamp: number): string {
   if (seconds < 86400) return `${Math.floor(seconds / 3600)}h ago`
   if (seconds < 604800) return `${Math.floor(seconds / 86400)}d ago`
 
-  return new Date(timestamp).toLocaleDateString('en-US')
+  return new Date(timestamp).toLocaleDateString()
 }
 
 export default RecommendationCard

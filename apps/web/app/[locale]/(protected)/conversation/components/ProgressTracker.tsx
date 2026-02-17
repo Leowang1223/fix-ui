@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { type ScenarioCheckpoint } from '@/lib/api'
 
@@ -11,6 +12,7 @@ interface ProgressTrackerProps {
 }
 
 export default function ProgressTracker({ checkpoints, objective, scenarioTitle }: ProgressTrackerProps) {
+  const t = useTranslations('conversationUI')
   const [isExpanded, setIsExpanded] = useState(true)
   const completedCount = checkpoints.filter(cp => cp.completed).length
   const totalCount = checkpoints.length
@@ -50,7 +52,7 @@ export default function ProgressTracker({ checkpoints, objective, scenarioTitle 
         <div className="px-3 pb-3 border-t pt-3">
           {/* Objective */}
           <div className="mb-3 p-2 bg-blue-50 border border-blue-200 rounded-lg">
-            <div className="text-xs font-semibold text-blue-900 mb-1">OBJECTIVE</div>
+            <div className="text-xs font-semibold text-blue-900 mb-1">{t('objective')}</div>
             <div className="text-xs text-blue-800">{objective}</div>
           </div>
 
@@ -100,8 +102,8 @@ export default function ProgressTracker({ checkpoints, objective, scenarioTitle 
               <div className="flex items-center gap-2">
                 <span className="text-xl">🎉</span>
                 <div>
-                  <div className="font-bold text-xs text-green-900">All checkpoints completed!</div>
-                  <div className="text-xs text-green-700">You may naturally end the conversation</div>
+                  <div className="font-bold text-xs text-green-900">{t('allCheckpointsCompleted')}</div>
+                  <div className="text-xs text-green-700">{t('mayEndConversation')}</div>
                 </div>
               </div>
             </div>

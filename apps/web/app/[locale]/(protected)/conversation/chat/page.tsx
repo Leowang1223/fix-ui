@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { useRouter } from '@/i18n/navigation'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -63,6 +64,7 @@ interface ConversationSettings {
 
 export default function ConversationChatPage() {
   const router = useRouter()
+  const t = useTranslations('conversation')
 
   // Conversation state
   const [sessionId, setSessionId] = useState<string>('')
@@ -308,7 +310,7 @@ export default function ConversationChatPage() {
       }
     } catch (error) {
       console.error('Failed to start conversation:', error)
-      setError('Failed to start conversation. Please try again.')
+      setError(t('sendFailed'))
     } finally {
       setIsLoading(false)
     }
@@ -388,7 +390,7 @@ export default function ConversationChatPage() {
         const recordingDuration = Date.now() - recordingStartTimeRef.current
         if (recordingDuration < 300 || audioChunksRef.current.length === 0) {
           console.log('Recording too short, ignoring')
-          setRecordingError('Recording too short. Hold longer to record.')
+          setRecordingError(t('recordingTooShort'))
           // Clean up stream
           if (audioStreamRef.current) {
             audioStreamRef.current.getTracks().forEach(track => track.stop())
@@ -409,7 +411,7 @@ export default function ConversationChatPage() {
 
       mediaRecorder.onerror = (event) => {
         console.error('MediaRecorder error:', event)
-        setRecordingError('Recording failed. Please try again.')
+        setRecordingError(t('recordingFailed'))
         setIsRecording(false)
         isStartingRecordingRef.current = false
       }
@@ -421,7 +423,7 @@ export default function ConversationChatPage() {
       isStartingRecordingRef.current = false
     } catch (error) {
       console.error('Failed to start recording:', error)
-      setRecordingError('Failed to access microphone. Please allow microphone access.')
+      setRecordingError(t('micAccessFailed'))
       isStartingRecordingRef.current = false
     }
   }
@@ -512,7 +514,7 @@ export default function ConversationChatPage() {
       }, 500)
     } catch (error) {
       console.error('Failed to send message:', error)
-      setError('Failed to process your message. Please try again.')
+      setError(t('processFailed'))
     } finally {
       setIsLoading(false)
     }
@@ -520,7 +522,7 @@ export default function ConversationChatPage() {
 
   // End conversation
   const handleEndConversation = async () => {
-    const confirm = window.confirm('Are you sure you want to end this conversation?')
+    const confirm = window.confirm(t('endConversationConfirm'))
     if (!confirm) return
 
     setIsLoading(true)
@@ -563,7 +565,7 @@ export default function ConversationChatPage() {
       router.push(`/conversation/report/${data.reportId}`)
     } catch (error: any) {
       console.error('Failed to end conversation:', error)
-      setError('Failed to end conversation: ' + error.message)
+      setError(t('sendFailed'))
     } finally {
       setIsLoading(false)
     }
@@ -592,11 +594,11 @@ export default function ConversationChatPage() {
       {/* Header - Different for mobile vs desktop */}
       {isMobile ? (
         <MobileConversationHeader
-          title="AI Conversation"
+          title={t('chatTitle')}
           subtitle={
             settings.topicMode === 'free'
-              ? 'Free Talk'
-              : `${settings.topicMode === 'all' ? 'All' : settings.selectedTopics.length} Topics`
+              ? t('freeTalk')
+              : `${settings.topicMode === 'all' ? t('allCompletedLessons') : settings.selectedTopics.length} Topics`
           }
           scenarioInfo={settings.topicMode === 'scenario' ? scenarioInfo : null}
           checkpoints={settings.topicMode === 'scenario' ? checkpoints : undefined}
@@ -610,12 +612,12 @@ export default function ConversationChatPage() {
               <h1 className="text-base sm:text-lg font-semibold text-gray-900 truncate">
                 {settings.topicMode === 'scenario' && scenarioInfo
                   ? scenarioInfo.title
-                  : 'AI Conversation'}
+                  : t('chatTitle')}
               </h1>
               <p className="text-xs sm:text-sm text-gray-500 truncate">
                 {settings.topicMode === 'free'
-                  ? 'Free Talk'
-                  : `${settings.topicMode === 'all' ? 'All' : settings.selectedTopics.length} Topics`}
+                  ? t('freeTalk')
+                  : `${settings.topicMode === 'all' ? t('allCompletedLessons') : settings.selectedTopics.length} Topics`}
               </p>
             </div>
 
@@ -625,7 +627,7 @@ export default function ConversationChatPage() {
               className="flex items-center gap-1.5 sm:gap-2 rounded-xl bg-red-500 px-3 py-2 sm:px-4 text-xs sm:text-sm font-medium text-white hover:bg-red-600 disabled:opacity-50 transition-colors touch-manipulation"
             >
               <PhoneOff className="h-4 w-4" />
-              <span className="hidden sm:inline">End</span>
+              <span className="hidden sm:inline">{t('endButton')}</span>
             </button>
           </div>
         </header>
@@ -665,7 +667,7 @@ export default function ConversationChatPage() {
             {/* Change instructor hint - only show on desktop */}
             {!isMobile && (
               <div className="absolute top-4 left-4 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1.5 opacity-60 group-hover:opacity-100 transition-opacity">
-                <span className="text-xs font-medium text-white">Tap to change</span>
+                <span className="text-xs font-medium text-white">{t('tapToChange')}</span>
               </div>
             )}
           </button>
@@ -683,7 +685,7 @@ export default function ConversationChatPage() {
                 className="h-full w-full object-cover"
               />
               <div className="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 rounded-full bg-black/70 px-1.5 py-0.5 sm:px-2 sm:py-1 text-[10px] sm:text-xs text-white">
-                You
+                {t('youLabel')}
               </div>
             </div>
           </div>
@@ -746,7 +748,7 @@ export default function ConversationChatPage() {
           </motion.button>
 
           <p className={`mt-2 text-center text-white drop-shadow-lg bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full ${isMobile ? 'text-xs' : 'text-sm'}`}>
-            {isRecording ? 'Release to send' : 'Hold to speak'}
+            {isRecording ? t('releaseToSend') : t('holdToSpeak')}
           </p>
 
           {recordingError && (

@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { useParams } from 'next/navigation'
 import { useRouter } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Radar } from 'react-chartjs-2'
 import confetti from 'canvas-confetti'
@@ -942,6 +943,10 @@ interface CurrentFeedback {
 export default function LessonPage() {
   const params = useParams()
   const router = useRouter()
+  const tLesson = useTranslations('lesson')
+  const tReport = useTranslations('report')
+  const tHistory = useTranslations('history')
+  const tCommon = useTranslations('common')
   const lessonId = params.id as string
   
   const [lesson, setLesson] = useState<Lesson | null>(null)
@@ -1264,7 +1269,7 @@ export default function LessonPage() {
       const hasPendingScores = pendingScoresRef.current.size > 0
 
       if (hasPendingScores) {
-        const message = 'Scoring is not yet complete. Are you sure you want to leave? Incomplete scores will be lost.'
+        const message = tLesson('scoringNotComplete')
         e.preventDefault()
         e.returnValue = message // 標準做法
         return message // 某些瀏覽器需要
@@ -1594,7 +1599,7 @@ export default function LessonPage() {
     // 如果沒有任何作答，提示用戶
     if (stepResults.length === 0) {
       const confirmFinish = window.confirm(
-        'You haven\'t answered any questions yet. Are you sure you want to end the lesson?'
+        tLesson('noAnswersConfirm')
       )
       if (!confirmFinish) return
     }
@@ -1602,7 +1607,7 @@ export default function LessonPage() {
     // 如果有未完成的題目，再次確認
     if (stepResults.length < lesson.steps.length && stepResults.length > 0) {
       const confirmFinish = window.confirm(
-        `You have completed ${stepResults.length}/${lesson.steps.length} questions. Are you sure you want to end the lesson and view your results?`
+        tLesson('partialCompleteConfirm', { done: stepResults.length, total: lesson.steps.length })
       )
       if (!confirmFinish) return
     }
@@ -1725,7 +1730,7 @@ export default function LessonPage() {
       
       if (audioBlob.size === 0) {
         console.error('❌ 音頻檔案為空！')
-        setRecordingError('Recording failed: Audio file is empty. Please try again.')
+        setRecordingError(tLesson('recordingFailed'))
         setIsRetrying(false)
         setNeedsManualPlay(false)
         return
@@ -2554,18 +2559,18 @@ export default function LessonPage() {
           {/* 倒數計時和按鈕 */}
           <div className="bg-white rounded-2xl shadow-xl p-6">
             <div className="text-gray-600 mb-4">
-              <div className="text-sm mb-2">Automatically returning to course list in</div>
+              <div className="text-sm mb-2">{tLesson('autoReturning')}</div>
               <div className="text-5xl font-bold text-blue-600 mb-2">
                 {countdown}
               </div>
-              <div className="text-sm">seconds</div>
+              <div className="text-sm">{tLesson('seconds')}</div>
             </div>
 
             <button
               onClick={() => router.push('/dashboard')}
               className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Return to Course List Now
+              {tLesson('returnNow')}
             </button>
 
             <button
@@ -2610,7 +2615,7 @@ export default function LessonPage() {
         <div className="w-full bg-white rounded-2xl shadow-2xl p-8">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-800 mb-2">
-              🎉 Course Completion Report
+              {tHistory('courseCompletionReport')}
             </h1>
             <h2 className="text-xl text-gray-600">{lesson.title}</h2>
           </div>
@@ -2620,24 +2625,24 @@ export default function LessonPage() {
             {/* 左側：總分 */}
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl p-6 text-white flex flex-col justify-center">
               <div className="text-center">
-                <p className="text-lg mb-2">Overall Average Score</p>
+                <p className="text-lg mb-2">{tHistory('overallAvgScore')}</p>
                 <p className="text-6xl font-bold">{avgScore}</p>
                 <p className="text-sm mt-2">
-                  {avgScore >= 90 ? 'Excellent!' : avgScore >= 75 ? 'Good!' : 'Keep practicing!'}
+                  {avgScore >= 90 ? tHistory('excellentScore') : avgScore >= 75 ? tHistory('goodScore') : tHistory('keepPracticingScore')}
                 </p>
               </div>
             </div>
 
             {/* 右側：五向雷達圖 */}
             <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
-              <h3 className="text-lg font-bold text-gray-800 mb-4 text-center">Performance Radar</h3>
+              <h3 className="text-lg font-bold text-gray-800 mb-4 text-center">{tHistory('performanceRadar')}</h3>
               {fullReport ? (
                 <div className="h-48 sm:h-56 md:h-64">
                   <Radar
                     data={{
-                      labels: ['Pronunciation', 'Fluency', 'Accuracy', 'Comprehension', 'Confidence'],
+                      labels: [tReport('pronunciation'), tReport('fluency'), tReport('accuracy'), tReport('comprehension'), tReport('confidence')],
                       datasets: [{
-                        label: 'Scores',
+                        label: tHistory('yourPerformance'),
                         data: [
                           fullReport.overview.radar.pronunciation,
                           fullReport.overview.radar.fluency,
@@ -2672,7 +2677,7 @@ export default function LessonPage() {
                   />
                 </div>
               ) : (
-                <p className="text-gray-500 text-center py-20">Generating detailed analysis...</p>
+                <p className="text-gray-500 text-center py-20">{tLesson('generatingAnalysis')}</p>
               )}
             </div>
           </div>
@@ -2718,7 +2723,7 @@ export default function LessonPage() {
                 onClick={() => router.push('/dashboard')}
                 className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium text-sm transition-all shadow-sm hover:shadow"
               >
-                Back to Courses
+                {tCommon('back')}
               </button>
             </div>
           </div>
@@ -2730,7 +2735,7 @@ export default function LessonPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
-        <div className="text-xl text-gray-700 animate-pulse">Loading lesson...</div>
+        <div className="text-xl text-gray-700 animate-pulse">{tCommon('loading')}</div>
       </div>
     )
   }
@@ -2738,7 +2743,7 @@ export default function LessonPage() {
   if (error || !lesson) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen gap-4 bg-gradient-to-br from-blue-50 to-purple-50">
-        <div className="text-xl text-red-500">{error || 'Lesson not found'}</div>
+        <div className="text-xl text-red-500">{error || tCommon('error')}</div>
         <button
           onClick={() => router.push('/dashboard')}
           className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium text-sm transition-all shadow-sm hover:shadow"
@@ -2766,7 +2771,7 @@ export default function LessonPage() {
           <button
             onClick={() => setShowTutorial(true)}
             className="w-10 h-10 rounded-full bg-white/80 hover:bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-blue-600 transition-colors"
-            title="Show tutorial"
+            title={tLesson('showTutorial')}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -2779,7 +2784,7 @@ export default function LessonPage() {
           aria-valuenow={Math.round(progress)}
           aria-valuemin={0}
           aria-valuemax={100}
-          aria-label={`Lesson progress: ${Math.round(progress)}%`}
+          aria-label={tLesson('lessonProgress', { percent: Math.round(progress) })}
         >
           <div className="bg-blue-600 h-2.5 rounded-full transition-all duration-500" style={{ width: `${progress}%` }} />
         </div>
@@ -2788,7 +2793,7 @@ export default function LessonPage() {
           aria-live="polite"
           aria-atomic="true"
         >
-          Question {currentStepIndex + 1} / {lesson.steps.length}
+          {tLesson('questionOf', { current: currentStepIndex + 1, total: lesson.steps.length })}
         </div>
       </div>
 
@@ -2797,7 +2802,7 @@ export default function LessonPage() {
         <button
           onClick={() => setShowInterviewerSelector(true)}
           className="group relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-2xl transition-all hover:shadow-3xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-400 mx-auto"
-          title="Click to change interviewer"
+          title={tLesson('changeInterviewer')}
         >
           <Image
             src={getInterviewerImagePath(currentInterviewer)}
@@ -2918,7 +2923,7 @@ export default function LessonPage() {
                       if (answer) playTTS(answer)
                     }}
                     className="p-1.5 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-600 transition-all touch-manipulation"
-                    title="Play Chinese"
+                    title={tLesson('playChinese')}
                   >
                     <Volume2 size={14} />
                   </button>
@@ -2932,7 +2937,7 @@ export default function LessonPage() {
                       if (currentStep.english_hint) playTTS(currentStep.english_hint)
                     }}
                     className="p-1.5 rounded-full bg-purple-50 hover:bg-purple-100 text-purple-600 transition-all touch-manipulation"
-                    title="Play English"
+                    title={tLesson('playEnglish')}
                   >
                     <Volume2 size={14} />
                   </button>
@@ -2943,7 +2948,7 @@ export default function LessonPage() {
                   onClick={handleSaveFlashcard}
                   disabled={flashcardStatus === 'saving'}
                   className="p-1.5 rounded-full bg-gray-50 hover:bg-gray-100 text-gray-500 hover:text-blue-600 transition-all touch-manipulation ml-2"
-                  title="Save to Flashcards"
+                  title={tLesson('saveToFlashcards')}
                 >
                   <BookmarkPlus size={14} />
                 </button>
@@ -2951,7 +2956,7 @@ export default function LessonPage() {
             )}
             {flashcardStatus === 'saved' && (
               <p className="text-center text-xs text-green-600 mt-2">
-                Added to &quot;{selectedDeck || 'General'}&quot; deck.
+                {tLesson('addedToDeck', { deck: selectedDeck || 'General' })}
               </p>
             )}
           </div>
@@ -2959,8 +2964,8 @@ export default function LessonPage() {
           {/* 重試提示 */}
           {isRetrying && (
             <div className="mb-4 text-center max-w-md">
-              <p className="text-yellow-700 font-bold text-lg animate-bounce mb-1">Try Again!</p>
-              <p className="text-gray-500 text-sm">Listen carefully and practice the pronunciation.</p>
+              <p className="text-yellow-700 font-bold text-lg animate-bounce mb-1">{tLesson('tryAgain')}</p>
+              <p className="text-gray-500 text-sm">{tLesson('listenAndRepeat')}</p>
             </div>
           )}
 
@@ -2976,7 +2981,7 @@ export default function LessonPage() {
           </button>
 
           <p className="mt-3 text-gray-500 font-medium text-sm text-center">
-            {isRecording ? 'Recording...' : 'Tap to record'}
+            {isRecording ? tLesson('recording') : tLesson('yourTurn')}
           </p>
         </>
       )}
@@ -2997,14 +3002,14 @@ export default function LessonPage() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              Previous
+              {tLesson('previous')}
             </button>
 
             <button
               onClick={() => router.push('/learning-path')}
               className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-medium text-sm transition-all"
             >
-              Exit
+              {tLesson('exit')}
             </button>
 
             <button
@@ -3016,7 +3021,7 @@ export default function LessonPage() {
                   : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
               }`}
             >
-              Skip
+              {tLesson('skipStep')}
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -3032,7 +3037,7 @@ export default function LessonPage() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              Finish ({stepResults.length}/{lesson.steps.length})
+              {tLesson('finishLesson')} ({stepResults.length}/{lesson.steps.length})
             </button>
           )}
         </div>

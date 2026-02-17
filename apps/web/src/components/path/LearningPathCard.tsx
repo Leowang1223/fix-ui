@@ -1,14 +1,14 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Map, Flag, Star, Lock, Check, ChevronRight,
-  Trophy, Sparkles, Target, Calendar, Settings
+  Map, Star, Lock, Check, ChevronRight,
+  Target, Calendar, Settings
 } from 'lucide-react'
 import { useLearningPath, type LearningMilestone, type LearningPathConfig, type SkillLevel } from '@/hooks/useLearningPath'
 
-// Milestone node on the path
 function MilestoneNode({
   milestone,
   index,
@@ -27,7 +27,6 @@ function MilestoneNode({
 
   return (
     <div className="flex flex-col items-center">
-      {/* Node */}
       <motion.div
         className={`
           relative w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center
@@ -56,25 +55,12 @@ function MilestoneNode({
           <span className="text-sm font-bold">{index + 1}</span>
         )}
 
-        {/* Progress ring for current */}
         {isCurrent && !isCompleted && (
           <svg className="absolute inset-0 w-full h-full -rotate-90">
-            <circle
-              cx="50%"
-              cy="50%"
-              r="45%"
-              stroke="#93c5fd"
-              strokeWidth="3"
-              fill="none"
-            />
+            <circle cx="50%" cy="50%" r="45%" stroke="#93c5fd" strokeWidth="3" fill="none" />
             <motion.circle
-              cx="50%"
-              cy="50%"
-              r="45%"
-              stroke="#3b82f6"
-              strokeWidth="3"
-              fill="none"
-              strokeLinecap="round"
+              cx="50%" cy="50%" r="45%"
+              stroke="#3b82f6" strokeWidth="3" fill="none" strokeLinecap="round"
               initial={{ strokeDashoffset: 180 }}
               animate={{ strokeDashoffset: 180 - (180 * progress) / 100 }}
               strokeDasharray="180"
@@ -83,7 +69,6 @@ function MilestoneNode({
         )}
       </motion.div>
 
-      {/* Label */}
       <div className={`mt-2 text-center ${isCurrent ? 'text-blue-600' : isCompleted ? 'text-emerald-600' : 'text-slate-500'}`}>
         <p className="text-[10px] sm:text-xs font-semibold">{milestone.title}</p>
         {isCurrent && (
@@ -94,7 +79,6 @@ function MilestoneNode({
   )
 }
 
-// Path connector line
 function PathConnector({ isCompleted }: { isCompleted: boolean }) {
   return (
     <div className="flex-1 h-1 mx-1 sm:mx-2 rounded-full bg-slate-200 overflow-hidden">
@@ -110,7 +94,6 @@ function PathConnector({ isCompleted }: { isCompleted: boolean }) {
   )
 }
 
-// Settings modal for learning path
 function PathSettingsModal({
   isOpen,
   onClose,
@@ -126,11 +109,21 @@ function PathSettingsModal({
   skillLevels: SkillLevel[]
   skillLevelNames: Record<SkillLevel, { en: string; zh: string }>
 }) {
+  const t = useTranslations('pathCard')
+  const tCommon = useTranslations('common')
   const [localConfig, setLocalConfig] = useState(config)
 
   const handleSave = () => {
     onSave(localConfig)
     onClose()
+  }
+
+  const focusAreaLabels: Record<string, string> = {
+    speaking: t('speaking'),
+    listening: t('listening'),
+    reading: t('reading'),
+    vocabulary: t('vocabularyArea'),
+    grammar: t('grammar')
   }
 
   if (!isOpen) return null
@@ -152,14 +145,13 @@ function PathSettingsModal({
           onClick={(e: React.MouseEvent) => e.stopPropagation()}
         >
           <div className="p-5 border-b border-slate-100">
-            <h2 className="text-lg font-bold text-slate-900">Learning Path Settings</h2>
-            <p className="text-sm text-slate-500 mt-1">Customize your learning journey</p>
+            <h2 className="text-lg font-bold text-slate-900">{t('settingsTitle')}</h2>
+            <p className="text-sm text-slate-500 mt-1">{t('settingsDesc')}</p>
           </div>
 
           <div className="p-5 space-y-5">
-            {/* Target Level */}
             <div className="space-y-2">
-              <label className="text-sm font-medium text-slate-700">Target Level</label>
+              <label className="text-sm font-medium text-slate-700">{t('targetLevel')}</label>
               <div className="grid grid-cols-3 gap-2">
                 {skillLevels.map(level => (
                   <button
@@ -177,9 +169,8 @@ function PathSettingsModal({
               </div>
             </div>
 
-            {/* Weekly Goal */}
             <div className="space-y-2">
-              <label className="text-sm font-medium text-slate-700">Weekly Lesson Goal</label>
+              <label className="text-sm font-medium text-slate-700">{t('weeklyGoal')}</label>
               <div className="flex items-center gap-3">
                 <input
                   type="range"
@@ -190,14 +181,13 @@ function PathSettingsModal({
                   className="flex-1 h-2 bg-slate-200 rounded-full appearance-none cursor-pointer accent-blue-600"
                 />
                 <span className="w-12 text-center text-sm font-bold text-slate-900">
-                  {localConfig.weeklyLessonGoal}/week
+                  {t('perWeek', { count: localConfig.weeklyLessonGoal })}
                 </span>
               </div>
             </div>
 
-            {/* Focus Areas */}
             <div className="space-y-2">
-              <label className="text-sm font-medium text-slate-700">Focus Areas</label>
+              <label className="text-sm font-medium text-slate-700">{t('focusAreas')}</label>
               <div className="flex flex-wrap gap-2">
                 {['speaking', 'listening', 'reading', 'vocabulary', 'grammar'].map(area => (
                   <button
@@ -216,7 +206,7 @@ function PathSettingsModal({
                         : 'bg-slate-100 text-slate-600 border border-transparent hover:bg-slate-200'
                     }`}
                   >
-                    {area.charAt(0).toUpperCase() + area.slice(1)}
+                    {focusAreaLabels[area] || area}
                   </button>
                 ))}
               </div>
@@ -228,13 +218,13 @@ function PathSettingsModal({
               onClick={onClose}
               className="flex-1 py-2.5 rounded-xl border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors"
             >
-              Cancel
+              {tCommon('cancel')}
             </button>
             <button
               onClick={handleSave}
               className="flex-1 py-2.5 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors"
             >
-              Save Changes
+              {t('saveChanges')}
             </button>
           </div>
         </motion.div>
@@ -244,6 +234,7 @@ function PathSettingsModal({
 }
 
 export default function LearningPathCard() {
+  const t = useTranslations('pathCard')
   const {
     data,
     isLoading,
@@ -279,16 +270,15 @@ export default function LearningPathCard() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
               <Map className="w-4 h-4 text-white" />
             </div>
             <div>
-              <h3 className="text-sm font-bold text-slate-800">Learning Path</h3>
+              <h3 className="text-sm font-bold text-slate-800">{t('learningPath')}</h3>
               <p className="text-xs text-slate-500">
-                Target: {SKILL_LEVEL_NAMES[data.config.targetLevel].en}
+                {t('target', { level: SKILL_LEVEL_NAMES[data.config.targetLevel].en })}
               </p>
             </div>
           </div>
@@ -301,10 +291,9 @@ export default function LearningPathCard() {
           </button>
         </div>
 
-        {/* Overall Progress */}
         <div className="mb-4 p-3 rounded-xl bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-100">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-medium text-indigo-700">Overall Progress</span>
+            <span className="text-xs font-medium text-indigo-700">{t('overallProgress')}</span>
             <span className="text-xs font-bold text-indigo-700">{overallProgress}%</span>
           </div>
           <div className="h-2 bg-indigo-100 rounded-full overflow-hidden">
@@ -318,12 +307,11 @@ export default function LearningPathCard() {
           {estimatedCompletion && (
             <div className="flex items-center gap-1 mt-2 text-[10px] text-indigo-600">
               <Calendar className="w-3 h-3" />
-              <span>Est. completion: {estimatedCompletion}</span>
+              <span>{t('estCompletion', { date: estimatedCompletion })}</span>
             </div>
           )}
         </div>
 
-        {/* Path Visualization */}
         <div className="overflow-x-auto -mx-2 px-2 scrollbar-thin">
           <div className="flex items-center w-max py-2">
             {data.milestones.map((milestone, index) => {
@@ -350,7 +338,6 @@ export default function LearningPathCard() {
           </div>
         </div>
 
-        {/* Current Milestone Info */}
         {currentMilestone && (
           <div className="mt-4 p-3 rounded-xl bg-blue-50 border border-blue-100">
             <div className="flex items-start gap-3">
@@ -361,8 +348,8 @@ export default function LearningPathCard() {
                 <p className="text-sm font-bold text-blue-800">{currentMilestone.title}</p>
                 <p className="text-xs text-blue-600 mt-0.5">{currentMilestone.description}</p>
                 <div className="flex items-center gap-3 mt-2 text-[10px] text-blue-700">
-                  <span>{data.progress.totalLessonsCompleted}/{currentMilestone.requiredLessons} lessons</span>
-                  <span>{data.progress.totalVocabLearned}/{currentMilestone.requiredVocab} vocab</span>
+                  <span>{t('lessonsProgress', { current: data.progress.totalLessonsCompleted, total: currentMilestone.requiredLessons })}</span>
+                  <span>{t('vocabProgress', { current: data.progress.totalVocabLearned, total: currentMilestone.requiredVocab })}</span>
                 </div>
               </div>
             </div>
@@ -370,7 +357,6 @@ export default function LearningPathCard() {
         )}
       </motion.div>
 
-      {/* Settings Modal */}
       <PathSettingsModal
         isOpen={showSettings}
         onClose={() => setShowSettings(false)}
@@ -383,8 +369,8 @@ export default function LearningPathCard() {
   )
 }
 
-// Compact version
 export function LearningPathMini() {
+  const t = useTranslations('pathCard')
   const { data, isLoading, getOverallProgress, SKILL_LEVEL_NAMES } = useLearningPath()
 
   if (isLoading || !data) {
@@ -399,9 +385,9 @@ export function LearningPathMini() {
         <span className="text-sm font-bold text-white">{progress}%</span>
       </div>
       <div className="flex-1">
-        <p className="text-sm font-medium text-indigo-700">Learning Path</p>
+        <p className="text-sm font-medium text-indigo-700">{t('learningPath')}</p>
         <p className="text-xs text-indigo-500">
-          Target: {SKILL_LEVEL_NAMES[data.config.targetLevel].en}
+          {t('target', { level: SKILL_LEVEL_NAMES[data.config.targetLevel].en })}
         </p>
       </div>
       <ChevronRight className="w-5 h-5 text-indigo-400" />

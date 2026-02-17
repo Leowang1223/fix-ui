@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Volume2, User, Bot, ChevronUp, ChevronDown } from 'lucide-react'
 import { SuggestionCard } from './SuggestionCard'
@@ -40,6 +41,7 @@ interface DialogSidebarProps {
 }
 
 export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading, currentInterviewer, scenarioInfo, checkpoints, transparent = false }: DialogSidebarProps) {
+  const t = useTranslations('conversationUI')
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const [suggestionsExpanded, setSuggestionsExpanded] = useState(true)
 
@@ -53,8 +55,8 @@ export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading, cur
       {/* Header - Hidden in transparent mode */}
       {!transparent && (
         <div className="border-b border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50 px-6 py-4">
-          <h2 className="text-lg font-semibold text-gray-900">Conversation</h2>
-          <p className="text-sm text-gray-600">Real-time chat with AI instructor</p>
+          <h2 className="text-lg font-semibold text-gray-900">{t('conversation')}</h2>
+          <p className="text-sm text-gray-600">{t('realtimeChat')}</p>
         </div>
       )}
 
@@ -77,10 +79,10 @@ export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading, cur
             <div className="flex h-full items-center justify-center">
               <div className="text-center max-w-md">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  開始對話
+                  {t('startConversation')}
                 </h3>
                 <p className="text-sm text-gray-600">
-                  點擊下方建議或直接說話開始練習
+                  {t('startConversationHint')}
                 </p>
               </div>
             </div>
@@ -90,7 +92,7 @@ export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading, cur
             <div className="flex h-full items-center justify-center">
               <div className="text-center text-gray-400">
                 <Bot className="mx-auto h-12 w-12 mb-2 opacity-50" />
-                <p className="text-sm">Conversation will appear here</p>
+                <p className="text-sm">{t('conversationWillAppear')}</p>
               </div>
             </div>
           )}
@@ -149,7 +151,7 @@ export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading, cur
 
                 {/* Transcript (for user messages) */}
                 {message.role === 'user' && message.transcript && (
-                  <div className={`mt-1 text-xs ${transparent ? 'text-white/60' : 'text-gray-500'}`}>Heard: {message.transcript}</div>
+                  <div className={`mt-1 text-xs ${transparent ? 'text-white/60' : 'text-gray-500'}`}>{t('heard', { text: message.transcript })}</div>
                 )}
 
                 {/* TTS Button for instructor messages */}
@@ -159,7 +161,7 @@ export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading, cur
                     className={`mt-1.5 flex items-center gap-1 text-xs ${transparent ? 'text-blue-300 hover:text-blue-200' : 'text-blue-600 hover:text-blue-700'}`}
                   >
                     <Volume2 className="h-3 w-3" />
-                    <span>Listen</span>
+                    <span>{t('listen')}</span>
                   </button>
                 )}
 
@@ -220,7 +222,7 @@ export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading, cur
               }`}
             >
               <h3 className={`text-sm font-semibold ${transparent ? 'text-white/90' : 'text-gray-700'}`}>
-                Suggested Responses ({Math.min(suggestions.length, 3)})
+                {t('suggestedResponses', { count: Math.min(suggestions.length, 3) })}
               </h3>
               {suggestionsExpanded ? (
                 <ChevronDown className={`h-4 w-4 ${transparent ? 'text-white/60' : 'text-gray-500'}`} />

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -27,18 +28,6 @@ interface CompletedChapter {
 
 const ALL_CHAPTERS = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10'] as const
 
-const CHAPTER_TITLES: Record<string, string> = {
-  'C1': 'Basic Greetings',
-  'C2': 'Daily Conversations',
-  'C3': 'Numbers & Time',
-  'C4': 'Food & Dining',
-  'C5': 'Shopping',
-  'C6': 'Transportation',
-  'C7': 'Work & Office',
-  'C8': 'Health & Hospital',
-  'C9': 'Entertainment',
-  'C10': 'Advanced Topics'
-}
 
 type ConversationMode = 'practice' | 'free' | 'scenario'
 
@@ -55,8 +44,8 @@ interface ModeOption {
 const CONVERSATION_MODES: ModeOption[] = [
   {
     id: 'practice',
-    title: 'Course Practice',
-    description: 'Review vocabulary and phrases from completed lessons',
+    title: 'coursePractice',
+    description: 'coursePracticeDesc',
     icon: BookOpen,
     color: 'text-blue-600',
     bgColor: 'bg-blue-50',
@@ -64,8 +53,8 @@ const CONVERSATION_MODES: ModeOption[] = [
   },
   {
     id: 'free',
-    title: 'Free Talk',
-    description: 'Open conversation on any topic you choose',
+    title: 'freeTalk',
+    description: 'freeTalkDesc',
     icon: Sparkles,
     color: 'text-emerald-600',
     bgColor: 'bg-emerald-50',
@@ -73,8 +62,8 @@ const CONVERSATION_MODES: ModeOption[] = [
   },
   {
     id: 'scenario',
-    title: 'Scenario Mode',
-    description: 'Role-play real-life situations like ordering food',
+    title: 'scenarioMode',
+    description: 'scenarioModeDesc',
     icon: Theater,
     color: 'text-purple-600',
     bgColor: 'bg-purple-50',
@@ -90,6 +79,10 @@ const DIFFICULTY_COLORS: Record<string, string> = {
 
 export default function ConversationSetupPage() {
   const router = useRouter()
+  const t = useTranslations('conversation')
+  const tChapters = useTranslations('chapters')
+  const tCommon = useTranslations('common')
+  const tGuide = useTranslations('guide')
 
   // Permission states
   const [micPermission, setMicPermission] = useState<'pending' | 'granted' | 'denied'>('pending')
@@ -147,7 +140,7 @@ export default function ConversationSetupPage() {
 
     const chapters = ALL_CHAPTERS.map(chapterId => ({
       chapterId,
-      title: CHAPTER_TITLES[chapterId],
+      title: chapterId,
       lessonCount: completionMap[chapterId] || 0
     }))
     setCompletedChapters(chapters)
@@ -274,23 +267,23 @@ export default function ConversationSetupPage() {
 
   const handleStartConversation = () => {
     if (micPermission !== 'granted') {
-      alert('Microphone permission is required to start conversation.')
+      alert(t('micRequiredDesc'))
       return
     }
 
     if (topicMode === 'practice') {
       if (useAllChapters && !hasCompletedLessons) {
-        alert('Please complete at least one lesson first.')
+        alert(t('pleaseCompleteLessons'))
         return
       }
       if (!useAllChapters && selectedChapters.length === 0) {
-        alert('Please select at least one chapter.')
+        alert(t('selectChapterFirst'))
         return
       }
     }
 
     if (topicMode === 'scenario' && (!selectedScenario || !selectedRole)) {
-      alert('Please select a scenario and role first.')
+      alert(t('selectScenarioFirst'))
       return
     }
 
@@ -329,8 +322,8 @@ export default function ConversationSetupPage() {
               <ArrowLeft size={20} />
             </button>
             <div className="flex-1 min-w-0">
-              <h1 className="text-lg sm:text-xl font-bold text-slate-900 truncate">AI Conversation</h1>
-              <p className="text-xs sm:text-sm text-slate-500 truncate">Practice speaking Chinese with AI</p>
+              <h1 className="text-lg sm:text-xl font-bold text-slate-900 truncate">{t('title')}</h1>
+              <p className="text-xs sm:text-sm text-slate-500 truncate">{t('subtitle')}</p>
             </div>
 
             <button
@@ -362,14 +355,14 @@ export default function ConversationSetupPage() {
                 <Mic className="w-5 h-5 text-amber-600" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-amber-900">Microphone Required</p>
-                <p className="text-xs text-amber-700">Enable to start conversation</p>
+                <p className="text-sm font-medium text-amber-900">{t('micRequired')}</p>
+                <p className="text-xs text-amber-700">{t('enableMic')}</p>
               </div>
               <button
                 onClick={requestMicPermission}
                 className="flex-shrink-0 px-4 py-2 rounded-xl bg-amber-500 text-white text-sm font-medium hover:bg-amber-600 transition-colors touch-manipulation"
               >
-                Enable
+                {tCommon('enable')}
               </button>
             </div>
           </motion.div>
@@ -378,7 +371,7 @@ export default function ConversationSetupPage() {
         {/* Mode Selection */}
         <div className="space-y-3">
           <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide px-1">
-            Choose Mode
+            {t('chooseMode')}
           </h2>
 
           <div className="grid gap-3">
@@ -404,9 +397,9 @@ export default function ConversationSetupPage() {
 
                     <div className="flex-1 min-w-0">
                       <span className={`text-base sm:text-lg font-bold ${isSelected ? mode.color : 'text-slate-900'}`}>
-                        {mode.title}
+                        {t(mode.title as any)}
                       </span>
-                      <p className="mt-0.5 text-xs sm:text-sm text-slate-500">{mode.description}</p>
+                      <p className="mt-0.5 text-xs sm:text-sm text-slate-500">{t(mode.description as any)}</p>
                     </div>
 
                     <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center ${
@@ -437,7 +430,7 @@ export default function ConversationSetupPage() {
               className="overflow-hidden"
             >
               <div className="rounded-2xl border border-slate-200 bg-white p-4 space-y-4">
-                <h3 className="text-sm font-semibold text-slate-700">Select Chapters</h3>
+                <h3 className="text-sm font-semibold text-slate-700">{t('selectChapters')}</h3>
 
                 <button
                   onClick={() => setUseAllChapters(!useAllChapters)}
@@ -454,12 +447,12 @@ export default function ConversationSetupPage() {
                       {useAllChapters && <Check className="w-3 h-3 text-white" />}
                     </div>
                     <span className="text-sm font-medium text-slate-700">
-                      All completed lessons
+                      {t('allCompletedLessons')}
                     </span>
                   </div>
                   {hasCompletedLessons && (
                     <span className="text-xs text-blue-600 font-medium">
-                      {completedLessonCount} lessons
+                      {t('lessonsCount', { count: completedLessonCount })}
                     </span>
                   )}
                 </button>
@@ -489,7 +482,7 @@ export default function ConversationSetupPage() {
                           <div className={`text-lg font-bold ${isSelected ? 'text-blue-600' : 'text-slate-700'}`}>
                             {chapter.chapterId}
                           </div>
-                          <div className="text-[10px] text-slate-500 truncate">{chapter.title}</div>
+                          <div className="text-[10px] text-slate-500 truncate">{tChapters(chapter.chapterId as any)}</div>
                           {hasProgress && (
                             <div className="mt-1 text-[10px] text-emerald-600 font-medium">
                               {chapter.lessonCount} done
@@ -508,7 +501,7 @@ export default function ConversationSetupPage() {
 
                 {!hasCompletedLessons && (
                   <p className="text-xs text-amber-600 bg-amber-50 rounded-lg p-3">
-                    Complete some lessons first to use Course Practice mode.
+                    {t('completeLessonsFirst')}
                   </p>
                 )}
               </div>
@@ -526,8 +519,7 @@ export default function ConversationSetupPage() {
             >
               <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
                 <p className="text-sm text-emerald-800">
-                  <strong>Free Talk Mode</strong> - The AI will have open conversations with you on any topic.
-                  Great for practicing natural conversation flow!
+                  {t('freeTalkModeDesc')}
                 </p>
               </div>
             </motion.div>
@@ -543,12 +535,12 @@ export default function ConversationSetupPage() {
               className="overflow-hidden"
             >
               <div className="rounded-2xl border border-slate-200 bg-white p-4 space-y-4">
-                <h3 className="text-sm font-semibold text-slate-700">Choose a Scenario & Role</h3>
+                <h3 className="text-sm font-semibold text-slate-700">{t('chooseScenarioRole')}</h3>
 
                 {scenariosLoading ? (
                   <div className="flex items-center justify-center py-8">
                     <Loader2 className="w-6 h-6 animate-spin text-purple-500" />
-                    <span className="ml-2 text-sm text-slate-500">Loading scenarios...</span>
+                    <span className="ml-2 text-sm text-slate-500">{t('loadingScenarios')}</span>
                   </div>
                 ) : (
                   <div className="space-y-3">
@@ -597,11 +589,11 @@ export default function ConversationSetupPage() {
                                 <div className="p-3 sm:p-4 bg-purple-50/50 space-y-3">
                                   {/* Objective */}
                                   <div className="text-xs text-purple-700 bg-purple-100 rounded-lg p-2">
-                                    <strong>Goal:</strong> {selectedScenario.objective}
+                                    <strong>{t('goalLabel')}</strong> {selectedScenario.objective}
                                   </div>
 
                                   {/* Role cards */}
-                                  <p className="text-xs font-semibold text-slate-600">Select your role:</p>
+                                  <p className="text-xs font-semibold text-slate-600">{t('selectYourRole')}</p>
                                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                                     {selectedScenario.roles.map(role => {
                                       const isRoleSelected = selectedRole === role.id
@@ -641,7 +633,7 @@ export default function ConversationSetupPage() {
                     })}
 
                     {scenarios.length === 0 && !scenariosLoading && (
-                      <p className="text-xs text-slate-500 text-center py-4">No scenarios available</p>
+                      <p className="text-xs text-slate-500 text-center py-4">{t('noScenarios')}</p>
                     )}
                   </div>
                 )}
@@ -663,8 +655,8 @@ export default function ConversationSetupPage() {
                 <VideoOff className="w-5 h-5 text-slate-400" />
               )}
               <div className="text-left">
-                <p className="text-sm font-medium text-slate-700">Camera</p>
-                <p className="text-xs text-slate-500">Optional - show yourself</p>
+                <p className="text-sm font-medium text-slate-700">{t('cameraLabel')}</p>
+                <p className="text-xs text-slate-500">{t('cameraDesc')}</p>
               </div>
             </div>
             <div className={`w-12 h-7 rounded-full transition-colors ${
@@ -698,7 +690,7 @@ export default function ConversationSetupPage() {
             >
               <div className="flex items-center justify-center gap-2">
                 <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />
-                <span>Start {selectedModeData?.title}</span>
+                <span>{tCommon('start')} {selectedModeData ? t(selectedModeData.title as any) : ''}</span>
               </div>
             </motion.button>
           </div>
@@ -723,18 +715,18 @@ export default function ConversationSetupPage() {
         pageId="conversation"
         steps={[
           {
-            title: 'Choose a Mode',
-            description: 'Pick from Free Talk, Lesson Practice, or Scenario Mode to start a conversation.',
+            title: tGuide('chooseModeTitle'),
+            description: tGuide('chooseModeDesc'),
             icon: MessageSquare,
           },
           {
-            title: 'Scenario Practice',
-            description: 'Select real-world scenarios like ordering food or asking for directions, then pick a role to play.',
+            title: tGuide('scenarioTitle'),
+            description: tGuide('scenarioDesc'),
             icon: Sparkles,
           },
           {
-            title: 'Camera & Settings',
-            description: 'Toggle video on/off and choose your AI conversation partner before starting.',
+            title: tGuide('cameraSettingsTitle'),
+            description: tGuide('cameraSettingsDesc'),
             icon: Video,
           },
         ]}

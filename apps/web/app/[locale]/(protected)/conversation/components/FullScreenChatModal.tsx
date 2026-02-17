@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Volume2, User, Bot } from 'lucide-react'
@@ -30,6 +31,7 @@ export function FullScreenChatModal({
   currentInterviewer,
   scenarioInfo
 }: FullScreenChatModalProps) {
+  const t = useTranslations('conversationUI')
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   // Auto-scroll to latest message
@@ -58,7 +60,7 @@ export function FullScreenChatModal({
             >
               <X size={20} />
             </button>
-            <h2 className="text-base font-semibold text-slate-900">Conversation</h2>
+            <h2 className="text-base font-semibold text-slate-900">{t('conversation')}</h2>
             <div className="w-10" /> {/* Spacer for centering */}
           </header>
 
@@ -68,7 +70,7 @@ export function FullScreenChatModal({
               <div className="flex h-full items-center justify-center">
                 <div className="text-center text-slate-400">
                   <Bot className="mx-auto h-12 w-12 mb-2 opacity-50" />
-                  <p className="text-sm">No messages yet</p>
+                  <p className="text-sm">{t('noMessagesYet')}</p>
                 </div>
               </div>
             ) : (
@@ -119,7 +121,7 @@ export function FullScreenChatModal({
 
                       {/* User transcript */}
                       {message.role === 'user' && message.transcript && (
-                        <p className="mt-1 text-xs text-slate-400">Heard: {message.transcript}</p>
+                        <p className="mt-1 text-xs text-slate-400">{t('heard', { text: message.transcript })}</p>
                       )}
 
                       {/* TTS & Timestamp */}
@@ -130,7 +132,7 @@ export function FullScreenChatModal({
                             className="flex items-center gap-1 text-xs text-blue-600 hover:text-blue-700"
                           >
                             <Volume2 className="h-3 w-3" />
-                            <span>Listen</span>
+                            <span>{t('listen')}</span>
                           </button>
                         )}
                         <span className={`text-[10px] text-slate-400 ${message.role === 'user' ? 'ml-auto' : ''}`}>
@@ -165,7 +167,7 @@ export function FullScreenChatModal({
           {/* Suggestions at bottom */}
           {suggestions.length > 0 && (
             <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-4 safe-bottom">
-              <p className="text-xs text-slate-500 font-medium mb-2">Suggested responses:</p>
+              <p className="text-xs text-slate-500 font-medium mb-2">{t('suggestedResponsesLabel')}</p>
               <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin">
                 {suggestions.map((suggestion, index) => (
                   <button

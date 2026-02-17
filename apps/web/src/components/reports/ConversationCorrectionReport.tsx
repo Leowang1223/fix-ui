@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   ChevronDown,
@@ -79,6 +80,7 @@ function SeverityBadge({ severity }: { severity: 'minor' | 'moderate' | 'major' 
 
 // Grammar type badge
 function GrammarTypeBadge({ type }: { type: GrammarCorrection['type'] }) {
+  const t = useTranslations('correction')
   const colors: Record<GrammarCorrection['type'], string> = {
     'word-order': 'bg-blue-100 text-blue-700',
     'measure-word': 'bg-purple-100 text-purple-700',
@@ -88,18 +90,18 @@ function GrammarTypeBadge({ type }: { type: GrammarCorrection['type'] }) {
     'other': 'bg-slate-100 text-slate-700'
   }
 
-  const labels: Record<GrammarCorrection['type'], string> = {
-    'word-order': 'Word Order',
-    'measure-word': 'Measure Word',
-    'tense': 'Tense',
-    'particle': 'Particle',
-    'vocabulary': 'Vocabulary',
-    'other': 'Other'
+  const labelKeys: Record<GrammarCorrection['type'], string> = {
+    'word-order': 'wordOrder',
+    'measure-word': 'measureWord',
+    'tense': 'tense',
+    'particle': 'particle',
+    'vocabulary': 'vocabulary',
+    'other': 'other'
   }
 
   return (
     <span className={`text-[10px] font-medium px-2 py-0.5 rounded ${colors[type]}`}>
-      {labels[type]}
+      {t(labelKeys[type])}
     </span>
   )
 }
@@ -116,6 +118,7 @@ function TurnCorrectionCard({
   onToggle: () => void
   onPlayTTS?: (text: string) => void
 }) {
+  const t = useTranslations('correction')
   const hasIssues = turn.corrections.grammar.length > 0 || turn.corrections.pronunciation.length > 0
   const score = turn.corrections.score ?? 0
 
@@ -142,17 +145,17 @@ function TurnCorrectionCard({
             <div className="flex items-center gap-2 mt-1">
               {turn.corrections.grammar.length > 0 && (
                 <span className="text-[10px] text-orange-600 bg-orange-50 px-1.5 py-0.5 rounded">
-                  {turn.corrections.grammar.length} grammar
+                  {turn.corrections.grammar.length} {t('grammar')}
                 </span>
               )}
               {turn.corrections.pronunciation.length > 0 && (
                 <span className="text-[10px] text-purple-600 bg-purple-50 px-1.5 py-0.5 rounded">
-                  {turn.corrections.pronunciation.length} pronunciation
+                  {turn.corrections.pronunciation.length} {t('pronunciation')}
                 </span>
               )}
               {!hasIssues && (
                 <span className="text-[10px] text-green-600 bg-green-50 px-1.5 py-0.5 rounded flex items-center gap-1">
-                  <CheckCircle2 size={10} /> Perfect
+                  <CheckCircle2 size={10} /> {t('perfect')}
                 </span>
               )}
             </div>
@@ -193,7 +196,7 @@ function TurnCorrectionCard({
                   <div className="flex items-start gap-3 p-3 rounded-xl bg-red-50 border border-red-100">
                     <XCircle size={16} className="text-red-500 flex-shrink-0 mt-0.5" />
                     <div className="flex-1 min-w-0">
-                      <div className="text-[10px] font-medium text-red-600 mb-1">Your sentence</div>
+                      <div className="text-[10px] font-medium text-red-600 mb-1">{t('yourSentence')}</div>
                       <p className="text-sm text-slate-800">{turn.userText}</p>
                     </div>
                   </div>
@@ -201,7 +204,7 @@ function TurnCorrectionCard({
                   <div className="flex items-start gap-3 p-3 rounded-xl bg-green-50 border border-green-100">
                     <CheckCircle2 size={16} className="text-green-500 flex-shrink-0 mt-0.5" />
                     <div className="flex-1 min-w-0">
-                      <div className="text-[10px] font-medium text-green-600 mb-1">Corrected</div>
+                      <div className="text-[10px] font-medium text-green-600 mb-1">{t('corrected')}</div>
                       <p className="text-sm text-slate-800">{turn.corrections.correctedText}</p>
                       {turn.corrections.correctedPinyin && (
                         <p className="text-xs text-slate-500 mt-1">{turn.corrections.correctedPinyin}</p>
@@ -224,7 +227,7 @@ function TurnCorrectionCard({
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-sm font-semibold text-slate-700">
                     <BookOpen size={16} />
-                    <span>Grammar Issues</span>
+                    <span>{t('grammarIssues')}</span>
                   </div>
                   {turn.corrections.grammar.map((g, idx) => (
                     <div key={idx} className="p-3 rounded-xl bg-amber-50 border border-amber-100">
@@ -252,7 +255,7 @@ function TurnCorrectionCard({
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-sm font-semibold text-slate-700">
                     <Mic2 size={16} />
-                    <span>Pronunciation Issues</span>
+                    <span>{t('pronunciationIssues')}</span>
                   </div>
                   <div className="grid grid-cols-2 gap-2">
                     {turn.corrections.pronunciation.map((p, idx) => (
@@ -288,7 +291,7 @@ function TurnCorrectionCard({
                 <div className="flex items-center gap-2 p-3 rounded-xl bg-green-50 border border-green-100">
                   <Sparkles size={18} className="text-green-500" />
                   <p className="text-sm text-green-700">
-                    Great job! No corrections needed for this turn.
+                    {t('perfectTurn')}
                   </p>
                 </div>
               )}
@@ -339,6 +342,7 @@ export function ConversationCorrectionReport({
   summary,
   onPlayTTS
 }: ConversationCorrectionReportProps) {
+  const t = useTranslations('correction')
   const [expandedTurn, setExpandedTurn] = useState<number | null>(
     turnCorrections.find(t => t.corrections.grammar.length > 0 || t.corrections.pronunciation.length > 0)?.turnIndex ?? null
   )
@@ -349,36 +353,36 @@ export function ConversationCorrectionReport({
       <div className="space-y-4">
         <h2 className="text-lg font-bold text-slate-800 flex items-center gap-2">
           <MessageSquare size={20} />
-          Correction Summary
+          {t('correctionSummary')}
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           <SummaryCard
             icon={BookOpen}
-            label="Grammar Score"
+            label={t('grammarScore')}
             value={summary.overallGrammarScore}
-            subValue={`${summary.grammarIssueCount} issues found`}
+            subValue={t('issuesFound', { count: summary.grammarIssueCount })}
             color="blue"
           />
           <SummaryCard
             icon={Mic2}
-            label="Pronunciation Score"
+            label={t('pronunciationScore')}
             value={summary.overallPronunciationScore}
-            subValue={`${summary.pronunciationIssueCount} issues found`}
+            subValue={t('issuesFound', { count: summary.pronunciationIssueCount })}
             color="purple"
           />
           <SummaryCard
             icon={CheckCircle2}
-            label="Clean Turns"
+            label={t('cleanTurns')}
             value={`${summary.totalTurns - summary.turnsWithIssues}/${summary.totalTurns}`}
-            subValue="without issues"
+            subValue={t('withoutIssues')}
             color="green"
           />
           <SummaryCard
             icon={AlertTriangle}
-            label="Needs Work"
+            label={t('needsWork')}
             value={summary.turnsWithIssues}
-            subValue="turns with issues"
+            subValue={t('turnsWithIssues')}
             color="orange"
           />
         </div>
@@ -389,12 +393,12 @@ export function ConversationCorrectionReport({
         <div className="p-4 rounded-xl bg-amber-50 border border-amber-200">
           <h3 className="text-sm font-semibold text-amber-800 mb-3 flex items-center gap-2">
             <AlertTriangle size={16} />
-            Common Issues to Focus On
+            {t('commonIssues')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {summary.commonGrammarIssues.length > 0 && (
               <div>
-                <p className="text-xs font-medium text-amber-700 mb-2">Grammar</p>
+                <p className="text-xs font-medium text-amber-700 mb-2">{t('grammar')}</p>
                 <ul className="space-y-1">
                   {summary.commonGrammarIssues.map((issue, idx) => (
                     <li key={idx} className="text-sm text-slate-700 flex items-start gap-2">
@@ -407,7 +411,7 @@ export function ConversationCorrectionReport({
             )}
             {summary.commonPronunciationIssues.length > 0 && (
               <div>
-                <p className="text-xs font-medium text-amber-700 mb-2">Pronunciation</p>
+                <p className="text-xs font-medium text-amber-700 mb-2">{t('pronunciation')}</p>
                 <ul className="space-y-1">
                   {summary.commonPronunciationIssues.map((issue, idx) => (
                     <li key={idx} className="text-sm text-slate-700 flex items-start gap-2">
@@ -427,7 +431,7 @@ export function ConversationCorrectionReport({
         <div className="p-4 rounded-xl bg-blue-50 border border-blue-200">
           <h3 className="text-sm font-semibold text-blue-800 mb-3 flex items-center gap-2">
             <Sparkles size={16} />
-            Recommendations
+            {t('recommendations')}
           </h3>
           <ul className="space-y-2">
             {summary.recommendations.map((rec, idx) => (
@@ -444,7 +448,7 @@ export function ConversationCorrectionReport({
       <div className="space-y-3">
         <h2 className="text-lg font-bold text-slate-800 flex items-center gap-2">
           <MessageSquare size={20} />
-          Turn-by-Turn Analysis
+          {t('turnByTurnAnalysis')}
         </h2>
 
         <div className="space-y-2">

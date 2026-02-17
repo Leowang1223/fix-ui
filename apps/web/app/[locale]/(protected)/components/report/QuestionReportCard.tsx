@@ -6,6 +6,7 @@
 'use client'
 
 import { useRouter } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 import { RefreshCw } from 'lucide-react'
 import { AppButton } from '@/components/ui/AppButton'
 import { type StepResult } from './types'
@@ -30,17 +31,18 @@ export function QuestionReportCard({
   showRetry = false
 }: QuestionReportCardProps) {
   const router = useRouter()
+  const t = useTranslations('report')
   return (
     <div className="border rounded-lg p-6 hover:shadow-md transition-shadow bg-gray-50">
       {/* 題目標題和分數 */}
       <div className="flex justify-between items-start mb-4">
         <div className="flex-1">
           <p className="font-semibold text-gray-800 text-lg mb-2">
-            Question {index + 1}: {result.question.replace(/\([^)]*\)/g, '').trim()}
+            {t('question')} {index + 1}: {result.question.replace(/\([^)]*\)/g, '').trim()}
           </p>
           {showTranscript && result.transcript && (
             <p className="text-sm text-blue-600 mb-2">
-              🎤 Your response: "{result.transcript}"
+              🎤 {t('yourResponse')}: "{result.transcript}"
             </p>
           )}
         </div>
@@ -53,12 +55,12 @@ export function QuestionReportCard({
       
       {/* 狀態資訊 */}
       <div className="flex gap-4 text-sm text-gray-600 mb-4">
-        <span>🎯 Attempts: {result.attempts}</span>
+        <span>🎯 {t('attempts')}: {result.attempts}</span>
         {SHOW_SCORES && (
           <span>
-            {result.score >= 90 ? '✅ Excellent Performance' :
-             result.score >= 75 ? '✅ Passed' :
-             '❌ Needs More Practice'}
+            {result.score >= 90 ? `✅ ${t('excellentPerformance')}` :
+             result.score >= 75 ? `✅ ${t('passed')}` :
+             `❌ ${t('needsMorePractice')}`}
           </span>
         )}
       </div>
@@ -68,7 +70,7 @@ export function QuestionReportCard({
         <div className="bg-red-50 rounded-lg p-4 border-l-4 border-red-500 mb-4">
           <h4 className="text-sm font-bold text-red-800 mb-3 flex items-center gap-2">
             <span className="text-lg">🚨</span>
-            Character & Pronunciation Errors ({result.errors.length})
+            {t('charErrors')} ({result.errors.length})
           </h4>
           <div className="space-y-2">
             {result.errors.slice(0, 5).map((error, idx) => (
@@ -76,19 +78,19 @@ export function QuestionReportCard({
                 {error.type === 'wrong' && (
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
-                      <span className="text-red-600 font-bold">Position {error.position + 1}:</span>
-                      <span className="text-gray-700">Wrong character</span>
+                      <span className="text-red-600 font-bold">{t('position')} {error.position + 1}:</span>
+                      <span className="text-gray-700">{t('charErrors')}</span>
                     </div>
                     <div className="grid grid-cols-2 gap-4 mt-2">
                       <div className="bg-red-100 rounded p-2">
-                        <div className="text-xs text-red-700 font-semibold mb-1">❌ You said:</div>
+                        <div className="text-xs text-red-700 font-semibold mb-1">❌ {t('youSaid')}:</div>
                         <div className="text-lg font-bold text-red-800">{error.actual}</div>
                         {error.actualPinyin && (
                           <div className="text-xs text-red-600 mt-1">{error.actualPinyin}</div>
                         )}
                       </div>
                       <div className="bg-green-100 rounded p-2">
-                        <div className="text-xs text-green-700 font-semibold mb-1">✅ Should be:</div>
+                        <div className="text-xs text-green-700 font-semibold mb-1">✅ {t('shouldBe')}:</div>
                         <div className="text-lg font-bold text-green-800">{error.expected}</div>
                         {error.expectedPinyin && (
                           <div className="text-xs text-green-600 mt-1">{error.expectedPinyin}</div>
@@ -99,8 +101,8 @@ export function QuestionReportCard({
                 )}
                 {error.type === 'missing' && (
                   <div>
-                    <span className="text-orange-600 font-bold">Position {error.position + 1}:</span>
-                    <span className="text-gray-700"> Missing character </span>
+                    <span className="text-orange-600 font-bold">{t('position')} {error.position + 1}:</span>
+                    <span className="text-gray-700"> {t('missingChar')} </span>
                     <span className="bg-green-100 px-2 py-1 rounded text-green-800 font-bold">{error.expected}</span>
                     {error.expectedPinyin && (
                       <span className="text-xs text-green-600 ml-2">({error.expectedPinyin})</span>
@@ -109,10 +111,9 @@ export function QuestionReportCard({
                 )}
                 {error.type === 'extra' && (
                   <div>
-                    <span className="text-purple-600 font-bold">Position {error.position + 1}:</span>
-                    <span className="text-gray-700"> Extra character </span>
+                    <span className="text-purple-600 font-bold">{t('position')} {error.position + 1}:</span>
+                    <span className="text-gray-700"> {t('extraChar')} </span>
                     <span className="bg-red-100 px-2 py-1 rounded text-red-800 font-bold">{error.actual}</span>
-                    <span className="text-gray-600"> should be removed</span>
                   </div>
                 )}
               </div>
@@ -131,7 +132,7 @@ export function QuestionReportCard({
         <div className="bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400 mb-4">
           <h4 className="text-sm font-semibold text-yellow-800 mb-2 flex items-center gap-2">
             <span className="text-lg">💡</span>
-            Correction Tips:
+            {t('correctionTips')}:
           </h4>
           <p className="text-sm text-yellow-900 whitespace-pre-wrap">{result.correctionFeedback}</p>
         </div>
@@ -142,7 +143,7 @@ export function QuestionReportCard({
         <div className="bg-orange-50 rounded-lg p-4 border-l-4 border-orange-400 mb-4">
           <h4 className="text-sm font-semibold text-orange-800 mb-3 flex items-center gap-2">
             <span className="text-lg">🔈</span>
-            Mispronounced Words:
+            {t('mispronounced')}:
           </h4>
           <div className="space-y-2">
             {result.mispronounced.map((item, idx) => (
@@ -162,7 +163,7 @@ export function QuestionReportCard({
       {/* 詳細評分 */}
       {SHOW_SCORES && result.detailedScores && (
         <div className="bg-white rounded-lg p-4 mb-4">
-          <h4 className="text-sm font-semibold text-gray-700 mb-3">Detailed Scores:</h4>
+          <h4 className="text-sm font-semibold text-gray-700 mb-3">{t('detailedScores')}:</h4>
           <DetailedScoresDisplay scores={result.detailedScores} layout="horizontal" />
         </div>
       )}
@@ -179,7 +180,7 @@ export function QuestionReportCard({
       {/* 舊版建議（向後兼容） */}
       {!result.suggestions && result.feedback && (
         <div className="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-400">
-          <h4 className="text-sm font-semibold text-blue-800 mb-2">💡 AI Feedback:</h4>
+          <h4 className="text-sm font-semibold text-blue-800 mb-2">💡 {t('aiFeedback')}:</h4>
           <p className="text-sm text-blue-700">{result.feedback}</p>
         </div>
       )}
@@ -191,7 +192,7 @@ export function QuestionReportCard({
           onClick={() => router.push(`/history/playback/${lessonId}/${result.stepId}`)}
           className="mt-4"
         >
-          Retry This Question
+          {t('retryQuestion')}
         </AppButton>
       )}
     </div>

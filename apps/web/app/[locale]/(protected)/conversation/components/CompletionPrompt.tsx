@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface CompletionPromptProps {
   isAllCompleted: boolean
@@ -9,6 +10,7 @@ interface CompletionPromptProps {
 }
 
 export default function CompletionPrompt({ isAllCompleted, onContinue, onEnd }: CompletionPromptProps) {
+  const t = useTranslations('conversationUI')
   const [show, setShow] = useState(false)
   const [completedAt, setCompletedAt] = useState<Date | null>(null)
 
@@ -34,8 +36,8 @@ export default function CompletionPrompt({ isAllCompleted, onContinue, onEnd }: 
         <div className="flex items-start gap-3">
           <span className="text-2xl">🎉</span>
           <div className="flex-1">
-            <h3 className="font-bold text-sm mb-1">Mission Complete!</h3>
-            <p className="text-xs mb-3">You have completed all conversation objectives.</p>
+            <h3 className="font-bold text-sm mb-1">{t('missionComplete')}</h3>
+            <p className="text-xs mb-3">{t('completedObjectives')}</p>
             <div className="flex gap-2">
               <button
                 onClick={() => {
@@ -44,13 +46,13 @@ export default function CompletionPrompt({ isAllCompleted, onContinue, onEnd }: 
                 }}
                 className="flex-1 bg-white/20 hover:bg-white/30 px-3 py-1.5 rounded text-xs font-medium transition"
               >
-                Continue Practice
+                {t('continuePractice')}
               </button>
               <button
                 onClick={onEnd}
                 className="flex-1 bg-white text-green-600 hover:bg-gray-100 px-3 py-1.5 rounded text-xs font-medium transition"
               >
-                View Report
+                {t('viewReport')}
               </button>
             </div>
           </div>

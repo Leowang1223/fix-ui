@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { useMediaSession } from '@/lib/media/MediaSessionProvider'
 import { useInterviewFlow } from '@/lib/useInterviewFlow'
 
@@ -14,6 +15,7 @@ const mockHints = [
 export type HintPaneProps = { flow: ReturnType<typeof useInterviewFlow> }
 
 export default function HintPane({ flow }: HintPaneProps) {
+  const t = useTranslations('hintPane')
   const { stream, ensureStream, videoEnabled } = useMediaSession()
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const [isHintOpen, setIsHintOpen] = useState(false)
@@ -56,14 +58,14 @@ export default function HintPane({ flow }: HintPaneProps) {
                 : 'bg-gray-100 text-gray-400 hover:bg-gray-200 hover:text-gray-500'
             }`}
             disabled={!hasHints}
-            title={hasHints ? (isHintOpen ? '隱藏提示' : '顯示提示') : '此題暫無提示'}
+            title={hasHints ? (isHintOpen ? t('hideHints') : t('showHints')) : t('noHints')}
             aria-label="切換提示卡片"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/>
             </svg>
           </button>
-          <span className="mt-1 text-xs text-gray-500 font-semibold">顯示提示</span>
+          <span className="mt-1 text-xs text-gray-500 font-semibold">{t('showHints')}</span>
 
           {isHintOpen && (
             <div
@@ -75,7 +77,7 @@ export default function HintPane({ flow }: HintPaneProps) {
                 <div className="space-y-2">
                   {hints && hints.length > 0 && (
                     <div>
-                      <h3 className="text-sm font-semibold text-gray-800 mb-1">Answer Hints</h3>
+                      <h3 className="text-sm font-semibold text-gray-800 mb-1">{t('answerHints')}</h3>
                       <ul className="list-disc ml-5 space-y-1 text-gray-700">
                         {hints.map((h, i) => (<li key={i}>{h}</li>))}
                       </ul>
@@ -83,7 +85,7 @@ export default function HintPane({ flow }: HintPaneProps) {
                   )}
                   {adv && adv.length > 0 && (
                      <div>
-                      <h3 className="text-sm font-semibold text-gray-800 mb-1">Advice</h3>
+                      <h3 className="text-sm font-semibold text-gray-800 mb-1">{t('advice')}</h3>
                       <ul className="list-disc ml-5 space-y-1 text-gray-700">
                         {adv.map((a, i) => (<li key={i}>{a}</li>))}
                       </ul>
@@ -91,7 +93,7 @@ export default function HintPane({ flow }: HintPaneProps) {
                   )}
                 </div>
               ) : (
-                <div className="text-sm text-gray-500">此題暫無提示</div>
+                <div className="text-sm text-gray-500">{t('noHints')}</div>
               )}
             </div>
           )}

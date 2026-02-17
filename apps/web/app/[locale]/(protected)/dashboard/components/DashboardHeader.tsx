@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 
 interface DashboardHeaderProps {
@@ -8,9 +9,12 @@ interface DashboardHeaderProps {
 }
 
 export default function DashboardHeader({
-  title = "talk learning",
-  subtitle = "Minimal glass UI with blue accents to keep your lessons, history, and flashcards aligned."
+  title,
+  subtitle
 }: DashboardHeaderProps) {
+  const t = useTranslations('dashboardHeader')
+  const displayTitle = title || t('defaultTitle')
+  const displaySubtitle = subtitle || t('defaultSubtitle')
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
@@ -24,7 +28,7 @@ export default function DashboardHeader({
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.1 }}
       >
-        Talk Learning
+        {t('chip')}
       </motion.p>
 
       <motion.h1
@@ -38,7 +42,7 @@ export default function DashboardHeader({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        {title}
+        {displayTitle}
       </motion.h1>
 
       <motion.p
@@ -47,7 +51,7 @@ export default function DashboardHeader({
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
       >
-        {subtitle}
+        {displaySubtitle}
       </motion.p>
     </motion.div>
   )

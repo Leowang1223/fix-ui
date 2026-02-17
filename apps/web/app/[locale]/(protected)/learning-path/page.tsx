@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useMemo } from "react"
 import { useRouter } from "@/i18n/navigation"
+import { useTranslations } from "next-intl"
 import { motion, AnimatePresence } from "framer-motion"
 import {
   ChevronRight,
@@ -40,31 +41,6 @@ interface LessonHistoryEntry {
   results: unknown[]
 }
 
-const CHAPTER_TITLES: Record<string, string> = {
-  'C1': 'Basic Chinese',
-  'C2': 'Intermediate Conversations',
-  'C3': 'Advanced Topics',
-  'C4': 'Daily Life',
-  'C5': 'Social Situations',
-  'C6': 'Business Chinese',
-  'C7': 'Travel & Leisure',
-  'C8': 'Cultural Topics',
-  'C9': 'Professional Communication',
-  'C10': 'Advanced Mastery'
-}
-
-const CHAPTER_DESCRIPTIONS: Record<string, string> = {
-  'C1': 'Master fundamental Chinese conversation skills',
-  'C2': 'Expand your speaking abilities with practical scenarios',
-  'C3': 'Handle complex conversations with confidence',
-  'C4': 'Learn to discuss everyday activities and routines',
-  'C5': 'Navigate social interactions with ease',
-  'C6': 'Communicate effectively in business settings',
-  'C7': 'Discuss travel plans and leisure activities',
-  'C8': 'Explore Chinese culture and traditions',
-  'C9': 'Master professional workplace communication',
-  'C10': 'Achieve fluency in advanced Chinese topics'
-}
 
 function ChapterItem({
   chapter,
@@ -81,6 +57,9 @@ function ChapterItem({
   onToggle: () => void
   onLessonClick: (lessonId: string) => void
 }) {
+  const tChapters = useTranslations('chapters')
+  const tLesson = useTranslations('lesson')
+  const tLP = useTranslations('learningPath')
   const { chapterLessons, completedCount, totalCount, progressPercent } = useMemo<{
     chapterLessons: LessonSummary[]
     completedCount: number
@@ -132,13 +111,11 @@ function ChapterItem({
           </div>
           <div className="text-left">
             <h3 className="font-semibold text-slate-800 text-sm sm:text-base">
-              {CHAPTER_TITLES[chapter.id] || chapter.id}
+              {tChapters(chapter.id as any)}
             </h3>
-            {CHAPTER_DESCRIPTIONS[chapter.id] && (
-              <p className="text-xs text-slate-400 mt-0.5 hidden sm:block">
-                {CHAPTER_DESCRIPTIONS[chapter.id]}
-              </p>
-            )}
+            <p className="text-xs text-slate-400 mt-0.5 hidden sm:block">
+              {tChapters(`${chapter.id}_desc` as any)}
+            </p>
             <div className="flex items-center gap-2 mt-1">
               <div
                 className="flex-1 h-1.5 w-20 sm:w-24 bg-slate-100 rounded-full overflow-hidden"
@@ -146,7 +123,7 @@ function ChapterItem({
                 aria-valuenow={progressPercent}
                 aria-valuemin={0}
                 aria-valuemax={100}
-                aria-label={`Chapter progress: ${progressPercent}%`}
+                aria-label={tLP('progress', { percent: progressPercent })}
               >
                 <motion.div
                   className="h-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"
@@ -191,7 +168,7 @@ function ChapterItem({
                     key={lesson.lesson_id}
                     onClick={() => onLessonClick(lesson.lesson_id)}
                     role="listitem"
-                    aria-label={`${lesson.title}, ${lesson.stepCount} steps${isCompleted ? ', completed' : isInProgress ? `, ${progress}% complete` : ''}`}
+                    aria-label={`${lesson.title}, ${tLesson('stepsCount', { count: lesson.stepCount })}${isCompleted ? ', completed' : isInProgress ? `, ${tLP('progress', { percent: progress })}` : ''}`}
                     className={`
                       w-full flex items-center justify-between p-3 sm:p-4 rounded-xl
                       transition-all touch-manipulation min-h-[56px]
@@ -221,7 +198,7 @@ function ChapterItem({
                           {lesson.title}
                         </span>
                         <div className="text-xs text-slate-400 mt-0.5">
-                          {lesson.stepCount} steps
+                          {tLesson('stepsCount', { count: lesson.stepCount })}
                         </div>
                       </div>
                     </div>
@@ -246,6 +223,10 @@ function ChapterItem({
 
 export default function LearningPathPage() {
   const router = useRouter()
+  const t = useTranslations('learningPath')
+  const tLesson = useTranslations('lesson')
+  const tCommon = useTranslations('common')
+  const tGuide = useTranslations('guide')
   const [chapters, setChapters] = useState<Chapter[]>([])
   const [lessons, setLessons] = useState<LessonSummary[]>([])
   const [lessonProgress, setLessonProgress] = useState<Record<string, number>>({})
@@ -304,8 +285,8 @@ export default function LearningPathPage() {
 
           const chapterList: Chapter[] = Object.entries(chapterMap).map(([id, chapterLessons]) => ({
             id,
-            title: CHAPTER_TITLES[id] || id,
-            description: CHAPTER_DESCRIPTIONS[id],
+            title: id,
+            description: undefined,
             lessons: chapterLessons.sort((a, b) => a.lessonNumber - b.lessonNumber)
           }))
 
@@ -365,14 +346,14 @@ export default function LearningPathPage() {
           <div className="relative z-10">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 mb-4">
               <BookOpen size={16} />
-              <span className="text-sm font-medium">Learning Path</span>
+              <span className="text-sm font-medium">{t('title')}</span>
             </div>
 
             <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-              Your Chinese Journey
+              {t('heroTitle')}
             </h1>
             <p className="text-purple-100 text-sm sm:text-base mb-6">
-              Master Chinese step by step through structured chapters and lessons.
+              {t('heroSubtitle')}
             </p>
 
             {/* Stats row */}
@@ -383,7 +364,7 @@ export default function LearningPathPage() {
                 </div>
                 <div>
                   <div className="text-lg font-bold">{completedCount}/{totalLessons}</div>
-                  <div className="text-xs text-purple-200">Lessons</div>
+                  <div className="text-xs text-purple-200">{t('lessonsLabel')}</div>
                 </div>
               </div>
               <div className="flex items-center gap-2">
@@ -392,7 +373,7 @@ export default function LearningPathPage() {
                 </div>
                 <div>
                   <div className="text-lg font-bold">{avgScore}%</div>
-                  <div className="text-xs text-purple-200">Avg Score</div>
+                  <div className="text-xs text-purple-200">{t('avgScoreLabel')}</div>
                 </div>
               </div>
               <div className="flex items-center gap-2">
@@ -401,7 +382,7 @@ export default function LearningPathPage() {
                 </div>
                 <div>
                   <div className="text-lg font-bold">{overallProgress}%</div>
-                  <div className="text-xs text-purple-200">Complete</div>
+                  <div className="text-xs text-purple-200">{t('completeLabel')}</div>
                 </div>
               </div>
             </div>
@@ -424,10 +405,10 @@ export default function LearningPathPage() {
         <section className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-lg sm:text-xl font-bold text-slate-800">
-              Chapters
+              {t('chaptersHeading')}
             </h2>
             <span className="text-xs text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
-              {chapters.length} Chapters
+              {chapters.length} {t('chaptersHeading')}
             </span>
           </div>
 
@@ -449,9 +430,9 @@ export default function LearningPathPage() {
             ) : (
               <EmptyState
                 type="lesson"
-                title="Loading courses..."
-                description="If this persists, please check your network connection"
-                actionLabel="Retry"
+                title={tLesson('loadingCourses')}
+                description={tLesson('networkError')}
+                actionLabel={tCommon('retry')}
                 onAction={() => window.location.reload()}
               />
             )}
@@ -464,18 +445,18 @@ export default function LearningPathPage() {
         pageId="learning-path"
         steps={[
           {
-            title: 'Chapter Structure',
-            description: 'Lessons are organized into chapters by topic. Tap a chapter to expand and see its lessons.',
+            title: tGuide('chapterStructureTitle'),
+            description: tGuide('chapterStructureDesc'),
             icon: BookOpen,
           },
           {
-            title: 'Track Your Progress',
-            description: 'Each lesson shows a completion percentage. Green means fully completed!',
+            title: tGuide('trackProgressTitle'),
+            description: tGuide('trackProgressDesc'),
             icon: CheckCircle2,
           },
           {
-            title: 'Start a Lesson',
-            description: 'Tap any lesson to begin practicing pronunciation with step-by-step guidance.',
+            title: tGuide('startLessonTitle'),
+            description: tGuide('startLessonDesc'),
             icon: ChevronRight,
           },
         ]}

@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { Volume2, Check, X, AlertTriangle, BookmarkPlus } from 'lucide-react'
 import { ToneCurve, ToneBadge } from './ToneCurve'
@@ -163,6 +164,7 @@ function SyllableCard({
 
 // Score display component
 function ScoreDisplay({ score }: { score: number }) {
+  const t = useTranslations('syllableFeedback')
   const getScoreColor = () => {
     if (score >= 90) return 'from-green-400 to-emerald-500'
     if (score >= 70) return 'from-blue-400 to-blue-500'
@@ -171,10 +173,10 @@ function ScoreDisplay({ score }: { score: number }) {
   }
 
   const getMessage = () => {
-    if (score >= 90) return 'Excellent!'
-    if (score >= 70) return 'Good job!'
-    if (score >= 50) return 'Keep practicing!'
-    return 'Try again!'
+    if (score >= 90) return t('excellent')
+    if (score >= 70) return t('goodJob')
+    if (score >= 50) return t('keepPracticing')
+    return t('tryAgain')
   }
 
   return (
@@ -199,11 +201,12 @@ function ScoreDisplay({ score }: { score: number }) {
 
 // Legend component
 function FeedbackLegend({ compact }: { compact?: boolean }) {
+  const t = useTranslations('syllableFeedback')
   const items = [
-    { status: 'correct', label: 'Correct' },
-    { status: 'tone-error', label: 'Tone Error' },
-    { status: 'wrong', label: 'Wrong' },
-    { status: 'missing', label: 'Missing' },
+    { status: 'correct', label: t('correctLabel') },
+    { status: 'tone-error', label: t('toneError') },
+    { status: 'wrong', label: t('wrong') },
+    { status: 'missing', label: t('missingLabel') },
   ]
 
   return (
@@ -233,6 +236,7 @@ export function SyllableFeedbackPanel({
   showToneCurve = true,
   compact = false,
 }: SyllableFeedbackPanelProps) {
+  const t = useTranslations('syllableFeedback')
   // Calculate statistics
   const correctCount = syllables.filter(s => s.status === 'correct').length
   const totalCount = syllables.filter(s => s.status !== 'extra').length
@@ -261,7 +265,7 @@ export function SyllableFeedbackPanel({
         <button
           onClick={onSaveFlashcard}
           className="absolute top-4 right-4 p-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-600 transition-colors"
-          title="Save to Flashcards"
+          title={t('saveToFlashcards')}
         >
           <BookmarkPlus size={18} />
         </button>
@@ -271,10 +275,10 @@ export function SyllableFeedbackPanel({
       <div className="flex items-center justify-between mb-4 pr-12">
         <div>
           <h3 className={`font-bold text-gray-800 ${compact ? 'text-base' : 'text-lg'}`}>
-            Pronunciation
+            {t('pronunciation')}
           </h3>
           <p className="text-sm text-gray-500">
-            {correctCount}/{totalCount} Correct
+            {t('correctCount', { correct: correctCount, total: totalCount })}
           </p>
         </div>
         <ScoreDisplay score={overallScore} />
@@ -307,7 +311,7 @@ export function SyllableFeedbackPanel({
             className="flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-600 rounded-full hover:bg-blue-100 transition-colors"
           >
             <Volume2 size={16} />
-            <span className="text-sm font-medium">Play Correct Pronunciation</span>
+            <span className="text-sm font-medium">{t('playCorrectPronunciation')}</span>
           </button>
         </div>
       )}
@@ -315,7 +319,7 @@ export function SyllableFeedbackPanel({
       {/* English hint - at bottom */}
       {englishHint && (
         <div className="text-center mb-4 pt-3 border-t border-gray-100">
-          <span className="text-sm text-gray-500">English: </span>
+          <span className="text-sm text-gray-500">{t('englishLabel')}</span>
           <span className="text-sm font-medium text-gray-700">{englishHint}</span>
         </div>
       )}
@@ -332,7 +336,7 @@ export function SyllableFeedbackPanel({
                 ${compact ? 'text-sm' : ''}
               `}
             >
-              Retry
+              {t('retryButton')}
             </button>
           )}
           {onNext && (
@@ -345,7 +349,7 @@ export function SyllableFeedbackPanel({
                 ${compact ? 'text-sm' : ''}
               `}
             >
-              Next
+              {t('nextButton')}
             </button>
           )}
         </div>

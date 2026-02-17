@@ -1,3 +1,6 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import { AppButton } from '@/components/ui/AppButton'
 import { Mic, Play, Square } from 'lucide-react'
 
@@ -25,6 +28,7 @@ export function RecordingControls({
   onStopRecording,
   onPlayRecording
 }: RecordingControlsProps) {
+  const t = useTranslations('playback')
   // 🔍 調試日誌
   console.log('🎙️ RecordingControls 狀態:', {
     isRecording,
@@ -37,7 +41,7 @@ export function RecordingControls({
     <div className="bg-white rounded-xl shadow-lg p-8">
       <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
         <Mic className="h-6 w-6" />
-        Recording Controls
+        {t('recordingControls')}
       </h3>
 
       <div className="space-y-4">
@@ -49,7 +53,7 @@ export function RecordingControls({
             disabled={isPlaying || isRecording}
             className="max-w-none w-full"
           >
-            {isPlaying ? 'Playing…' : 'Listen to My Recording'}
+            {isPlaying ? t('playing') : t('listenToRecording')}
           </AppButton>
         )}
 
@@ -62,7 +66,7 @@ export function RecordingControls({
             variant="danger"
             className="max-w-none w-full px-6 py-4"
           >
-            Start Recording
+            {t('startRecording')}
           </AppButton>
         ) : (
           <AppButton
@@ -71,14 +75,14 @@ export function RecordingControls({
             variant="danger"
             className="max-w-none w-full px-6 py-4 animate-pulse"
           >
-            Stop Recording
+            {t('stopRecording')}
           </AppButton>
         )}
 
         {isSubmitting && (
           <div className="text-center py-4">
             <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-            <p className="text-gray-600 mt-2">Scoring your pronunciation...</p>
+            <p className="text-gray-600 mt-2">{t('scoring')}</p>
           </div>
         )}
       </div>
