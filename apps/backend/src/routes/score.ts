@@ -1,7 +1,7 @@
 import type { Request, Response } from 'express';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import multer from 'multer';
-import { getLocaleFromRequest, getFeedbackLanguagePrompt } from '../utils/i18n';
+import { getLocaleFromRequest, getFeedbackLanguagePrompt, SCORE_FALLBACK_FEEDBACK } from '../utils/i18n';
 
 // 設置 multer 來處理文件上傳
 const upload = multer({ storage: multer.memoryStorage() });
@@ -47,9 +47,11 @@ export async function scoreHandler(req: Request, res: Response) {
       hasAudio: !!audioFile
     });
 
+    const locale = getLocaleFromRequest(req);
+
     // 🎯 方案 1: 使用 Gemini API 進行語音轉文字和評分（如果有 API key）
     const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || '';
-    
+
     if (apiKey && audioFile) {
       try {
         const genAI = new GoogleGenerativeAI(apiKey);
@@ -58,7 +60,6 @@ export async function scoreHandler(req: Request, res: Response) {
         // 將音頻轉為 base64
         const audioBase64 = audioFile.buffer.toString('base64');
 
-        const locale = getLocaleFromRequest(req);
         const feedbackLangPrompt = getFeedbackLanguagePrompt(locale);
 
         const prompt = [
@@ -213,10 +214,10 @@ export async function scoreHandler(req: Request, res: Response) {
       },
       transcript: expectedAnswers[0] || '',
       feedback: overall_score >= 90
-        ? 'Excellent pronunciation! Your tone and fluency are outstanding. Keep up the great work!'
+        ? SCORE_FALLBACK_FEEDBACK[locale].excellent
         : overall_score >= 75
-        ? 'Good job! Your pronunciation is clear and understandable. Continue practicing to perfect your tones.'
-        : 'Keep practicing! Focus on pronunciation accuracy and tone. Try to speak more clearly and confidently.',
+        ? SCORE_FALLBACK_FEEDBACK[locale].good
+        : SCORE_FALLBACK_FEEDBACK[locale].needsPractice,
       syllables: mockSyllables,
       method: 'mock'
     };

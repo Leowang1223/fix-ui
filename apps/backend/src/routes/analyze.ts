@@ -7,6 +7,7 @@ import path from 'path';
 import { existsSync } from 'fs';
 import { readFile } from 'fs/promises';
 import { saveReportToSessionLog } from '../utils/fileStore';
+import { getLocaleFromRequest } from '../utils/i18n';
 
 // 修改：條件性選擇提取器，如果有 API 金鑰則使用 Gemini，否則使用 Dummy
 const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || '';
@@ -51,6 +52,7 @@ async function getLessonsData(interviewType: string) {
 export async function analyzeHandler(req:Request,res:Response){
   const body = req.body as SessionInput;
   if(!body?.items?.length) return res.status(422).json({code:'INVALID_INPUT'});
+  const locale = getLocaleFromRequest(req);
 
   // 確保 interviewType 是中文課程格式
   if (!body.interviewType?.startsWith('L') || !/^\d+$/.test(body.interviewType.substring(1))) {
@@ -183,7 +185,7 @@ ${p.advice}`;
         }
         return Array.from(bulletsSet).slice(0, 8);
       })();
-  const out:AnalysisOutput={ overview:ov, per_question:per, recommendations: bullets.length? bullets : recommend(per,ov), version:'core.v1.2.0+llm.v1'};
+  const out:AnalysisOutput={ overview:ov, per_question:per, recommendations: bullets.length? bullets : recommend(per,ov,locale), version:'core.v1.2.0+llm.v1'};
   res.json(out);
 }
 

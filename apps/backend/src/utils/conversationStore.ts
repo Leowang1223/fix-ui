@@ -26,6 +26,7 @@ export interface VocabularyItem {
 export interface ConversationSession {
   sessionId: string
   mode: 'selected' | 'all' | 'free' | 'scenario'
+  locale?: string                           // 用戶語言 (en/vi/th/id)
   topics?: string[]
   scenarioId?: string
   userRole?: string

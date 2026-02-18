@@ -4,7 +4,7 @@ import fs from 'fs'
 import path from 'path'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 import { conversationStore, ScenarioCheckpoint, VocabularyItem } from '../utils/conversationStore'
-import { getLocaleFromRequest, getFeedbackLanguagePrompt } from '../utils/i18n'
+import { getLocaleFromRequest, getFeedbackLanguagePrompt, getTranslationLanguageName, CONVERSATION_FALLBACKS, type SupportedLocale } from '../utils/i18n'
 import { authenticateUser, AuthRequest } from '../middleware/auth'
 import { supabase } from '../lib/supabase'
 
@@ -281,8 +281,10 @@ async function generateSuggestions(
       userRole?: string
     }
     reviewVocabulary?: VocabularyItem[]  // 複習模式詞彙
-  }
+  },
+  locale: SupportedLocale = 'en'
 ): Promise<Array<{ chinese: string; pinyin: string; english: string; type: string }>> {
+  const suggestionTranslationLang = getTranslationLanguageName(locale)
   console.log('🔧 generateSuggestions called')
   console.log('   Context mode:', context.mode)
   console.log('   AI last message:', context.aiLastMessage)
@@ -417,7 +419,7 @@ SUGGESTION TYPES:
 QUALITY REQUIREMENTS:
 - Each suggestion MUST sound like something people actually say in daily life
 - Pinyin must use correct tone marks (ā á ǎ à, ē é ě è, ī í ǐ ì, ō ó ǒ ò, ū ú ǔ ù, ǖ ǘ ǚ ǜ)
-- English translations must be accurate and natural
+- The "english" field MUST contain a ${suggestionTranslationLang} translation (NOT English unless the user's language is English)
 - Suggestions must be 5-15 characters in length (SHORT!)
 
 EXAMPLE OUTPUT (for review mode, AI asked "你吃早餐了嗎？"):
@@ -551,8 +553,10 @@ router.post('/start', authenticateUser, async (req: AuthRequest, res) => {
   try {
     const { topicMode, scenarioId, userRole, interviewerId } = req.body
     const userId = req.user!.id
+    const locale = getLocaleFromRequest(req) as SupportedLocale
+    const translationLang = getTranslationLanguageName(locale)
 
-    console.log('🎬 Starting conversation:', { topicMode, scenarioId, userRole, userId })
+    console.log('🎬 Starting conversation:', { topicMode, scenarioId, userRole, userId, locale })
 
     // 初始化 Gemini
     const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY
@@ -629,7 +633,7 @@ You are starting a conversation. Give a natural greeting in Traditional Chinese 
 Return in JSON format:
 {
   "chinese": "greeting in Traditional Chinese (繁體中文)",
-  "english": "English translation"
+  "english": "${translationLang} translation"
 }`
 
             const result = await model.generateContent({
@@ -648,10 +652,10 @@ Return in JSON format:
           } catch (error) {
             console.warn('⚠️ Failed to generate first message with Gemini:', error)
             // Use default greeting as fallback
-            firstMessage = { chinese: '你好！', english: 'Hello!' }
+            firstMessage = { chinese: CONVERSATION_FALLBACKS[locale].greeting.chinese, english: CONVERSATION_FALLBACKS[locale].greeting.translation }
           }
         } else {
-          firstMessage = { chinese: '你好！', english: 'Hello!' }
+          firstMessage = { chinese: CONVERSATION_FALLBACKS[locale].greeting.chinese, english: CONVERSATION_FALLBACKS[locale].greeting.translation }
         }
       } else {
         // 用戶先說話 - 不生成 AI 消息
@@ -675,7 +679,7 @@ Return in JSON format:
             } : undefined,
             userRole: userRole
           }
-        })
+        }, locale)
       } catch (error) {
         console.warn('⚠️ Gemini 失敗，使用靜態建議')
 
@@ -696,11 +700,7 @@ Return in JSON format:
 
         // Fallback 2: 通用建議 (最後手段)
         if (suggestions.length === 0) {
-          suggestions = [
-            { chinese: '好的', pinyin: 'hǎo de', english: 'Okay', type: 'safe' },
-            { chinese: '我明白了', pinyin: 'wǒ míng bai le', english: 'I understand', type: 'safe' },
-            { chinese: '謝謝', pinyin: 'xiè xie', english: 'Thank you', type: 'safe' }
-          ]
+          suggestions = CONVERSATION_FALLBACKS[locale].suggestionFallbacks
         }
       }
     } else if (topicMode === 'all' || topicMode === 'selected') {
@@ -745,7 +745,7 @@ Return in JSON format:
 **複習詞彙清單** (只用 1-2 個):
 ${vocabList}
 
-返回 JSON：{"chinese": "...", "english": "..."}`
+返回 JSON：{"chinese": "...", "english": "${translationLang} translation of your Chinese response"}`
 
       try {
         const result = await model.generateContent({
@@ -763,15 +763,8 @@ ${vocabList}
       } catch (error) {
         console.warn('⚠️ Failed to generate review opening with Gemini:', error)
         // 使用自然開場白（避免機械式的「準備好了嗎？」）
-        const naturalOpenings = [
-          { chinese: '早安！最近過得怎麼樣？', english: 'Good morning! How have you been recently?' },
-          { chinese: '你好呀！今天要做什麼？', english: 'Hello! What are you doing today?' },
-          { chinese: '嗨！最近有什麼有趣的事嗎？', english: 'Hi! Any interesting things recently?' },
-          { chinese: '你好啊！這週過得如何？', english: 'Hi! How was your week?' },
-          { chinese: '今天過得好嗎？', english: 'How was your day?' }
-        ]
-        const randomIndex = Math.floor(Math.random() * naturalOpenings.length)
-        firstMessage = naturalOpenings[randomIndex]
+        const fb = CONVERSATION_FALLBACKS[locale]
+        firstMessage = { chinese: fb.greeting.chinese, english: fb.greeting.translation }
         console.log('📝 Using natural fallback opening:', firstMessage.chinese)
       }
 
@@ -782,7 +775,7 @@ ${vocabList}
           conversationHistory: [],
           aiLastMessage: firstMessage?.chinese || null,
           reviewVocabulary: reviewData.vocabulary
-        })
+        }, locale)
       } catch (error) {
         console.warn('⚠️ Failed to generate suggestions for review mode')
         // Natural fallback responses (避免元對話，使用自然日常回應)
@@ -815,6 +808,7 @@ ${vocabList}
 
       const session = conversationStore.createSession({
         mode: topicMode,
+        locale,
         checkpoints: [],
         conversationHistory,
         reviewVocabulary,  // 新增
@@ -846,14 +840,14 @@ ${vocabList}
       })
     } else {
       // Free talk 模式：AI 總是先說話
-      firstMessage = { chinese: '你好！', english: 'Hello!' }
+      firstMessage = { chinese: CONVERSATION_FALLBACKS[locale].greeting.chinese, english: CONVERSATION_FALLBACKS[locale].greeting.translation }
 
       try {
         suggestions = await generateSuggestions(model, {
           mode: topicMode,
           conversationHistory: [],
           aiLastMessage: firstMessage.chinese
-        })
+        }, locale)
       } catch (error) {
         console.warn('⚠️ Failed to generate suggestions')
         suggestions = []
@@ -874,6 +868,7 @@ ${vocabList}
 
     const session = conversationStore.createSession({
       mode: topicMode,
+      locale,
       scenarioId,
       userRole,
       aiRole: aiRole?.id,
@@ -941,6 +936,8 @@ router.post('/message', authenticateUser, upload.single('audio'), async (req: Au
       })
     }
 
+    const sessionLocale = (session.locale || getLocaleFromRequest(req)) as SupportedLocale
+    const translationLang = getTranslationLanguageName(sessionLocale)
     const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY
 
     if (!apiKey || !audioFile) {
@@ -1165,7 +1162,8 @@ Return the exact transcription only.`
       }
     }
 
-    let reply: { chinese: string; english: string } = { chinese: '好的。', english: 'Okay.' }
+    const fb = CONVERSATION_FALLBACKS[sessionLocale]
+    let reply: { chinese: string; english: string } = { chinese: fb.okay.chinese, english: fb.okay.translation }
 
     try {
       // 找出下一個未完成的 checkpoint
@@ -1509,7 +1507,7 @@ If the user mentioned something related to the next checkpoint, acknowledge it a
 Return in JSON format:
 {
   "chinese": "your response in Traditional Chinese (繁體中文)",
-  "english": "English translation"
+  "english": "${translationLang} translation"
 }`
 
       const aiResult = await model.generateContent({
@@ -1526,7 +1524,7 @@ Return in JSON format:
       // 防禦性檢查：如果 Gemini 回傳陣列，取第一個元素
       if (Array.isArray(parsedReply)) {
         console.warn('⚠️ Gemini returned array instead of object, using first element')
-        reply = parsedReply[0] || { chinese: '好的。', english: 'Okay.' }
+        reply = parsedReply[0] || { chinese: fb.okay.chinese, english: fb.okay.translation }
       } else {
         reply = parsedReply
       }
@@ -1535,7 +1533,7 @@ Return in JSON format:
     } catch (error) {
       console.error('❌ AI Reply Error:', error)
       // 使用備用回覆，讓對話可以繼續
-      reply = { chinese: '我明白了。請繼續。', english: 'I understand. Please continue.' }
+      reply = { chinese: fb.sorry.chinese, english: fb.sorry.translation }
       console.log('⚠️ Using fallback reply')
     }
 
@@ -1615,7 +1613,7 @@ Return in JSON format:
           userRole: session.userRole
         } : undefined,
         reviewVocabulary: session.reviewVocabulary  // 複習模式詞彙
-      })
+      }, sessionLocale)
       console.log('✅ Suggestions generated successfully:', suggestions.length)
     } catch (error) {
       console.error('❌ Gemini generateSuggestions failed:', error)
@@ -1640,11 +1638,9 @@ Return in JSON format:
 
       // Fallback 2: 通用建議 (最後手段)
       if (suggestions.length === 0) {
-        suggestions = [
-          { chinese: '好的', pinyin: 'hǎo de', english: 'Okay', type: 'safe' },
-          { chinese: '我明白了', pinyin: 'wǒ míng bai le', english: 'I understand', type: 'safe' },
-          { chinese: '謝謝', pinyin: 'xiè xie', english: 'Thank you', type: 'safe' }
-        ]
+        suggestions = CONVERSATION_FALLBACKS[sessionLocale].suggestionFallbacks.map(s => ({
+          chinese: s.chinese, pinyin: s.pinyin, english: s.translation, type: s.type
+        }))
       }
     }
 

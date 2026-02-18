@@ -1,0 +1,199 @@
+/**
+ * Translate lesson JSON files to Vietnamese, Thai, and Indonesian
+ *
+ * Usage:
+ *   node scripts/translate-lessons.js              # Run translation
+ *   node scripts/translate-lessons.js --dry-run    # Preview only
+ *   node scripts/translate-lessons.js --chapter 1  # Only translate chapter 1
+ *
+ * Requires GEMINI_API_KEY in apps/backend/.env
+ */
+
+const fs = require('fs')
+const path = require('path')
+
+// Load .env from backend
+const envPath = path.join(__dirname, '..', 'apps', 'backend', '.env')
+if (fs.existsSync(envPath)) {
+  const envContent = fs.readFileSync(envPath, 'utf-8')
+  for (const line of envContent.split('\n')) {
+    const match = line.match(/^(\w+)=(.*)$/)
+    if (match) process.env[match[1]] = match[2].trim()
+  }
+}
+
+const { GoogleGenerativeAI } = require('@google/generative-ai')
+
+const LESSONS_DIR = path.join(__dirname, '..', 'apps', 'backend', 'src', 'plugins', 'chinese-lessons')
+
+const LOCALES = {
+  vi: 'Vietnamese (Tiếng Việt)',
+  th: 'Thai (ภาษาไทย)',
+  id: 'Indonesian (Bahasa Indonesia)',
+}
+
+const args = process.argv.slice(2)
+const DRY_RUN = args.includes('--dry-run')
+const chapterFilter = args.includes('--chapter') ? args[args.indexOf('--chapter') + 1] : null
+
+async function translateBatch(model, strings, targetLang) {
+  const prompt = `Translate the following English strings to ${targetLang}.
+These are used in a Chinese language learning app for Southeast Asian learners.
+
+RULES:
+- Keep translations natural and conversational
+- For vocabulary hints (short words/phrases), keep them concise
+- For encouragement messages, keep the encouraging and friendly tone
+- For example sentences, translate accurately
+- Return ONLY a JSON array of translated strings in the same order
+
+Input strings:
+${JSON.stringify(strings, null, 2)}
+
+Return a JSON array of ${strings.length} translated strings:`
+
+  const result = await model.generateContent({
+    contents: [{ role: 'user', parts: [{ text: prompt }] }],
+    generationConfig: {
+      temperature: 0.3,
+      responseMimeType: 'application/json',
+    },
+  })
+
+  const responseText = result.response.candidates?.[0]?.content?.parts?.[0]?.text || '[]'
+  const translated = JSON.parse(responseText)
+
+  if (translated.length !== strings.length) {
+    throw new Error(`Expected ${strings.length} translations, got ${translated.length}`)
+  }
+
+  return translated
+}
+
+async function translateLesson(model, lessonPath) {
+  const content = fs.readFileSync(lessonPath, 'utf-8')
+  const lesson = JSON.parse(content)
+
+  if (!lesson.steps || lesson.steps.length === 0) {
+    console.log(`  ⏭️  No steps, skipping`)
+    return false
+  }
+
+  // Check if already translated
+  if (lesson.steps[0].hints) {
+    console.log(`  ⏭️  Already translated, skipping`)
+    return false
+  }
+
+  // Collect all strings to translate per field
+  const hints = lesson.steps.map(s => s.english_hint || '')
+  const encouragements = lesson.steps.map(s => s.encouragement || '')
+  const exampleSentences = lesson.steps.map(s => s.example_sentence_en || '')
+
+  // Combine all strings into one batch for efficiency
+  const allStrings = [...hints, ...encouragements, ...exampleSentences]
+  const stepCount = lesson.steps.length
+
+  if (DRY_RUN) {
+    console.log(`  📋 Would translate ${allStrings.length} strings (${stepCount} steps × 3 fields)`)
+    console.log(`     Sample: "${hints[0]}" → [vi/th/id]`)
+    return false
+  }
+
+  // Translate to each locale
+  let successCount = 0
+  for (const [locale, langName] of Object.entries(LOCALES)) {
+    console.log(`    🌐 Translating to ${locale}...`)
+
+    try {
+      const translated = await translateBatch(model, allStrings, langName)
+
+      // Split back into 3 groups
+      const translatedHints = translated.slice(0, stepCount)
+      const translatedEncouragements = translated.slice(stepCount, stepCount * 2)
+      const translatedExamples = translated.slice(stepCount * 2)
+
+      // Apply to steps
+      for (let i = 0; i < lesson.steps.length; i++) {
+        if (!lesson.steps[i].hints) lesson.steps[i].hints = {}
+        if (!lesson.steps[i].encouragements) lesson.steps[i].encouragements = {}
+        if (!lesson.steps[i].example_sentences) lesson.steps[i].example_sentences = {}
+
+        lesson.steps[i].hints[locale] = translatedHints[i]
+        lesson.steps[i].encouragements[locale] = translatedEncouragements[i]
+        lesson.steps[i].example_sentences[locale] = translatedExamples[i]
+      }
+      successCount++
+      console.log(`    ✅ ${locale} done`)
+    } catch (error) {
+      console.log(`    ❌ Failed for ${locale}: ${error.message}`)
+      // Continue with other locales
+    }
+
+    // Rate limiting: wait 500ms between API calls
+    await new Promise(r => setTimeout(r, 500))
+  }
+
+  // Only write back if at least one locale succeeded
+  if (successCount > 0) {
+    fs.writeFileSync(lessonPath, JSON.stringify(lesson, null, 2) + '\n', 'utf-8')
+    return true
+  }
+  console.log(`  ⚠️  No translations succeeded, file unchanged`)
+  return false
+}
+
+async function main() {
+  const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY
+  if (!apiKey) {
+    console.error('❌ No GEMINI_API_KEY found. Set it in apps/backend/.env')
+    process.exit(1)
+  }
+
+  console.log(DRY_RUN ? '🔍 DRY RUN MODE' : '🚀 TRANSLATION MODE')
+  console.log(`📂 Lessons dir: ${LESSONS_DIR}`)
+
+  const genAI = new GoogleGenerativeAI(apiKey)
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' })
+
+  // Find all chapter directories
+  const chapters = fs.readdirSync(LESSONS_DIR, { withFileTypes: true })
+    .filter(d => d.isDirectory() && d.name.startsWith('chapter-'))
+    .sort((a, b) => a.name.localeCompare(b.name))
+
+  let totalTranslated = 0
+  let totalSkipped = 0
+
+  for (const chapter of chapters) {
+    const chapterNum = chapter.name.replace('chapter-', '')
+    if (chapterFilter && chapterNum !== chapterFilter.padStart(2, '0')) continue
+
+    console.log(`\n📖 Chapter ${chapterNum}`)
+    const chapterPath = path.join(LESSONS_DIR, chapter.name)
+    const lessonFiles = fs.readdirSync(chapterPath)
+      .filter(f => f.startsWith('lesson-') && f.endsWith('.json'))
+      .sort()
+
+    for (const file of lessonFiles) {
+      const lessonPath = path.join(chapterPath, file)
+      console.log(`  📄 ${file}`)
+
+      try {
+        const translated = await translateLesson(model, lessonPath)
+        if (translated) {
+          totalTranslated++
+          console.log(`  ✅ Done`)
+        } else {
+          totalSkipped++
+        }
+      } catch (error) {
+        console.error(`  ❌ Error: ${error.message}`)
+        totalSkipped++
+      }
+    }
+  }
+
+  console.log(`\n📊 Summary: ${totalTranslated} translated, ${totalSkipped} skipped`)
+}
+
+main().catch(console.error)

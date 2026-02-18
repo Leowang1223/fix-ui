@@ -1,6 +1,7 @@
 import express from 'express'
 import fs from 'fs'
 import path from 'path'
+import { getLocaleFromRequest } from '../utils/i18n'
 
 const router = express.Router()
 
@@ -138,6 +139,30 @@ router.get('/:id', (req, res) => {
 
     const content = fs.readFileSync(lessonPath, 'utf-8')
     const lesson = JSON.parse(content)
+
+    // Locale-aware field mapping: override English fields with user's locale
+    const locale = getLocaleFromRequest(req)
+    if (locale !== 'en' && lesson.steps) {
+      lesson.steps = lesson.steps.map((step: any) => {
+        const mapped = {
+          ...step,
+          english_hint: step.hints?.[locale] || step.english_hint,
+          encouragement: step.encouragements?.[locale] || step.encouragement,
+          example_sentence_en: step.example_sentences?.[locale] || step.example_sentence_en,
+        }
+        // Remove multi-language objects to reduce payload
+        delete mapped.hints
+        delete mapped.encouragements
+        delete mapped.example_sentences
+        return mapped
+      })
+    } else if (lesson.steps) {
+      // For English locale, also clean up multi-language objects
+      lesson.steps = lesson.steps.map((step: any) => {
+        const { hints, encouragements, example_sentences, ...rest } = step
+        return rest
+      })
+    }
 
     res.json(lesson)
   } catch (error) {
