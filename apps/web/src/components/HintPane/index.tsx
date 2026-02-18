@@ -59,7 +59,7 @@ export default function HintPane({ flow }: HintPaneProps) {
             }`}
             disabled={!hasHints}
             title={hasHints ? (isHintOpen ? t('hideHints') : t('showHints')) : t('noHints')}
-            aria-label="切換提示卡片"
+            aria-label={hasHints ? (isHintOpen ? t('hideHints') : t('showHints')) : t('noHints')}
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/>
@@ -71,7 +71,7 @@ export default function HintPane({ flow }: HintPaneProps) {
             <div
               className="absolute left-0 top-full mt-2 z-10 w-72 max-w-[75vw] bg-yellow-50 border border-yellow-200 shadow-lg rounded-md p-3 transition-all duration-200 ease-out origin-top-left"
               role="dialog"
-              aria-label="提示卡片"
+              aria-label={t('hintCard')}
             >
               {hasHints ? (
                 <div className="space-y-2">

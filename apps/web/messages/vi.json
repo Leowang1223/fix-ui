@@ -610,7 +610,12 @@
     "sourceCourse": "Lỗi bài học được lưu tự động",
     "sourcePractice": "Được lưu trong phiên luyện tập",
     "sourceCustom": "Thẻ tùy chỉnh bạn tạo",
-    "sourceSynced": "Nội dung đồng bộ khác"
+    "sourceSynced": "Nội dung đồng bộ khác",
+    "chinese": "Tiếng Trung",
+    "chinesePlaceholder": "VD: 你好",
+    "pinyinLabel": "Phiên âm Pinyin",
+    "pinyinPlaceholder": "VD: nǐ hǎo",
+    "englishPlaceholder": "VD: Hello"
   },
   "analysis": {
     "loadFailed": "Tải thất bại",
@@ -734,7 +739,10 @@
     "turnsWithIssues": "lượt có lỗi",
     "commonIssues": "Các lỗi thường gặp cần chú ý",
     "recommendations": "Đề xuất",
-    "turnByTurnAnalysis": "Phân tích từng lượt"
+    "turnByTurnAnalysis": "Phân tích từng lượt",
+    "severityMinor": "Nhẹ",
+    "severityModerate": "Trung bình",
+    "severityMajor": "Nghiêm trọng"
   },
   "trendChart": {
     "days": "ngày",
@@ -754,7 +762,9 @@
     "history": "Lịch sử",
     "flashcards": "Thẻ ghi nhớ",
     "signedIn": "Đã đăng nhập",
-    "logOut": "Đăng xuất"
+    "logOut": "Đăng xuất",
+    "mainNavigation": "Điều hướng chính",
+    "userMenu": "Menu người dùng"
   },
   "dashboardHeader": {
     "chip": "Talk Learning",
@@ -777,6 +787,7 @@
     "hideHints": "Ẩn gợi ý",
     "noHints": "Không có gợi ý cho câu này",
     "answerHints": "Gợi ý trả lời",
-    "advice": "Lời khuyên"
+    "advice": "Lời khuyên",
+    "hintCard": "Thẻ gợi ý"
   }
 }

@@ -65,15 +65,22 @@ interface ConversationCorrectionReportProps {
 
 // Severity badge component
 function SeverityBadge({ severity }: { severity: 'minor' | 'moderate' | 'major' }) {
+  const t = useTranslations('correction')
   const colors = {
     minor: 'bg-yellow-100 text-yellow-700 border-yellow-200',
     moderate: 'bg-orange-100 text-orange-700 border-orange-200',
     major: 'bg-red-100 text-red-700 border-red-200'
   }
 
+  const labels: Record<string, string> = {
+    minor: t('severityMinor'),
+    moderate: t('severityModerate'),
+    major: t('severityMajor')
+  }
+
   return (
     <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full border ${colors[severity]}`}>
-      {severity}
+      {labels[severity]}
     </span>
   )
 }

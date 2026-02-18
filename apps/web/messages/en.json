@@ -610,6 +610,11 @@
     "sourceCourse": "Course mistakes saved automatically",
     "sourcePractice": "Saved during practice sessions",
     "sourceCustom": "Custom flashcards you create",
+    "chinese": "Chinese",
+    "chinesePlaceholder": "e.g. 你好",
+    "pinyinLabel": "Chinese Pinyin",
+    "pinyinPlaceholder": "e.g. nǐ hǎo",
+    "englishPlaceholder": "e.g. Hello",
     "sourceSynced": "Other synced content"
   },
   "analysis": {
@@ -734,7 +739,10 @@
     "turnsWithIssues": "turns with issues",
     "commonIssues": "Common Issues to Focus On",
     "recommendations": "Recommendations",
-    "turnByTurnAnalysis": "Turn-by-Turn Analysis"
+    "turnByTurnAnalysis": "Turn-by-Turn Analysis",
+    "severityMinor": "Minor",
+    "severityModerate": "Moderate",
+    "severityMajor": "Major"
   },
   "trendChart": {
     "days": "days",
@@ -754,7 +762,9 @@
     "history": "History",
     "flashcards": "Flashcards",
     "signedIn": "Signed in",
-    "logOut": "Log out"
+    "logOut": "Log out",
+    "mainNavigation": "Main navigation",
+    "userMenu": "User menu"
   },
   "dashboardHeader": {
     "chip": "Talk Learning",
@@ -777,6 +787,7 @@
     "hideHints": "Hide hints",
     "noHints": "No hints for this question",
     "answerHints": "Answer Hints",
-    "advice": "Advice"
+    "advice": "Advice",
+    "hintCard": "Hint card"
   }
 }

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { type ScenarioCheckpoint } from '@/lib/api'
 
@@ -13,6 +13,7 @@ interface ProgressTrackerProps {
 
 export default function ProgressTracker({ checkpoints, objective, scenarioTitle }: ProgressTrackerProps) {
   const t = useTranslations('conversationUI')
+  const locale = useLocale()
   const [isExpanded, setIsExpanded] = useState(true)
   const completedCount = checkpoints.filter(cp => cp.completed).length
   const totalCount = checkpoints.length
@@ -85,7 +86,7 @@ export default function ProgressTracker({ checkpoints, objective, scenarioTitle 
                   </div>
                   {checkpoint.completedAt && (
                     <div className="text-xs text-green-600 mt-0.5 font-medium">
-                      ✓ {new Date(checkpoint.completedAt).toLocaleTimeString('zh-TW', {
+                      ✓ {new Date(checkpoint.completedAt).toLocaleTimeString(locale, {
                         hour: '2-digit',
                         minute: '2-digit'
                       })}

@@ -73,6 +73,13 @@ export default function ConversationChatPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
+  // Auto-dismiss error after 5 seconds
+  useEffect(() => {
+    if (!error) return
+    const timer = setTimeout(() => setError(null), 5000)
+    return () => clearTimeout(timer)
+  }, [error])
+
   // Settings
   const [settings, setSettings] = useState<ConversationSettings | null>(null)
   const [currentInterviewer, setCurrentInterviewer] = useState<string>(DEFAULT_INTERVIEWER)
@@ -721,6 +728,8 @@ export default function ConversationChatPage() {
             onTouchCancel={stopRecording}
             onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
             disabled={isLoading || !sessionId}
+            aria-pressed={isRecording}
+            aria-label={isRecording ? t('releaseToSend') : t('holdToSpeak')}
             className={`
               relative rounded-full transition-all touch-manipulation select-none
               ${isMobile ? 'h-16 w-16' : 'h-20 w-20'}

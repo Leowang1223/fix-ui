@@ -334,21 +334,21 @@ export default function FlashcardsPage() {
               <div className="rounded-2xl bg-white p-6 shadow-inner">
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
                   <label className="flex flex-col gap-2 text-sm text-slate-600">
-                    <span>中文</span>
+                    <span>{t('chinese')}</span>
                     <input
                       value={formValues.hanzi}
                       onChange={(e) => setFormValues((v) => ({ ...v, hanzi: e.target.value }))}
                       className="rounded-xl border border-slate-200 px-4 py-3 text-slate-800 shadow-sm focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
-                      placeholder="例如：你好"
+                      placeholder={t('chinesePlaceholder')}
                     />
                   </label>
                   <label className="flex flex-col gap-2 text-sm text-slate-600">
-                    <span>中文拼音</span>
+                    <span>{t('pinyinLabel')}</span>
                     <input
                       value={formValues.pinyin}
                       onChange={(e) => setFormValues((v) => ({ ...v, pinyin: e.target.value }))}
                       className="rounded-xl border border-slate-200 px-4 py-3 text-slate-800 shadow-sm focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
-                      placeholder="例如：nǐ hǎo"
+                      placeholder={t('pinyinPlaceholder')}
                     />
                   </label>
                   <label className="flex flex-col gap-2 text-sm text-slate-600">
@@ -357,7 +357,7 @@ export default function FlashcardsPage() {
                       value={formValues.english}
                       onChange={(e) => setFormValues((v) => ({ ...v, english: e.target.value }))}
                       className="rounded-xl border border-slate-200 px-4 py-3 text-slate-800 shadow-sm focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
-                      placeholder="例如：Hello"
+                      placeholder={t('englishPlaceholder')}
                     />
                   </label>
                 </div>

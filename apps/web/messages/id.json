@@ -469,7 +469,12 @@
     "markKnown": "Tandai sudah tahu",
     "markReview": "Tandai untuk diulang",
     "noCards": "Belum ada kartu flash",
-    "addCard": "Tambah Kartu"
+    "addCard": "Tambah Kartu",
+    "chinese": "Bahasa Mandarin",
+    "chinesePlaceholder": "Contoh: 你好",
+    "pinyinLabel": "Pinyin Mandarin",
+    "pinyinPlaceholder": "Contoh: nǐ hǎo",
+    "englishPlaceholder": "Contoh: Hello"
   },
   "analysis": {
     "loadFailed": "Gagal memuat",
@@ -545,7 +550,10 @@
     "turnsWithIssues": "giliran dengan masalah",
     "commonIssues": "Masalah Umum yang Perlu Diperhatikan",
     "recommendations": "Rekomendasi",
-    "turnByTurnAnalysis": "Analisis Per Giliran"
+    "turnByTurnAnalysis": "Analisis Per Giliran",
+    "severityMinor": "Ringan",
+    "severityModerate": "Sedang",
+    "severityMajor": "Berat"
   },
   "trendChart": {
     "days": "hari",
@@ -565,7 +573,9 @@
     "history": "Riwayat",
     "flashcards": "Kartu Flash",
     "signedIn": "Sudah masuk",
-    "logOut": "Keluar"
+    "logOut": "Keluar",
+    "mainNavigation": "Navigasi utama",
+    "userMenu": "Menu pengguna"
   },
   "dashboardHeader": {
     "chip": "Talk Learning",
@@ -588,6 +598,7 @@
     "hideHints": "Sembunyikan petunjuk",
     "noHints": "Tidak ada petunjuk untuk soal ini",
     "answerHints": "Petunjuk Jawaban",
-    "advice": "Saran"
+    "advice": "Saran",
+    "hintCard": "Kartu petunjuk"
   }
 }

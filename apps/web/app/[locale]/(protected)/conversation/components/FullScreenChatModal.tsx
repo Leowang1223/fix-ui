@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Volume2, User, Bot } from 'lucide-react'
@@ -32,6 +32,8 @@ export function FullScreenChatModal({
   scenarioInfo
 }: FullScreenChatModalProps) {
   const t = useTranslations('conversationUI')
+  const tCommon = useTranslations('common')
+  const locale = useLocale()
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   // Auto-scroll to latest message
@@ -57,6 +59,7 @@ export function FullScreenChatModal({
             <button
               onClick={onClose}
               className="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors"
+              aria-label={tCommon('close')}
             >
               <X size={20} />
             </button>
@@ -136,7 +139,7 @@ export function FullScreenChatModal({
                           </button>
                         )}
                         <span className={`text-[10px] text-slate-400 ${message.role === 'user' ? 'ml-auto' : ''}`}>
-                          {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                          {message.timestamp.toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' })}
                         </span>
                       </div>
                     </div>

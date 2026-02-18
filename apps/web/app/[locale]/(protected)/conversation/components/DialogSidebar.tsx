@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import Image from 'next/image'
 import { Volume2, User, Bot, ChevronUp, ChevronDown } from 'lucide-react'
 import { SuggestionCard } from './SuggestionCard'
@@ -42,6 +42,7 @@ interface DialogSidebarProps {
 
 export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading, currentInterviewer, scenarioInfo, checkpoints, transparent = false }: DialogSidebarProps) {
   const t = useTranslations('conversationUI')
+  const locale = useLocale()
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const [suggestionsExpanded, setSuggestionsExpanded] = useState(true)
 
@@ -168,7 +169,7 @@ export function DialogSidebar({ messages, suggestions, onPlayTTS, isLoading, cur
                 {/* Timestamp - Hidden in transparent mode to reduce clutter */}
                 {!transparent && (
                   <div className="mt-1 text-[10px] text-gray-400">
-                    {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                    {message.timestamp.toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' })}
                   </div>
                 )}
               </div>

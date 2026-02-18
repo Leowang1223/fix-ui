@@ -610,7 +610,12 @@
     "sourceCourse": "ข้อผิดพลาดจากบทเรียนบันทึกอัตโนมัติ",
     "sourcePractice": "บันทึกระหว่างเซสชันฝึก",
     "sourceCustom": "แฟลชการ์ดที่คุณสร้างเอง",
-    "sourceSynced": "เนื้อหาซิงค์อื่นๆ"
+    "sourceSynced": "เนื้อหาซิงค์อื่นๆ",
+    "chinese": "ภาษาจีน",
+    "chinesePlaceholder": "เช่น 你好",
+    "pinyinLabel": "พินอิน",
+    "pinyinPlaceholder": "เช่น nǐ hǎo",
+    "englishPlaceholder": "เช่น Hello"
   },
   "analysis": {
     "loadFailed": "โหลดไม่สำเร็จ",
@@ -734,7 +739,10 @@
     "turnsWithIssues": "รอบที่มีปัญหา",
     "commonIssues": "ปัญหาที่พบบ่อยที่ควรเน้น",
     "recommendations": "คำแนะนำ",
-    "turnByTurnAnalysis": "วิเคราะห์ทีละรอบ"
+    "turnByTurnAnalysis": "วิเคราะห์ทีละรอบ",
+    "severityMinor": "เล็กน้อย",
+    "severityModerate": "ปานกลาง",
+    "severityMajor": "รุนแรง"
   },
   "trendChart": {
     "days": "วัน",
@@ -754,7 +762,9 @@
     "history": "ประวัติ",
     "flashcards": "แฟลชการ์ด",
     "signedIn": "เข้าสู่ระบบแล้ว",
-    "logOut": "ออกจากระบบ"
+    "logOut": "ออกจากระบบ",
+    "mainNavigation": "การนำทางหลัก",
+    "userMenu": "เมนูผู้ใช้"
   },
   "dashboardHeader": {
     "chip": "Talk Learning",
@@ -777,6 +787,7 @@
     "hideHints": "ซ่อนคำใบ้",
     "noHints": "ไม่มีคำใบ้สำหรับคำถามนี้",
     "answerHints": "คำใบ้คำตอบ",
-    "advice": "คำแนะนำ"
+    "advice": "คำแนะนำ",
+    "hintCard": "การ์ดคำใบ้"
   }
 }
