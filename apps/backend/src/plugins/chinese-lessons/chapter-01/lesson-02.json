@@ -15,7 +15,22 @@
       "english_hint": "I / me",
       "encouragement": "Great start!",
       "tts_text": "我",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "Tôi",
+        "th": "ฉัน",
+        "id": "Saya / aku"
+      },
+      "encouragements": {
+        "vi": "Khởi đầu tuyệt vời!",
+        "th": "เริ่มต้นได้ดีมาก!",
+        "id": "Awal yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -27,7 +42,22 @@
       "english_hint": "you",
       "encouragement": "Nice! Basic pronouns are important!",
       "tts_text": "你",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "Bạn",
+        "th": "คุณ",
+        "id": "Kamu / Anda"
+      },
+      "encouragements": {
+        "vi": "Hay lắm! Đại từ cơ bản rất quan trọng!",
+        "th": "เยี่ยม! คำสรรพนามพื้นฐานสำคัญนะ!",
+        "id": "Bagus! Kata ganti dasar penting!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -39,7 +69,22 @@
       "english_hint": "name",
       "encouragement": "Good job!",
       "tts_text": "名字",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "Tên",
+        "th": "ชื่อ",
+        "id": "nama"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -51,7 +96,22 @@
       "english_hint": "I am...",
       "encouragement": "Well done!",
       "tts_text": "我是⋯⋯",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "Tôi là...",
+        "th": "ฉันคือ...",
+        "id": "Saya..."
+      },
+      "encouragements": {
+        "vi": "Rất tốt!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -63,7 +123,22 @@
       "english_hint": "What is your name?",
       "encouragement": "Excellent!",
       "tts_text": "你的名字是什麼？",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "Bạn tên là gì?",
+        "th": "คุณชื่ออะไร?",
+        "id": "Siapa nama kamu?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -75,7 +150,22 @@
       "english_hint": "Nice to meet you",
       "encouragement": "Great expression!",
       "tts_text": "很高興認識你",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "Rất vui được gặp bạn",
+        "th": "ยินดีที่ได้รู้จัก",
+        "id": "Senang bertemu denganmu"
+      },
+      "encouragements": {
+        "vi": "Diễn đạt hay lắm!",
+        "th": "สำนวนดีมาก!",
+        "id": "Ungkapan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -87,7 +177,22 @@
       "english_hint": "he / him",
       "encouragement": "Good job!",
       "tts_text": "他",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "Anh ấy",
+        "th": "เขา",
+        "id": "dia"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -99,7 +204,22 @@
       "english_hint": "she / her",
       "encouragement": "You're doing great!",
       "tts_text": "她",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "Cô ấy",
+        "th": "เขา",
+        "id": "dia"
+      },
+      "encouragements": {
+        "vi": "Bạn đang làm rất tốt!",
+        "th": "คุณเก่งมาก!",
+        "id": "Kamu hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -111,7 +231,22 @@
       "english_hint": "we / us",
       "encouragement": "Nice work!",
       "tts_text": "我們",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "Chúng ta",
+        "th": "พวกเรา",
+        "id": "kami / kita"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -123,7 +258,22 @@
       "english_hint": "friend",
       "encouragement": "Perfect! Keep it up!",
       "tts_text": "朋友",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "Bạn",
+        "th": "เพื่อน",
+        "id": "teman"
+      },
+      "encouragements": {
+        "vi": "Hoàn hảo! Cứ thế phát huy nhé!",
+        "th": "ยอดเยี่ยม! พยายามต่อไปนะ!",
+        "id": "Sempurna! Teruslah berlatih!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

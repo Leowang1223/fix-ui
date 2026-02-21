@@ -13,7 +13,22 @@
       ],
       "pinyin": "pāi zhào",
       "english_hint": "take photos",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "chụp ảnh",
+        "th": "ถ่ายรูป",
+        "id": "memotret"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "xiě zì",
       "english_hint": "write",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "viết",
+        "th": "เขียน",
+        "id": "menulis"
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "xué yǔ yán",
       "english_hint": "learn languages",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "học ngôn ngữ",
+        "th": "เรียนภาษา",
+        "id": "belajar bahasa"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "kàn màn huà",
       "english_hint": "read comics",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "đọc truyện tranh",
+        "th": "อ่านการ์ตูน",
+        "id": "membaca komik"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "zuò cài",
       "english_hint": "cook (prepare dishes)",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "nấu ăn",
+        "th": "ทำอาหาร",
+        "id": "memasak"
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "sàn bù",
       "english_hint": "take a walk",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "đi dạo",
+        "th": "เดินเล่น",
+        "id": "jalan-jalan"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "xiě rì jì",
       "english_hint": "write a diary",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "viết nhật ký",
+        "th": "เขียนไดอารี่",
+        "id": "menulis diari"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "zuò yùn dòng",
       "english_hint": "work out",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "tập thể dục",
+        "th": "ออกกำลังกาย",
+        "id": "berolahraga"
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "tīng gù shì",
       "english_hint": "listen to stories",
-      "encouragement": "Good job!"
+      "encouragement": "Good job!",
+      "hints": {
+        "vi": "nghe truyện",
+        "th": "ฟังเรื่องเล่า",
+        "id": "mendengarkan cerita"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "kàn fēng jǐng",
       "english_hint": "look at scenery",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "ngắm cảnh",
+        "th": "ชมวิว",
+        "id": "melihat pemandangan"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ néng lǐ jiě nǐ de gǎn shòu, zhè zhǒng shì qíng zhēn de bù róng yì.",
       "english_hint": "I understand how you feel; it's really not easy.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi hiểu cảm giác của bạn; điều đó thực sự không dễ dàng chút nào.",
+        "th": "ฉันเข้าใจความรู้สึกของคุณนะ มันไม่ง่ายเลยจริงๆ",
+        "id": "Saya mengerti perasaanmu; ini memang tidak mudah."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "yǒu shí hòu dà jiā xū yào de zhǐ shì bèi tīng jiàn.",
       "english_hint": "Sometimes what people need is simply to be heard.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Đôi khi điều mọi người cần chỉ đơn giản là được lắng nghe.",
+        "th": "บางครั้งสิ่งที่คนเราต้องการก็แค่มีคนรับฟัง",
+        "id": "Terkadang yang orang butuhkan hanyalah didengarkan."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ zhī dào nǐ yǐ jīng hěn nǔ lì le.",
       "english_hint": "I know you've already worked very hard.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi biết bạn đã rất cố gắng rồi.",
+        "th": "ฉันรู้ว่าคุณพยายามอย่างหนักมามากแล้ว",
+        "id": "Saya tahu kamu sudah bekerja sangat keras."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "rú guǒ nǐ xū yào xiū xí, gào sù wǒ yì shēng jiù hǎo.",
       "english_hint": "If you need a break, just let me know.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Nếu bạn cần nghỉ ngơi, cứ nói với tôi nhé.",
+        "th": "ถ้าคุณอยากพัก บอกฉันได้เลยนะ",
+        "id": "Kalau kamu butuh istirahat, beri tahu saya saja."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "měi gè rén miàn duì yā lì de fāng shì dōu bù tài yí yàng.",
       "english_hint": "Everyone handles pressure differently.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Mỗi người có một cách đối phó với áp lực khác nhau.",
+        "th": "แต่ละคนก็รับมือกับความกดดันไม่เหมือนกัน",
+        "id": "Setiap orang menghadapi tekanan dengan cara berbeda."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ zūn zhòng nǐ de xuǎn zé, yě xī wàng nǐ néng zuò de kāi xīn.",
       "english_hint": "I respect your choice and hope you feel good about it.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi tôn trọng lựa chọn của bạn và hy vọng bạn cảm thấy hài lòng về điều đó.",
+        "th": "ฉันเคารพการตัดสินใจของคุณนะ และหวังว่าคุณจะรู้สึกดีกับมัน",
+        "id": "Saya menghargai pilihanmu dan semoga kamu merasa nyaman dengannya."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "rú guǒ nǐ yuàn yì, wǒ kě yǐ péi nǐ yì qǐ miàn duì.",
       "english_hint": "If you're willing, I can face it with you.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Nếu bạn muốn, tôi có thể cùng bạn đối mặt với nó.",
+        "th": "ถ้าคุณเต็มใจ ฉันพร้อมจะเผชิญหน้าไปกับคุณ",
+        "id": "Kalau kamu bersedia, saya bisa menghadapinya bersamamu."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "xiān ràng zì jǐ píng jìng xià lái, shì qíng huì gèng qīng chǔ.",
       "english_hint": "Calm yourself first; everything becomes clearer.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Hãy bình tĩnh trước đã; mọi thứ sẽ trở nên rõ ràng hơn.",
+        "th": "ใจเย็นๆ ก่อนนะ แล้วทุกอย่างจะชัดเจนขึ้นเอง",
+        "id": "Tenangkan dirimu dulu; semuanya akan jadi lebih jelas."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "wǒ yuàn yì tīng tīng nǐ de xiǎng fǎ, bù yòng jí zhe huí dá.",
       "english_hint": "I’m willing to hear your thoughts—you don’t need to answer right away.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi sẵn lòng lắng nghe suy nghĩ của bạn—bạn không cần trả lời ngay đâu.",
+        "th": "ฉันยินดีรับฟังความคิดของคุณนะ ไม่ต้องรีบตอบก็ได้",
+        "id": "Saya bersedia mendengar pikiranmu—kamu tidak perlu menjawab sekarang juga."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "wǒ xiāng xìn nǐ huì zhǎo dào zuì hǎo de fāng shì chǔ lǐ zhè jiàn shì.",
       "english_hint": "I believe you'll find the best way to handle this.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Tôi tin bạn sẽ tìm ra cách tốt nhất để giải quyết việc này.",
+        "th": "ฉันเชื่อว่าคุณจะหาวิธีรับมือกับเรื่องนี้ได้ดีที่สุด",
+        "id": "Saya yakin kamu akan menemukan cara terbaik untuk mengatasi ini."
+      },
+      "encouragements": {
+        "vi": "Tuyệt diệu!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

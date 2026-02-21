@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ yǐ qián zuò guò lèi sì de gōng zuò.",
       "english_hint": "I have done similar work before.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "th": "ฉันเคยทำงานที่คล้ายกันมาก่อน",
+        "id": "Saya pernah melakukan pekerjaan serupa sebelumnya.",
+        "vi": "Tôi đã từng làm công việc tương tự rồi."
+      },
+      "encouragements": {
+        "th": "เยี่ยมมาก!",
+        "id": "Bagus sekali!",
+        "vi": "Tuyệt vời!"
+      },
+      "example_sentences": {
+        "th": "",
+        "id": "",
+        "vi": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ céng jīng cān jiā guò yí gè duǎn qī de péi xùn.",
       "english_hint": "I once joined a short training program.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "th": "ฉันเคยเข้าร่วมโปรแกรมฝึกอบรมระยะสั้น",
+        "id": "Saya pernah mengikuti program pelatihan singkat.",
+        "vi": "Tôi đã từng tham gia một khóa đào tạo ngắn hạn."
+      },
+      "encouragements": {
+        "th": "ดีมาก!",
+        "id": "Bagus!",
+        "vi": "Hay lắm!"
+      },
+      "example_sentences": {
+        "th": "",
+        "id": "",
+        "vi": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "nà cì jīng yàn ràng wǒ xué dào hěn duō dōng xī.",
       "english_hint": "That experience taught me a lot.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "th": "ประสบการณ์นั้นสอนอะไรฉันหลายอย่าง",
+        "id": "Pengalaman itu banyak mengajari saya.",
+        "vi": "Kinh nghiệm đó đã dạy tôi rất nhiều điều."
+      },
+      "encouragements": {
+        "th": "ดี!",
+        "id": "Bagus!",
+        "vi": "Tốt!"
+      },
+      "example_sentences": {
+        "th": "",
+        "id": "",
+        "vi": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ céng jīng zài guó wài shēng huó guò bàn nián.",
       "english_hint": "I once lived abroad for half a year.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "th": "ฉันเคยไปอยู่ต่างประเทศครึ่งปี",
+        "id": "Saya pernah tinggal di luar negeri selama setengah tahun.",
+        "vi": "Tôi đã từng sống ở nước ngoài nửa năm."
+      },
+      "encouragements": {
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!",
+        "vi": "Xuất sắc!"
+      },
+      "example_sentences": {
+        "th": "",
+        "id": "",
+        "vi": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "nà duàn shí jiān ràng wǒ biàn dé gèng dú lì.",
       "english_hint": "That period made me more independent.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "th": "ช่วงเวลานั้นทำให้ฉันพึ่งพาตัวเองได้มากขึ้น",
+        "id": "Masa itu membuat saya lebih mandiri.",
+        "vi": "Khoảng thời gian đó đã giúp tôi tự lập hơn."
+      },
+      "encouragements": {
+        "th": "เยี่ยมมาก!",
+        "id": "Bagus sekali!",
+        "vi": "Tuyệt vời!"
+      },
+      "example_sentences": {
+        "th": "",
+        "id": "",
+        "vi": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ yǐ qián xué guò yì diǎn xiāng guān de jì néng.",
       "english_hint": "I learned some related skills before.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "th": "ฉันเคยเรียนรู้ทักษะที่เกี่ยวข้องมาก่อน",
+        "id": "Saya pernah belajar beberapa keterampilan terkait.",
+        "vi": "Tôi đã từng học một số kỹ năng liên quan trước đây."
+      },
+      "encouragements": {
+        "th": "ดีมาก!",
+        "id": "Bagus!",
+        "vi": "Hay lắm!"
+      },
+      "example_sentences": {
+        "th": "",
+        "id": "",
+        "vi": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ zuò guò zhì gōng, suǒ yǐ xí guàn gēn rén gōu tōng.",
       "english_hint": "I have done volunteer work, so I'm used to talking with people.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "th": "ฉันเคยทำงานอาสา เลยคุ้นเคยกับการพูดคุยกับผู้คน",
+        "id": "Saya pernah melakukan pekerjaan sukarela, jadi saya terbiasa berbicara dengan orang.",
+        "vi": "Tôi đã từng làm tình nguyện viên nên quen giao tiếp với mọi người rồi."
+      },
+      "encouragements": {
+        "th": "ดี!",
+        "id": "Bagus!",
+        "vi": "Tốt!"
+      },
+      "example_sentences": {
+        "th": "",
+        "id": "",
+        "vi": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ yǐ qián yù guò lèi sì de wèn tí.",
       "english_hint": "I have encountered similar problems before.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "th": "ฉันเคยเจอปัญหาคล้ายๆ กันมาก่อน",
+        "id": "Saya pernah menghadapi masalah serupa sebelumnya.",
+        "vi": "Tôi đã từng gặp những vấn đề tương tự rồi."
+      },
+      "encouragements": {
+        "th": "เยี่ยมมาก!",
+        "id": "Bagus sekali!",
+        "vi": "Tuyệt vời!"
+      },
+      "example_sentences": {
+        "th": "",
+        "id": "",
+        "vi": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "nà cì shī bài ràng wǒ xué huì gèng zǐ xì yì diǎn.",
       "english_hint": "That failure taught me to be more careful.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "th": "ความล้มเหลวนั้นสอนให้ฉันระมัดระวังมากขึ้น",
+        "id": "Kegagalan itu mengajari saya untuk lebih berhati-hati.",
+        "vi": "Thất bại đó đã dạy tôi phải cẩn thận hơn."
+      },
+      "encouragements": {
+        "th": "ดีมาก!",
+        "id": "Bagus!",
+        "vi": "Hay lắm!"
+      },
+      "example_sentences": {
+        "th": "",
+        "id": "",
+        "vi": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "zǒng de lái shuō, wǒ de jīng yàn dōu hěn yǒu bāng zhù.",
       "english_hint": "Overall, my experiences have been very helpful.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "th": "โดยรวมแล้ว ประสบการณ์ของฉันมีประโยชน์มาก",
+        "id": "Secara keseluruhan, pengalaman saya sangat membantu.",
+        "vi": "Nhìn chung, những kinh nghiệm của tôi rất hữu ích."
+      },
+      "encouragements": {
+        "th": "สุดยอด!",
+        "id": "Fantastis!",
+        "vi": "Tuyệt cú mèo!"
+      },
+      "example_sentences": {
+        "th": "",
+        "id": "",
+        "vi": ""
+      }
     }
   ],
   "review": {

@@ -13,7 +13,22 @@
       ],
       "pinyin": "zhè ge duō shǎo qián?",
       "english_hint": "How much is this?",
-      "encouragement": "Great basic shopping phrase!"
+      "encouragement": "Great basic shopping phrase!",
+      "hints": {
+        "vi": "Cái này bao nhiêu tiền?",
+        "th": "อันนี้ราคาเท่าไหร่ครับ/คะ",
+        "id": "Ini berapa?"
+      },
+      "encouragements": {
+        "vi": "Câu nói mua sắm cơ bản rất hay!",
+        "th": "วลีช้อปปิ้งพื้นฐานที่ดีเยี่ยม!",
+        "id": "Frasa belanja dasar yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "tài guì le.",
       "english_hint": "It's too expensive.",
-      "encouragement": "Nice reaction sentence!"
+      "encouragement": "Nice reaction sentence!",
+      "hints": {
+        "vi": "Đắt quá.",
+        "th": "แพงไปครับ/ค่ะ",
+        "id": "Terlalu mahal."
+      },
+      "encouragements": {
+        "vi": "Câu phản ứng hay đấy!",
+        "th": "ประโยคตอบกลับที่ดี!",
+        "id": "Kalimat respons yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "kě yǐ pián yí yì diǎn ma?",
       "english_hint": "Can it be a little cheaper?",
-      "encouragement": "Excellent bargaining phrase!"
+      "encouragement": "Excellent bargaining phrase!",
+      "hints": {
+        "vi": "Giảm giá một chút được không?",
+        "th": "ลดราคาอีกหน่อยได้ไหมครับ/คะ",
+        "id": "Bisa kurang sedikit?"
+      },
+      "encouragements": {
+        "vi": "Cụm từ mặc cả rất hiệu quả!",
+        "th": "วลีต่อรองราคาที่ยอดเยี่ยม!",
+        "id": "Frasa menawar yang hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ yào zhè ge.",
       "english_hint": "I want this one.",
-      "encouragement": "Good and simple!"
+      "encouragement": "Good and simple!",
+      "hints": {
+        "vi": "Lấy cái này.",
+        "th": "เอาอันนี้ครับ/ค่ะ",
+        "id": "Saya mau yang ini."
+      },
+      "encouragements": {
+        "vi": "Hay và đơn giản!",
+        "th": "ดีและง่าย!",
+        "id": "Bagus dan sederhana!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "bú yào nà ge, xiè xie.",
       "english_hint": "I don't want that one, thank you.",
-      "encouragement": "Nice polite refusal!"
+      "encouragement": "Nice polite refusal!",
+      "hints": {
+        "vi": "Tôi không lấy cái đó, cảm ơn.",
+        "th": "ไม่เอาอันนั้นครับ/ค่ะ ขอบคุณครับ/ค่ะ",
+        "id": "Saya tidak mau yang itu, terima kasih."
+      },
+      "encouragements": {
+        "vi": "Cách từ chối lịch sự hay đấy!",
+        "th": "การปฏิเสธที่สุภาพและดี!",
+        "id": "Penolakan sopan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "yǒu bié de yán sè ma?",
       "english_hint": "Do you have other colors?",
-      "encouragement": "Great question!"
+      "encouragement": "Great question!",
+      "hints": {
+        "vi": "Có màu khác không?",
+        "th": "มีสีอื่นไหมครับ/คะ",
+        "id": "Ada warna lain?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi rất hay!",
+        "th": "คำถามที่ดีเยี่ยม!",
+        "id": "Pertanyaan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "kě yǐ shì chuān ma?",
       "english_hint": "Can I try it on?",
-      "encouragement": "Very practical phrase!"
+      "encouragement": "Very practical phrase!",
+      "hints": {
+        "vi": "Cho tôi thử được không?",
+        "th": "ลองได้ไหมครับ/คะ",
+        "id": "Boleh saya coba?"
+      },
+      "encouragements": {
+        "vi": "Cụm từ rất thực tế!",
+        "th": "วลีที่ใช้ได้จริงมาก!",
+        "id": "Frasa yang sangat praktis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ zhǐ kàn kàn.",
       "english_hint": "I'm just looking.",
-      "encouragement": "Nice casual sentence!"
+      "encouragement": "Nice casual sentence!",
+      "hints": {
+        "vi": "Tôi chỉ xem thôi.",
+        "th": "แค่ดูก่อนครับ/ค่ะ",
+        "id": "Saya cuma lihat-lihat saja."
+      },
+      "encouragements": {
+        "vi": "Câu nói tự nhiên hay đấy!",
+        "th": "ประโยคสบายๆ ที่ดี!",
+        "id": "Kalimat santai yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "kě yǐ shuā kǎ ma?",
       "english_hint": "Can I pay by card?",
-      "encouragement": "Excellent question!"
+      "encouragement": "Excellent question!",
+      "hints": {
+        "vi": "Trả bằng thẻ được không?",
+        "th": "จ่ายด้วยบัตรได้ไหมครับ/คะ",
+        "id": "Bisa bayar pakai kartu?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi rất tuyệt!",
+        "th": "คำถามที่ยอดเยี่ยม!",
+        "id": "Pertanyaan yang hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "xiè xie, màn zǒu.",
       "english_hint": "Thank you, take care.",
-      "encouragement": "Great polite ending!"
+      "encouragement": "Great polite ending!",
+      "hints": {
+        "vi": "Cảm ơn, tạm biệt.",
+        "th": "ขอบคุณครับ/ค่ะ",
+        "id": "Terima kasih, hati-hati."
+      },
+      "encouragements": {
+        "vi": "Cách kết thúc lịch sự tuyệt vời!",
+        "th": "การลงท้ายที่สุภาพและดีเยี่ยม!",
+        "id": "Penutup sopan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

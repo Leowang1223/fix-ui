@@ -13,7 +13,22 @@
       ],
       "pinyin": "A: nǐ jīn tiān kàn qǐ lái yǒu diǎn lèi, hái hǎo ma?",
       "english_hint": "You look a bit tired today, are you okay?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Hôm nay bạn trông hơi mệt, bạn có sao không?",
+        "th": "วันนี้คุณดูเหนื่อยๆ นะ เป็นอะไรหรือเปล่า?",
+        "id": "Kamu terlihat agak lelah hari ini, kamu baik-baik saja?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "B: hái hǎo, zhǐ shì zuì jìn shì qíng yǒu diǎn duō.",
       "english_hint": "I'm okay, just a bit busy lately.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Mình ổn, dạo này hơi bận thôi.",
+        "th": "ฉันไม่เป็นไร แค่ช่วงนี้ยุ่งนิดหน่อย",
+        "id": "Aku baik-baik saja, hanya sedikit sibuk akhir-akhir ini."
+      },
+      "encouragements": {
+        "vi": "Hay đấy!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "A: xū yào wǒ bāng máng ma?",
       "english_hint": "Need my help?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Cần mình giúp không?",
+        "th": "ให้ฉันช่วยไหม?",
+        "id": "Butuh bantuanku?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "B: xiè xie, wǒ zhèng zài zhěng lǐ zī liào, yīng gāi kuài hǎo le.",
       "english_hint": "Thanks, I'm organizing the data—it should be done soon.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Cảm ơn, mình đang sắp xếp dữ liệu—chắc là xong sớm thôi.",
+        "th": "ขอบคุณนะ ฉันกำลังจัดระเบียบข้อมูลอยู่ น่าจะเสร็จเร็วๆ นี้แหละ",
+        "id": "Terima kasih, aku sedang merapikan data—seharusnya akan segera selesai."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "A: duì le, nǐ shàng cì shuō de zhuān àn jìn zhǎn rú hé?",
       "english_hint": "By the way, how is the project you mentioned last time?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "À mà này, dự án lần trước bạn nói sao rồi?",
+        "th": "ว่าแต่ โปรเจกต์ที่เธอพูดถึงคราวที่แล้วเป็นยังไงบ้าง?",
+        "id": "Ngomong-ngomong, bagaimana proyek yang kamu sebutkan terakhir kali?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "B: bǐ wǒ xiǎng xiàng de shùn lì, wǒ yǐ jīng wán chéng dì yī jiē duàn le.",
       "english_hint": "It's smoother than I expected; I've finished the first stage.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Nó suôn sẻ hơn mình nghĩ; mình đã hoàn thành giai đoạn đầu rồi.",
+        "th": "ราบรื่นกว่าที่คิดไว้เยอะเลย ฉันทำเฟสแรกเสร็จแล้ว",
+        "id": "Lebih lancar dari yang kuduga; aku sudah menyelesaikan tahap pertama."
+      },
+      "encouragements": {
+        "vi": "Hay đấy!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "A: tài hǎo le! nǐ yǒu dǎ suàn zěn me jìn xíng xià yí bù ma?",
       "english_hint": "That's great! Do you have plans for the next step?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tuyệt vời! Bạn có kế hoạch gì cho bước tiếp theo chưa?",
+        "th": "เยี่ยมเลย! แล้วมีแผนสำหรับขั้นตอนต่อไปหรือยัง?",
+        "id": "Bagus sekali! Apa kamu punya rencana untuk langkah selanjutnya?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "B: wǒ xiǎng xiān sōu jí gèng duō yì jiàn, zài zuò tiáo zhěng.",
       "english_hint": "I want to gather more opinions first, then make adjustments.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Mình muốn thu thập thêm ý kiến trước, rồi mới điều chỉnh.",
+        "th": "ฉันอยากรวบรวมความคิดเห็นเพิ่มเติมก่อน แล้วค่อยปรับแก้",
+        "id": "Aku ingin mengumpulkan lebih banyak pendapat dulu, lalu membuat penyesuaian."
+      },
+      "encouragements": {
+        "vi": "Tuyệt!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "A: tīng qǐ lái hěn zhōu quán, xū yào wǒ bāng nǐ wèn wèn qí tā rén ma?",
       "english_hint": "Sounds thorough. Want me to help ask others?",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Nghe kỹ đấy. Để mình giúp hỏi thêm người khác nhé?",
+        "th": "ฟังดูรอบคอบดีนะ ให้ฉันช่วยถามคนอื่นไหม?",
+        "id": "Kedengarannya teliti. Mau aku bantu tanyakan ke yang lain?"
+      },
+      "encouragements": {
+        "vi": "Hay đấy!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "B: hǎo a, nà tài bàng le, xiè xie nǐ de bāng máng!",
       "english_hint": "Sure, that would be great. Thanks for your help!",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Chắc chắn rồi, thế thì tốt quá. Cảm ơn bạn đã giúp đỡ!",
+        "th": "ได้เลย เยี่ยมมากเลย ขอบคุณสำหรับความช่วยเหลือนะ!",
+        "id": "Tentu, itu akan sangat bagus. Terima kasih atas bantuanmu!"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

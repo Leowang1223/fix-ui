@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǎng zuǒ zǒu",
       "english_hint": "go left",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Rẽ trái",
+        "th": "ไปทางซ้าย",
+        "id": "belok kiri"
+      },
+      "encouragements": {
+        "vi": "Tuyệt!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǎng yòu zhuǎn",
       "english_hint": "turn right",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Rẽ phải",
+        "th": "เลี้ยวขวา",
+        "id": "belok kanan"
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "zhí zǒu",
       "english_hint": "go straight",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Đi thẳng",
+        "th": "ตรงไป",
+        "id": "jalan lurus"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "guò mǎ lù",
       "english_hint": "cross the street",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Qua đường",
+        "th": "ข้ามถนน",
+        "id": "seberangi jalan"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "zài hóng lǜ dēng nà lǐ zuǒ zhuǎn",
       "english_hint": "turn left at the traffic light",
-      "encouragement": "Great direction!"
+      "encouragement": "Great direction!",
+      "hints": {
+        "vi": "Rẽ trái ở đèn giao thông",
+        "th": "เลี้ยวซ้ายตรงไฟแดง",
+        "id": "belok kiri di lampu merah"
+      },
+      "encouragements": {
+        "vi": "Chỉ đường rất tốt!",
+        "th": "บอกทางได้ดีมาก!",
+        "id": "Arah yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "zǒu dào lù kǒu",
       "english_hint": "walk to the intersection",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Đi bộ đến ngã tư",
+        "th": "เดินไปที่สี่แยก",
+        "id": "jalan sampai perempatan"
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "zài yòu biān de dì èr dòng",
       "english_hint": "the second building on the right",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tòa nhà thứ hai bên phải",
+        "th": "ตึกที่สองทางขวา",
+        "id": "gedung kedua di sebelah kanan"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "nǐ huì kàn dào yí gè gōng yuán",
       "english_hint": "you will see a park",
-      "encouragement": "Nice description!"
+      "encouragement": "Nice description!",
+      "hints": {
+        "vi": "Bạn sẽ thấy một công viên",
+        "th": "คุณจะเห็นสวนสาธารณะ",
+        "id": "kamu akan melihat taman"
+      },
+      "encouragements": {
+        "vi": "Mô tả hay lắm!",
+        "th": "บรรยายได้ดีมาก!",
+        "id": "Deskripsi yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "yán zhe hé biān zǒu",
       "english_hint": "walk along the river",
-      "encouragement": "Great phrase!"
+      "encouragement": "Great phrase!",
+      "hints": {
+        "vi": "Đi dọc bờ sông",
+        "th": "เดินเลียบแม่น้ำ",
+        "id": "jalan menyusuri sungai"
+      },
+      "encouragements": {
+        "vi": "Cách diễn đạt hay!",
+        "th": "วลีเยี่ยมมาก!",
+        "id": "Frasa yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "tā zài xué xiào de duì miàn",
       "english_hint": "it's across from the school",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Nó đối diện trường học",
+        "th": "อยู่ตรงข้ามโรงเรียน",
+        "id": "itu di seberang sekolah"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

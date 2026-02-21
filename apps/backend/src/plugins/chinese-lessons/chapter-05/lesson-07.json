@@ -13,7 +13,22 @@
       ],
       "pinyin": "pián yí",
       "english_hint": "cheap",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "rẻ",
+        "th": "ถูก",
+        "id": "murah"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "piào liang",
       "english_hint": "beautiful",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "đẹp",
+        "th": "สวย",
+        "id": "cantik"
+      },
+      "encouragements": {
+        "vi": "Hay!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "nán",
       "english_hint": "difficult",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "khó",
+        "th": "ยาก",
+        "id": "susah"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "róng yì",
       "english_hint": "easy",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "dễ",
+        "th": "ง่าย",
+        "id": "gampang"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "gān jìng",
       "english_hint": "clean",
-      "encouragement": "Nice description!"
+      "encouragement": "Nice description!",
+      "hints": {
+        "vi": "sạch",
+        "th": "สะอาด",
+        "id": "bersih"
+      },
+      "encouragements": {
+        "vi": "Mô tả hay!",
+        "th": "บรรยายได้ดี!",
+        "id": "Deskripsi yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "zāng",
       "english_hint": "dirty",
-      "encouragement": "Good use!"
+      "encouragement": "Good use!",
+      "hints": {
+        "vi": "bẩn",
+        "th": "สกปรก",
+        "id": "kotor"
+      },
+      "encouragements": {
+        "vi": "Dùng tốt!",
+        "th": "ใช้ได้ดี!",
+        "id": "Penggunaan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "ān jìng",
       "english_hint": "quiet",
-      "encouragement": "Great word!"
+      "encouragement": "Great word!",
+      "hints": {
+        "vi": "yên tĩnh",
+        "th": "เงียบ",
+        "id": "tenang"
+      },
+      "encouragements": {
+        "vi": "Từ hay!",
+        "th": "คำนี้เยี่ยม!",
+        "id": "Kata yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "chǎo",
       "english_hint": "noisy",
-      "encouragement": "Nice adjective!"
+      "encouragement": "Nice adjective!",
+      "hints": {
+        "vi": "ồn ào",
+        "th": "เสียงดัง",
+        "id": "berisik"
+      },
+      "encouragements": {
+        "vi": "Tính từ hay!",
+        "th": "คำคุณศัพท์ดีมาก!",
+        "id": "Kata sifat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "tè bié",
       "english_hint": "special",
-      "encouragement": "Awesome!"
+      "encouragement": "Awesome!",
+      "hints": {
+        "vi": "đặc biệt",
+        "th": "พิเศษ",
+        "id": "istimewa"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Keren!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "pǔ tōng",
       "english_hint": "ordinary",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "bình thường",
+        "th": "ธรรมดา",
+        "id": "biasa"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

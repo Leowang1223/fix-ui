@@ -13,7 +13,22 @@
       ],
       "pinyin": "jiù mìng!",
       "english_hint": "Help!",
-      "encouragement": "Important phrase!"
+      "encouragement": "Important phrase!",
+      "hints": {
+        "vi": "Cứu!",
+        "th": "ช่วยด้วย!",
+        "id": "Tolong!"
+      },
+      "encouragements": {
+        "vi": "Cụm từ quan trọng!",
+        "th": "วลีสำคัญ!",
+        "id": "Frasa penting!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ xū yào bāng zhù.",
       "english_hint": "I need help.",
-      "encouragement": "Good emergency sentence!"
+      "encouragement": "Good emergency sentence!",
+      "hints": {
+        "vi": "Tôi cần giúp đỡ.",
+        "th": "ฉันต้องการความช่วยเหลือ",
+        "id": "Saya butuh bantuan."
+      },
+      "encouragements": {
+        "vi": "Câu khẩn cấp hay!",
+        "th": "ประโยคฉุกเฉินที่ดี!",
+        "id": "Kalimat darurat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "qǐng jiào jǐng chá.",
       "english_hint": "Please call the police.",
-      "encouragement": "Good! Very important!"
+      "encouragement": "Good! Very important!",
+      "hints": {
+        "vi": "Làm ơn gọi cảnh sát.",
+        "th": "กรุณาเรียกตำรวจให้หน่อย",
+        "id": "Tolong panggil polisi."
+      },
+      "encouragements": {
+        "vi": "Tốt! Rất quan trọng!",
+        "th": "ดีมาก! สำคัญมาก!",
+        "id": "Bagus! Sangat penting!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ mí lù le.",
       "english_hint": "I'm lost.",
-      "encouragement": "Useful emergency phrase!"
+      "encouragement": "Useful emergency phrase!",
+      "hints": {
+        "vi": "Tôi bị lạc.",
+        "th": "ฉันหลงทาง",
+        "id": "Saya tersesat."
+      },
+      "encouragements": {
+        "vi": "Cụm từ khẩn cấp hữu ích!",
+        "th": "วลีฉุกเฉินที่มีประโยชน์!",
+        "id": "Frasa darurat yang berguna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ de dōng xi bú jiàn le.",
       "english_hint": "My stuff is missing.",
-      "encouragement": "Important to know!"
+      "encouragement": "Important to know!",
+      "hints": {
+        "vi": "Tôi bị mất đồ.",
+        "th": "ของหาย",
+        "id": "Barang-barang saya hilang."
+      },
+      "encouragements": {
+        "vi": "Quan trọng cần biết!",
+        "th": "สำคัญที่ต้องรู้!",
+        "id": "Penting untuk diketahui!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "nǐ hái hǎo ma?",
       "english_hint": "Are you okay?",
-      "encouragement": "Great caring question!"
+      "encouragement": "Great caring question!",
+      "hints": {
+        "vi": "Bạn có sao không?",
+        "th": "คุณโอเคไหม?",
+        "id": "Kamu tidak apa-apa?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi quan tâm tuyệt vời!",
+        "th": "คำถามแสดงความห่วงใยที่ดีเยี่ยม!",
+        "id": "Pertanyaan yang sangat peduli!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ shòu shāng le.",
       "english_hint": "I’m hurt.",
-      "encouragement": "Good to know!"
+      "encouragement": "Good to know!",
+      "hints": {
+        "vi": "Tôi bị thương.",
+        "th": "ฉันบาดเจ็บ",
+        "id": "Saya terluka."
+      },
+      "encouragements": {
+        "vi": "Tốt để biết!",
+        "th": "ดีที่ได้รู้!",
+        "id": "Bagus untuk diketahui!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "qǐng dài wǒ qù yī yuàn.",
       "english_hint": "Please take me to the hospital.",
-      "encouragement": "Important emergency sentence!"
+      "encouragement": "Important emergency sentence!",
+      "hints": {
+        "vi": "Làm ơn đưa tôi đến bệnh viện.",
+        "th": "กรุณาพาฉันไปโรงพยาบาล",
+        "id": "Tolong bawa saya ke rumah sakit."
+      },
+      "encouragements": {
+        "vi": "Câu khẩn cấp quan trọng!",
+        "th": "ประโยคฉุกเฉินที่สำคัญ!",
+        "id": "Kalimat darurat yang penting!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "wǒ zhǎo bú dào wǒ de péng yǒu.",
       "english_hint": "I can't find my friend.",
-      "encouragement": "Good emergency phrase!"
+      "encouragement": "Good emergency phrase!",
+      "hints": {
+        "vi": "Tôi không tìm được bạn tôi.",
+        "th": "ฉันหาเพื่อนไม่เจอ",
+        "id": "Saya tidak bisa menemukan teman saya."
+      },
+      "encouragements": {
+        "vi": "Cụm từ khẩn cấp hay!",
+        "th": "วลีฉุกเฉินที่ดี!",
+        "id": "Frasa darurat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "qǐng kuài yì diǎn!",
       "english_hint": "Please hurry!",
-      "encouragement": "Great urgent expression!"
+      "encouragement": "Great urgent expression!",
+      "hints": {
+        "vi": "Làm ơn nhanh lên!",
+        "th": "รีบหน่อย!",
+        "id": "Tolong cepat!"
+      },
+      "encouragements": {
+        "vi": "Cụm từ khẩn cấp tuyệt vời!",
+        "th": "สำนวนเร่งด่วนที่ดีเยี่ยม!",
+        "id": "Ungkapan mendesak yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ jué dé měi gè xuǎn zé dōu yǒu tā de hǎo chù yǔ xiàn zhì.",
       "english_hint": "I think every choice has its advantages and limitations.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi nghĩ mỗi lựa chọn đều có ưu điểm và hạn chế riêng.",
+        "th": "ฉันคิดว่าทุกทางเลือกมีข้อดีและข้อจำกัดของมัน",
+        "id": "Menurut saya, setiap pilihan punya kelebihan dan kekurangannya."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "zài wǒ kàn lái, wěn dìng bǐ sù dù gèng zhòng yào.",
       "english_hint": "In my view, stability is more important than speed.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Theo quan điểm của tôi, ổn định quan trọng hơn tốc độ.",
+        "th": "ในมุมมองของฉัน ความมั่นคงสำคัญกว่าความเร็ว",
+        "id": "Menurut pandangan saya, stabilitas lebih penting daripada kecepatan."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ xiǎng xiān tīng tīng dà jiā de yì jiàn, zài zuò jué dìng.",
       "english_hint": "I want to hear everyone’s opinions before deciding.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi muốn nghe ý kiến của mọi người trước khi quyết định.",
+        "th": "ฉันอยากฟังความคิดเห็นของทุกคนก่อนตัดสินใจ",
+        "id": "Saya ingin mendengar pendapat semua orang sebelum memutuskan."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ tóng yì nǐ de bù fèn xiǎng fǎ, bú guò wǒ yǒu bù tóng de kàn fǎ.",
       "english_hint": "I agree with part of your idea, but I have a different viewpoint.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Tôi đồng ý với một phần ý tưởng của bạn, nhưng tôi có quan điểm khác.",
+        "th": "ฉันเห็นด้วยกับบางส่วนของแนวคิดคุณ แต่ฉันมีมุมมองที่ต่างออกไป",
+        "id": "Saya setuju dengan sebagian ide Anda, tapi saya punya sudut pandang yang berbeda."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ rèn wéi zuì zhòng yào de shì zhǎo dào píng héng.",
       "english_hint": "I believe the most important thing is to find balance.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi tin rằng điều quan trọng nhất là tìm được sự cân bằng.",
+        "th": "ฉันเชื่อว่าสิ่งที่สำคัญที่สุดคือการหาสมดุล",
+        "id": "Saya percaya hal terpenting adalah menemukan keseimbangan."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "nǐ de jiàn yì hěn yǒu dào lǐ, wǒ huì zài zǐ xì xiǎng xiǎng.",
       "english_hint": "Your suggestion makes sense; I’ll think about it more.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Gợi ý của bạn có lý; tôi sẽ suy nghĩ thêm về nó.",
+        "th": "ข้อเสนอแนะของคุณมีเหตุผลดี ฉันจะลองคิดดูอีกที",
+        "id": "Saran Anda masuk akal; saya akan memikirkannya lebih lanjut."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ xiǎng yòng lìng yí gè jiǎo dù lái shuō míng.",
       "english_hint": "I’d like to explain from another angle.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi muốn giải thích từ một góc độ khác.",
+        "th": "ฉันอยากจะอธิบายจากอีกมุมมองหนึ่ง",
+        "id": "Saya ingin menjelaskan dari sudut pandang lain."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ bìng bú shì bù tóng yì, zhǐ shì xiǎng zài bǔ chōng yì xiē xì jié.",
       "english_hint": "I'm not disagreeing; I just want to add some details.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi không phản đối; tôi chỉ muốn bổ sung thêm một vài chi tiết.",
+        "th": "ฉันไม่ได้ไม่เห็นด้วยนะ แค่อยากจะเพิ่มรายละเอียดบางอย่าง",
+        "id": "Saya bukannya tidak setuju; saya cuma mau menambahkan beberapa detail."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "rú guǒ wǒ men néng zhěng hé bù tóng xiǎng fǎ, jié guǒ huì gèng hǎo.",
       "english_hint": "If we combine different ideas, the result will be better.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Nếu chúng ta kết hợp các ý tưởng khác nhau, kết quả sẽ tốt hơn.",
+        "th": "ถ้าเรานำแนวคิดที่แตกต่างกันมารวมกัน ผลลัพธ์จะดีขึ้น",
+        "id": "Jika kita menggabungkan ide-ide yang berbeda, hasilnya akan lebih baik."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "zǒng zhī, wǒ jué dé tǎo lùn yuè wán zhěng, jué dìng jiù yuè qīng chǔ.",
       "english_hint": "In short, the more complete our discussion is, the clearer the decision becomes.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Tóm lại, cuộc thảo luận của chúng ta càng đầy đủ, quyết định càng rõ ràng.",
+        "th": "สรุปคือ ยิ่งเราคุยกันละเอียดเท่าไหร่ การตัดสินใจก็จะยิ่งชัดเจนขึ้นเท่านั้น",
+        "id": "Singkatnya, semakin lengkap diskusi kita, semakin jelas keputusan yang akan diambil."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

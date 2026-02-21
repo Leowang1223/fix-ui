@@ -13,7 +13,22 @@
       ],
       "pinyin": "bù hǎo yì si, nǐ kě yǐ bāng wǒ yí xià ma?",
       "english_hint": "Excuse me, can you help me?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Xin lỗi, bạn có thể giúp tôi được không?",
+        "th": "ขอโทษครับ/ค่ะ ช่วยหน่อยได้ไหมครับ/คะ?",
+        "id": "Permisi, bisa bantu saya?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "zhè lǐ de wǎng lù hǎo xiàng bú tài wěn dìng.",
       "english_hint": "The internet here seems unstable.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Mạng internet ở đây có vẻ không ổn định.",
+        "th": "อินเทอร์เน็ตที่นี่ดูไม่ค่อยเสถียรเลยครับ/ค่ะ",
+        "id": "Internet di sini sepertinya tidak stabil."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีมาก!",
+        "id": "Keren!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ de fáng kǎ bù néng yòng, kě yǐ bāng wǒ kàn yí xià ma?",
       "english_hint": "My room card doesn't work, can you check it?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Thẻ phòng của tôi không hoạt động, bạn có thể kiểm tra giúp được không?",
+        "th": "คีย์การ์ดห้องผม/หนูใช้ไม่ได้ครับ/ค่ะ ช่วยเช็กให้หน่อยได้ไหมครับ/คะ?",
+        "id": "Kartu kamar saya tidak berfungsi, bisa tolong dicek?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "kōng tiáo yǒu diǎn tài lěng le, kě yǐ tiáo gāo yì diǎn ma?",
       "english_hint": "The AC is too cold, can you turn it up?",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Điều hòa lạnh quá, bạn có thể tăng nhiệt độ lên được không?",
+        "th": "แอร์เย็นเกินไปครับ/ค่ะ ช่วยปรับเพิ่มอุณหภูมิได้ไหมครับ/คะ?",
+        "id": "AC-nya terlalu dingin, bisa tolong dinaikkan suhunya?"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ zhǎo bú dào lù, nǐ kě yǐ gào sù wǒ fāng xiàng ma?",
       "english_hint": "I can't find the way, can you tell me the direction?",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi không tìm thấy đường, bạn có thể chỉ đường cho tôi được không?",
+        "th": "ผม/หนูหาทางไม่เจอครับ/ค่ะ ช่วยบอกทางหน่อยได้ไหมครับ/คะ?",
+        "id": "Saya tidak tahu jalannya, bisa tolong tunjukkan arahnya?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt!",
+        "th": "ดีมาก!",
+        "id": "Keren!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ jué dé yǒu diǎn tài chǎo le.",
       "english_hint": "I feel it's a bit too noisy.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi thấy hơi ồn một chút.",
+        "th": "ผม/หนูรู้สึกว่ามันเสียงดังไปหน่อยครับ/ค่ะ",
+        "id": "Saya rasa ini agak terlalu berisik."
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "kě yǐ bāng wǒ huàn yí gè wèi zhì ma?",
       "english_hint": "Can you change my seat?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Bạn có thể đổi chỗ cho tôi được không?",
+        "th": "ช่วยเปลี่ยนที่นั่งให้ผม/หนูได้ไหมครับ/คะ?",
+        "id": "Bisa tolong tukar tempat duduk saya?"
+      },
+      "encouragements": {
+        "vi": "Rất tốt!",
+        "th": "เยี่ยมเลย!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ de shǒu jī kuài méi diàn le, yǒu chā zuò ma?",
       "english_hint": "My phone is low on battery; is there a socket?",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Điện thoại của tôi sắp hết pin rồi; ở đây có ổ cắm điện không?",
+        "th": "แบตมือถือผม/หนูจะหมดแล้วครับ/ค่ะ มีปลั๊กไฟไหมครับ/คะ?",
+        "id": "Baterai HP saya lemah; ada stopkontak?"
+      },
+      "encouragements": {
+        "vi": "Khá tốt!",
+        "th": "ดีมาก!",
+        "id": "Keren!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "wǒ tīng bú tài qīng chǔ, kě yǐ zài shuō yí cì ma?",
       "english_hint": "I can't hear clearly; can you say it again?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi nghe không rõ; bạn có thể nói lại được không?",
+        "th": "ผม/หนูไม่ได้ยินชัดครับ/ค่ะ ช่วยพูดอีกครั้งได้ไหมครับ/คะ?",
+        "id": "Saya tidak dengar jelas; bisa tolong ulangi?"
+      },
+      "encouragements": {
+        "vi": "Được!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "bào qiàn, wǒ bú tài dǒng, kě yǐ huàn yì zhǒng shuō fǎ ma?",
       "english_hint": "Sorry, I don't quite understand. Can you say it differently?",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Xin lỗi, tôi chưa hiểu lắm. Bạn có thể nói cách khác được không?",
+        "th": "ขอโทษครับ/ค่ะ ผม/หนูไม่ค่อยเข้าใจ ช่วยพูดอีกแบบได้ไหมครับ/คะ?",
+        "id": "Maaf, saya kurang mengerti. Bisa tolong katakan dengan cara lain?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời lắm!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

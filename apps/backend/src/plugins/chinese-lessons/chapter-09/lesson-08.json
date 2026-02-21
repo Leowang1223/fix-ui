@@ -13,7 +13,22 @@
       ],
       "pinyin": "zuì jìn wǒ yǒu diǎn lèi, shì qíng yǒu diǎn duō.",
       "english_hint": "I feel a bit tired lately; there's a lot going on.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Gần đây tôi cảm thấy hơi mệt, có nhiều việc quá.",
+        "th": "ช่วงนี้รู้สึกเหนื่อยหน่อย มีเรื่องให้ทำเยอะแยะเลย",
+        "id": "Akhir-akhir ini aku merasa sedikit lelah; banyak hal yang terjadi."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "yǒu shí hòu wǒ huì jué dé yā lì hěn dà.",
       "english_hint": "Sometimes I feel a lot of pressure.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Đôi khi tôi cảm thấy rất áp lực.",
+        "th": "บางทีฉันก็รู้สึกกดดันมากเลย",
+        "id": "Kadang-kadang aku merasa banyak tekanan."
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ xū yào huā yì diǎn shí jiān ràng zì jǐ lěng jìng xià lái.",
       "english_hint": "I need some time to calm myself down.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi cần một chút thời gian để bình tĩnh lại.",
+        "th": "ฉันต้องการเวลาหน่อยเพื่อสงบสติอารมณ์",
+        "id": "Aku butuh waktu untuk menenangkan diri."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "yùn dòng cháng cháng néng bāng wǒ fàng sōng xīn qíng.",
       "english_hint": "Exercising often helps me relax.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Tập thể dục thường xuyên giúp tôi thư giãn.",
+        "th": "การออกกำลังกายบ่อยๆ ช่วยให้ฉันผ่อนคลาย",
+        "id": "Sering berolahraga membantu aku rileks."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ jué dé gēn péng yǒu liáo tiān hěn liáo yù.",
       "english_hint": "Chatting with friends feels healing to me.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Trò chuyện với bạn bè khiến tôi cảm thấy thư thái.",
+        "th": "การได้คุยกับเพื่อนรู้สึกเหมือนได้เยียวยาจิตใจเลย",
+        "id": "Mengobrol dengan teman terasa menenangkan bagiku."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "yǒu shí hòu wǒ huì tí xǐng zì jǐ màn màn lái.",
       "english_hint": "Sometimes I remind myself to take it slow.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Đôi khi tôi tự nhắc nhở bản thân hãy từ từ thôi.",
+        "th": "บางทีฉันก็เตือนตัวเองให้ใจเย็นๆ",
+        "id": "Kadang-kadang aku mengingatkan diri sendiri untuk tidak terburu-buru."
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ zhèng zài xué xí gèng hǎo de guǎn lǐ shí jiān.",
       "english_hint": "I'm learning to manage my time better.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi đang học cách quản lý thời gian tốt hơn.",
+        "th": "ฉันกำลังเรียนรู้ที่จะจัดการเวลาของตัวเองให้ดีขึ้น",
+        "id": "Aku sedang belajar mengelola waktuku dengan lebih baik."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "suī rán yǒu yā lì, dàn wǒ zhī dào zì jǐ zuò de dào.",
       "english_hint": "Although there's pressure, I know I can do it.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Mặc dù có áp lực, nhưng tôi biết mình có thể làm được.",
+        "th": "แม้จะมีความกดดัน แต่ฉันรู้ว่าฉันทำได้",
+        "id": "Meskipun ada tekanan, aku tahu aku bisa melakukannya."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "wǒ xū yào yì diǎn ān jìng de shí jiān xiū xí.",
       "english_hint": "I need some quiet time to rest.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi cần một chút thời gian yên tĩnh để nghỉ ngơi.",
+        "th": "ฉันต้องการเวลาเงียบๆ หน่อยเพื่อพักผ่อน",
+        "id": "Aku butuh waktu tenang untuk beristirahat."
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "wǒ xiāng xìn zhuàng tài huì màn màn biàn hǎo.",
       "english_hint": "I believe things will get better gradually.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Tôi tin rằng mọi thứ sẽ dần tốt đẹp hơn.",
+        "th": "ฉันเชื่อว่าทุกอย่างจะดีขึ้นทีละน้อย",
+        "id": "Aku percaya semuanya akan membaik perlahan-lahan."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

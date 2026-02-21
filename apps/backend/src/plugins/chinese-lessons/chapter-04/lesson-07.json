@@ -13,7 +13,22 @@
       ],
       "pinyin": "nǐ jīn tiān zěn me yàng?",
       "english_hint": "How are you today?",
-      "encouragement": "Great question!"
+      "encouragement": "Great question!",
+      "hints": {
+        "vi": "Hôm nay bạn thế nào?",
+        "th": "วันนี้เป็นยังไงบ้าง?",
+        "id": "Apa kabar hari ini?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi hay đấy!",
+        "th": "คำถามดีมาก!",
+        "id": "Pertanyaan bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ hěn hǎo, nǐ ne?",
       "english_hint": "I'm good, and you?",
-      "encouragement": "Nice reply!"
+      "encouragement": "Nice reply!",
+      "hints": {
+        "vi": "Tôi khỏe, còn bạn?",
+        "th": "สบายดี แล้วคุณล่ะ?",
+        "id": "Saya baik-baik saja, kamu?"
+      },
+      "encouragements": {
+        "vi": "Trả lời tốt!",
+        "th": "ตอบดีมาก!",
+        "id": "Balasan bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "jīn tiān tiān qì hěn hǎo.",
       "english_hint": "The weather is great today.",
-      "encouragement": "Good observation!"
+      "encouragement": "Good observation!",
+      "hints": {
+        "vi": "Hôm nay thời tiết đẹp quá.",
+        "th": "วันนี้อากาศดีมากเลย",
+        "id": "Cuaca hari ini bagus sekali."
+      },
+      "encouragements": {
+        "vi": "Quan sát tốt!",
+        "th": "ช่างสังเกตดี!",
+        "id": "Pengamatan bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "nǐ xǐ huān zhè lǐ ma?",
       "english_hint": "Do you like it here?",
-      "encouragement": "Excellent question!"
+      "encouragement": "Excellent question!",
+      "hints": {
+        "vi": "Bạn có thích ở đây không?",
+        "th": "คุณชอบที่นี่ไหม?",
+        "id": "Apakah kamu suka di sini?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi xuất sắc!",
+        "th": "คำถามยอดเยี่ยม!",
+        "id": "Pertanyaan luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "nǐ cóng nǎ lǐ lái?",
       "english_hint": "Where are you from?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Bạn đến từ đâu?",
+        "th": "คุณมาจากไหน?",
+        "id": "Kamu dari mana?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ cóng měi guó lái.",
       "english_hint": "I'm from the U.S.",
-      "encouragement": "Nice answer!"
+      "encouragement": "Nice answer!",
+      "hints": {
+        "vi": "Tôi đến từ Mỹ.",
+        "th": "ฉันมาจากอเมริกา",
+        "id": "Saya dari A.S."
+      },
+      "encouragements": {
+        "vi": "Câu trả lời hay!",
+        "th": "คำตอบดีมาก!",
+        "id": "Jawaban bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "nǐ xǐ huān zuò shén me?",
       "english_hint": "What do you like to do?",
-      "encouragement": "Good question!"
+      "encouragement": "Good question!",
+      "hints": {
+        "vi": "Bạn thích làm gì?",
+        "th": "คุณชอบทำอะไร?",
+        "id": "Apa yang kamu suka lakukan?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi hay!",
+        "th": "คำถามดี!",
+        "id": "Pertanyaan bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ xǐ huān lǚ xíng.",
       "english_hint": "I like traveling.",
-      "encouragement": "Great hobby sentence!"
+      "encouragement": "Great hobby sentence!",
+      "hints": {
+        "vi": "Tôi thích đi du lịch.",
+        "th": "ฉันชอบท่องเที่ยว",
+        "id": "Saya suka bepergian."
+      },
+      "encouragements": {
+        "vi": "Câu về sở thích rất hay!",
+        "th": "ประโยคเกี่ยวกับงานอดิเรกที่ดี!",
+        "id": "Kalimat hobi yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "nǐ gōng zuò máng ma?",
       "english_hint": "Are you busy at work?",
-      "encouragement": "Nice conversation starter!"
+      "encouragement": "Nice conversation starter!",
+      "hints": {
+        "vi": "Bạn có bận việc không?",
+        "th": "งานยุ่งไหม?",
+        "id": "Apakah kamu sibuk kerja?"
+      },
+      "encouragements": {
+        "vi": "Mở đầu cuộc trò chuyện tốt!",
+        "th": "ประโยคเปิดบทสนทนาที่ดี!",
+        "id": "Pembuka percakapan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "hái hǎo, bú suàn tài máng.",
       "english_hint": "It's okay, not too busy.",
-      "encouragement": "Great natural answer!"
+      "encouragement": "Great natural answer!",
+      "hints": {
+        "vi": "Cũng được, không bận lắm.",
+        "th": "ก็โอเค ไม่ยุ่งมาก",
+        "id": "Lumayan, tidak terlalu sibuk."
+      },
+      "encouragements": {
+        "vi": "Câu trả lời tự nhiên tuyệt vời!",
+        "th": "คำตอบที่เป็นธรรมชาติมาก!",
+        "id": "Jawaban alami yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

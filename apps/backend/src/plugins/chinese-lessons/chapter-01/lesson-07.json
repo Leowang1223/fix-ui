@@ -15,7 +15,22 @@
       "english_hint": "water",
       "encouragement": "Great start!",
       "tts_text": "水",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "nước",
+        "th": "น้ำ",
+        "id": "air"
+      },
+      "encouragements": {
+        "vi": "Khởi đầu tuyệt vời!",
+        "th": "เริ่มต้นได้ดีมาก!",
+        "id": "Awal yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -27,7 +42,22 @@
       "english_hint": "rice / meal",
       "encouragement": "Nice!",
       "tts_text": "飯",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "cơm",
+        "th": "ข้าว",
+        "id": "nasi / makanan"
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -39,7 +69,22 @@
       "english_hint": "noodles",
       "encouragement": "Good job!",
       "tts_text": "麵",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "mì",
+        "th": "บะหมี่",
+        "id": "mi"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "เก่งมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -51,7 +96,22 @@
       "english_hint": "fruit",
       "encouragement": "Excellent!",
       "tts_text": "水果",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "trái cây",
+        "th": "ผลไม้",
+        "id": "buah"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -63,7 +123,22 @@
       "english_hint": "vegetables",
       "encouragement": "You're doing great!",
       "tts_text": "蔬菜",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "rau củ",
+        "th": "ผัก",
+        "id": "sayuran"
+      },
+      "encouragements": {
+        "vi": "Bạn đang làm rất tốt!",
+        "th": "คุณทำได้ดีมาก!",
+        "id": "Kamu hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -75,7 +150,22 @@
       "english_hint": "meat",
       "encouragement": "Perfect!",
       "tts_text": "肉",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "thịt",
+        "th": "เนื้อสัตว์",
+        "id": "daging"
+      },
+      "encouragements": {
+        "vi": "Hoàn hảo!",
+        "th": "เยี่ยมยอด!",
+        "id": "Sempurna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -87,7 +177,22 @@
       "english_hint": "egg",
       "encouragement": "Nice job!",
       "tts_text": "蛋",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "trứng",
+        "th": "ไข่",
+        "id": "telur"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "เยี่ยมมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -99,7 +204,22 @@
       "english_hint": "milk",
       "encouragement": "Good work!",
       "tts_text": "牛奶",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "sữa",
+        "th": "นม",
+        "id": "susu"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -111,7 +231,22 @@
       "english_hint": "bread",
       "encouragement": "Awesome!",
       "tts_text": "麵包",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "bánh mì",
+        "th": "ขนมปัง",
+        "id": "roti"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -123,7 +258,22 @@
       "english_hint": "sugar / candy",
       "encouragement": "Fantastic!",
       "tts_text": "糖",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "đường / kẹo",
+        "th": "น้ำตาล / ลูกอม",
+        "id": "gula / permen"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "ยอดเยี่ยมมาก!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

@@ -15,7 +15,22 @@
       "english_hint": "one",
       "encouragement": "Great job! Keep counting!",
       "tts_text": "一",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "một",
+        "th": "หนึ่ง",
+        "id": "satu"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm! Tiếp tục đếm nhé!",
+        "th": "เยี่ยมมาก! นับต่อไปเลย!",
+        "id": "Kerja bagus! Teruslah menghitung!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -27,7 +42,22 @@
       "english_hint": "two",
       "encouragement": "Nice! You're learning!",
       "tts_text": "二",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "hai",
+        "th": "สอง",
+        "id": "dua"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời! Bạn đang học đấy!",
+        "th": "ดีมาก! คุณกำลังเรียนรู้!",
+        "id": "Bagus! Kamu sedang belajar!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -39,7 +69,22 @@
       "english_hint": "three",
       "encouragement": "Good! Continue!",
       "tts_text": "三",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "ba",
+        "th": "สาม",
+        "id": "tiga"
+      },
+      "encouragements": {
+        "vi": "Tốt! Tiếp tục nào!",
+        "th": "ดี! ไปต่อเลย!",
+        "id": "Bagus! Lanjutkan!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -51,7 +96,22 @@
       "english_hint": "four",
       "encouragement": "Excellent!",
       "tts_text": "四",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "bốn",
+        "th": "สี่",
+        "id": "empat"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -63,7 +123,22 @@
       "english_hint": "five",
       "encouragement": "You're doing great!",
       "tts_text": "五",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "năm",
+        "th": "ห้า",
+        "id": "lima"
+      },
+      "encouragements": {
+        "vi": "Bạn đang làm rất tốt!",
+        "th": "คุณทำได้เยี่ยมมาก!",
+        "id": "Kamu hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -75,7 +150,22 @@
       "english_hint": "six",
       "encouragement": "Perfect!",
       "tts_text": "六",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "sáu",
+        "th": "หก",
+        "id": "enam"
+      },
+      "encouragements": {
+        "vi": "Hoàn hảo!",
+        "th": "สมบูรณ์แบบ!",
+        "id": "Sempurna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -87,7 +177,22 @@
       "english_hint": "seven",
       "encouragement": "Good work!",
       "tts_text": "七",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "bảy",
+        "th": "เจ็ด",
+        "id": "tujuh"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -99,7 +204,22 @@
       "english_hint": "eight",
       "encouragement": "Great progress!",
       "tts_text": "八",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "tám",
+        "th": "แปด",
+        "id": "delapan"
+      },
+      "encouragements": {
+        "vi": "Tiến bộ tuyệt vời!",
+        "th": "ก้าวหน้าไปมาก!",
+        "id": "Kemajuan yang luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -111,7 +231,22 @@
       "english_hint": "nine",
       "encouragement": "Awesome!",
       "tts_text": "九",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "chín",
+        "th": "เก้า",
+        "id": "sembilan"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -123,7 +258,22 @@
       "english_hint": "ten",
       "encouragement": "Fantastic job!",
       "tts_text": "十",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "mười",
+        "th": "สิบ",
+        "id": "sepuluh"
+      },
+      "encouragements": {
+        "vi": "Làm tuyệt vời!",
+        "th": "เยี่ยมยอดมาก!",
+        "id": "Kerja yang fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

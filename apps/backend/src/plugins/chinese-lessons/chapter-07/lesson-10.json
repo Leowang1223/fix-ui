@@ -13,7 +13,22 @@
       ],
       "pinyin": "A: qǐng wèn, nǐ zhī dào tú shū guǎn zài nǎ lǐ ma?",
       "english_hint": "Excuse me, do you know where the library is?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Xin lỗi, bạn có biết thư viện ở đâu không?",
+        "th": "ขอโทษนะครับ/คะ คุณรู้ไหมว่าห้องสมุดอยู่ที่ไหน",
+        "id": "Permisi, apakah Anda tahu di mana perpustakaan?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "B: zhī dào, nǐ xiān zhí zǒu dà gài sān fēn zhōng.",
       "english_hint": "Yes, go straight for about three minutes.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Vâng, bạn cứ đi thẳng khoảng ba phút.",
+        "th": "ครับ/ค่ะ เดินตรงไปประมาณสามนาที",
+        "id": "Ya, jalan lurus sekitar tiga menit."
+      },
+      "encouragements": {
+        "vi": "Hay!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "A: rán hòu wǒ yào zuǒ zhuǎn hái shì yòu zhuǎn?",
       "english_hint": "Then should I turn left or right?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Vậy thì tôi nên rẽ trái hay rẽ phải?",
+        "th": "แล้วผม/ดิฉันต้องเลี้ยวซ้ายหรือขวาครับ/คะ",
+        "id": "Lalu saya harus belok kiri atau kanan?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "B: zài hóng lǜ dēng nà lǐ yòu zhuǎn.",
       "english_hint": "Turn right at the traffic light.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Rẽ phải ở chỗ đèn giao thông.",
+        "th": "เลี้ยวขวาที่ไฟแดง",
+        "id": "Belok kanan di lampu lalu lintas."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "A: huì kàn dào shén me jiàn zhú ma?",
       "english_hint": "Will I see any buildings?",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi có thấy tòa nhà nào không?",
+        "th": "จะเห็นตึกอะไรไหมครับ/คะ",
+        "id": "Apakah saya akan melihat bangunan?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "B: nǐ huì kàn dào yì jiān dà cān guǎn, tú shū guǎn jiù zài páng biān.",
       "english_hint": "You'll see a big restaurant; the library is right next to it.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Bạn sẽ thấy một nhà hàng lớn; thư viện ở ngay cạnh đó.",
+        "th": "คุณจะเห็นร้านอาหารใหญ่ๆ ห้องสมุดอยู่ติดกับร้านนั้นเลย",
+        "id": "Anda akan melihat restoran besar; perpustakaan ada di sebelahnya."
+      },
+      "encouragements": {
+        "vi": "Rất tốt!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "A: cóng zhè lǐ zǒu guò qù huì hěn yuǎn ma?",
       "english_hint": "Is it far to walk from here?",
-      "encouragement": "Good question!"
+      "encouragement": "Good question!",
+      "hints": {
+        "vi": "Đi bộ từ đây có xa không?",
+        "th": "ถ้าเดินจากตรงนี้ไกลไหมครับ/คะ",
+        "id": "Apakah jauh kalau jalan kaki dari sini?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi hay!",
+        "th": "คำถามดีมาก!",
+        "id": "Pertanyaan bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "B: bú huì, dà gài shí fēn zhōng é r yǐ.",
       "english_hint": "No, only about ten minutes.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Không, chỉ khoảng mười phút thôi.",
+        "th": "ไม่ครับ/ค่ะ แค่ประมาณสิบนาที",
+        "id": "Tidak, hanya sekitar sepuluh menit."
+      },
+      "encouragements": {
+        "vi": "Hay!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "A: xiè xiè nǐ, wǒ pà mí lù.",
       "english_hint": "Thanks, I'm afraid of getting lost.",
-      "encouragement": "Good expression!"
+      "encouragement": "Good expression!",
+      "hints": {
+        "vi": "Cảm ơn, tôi sợ bị lạc đường.",
+        "th": "ขอบคุณครับ/ค่ะ ผม/ดิฉันกลัวหลงทาง",
+        "id": "Terima kasih, saya takut tersesat."
+      },
+      "encouragements": {
+        "vi": "Cách diễn đạt hay!",
+        "th": "สำนวนดีมาก!",
+        "id": "Ungkapan bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "B: bú yòng pà, rú guǒ mí lù zài wèn bié rén jiù hǎo.",
       "english_hint": "Don't worry, if you get lost just ask someone.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Đừng lo, nếu bạn bị lạc cứ hỏi ai đó.",
+        "th": "ไม่ต้องห่วง ถ้าหลงทางก็ถามคนแถวนั้นได้เลย",
+        "id": "Jangan khawatir, kalau tersesat tanya saja orang."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

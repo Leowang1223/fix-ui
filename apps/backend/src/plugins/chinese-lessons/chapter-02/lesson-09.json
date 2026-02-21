@@ -13,7 +13,22 @@
       ],
       "pinyin": "lǎo shī",
       "english_hint": "teacher",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "thầy/cô giáo",
+        "th": "ครู",
+        "id": "guru"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "xué shēng",
       "english_hint": "student",
-      "encouragement": "Nice job!"
+      "encouragement": "Nice job!",
+      "hints": {
+        "vi": "học sinh",
+        "th": "นักเรียน",
+        "id": "siswa"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "เก่งมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "yī shēng",
       "english_hint": "doctor",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "bác sĩ",
+        "th": "หมอ",
+        "id": "dokter"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "hù shì",
       "english_hint": "nurse",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "y tá",
+        "th": "พยาบาล",
+        "id": "perawat"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "สุดยอด!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "jǐng chá",
       "english_hint": "police officer",
-      "encouragement": "Great work!"
+      "encouragement": "Great work!",
+      "hints": {
+        "vi": "cảnh sát",
+        "th": "ตำรวจ",
+        "id": "polisi"
+      },
+      "encouragements": {
+        "vi": "Làm rất tốt!",
+        "th": "เยี่ยมมาก!",
+        "id": "Kerja yang hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "gōng chéng shī",
       "english_hint": "engineer",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "kỹ sư",
+        "th": "วิศวกร",
+        "id": "insinyur"
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "lǎo bǎn",
       "english_hint": "boss",
-      "encouragement": "Good progress!"
+      "encouragement": "Good progress!",
+      "hints": {
+        "vi": "sếp",
+        "th": "เจ้านาย",
+        "id": "bos"
+      },
+      "encouragements": {
+        "vi": "Tiến bộ tốt!",
+        "th": "ก้าวหน้าดีมาก!",
+        "id": "Kemajuan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "sī jī",
       "english_hint": "driver",
-      "encouragement": "Awesome!"
+      "encouragement": "Awesome!",
+      "hints": {
+        "vi": "tài xế",
+        "th": "คนขับรถ",
+        "id": "sopir"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Keren!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "diàn yuán",
       "english_hint": "clerk",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "nhân viên",
+        "th": "เสมียน",
+        "id": "pegawai"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "zhù lǐ",
       "english_hint": "assistant",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "trợ lý",
+        "th": "ผู้ช่วย",
+        "id": "asisten"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "ยอดเยี่ยมมาก!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

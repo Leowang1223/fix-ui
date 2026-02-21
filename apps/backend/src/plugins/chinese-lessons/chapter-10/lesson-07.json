@@ -13,7 +13,22 @@
       ],
       "pinyin": "yì kāi shǐ, yí qiè dōu bǐ wǒ xiǎng de shùn lì.",
       "english_hint": "At first, everything went smoother than I expected.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Lúc đầu, mọi thứ diễn ra suôn sẻ hơn tôi mong đợi.",
+        "th": "ตอนแรกทุกอย่างราบรื่นกว่าที่คิดไว้",
+        "id": "Pada awalnya, semuanya berjalan lebih lancar dari yang saya duga."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "jiē zhe, shì qíng màn màn biàn de fù zá.",
       "english_hint": "Then things slowly became complicated.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Sau đó, mọi thứ dần trở nên phức tạp.",
+        "th": "จากนั้นทุกอย่างก็เริ่มซับซ้อนขึ้นเรื่อยๆ",
+        "id": "Lalu, semuanya perlahan menjadi rumit."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "tú zhōng wǒ yù dào jǐ gè yì xiǎng bù dào de wèn tí.",
       "english_hint": "Along the way, I ran into a few unexpected problems.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Trên đường đi, tôi gặp phải một vài vấn đề bất ngờ.",
+        "th": "ระหว่างทางฉันเจอเรื่องไม่คาดฝันอยู่บ้าง",
+        "id": "Di tengah jalan, saya menemukan beberapa masalah yang tidak terduga."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "xìng hǎo wǒ yǒu tí qián zhǔn bèi, suǒ yǐ méi yǒu tài huāng zhāng.",
       "english_hint": "Luckily, I prepared in advance, so I didn’t panic.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "May mắn thay, tôi đã chuẩn bị trước nên không hoảng sợ.",
+        "th": "โชคดีที่ฉันเตรียมตัวไว้ล่วงหน้า เลยไม่ตื่นตระหนก",
+        "id": "Untungnya, saya sudah bersiap sebelumnya, jadi saya tidak panik."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "hòu lái wǒ zhǎo dào yí gè gèng yǒu xiào de fāng shì chǔ lǐ.",
       "english_hint": "Later, I found a more effective way to handle it.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Sau đó, tôi tìm ra một cách hiệu quả hơn để xử lý.",
+        "th": "ภายหลังฉันก็เจอวิธีจัดการที่มีประสิทธิภาพมากขึ้น",
+        "id": "Kemudian, saya menemukan cara yang lebih efektif untuk menanganinya."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "zuì hòu, shì qíng bǐ wǒ yù qī de gèng kuài jiě jué.",
       "english_hint": "In the end, things were solved faster than I expected.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Cuối cùng, mọi việc được giải quyết nhanh hơn tôi dự kiến.",
+        "th": "สุดท้ายแล้วทุกอย่างก็แก้ปัญหาได้เร็วกว่าที่คิด",
+        "id": "Pada akhirnya, semuanya terselesaikan lebih cepat dari yang saya duga."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "zhěng tǐ lái shuō, zhè cì jīng yàn ràng wǒ xué dào bù shǎo.",
       "english_hint": "Overall, I learned a lot from this experience.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Nhìn chung, tôi đã học được rất nhiều từ kinh nghiệm này.",
+        "th": "โดยรวมแล้ว ฉันได้เรียนรู้มากมายจากประสบการณ์นี้",
+        "id": "Secara keseluruhan, saya belajar banyak dari pengalaman ini."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "rú guǒ zài lái yí cì, wǒ huì yòng gèng hǎo de fāng shì chǔ lǐ.",
       "english_hint": "If it happened again, I’d handle it better.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Nếu điều đó xảy ra lần nữa, tôi sẽ xử lý tốt hơn.",
+        "th": "ถ้าเกิดเรื่องแบบนี้อีก ฉันจะรับมือได้ดีกว่าเดิม",
+        "id": "Jika ini terjadi lagi, saya akan menanganinya dengan lebih baik."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "zhè jiàn shì ràng wǒ gèng yǒu xìn xīn miàn duì kùn nán.",
       "english_hint": "This made me more confident facing challenges.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Điều này khiến tôi tự tin hơn khi đối mặt với thử thách.",
+        "th": "สิ่งนี้ทำให้ฉันมั่นใจมากขึ้นในการเผชิญหน้ากับความท้าทาย",
+        "id": "Ini membuat saya lebih percaya diri menghadapi tantangan."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "yě yīn wèi zhè yàng, wǒ biàn de gèng néng lěng jìng chǔ lǐ wèn tí.",
       "english_hint": "Because of this, I became better at dealing with problems calmly.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Nhờ vậy, tôi đã giỏi hơn trong việc giải quyết vấn đề một cách bình tĩnh.",
+        "th": "ด้วยเหตุนี้ ฉันจึงรับมือกับปัญหาได้อย่างใจเย็นมากขึ้น",
+        "id": "Karena ini, saya menjadi lebih baik dalam menghadapi masalah dengan tenang."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

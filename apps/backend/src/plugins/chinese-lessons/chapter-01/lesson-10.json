@@ -15,7 +15,22 @@
       "english_hint": "to see / to look",
       "encouragement": "Great start!",
       "tts_text": "看",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "nhìn / xem",
+        "th": "ดู",
+        "id": "melihat"
+      },
+      "encouragements": {
+        "vi": "Khởi đầu tuyệt vời!",
+        "th": "เริ่มต้นได้ดีมาก!",
+        "id": "Awal yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -27,7 +42,22 @@
       "english_hint": "to eat",
       "encouragement": "Nice!",
       "tts_text": "吃",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "ăn",
+        "th": "กิน",
+        "id": "makan"
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -39,7 +69,22 @@
       "english_hint": "to drink",
       "encouragement": "Good job!",
       "tts_text": "喝",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "uống",
+        "th": "ดื่ม",
+        "id": "minum"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "เก่งมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -51,7 +96,22 @@
       "english_hint": "to speak",
       "encouragement": "Excellent!",
       "tts_text": "說",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "nói",
+        "th": "พูด",
+        "id": "berbicara"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -63,7 +123,22 @@
       "english_hint": "to walk",
       "encouragement": "Great!",
       "tts_text": "走",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "đi bộ",
+        "th": "เดิน",
+        "id": "berjalan"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมมาก!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -75,7 +150,22 @@
       "english_hint": "to come",
       "encouragement": "Perfect!",
       "tts_text": "來",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "đến",
+        "th": "มา",
+        "id": "datang"
+      },
+      "encouragements": {
+        "vi": "Hoàn hảo!",
+        "th": "สมบูรณ์แบบ!",
+        "id": "Sempurna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -87,7 +177,22 @@
       "english_hint": "to go",
       "encouragement": "Nice work!",
       "tts_text": "去",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "đi",
+        "th": "ไป",
+        "id": "pergi"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -99,7 +204,22 @@
       "english_hint": "to write",
       "encouragement": "Good progress!",
       "tts_text": "寫",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "viết",
+        "th": "เขียน",
+        "id": "menulis"
+      },
+      "encouragements": {
+        "vi": "Tiến bộ tốt!",
+        "th": "ก้าวหน้าได้ดี!",
+        "id": "Kemajuan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -111,7 +231,22 @@
       "english_hint": "to listen",
       "encouragement": "Awesome!",
       "tts_text": "聽",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "nghe",
+        "th": "ฟัง",
+        "id": "mendengarkan"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Keren!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -123,7 +258,22 @@
       "english_hint": "to do / to make",
       "encouragement": "Fantastic work!",
       "tts_text": "做",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "làm",
+        "th": "ทำ",
+        "id": "melakukan/membuat"
+      },
+      "encouragements": {
+        "vi": "Làm xuất sắc!",
+        "th": "ทำได้ยอดเยี่ยมมาก!",
+        "id": "Kerja yang luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

@@ -13,7 +13,22 @@
       ],
       "pinyin": "A: nǐ zhù de dì fāng fāng biàn ma?",
       "english_hint": "Is the place you live convenient?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Nơi bạn sống có tiện lợi không?",
+        "th": "ที่ที่คุณอยู่สะดวกสบายไหม?",
+        "id": "Apakah tempat tinggalmu strategis?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "B: hěn fāng biàn, fù jìn yǒu chāo shì hé gōng yuán.",
       "english_hint": "Very convenient—there's a supermarket and park nearby.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Rất tiện lợi—có siêu thị và công viên gần đây.",
+        "th": "สะดวกสบายมาก มีซูเปอร์มาร์เก็ตกับสวนสาธารณะอยู่ใกล้ๆ",
+        "id": "Sangat strategis—ada supermarket dan taman di dekat sini."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "A: nǐ tōng cháng zěn me qù shàng bān?",
       "english_hint": "How do you usually go to work?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Bạn thường đi làm bằng gì?",
+        "th": "ปกติคุณไปทำงานยังไง?",
+        "id": "Kamu biasanya pergi kerja naik apa?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "B: wǒ dā dì tiě, hěn kuài yě hěn fāng biàn.",
       "english_hint": "I take the metro. It's fast and convenient.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Tôi đi tàu điện ngầm. Nhanh và tiện lợi.",
+        "th": "ฉันนั่งรถไฟฟ้าไป มันเร็วและสะดวกสบาย",
+        "id": "Aku naik metro. Cepat dan praktis."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "A: nǐ xǐ huān shì zhōng xīn ma?",
       "english_hint": "Do you like the city center?",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Bạn có thích trung tâm thành phố không?",
+        "th": "คุณชอบใจกลางเมืองไหม?",
+        "id": "Kamu suka pusat kota?"
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "B: xǐ huān, dàn shì rén tài duō le.",
       "english_hint": "I like it, but it's too crowded.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi thích, nhưng nó quá đông đúc.",
+        "th": "ฉันชอบนะ แต่คนเยอะไปหน่อย",
+        "id": "Aku suka, tapi terlalu ramai."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "A: zhōu mò nǐ huì qù nǎ lǐ?",
       "english_hint": "Where will you go on weekends?",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Cuối tuần bạn sẽ đi đâu?",
+        "th": "วันหยุดสุดสัปดาห์คุณจะไปไหน?",
+        "id": "Ke mana kamu akan pergi di akhir pekan?"
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "B: wǒ huì qù kā fēi guǎn kàn shū.",
       "english_hint": "I will go to a café to read.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi sẽ đi quán cà phê đọc sách.",
+        "th": "ฉันจะไปคาเฟ่เพื่ออ่านหนังสือ",
+        "id": "Aku akan pergi ke kafe untuk membaca."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "A: nǐ zuì xǐ huān nǎ gè dì fāng?",
       "english_hint": "Which place do you like the most?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Bạn thích nơi nào nhất?",
+        "th": "คุณชอบที่ไหนมากที่สุด?",
+        "id": "Tempat mana yang paling kamu suka?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "B: wǒ zuì xǐ huān hé biān, yīn wèi hěn ān jìng.",
       "english_hint": "I like the riverside the most because it's quiet.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Tôi thích bờ sông nhất vì nó yên tĩnh.",
+        "th": "ฉันชอบริมแม่น้ำมากที่สุดเพราะมันเงียบสงบ",
+        "id": "Aku paling suka tepi sungai karena tenang."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

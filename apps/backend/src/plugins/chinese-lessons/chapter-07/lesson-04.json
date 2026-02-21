@@ -13,7 +13,22 @@
       ],
       "pinyin": "qǐng wèn chē zhàn zěn me zǒu?",
       "english_hint": "Excuse me, how do I get to the station?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Xin lỗi, làm thế nào để tôi đến nhà ga?",
+        "th": "ขอโทษนะครับ/คะ ไปสถานียังไงครับ/คะ",
+        "id": "Permisi, bagaimana saya bisa sampai ke stasiun?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "fù jìn yǒu yín háng ma?",
       "english_hint": "Is there a bank nearby?",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Gần đây có ngân hàng nào không?",
+        "th": "แถวนี้มีธนาคารไหมครับ/คะ",
+        "id": "Apakah ada bank di dekat sini?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt!",
+        "th": "ดีมาก!",
+        "id": "Keren!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ yào qù tú shū guǎn, yīng gāi wǎng nǎ lǐ zǒu?",
       "english_hint": "I want to go to the library. Which way should I go?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi muốn đến thư viện. Tôi nên đi đường nào?",
+        "th": "ผม/ฉันอยากไปห้องสมุด ต้องไปทางไหนครับ/คะ",
+        "id": "Saya ingin pergi ke perpustakaan. Lewat mana saya harus pergi?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "cóng zhè lǐ dào gōng yuán yào duō jiǔ?",
       "english_hint": "How long does it take to get to the park from here?",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Từ đây đến công viên mất bao lâu?",
+        "th": "จากที่นี่ไปสวนสาธารณะใช้เวลานานแค่ไหนครับ/คะ",
+        "id": "Berapa lama untuk sampai ke taman dari sini?"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "lù kǒu zài nǎ lǐ?",
       "english_hint": "Where is the intersection?",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Ngã tư ở đâu?",
+        "th": "สี่แยกอยู่ที่ไหนครับ/คะ",
+        "id": "Di mana persimpangannya?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt!",
+        "th": "ดีมาก!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ mí lù le, nǐ kě yǐ bāng wǒ ma?",
       "english_hint": "I'm lost, can you help me?",
-      "encouragement": "Great expression!"
+      "encouragement": "Great expression!",
+      "hints": {
+        "vi": "Tôi bị lạc, bạn có thể giúp tôi không?",
+        "th": "ผม/ฉันหลงทาง ช่วยผม/ฉันหน่อยได้ไหมครับ/คะ",
+        "id": "Saya tersesat, bisa bantu saya?"
+      },
+      "encouragements": {
+        "vi": "Diễn đạt hay lắm!",
+        "th": "สำนวนดีมาก!",
+        "id": "Ungkapan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "hái yào zǒu hěn yuǎn ma?",
       "english_hint": "Do I still need to walk far?",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi còn phải đi bộ xa không?",
+        "th": "ยังต้องเดินไกลไหมครับ/คะ",
+        "id": "Apa saya masih harus jalan jauh?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt!",
+        "th": "ดีมาก!",
+        "id": "Oke!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "shì wǎng qián hái shì wǎng hòu?",
       "english_hint": "Is it forward or backward?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Đi thẳng hay quay lại?",
+        "th": "ไปข้างหน้าหรือข้างหลังครับ/คะ",
+        "id": "Apakah itu ke depan atau ke belakang?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "zài biàn lì shāng diàn páng biān ma?",
       "english_hint": "Is it next to the convenience store?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Nó ở cạnh cửa hàng tiện lợi phải không?",
+        "th": "อยู่ข้างๆ ร้านสะดวกซื้อใช่ไหมครับ/คะ",
+        "id": "Apakah itu di sebelah minimarket?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "nǐ kě yǐ huà dì tú gěi wǒ ma?",
       "english_hint": "Can you draw a map for me?",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Bạn có thể vẽ bản đồ cho tôi không?",
+        "th": "วาดแผนที่ให้ผม/ฉันหน่อยได้ไหมครับ/คะ",
+        "id": "Bisakah Anda menggambar peta untuk saya?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

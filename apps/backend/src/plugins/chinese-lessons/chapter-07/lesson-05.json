@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ měi tiān dā gōng chē qù shàng bān.",
       "english_hint": "I take the bus to work every day.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi đi xe buýt đi làm mỗi ngày.",
+        "th": "ฉันนั่งรถเมล์ไปทำงานทุกวัน",
+        "id": "Saya naik bus ke kantor setiap hari."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ xǐ huān zuò dì tiě, yīn wèi hěn kuài.",
       "english_hint": "I like the metro because it's fast.",
-      "encouragement": "Nice reasoning!"
+      "encouragement": "Nice reasoning!",
+      "hints": {
+        "vi": "Tôi thích tàu điện ngầm vì nó nhanh.",
+        "th": "ฉันชอบรถไฟฟ้าใต้ดินเพราะมันเร็ว",
+        "id": "Saya suka metro karena cepat."
+      },
+      "encouragements": {
+        "vi": "Lập luận hay!",
+        "th": "ให้เหตุผลได้ดีมาก!",
+        "id": "Penalaran yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ jīn tiān yào qù chē zhàn jiē péng yǒu.",
       "english_hint": "I will go to the station to pick up my friend today.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Hôm nay tôi sẽ ra ga đón bạn.",
+        "th": "วันนี้ฉันจะไปที่สถานีเพื่อรับเพื่อน",
+        "id": "Saya akan pergi ke stasiun untuk menjemput teman saya hari ini."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "xià bān shí jiān gōng chē cháng cháng hěn jǐ.",
       "english_hint": "Buses are often crowded after work.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Xe buýt thường đông đúc sau giờ làm.",
+        "th": "รถเมล์มักจะแน่นหลังเลิกงาน",
+        "id": "Bus sering ramai setelah pulang kerja."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "rú guǒ xià yǔ, wǒ jiù jiào jì chéng chē.",
       "english_hint": "If it rains, I'll call a taxi.",
-      "encouragement": "Great conditional!"
+      "encouragement": "Great conditional!",
+      "hints": {
+        "vi": "Nếu trời mưa, tôi sẽ gọi taxi.",
+        "th": "ถ้าฝนตก ฉันจะเรียกแท็กซี่",
+        "id": "Kalau hujan, saya akan panggil taksi."
+      },
+      "encouragements": {
+        "vi": "Câu điều kiện rất hay!",
+        "th": "ประโยคเงื่อนไขดีมาก!",
+        "id": "Kalimat pengandaian yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ míng tiān yào dā huǒ chē qù wài dì.",
       "english_hint": "I'm taking a train out of town tomorrow.",
-      "encouragement": "Nice future tense!"
+      "encouragement": "Nice future tense!",
+      "hints": {
+        "vi": "Ngày mai tôi sẽ đi tàu ra khỏi thành phố.",
+        "th": "พรุ่งนี้ฉันจะนั่งรถไฟออกนอกเมือง",
+        "id": "Besok saya akan naik kereta ke luar kota."
+      },
+      "encouragements": {
+        "vi": "Thì tương lai hay!",
+        "th": "ประโยคบอกอนาคตดีมาก!",
+        "id": "Bentuk waktu masa depan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ cháng cháng zài chē shàng tīng yīn yuè.",
       "english_hint": "I often listen to music on the bus/train.",
-      "encouragement": "Good habit sentence!"
+      "encouragement": "Good habit sentence!",
+      "hints": {
+        "vi": "Tôi thường nghe nhạc trên xe buýt/tàu.",
+        "th": "ฉันมักจะฟังเพลงบนรถเมล์/รถไฟ",
+        "id": "Saya sering mendengarkan musik di bus/kereta."
+      },
+      "encouragements": {
+        "vi": "Câu diễn tả thói quen tốt!",
+        "th": "ประโยคบอกนิสัยดีมาก!",
+        "id": "Kalimat kebiasaan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ yào zhuǎn chē yí cì cái néng dào gōng sī.",
       "english_hint": "I need to transfer once to get to my office.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi cần chuyển tuyến một lần để đến văn phòng.",
+        "th": "ฉันต้องเปลี่ยนรถหนึ่งครั้งเพื่อไปที่ทำงาน",
+        "id": "Saya perlu transit sekali untuk sampai ke kantor saya."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "chē piào kě yǐ yòng shǒu jī mǎi.",
       "english_hint": "You can buy the ticket with your phone.",
-      "encouragement": "Nice sentence!"
+      "encouragement": "Nice sentence!",
+      "hints": {
+        "vi": "Bạn có thể mua vé bằng điện thoại.",
+        "th": "คุณสามารถซื้อตั๋วด้วยโทรศัพท์ของคุณได้",
+        "id": "Anda bisa membeli tiket dengan ponsel Anda."
+      },
+      "encouragements": {
+        "vi": "Câu hay!",
+        "th": "ประโยคดีมาก!",
+        "id": "Kalimat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "wǒ pà zuò fēi jī, yīn wèi tài gāo le.",
       "english_hint": "I'm afraid of flying because it's too high.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Tôi sợ đi máy bay vì nó quá cao.",
+        "th": "ฉันกลัวการบินเพราะมันสูงเกินไป",
+        "id": "Saya takut terbang karena terlalu tinggi."
+      },
+      "encouragements": {
+        "vi": "Tuyệt diệu!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

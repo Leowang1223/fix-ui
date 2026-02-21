@@ -13,7 +13,22 @@
       ],
       "pinyin": "qíng tiān",
       "english_hint": "sunny",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "nắng",
+        "th": "แดดจัด",
+        "id": "cerah"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมมาก!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "yīn tiān",
       "english_hint": "cloudy",
-      "encouragement": "Nice job!"
+      "encouragement": "Nice job!",
+      "hints": {
+        "vi": "nhiều mây",
+        "th": "มีเมฆมาก",
+        "id": "berawan"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "xià yǔ",
       "english_hint": "rainy",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "mưa",
+        "th": "ฝนตก",
+        "id": "hujan"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "xià xuě",
       "english_hint": "snowing",
-      "encouragement": "Wonderful!"
+      "encouragement": "Wonderful!",
+      "hints": {
+        "vi": "tuyết rơi",
+        "th": "หิมะตก",
+        "id": "bersalju"
+      },
+      "encouragements": {
+        "vi": "Tuyệt diệu!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "guā fēng",
       "english_hint": "windy",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "có gió",
+        "th": "ลมแรง",
+        "id": "berangin"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Sangat bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "rè",
       "english_hint": "hot (weather)",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "nóng",
+        "th": "ร้อน",
+        "id": "panas"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมมาก!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "lěng",
       "english_hint": "cold (weather)",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "lạnh",
+        "th": "หนาว",
+        "id": "dingin"
+      },
+      "encouragements": {
+        "vi": "Hay!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wēn nuǎn",
       "english_hint": "warm",
-      "encouragement": "Good progress!"
+      "encouragement": "Good progress!",
+      "hints": {
+        "vi": "ấm áp",
+        "th": "อบอุ่น",
+        "id": "hangat"
+      },
+      "encouragements": {
+        "vi": "Tiến bộ tốt!",
+        "th": "ก้าวหน้าดีมาก!",
+        "id": "Kemajuan bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "liáng shuǎng",
       "english_hint": "cool",
-      "encouragement": "Great job!"
+      "encouragement": "Great job!",
+      "hints": {
+        "vi": "mát mẻ",
+        "th": "เย็นสบาย",
+        "id": "sejuk"
+      },
+      "encouragements": {
+        "vi": "Làm rất tốt!",
+        "th": "ทำได้เยี่ยมมาก!",
+        "id": "Kerja bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "tiān qì",
       "english_hint": "weather",
-      "encouragement": "Awesome!"
+      "encouragement": "Awesome!",
+      "hints": {
+        "vi": "thời tiết",
+        "th": "สภาพอากาศ",
+        "id": "cuaca"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Keren!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

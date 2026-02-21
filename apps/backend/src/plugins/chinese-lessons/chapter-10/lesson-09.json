@@ -13,7 +13,22 @@
       ],
       "pinyin": "zuì jìn wǒ yǒu diǎn jǐn zhāng, dàn tóng shí yě jué dé hěn qī dài.",
       "english_hint": "Lately I'm a bit nervous, but also excited.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Gần đây tôi hơi lo lắng, nhưng cũng rất hào hứng.",
+        "th": "ช่วงนี้ฉันรู้สึกประหม่านิดหน่อย แต่ก็ตื่นเต้นด้วย",
+        "id": "Akhir-akhir ini aku sedikit gugup, tapi juga bersemangat."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "yǒu xiē shì qíng ràng wǒ yǒu diǎn shī wàng, dàn wǒ hái shì xiǎng shì zhe lǐ jiě.",
       "english_hint": "Some things disappointed me a bit, but I still want to understand.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Một vài chuyện làm tôi hơi thất vọng, nhưng tôi vẫn muốn tìm hiểu.",
+        "th": "บางเรื่องทำให้ฉันผิดหวังนิดหน่อย แต่ฉันก็ยังอยากทำความเข้าใจ",
+        "id": "Beberapa hal sedikit mengecewakanku, tapi aku tetap ingin mengerti."
+      },
+      "encouragements": {
+        "vi": "Hay!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ jué dé jīn tiān de xīn qíng bǐ qián jǐ tiān fàng sōng duō le.",
       "english_hint": "I feel much more relaxed today than the past few days.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Hôm nay tôi cảm thấy thoải mái hơn nhiều so với mấy ngày qua.",
+        "th": "วันนี้ฉันรู้สึกผ่อนคลายกว่าเมื่อสองสามวันที่ผ่านมามาก",
+        "id": "Aku merasa jauh lebih santai hari ini daripada beberapa hari terakhir."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "yǒu shí hòu wǒ huì duì zì jǐ tài yán gé.",
       "english_hint": "Sometimes I'm too strict with myself.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Đôi khi tôi quá khắt khe với bản thân.",
+        "th": "บางครั้งฉันก็เข้มงวดกับตัวเองมากเกินไป",
+        "id": "Terkadang aku terlalu keras pada diriku sendiri."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "dāng yǒu rén zhī chí wǒ shí, wǒ huì jué dé gèng yǒu lì liàng.",
       "english_hint": "I feel stronger when someone supports me.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi cảm thấy mạnh mẽ hơn khi có người ủng hộ mình.",
+        "th": "ฉันรู้สึกเข้มแข็งขึ้นเมื่อมีคนสนับสนุน",
+        "id": "Aku merasa lebih kuat saat ada yang mendukungku."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมมาก!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ zhèng zài xué xí rú hé bǎ yā lì fàng xià.",
       "english_hint": "I'm learning how to let go of stress.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi đang học cách buông bỏ căng thẳng.",
+        "th": "ฉันกำลังเรียนรู้วิธีปล่อยวางความเครียด",
+        "id": "Aku sedang belajar bagaimana melepaskan stres."
+      },
+      "encouragements": {
+        "vi": "Hay!",
+        "th": "เจ๋ง!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "yǒu xiē dān xīn shì zhèng cháng de, wǒ jiē shòu zhè yì diǎn.",
       "english_hint": "Feeling worried is normal; I accept that.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Cảm thấy lo lắng là điều bình thường; tôi chấp nhận điều đó.",
+        "th": "ความกังวลเป็นเรื่องปกติ ฉันยอมรับมันได้",
+        "id": "Merasa khawatir itu normal; aku menerima itu."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ jué dé zì jǐ zhèng zài màn màn biàn dé gèng jiān qiáng.",
       "english_hint": "I feel I’m slowly becoming stronger.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi cảm thấy mình đang dần trở nên mạnh mẽ hơn.",
+        "th": "ฉันรู้สึกว่าตัวเองกำลังค่อยๆ เข้มแข็งขึ้น",
+        "id": "Aku merasa perlahan-lahan menjadi lebih kuat."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "wǒ zhèng zài nǔ lì tiáo zhěng xīn tài, xī wàng néng gèng píng wěn.",
       "english_hint": "I'm working on adjusting my mindset to stay calmer.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi đang cố gắng điều chỉnh suy nghĩ để giữ bình tĩnh hơn.",
+        "th": "ฉันกำลังพยายามปรับความคิดให้ใจเย็นลง",
+        "id": "Aku sedang berusaha menyesuaikan pola pikirku agar tetap lebih tenang."
+      },
+      "encouragements": {
+        "vi": "Hay!",
+        "th": "ดีงาม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "suī rán ǒu ěr huì dī luò, dàn wǒ zhī dào zì jǐ huì hǎo qǐ lái.",
       "english_hint": "Although I feel down sometimes, I know I’ll get better.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Mặc dù đôi khi tôi cảm thấy buồn, nhưng tôi biết mình sẽ tốt hơn.",
+        "th": "แม้บางครั้งฉันจะรู้สึกแย่ แต่ฉันรู้ว่าฉันจะดีขึ้น",
+        "id": "Meskipun terkadang aku merasa sedih, aku tahu aku akan membaik."
+      },
+      "encouragements": {
+        "vi": "Tuyệt diệu!",
+        "th": "สุดยอดมาก!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

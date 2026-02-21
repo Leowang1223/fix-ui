@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ xǐ huān hē kā fēi.",
       "english_hint": "I like to drink coffee.",
-      "encouragement": "Great! Very natural sentence!"
+      "encouragement": "Great! Very natural sentence!",
+      "hints": {
+        "vi": "Tôi thích uống cà phê.",
+        "th": "ฉันชอบดื่มกาแฟ",
+        "id": "Saya suka minum kopi."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời! Câu rất tự nhiên!",
+        "th": "เยี่ยมมาก! ประโยคเป็นธรรมชาติสุดๆ!",
+        "id": "Bagus! Kalimat yang sangat alami!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "tā xǐ huān kàn shū.",
       "english_hint": "She likes reading.",
-      "encouragement": "Nice job!"
+      "encouragement": "Nice job!",
+      "hints": {
+        "vi": "Cô ấy thích đọc sách.",
+        "th": "เธอชอบอ่านหนังสือ",
+        "id": "Dia suka membaca."
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ bù xǐ huān xià yǔ tiān.",
       "english_hint": "I don't like rainy days.",
-      "encouragement": "Good use of 不喜歡!"
+      "encouragement": "Good use of 不喜歡!",
+      "hints": {
+        "vi": "Tôi không thích trời mưa.",
+        "th": "ฉันไม่ชอบวันฝนตก",
+        "id": "Saya tidak suka hari hujan."
+      },
+      "encouragements": {
+        "vi": "Dùng 不喜歡 rất tốt!",
+        "th": "ใช้ 不喜歡 ได้ดี!",
+        "id": "Penggunaan 不喜歡 yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ huì shuō yì diǎn zhōng wén.",
       "english_hint": "I can speak a little Chinese.",
-      "encouragement": "Excellent sentence for learners!"
+      "encouragement": "Excellent sentence for learners!",
+      "hints": {
+        "vi": "Tôi có thể nói một chút tiếng Trung.",
+        "th": "ฉันพูดภาษาจีนได้นิดหน่อย",
+        "id": "Saya bisa berbicara sedikit bahasa Mandarin."
+      },
+      "encouragements": {
+        "vi": "Một câu rất hay cho người học!",
+        "th": "เป็นประโยคที่ดีเยี่ยมสำหรับผู้เรียน!",
+        "id": "Kalimat yang sangat baik untuk pembelajar!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "tā huì yóu yǒng.",
       "english_hint": "He can swim.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Anh ấy có thể bơi.",
+        "th": "เขาว่ายน้ำได้",
+        "id": "Dia bisa berenang."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ bú huì tiào wǔ.",
       "english_hint": "I can't dance.",
-      "encouragement": "Nice and clear!"
+      "encouragement": "Nice and clear!",
+      "hints": {
+        "vi": "Tôi không thể nhảy.",
+        "th": "ฉันเต้นไม่ได้",
+        "id": "Saya tidak bisa menari."
+      },
+      "encouragements": {
+        "vi": "Rõ ràng và hay!",
+        "th": "ชัดเจนและดีมาก!",
+        "id": "Bagus dan jelas!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ kě yǐ wèn yí gè wèn tí ma?",
       "english_hint": "May I ask a question?",
-      "encouragement": "Good polite question!"
+      "encouragement": "Good polite question!",
+      "hints": {
+        "vi": "Tôi có thể hỏi một câu hỏi được không?",
+        "th": "ขอถามคำถามหน่อยได้ไหมครับ/คะ",
+        "id": "Bolehkah saya bertanya?"
+      },
+      "encouragements": {
+        "vi": "Một câu hỏi lịch sự rất tốt!",
+        "th": "เป็นคำถามที่สุภาพดี!",
+        "id": "Pertanyaan sopan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "nǐ kě yǐ bāng wǒ ma?",
       "english_hint": "Can you help me?",
-      "encouragement": "Excellent request sentence!"
+      "encouragement": "Excellent request sentence!",
+      "hints": {
+        "vi": "Bạn có thể giúp tôi không?",
+        "th": "ช่วยฉันหน่อยได้ไหมครับ/คะ",
+        "id": "Bisakah kamu membantu saya?"
+      },
+      "encouragements": {
+        "vi": "Câu yêu cầu rất hay!",
+        "th": "เป็นประโยคขอร้องที่ดีเยี่ยม!",
+        "id": "Kalimat permintaan yang sangat baik!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "jīn tiān bù kě yǐ tài wǎn shuì.",
       "english_hint": "You can't go to bed too late today.",
-      "encouragement": "Great use of 不可以!"
+      "encouragement": "Great use of 不可以!",
+      "hints": {
+        "vi": "Hôm nay bạn không được đi ngủ quá muộn.",
+        "th": "วันนี้คุณนอนดึกเกินไปไม่ได้นะ",
+        "id": "Kamu tidak boleh tidur terlalu larut hari ini."
+      },
+      "encouragements": {
+        "vi": "Dùng 不可以 rất tốt!",
+        "th": "ใช้ 不可以 ได้ดีมาก!",
+        "id": "Penggunaan 不可以 yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "wǒ hěn xǐ huān xué zhōng wén.",
       "english_hint": "I really like learning Chinese.",
-      "encouragement": "Fantastic! Keep going!"
+      "encouragement": "Fantastic! Keep going!",
+      "hints": {
+        "vi": "Tôi rất thích học tiếng Trung.",
+        "th": "ฉันชอบเรียนภาษาจีนมากเลย",
+        "id": "Saya sangat suka belajar bahasa Mandarin."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời! Cố gắng lên nhé!",
+        "th": "ยอดเยี่ยมมาก! สู้ๆ นะ!",
+        "id": "Fantastis! Terus semangat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

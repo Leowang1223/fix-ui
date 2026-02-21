@@ -15,7 +15,22 @@
       "english_hint": "school",
       "encouragement": "Great start!",
       "tts_text": "學校",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "trường học",
+        "th": "โรงเรียน",
+        "id": "sekolah"
+      },
+      "encouragements": {
+        "vi": "Khởi đầu tuyệt vời!",
+        "th": "เริ่มต้นได้ดีมาก!",
+        "id": "Awal yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -27,7 +42,22 @@
       "english_hint": "home",
       "encouragement": "Nice!",
       "tts_text": "家",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "nhà",
+        "th": "บ้าน",
+        "id": "rumah"
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -39,7 +69,22 @@
       "english_hint": "company",
       "encouragement": "Good work!",
       "tts_text": "公司",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "công ty",
+        "th": "บริษัท",
+        "id": "perusahaan"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -51,7 +96,22 @@
       "english_hint": "supermarket",
       "encouragement": "Excellent!",
       "tts_text": "超市",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "siêu thị",
+        "th": "ซูเปอร์มาร์เก็ต",
+        "id": "supermarket"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -63,7 +123,22 @@
       "english_hint": "restaurant",
       "encouragement": "Great!",
       "tts_text": "餐廳",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "nhà hàng",
+        "th": "ร้านอาหาร",
+        "id": "restoran"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมมาก!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -75,7 +150,22 @@
       "english_hint": "hospital",
       "encouragement": "Nice progress!",
       "tts_text": "醫院",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "bệnh viện",
+        "th": "โรงพยาบาล",
+        "id": "rumah sakit"
+      },
+      "encouragements": {
+        "vi": "Tiến bộ tốt lắm!",
+        "th": "ก้าวหน้าได้ดีมาก!",
+        "id": "Kemajuan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -87,7 +177,22 @@
       "english_hint": "park",
       "encouragement": "Good job!",
       "tts_text": "公園",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "công viên",
+        "th": "สวนสาธารณะ",
+        "id": "taman"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "เก่งมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -99,7 +204,22 @@
       "english_hint": "station",
       "encouragement": "Excellent!",
       "tts_text": "車站",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "nhà ga",
+        "th": "สถานี",
+        "id": "stasiun"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -111,7 +231,22 @@
       "english_hint": "bank",
       "encouragement": "You're doing great!",
       "tts_text": "銀行",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "ngân hàng",
+        "th": "ธนาคาร",
+        "id": "bank"
+      },
+      "encouragements": {
+        "vi": "Bạn làm rất tốt!",
+        "th": "คุณทำได้ดีมาก!",
+        "id": "Kamu hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -123,7 +258,22 @@
       "english_hint": "shop / store",
       "encouragement": "Fantastic!",
       "tts_text": "商店",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "cửa hàng",
+        "th": "ร้านค้า",
+        "id": "toko"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

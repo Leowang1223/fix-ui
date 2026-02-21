@@ -23,6 +23,7 @@ if (fs.existsSync(envPath)) {
 }
 
 const Anthropic = require('@anthropic-ai/sdk')
+const { GoogleGenerativeAI } = require('@google/generative-ai')
 
 const LESSONS_DIR = path.join(__dirname, '..', 'apps', 'backend', 'src', 'plugins', 'chinese-lessons')
 
@@ -52,13 +53,22 @@ ${JSON.stringify(strings, null, 2)}
 
 Return a JSON array of ${strings.length} translated strings:`
 
-  const message = await client.messages.create({
-    model: 'claude-haiku-4-5-20251001',
-    max_tokens: 4096,
-    messages: [{ role: 'user', content: prompt }],
-  })
+  let responseText = '[]'
 
-  const responseText = message.content[0]?.text || '[]'
+  if (client.type === 'gemini') {
+    const result = await client.model.generateContent({
+      contents: [{ role: 'user', parts: [{ text: prompt }] }],
+      generationConfig: { temperature: 0.3, responseMimeType: 'application/json' },
+    })
+    responseText = result.response.candidates?.[0]?.content?.parts?.[0]?.text || '[]'
+  } else {
+    const message = await client.anthropic.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 4096,
+      messages: [{ role: 'user', content: prompt }],
+    })
+    responseText = message.content[0]?.text || '[]'
+  }
 
   // Extract JSON array from response
   const jsonMatch = responseText.match(/\[[\s\S]*\]/)
@@ -155,16 +165,24 @@ async function translateLesson(client, lessonPath) {
 }
 
 async function main() {
-  const apiKey = process.env.ANTHROPIC_API_KEY
-  if (!apiKey) {
-    console.error('❌ No ANTHROPIC_API_KEY found. Set it in environment or apps/backend/.env')
+  const geminiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY
+  const anthropicKey = process.env.ANTHROPIC_API_KEY
+
+  let client
+  if (geminiKey && !geminiKey.includes('placeholder')) {
+    const genAI = new GoogleGenerativeAI(geminiKey)
+    client = { type: 'gemini', model: genAI.getGenerativeModel({ model: 'gemini-2.5-flash' }) }
+    console.log(DRY_RUN ? '🔍 DRY RUN MODE' : '🚀 TRANSLATION MODE (Gemini 2.0 Flash)')
+  } else if (anthropicKey) {
+    client = { type: 'anthropic', anthropic: new Anthropic.default({ apiKey: anthropicKey }) }
+    console.log(DRY_RUN ? '🔍 DRY RUN MODE' : '🚀 TRANSLATION MODE (Claude Haiku)')
+  } else {
+    console.error('❌ No API key found. Set GEMINI_API_KEY or ANTHROPIC_API_KEY in apps/backend/.env')
     process.exit(1)
   }
 
-  console.log(DRY_RUN ? '🔍 DRY RUN MODE' : '🚀 TRANSLATION MODE (Claude Haiku)')
   console.log(`📂 Lessons dir: ${LESSONS_DIR}`)
 
-  const client = new Anthropic.default({ apiKey })
 
   // Find all chapter directories
   const chapters = fs.readdirSync(LESSONS_DIR, { withFileTypes: true })

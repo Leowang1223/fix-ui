@@ -13,7 +13,22 @@
       ],
       "pinyin": "nǐ zài zuò shén me?",
       "english_hint": "What are you doing?",
-      "encouragement": "Great start!"
+      "encouragement": "Great start!",
+      "hints": {
+        "vi": "Bạn đang làm gì vậy?",
+        "th": "คุณกำลังทำอะไรอยู่?",
+        "id": "Kamu lagi apa?"
+      },
+      "encouragements": {
+        "vi": "Khởi đầu tuyệt vời!",
+        "th": "เริ่มต้นได้ดีมาก!",
+        "id": "Awal yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "nǐ xǐ huān chī shén me?",
       "english_hint": "What do you like to eat?",
-      "encouragement": "Nice question!"
+      "encouragement": "Nice question!",
+      "hints": {
+        "vi": "Bạn thích ăn gì?",
+        "th": "คุณชอบกินอะไร?",
+        "id": "Kamu suka makan apa?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi hay!",
+        "th": "คำถามดีมาก!",
+        "id": "Pertanyaan bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "nǐ zhù zài nǎ lǐ?",
       "english_hint": "Where do you live?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Bạn sống ở đâu?",
+        "th": "คุณอาศัยอยู่ที่ไหน?",
+        "id": "Kamu tinggal di mana?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "nǐ yǒu jǐ gè péng yǒu?",
       "english_hint": "How many friends do you have?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Bạn có bao nhiêu người bạn?",
+        "th": "คุณมีเพื่อนกี่คน?",
+        "id": "Kamu punya berapa teman?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "nǐ jǐ diǎn qǐ chuáng?",
       "english_hint": "What time do you get up?",
-      "encouragement": "Nice question!"
+      "encouragement": "Nice question!",
+      "hints": {
+        "vi": "Bạn thức dậy lúc mấy giờ?",
+        "th": "คุณตื่นนอนกี่โมง?",
+        "id": "Kamu bangun jam berapa?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi hay!",
+        "th": "คำถามดีมาก!",
+        "id": "Pertanyaan bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "nǐ zhōu mò zuò shén me?",
       "english_hint": "What do you do on weekends?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Bạn làm gì vào cuối tuần?",
+        "th": "วันหยุดสุดสัปดาห์คุณทำอะไร?",
+        "id": "Kamu ngapain di akhir pekan?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "nǐ xǐ huān nǎ yì zhǒng yīn yuè?",
       "english_hint": "Which kind of music do you like?",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Bạn thích loại nhạc nào?",
+        "th": "คุณชอบฟังเพลงแนวไหน?",
+        "id": "Kamu suka musik jenis apa?"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "nǐ huì shuō jǐ zhǒng yǔ yán?",
       "english_hint": "How many languages can you speak?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Bạn có thể nói được mấy thứ tiếng?",
+        "th": "คุณพูดได้กี่ภาษา?",
+        "id": "Kamu bisa bicara berapa bahasa?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "nǐ xǐ huān lǚ xíng ma?",
       "english_hint": "Do you like to travel?",
-      "encouragement": "Nice conversation question!"
+      "encouragement": "Nice conversation question!",
+      "hints": {
+        "vi": "Bạn có thích đi du lịch không?",
+        "th": "คุณชอบเที่ยวไหม?",
+        "id": "Kamu suka jalan-jalan?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi trò chuyện hay!",
+        "th": "คำถามสนทนาดีมาก!",
+        "id": "Pertanyaan bagus untuk ngobrol!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "nǐ píng cháng jǐ diǎn shuì jiào?",
       "english_hint": "What time do you usually sleep?",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Bạn thường ngủ lúc mấy giờ?",
+        "th": "ปกติคุณนอนกี่โมง?",
+        "id": "Kamu biasanya tidur jam berapa?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

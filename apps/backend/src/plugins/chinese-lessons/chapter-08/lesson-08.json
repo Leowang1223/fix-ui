@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ zǎo shàng qī diǎn qǐ chuáng, yīn wèi bā diǎn yào shàng bān.",
       "english_hint": "I get up at 7 because I work at 8.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi thức dậy lúc 7 giờ vì tôi làm việc lúc 8 giờ.",
+        "th": "ฉันตื่นนอนตอน 7 โมง เพราะฉันทำงานตอน 8 โมง",
+        "id": "Saya bangun jam 7 karena saya bekerja jam 8."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ tōng cháng dā dì tiě, yīn wèi bǐ gōng chē kuài.",
       "english_hint": "I usually take the metro because it's faster than the bus.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi thường đi tàu điện ngầm vì nó nhanh hơn xe buýt.",
+        "th": "ฉันมักจะนั่งรถไฟฟ้า เพราะเร็วกว่ารถเมล์",
+        "id": "Saya biasanya naik metro karena lebih cepat daripada bus."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ zhōng wǔ huì chū qù mǎi wǔ cān.",
       "english_hint": "I go out to buy lunch at noon.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi ra ngoài mua bữa trưa vào buổi trưa.",
+        "th": "ฉันออกไปซื้ออาหารกลางวันตอนเที่ยง",
+        "id": "Saya keluar beli makan siang pas tengah hari."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "xià bān hòu wǒ huì yùn dòng yí xià, wèi le bǎo chí jiàn kāng.",
       "english_hint": "I exercise after work to stay healthy.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Tôi tập thể dục sau giờ làm để giữ sức khỏe.",
+        "th": "ฉันออกกำลังกายหลังเลิกงานเพื่อสุขภาพที่ดี",
+        "id": "Saya berolahraga setelah kerja supaya tetap sehat."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ wǎn shàng huì kàn yì diǎn shū, fàng sōng yí xià.",
       "english_hint": "In the evening I read a bit to relax.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Vào buổi tối, tôi đọc sách một chút để thư giãn.",
+        "th": "ตอนเย็นฉันอ่านหนังสือเล็กน้อยเพื่อผ่อนคลาย",
+        "id": "Malam hari saya baca sedikit untuk santai."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ xǐ huān sàn bù, yīn wèi kě yǐ qīng xǐng tóu nǎo.",
       "english_hint": "I like walking because it clears my mind.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi thích đi bộ vì nó giúp đầu óc tôi thư thái.",
+        "th": "ฉันชอบเดิน เพราะมันช่วยให้สมองปลอดโปร่ง",
+        "id": "Saya suka jalan kaki karena bisa menjernihkan pikiran saya."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ tōng cháng shí yī diǎn shuì jiào.",
       "english_hint": "I usually sleep at 11.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi thường ngủ lúc 11 giờ.",
+        "th": "ฉันมักจะนอนตอน 5 ทุ่ม",
+        "id": "Saya biasanya tidur jam 11."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "zhōu mò wǒ huì zhěng lǐ fáng jiān, yīn wèi píng rì tài máng.",
       "english_hint": "I clean my room on weekends because weekdays are too busy.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi dọn phòng vào cuối tuần vì các ngày trong tuần quá bận rộn.",
+        "th": "ฉันทำความสะอาดห้องในวันหยุดสุดสัปดาห์ เพราะวันธรรมดาไม่ค่อยมีเวลา",
+        "id": "Saya membersihkan kamar saya di akhir pekan karena hari kerja terlalu sibuk."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "yǒu shí hòu wǒ huì kàn diàn yǐng fàng sōng.",
       "english_hint": "Sometimes I watch movies to relax.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Đôi khi tôi xem phim để thư giãn.",
+        "th": "บางครั้งฉันก็ดูหนังเพื่อผ่อนคลาย",
+        "id": "Kadang-kadang saya nonton film untuk santai."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "wèi le tí shēng zì jǐ, wǒ měi tiān dōu xué yì diǎn xīn dōng xī.",
       "english_hint": "To improve myself, I learn something new every day.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Để cải thiện bản thân, tôi học điều gì đó mới mỗi ngày.",
+        "th": "เพื่อพัฒนาตัวเอง ฉันเรียนรู้สิ่งใหม่ๆ ทุกวัน",
+        "id": "Untuk meningkatkan diri, saya belajar hal baru setiap hari."
+      },
+      "encouragements": {
+        "vi": "Tuyệt diệu!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

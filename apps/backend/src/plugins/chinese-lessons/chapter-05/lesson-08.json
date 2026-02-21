@@ -13,7 +13,22 @@
       ],
       "pinyin": "zhè ge bǐ nà ge pián yí.",
       "english_hint": "This is cheaper than that.",
-      "encouragement": "Great comparison!"
+      "encouragement": "Great comparison!",
+      "hints": {
+        "vi": "Cái này rẻ hơn cái kia.",
+        "th": "อันนี้ถูกกว่าอันนั้น",
+        "id": "Ini lebih murah daripada itu."
+      },
+      "encouragements": {
+        "vi": "So sánh tuyệt vời!",
+        "th": "เปรียบเทียบได้ดีมาก!",
+        "id": "Perbandingan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ jīn tiān bǐ zuó tiān máng.",
       "english_hint": "I am busier today than yesterday.",
-      "encouragement": "Nice sentence!"
+      "encouragement": "Nice sentence!",
+      "hints": {
+        "vi": "Hôm nay tôi bận hơn hôm qua.",
+        "th": "วันนี้ฉันยุ่งกว่าเมื่อวาน",
+        "id": "Saya lebih sibuk hari ini daripada kemarin."
+      },
+      "encouragements": {
+        "vi": "Câu hay lắm!",
+        "th": "ประโยคดีมาก!",
+        "id": "Kalimat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "kā fēi bǐ chá kǔ.",
       "english_hint": "Coffee is more bitter than tea.",
-      "encouragement": "Good comparison!"
+      "encouragement": "Good comparison!",
+      "hints": {
+        "vi": "Cà phê đắng hơn trà.",
+        "th": "กาแฟขมกว่าชา",
+        "id": "Kopi lebih pahit daripada teh."
+      },
+      "encouragements": {
+        "vi": "So sánh tốt!",
+        "th": "เปรียบเทียบได้ดี!",
+        "id": "Perbandingan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "zhè tiáo lù gèng kuài.",
       "english_hint": "This road is faster.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Con đường này nhanh hơn.",
+        "th": "ถนนเส้นนี้เร็วกว่า",
+        "id": "Jalan ini lebih cepat."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "jīn tiān gèng lěng.",
       "english_hint": "Today is colder.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Hôm nay lạnh hơn.",
+        "th": "วันนี้หนาวกว่า",
+        "id": "Hari ini lebih dingin."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "zhè lǐ bǐ nà lǐ ān jìng.",
       "english_hint": "Here is quieter than there.",
-      "encouragement": "Nice comparison!"
+      "encouragement": "Nice comparison!",
+      "hints": {
+        "vi": "Ở đây yên tĩnh hơn ở đó.",
+        "th": "ที่นี่เงียบกว่าที่นั่น",
+        "id": "Di sini lebih tenang daripada di sana."
+      },
+      "encouragements": {
+        "vi": "So sánh hay!",
+        "th": "เปรียบเทียบได้ดี!",
+        "id": "Perbandingan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǎn shàng bǐ zǎo shàng liáng.",
       "english_hint": "Evening is cooler than morning.",
-      "encouragement": "Good job!"
+      "encouragement": "Good job!",
+      "hints": {
+        "vi": "Buổi tối mát hơn buổi sáng.",
+        "th": "ตอนเย็นอากาศเย็นกว่าตอนเช้า",
+        "id": "Sore lebih sejuk daripada pagi."
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "tā pǎo de gèng kuài.",
       "english_hint": "He runs even faster.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Anh ấy chạy còn nhanh hơn nữa.",
+        "th": "เขาวิ่งเร็วกว่าเดิมอีก",
+        "id": "Dia lari lebih cepat lagi."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "zhè jiàn yī fú gèng shū fú.",
       "english_hint": "This clothing item is more comfortable.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Món đồ này thoải mái hơn.",
+        "th": "เสื้อผ้าตัวนี้ใส่สบายกว่า",
+        "id": "Pakaian ini lebih nyaman."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "wǒ xiàn zài gèng lèi.",
       "english_hint": "I'm more tired now.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Bây giờ tôi mệt hơn rồi.",
+        "th": "ตอนนี้ฉันเหนื่อยกว่าเดิม",
+        "id": "Saya lebih lelah sekarang."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

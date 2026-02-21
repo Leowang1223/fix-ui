@@ -13,7 +13,22 @@
       ],
       "pinyin": "zhè jiàn yī fú yǒu qí tā chǐ cùn ma?",
       "english_hint": "Does this clothing have other sizes?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Cái này có size khác không?",
+        "th": "เสื้อผ้าตัวนี้มีไซส์อื่นไหมคะ/ครับ?",
+        "id": "Ada ukuran lain untuk baju ini?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ xiǎng shì chuān zhè jiàn wài tào.",
       "english_hint": "I want to try on this jacket.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi muốn thử cái áo khoác này.",
+        "th": "ฉัน/ผมอยากลองเสื้อแจ็กเก็ตตัวนี้ค่ะ/ครับ",
+        "id": "Saya mau coba jaket ini."
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "qǐng wèn yǒu méi yǒu zhé kòu?",
       "english_hint": "Is there a discount?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Có khuyến mãi không?",
+        "th": "มีส่วนลดไหมคะ/ครับ?",
+        "id": "Ada diskon?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "zhè gè jià gé bǐ wǒ xiǎng xiàng de pián yí.",
       "english_hint": "This price is cheaper than I expected.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Giá này rẻ hơn tôi nghĩ.",
+        "th": "ราคานี้ถูกกว่าที่คิดไว้ค่ะ/ครับ",
+        "id": "Harga ini lebih murah dari yang saya kira."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ kě yǐ yòng xìn yòng kǎ fù kuǎn ma?",
       "english_hint": "Can I pay by credit card?",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi có thể thanh toán bằng thẻ tín dụng không?",
+        "th": "จ่ายด้วยบัตรเครดิตได้ไหมคะ/ครับ?",
+        "id": "Bisa bayar pakai kartu kredit?"
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "qǐng bǎ shōu jù gěi wǒ, wǒ yào liú zhe.",
       "english_hint": "Please give me the receipt; I need to keep it.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Cho tôi xin hóa đơn nhé, tôi cần giữ lại.",
+        "th": "ขอใบเสร็จด้วยค่ะ/ครับ ต้องเก็บไว้",
+        "id": "Tolong beri saya struknya, saya perlu menyimpannya."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ xiǎng huàn huò, yīn wèi chǐ cùn bú tài hé shì.",
       "english_hint": "I want to exchange this because the size doesn't fit.",
-      "encouragement": "Good reasoning!"
+      "encouragement": "Good reasoning!",
+      "hints": {
+        "vi": "Tôi muốn đổi cái này vì size không vừa.",
+        "th": "ฉัน/ผมอยากเปลี่ยนอันนี้ค่ะ/ครับ เพราะไซส์ไม่พอดี",
+        "id": "Saya mau tukar ini karena ukurannya tidak pas."
+      },
+      "encouragements": {
+        "vi": "Lập luận hay!",
+        "th": "ให้เหตุผลดีมาก!",
+        "id": "Alasan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "qǐng wèn yǒu shì yòng de chǎn pǐn ma?",
       "english_hint": "Do you have product samples?",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Có hàng mẫu không?",
+        "th": "มีสินค้าตัวอย่างไหมคะ/ครับ?",
+        "id": "Ada contoh produk?"
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "zhè gè pǐn zhì kàn qǐ lái bú cuò.",
       "english_hint": "The quality looks good.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Chất lượng trông tốt đấy.",
+        "th": "คุณภาพดูดีเลยค่ะ/ครับ",
+        "id": "Kualitasnya terlihat bagus."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "wǒ zài xiǎng yì xiǎng, děng yí xià zài jué dìng.",
       "english_hint": "I'll think about it and decide later.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Tôi sẽ suy nghĩ và quyết định sau.",
+        "th": "ขอคิดดูก่อนนะคะ/ครับ แล้วค่อยตัดสินใจ",
+        "id": "Saya akan pikirkan dulu dan putuskan nanti."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

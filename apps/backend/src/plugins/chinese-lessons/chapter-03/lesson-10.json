@@ -13,7 +13,22 @@
       ],
       "pinyin": "A: nǐ hǎo, nǐ shì xīn tóng xué ma?",
       "english_hint": "Hi, are you a new classmate?",
-      "encouragement": "Great opening line!"
+      "encouragement": "Great opening line!",
+      "hints": {
+        "vi": "Chào bạn, bạn là bạn học mới à?",
+        "th": "สวัสดีครับ/ค่ะ เป็นนักเรียนใหม่เหรอครับ/คะ?",
+        "id": "Hai, kamu murid baru ya?"
+      },
+      "encouragements": {
+        "vi": "Mở đầu rất hay!",
+        "th": "ประโยคเปิดตัวเยี่ยมมาก!",
+        "id": "Kalimat pembuka yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "B: duì, wǒ shì xīn lái de.",
       "english_hint": "Yes, I am new here.",
-      "encouragement": "Nice reply!"
+      "encouragement": "Nice reply!",
+      "hints": {
+        "vi": "Đúng vậy, tôi mới đến.",
+        "th": "ใช่ครับ/ค่ะ ผม/ฉันเพิ่งมาใหม่ที่นี่ครับ/ค่ะ",
+        "id": "Ya, aku baru di sini."
+      },
+      "encouragements": {
+        "vi": "Trả lời hay lắm!",
+        "th": "ตอบได้ดีมาก!",
+        "id": "Balasan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "A: nǐ jiào shén me míng zi?",
       "english_hint": "What is your name?",
-      "encouragement": "Very useful question!"
+      "encouragement": "Very useful question!",
+      "hints": {
+        "vi": "Bạn tên là gì?",
+        "th": "คุณชื่ออะไรครับ/คะ?",
+        "id": "Siapa namamu?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi rất hữu ích!",
+        "th": "คำถามมีประโยชน์มาก!",
+        "id": "Pertanyaan yang sangat berguna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "B: wǒ jiào xiǎo míng.",
       "english_hint": "My name is Xiaoming.",
-      "encouragement": "Good self-introduction!"
+      "encouragement": "Good self-introduction!",
+      "hints": {
+        "vi": "Tôi tên là Tiểu Minh.",
+        "th": "ผม/ฉันชื่อเสี่ยวหมิงครับ/ค่ะ",
+        "id": "Namaku Xiaoming."
+      },
+      "encouragements": {
+        "vi": "Giới thiệu bản thân hay!",
+        "th": "แนะนำตัวได้ดี!",
+        "id": "Perkenalan diri yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "A: nǐ xǐ huān zhè lǐ ma?",
       "english_hint": "Do you like it here?",
-      "encouragement": "Great follow-up question!"
+      "encouragement": "Great follow-up question!",
+      "hints": {
+        "vi": "Bạn có thích ở đây không?",
+        "th": "ชอบที่นี่ไหมครับ/คะ?",
+        "id": "Kamu suka di sini?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi tiếp theo rất hay!",
+        "th": "คำถามต่อเนื่องเยี่ยมมาก!",
+        "id": "Pertanyaan lanjutan yang bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "B: wǒ hěn xǐ huān, dà jiā dōu hěn yǒu shàn.",
       "english_hint": "I like it a lot, everyone is very friendly.",
-      "encouragement": "Excellent, natural answer!"
+      "encouragement": "Excellent, natural answer!",
+      "hints": {
+        "vi": "Tôi rất thích, mọi người đều rất thân thiện.",
+        "th": "ชอบมากเลยครับ/ค่ะ ทุกคนเป็นกันเองมากครับ/ค่ะ",
+        "id": "Aku suka sekali, semua orang ramah sekali."
+      },
+      "encouragements": {
+        "vi": "Câu trả lời tự nhiên, xuất sắc!",
+        "th": "ตอบได้เป็นธรรมชาติและยอดเยี่ยม!",
+        "id": "Jawaban yang luar biasa dan alami!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "A: xià kè yǐ hòu yì qǐ qù chī fàn, hǎo ma?",
       "english_hint": "After class, shall we go eat together?",
-      "encouragement": "Great invitation sentence!"
+      "encouragement": "Great invitation sentence!",
+      "hints": {
+        "vi": "Tan học, chúng ta đi ăn cùng nhau nhé?",
+        "th": "หลังเลิกเรียน เราไปหาอะไรกินด้วยกันไหมครับ/คะ?",
+        "id": "Pulang sekolah, kita makan bersama yuk?"
+      },
+      "encouragements": {
+        "vi": "Lời mời tuyệt vời!",
+        "th": "ประโยคชวนเยี่ยมมาก!",
+        "id": "Kalimat ajakan yang bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "B: hǎo a, xiè xie nǐ.",
       "english_hint": "Sure, thank you.",
-      "encouragement": "Nice and friendly answer!"
+      "encouragement": "Nice and friendly answer!",
+      "hints": {
+        "vi": "Được thôi, cảm ơn bạn.",
+        "th": "ได้เลยครับ/ค่ะ ขอบคุณครับ/ค่ะ",
+        "id": "Boleh, terima kasih."
+      },
+      "encouragements": {
+        "vi": "Trả lời thân thiện, tuyệt vời!",
+        "th": "ตอบได้ดีและเป็นมิตร!",
+        "id": "Jawaban yang bagus dan ramah!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "A: méi wèn tí, wǒ men shí èr diǎn zài mén kǒu jiàn.",
       "english_hint": "No problem, let's meet at the door at twelve.",
-      "encouragement": "Excellent detailed plan!"
+      "encouragement": "Excellent detailed plan!",
+      "hints": {
+        "vi": "Không có gì, chúng ta gặp nhau ở cửa lúc mười hai giờ nhé.",
+        "th": "ไม่เป็นไรครับ/ค่ะ งั้นเที่ยงเราเจอกันที่ประตูนะครับ/คะ",
+        "id": "Sama-sama, kita ketemu di pintu jam dua belas."
+      },
+      "encouragements": {
+        "vi": "Kế hoạch chi tiết xuất sắc!",
+        "th": "แผนละเอียดเยี่ยมมาก!",
+        "id": "Rencana terperinci yang luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "B: hǎo de, dài huìr jiàn!",
       "english_hint": "Okay, see you later!",
-      "encouragement": "Fantastic closing line!"
+      "encouragement": "Fantastic closing line!",
+      "hints": {
+        "vi": "Được, hẹn gặp lại!",
+        "th": "โอเคครับ/ค่ะ แล้วเจอกันนะครับ/คะ!",
+        "id": "Oke, sampai jumpa nanti!"
+      },
+      "encouragements": {
+        "vi": "Kết thúc rất hay!",
+        "th": "ประโยคปิดท้ายยอดเยี่ยม!",
+        "id": "Kalimat penutup yang fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

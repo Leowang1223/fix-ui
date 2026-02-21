@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ měi tiān hē yì bēi kā fēi.",
       "english_hint": "I drink a cup of coffee every day.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi uống một tách cà phê mỗi ngày.",
+        "th": "ฉันดื่มกาแฟวันละแก้วทุกวัน",
+        "id": "Saya minum secangkir kopi setiap hari."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ zhōu mò xǐ huān shuì jiào.",
       "english_hint": "I like to sleep on weekends.",
-      "encouragement": "Nice sentence!"
+      "encouragement": "Nice sentence!",
+      "hints": {
+        "vi": "Tôi thích ngủ vào cuối tuần.",
+        "th": "ฉันชอบนอนในวันหยุดสุดสัปดาห์",
+        "id": "Saya suka tidur di akhir pekan."
+      },
+      "encouragements": {
+        "vi": "Câu rất hay!",
+        "th": "ประโยคดีมาก!",
+        "id": "Kalimat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ wǎn shàng cháng cháng kàn yǐng piàn.",
       "english_hint": "I often watch videos at night.",
-      "encouragement": "Good job!"
+      "encouragement": "Good job!",
+      "hints": {
+        "vi": "Tôi thường xem video vào buổi tối.",
+        "th": "ฉันมักจะดูวิดีโอตอนกลางคืน",
+        "id": "Saya sering menonton video di malam hari."
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ zǎo shàng huì yùn dòng.",
       "english_hint": "I exercise in the morning.",
-      "encouragement": "Great healthy habit!"
+      "encouragement": "Great healthy habit!",
+      "hints": {
+        "vi": "Tôi tập thể dục vào buổi sáng.",
+        "th": "ฉันออกกำลังกายตอนเช้า",
+        "id": "Saya berolahraga di pagi hari."
+      },
+      "encouragements": {
+        "vi": "Thói quen lành mạnh tuyệt vời!",
+        "th": "นิสัยรักสุขภาพที่ดีเยี่ยม!",
+        "id": "Kebiasaan sehat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ xǐ huān tīng yīn yuè.",
       "english_hint": "I like listening to music.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi thích nghe nhạc.",
+        "th": "ฉันชอบฟังเพลง",
+        "id": "Saya suka mendengarkan musik."
+      },
+      "encouragements": {
+        "vi": "Tuyệt!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ xiǎng duō xué yì diǎn zhōng wén.",
       "english_hint": "I want to learn more Chinese.",
-      "encouragement": "Excellent motivation!"
+      "encouragement": "Excellent motivation!",
+      "hints": {
+        "vi": "Tôi muốn học thêm tiếng Trung.",
+        "th": "ฉันอยากเรียนภาษาจีนเพิ่มเติม",
+        "id": "Saya ingin belajar bahasa Mandarin lebih banyak."
+      },
+      "encouragements": {
+        "vi": "Động lực tuyệt vời!",
+        "th": "แรงจูงใจยอดเยี่ยม!",
+        "id": "Motivasi yang luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "jīn tiān wǒ bù xiǎng chū mén.",
       "english_hint": "I don't want to go out today.",
-      "encouragement": "Good expression!"
+      "encouragement": "Good expression!",
+      "hints": {
+        "vi": "Hôm nay tôi không muốn ra ngoài.",
+        "th": "วันนี้ฉันไม่อยากออกไปไหน",
+        "id": "Saya tidak ingin keluar hari ini."
+      },
+      "encouragements": {
+        "vi": "Cách diễn đạt hay!",
+        "th": "สำนวนดีมาก!",
+        "id": "Ungkapan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ zài zhǎo xīn de xìng qù.",
       "english_hint": "I'm looking for a new hobby.",
-      "encouragement": "Great sentence!"
+      "encouragement": "Great sentence!",
+      "hints": {
+        "vi": "Tôi đang tìm một sở thích mới.",
+        "th": "ฉันกำลังมองหางานอดิเรกใหม่",
+        "id": "Saya sedang mencari hobi baru."
+      },
+      "encouragements": {
+        "vi": "Câu rất hay!",
+        "th": "ประโยคเยี่ยมมาก!",
+        "id": "Kalimat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "wǒ xiǎng duō xiū xí yí xià.",
       "english_hint": "I want to take more rest.",
-      "encouragement": "Nice expression!"
+      "encouragement": "Nice expression!",
+      "hints": {
+        "vi": "Tôi muốn nghỉ ngơi nhiều hơn.",
+        "th": "ฉันอยากพักผ่อนให้มากขึ้น",
+        "id": "Saya ingin lebih banyak istirahat."
+      },
+      "encouragements": {
+        "vi": "Cách diễn đạt hay!",
+        "th": "สำนวนดี!",
+        "id": "Ungkapan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "jīn tiān wǒ hěn máng.",
       "english_hint": "I am very busy today.",
-      "encouragement": "Perfect!"
+      "encouragement": "Perfect!",
+      "hints": {
+        "vi": "Hôm nay tôi rất bận.",
+        "th": "วันนี้ฉันยุ่งมาก",
+        "id": "Saya sangat sibuk hari ini."
+      },
+      "encouragements": {
+        "vi": "Hoàn hảo!",
+        "th": "สมบูรณ์แบบ!",
+        "id": "Sempurna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

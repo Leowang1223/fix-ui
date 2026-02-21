@@ -15,7 +15,22 @@
       "english_hint": "home / family",
       "encouragement": "Great start!",
       "tts_text": "家",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "gia đình / nhà",
+        "th": "บ้าน / ครอบครัว",
+        "id": "rumah / keluarga"
+      },
+      "encouragements": {
+        "vi": "Khởi đầu tuyệt vời!",
+        "th": "เริ่มต้นได้ดีมาก!",
+        "id": "Awal yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -27,7 +42,22 @@
       "english_hint": "father",
       "encouragement": "Good job!",
       "tts_text": "爸爸",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "bố",
+        "th": "พ่อ",
+        "id": "ayah"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -39,7 +69,22 @@
       "english_hint": "mother",
       "encouragement": "Nice work!",
       "tts_text": "媽媽",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "mẹ",
+        "th": "แม่",
+        "id": "ibu"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "เยี่ยมมาก!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -51,7 +96,22 @@
       "english_hint": "older brother",
       "encouragement": "Well done!",
       "tts_text": "哥哥",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "anh trai",
+        "th": "พี่ชาย",
+        "id": "kakak laki-laki"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -63,7 +123,22 @@
       "english_hint": "older sister",
       "encouragement": "Great!",
       "tts_text": "姐姐",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "chị gái",
+        "th": "พี่สาว",
+        "id": "kakak perempuan"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -75,7 +150,22 @@
       "english_hint": "younger brother",
       "encouragement": "Excellent!",
       "tts_text": "弟弟",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "em trai",
+        "th": "น้องชาย",
+        "id": "adik laki-laki"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -87,7 +177,22 @@
       "english_hint": "younger sister",
       "encouragement": "Good work!",
       "tts_text": "妹妹",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "em gái",
+        "th": "น้องสาว",
+        "id": "adik perempuan"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดี!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -99,7 +204,22 @@
       "english_hint": "family members",
       "encouragement": "You're doing great!",
       "tts_text": "家人",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "thành viên gia đình",
+        "th": "สมาชิกในครอบครัว",
+        "id": "anggota keluarga"
+      },
+      "encouragements": {
+        "vi": "Bạn đang làm rất tốt!",
+        "th": "ทำได้เยี่ยมเลย!",
+        "id": "Kamu hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -111,7 +231,22 @@
       "english_hint": "child",
       "encouragement": "Nice!",
       "tts_text": "孩子",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "con",
+        "th": "ลูก",
+        "id": "anak"
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -123,7 +258,22 @@
       "english_hint": "friend",
       "encouragement": "Fantastic!",
       "tts_text": "朋友",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "bạn bè",
+        "th": "เพื่อน",
+        "id": "teman"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

@@ -13,7 +13,22 @@
       ],
       "pinyin": "qǐng gěi wǒ cài dān.",
       "english_hint": "Please give me the menu.",
-      "encouragement": "Great start!"
+      "encouragement": "Great start!",
+      "hints": {
+        "vi": "Cho tôi xem thực đơn được không?",
+        "th": "ขอเมนูหน่อยครับ/ค่ะ",
+        "id": "Tolong menunya."
+      },
+      "encouragements": {
+        "vi": "Khởi đầu tuyệt vời!",
+        "th": "เริ่มต้นได้ดี!",
+        "id": "Awal yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ men yǒu jǐ gè rén.",
       "english_hint": "We have several people (we are ... people).",
-      "encouragement": "Nice sentence!"
+      "encouragement": "Nice sentence!",
+      "hints": {
+        "vi": "Chúng tôi có ... người.",
+        "th": "พวกเรามี...คนครับ/ค่ะ",
+        "id": "Kami ada ... orang."
+      },
+      "encouragements": {
+        "vi": "Câu rất hay!",
+        "th": "ประโยคดีมาก!",
+        "id": "Kalimat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ yào yì bēi shuǐ.",
       "english_hint": "I want a glass of water.",
-      "encouragement": "Good order!"
+      "encouragement": "Good order!",
+      "hints": {
+        "vi": "Tôi muốn một ly nước.",
+        "th": "ขอน้ำเปล่าแก้วนึงครับ/ค่ะ",
+        "id": "Saya mau segelas air."
+      },
+      "encouragements": {
+        "vi": "Sắp xếp tốt!",
+        "th": "ลำดับดี!",
+        "id": "Susunan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "bú yào tài là.",
       "english_hint": "Not too spicy.",
-      "encouragement": "Very useful phrase!"
+      "encouragement": "Very useful phrase!",
+      "hints": {
+        "vi": "Đừng cay quá.",
+        "th": "ไม่เผ็ดมากครับ/ค่ะ",
+        "id": "Jangan terlalu pedas."
+      },
+      "encouragements": {
+        "vi": "Cụm từ rất hữu ích!",
+        "th": "วลีนี้มีประโยชน์มาก!",
+        "id": "Frasa yang sangat berguna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "zhè dào cài hěn hǎo chī.",
       "english_hint": "This dish is delicious.",
-      "encouragement": "Excellent compliment!"
+      "encouragement": "Excellent compliment!",
+      "hints": {
+        "vi": "Món này ngon quá.",
+        "th": "อาหารจานนี้อร่อยมากครับ/ค่ะ",
+        "id": "Masakan ini enak sekali."
+      },
+      "encouragements": {
+        "vi": "Lời khen tuyệt vời!",
+        "th": "คำชมยอดเยี่ยม!",
+        "id": "Pujian yang luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "kě yǐ dǎ bāo ma?",
       "english_hint": "Can I take it to go?",
-      "encouragement": "Great question!"
+      "encouragement": "Great question!",
+      "hints": {
+        "vi": "Tôi có thể mang về được không?",
+        "th": "ขอห่อกลับบ้านได้ไหมครับ/คะ",
+        "id": "Bisa dibungkus?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi hay!",
+        "th": "คำถามดีมาก!",
+        "id": "Pertanyaan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "qǐng jié zhàng.",
       "english_hint": "Check, please.",
-      "encouragement": "Short and powerful!"
+      "encouragement": "Short and powerful!",
+      "hints": {
+        "vi": "Tính tiền giúp tôi.",
+        "th": "เช็คบิลครับ/ค่ะ",
+        "id": "Minta bill-nya."
+      },
+      "encouragements": {
+        "vi": "Ngắn gọn mà mạnh mẽ!",
+        "th": "สั้นและทรงพลัง!",
+        "id": "Singkat dan kuat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ men yào fēn kāi fù.",
       "english_hint": "We want to pay separately.",
-      "encouragement": "Nice and clear!"
+      "encouragement": "Nice and clear!",
+      "hints": {
+        "vi": "Chúng tôi muốn thanh toán riêng.",
+        "th": "พวกเราขอแยกจ่ายครับ/ค่ะ",
+        "id": "Kami mau bayar sendiri-sendiri."
+      },
+      "encouragements": {
+        "vi": "Hay và rõ ràng!",
+        "th": "ชัดเจนดี!",
+        "id": "Bagus dan jelas!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "yǒu tuī jiàn de cài ma?",
       "english_hint": "Do you have any recommendations?",
-      "encouragement": "Excellent sentence!"
+      "encouragement": "Excellent sentence!",
+      "hints": {
+        "vi": "Anh/chị có món nào gợi ý không?",
+        "th": "มีอะไรแนะนำไหมครับ/คะ",
+        "id": "Ada rekomendasi?"
+      },
+      "encouragements": {
+        "vi": "Câu rất xuất sắc!",
+        "th": "ประโยคยอดเยี่ยม!",
+        "id": "Kalimat yang luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "xiè xie, jīn tiān hěn yú kuài.",
       "english_hint": "Thank you, today was very pleasant.",
-      "encouragement": "Fantastic closing line!"
+      "encouragement": "Fantastic closing line!",
+      "hints": {
+        "vi": "Cảm ơn, hôm nay rất vui.",
+        "th": "ขอบคุณครับ/ค่ะ วันนี้สนุกมาก",
+        "id": "Terima kasih, hari ini sangat menyenangkan."
+      },
+      "encouragements": {
+        "vi": "Câu kết tuyệt vời!",
+        "th": "ประโยคปิดท้ายยอดเยี่ยม!",
+        "id": "Kalimat penutup yang fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

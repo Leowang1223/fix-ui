@@ -13,7 +13,22 @@
       ],
       "pinyin": "yín háng zài yóu jú páng biān.",
       "english_hint": "The bank is next to the post office.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Ngân hàng ở cạnh bưu điện.",
+        "th": "ธนาคารอยู่ติดกับที่ทำการไปรษณีย์",
+        "id": "Bank itu di sebelah kantor pos."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "tú shū guǎn zài gōng yuán hòu miàn.",
       "english_hint": "The library is behind the park.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Thư viện ở phía sau công viên.",
+        "th": "ห้องสมุดอยู่ด้านหลังสวนสาธารณะ",
+        "id": "Perpustakaan itu di belakang taman."
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "cóng chē zhàn zǒu guò lái dà gài wǔ fēn zhōng.",
       "english_hint": "It's about five minutes walking from the station.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Từ nhà ga đi bộ khoảng năm phút.",
+        "th": "เดินจากสถานีประมาณห้านาที",
+        "id": "Sekitar lima menit jalan kaki dari stasiun."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "biàn lì shāng diàn zài dì yī gè lù kǒu de yòu biān.",
       "english_hint": "The convenience store is on the right at the first intersection.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Cửa hàng tiện lợi ở bên phải tại ngã tư đầu tiên.",
+        "th": "ร้านสะดวกซื้ออยู่ทางขวาตรงสี่แยกแรก",
+        "id": "Toko serba ada itu di sebelah kanan di persimpangan pertama."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "nǐ huì kàn dào yí dòng bái sè de dà lóu.",
       "english_hint": "You will see a big white building.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Bạn sẽ thấy một tòa nhà màu trắng lớn.",
+        "th": "คุณจะเห็นอาคารสีขาวขนาดใหญ่",
+        "id": "Anda akan melihat sebuah gedung putih besar."
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "xué xiào zài shì chǎng de duì miàn.",
       "english_hint": "The school is across from the market.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Trường học ở đối diện chợ.",
+        "th": "โรงเรียนอยู่ตรงข้ามตลาด",
+        "id": "Sekolah itu di seberang pasar."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "cān guǎn zài dì èr gè hóng lǜ dēng zuǒ zhuǎn de dì fāng.",
       "english_hint": "The restaurant is at the second traffic light on the left.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Nhà hàng ở đèn giao thông thứ hai, bên trái.",
+        "th": "ร้านอาหารอยู่ตรงไฟแดงที่สองทางซ้ายมือ",
+        "id": "Restoran itu di lampu lalu lintas kedua di sebelah kiri."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "yán zhe hé biān yī zhí zǒu jiù dào le.",
       "english_hint": "Walk along the river and you'll reach it.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Đi dọc bờ sông là bạn sẽ tới.",
+        "th": "เดินเลียบแม่น้ำไปก็จะถึง",
+        "id": "Jalanlah menyusuri sungai dan Anda akan sampai."
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "bó wù guǎn lí zhè lǐ bù yuǎn, kě yǐ zǒu lù.",
       "english_hint": "The museum is not far from here; you can walk.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Bảo tàng không xa đây đâu; bạn có thể đi bộ.",
+        "th": "พิพิธภัณฑ์อยู่ไม่ไกลจากที่นี่ เดินไปได้",
+        "id": "Museumnya tidak jauh dari sini; Anda bisa jalan kaki."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "huǒ chē zhàn zài shì zhōng xīn de dōng biān.",
       "english_hint": "The train station is on the east side of downtown.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Ga tàu hỏa ở phía đông khu trung tâm.",
+        "th": "สถานีรถไฟอยู่ทางทิศตะวันออกของตัวเมือง",
+        "id": "Stasiun kereta api itu di sisi timur pusat kota."
+      },
+      "encouragements": {
+        "vi": "Tuyệt diệu!",
+        "th": "สุดยอด!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

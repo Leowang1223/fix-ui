@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ de yì si shì, wǒ men kě yǐ xiān cháng shì jiǎn dān de fāng fǎ.",
       "english_hint": "What I mean is, we can try the simple method first.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Ý tôi là, chúng ta có thể thử phương pháp đơn giản trước.",
+        "th": "สิ่งที่ฉันหมายถึงคือ เราลองวิธีง่ายๆ ก่อนก็ได้",
+        "id": "Maksud saya, kita bisa coba metode yang sederhana dulu."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "ràng wǒ zài què rèn yí cì, bì miǎn jiě cuò.",
       "english_hint": "Let me confirm again to avoid mistakes.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Để tôi xác nhận lại một lần nữa để tránh sai sót.",
+        "th": "ขอฉันยืนยันอีกครั้งเพื่อป้องกันความผิดพลาด",
+        "id": "Biar saya konfirmasi lagi untuk menghindari kesalahan."
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "nǐ kě yǐ zài shuō de màn yì diǎn ma?",
       "english_hint": "Could you speak a bit slower?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Bạn có thể nói chậm lại một chút được không?",
+        "th": "คุณช่วยพูดช้าลงหน่อยได้ไหม",
+        "id": "Bisa bicara sedikit lebih pelan?"
+      },
+      "encouragements": {
+        "vi": "Hay!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ xiǎng jiě shì yí xià yuán yīn.",
       "english_hint": "I'd like to explain the reason.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Tôi muốn giải thích lý do.",
+        "th": "ฉันอยากจะอธิบายเหตุผล",
+        "id": "Saya ingin menjelaskan alasannya."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ de lǐ jiě shì zhè yàng de, wǒ zài shuō yí cì.",
       "english_hint": "Here is how I understand it; let me repeat.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Đây là cách tôi hiểu; để tôi nhắc lại.",
+        "th": "นี่คือสิ่งที่ฉันเข้าใจ ขอฉันพูดซ้ำอีกครั้งนะ",
+        "id": "Begini pemahaman saya; biar saya ulangi."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "rú guǒ wǒ shuō cuò, qǐng mǎ shàng tí xǐng wǒ.",
       "english_hint": "If I say something wrong, please let me know.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Nếu tôi nói sai điều gì, xin hãy cho tôi biết.",
+        "th": "ถ้าฉันพูดอะไรผิดไป บอกฉันได้เลยนะ",
+        "id": "Kalau saya salah bicara, tolong beritahu saya."
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "jiǎn dān lái shuō, wǒ men xū yào gèng duō zī xùn.",
       "english_hint": "Simply put, we need more information.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Nói một cách đơn giản, chúng ta cần thêm thông tin.",
+        "th": "พูดง่ายๆ ก็คือ เราต้องการข้อมูลเพิ่มเติม",
+        "id": "Sederhananya, kita butuh informasi lebih lanjut."
+      },
+      "encouragements": {
+        "vi": "Hay!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ zhǐ shì xiǎng què dìng wǒ men de xiǎng fǎ yí yàng.",
       "english_hint": "I just want to make sure we have the same idea.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi chỉ muốn đảm bảo chúng ta có cùng ý tưởng.",
+        "th": "ฉันแค่อยากให้แน่ใจว่าเราเข้าใจตรงกัน",
+        "id": "Saya hanya ingin memastikan kita punya pemahaman yang sama."
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "nà wǒ huàn yì zhǒng fāng shì shuō.",
       "english_hint": "Let me put it in another way.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Để tôi diễn đạt theo một cách khác.",
+        "th": "ให้ฉันพูดอีกแบบหนึ่งนะ",
+        "id": "Biar saya sampaikan dengan cara lain."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "xī wàng zhè yàng de shuō míng yǒu bāng zhù.",
       "english_hint": "I hope this explanation helps.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Tôi hy vọng lời giải thích này hữu ích.",
+        "th": "ฉันหวังว่าคำอธิบายนี้จะเป็นประโยชน์",
+        "id": "Semoga penjelasan ini membantu."
+      },
+      "encouragements": {
+        "vi": "Tuyệt diệu!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

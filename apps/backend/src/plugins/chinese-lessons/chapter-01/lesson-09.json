@@ -15,7 +15,22 @@
       "english_hint": "car",
       "encouragement": "Great start!",
       "tts_text": "車",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "ô tô",
+        "th": "รถ",
+        "id": "mobil"
+      },
+      "encouragements": {
+        "vi": "Khởi đầu tuyệt vời!",
+        "th": "เริ่มต้นได้ดีมาก!",
+        "id": "Awal yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -27,7 +42,22 @@
       "english_hint": "bus",
       "encouragement": "Nice!",
       "tts_text": "公車",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "xe buýt",
+        "th": "รถบัส",
+        "id": "bus"
+      },
+      "encouragements": {
+        "vi": "Tuyệt!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -39,7 +69,22 @@
       "english_hint": "train",
       "encouragement": "Good job!",
       "tts_text": "火車",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "tàu hỏa",
+        "th": "รถไฟ",
+        "id": "kereta"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "เก่งมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -51,7 +96,22 @@
       "english_hint": "airplane",
       "encouragement": "Excellent!",
       "tts_text": "飛機",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "máy bay",
+        "th": "เครื่องบิน",
+        "id": "pesawat"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -63,7 +123,22 @@
       "english_hint": "boat",
       "encouragement": "Great!",
       "tts_text": "船",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "thuyền",
+        "th": "เรือ",
+        "id": "perahu"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -75,7 +150,22 @@
       "english_hint": "bicycle",
       "encouragement": "Nice work!",
       "tts_text": "腳踏車",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "xe đạp",
+        "th": "จักรยาน",
+        "id": "sepeda"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -87,7 +177,22 @@
       "english_hint": "motorcycle",
       "encouragement": "Good!",
       "tts_text": "摩托車",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "xe máy",
+        "th": "มอเตอร์ไซค์",
+        "id": "motor"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -99,7 +204,22 @@
       "english_hint": "taxi",
       "encouragement": "Well done!",
       "tts_text": "計程車",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "taxi",
+        "th": "แท็กซี่",
+        "id": "taksi"
+      },
+      "encouragements": {
+        "vi": "Hoàn thành tốt!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -111,7 +231,22 @@
       "english_hint": "subway",
       "encouragement": "Great progress!",
       "tts_text": "地鐵",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "tàu điện ngầm",
+        "th": "รถไฟฟ้าใต้ดิน",
+        "id": "kereta bawah tanah"
+      },
+      "encouragements": {
+        "vi": "Tiến bộ tuyệt vời!",
+        "th": "ก้าวหน้าไปมาก!",
+        "id": "Kemajuan yang luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -123,7 +258,22 @@
       "english_hint": "to walk",
       "encouragement": "Awesome job!",
       "tts_text": "走路",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "đi bộ",
+        "th": "เดิน",
+        "id": "jalan kaki"
+      },
+      "encouragements": {
+        "vi": "Làm tuyệt vời!",
+        "th": "สุดยอดมาก!",
+        "id": "Kerja yang luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

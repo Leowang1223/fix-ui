@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ yào bàn lǐ dēng jī.",
       "english_hint": "I want to check in.",
-      "encouragement": "Great travel phrase!"
+      "encouragement": "Great travel phrase!",
+      "hints": {
+        "vi": "Tôi muốn làm thủ tục.",
+        "th": "ฉันต้องการเช็คอิน",
+        "id": "Saya ingin check-in."
+      },
+      "encouragements": {
+        "vi": "Cụm từ du lịch tuyệt vời!",
+        "th": "วลีเดินทางยอดเยี่ยม!",
+        "id": "Frasa perjalanan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "zhè shì wǒ de hù zhào.",
       "english_hint": "This is my passport.",
-      "encouragement": "Nice and clear!"
+      "encouragement": "Nice and clear!",
+      "hints": {
+        "vi": "Đây là hộ chiếu của tôi.",
+        "th": "นี่คือหนังสือเดินทางของฉัน",
+        "id": "Ini paspor saya."
+      },
+      "encouragements": {
+        "vi": "Rõ ràng và dễ hiểu!",
+        "th": "ชัดเจนดีมาก!",
+        "id": "Jelas sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "xíng lǐ yào tuō yùn ma?",
       "english_hint": "Do you need to check luggage?",
-      "encouragement": "Good question!"
+      "encouragement": "Good question!",
+      "hints": {
+        "vi": "Bạn có cần ký gửi hành lý không?",
+        "th": "คุณต้องการโหลดกระเป๋าไหม?",
+        "id": "Apakah Anda perlu check-in bagasi?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi hay!",
+        "th": "คำถามที่ดี!",
+        "id": "Pertanyaan bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "qǐng bǎ xíng lǐ fàng shàng qù.",
       "english_hint": "Please put your luggage up here.",
-      "encouragement": "Great instruction!"
+      "encouragement": "Great instruction!",
+      "hints": {
+        "vi": "Xin vui lòng đặt hành lý của bạn lên đây.",
+        "th": "กรุณาวางกระเป๋าของคุณไว้ตรงนี้",
+        "id": "Mohon letakkan bagasi Anda di sini."
+      },
+      "encouragements": {
+        "vi": "Hướng dẫn tuyệt vời!",
+        "th": "คำแนะนำที่ดีเยี่ยม!",
+        "id": "Instruksi yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ de dēng jī kǒu zài nǎ lǐ?",
       "english_hint": "Where is my boarding gate?",
-      "encouragement": "Useful travel line!"
+      "encouragement": "Useful travel line!",
+      "hints": {
+        "vi": "Cổng lên máy bay của tôi ở đâu?",
+        "th": "ประตูขึ้นเครื่องของฉันอยู่ไหน?",
+        "id": "Di mana gerbang keberangkatan saya?"
+      },
+      "encouragements": {
+        "vi": "Mẫu câu du lịch hữu ích!",
+        "th": "ประโยคเดินทางที่มีประโยชน์!",
+        "id": "Kalimat perjalanan yang berguna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "fēi jī yán wù le.",
       "english_hint": "The flight is delayed.",
-      "encouragement": "Good sentence!"
+      "encouragement": "Good sentence!",
+      "hints": {
+        "vi": "Chuyến bay bị hoãn.",
+        "th": "เที่ยวบินล่าช้า",
+        "id": "Penerbangannya tertunda."
+      },
+      "encouragements": {
+        "vi": "Câu này hay!",
+        "th": "ประโยคที่ดี!",
+        "id": "Kalimat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ men yào kāi shǐ dēng jī le.",
       "english_hint": "We are starting to board.",
-      "encouragement": "Great announcement phrase!"
+      "encouragement": "Great announcement phrase!",
+      "hints": {
+        "vi": "Chúng ta bắt đầu lên máy bay.",
+        "th": "เรากำลังจะเริ่มขึ้นเครื่อง",
+        "id": "Kita mulai boarding."
+      },
+      "encouragements": {
+        "vi": "Mẫu câu thông báo hay!",
+        "th": "วลีประกาศยอดเยี่ยม!",
+        "id": "Frasa pengumuman yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "qǐng chū shì nǐ de dēng jī zhèng.",
       "english_hint": "Please show your boarding pass.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Xin vui lòng xuất trình thẻ lên máy bay.",
+        "th": "กรุณาแสดงบัตรผ่านขึ้นเครื่อง",
+        "id": "Mohon tunjukkan boarding pass Anda."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "fēi jī zhǔn shí qǐ fēi.",
       "english_hint": "The plane takes off on time.",
-      "encouragement": "Nice sentence!"
+      "encouragement": "Nice sentence!",
+      "hints": {
+        "vi": "Máy bay cất cánh đúng giờ.",
+        "th": "เครื่องบินออกตรงเวลา",
+        "id": "Pesawatnya lepas landas tepat waktu."
+      },
+      "encouragements": {
+        "vi": "Câu rất hay!",
+        "th": "ประโยคที่ดี!",
+        "id": "Kalimat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "zhù nǐ lǚ tú yú kuài!",
       "english_hint": "Have a nice trip!",
-      "encouragement": "Fantastic expression!"
+      "encouragement": "Fantastic expression!",
+      "hints": {
+        "vi": "Chúc bạn có một chuyến đi vui vẻ!",
+        "th": "ขอให้เดินทางโดยสวัสดิภาพ!",
+        "id": "Selamat jalan!"
+      },
+      "encouragements": {
+        "vi": "Cách diễn đạt tuyệt vời!",
+        "th": "สำนวนยอดเยี่ยม!",
+        "id": "Ungkapan yang fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

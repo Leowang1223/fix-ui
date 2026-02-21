@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ zhèng zài kǎo lǜ yào bù yào huàn yí fèn gōng zuò.",
       "english_hint": "I'm considering whether to change jobs.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi đang cân nhắc xem có nên đổi việc không.",
+        "th": "ฉันกำลังพิจารณาว่าจะเปลี่ยนงานดีไหม",
+        "id": "Saya sedang mempertimbangkan apakah akan ganti pekerjaan."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ xiǎng bǐ jiào yí xià bù tóng de xuǎn zé.",
       "english_hint": "I want to compare the different options.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi muốn so sánh các lựa chọn khác nhau.",
+        "th": "ฉันอยากเปรียบเทียบตัวเลือกต่าง ๆ",
+        "id": "Saya ingin membandingkan berbagai pilihan."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "zuò jué dìng zhī qián, wǒ tōng cháng huì xiān shōu jí zī liào.",
       "english_hint": "Before making decisions, I usually collect information first.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Trước khi đưa ra quyết định, tôi thường thu thập thông tin trước.",
+        "th": "ก่อนตัดสินใจ ฉันมักจะรวบรวมข้อมูลก่อนเสมอ",
+        "id": "Sebelum membuat keputusan, saya biasanya mengumpulkan informasi dulu."
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ xī wàng zhǎo dào zuì shì hé zì jǐ de fāng xiàng.",
       "english_hint": "I hope to find the direction that suits me best.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Tôi hy vọng tìm được hướng đi phù hợp nhất với mình.",
+        "th": "ฉันหวังว่าจะเจอทิศทางที่เหมาะกับฉันที่สุด",
+        "id": "Saya berharap menemukan arah yang paling cocok untuk saya."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "suī rán yǒu fēng xiǎn, dàn wǒ jué dé zhí dé yí shì.",
       "english_hint": "Although there's risk, I think it's worth trying.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Mặc dù có rủi ro, nhưng tôi nghĩ đáng để thử.",
+        "th": "แม้จะมีความเสี่ยง แต่ฉันคิดว่ามันคุ้มค่าที่จะลอง",
+        "id": "Meskipun ada risiko, saya rasa ini layak dicoba."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ huì xiān bǎ zhòng yào de yīn sù liè chū lái.",
       "english_hint": "I'll list the important factors first.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi sẽ liệt kê các yếu tố quan trọng trước.",
+        "th": "ฉันจะลิสต์ปัจจัยสำคัญ ๆ ก่อน",
+        "id": "Saya akan daftar faktor-faktor pentingnya dulu."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "rú guǒ yǒu gèng hǎo de jiàn yì, wǒ yě yuàn yì tīng tīng kàn.",
       "english_hint": "If there are better suggestions, I’m willing to listen.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Nếu có gợi ý tốt hơn, tôi sẵn lòng lắng nghe.",
+        "th": "ถ้ามีข้อเสนอแนะที่ดีกว่า ฉันยินดีรับฟัง",
+        "id": "Jika ada saran yang lebih baik, saya bersedia mendengarkan."
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ xū yào yì diǎn shí jiān sī kǎo, bù xiǎng tài cōng máng.",
       "english_hint": "I need some time to think; I don’t want to rush.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi cần một chút thời gian để suy nghĩ; tôi không muốn vội vàng.",
+        "th": "ฉันขอเวลาคิดหน่อย ฉันไม่อยากรีบร้อน",
+        "id": "Saya butuh waktu untuk berpikir; saya tidak mau terburu-buru."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "zuò chū xuǎn zé hòu, wǒ huì jìn lì zuò dào zuì hǎo.",
       "english_hint": "After choosing, I will try my best.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Sau khi đã chọn, tôi sẽ cố gắng hết sức.",
+        "th": "หลังจากเลือกแล้ว ฉันจะพยายามอย่างเต็มที่",
+        "id": "Setelah memilih, saya akan berusaha sebaik mungkin."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "zuì zhòng yào de shì yào xiāng xìn zì jǐ de pàn duàn.",
       "english_hint": "The most important thing is to trust your own judgement.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Điều quan trọng nhất là tin tưởng vào phán đoán của chính mình.",
+        "th": "สิ่งที่สำคัญที่สุดคือการเชื่อมั่นในการตัดสินใจของตัวเอง",
+        "id": "Yang terpenting adalah percaya pada penilaian diri sendiri."
+      },
+      "encouragements": {
+        "vi": "Tuyệt diệu!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

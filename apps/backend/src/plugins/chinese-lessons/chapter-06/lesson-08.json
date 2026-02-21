@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ shàng zhōu kàn le diàn yǐng.",
       "english_hint": "I watched a movie last week.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi đã xem một bộ phim vào tuần trước.",
+        "th": "ฉันดูหนังเมื่อสัปดาห์ที่แล้ว",
+        "id": "Saya menonton film minggu lalu."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ shàng zhōu mǎi le xīn yī fú.",
       "english_hint": "I bought new clothes last week.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi đã mua quần áo mới vào tuần trước.",
+        "th": "ฉันซื้อเสื้อผ้าใหม่เมื่อสัปดาห์ที่แล้ว",
+        "id": "Saya membeli baju baru minggu lalu."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ shàng zhōu mò qù le hǎi biān.",
       "english_hint": "I went to the beach last weekend.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi đã đi biển vào cuối tuần trước.",
+        "th": "ฉันไปทะเลเมื่อสุดสัปดาห์ที่แล้ว",
+        "id": "Saya pergi ke pantai akhir pekan lalu."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ shàng zhōu mò yùn dòng le.",
       "english_hint": "I exercised last weekend.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Tôi đã tập thể dục vào cuối tuần trước.",
+        "th": "ฉันออกกำลังกายเมื่อสุดสัปดาห์ที่แล้ว",
+        "id": "Saya berolahraga akhir pekan lalu."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ shàng zhōu xiě le bào gào.",
       "english_hint": "I wrote a report last week.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi đã viết một báo cáo vào tuần trước.",
+        "th": "ฉันเขียนรายงานเมื่อสัปดาห์ที่แล้ว",
+        "id": "Saya menulis laporan minggu lalu."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ shàng zhōu zhǔ le xīn de liào lǐ.",
       "english_hint": "I cooked a new dish last week.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi đã nấu một món ăn mới vào tuần trước.",
+        "th": "ฉันทำอาหารจานใหม่เมื่อสัปดาห์ที่แล้ว",
+        "id": "Saya memasak hidangan baru minggu lalu."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีจัง!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ shàng zhōu wán le zhuō yóu.",
       "english_hint": "I played board games last week.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi đã chơi trò chơi board game vào tuần trước.",
+        "th": "ฉันเล่นบอร์ดเกมเมื่อสัปดาห์ที่แล้ว",
+        "id": "Saya bermain permainan papan minggu lalu."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ shàng zhōu mò shuì de hěn duō.",
       "english_hint": "I slept a lot last weekend.",
-      "encouragement": "Great job!"
+      "encouragement": "Great job!",
+      "hints": {
+        "vi": "Tôi đã ngủ rất nhiều vào cuối tuần trước.",
+        "th": "ฉันนอนเยอะมากเมื่อสุดสัปดาห์ที่แล้ว",
+        "id": "Saya banyak tidur akhir pekan lalu."
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "wǒ shàng zhōu mǎi le lǐ wù.",
       "english_hint": "I bought a gift last week.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi đã mua một món quà vào tuần trước.",
+        "th": "ฉันซื้อของขวัญเมื่อสัปดาห์ที่แล้ว",
+        "id": "Saya membeli hadiah minggu lalu."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "เจ๋ง!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "wǒ shàng zhōu tīng le yí gè gù shì.",
       "english_hint": "I listened to a story last week.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Tôi đã nghe một câu chuyện vào tuần trước.",
+        "th": "ฉันฟังเรื่องเล่าเมื่อสัปดาห์ที่แล้ว",
+        "id": "Saya mendengarkan cerita minggu lalu."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

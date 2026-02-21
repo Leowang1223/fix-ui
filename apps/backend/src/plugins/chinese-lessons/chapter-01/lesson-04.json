@@ -15,7 +15,22 @@
       "english_hint": "today",
       "encouragement": "Great start!",
       "tts_text": "今天",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "hôm nay",
+        "th": "วันนี้",
+        "id": "hari ini"
+      },
+      "encouragements": {
+        "vi": "Khởi đầu tuyệt vời!",
+        "th": "เริ่มต้นได้ดีมาก!",
+        "id": "Awal yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -27,7 +42,22 @@
       "english_hint": "tomorrow",
       "encouragement": "Nice! Keep going!",
       "tts_text": "明天",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "ngày mai",
+        "th": "พรุ่งนี้",
+        "id": "besok"
+      },
+      "encouragements": {
+        "vi": "Hay lắm! Cố lên!",
+        "th": "เยี่ยม! ไปต่อเลย!",
+        "id": "Bagus! Lanjutkan!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -39,7 +69,22 @@
       "english_hint": "yesterday",
       "encouragement": "Good job!",
       "tts_text": "昨天",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "hôm qua",
+        "th": "เมื่อวาน",
+        "id": "kemarin"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -51,7 +96,22 @@
       "english_hint": "morning",
       "encouragement": "Well done!",
       "tts_text": "早上",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "buổi sáng",
+        "th": "ตอนเช้า",
+        "id": "pagi"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -63,7 +123,22 @@
       "english_hint": "afternoon",
       "encouragement": "Great work!",
       "tts_text": "下午",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "buổi chiều",
+        "th": "ตอนบ่าย",
+        "id": "siang"
+      },
+      "encouragements": {
+        "vi": "Làm rất tốt!",
+        "th": "ยอดเยี่ยมมาก!",
+        "id": "Kerja yang hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -75,7 +150,22 @@
       "english_hint": "evening",
       "encouragement": "Excellent!",
       "tts_text": "晚上",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "buổi tối",
+        "th": "ตอนเย็น",
+        "id": "malam"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -87,7 +177,22 @@
       "english_hint": "now",
       "encouragement": "Perfect!",
       "tts_text": "現在",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "bây giờ",
+        "th": "ตอนนี้",
+        "id": "sekarang"
+      },
+      "encouragements": {
+        "vi": "Hoàn hảo!",
+        "th": "สมบูรณ์แบบ!",
+        "id": "Sempurna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -99,7 +204,22 @@
       "english_hint": "later / wait",
       "encouragement": "You're doing well!",
       "tts_text": "等等",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "lát nữa / chờ",
+        "th": "เดี๋ยว / รอ",
+        "id": "nanti / tunggu"
+      },
+      "encouragements": {
+        "vi": "Bạn làm tốt lắm!",
+        "th": "คุณทำได้ดีมาก!",
+        "id": "Kamu melakukannya dengan baik!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -111,7 +231,22 @@
       "english_hint": "hour",
       "encouragement": "Nice job!",
       "tts_text": "小時",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "giờ",
+        "th": "ชั่วโมง",
+        "id": "jam"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดี!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -123,7 +258,22 @@
       "english_hint": "minute",
       "encouragement": "Awesome!",
       "tts_text": "分鐘",
-      "tts_voice": "zh-TW-HsiaoChenNeural"
+      "tts_voice": "zh-TW-HsiaoChenNeural",
+      "hints": {
+        "vi": "phút",
+        "th": "นาที",
+        "id": "menit"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Keren!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

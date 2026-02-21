@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ shì xué shēng.",
       "english_hint": "I am a student.",
-      "encouragement": "Great! You used 是 correctly!"
+      "encouragement": "Great! You used 是 correctly!",
+      "hints": {
+        "vi": "Tôi là học sinh.",
+        "th": "ฉันเป็นนักเรียน",
+        "id": "Saya seorang siswa."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời! Bạn đã dùng 是 đúng rồi!",
+        "th": "เยี่ยมมาก! คุณใช้ 是 ได้ถูกต้อง!",
+        "id": "Bagus sekali! Kamu menggunakan 是 dengan benar!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "nǐ shì lǎo shī ma?",
       "english_hint": "Are you a teacher?",
-      "encouragement": "Nice question sentence!"
+      "encouragement": "Nice question sentence!",
+      "hints": {
+        "vi": "Bạn có phải là giáo viên không?",
+        "th": "คุณเป็นครูหรือเปล่า",
+        "id": "Apakah kamu seorang guru?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi hay đấy!",
+        "th": "ประโยคคำถามดีมาก!",
+        "id": "Pertanyaan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "tā shì wǒ de péng yǒu.",
       "english_hint": "He is my friend.",
-      "encouragement": "Good job forming a simple sentence!"
+      "encouragement": "Good job forming a simple sentence!",
+      "hints": {
+        "vi": "Anh ấy là bạn của tôi.",
+        "th": "เขาเป็นเพื่อนของฉัน",
+        "id": "Dia adalah teman saya."
+      },
+      "encouragements": {
+        "vi": "Bạn đã tạo một câu đơn giản rất tốt!",
+        "th": "ทำได้ดีมากในการสร้างประโยคง่ายๆ!",
+        "id": "Bagus sekali! Kamu berhasil membuat kalimat sederhana!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "tā shì yī shēng.",
       "english_hint": "She is a doctor.",
-      "encouragement": "Excellent! Keep going!"
+      "encouragement": "Excellent! Keep going!",
+      "hints": {
+        "vi": "Cô ấy là bác sĩ.",
+        "th": "เธอเป็นหมอ",
+        "id": "Dia seorang dokter."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc! Cố gắng lên nhé!",
+        "th": "ยอดเยี่ยม! สู้ต่อไป!",
+        "id": "Luar biasa! Teruslah berlatih!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ men shì tóng xué.",
       "english_hint": "We are classmates.",
-      "encouragement": "Great sentence!"
+      "encouragement": "Great sentence!",
+      "hints": {
+        "vi": "Chúng tôi là bạn học.",
+        "th": "พวกเราเป็นเพื่อนร่วมชั้น",
+        "id": "Kami adalah teman sekelas."
+      },
+      "encouragements": {
+        "vi": "Câu rất hay!",
+        "th": "ประโยคดีมาก!",
+        "id": "Kalimat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "zhè shì wǒ de jiā.",
       "english_hint": "This is my home.",
-      "encouragement": "Nice! Very natural Chinese!"
+      "encouragement": "Nice! Very natural Chinese!",
+      "hints": {
+        "vi": "Đây là nhà của tôi.",
+        "th": "นี่คือบ้านของฉัน",
+        "id": "Ini adalah rumah saya."
+      },
+      "encouragements": {
+        "vi": "Hay lắm! Tiếng Trung rất tự nhiên!",
+        "th": "เยี่ยม! ภาษาจีนเป็นธรรมชาติมาก!",
+        "id": "Bagus! Bahasa Mandarin yang sangat alami!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "nà shì xué xiào.",
       "english_hint": "That is the school.",
-      "encouragement": "Well done!"
+      "encouragement": "Well done!",
+      "hints": {
+        "vi": "Kia là trường học.",
+        "th": "นั่นคือโรงเรียน",
+        "id": "Itu adalah sekolah."
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "jīn tiān shì xīng qī yī.",
       "english_hint": "Today is Monday.",
-      "encouragement": "Great! You used time with 是!"
+      "encouragement": "Great! You used time with 是!",
+      "hints": {
+        "vi": "Hôm nay là thứ Hai.",
+        "th": "วันนี้เป็นวันจันทร์",
+        "id": "Hari ini adalah hari Senin."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời! Bạn đã dùng 是 với thời gian!",
+        "th": "เยี่ยมมาก! คุณใช้ 是 กับเวลาได้ถูกต้อง!",
+        "id": "Bagus sekali! Kamu menggunakan 是 untuk waktu!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "xiàn zài shì zǎo shàng.",
       "english_hint": "It is morning now.",
-      "encouragement": "Perfect sentence!"
+      "encouragement": "Perfect sentence!",
+      "hints": {
+        "vi": "Bây giờ là buổi sáng.",
+        "th": "ตอนนี้เป็นตอนเช้า",
+        "id": "Sekarang pagi."
+      },
+      "encouragements": {
+        "vi": "Câu hoàn hảo!",
+        "th": "ประโยคสมบูรณ์แบบ!",
+        "id": "Kalimat yang sempurna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "zhè shì shén me?",
       "english_hint": "What is this?",
-      "encouragement": "Awesome question!"
+      "encouragement": "Awesome question!",
+      "hints": {
+        "vi": "Đây là cái gì?",
+        "th": "นี่คืออะไร",
+        "id": "Apa ini?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi tuyệt vời!",
+        "th": "คำถามยอดเยี่ยม!",
+        "id": "Pertanyaan yang hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

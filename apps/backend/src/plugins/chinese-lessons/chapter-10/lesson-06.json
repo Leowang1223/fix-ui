@@ -13,7 +13,22 @@
       ],
       "pinyin": "hěn gāo xìng zài cì jiàn dào nǐ, zuì jìn guò de zěn me yàng?",
       "english_hint": "Nice to see you again. How have you been?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Rất vui được gặp lại bạn. Dạo này bạn thế nào rồi?",
+        "th": "ดีใจที่ได้เจอคุณอีกครั้ง เป็นยังไงบ้างครับ/คะ?",
+        "id": "Senang bertemu kamu lagi. Bagaimana kabarmu?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "tīng qǐ lái nǐ zuì jìn máng de bù kě kāi jiāo.",
       "english_hint": "Sounds like you've been extremely busy.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Có vẻ như bạn bận tối mặt tối mũi.",
+        "th": "ดูเหมือนว่าคุณจะยุ่งมากเลยนะครับ/คะ",
+        "id": "Sepertinya kamu sibuk sekali."
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีเลย!",
+        "id": "Keren!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "rú guǒ nǐ yǒu kòng, wǒ men kě yǐ zhǎo yì tiān liáo liáo tiān.",
       "english_hint": "If you're free, we can chat another day.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Nếu bạn rảnh, chúng ta có thể trò chuyện vào một ngày khác.",
+        "th": "ถ้าคุณว่าง เราค่อยคุยกันวันหลังก็ได้นะครับ/คะ",
+        "id": "Kalau kamu senggang, kita bisa ngobrol lain hari."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "xiè xie nǐ jīn tiān de bāng máng, wǒ zhēn de hěn gǎn jī.",
       "english_hint": "Thank you for your help today—I'm truly grateful.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Cảm ơn bạn đã giúp đỡ hôm nay—tôi thực sự rất cảm kích.",
+        "th": "ขอบคุณสำหรับความช่วยเหลือวันนี้มากนะครับ/คะ ซาบซึ้งใจจริงๆ ครับ/ค่ะ",
+        "id": "Terima kasih atas bantuanmu hari ini—aku sangat berterima kasih."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ jué dé gēn nǐ liáo tiān hěn qīng sōng.",
       "english_hint": "I feel relaxed when talking with you.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi cảm thấy thoải mái khi nói chuyện với bạn.",
+        "th": "รู้สึกผ่อนคลายเวลาได้คุยกับคุณเลยครับ/ค่ะ",
+        "id": "Aku merasa santai saat berbicara denganmu."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "rú guǒ nǐ bù fāng biàn, kě yǐ zhí jiē gào sù wǒ.",
       "english_hint": "If it's inconvenient for you, just let me know.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Nếu bạn thấy không tiện, cứ cho tôi biết nhé.",
+        "th": "ถ้าไม่สะดวก บอกได้เลยนะครับ/คะ",
+        "id": "Kalau merepotkanmu, bilang saja."
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีเลย!",
+        "id": "Oke!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ hěn qí dài xià cì zài jiàn miàn.",
       "english_hint": "I'm looking forward to seeing you again.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi rất mong được gặp lại bạn.",
+        "th": "รอคอยที่จะได้เจอคุณอีกครั้งนะครับ/คะ",
+        "id": "Aku tidak sabar bertemu kamu lagi."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Baik!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ jué dé nǐ zuì jìn de xiǎng fǎ hěn yǒu qǐ fā xìng.",
       "english_hint": "I think your recent ideas are very inspiring.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi nghĩ những ý tưởng gần đây của bạn rất truyền cảm hứng.",
+        "th": "ผม/ฉันคิดว่าไอเดียช่วงนี้ของคุณสร้างแรงบันดาลใจดีมากเลยครับ/ค่ะ",
+        "id": "Menurutku ide-idemu baru-baru ini sangat menginspirasi."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Mantap!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "xī wàng wǒ men zhī hòu yǒu gèng duō hé zuò de jī huì.",
       "english_hint": "I hope we’ll have more chances to collaborate.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi hy vọng chúng ta sẽ có nhiều cơ hội hợp tác hơn.",
+        "th": "หวังว่าเราจะมีโอกาสได้ร่วมงานกันอีกนะครับ/คะ",
+        "id": "Aku harap kita punya lebih banyak kesempatan untuk berkolaborasi."
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "zhù nǐ jīn tiān shùn lì, yǒu shén me xū yào zài gēn wǒ shuō.",
       "english_hint": "Hope everything goes well today. Let me know if you need anything.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Hy vọng mọi việc hôm nay suôn sẻ. Hãy cho tôi biết nếu bạn cần gì nhé.",
+        "th": "ขอให้วันนี้ทุกอย่างราบรื่นนะครับ/คะ ถ้าต้องการอะไรบอกได้เลย",
+        "id": "Semoga semuanya berjalan lancar hari ini. Beritahu aku kalau kamu butuh sesuatu."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

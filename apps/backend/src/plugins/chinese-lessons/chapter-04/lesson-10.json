@@ -13,7 +13,22 @@
       ],
       "pinyin": "A: qǐng wèn, bó wù guǎn zěn me zǒu?",
       "english_hint": "Excuse me, how do I get to the museum?",
-      "encouragement": "Great travel question!"
+      "encouragement": "Great travel question!",
+      "hints": {
+        "vi": "Xin lỗi, làm sao để đến bảo tàng ạ?",
+        "th": "ขอโทษนะครับ/คะ พิพิธภัณฑ์ไปทางไหนครับ/คะ",
+        "id": "Permisi, bagaimana cara ke museum?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi du lịch rất hay!",
+        "th": "คำถามเกี่ยวกับการเดินทางที่ดีมาก!",
+        "id": "Pertanyaan perjalanan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "B: yì zhí zǒu, rán hòu zuǒ zhuǎn.",
       "english_hint": "Go straight, then turn left.",
-      "encouragement": "Nice clear direction!"
+      "encouragement": "Nice clear direction!",
+      "hints": {
+        "vi": "Đi thẳng, rồi rẽ trái.",
+        "th": "ตรงไปแล้วเลี้ยวซ้าย",
+        "id": "Jalan lurus, lalu belok kiri."
+      },
+      "encouragements": {
+        "vi": "Chỉ đường rõ ràng!",
+        "th": "บอกทางได้ชัดเจนดีมาก!",
+        "id": "Petunjuk arah yang jelas!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "A: yuǎn ma?",
       "english_hint": "Is it far?",
-      "encouragement": "Simple and useful!"
+      "encouragement": "Simple and useful!",
+      "hints": {
+        "vi": "Có xa không ạ?",
+        "th": "ไกลไหมครับ/คะ",
+        "id": "Jauh tidak?"
+      },
+      "encouragements": {
+        "vi": "Đơn giản và hữu ích!",
+        "th": "ง่ายและมีประโยชน์!",
+        "id": "Sederhana dan berguna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "B: bù yuǎn, zǒu wǔ fēn zhōng jiù dào le.",
       "english_hint": "Not far, only five minutes.",
-      "encouragement": "Great explanation!"
+      "encouragement": "Great explanation!",
+      "hints": {
+        "vi": "Không xa đâu, chỉ mất năm phút thôi.",
+        "th": "ไม่ไกลครับ/ค่ะ แค่ห้านาที",
+        "id": "Tidak jauh, hanya lima menit."
+      },
+      "encouragements": {
+        "vi": "Giải thích tuyệt vời!",
+        "th": "อธิบายได้ดีมาก!",
+        "id": "Penjelasan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "A: xiè xie nǐ de bāng máng!",
       "english_hint": "Thanks for your help!",
-      "encouragement": "Nice polite response!"
+      "encouragement": "Nice polite response!",
+      "hints": {
+        "vi": "Cảm ơn bạn đã giúp đỡ!",
+        "th": "ขอบคุณสำหรับความช่วยเหลือครับ/ค่ะ",
+        "id": "Terima kasih atas bantuannya!"
+      },
+      "encouragements": {
+        "vi": "Phản hồi lịch sự!",
+        "th": "ตอบกลับสุภาพดีมาก!",
+        "id": "Tanggapan yang sopan!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "B: bú kè qì.",
       "english_hint": "You're welcome.",
-      "encouragement": "Great reply!"
+      "encouragement": "Great reply!",
+      "hints": {
+        "vi": "Không có gì.",
+        "th": "ไม่เป็นไรครับ/ค่ะ",
+        "id": "Sama-sama."
+      },
+      "encouragements": {
+        "vi": "Trả lời tuyệt vời!",
+        "th": "ตอบได้ดีมาก!",
+        "id": "Balasan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "A: nǐ lái tái wān wán ma?",
       "english_hint": "Are you visiting Taiwan?",
-      "encouragement": "Good conversation starter!"
+      "encouragement": "Good conversation starter!",
+      "hints": {
+        "vi": "Bạn đang du lịch Đài Loan à?",
+        "th": "มาเที่ยวไต้หวันเหรอครับ/คะ",
+        "id": "Sedang berkunjung ke Taiwan?"
+      },
+      "encouragements": {
+        "vi": "Mở đầu cuộc trò chuyện hay!",
+        "th": "เริ่มบทสนทนาได้ดี!",
+        "id": "Pembuka percakapan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "B: duì, wǒ dì yì cì lái.",
       "english_hint": "Yes, it's my first time.",
-      "encouragement": "Nice answer!"
+      "encouragement": "Nice answer!",
+      "hints": {
+        "vi": "Vâng, đây là lần đầu tiên tôi đến.",
+        "th": "ใช่ครับ/ค่ะ มาครั้งแรกเลย",
+        "id": "Ya, ini pertama kalinya saya."
+      },
+      "encouragements": {
+        "vi": "Câu trả lời hay!",
+        "th": "คำตอบดีมาก!",
+        "id": "Jawaban yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "A: xī wàng nǐ wán dé kāi xīn.",
       "english_hint": "Hope you have fun.",
-      "encouragement": "Very natural!"
+      "encouragement": "Very natural!",
+      "hints": {
+        "vi": "Chúc bạn vui vẻ nhé.",
+        "th": "ขอให้สนุกนะครับ/คะ",
+        "id": "Semoga menyenangkan."
+      },
+      "encouragements": {
+        "vi": "Rất tự nhiên!",
+        "th": "เป็นธรรมชาติมาก!",
+        "id": "Sangat alami!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "B: xiè xie, wǒ hěn xǐ huān zhè lǐ!",
       "english_hint": "Thanks, I really like it here!",
-      "encouragement": "Great ending!"
+      "encouragement": "Great ending!",
+      "hints": {
+        "vi": "Cảm ơn, tôi thực sự rất thích nơi này!",
+        "th": "ขอบคุณครับ/ค่ะ ชอบที่นี่มากเลย!",
+        "id": "Terima kasih, saya sangat suka di sini!"
+      },
+      "encouragements": {
+        "vi": "Kết thúc tuyệt vời!",
+        "th": "จบได้ดีมาก!",
+        "id": "Penutup yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

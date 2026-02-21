@@ -13,7 +13,22 @@
       ],
       "pinyin": "qǐng gěi wǒ yì bēi shuǐ.",
       "english_hint": "Please give me a glass of water.",
-      "encouragement": "Great polite sentence!"
+      "encouragement": "Great polite sentence!",
+      "hints": {
+        "vi": "Cho tôi xin một ly nước.",
+        "th": "ขอน้ำเปล่าแก้วหนึ่งหน่อยครับ/ค่ะ",
+        "id": "Tolong beri saya segelas air."
+      },
+      "encouragements": {
+        "vi": "Câu nói lịch sự rất hay!",
+        "th": "ประโยคสุภาพยอดเยี่ยม!",
+        "id": "Kalimat sopan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "qǐng zài shuō yí cì.",
       "english_hint": "Please say it again.",
-      "encouragement": "Nice and useful!"
+      "encouragement": "Nice and useful!",
+      "hints": {
+        "vi": "Xin nói lại.",
+        "th": "ช่วยพูดอีกครั้งได้ไหมครับ/คะ?",
+        "id": "Tolong ulangi lagi."
+      },
+      "encouragements": {
+        "vi": "Hay và hữu ích!",
+        "th": "ดีและมีประโยชน์!",
+        "id": "Bagus dan berguna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "nǐ kě yǐ màn yì diǎn shuō ma?",
       "english_hint": "Can you speak a bit slower?",
-      "encouragement": "Excellent request!"
+      "encouragement": "Excellent request!",
+      "hints": {
+        "vi": "Bạn có thể nói chậm hơn một chút được không?",
+        "th": "ช่วยพูดช้าลงหน่อยได้ไหมครับ/คะ?",
+        "id": "Bisa bicara lebih pelan sedikit?"
+      },
+      "encouragements": {
+        "vi": "Lời yêu cầu tuyệt vời!",
+        "th": "คำขอที่ยอดเยี่ยม!",
+        "id": "Permintaan yang luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ men yì qǐ qù, hǎo ma?",
       "english_hint": "Let's go together, okay?",
-      "encouragement": "Great suggestion sentence!"
+      "encouragement": "Great suggestion sentence!",
+      "hints": {
+        "vi": "Chúng ta đi cùng nhau nhé?",
+        "th": "ไปด้วยกันนะ?",
+        "id": "Kita pergi bareng, ya?"
+      },
+      "encouragements": {
+        "vi": "Câu gợi ý rất hay!",
+        "th": "ประโยคแนะนำยอดเยี่ยม!",
+        "id": "Kalimat saran yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "qǐng zuò.",
       "english_hint": "Please sit.",
-      "encouragement": "Short and polite!"
+      "encouragement": "Short and polite!",
+      "hints": {
+        "vi": "Mời ngồi.",
+        "th": "เชิญนั่งครับ/ค่ะ",
+        "id": "Silakan duduk."
+      },
+      "encouragements": {
+        "vi": "Ngắn gọn và lịch sự!",
+        "th": "สั้นและสุภาพ!",
+        "id": "Singkat dan sopan!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "qǐng děng yí xià.",
       "english_hint": "Please wait a moment.",
-      "encouragement": "Very natural expression!"
+      "encouragement": "Very natural expression!",
+      "hints": {
+        "vi": "Xin chờ một lát.",
+        "th": "รอสักครู่ครับ/ค่ะ",
+        "id": "Tolong tunggu sebentar."
+      },
+      "encouragements": {
+        "vi": "Cách diễn đạt rất tự nhiên!",
+        "th": "สำนวนที่เป็นธรรมชาติมาก!",
+        "id": "Ungkapan yang sangat alami!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "kě yǐ bāng wǒ kāi mén ma?",
       "english_hint": "Can you help me open the door?",
-      "encouragement": "Good polite question!"
+      "encouragement": "Good polite question!",
+      "hints": {
+        "vi": "Bạn có thể giúp tôi mở cửa được không?",
+        "th": "ช่วยเปิดประตูให้หน่อยได้ไหมครับ/คะ?",
+        "id": "Bisa tolong bantu saya buka pintu?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi lịch sự rất tốt!",
+        "th": "คำถามสุภาพที่ดี!",
+        "id": "Pertanyaan sopan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "qǐng xiǎo shēng yì diǎn.",
       "english_hint": "Please be quieter.",
-      "encouragement": "Nice polite request!"
+      "encouragement": "Nice polite request!",
+      "hints": {
+        "vi": "Xin hãy yên lặng hơn.",
+        "th": "ช่วยเงียบลงหน่อยได้ไหมครับ/คะ?",
+        "id": "Tolong lebih tenang."
+      },
+      "encouragements": {
+        "vi": "Lời yêu cầu lịch sự tuyệt vời!",
+        "th": "คำขอสุภาพที่ดี!",
+        "id": "Permintaan sopan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "bié dān xīn, hǎo ma?",
       "english_hint": "Don't worry, okay?",
-      "encouragement": "Great comforting sentence!"
+      "encouragement": "Great comforting sentence!",
+      "hints": {
+        "vi": "Đừng lo lắng nhé?",
+        "th": "ไม่ต้องกังวลนะ?",
+        "id": "Jangan khawatir, ya?"
+      },
+      "encouragements": {
+        "vi": "Câu an ủi rất hay!",
+        "th": "ประโยคปลอบใจยอดเยี่ยม!",
+        "id": "Kalimat penghibur yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "jīn tiān zǎo yì diǎn shuì, hǎo ma?",
       "english_hint": "Sleep earlier today, okay?",
-      "encouragement": "Fantastic suggestion!"
+      "encouragement": "Fantastic suggestion!",
+      "hints": {
+        "vi": "Hôm nay ngủ sớm nhé?",
+        "th": "วันนี้เข้านอนเร็วหน่อยนะ?",
+        "id": "Tidur lebih awal hari ini, ya?"
+      },
+      "encouragements": {
+        "vi": "Gợi ý tuyệt vời!",
+        "th": "คำแนะนำที่ยอดเยี่ยม!",
+        "id": "Saran yang fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

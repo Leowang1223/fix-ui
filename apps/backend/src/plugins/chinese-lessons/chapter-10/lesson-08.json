@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ jué dé wǒ men kě yǐ bǎ gōng zuò fēn pèi dé gèng píng jūn.",
       "english_hint": "I think we can divide the work more evenly.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi nghĩ chúng ta có thể chia công việc đều hơn.",
+        "th": "ฉันคิดว่าเราแบ่งงานกันให้เท่าๆ กันได้นะ",
+        "id": "Saya rasa kita bisa membagi pekerjaan lebih merata."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "rú guǒ yǒu xiǎng fǎ, kě yǐ zhí jiē tí chū lái.",
       "english_hint": "If you have ideas, feel free to bring them up.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Nếu bạn có ý tưởng, cứ thoải mái đưa ra nhé.",
+        "th": "ถ้ามีไอเดียอะไร ก็เสนอมาได้เลยนะ",
+        "id": "Jika ada ide, jangan sungkan untuk menyampaikannya."
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ jué dé dà jiā yì qǐ tǎo lùn huì bǐ jiào yǒu xiào lǜ.",
       "english_hint": "I think discussing together is more efficient.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi nghĩ thảo luận cùng nhau sẽ hiệu quả hơn.",
+        "th": "ฉันว่าคุยกันน่าจะมีประสิทธิภาพมากกว่า",
+        "id": "Saya rasa berdiskusi bersama lebih efisien."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ men kě yǐ bǎ měi gè rén de cháng chù dōu lì yòng qǐ lái.",
       "english_hint": "We can make use of everyone's strengths.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Chúng ta có thể tận dụng thế mạnh của mỗi người.",
+        "th": "เราใช้จุดแข็งของแต่ละคนให้เป็นประโยชน์ได้นะ",
+        "id": "Kita bisa memanfaatkan kekuatan setiap orang."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "rú guǒ yù dào wèn tí, wǒ men bǐ cǐ kě yǐ hù xiāng zhī yuán.",
       "english_hint": "If we face issues, we can support each other.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Nếu gặp vấn đề, chúng ta có thể hỗ trợ lẫn nhau.",
+        "th": "ถ้ามีปัญหา เราก็ช่วยกันได้",
+        "id": "Jika kita menghadapi masalah, kita bisa saling mendukung."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "dà jiā bǎo chí hǎo de gōu tōng huì ràng hé zuò gèng shùn lì.",
       "english_hint": "Good communication helps teamwork go smoothly.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Giao tiếp tốt giúp làm việc nhóm suôn sẻ.",
+        "th": "การสื่อสารที่ดีจะช่วยให้การทำงานเป็นทีมราบรื่นนะ",
+        "id": "Komunikasi yang baik membantu kerja tim berjalan lancar."
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ huì fù zé zhěng lǐ yì jiàn, ràng dà jiā dōu zhī dào jìn dù.",
       "english_hint": "I'll organize the feedback so everyone knows the progress.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi sẽ tổng hợp phản hồi để mọi người nắm được tiến độ.",
+        "th": "เดี๋ยวฉันจะรวบรวมฟีดแบ็กให้ทุกคนได้รู้ความคืบหน้านะ",
+        "id": "Saya akan mengorganisir masukan agar semua orang tahu perkembangannya."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ men yì qǐ nǔ lì de huà, yí dìng néng dá chéng.",
       "english_hint": "If we work together, we can definitely achieve it.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Nếu chúng ta cùng nhau làm việc, chắc chắn sẽ đạt được thôi.",
+        "th": "ถ้าเราร่วมมือกัน เราทำสำเร็จได้แน่นอน",
+        "id": "Jika kita bekerja sama, kita pasti bisa mencapainya."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "xū yào xié zhù shí, bù yòng hài xiū, kě yǐ zhí jiē shuō.",
       "english_hint": "If you need help, don’t be shy—just say it.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Nếu bạn cần giúp đỡ, đừng ngại—cứ nói ra nhé.",
+        "th": "ถ้าต้องการความช่วยเหลือ ไม่ต้องอายนะ บอกได้เลย",
+        "id": "Jika butuh bantuan, jangan sungkan—bilang saja."
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "wǒ xiāng xìn zhǐ yào dà jiā yuàn yì hé zuò, wèn tí dōu néng jiě jué.",
       "english_hint": "I believe as long as we cooperate, we can solve everything.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Tôi tin rằng chỉ cần chúng ta hợp tác, mọi việc đều có thể giải quyết được.",
+        "th": "ฉันเชื่อว่าแค่เราร่วมมือกัน เราก็แก้ปัญหาได้ทุกอย่าง",
+        "id": "Saya yakin selama kita bekerja sama, kita bisa menyelesaikan semuanya."
+      },
+      "encouragements": {
+        "vi": "Tuyệt diệu!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

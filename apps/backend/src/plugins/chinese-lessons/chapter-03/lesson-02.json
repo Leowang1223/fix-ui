@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ yǒu shǒu jī.",
       "english_hint": "I have a phone.",
-      "encouragement": "Great! You used 有 correctly!"
+      "encouragement": "Great! You used 有 correctly!",
+      "hints": {
+        "vi": "Tôi có điện thoại.",
+        "th": "ฉันมีโทรศัพท์",
+        "id": "Saya punya HP."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời! Bạn đã dùng 有 đúng rồi!",
+        "th": "เยี่ยมมาก! คุณใช้ 有 ได้ถูกต้อง!",
+        "id": "Hebat! Kamu pakai 有 dengan benar!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ méi yǒu qián.",
       "english_hint": "I don't have money.",
-      "encouragement": "Nice use of 沒有!"
+      "encouragement": "Nice use of 沒有!",
+      "hints": {
+        "vi": "Tôi không có tiền.",
+        "th": "ฉันไม่มีเงิน",
+        "id": "Saya tidak punya uang."
+      },
+      "encouragements": {
+        "vi": "Dùng 沒有 hay lắm!",
+        "th": "ใช้ 沒有 ได้ดีมาก!",
+        "id": "Bagus pakai 沒有-nya!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "nǐ yǒu xiōng dì jiě mèi ma?",
       "english_hint": "Do you have brothers or sisters?",
-      "encouragement": "Good question!"
+      "encouragement": "Good question!",
+      "hints": {
+        "vi": "Bạn có anh chị em không?",
+        "th": "คุณมีพี่น้องไหม?",
+        "id": "Kamu punya kakak atau adik?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi hay đấy!",
+        "th": "คำถามดีมาก!",
+        "id": "Pertanyaan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "tā yǒu yì zhī gǒu.",
       "english_hint": "He has a dog.",
-      "encouragement": "Excellent sentence!"
+      "encouragement": "Excellent sentence!",
+      "hints": {
+        "vi": "Anh ấy có một con chó.",
+        "th": "เขามีหมา",
+        "id": "Dia punya anjing."
+      },
+      "encouragements": {
+        "vi": "Câu rất hay!",
+        "th": "ประโยคยอดเยี่ยม!",
+        "id": "Kalimat yang luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ men yǒu hěn duō zuò yè.",
       "english_hint": "We have a lot of homework.",
-      "encouragement": "Great work!"
+      "encouragement": "Great work!",
+      "hints": {
+        "vi": "Chúng tôi có rất nhiều bài tập về nhà.",
+        "th": "เรามีการบ้านเยอะมาก",
+        "id": "Kami punya banyak PR."
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "zhè ge fáng jiān yǒu zhuō zi.",
       "english_hint": "There is a table in this room.",
-      "encouragement": "Nice! Very useful pattern!"
+      "encouragement": "Nice! Very useful pattern!",
+      "hints": {
+        "vi": "Trong phòng này có một cái bàn.",
+        "th": "ในห้องนี้มีโต๊ะ",
+        "id": "Ada meja di ruangan ini."
+      },
+      "encouragements": {
+        "vi": "Hay đấy! Cấu trúc rất hữu ích!",
+        "th": "เยี่ยม! รูปแบบนี้มีประโยชน์มาก!",
+        "id": "Bagus! Pola yang sangat berguna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "jiào shì lǐ yǒu hěn duō yǐ zi.",
       "english_hint": "There are many chairs in the classroom.",
-      "encouragement": "Well done!"
+      "encouragement": "Well done!",
+      "hints": {
+        "vi": "Trong lớp học có nhiều ghế.",
+        "th": "ในห้องเรียนมีเก้าอี้หลายตัว",
+        "id": "Ada banyak kursi di ruang kelas."
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "nǐ yǒu wèn tí ma?",
       "english_hint": "Do you have any questions?",
-      "encouragement": "Great question sentence!"
+      "encouragement": "Great question sentence!",
+      "hints": {
+        "vi": "Bạn có câu hỏi nào không?",
+        "th": "คุณมีคำถามไหม?",
+        "id": "Ada pertanyaan?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi rất hay!",
+        "th": "ประโยคคำถามยอดเยี่ยม!",
+        "id": "Pertanyaan yang bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "wǒ méi yǒu shí jiān.",
       "english_hint": "I don't have time.",
-      "encouragement": "Perfect use of 沒有!"
+      "encouragement": "Perfect use of 沒有!",
+      "hints": {
+        "vi": "Tôi không có thời gian.",
+        "th": "ฉันไม่มีเวลา",
+        "id": "Saya tidak punya waktu."
+      },
+      "encouragements": {
+        "vi": "Dùng 沒有 hoàn hảo!",
+        "th": "ใช้ 沒有 ได้อย่างสมบูรณ์แบบ!",
+        "id": "Sempurna pakai 沒有-nya!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "tā men yǒu chē ma?",
       "english_hint": "Do they have a car?",
-      "encouragement": "Awesome! Keep it up!"
+      "encouragement": "Awesome! Keep it up!",
+      "hints": {
+        "vi": "Họ có xe hơi không?",
+        "th": "พวกเขามีรถไหม?",
+        "id": "Mereka punya mobil?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời! Cố gắng lên nhé!",
+        "th": "สุดยอด! ทำต่อไปนะ!",
+        "id": "Luar biasa! Terus semangat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

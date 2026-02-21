@@ -13,7 +13,22 @@
       ],
       "pinyin": "yóu jú",
       "english_hint": "post office",
-      "encouragement": "Great start!"
+      "encouragement": "Great start!",
+      "hints": {
+        "vi": "bưu điện",
+        "th": "ไปรษณีย์",
+        "id": "kantor pos"
+      },
+      "encouragements": {
+        "vi": "Khởi đầu tuyệt vời!",
+        "th": "เริ่มต้นได้ดีเยี่ยม!",
+        "id": "Awal yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "yín háng",
       "english_hint": "bank",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "ngân hàng",
+        "th": "ธนาคาร",
+        "id": "bank"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "biàn lì shāng diàn",
       "english_hint": "convenience store",
-      "encouragement": "Good job!"
+      "encouragement": "Good job!",
+      "hints": {
+        "vi": "cửa hàng tiện lợi",
+        "th": "ร้านสะดวกซื้อ",
+        "id": "toko serba ada"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "เก่งมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "tú shū guǎn",
       "english_hint": "library",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "thư viện",
+        "th": "ห้องสมุด",
+        "id": "perpustakaan"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "chē zhàn",
       "english_hint": "station",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "nhà ga",
+        "th": "สถานี",
+        "id": "stasiun"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "bǎi huò gōng sī",
       "english_hint": "department store",
-      "encouragement": "Nice work!"
+      "encouragement": "Nice work!",
+      "hints": {
+        "vi": "trung tâm thương mại",
+        "th": "ห้างสรรพสินค้า",
+        "id": "pusat perbelanjaan"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "shì chǎng",
       "english_hint": "market",
-      "encouragement": "Awesome!"
+      "encouragement": "Awesome!",
+      "hints": {
+        "vi": "chợ",
+        "th": "ตลาด",
+        "id": "pasar"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Keren!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "gōng yuán",
       "english_hint": "park",
-      "encouragement": "Great choice!"
+      "encouragement": "Great choice!",
+      "hints": {
+        "vi": "công viên",
+        "th": "สวนสาธารณะ",
+        "id": "taman"
+      },
+      "encouragements": {
+        "vi": "Lựa chọn tuyệt vời!",
+        "th": "เลือกได้ดีมาก!",
+        "id": "Pilihan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "yī yuàn",
       "english_hint": "hospital",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "bệnh viện",
+        "th": "โรงพยาบาล",
+        "id": "rumah sakit"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "lǚ guǎn",
       "english_hint": "hotel",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "khách sạn",
+        "th": "โรงแรม",
+        "id": "hotel"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "ยอดเยี่ยมมาก!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

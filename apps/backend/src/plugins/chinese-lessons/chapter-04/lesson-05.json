@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ xiǎng dìng fáng.",
       "english_hint": "I want to book a room.",
-      "encouragement": "Great start!"
+      "encouragement": "Great start!",
+      "hints": {
+        "vi": "Tôi muốn đặt một phòng.",
+        "th": "ฉันต้องการจองห้องพัก",
+        "id": "Saya ingin memesan kamar."
+      },
+      "encouragements": {
+        "vi": "Khởi đầu tuyệt vời!",
+        "th": "เริ่มต้นได้ดีมาก!",
+        "id": "Awal yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "yǒu kōng fáng ma?",
       "english_hint": "Do you have available rooms?",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Khách sạn còn phòng trống không?",
+        "th": "มีห้องว่างไหมคะ/ครับ",
+        "id": "Apakah ada kamar kosong?"
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "เยี่ยมเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ yào zhù yì wǎn.",
       "english_hint": "I want to stay for one night.",
-      "encouragement": "Good booking phrase!"
+      "encouragement": "Good booking phrase!",
+      "hints": {
+        "vi": "Tôi muốn ở lại một đêm.",
+        "th": "ฉันต้องการพักหนึ่งคืน",
+        "id": "Saya ingin menginap satu malam."
+      },
+      "encouragements": {
+        "vi": "Cụm từ đặt phòng hay!",
+        "th": "วลีจองห้องพักที่ดี!",
+        "id": "Frasa pemesanan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "qǐng gěi wǒ hù zhào.",
       "english_hint": "Please give me your passport.",
-      "encouragement": "Useful check-in line!"
+      "encouragement": "Useful check-in line!",
+      "hints": {
+        "vi": "Vui lòng cho tôi xem hộ chiếu của bạn.",
+        "th": "กรุณาขอดูหนังสือเดินทางหน่อยค่ะ/ครับ",
+        "id": "Tolong berikan paspor Anda."
+      },
+      "encouragements": {
+        "vi": "Câu nói nhận phòng hữu ích!",
+        "th": "ประโยคเช็คอินที่มีประโยชน์!",
+        "id": "Kalimat check-in yang berguna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "zǎo cān jǐ diǎn kāi shǐ?",
       "english_hint": "What time does breakfast start?",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Bữa sáng bắt đầu lúc mấy giờ?",
+        "th": "อาหารเช้าเริ่มกี่โมงคะ/ครับ",
+        "id": "Jam berapa sarapan dimulai?"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "yǒu miǎn fèi wēi fāi ma?",
       "english_hint": "Is there free WiFi?",
-      "encouragement": "Great travel phrase!"
+      "encouragement": "Great travel phrase!",
+      "hints": {
+        "vi": "Có WiFi miễn phí không?",
+        "th": "มี WiFi ฟรีไหมคะ/ครับ",
+        "id": "Apakah ada WiFi gratis?"
+      },
+      "encouragements": {
+        "vi": "Cụm từ du lịch tuyệt vời!",
+        "th": "วลีสำหรับการเดินทางที่ดี!",
+        "id": "Frasa perjalanan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ xiǎng tuì fáng.",
       "english_hint": "I want to check out.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi muốn trả phòng.",
+        "th": "ฉันต้องการเช็คเอาท์",
+        "id": "Saya ingin check out."
+      },
+      "encouragements": {
+        "vi": "Hay đấy!",
+        "th": "เยี่ยมเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "kě yǐ jì fàng xíng lǐ ma?",
       "english_hint": "Can I leave my luggage here?",
-      "encouragement": "Perfect!"
+      "encouragement": "Perfect!",
+      "hints": {
+        "vi": "Tôi có thể gửi hành lý ở đây không?",
+        "th": "ฝากกระเป๋าไว้ที่นี่ได้ไหมคะ/ครับ",
+        "id": "Bolehkah saya meninggalkan barang bawaan saya di sini?"
+      },
+      "encouragements": {
+        "vi": "Hoàn hảo!",
+        "th": "สมบูรณ์แบบ!",
+        "id": "Sempurna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "qǐng wèn fáng jiān zài nǎ yì lóu?",
       "english_hint": "Which floor is the room on?",
-      "encouragement": "Great question!"
+      "encouragement": "Great question!",
+      "hints": {
+        "vi": "Phòng ở tầng mấy?",
+        "th": "ห้องพักอยู่ชั้นไหนคะ/ครับ",
+        "id": "Kamar di lantai berapa?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi rất hay!",
+        "th": "คำถามที่ดีมาก!",
+        "id": "Pertanyaan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "xiè xie, nǐ de fú wù hěn hǎo.",
       "english_hint": "Thank you, your service is very good.",
-      "encouragement": "Wonderful compliment!"
+      "encouragement": "Wonderful compliment!",
+      "hints": {
+        "vi": "Cảm ơn, dịch vụ của bạn rất tốt.",
+        "th": "ขอบคุณค่ะ/ครับ บริการดีมากเลย",
+        "id": "Terima kasih, pelayanan Anda sangat baik."
+      },
+      "encouragements": {
+        "vi": "Lời khen tuyệt vời!",
+        "th": "คำชมที่ยอดเยี่ยม!",
+        "id": "Pujian yang luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

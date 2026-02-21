@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ dǎ suàn xià gè yuè kāi shǐ xīn de zhuān àn.",
       "english_hint": "I plan to start a new project next month.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi dự định bắt đầu một dự án mới vào tháng tới.",
+        "th": "ฉันวางแผนที่จะเริ่มโปรเจกต์ใหม่เดือนหน้า",
+        "id": "Saya berencana untuk memulai proyek baru bulan depan."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ xī wàng néng zài bàn nián nèi dá chéng mù biāo.",
       "english_hint": "I hope to reach my goal within half a year.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi hy vọng đạt được mục tiêu của mình trong vòng nửa năm.",
+        "th": "ฉันหวังว่าจะบรรลุเป้าหมายภายในครึ่งปี",
+        "id": "Saya berharap bisa mencapai tujuan saya dalam waktu setengah tahun."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ huì màn màn tiáo zhěng zì jǐ de bù diào.",
       "english_hint": "I will gradually adjust my pace.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi sẽ dần dần điều chỉnh tốc độ của mình.",
+        "th": "ฉันจะค่อยๆ ปรับจังหวะของตัวเอง",
+        "id": "Saya akan secara bertahap menyesuaikan kecepatan saya."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wèi le tí shēng néng lì, wǒ zhǔn bèi shàng jǐ gè kè chéng.",
       "english_hint": "To improve my skills, I plan to take several courses.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Để cải thiện kỹ năng, tôi dự định tham gia một vài khóa học.",
+        "th": "เพื่อพัฒนาทักษะ ฉันวางแผนที่จะเรียนหลายคอร์ส",
+        "id": "Untuk meningkatkan keterampilan saya, saya berencana untuk mengambil beberapa kursus."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ dǎ suàn xiān wán chéng zhòng yào de shì qíng, zài kāi shǐ xīn de.",
       "english_hint": "I plan to finish the important tasks before starting new ones.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi dự định hoàn thành các nhiệm vụ quan trọng trước khi bắt đầu những cái mới.",
+        "th": "ฉันวางแผนที่จะทำงานสำคัญให้เสร็จก่อนที่จะเริ่มงานใหม่",
+        "id": "Saya berencana untuk menyelesaikan tugas-tugas penting sebelum memulai yang baru."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "rú guǒ yí qiè shùn lì, wǒ huì tí qián wán chéng.",
       "english_hint": "If everything goes smoothly, I will finish early.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Nếu mọi việc suôn sẻ, tôi sẽ hoàn thành sớm.",
+        "th": "ถ้าทุกอย่างราบรื่น ฉันจะเสร็จเร็วกว่ากำหนด",
+        "id": "Jika semuanya berjalan lancar, saya akan selesai lebih awal."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ xī wàng néng zhǎo dào gèng yǒu xiào lǜ de fāng shì gōng zuò.",
       "english_hint": "I hope to find a more efficient way to work.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Tôi hy vọng tìm được một cách làm việc hiệu quả hơn.",
+        "th": "ฉันหวังว่าจะหาวิธีทำงานที่มีประสิทธิภาพมากขึ้น",
+        "id": "Saya berharap bisa menemukan cara kerja yang lebih efisien."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ yě dǎ suàn zēng jiā xiū xí shí jiān, bì miǎn tài lèi.",
       "english_hint": "I also plan to increase rest time to avoid getting too tired.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi cũng dự định tăng thời gian nghỉ ngơi để tránh quá mệt mỏi.",
+        "th": "ฉันวางแผนที่จะเพิ่มเวลาพักผ่อนเพื่อไม่ให้เหนื่อยเกินไป",
+        "id": "Saya juga berencana untuk menambah waktu istirahat agar tidak terlalu lelah."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "wǒ huì bǎ jì huà xiě xià lái, zhè yàng bǐ jiào qīng chǔ.",
       "english_hint": "I'll write down the plan so it becomes clearer.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi sẽ viết ra kế hoạch để nó trở nên rõ ràng hơn.",
+        "th": "ฉันจะเขียนแผนงานลงไปเพื่อให้ชัดเจนยิ่งขึ้น",
+        "id": "Saya akan menuliskan rencananya agar menjadi lebih jelas."
+      },
+      "encouragements": {
+        "vi": "Hay lắm!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "zǒng zhī, wǒ xiǎng yí bù yí bù zuò dào zuì hǎo.",
       "english_hint": "In short, I want to do my best step by step.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Tóm lại, tôi muốn cố gắng hết sức từng bước một.",
+        "th": "สรุปคือ ฉันอยากจะทำให้ดีที่สุดไปทีละขั้น",
+        "id": "Singkatnya, saya ingin melakukan yang terbaik selangkah demi selangkah."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ xiǎng yào",
       "english_hint": "I want...",
-      "encouragement": "Good start!"
+      "encouragement": "Good start!",
+      "hints": {
+        "vi": "Tôi muốn...",
+        "th": "ฉันต้องการ...",
+        "id": "Saya mau..."
+      },
+      "encouragements": {
+        "vi": "Khởi đầu tốt!",
+        "th": "เริ่มต้นได้ดี!",
+        "id": "Awal yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ bú yào",
       "english_hint": "I don't want...",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Tôi không muốn...",
+        "th": "ฉันไม่ต้องการ...",
+        "id": "Saya tidak mau..."
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ yǒu",
       "english_hint": "I have...",
-      "encouragement": "Great job!"
+      "encouragement": "Great job!",
+      "hints": {
+        "vi": "Tôi có...",
+        "th": "ฉันมี...",
+        "id": "Saya punya..."
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ méi yǒu",
       "english_hint": "I don't have...",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Tôi không có...",
+        "th": "ฉันไม่มี...",
+        "id": "Saya tidak punya..."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "zhè shì shén me?",
       "english_hint": "What is this?",
-      "encouragement": "You're doing well!"
+      "encouragement": "You're doing well!",
+      "hints": {
+        "vi": "Cái này là gì?",
+        "th": "นี่อะไร?",
+        "id": "Apa ini?"
+      },
+      "encouragements": {
+        "vi": "Bạn đang làm rất tốt!",
+        "th": "คุณทำได้ดีมาก!",
+        "id": "Kamu melakukannya dengan baik!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "duō shǎo qián?",
       "english_hint": "How much?",
-      "encouragement": "Nice job!"
+      "encouragement": "Nice job!",
+      "hints": {
+        "vi": "Bao nhiêu?",
+        "th": "เท่าไหร่?",
+        "id": "Berapa harganya?"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดี!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "zài nǎ lǐ?",
       "english_hint": "Where is it?",
-      "encouragement": "Awesome!"
+      "encouragement": "Awesome!",
+      "hints": {
+        "vi": "Nó ở đâu?",
+        "th": "อยู่ที่ไหน?",
+        "id": "Di mana?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ yào zhè ge",
       "english_hint": "I want this.",
-      "encouragement": "Good work!"
+      "encouragement": "Good work!",
+      "hints": {
+        "vi": "Tôi muốn cái này.",
+        "th": "ฉันเอาอันนี้",
+        "id": "Saya mau ini."
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "bú yào dān xīn",
       "english_hint": "Don’t worry.",
-      "encouragement": "Perfect!"
+      "encouragement": "Perfect!",
+      "hints": {
+        "vi": "Đừng lo.",
+        "th": "ไม่ต้องห่วง",
+        "id": "Jangan khawatir."
+      },
+      "encouragements": {
+        "vi": "Hoàn hảo!",
+        "th": "เป๊ะเลย!",
+        "id": "Sempurna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "wǒ míng bái",
       "english_hint": "I understand.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Tôi hiểu rồi.",
+        "th": "ฉันเข้าใจ",
+        "id": "Saya mengerti."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

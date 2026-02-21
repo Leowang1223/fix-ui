@@ -13,7 +13,22 @@
       ],
       "pinyin": "qǐng wèn, chē zhàn zěn me zǒu?",
       "english_hint": "Excuse me, how do I get to the station?",
-      "encouragement": "Great question!"
+      "encouragement": "Great question!",
+      "hints": {
+        "vi": "Xin lỗi, làm thế nào để đến nhà ga ạ?",
+        "th": "ขอโทษนะครับ ไปสถานียังไงครับ",
+        "id": "Permisi, bagaimana saya bisa sampai ke stasiun?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi hay!",
+        "th": "คำถามดีมาก!",
+        "id": "Pertanyaan bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "yì zhí zǒu.",
       "english_hint": "Go straight.",
-      "encouragement": "Nice and simple!"
+      "encouragement": "Nice and simple!",
+      "hints": {
+        "vi": "Đi thẳng.",
+        "th": "ตรงไป",
+        "id": "Jalan lurus."
+      },
+      "encouragements": {
+        "vi": "Hay và đơn giản!",
+        "th": "ง่ายๆ ดี!",
+        "id": "Bagus dan sederhana!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "zuǒ zhuǎn.",
       "english_hint": "Turn left.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Rẽ trái.",
+        "th": "เลี้ยวซ้าย",
+        "id": "Belok kiri."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "yòu zhuǎn.",
       "english_hint": "Turn right.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Rẽ phải.",
+        "th": "เลี้ยวขวา",
+        "id": "Belok kanan."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "zài yòu biān.",
       "english_hint": "It's on the right.",
-      "encouragement": "Great answer!"
+      "encouragement": "Great answer!",
+      "hints": {
+        "vi": "Ở bên phải.",
+        "th": "อยู่ทางขวา",
+        "id": "Ada di sebelah kanan."
+      },
+      "encouragements": {
+        "vi": "Câu trả lời tuyệt vời!",
+        "th": "คำตอบดีมาก!",
+        "id": "Jawaban bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "zǒu wǔ fēn zhōng jiù dào le.",
       "english_hint": "Walk for five minutes and you’ll arrive.",
-      "encouragement": "Nice direction sentence!"
+      "encouragement": "Nice direction sentence!",
+      "hints": {
+        "vi": "Đi bộ năm phút là đến.",
+        "th": "เดินไปห้านาทีก็ถึงแล้ว",
+        "id": "Jalan kaki lima menit dan Anda akan sampai."
+      },
+      "encouragements": {
+        "vi": "Câu chỉ đường hay!",
+        "th": "ประโยคบอกทางเยี่ยมมาก!",
+        "id": "Kalimat petunjuk arah yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "zài fù jìn.",
       "english_hint": "It's nearby.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Ở gần đây.",
+        "th": "อยู่ใกล้ๆ",
+        "id": "Dekat sini."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ mí lù le.",
       "english_hint": "I am lost.",
-      "encouragement": "Useful phrase!"
+      "encouragement": "Useful phrase!",
+      "hints": {
+        "vi": "Tôi bị lạc đường rồi.",
+        "th": "ฉันหลงทาง",
+        "id": "Saya tersesat."
+      },
+      "encouragements": {
+        "vi": "Cụm từ hữu ích!",
+        "th": "วลีนี้มีประโยชน์!",
+        "id": "Frasa yang berguna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "kě yǐ dài wǒ qù ma?",
       "english_hint": "Can you take me there?",
-      "encouragement": "Great polite request!"
+      "encouragement": "Great polite request!",
+      "hints": {
+        "vi": "Bạn có thể đưa tôi đến đó không?",
+        "th": "ช่วยพาไปที่นั่นได้ไหมครับ",
+        "id": "Bisakah Anda mengantar saya ke sana?"
+      },
+      "encouragements": {
+        "vi": "Yêu cầu lịch sự tuyệt vời!",
+        "th": "คำขอสุภาพดีมาก!",
+        "id": "Permintaan yang sangat sopan!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "xiè xie nǐ de bāng máng.",
       "english_hint": "Thank you for your help.",
-      "encouragement": "Fantastic closing line!"
+      "encouragement": "Fantastic closing line!",
+      "hints": {
+        "vi": "Cảm ơn bạn đã giúp đỡ.",
+        "th": "ขอบคุณที่ช่วยนะครับ",
+        "id": "Terima kasih atas bantuannya."
+      },
+      "encouragements": {
+        "vi": "Câu kết tuyệt vời!",
+        "th": "ประโยคปิดท้ายดีมาก!",
+        "id": "Kalimat penutup yang fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

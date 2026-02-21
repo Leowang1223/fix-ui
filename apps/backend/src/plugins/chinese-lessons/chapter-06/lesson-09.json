@@ -13,7 +13,22 @@
       ],
       "pinyin": "A: nǐ jiā dà bù dà?",
       "english_hint": "Is your home big?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Nhà bạn có lớn không?",
+        "th": "บ้านของคุณใหญ่ไหม?",
+        "id": "Rumahmu besar?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "B: bú dà, dàn shì hěn shū fú.",
       "english_hint": "Not big, but very comfortable.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Không lớn lắm, nhưng rất thoải mái.",
+        "th": "ไม่ใหญ่มาก แต่สบายมาก",
+        "id": "Tidak besar, tapi sangat nyaman."
+      },
+      "encouragements": {
+        "vi": "Hay quá!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "A: nǐ hé jiā rén zhù yì qǐ ma?",
       "english_hint": "Do you live with your family?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Bạn sống với gia đình à?",
+        "th": "คุณอยู่กับครอบครัวไหม?",
+        "id": "Kamu tinggal dengan keluargamu?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Oke!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "B: duì, wǒ gēn fù mǔ yì qǐ zhù.",
       "english_hint": "Yes, I live with my parents.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Vâng, tôi sống với bố mẹ.",
+        "th": "ใช่ ฉันอยู่กับพ่อแม่",
+        "id": "Ya, saya tinggal dengan orang tua saya."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "A: nǐ yǒu jǐ gè xiōng dì jiě mèi?",
       "english_hint": "How many siblings do you have?",
-      "encouragement": "Great question!"
+      "encouragement": "Great question!",
+      "hints": {
+        "vi": "Bạn có bao nhiêu anh chị em?",
+        "th": "คุณมีพี่น้องกี่คน?",
+        "id": "Kamu punya berapa saudara?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi hay lắm!",
+        "th": "คำถามดีมาก!",
+        "id": "Pertanyaan bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "B: wǒ yǒu yí gè gē ge hé yí gè mèi mei.",
       "english_hint": "I have an older brother and a younger sister.",
-      "encouragement": "Nice reply!"
+      "encouragement": "Nice reply!",
+      "hints": {
+        "vi": "Tôi có một anh trai và một em gái.",
+        "th": "ฉันมีพี่ชายหนึ่งคนและน้องสาวหนึ่งคน",
+        "id": "Saya punya seorang kakak laki-laki dan seorang adik perempuan."
+      },
+      "encouragements": {
+        "vi": "Câu trả lời hay!",
+        "th": "ตอบดีมาก!",
+        "id": "Jawaban bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "A: nǐ xǐ huān nǐ de fáng jiān ma?",
       "english_hint": "Do you like your room?",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Bạn có thích phòng của mình không?",
+        "th": "คุณชอบห้องของคุณไหม?",
+        "id": "Kamu suka kamarmu?"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "B: xǐ huān, yīn wèi hěn ān jìng.",
       "english_hint": "Yes, because it's quiet.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Có, vì nó yên tĩnh.",
+        "th": "ใช่ เพราะมันเงียบ",
+        "id": "Ya, karena tenang."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "A: nǐ cháng cháng zài jiā zuò shén me?",
       "english_hint": "What do you usually do at home?",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Bạn thường làm gì ở nhà?",
+        "th": "ปกติคุณทำอะไรที่บ้าน?",
+        "id": "Biasanya kamu melakukan apa di rumah?"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "B: wǒ cháng cháng kàn shū hé tīng yīn yuè.",
       "english_hint": "I usually read and listen to music.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Tôi thường đọc sách và nghe nhạc.",
+        "th": "ฉันมักจะอ่านหนังสือและฟังเพลง",
+        "id": "Saya biasanya membaca dan mendengarkan musik."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

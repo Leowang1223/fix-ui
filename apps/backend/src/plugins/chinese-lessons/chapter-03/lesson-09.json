@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ zài jiā kàn diàn shì.",
       "english_hint": "I watch TV at home.",
-      "encouragement": "Great home sentence!"
+      "encouragement": "Great home sentence!",
+      "hints": {
+        "vi": "Tôi xem TV ở nhà.",
+        "th": "ฉันดูทีวีที่บ้าน",
+        "id": "Saya menonton TV di rumah."
+      },
+      "encouragements": {
+        "vi": "Câu về nhà rất hay!",
+        "th": "ประโยคเกี่ยวกับบ้านยอดเยี่ยมมาก!",
+        "id": "Kalimat tentang rumah yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ cháng cháng zài fáng jiān dú shū.",
       "english_hint": "I often study in my room.",
-      "encouragement": "Nice use of 常常!"
+      "encouragement": "Nice use of 常常!",
+      "hints": {
+        "vi": "Tôi thường học bài trong phòng của mình.",
+        "th": "ฉันมักจะเรียนในห้องของฉัน",
+        "id": "Saya sering belajar di kamar saya."
+      },
+      "encouragements": {
+        "vi": "Dùng 常常 rất tốt!",
+        "th": "ใช้คำว่า 常常 ได้ดีมาก!",
+        "id": "Bagus pakai 常常!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ yǒu shí hòu zài kè tīng gōng zuò.",
       "english_hint": "Sometimes I work in the living room.",
-      "encouragement": "Good time word usage!"
+      "encouragement": "Good time word usage!",
+      "hints": {
+        "vi": "Đôi khi tôi làm việc ở phòng khách.",
+        "th": "บางครั้งฉันก็ทำงานในห้องนั่งเล่น",
+        "id": "Kadang-kadang saya bekerja di ruang tamu."
+      },
+      "encouragements": {
+        "vi": "Dùng từ chỉ thời gian hay đấy!",
+        "th": "ใช้คำบอกเวลาได้ดี!",
+        "id": "Bagus pakai kata waktu!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ zài chú fáng zuò fàn.",
       "english_hint": "I cook in the kitchen.",
-      "encouragement": "Excellent routine sentence!"
+      "encouragement": "Excellent routine sentence!",
+      "hints": {
+        "vi": "Tôi nấu ăn trong bếp.",
+        "th": "ฉันทำอาหารในห้องครัว",
+        "id": "Saya memasak di dapur."
+      },
+      "encouragements": {
+        "vi": "Câu về thói quen rất tuyệt!",
+        "th": "ประโยคกิจวัตรประจำวันยอดเยี่ยม!",
+        "id": "Kalimat rutinitas yang luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "tā zài yáng tái hē kā fēi.",
       "english_hint": "He drinks coffee on the balcony.",
-      "encouragement": "Great detail!"
+      "encouragement": "Great detail!",
+      "hints": {
+        "vi": "Anh ấy uống cà phê ở ban công.",
+        "th": "เขาดื่มกาแฟที่ระเบียง",
+        "id": "Dia minum kopi di balkon."
+      },
+      "encouragements": {
+        "vi": "Chi tiết rất hay!",
+        "th": "รายละเอียดดีมาก!",
+        "id": "Detail yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ men zài jiā chī wǎn cān.",
       "english_hint": "We eat dinner at home.",
-      "encouragement": "Nice and simple!"
+      "encouragement": "Nice and simple!",
+      "hints": {
+        "vi": "Chúng tôi ăn tối ở nhà.",
+        "th": "พวกเรากินอาหารเย็นที่บ้าน",
+        "id": "Kami makan malam di rumah."
+      },
+      "encouragements": {
+        "vi": "Hay và đơn giản!",
+        "th": "ดีและเรียบง่าย!",
+        "id": "Bagus dan sederhana!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ xǐ huān zài shā fā shàng xiū xí.",
       "english_hint": "I like to rest on the sofa.",
-      "encouragement": "Very natural sentence!"
+      "encouragement": "Very natural sentence!",
+      "hints": {
+        "vi": "Tôi thích nghỉ ngơi trên ghế sofa.",
+        "th": "ฉันชอบพักผ่อนบนโซฟา",
+        "id": "Saya suka beristirahat di sofa."
+      },
+      "encouragements": {
+        "vi": "Câu rất tự nhiên!",
+        "th": "ประโยคเป็นธรรมชาติมาก!",
+        "id": "Kalimat yang sangat alami!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "shuì jiào qián wǒ huì kàn shǒu jī.",
       "english_hint": "Before sleeping, I look at my phone.",
-      "encouragement": "Good use of 前!"
+      "encouragement": "Good use of 前!",
+      "hints": {
+        "vi": "Trước khi ngủ, tôi xem điện thoại.",
+        "th": "ก่อนนอน ฉันดูโทรศัพท์",
+        "id": "Sebelum tidur, saya melihat ponsel saya."
+      },
+      "encouragements": {
+        "vi": "Dùng 前 rất tốt!",
+        "th": "ใช้คำว่า 前 ได้ดี!",
+        "id": "Bagus pakai 前!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "tā zǎo shàng zhěng lǐ fáng jiān.",
       "english_hint": "He tidies his room in the morning.",
-      "encouragement": "Excellent routine sentence!"
+      "encouragement": "Excellent routine sentence!",
+      "hints": {
+        "vi": "Anh ấy dọn dẹp phòng vào buổi sáng.",
+        "th": "เขาจัดห้องของเขาในตอนเช้า",
+        "id": "Dia merapikan kamarnya di pagi hari."
+      },
+      "encouragements": {
+        "vi": "Câu về thói quen rất tuyệt!",
+        "th": "ประโยคกิจวัตรประจำวันยอดเยี่ยม!",
+        "id": "Kalimat rutinitas yang luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "jīn tiān wǒ zài jiā fàng sōng.",
       "english_hint": "Today I relax at home.",
-      "encouragement": "Fantastic! Very natural!"
+      "encouragement": "Fantastic! Very natural!",
+      "hints": {
+        "vi": "Hôm nay tôi thư giãn ở nhà.",
+        "th": "วันนี้ฉันพักผ่อนที่บ้าน",
+        "id": "Hari ini saya bersantai di rumah."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời! Rất tự nhiên!",
+        "th": "ยอดเยี่ยม! เป็นธรรมชาติมาก!",
+        "id": "Fantastis! Sangat alami!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

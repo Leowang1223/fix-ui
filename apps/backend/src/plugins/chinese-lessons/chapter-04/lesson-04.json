@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ zuò gōng chē shàng bān.",
       "english_hint": "I take the bus to work.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Tôi đi xe buýt đi làm.",
+        "th": "ฉันนั่งรถเมล์ไปทำงาน",
+        "id": "Saya naik bus ke kantor."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "tā zuò huǒ chē huí jiā.",
       "english_hint": "He takes the train home.",
-      "encouragement": "Nice sentence!"
+      "encouragement": "Nice sentence!",
+      "hints": {
+        "vi": "Anh ấy đi tàu về nhà.",
+        "th": "เขานั่งรถไฟกลับบ้าน",
+        "id": "Dia naik kereta api pulang."
+      },
+      "encouragements": {
+        "vi": "Câu này hay đấy!",
+        "th": "ประโยคดีมาก!",
+        "id": "Kalimat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ men qí jiǎo tà chē qù gōng yuán.",
       "english_hint": "We ride bikes to the park.",
-      "encouragement": "Good job!"
+      "encouragement": "Good job!",
+      "hints": {
+        "vi": "Chúng tôi đạp xe đến công viên.",
+        "th": "พวกเราปั่นจักรยานไปสวนสาธารณะ",
+        "id": "Kami naik sepeda ke taman."
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ yào jiào jì chéng chē.",
       "english_hint": "I want to call a taxi.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Tôi muốn gọi taxi.",
+        "th": "ฉันอยากเรียกแท็กซี่",
+        "id": "Saya ingin memanggil taksi."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยมมาก!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "fēi jī bā diǎn qǐ fēi.",
       "english_hint": "The plane takes off at 8.",
-      "encouragement": "Nice travel sentence!"
+      "encouragement": "Nice travel sentence!",
+      "hints": {
+        "vi": "Máy bay cất cánh lúc 8 giờ.",
+        "th": "เครื่องบินออกเดินทางตอน 8 โมง",
+        "id": "Pesawatnya lepas landas jam 8."
+      },
+      "encouragements": {
+        "vi": "Câu về du lịch hay đấy!",
+        "th": "ประโยคเกี่ยวกับการเดินทางดีมาก!",
+        "id": "Kalimat perjalanan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "qǐng wèn, xià yì bān gōng chē jǐ diǎn?",
       "english_hint": "Excuse me, what time is the next bus?",
-      "encouragement": "Great question!"
+      "encouragement": "Great question!",
+      "hints": {
+        "vi": "Xin lỗi, mấy giờ có chuyến xe buýt tiếp theo ạ?",
+        "th": "ขอโทษนะครับ/คะ รถเมล์คันต่อไปกี่โมงครับ/คะ",
+        "id": "Permisi, jam berapa bus berikutnya?"
+      },
+      "encouragements": {
+        "vi": "Câu hỏi hay lắm!",
+        "th": "คำถามดีมาก!",
+        "id": "Pertanyaan yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ zài chē zhàn děng nǐ.",
       "english_hint": "I will wait for you at the station.",
-      "encouragement": "Great job!"
+      "encouragement": "Great job!",
+      "hints": {
+        "vi": "Tôi sẽ đợi bạn ở nhà ga.",
+        "th": "ฉันจะรอคุณที่สถานี",
+        "id": "Saya akan menunggumu di stasiun."
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "zhè lǐ bù néng tíng chē.",
       "english_hint": "You can't park here.",
-      "encouragement": "Perfect!"
+      "encouragement": "Perfect!",
+      "hints": {
+        "vi": "Bạn không được đỗ xe ở đây.",
+        "th": "คุณจอดรถที่นี่ไม่ได้",
+        "id": "Anda tidak boleh parkir di sini."
+      },
+      "encouragements": {
+        "vi": "Hoàn hảo!",
+        "th": "สมบูรณ์แบบ!",
+        "id": "Sempurna!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "dì tiě hěn kuài.",
       "english_hint": "The subway is fast.",
-      "encouragement": "Nice adjective sentence!"
+      "encouragement": "Nice adjective sentence!",
+      "hints": {
+        "vi": "Tàu điện ngầm rất nhanh.",
+        "th": "รถไฟฟ้าใต้ดินเร็วมาก",
+        "id": "Kereta bawah tanah itu cepat."
+      },
+      "encouragements": {
+        "vi": "Câu về tính từ hay đấy!",
+        "th": "ประโยคคำคุณศัพท์ดีมาก!",
+        "id": "Kalimat kata sifat yang bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "wǒ men yào qù jī chǎng.",
       "english_hint": "We are going to the airport.",
-      "encouragement": "Fantastic travel expression!"
+      "encouragement": "Fantastic travel expression!",
+      "hints": {
+        "vi": "Chúng tôi đang đi đến sân bay.",
+        "th": "พวกเรากำลังจะไปสนามบิน",
+        "id": "Kami akan pergi ke bandara."
+      },
+      "encouragements": {
+        "vi": "Cụm từ về du lịch tuyệt vời!",
+        "th": "สำนวนเกี่ยวกับการเดินทางยอดเยี่ยมมาก!",
+        "id": "Ungkapan perjalanan yang fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {

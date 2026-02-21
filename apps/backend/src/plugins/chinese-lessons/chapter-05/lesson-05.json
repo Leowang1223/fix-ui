@@ -9,102 +9,272 @@
     {
       "id": 1,
       "teacher": "洗手",
-      "expected_answer": ["洗手"],
+      "expected_answer": [
+        "洗手"
+      ],
       "pinyin": "xǐ shǒu",
       "english_hint": "wash hands",
       "example_sentence": "吃飯前要洗手。",
       "example_sentence_en": "Wash your hands before eating.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "rửa tay",
+        "th": "ล้างมือ",
+        "id": "cuci tangan"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "Rửa tay trước khi ăn.",
+        "th": "ล้างมือก่อนกินข้าว",
+        "id": "Cuci tangan sebelum makan."
+      }
     },
     {
       "id": 2,
       "teacher": "洗臉",
-      "expected_answer": ["洗臉"],
+      "expected_answer": [
+        "洗臉"
+      ],
       "pinyin": "xǐ liǎn",
       "english_hint": "wash face",
       "example_sentence": "早上起床要洗臉。",
       "example_sentence_en": "Wash your face after getting up in the morning.",
-      "encouragement": "Nice job!"
+      "encouragement": "Nice job!",
+      "hints": {
+        "vi": "rửa mặt",
+        "th": "ล้างหน้า",
+        "id": "cuci muka"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "เก่งมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "Rửa mặt sau khi thức dậy vào buổi sáng.",
+        "th": "ล้างหน้าหลังจากตื่นนอนตอนเช้า",
+        "id": "Cuci muka setelah bangun pagi."
+      }
     },
     {
       "id": 3,
       "teacher": "刷牙",
-      "expected_answer": ["刷牙"],
+      "expected_answer": [
+        "刷牙"
+      ],
       "pinyin": "shuā yá",
       "english_hint": "brush teeth",
       "example_sentence": "睡覺前記得刷牙。",
       "example_sentence_en": "Remember to brush your teeth before bed.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "đánh răng",
+        "th": "แปรงฟัน",
+        "id": "sikat gigi"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "Nhớ đánh răng trước khi đi ngủ.",
+        "th": "อย่าลืมแปรงฟันก่อนนอนนะ",
+        "id": "Jangan lupa sikat gigi sebelum tidur."
+      }
     },
     {
       "id": 4,
       "teacher": "洗衣服",
-      "expected_answer": ["洗衣服"],
+      "expected_answer": [
+        "洗衣服"
+      ],
       "pinyin": "xǐ yī fú",
       "english_hint": "wash clothes",
       "example_sentence": "我每週日洗衣服。",
       "example_sentence_en": "I wash clothes every Sunday.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "giặt quần áo",
+        "th": "ซักผ้า",
+        "id": "cuci baju"
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "Tôi giặt quần áo vào mỗi Chủ Nhật.",
+        "th": "ฉันซักผ้าทุกวันอาทิตย์",
+        "id": "Saya cuci baju setiap hari Minggu."
+      }
     },
     {
       "id": 5,
       "teacher": "掃地",
-      "expected_answer": ["掃地"],
+      "expected_answer": [
+        "掃地"
+      ],
       "pinyin": "sǎo dì",
       "english_hint": "sweep the floor",
       "example_sentence": "媽媽在掃地。",
       "example_sentence_en": "Mom is sweeping the floor.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "quét nhà",
+        "th": "กวาดพื้น",
+        "id": "menyapu lantai"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมเลย!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "Mẹ đang quét nhà.",
+        "th": "แม่กำลังกวาดพื้น",
+        "id": "Ibu sedang menyapu lantai."
+      }
     },
     {
       "id": 6,
       "teacher": "拖地",
-      "expected_answer": ["拖地"],
+      "expected_answer": [
+        "拖地"
+      ],
       "pinyin": "tuō dì",
       "english_hint": "mop the floor",
       "example_sentence": "掃完地再拖地。",
       "example_sentence_en": "Mop the floor after sweeping.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "lau nhà",
+        "th": "ถูพื้น",
+        "id": "mengepel lantai"
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดีมาก!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "Lau nhà sau khi quét.",
+        "th": "ถูพื้นหลังจากกวาดเสร็จ",
+        "id": "Pel lantai setelah menyapu."
+      }
     },
     {
       "id": 7,
       "teacher": "煮飯",
-      "expected_answer": ["煮飯"],
+      "expected_answer": [
+        "煮飯"
+      ],
       "pinyin": "zhǔ fàn",
       "english_hint": "cook (make a meal)",
       "example_sentence": "爸爸今天煮飯。",
       "example_sentence_en": "Dad is cooking today.",
-      "encouragement": "Good job!"
+      "encouragement": "Good job!",
+      "hints": {
+        "vi": "nấu ăn",
+        "th": "ทำอาหาร",
+        "id": "masak"
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Bagus sekali!"
+      },
+      "example_sentences": {
+        "vi": "Bố đang nấu ăn hôm nay.",
+        "th": "พ่อกำลังทำอาหารวันนี้",
+        "id": "Ayah sedang memasak hari ini."
+      }
     },
     {
       "id": 8,
       "teacher": "洗澡",
-      "expected_answer": ["洗澡"],
+      "expected_answer": [
+        "洗澡"
+      ],
       "pinyin": "xǐ zǎo",
       "english_hint": "take a shower",
       "example_sentence": "運動後要洗澡。",
       "example_sentence_en": "Take a shower after exercising.",
-      "encouragement": "Awesome!"
+      "encouragement": "Awesome!",
+      "hints": {
+        "vi": "tắm",
+        "th": "อาบน้ำ",
+        "id": "mandi"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Keren!"
+      },
+      "example_sentences": {
+        "vi": "Tắm sau khi tập thể dục.",
+        "th": "อาบน้ำหลังจากออกกำลังกาย",
+        "id": "Mandi setelah berolahraga."
+      }
     },
     {
       "id": 9,
       "teacher": "休息",
-      "expected_answer": ["休息"],
+      "expected_answer": [
+        "休息"
+      ],
       "pinyin": "xiū xí",
       "english_hint": "rest",
       "example_sentence": "累了就休息一下。",
       "example_sentence_en": "Take a rest when you're tired.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "nghỉ ngơi",
+        "th": "พักผ่อน",
+        "id": "istirahat"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยมไปเลย!",
+        "id": "Hebat!"
+      },
+      "example_sentences": {
+        "vi": "Hãy nghỉ ngơi khi bạn mệt.",
+        "th": "พักผ่อนเมื่อคุณเหนื่อย",
+        "id": "Istirahatlah saat kamu lelah."
+      }
     },
     {
       "id": 10,
       "teacher": "練習",
-      "expected_answer": ["練習"],
+      "expected_answer": [
+        "練習"
+      ],
       "pinyin": "liàn xí",
       "english_hint": "practice",
       "example_sentence": "每天練習中文。",
       "example_sentence_en": "Practice Chinese every day.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "luyện tập",
+        "th": "ฝึกฝน",
+        "id": "latihan"
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "ยอดเยี่ยมมาก!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "Luyện tập tiếng Trung mỗi ngày.",
+        "th": "ฝึกภาษาจีนทุกวัน",
+        "id": "Latihan bahasa Mandarin setiap hari."
+      }
     }
   ],
   "review": {

@@ -13,7 +13,22 @@
       ],
       "pinyin": "wǒ zuó tiān qù le chāo shì.",
       "english_hint": "I went to the supermarket yesterday.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Hôm qua tôi đi siêu thị.",
+        "th": "ฉันไปซูเปอร์มาร์เก็ตเมื่อวานนี้",
+        "id": "Saya pergi ke supermarket kemarin."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 2,
@@ -23,7 +38,22 @@
       ],
       "pinyin": "wǒ zuó tiān zuò le wǎn cān.",
       "english_hint": "I cooked dinner yesterday.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Hôm qua tôi nấu bữa tối.",
+        "th": "ฉันทำอาหารเย็นเมื่อวานนี้",
+        "id": "Saya memasak makan malam kemarin."
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 3,
@@ -33,7 +63,22 @@
       ],
       "pinyin": "wǒ zuó tiān kàn le yì běn shū.",
       "english_hint": "I read a book yesterday.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Hôm qua tôi đọc sách.",
+        "th": "ฉันอ่านหนังสือเมื่อวานนี้",
+        "id": "Saya membaca buku kemarin."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 4,
@@ -43,7 +88,22 @@
       ],
       "pinyin": "wǒ zuó tiān zǎo qǐ.",
       "english_hint": "I woke up early yesterday.",
-      "encouragement": "Excellent!"
+      "encouragement": "Excellent!",
+      "hints": {
+        "vi": "Hôm qua tôi dậy sớm.",
+        "th": "ฉันตื่นเช้าเมื่อวานนี้",
+        "id": "Saya bangun pagi kemarin."
+      },
+      "encouragements": {
+        "vi": "Xuất sắc!",
+        "th": "ยอดเยี่ยม!",
+        "id": "Luar biasa!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 5,
@@ -53,7 +113,22 @@
       ],
       "pinyin": "wǒ zuó tiān dǎ sǎo le fáng jiān.",
       "english_hint": "I cleaned my room yesterday.",
-      "encouragement": "Great!"
+      "encouragement": "Great!",
+      "hints": {
+        "vi": "Hôm qua tôi dọn phòng.",
+        "th": "ฉันทำความสะอาดห้องเมื่อวานนี้",
+        "id": "Saya membersihkan kamar saya kemarin."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "เยี่ยม!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 6,
@@ -63,7 +138,22 @@
       ],
       "pinyin": "wǒ zuó tiān mǎi le yì xiē shuǐ guǒ.",
       "english_hint": "I bought some fruit yesterday.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Hôm qua tôi mua trái cây.",
+        "th": "ฉันซื้อผลไม้เมื่อวานนี้",
+        "id": "Saya membeli buah kemarin."
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 7,
@@ -73,7 +163,22 @@
       ],
       "pinyin": "wǒ zuó tiān tīng le yīn yuè.",
       "english_hint": "I listened to music yesterday.",
-      "encouragement": "Good!"
+      "encouragement": "Good!",
+      "hints": {
+        "vi": "Hôm qua tôi nghe nhạc.",
+        "th": "ฉันฟังเพลงเมื่อวานนี้",
+        "id": "Saya mendengarkan musik kemarin."
+      },
+      "encouragements": {
+        "vi": "Tốt!",
+        "th": "ดี!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 8,
@@ -83,7 +188,22 @@
       ],
       "pinyin": "wǒ zuó tiān jiàn le péng yǒu.",
       "english_hint": "I met a friend yesterday.",
-      "encouragement": "Great job!"
+      "encouragement": "Great job!",
+      "hints": {
+        "vi": "Hôm qua tôi gặp một người bạn.",
+        "th": "ฉันเจอเพื่อนเมื่อวานนี้",
+        "id": "Saya bertemu teman kemarin."
+      },
+      "encouragements": {
+        "vi": "Làm tốt lắm!",
+        "th": "ทำได้ดีมาก!",
+        "id": "Kerja bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 9,
@@ -93,7 +213,22 @@
       ],
       "pinyin": "wǒ zuó tiān hěn máng.",
       "english_hint": "I was busy yesterday.",
-      "encouragement": "Nice!"
+      "encouragement": "Nice!",
+      "hints": {
+        "vi": "Hôm qua tôi bận.",
+        "th": "ฉันยุ่งเมื่อวานนี้",
+        "id": "Saya sibuk kemarin."
+      },
+      "encouragements": {
+        "vi": "Tốt lắm!",
+        "th": "ดีเลย!",
+        "id": "Bagus!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     },
     {
       "id": 10,
@@ -103,7 +238,22 @@
       ],
       "pinyin": "wǒ zuó tiān xiū xí le yí xià.",
       "english_hint": "I rested a bit yesterday.",
-      "encouragement": "Fantastic!"
+      "encouragement": "Fantastic!",
+      "hints": {
+        "vi": "Hôm qua tôi nghỉ ngơi một chút.",
+        "th": "ฉันพักผ่อนนิดหน่อยเมื่อวานนี้",
+        "id": "Saya istirahat sebentar kemarin."
+      },
+      "encouragements": {
+        "vi": "Tuyệt vời!",
+        "th": "สุดยอด!",
+        "id": "Fantastis!"
+      },
+      "example_sentences": {
+        "vi": "",
+        "th": "",
+        "id": ""
+      }
     }
   ],
   "review": {
