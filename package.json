@@ -27,6 +27,7 @@
     "test:frontend": "cd apps/web && npm test 2>/dev/null || echo 'No test script in frontend'"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
     "concurrently": "^8.2.2"
   },
   "engines": {

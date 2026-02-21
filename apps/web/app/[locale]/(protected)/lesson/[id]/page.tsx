@@ -3064,6 +3064,86 @@ export default function LessonPage() {
           onClose={() => setUnlockedAchievement(null)}
         />
       )}
+
+      {/* 📚 Deck Selector Dialog */}
+      {showDeckSelector && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+          onClick={cancelSaveFlashcard}
+        >
+          <div
+            className="relative w-full max-w-sm mx-4 bg-white rounded-2xl shadow-2xl p-6"
+            onClick={e => e.stopPropagation()}
+          >
+            <h3 className="text-lg font-semibold text-gray-800 mb-1">{tLesson('selectDeckTitle')}</h3>
+            <p className="text-sm text-gray-500 mb-4">{tLesson('selectDeckHint')}</p>
+
+            {/* Available decks */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              {availableDecks.map(deck => (
+                <button
+                  key={deck}
+                  onClick={() => setSelectedDeck(deck)}
+                  className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-all ${
+                    selectedDeck === deck
+                      ? 'bg-blue-600 text-white border-blue-600'
+                      : 'bg-gray-50 text-gray-700 border-gray-200 hover:border-blue-400'
+                  }`}
+                >
+                  {deck}
+                </button>
+              ))}
+              {/* New deck button */}
+              {!isDeckInputOpen && (
+                <button
+                  onClick={() => setIsDeckInputOpen(true)}
+                  className="px-3 py-1.5 rounded-full text-sm font-medium border border-dashed border-blue-300 text-blue-600 hover:bg-blue-50 transition-all"
+                >
+                  {tLesson('newDeckLabel')}
+                </button>
+              )}
+            </div>
+
+            {/* New deck input */}
+            {isDeckInputOpen && (
+              <div className="flex gap-2 mb-4">
+                <input
+                  autoFocus
+                  type="text"
+                  value={newDeckName}
+                  onChange={e => setNewDeckName(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && handleCreateDeck()}
+                  placeholder={tLesson('newDeckPlaceholder')}
+                  className="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button
+                  onClick={handleCreateDeck}
+                  className="px-4 py-2 text-sm font-medium bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  {tLesson('createDeckBtn')}
+                </button>
+              </div>
+            )}
+
+            {/* Action buttons */}
+            <div className="flex gap-3 justify-end">
+              <button
+                onClick={cancelSaveFlashcard}
+                className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                {tCommon('cancel')}
+              </button>
+              <button
+                onClick={confirmSaveFlashcard}
+                disabled={flashcardStatus === 'saving'}
+                className="px-5 py-2 text-sm font-medium bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 transition-colors"
+              >
+                {flashcardStatus === 'saving' ? '...' : tLesson('saveToDeckBtn')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

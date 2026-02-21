@@ -6,7 +6,7 @@
  *   node scripts/translate-lessons.js --dry-run    # Preview only
  *   node scripts/translate-lessons.js --chapter 1  # Only translate chapter 1
  *
- * Requires GEMINI_API_KEY in apps/backend/.env
+ * Requires ANTHROPIC_API_KEY in environment or apps/backend/.env
  */
 
 const fs = require('fs')
@@ -22,7 +22,7 @@ if (fs.existsSync(envPath)) {
   }
 }
 
-const { GoogleGenerativeAI } = require('@google/generative-ai')
+const Anthropic = require('@anthropic-ai/sdk')
 
 const LESSONS_DIR = path.join(__dirname, '..', 'apps', 'backend', 'src', 'plugins', 'chinese-lessons')
 
@@ -36,7 +36,7 @@ const args = process.argv.slice(2)
 const DRY_RUN = args.includes('--dry-run')
 const chapterFilter = args.includes('--chapter') ? args[args.indexOf('--chapter') + 1] : null
 
-async function translateBatch(model, strings, targetLang) {
+async function translateBatch(client, strings, targetLang) {
   const prompt = `Translate the following English strings to ${targetLang}.
 These are used in a Chinese language learning app for Southeast Asian learners.
 
@@ -45,23 +45,26 @@ RULES:
 - For vocabulary hints (short words/phrases), keep them concise
 - For encouragement messages, keep the encouraging and friendly tone
 - For example sentences, translate accurately
-- Return ONLY a JSON array of translated strings in the same order
+- Return ONLY a JSON array of translated strings in the same order, no other text
 
 Input strings:
 ${JSON.stringify(strings, null, 2)}
 
 Return a JSON array of ${strings.length} translated strings:`
 
-  const result = await model.generateContent({
-    contents: [{ role: 'user', parts: [{ text: prompt }] }],
-    generationConfig: {
-      temperature: 0.3,
-      responseMimeType: 'application/json',
-    },
+  const message = await client.messages.create({
+    model: 'claude-haiku-4-5-20251001',
+    max_tokens: 4096,
+    messages: [{ role: 'user', content: prompt }],
   })
 
-  const responseText = result.response.candidates?.[0]?.content?.parts?.[0]?.text || '[]'
-  const translated = JSON.parse(responseText)
+  const responseText = message.content[0]?.text || '[]'
+
+  // Extract JSON array from response
+  const jsonMatch = responseText.match(/\[[\s\S]*\]/)
+  if (!jsonMatch) throw new Error(`No JSON array found in response: ${responseText.substring(0, 100)}`)
+
+  const translated = JSON.parse(jsonMatch[0])
 
   if (translated.length !== strings.length) {
     throw new Error(`Expected ${strings.length} translations, got ${translated.length}`)
@@ -70,7 +73,7 @@ Return a JSON array of ${strings.length} translated strings:`
   return translated
 }
 
-async function translateLesson(model, lessonPath) {
+async function translateLesson(client, lessonPath) {
   const content = fs.readFileSync(lessonPath, 'utf-8')
   const lesson = JSON.parse(content)
 
@@ -79,8 +82,9 @@ async function translateLesson(model, lessonPath) {
     return false
   }
 
-  // Check if already translated
-  if (lesson.steps[0].hints) {
+  // Check if already translated (all 3 locales present)
+  const firstStep = lesson.steps[0]
+  if (firstStep.hints?.vi && firstStep.hints?.th && firstStep.hints?.id) {
     console.log(`  ⏭️  Already translated, skipping`)
     return false
   }
@@ -103,10 +107,17 @@ async function translateLesson(model, lessonPath) {
   // Translate to each locale
   let successCount = 0
   for (const [locale, langName] of Object.entries(LOCALES)) {
+    // Skip if this locale is already done
+    if (firstStep.hints?.[locale]) {
+      console.log(`    ⏭️  ${locale} already done, skipping`)
+      successCount++
+      continue
+    }
+
     console.log(`    🌐 Translating to ${locale}...`)
 
     try {
-      const translated = await translateBatch(model, allStrings, langName)
+      const translated = await translateBatch(client, allStrings, langName)
 
       // Split back into 3 groups
       const translatedHints = translated.slice(0, stepCount)
@@ -130,31 +141,30 @@ async function translateLesson(model, lessonPath) {
       // Continue with other locales
     }
 
-    // Rate limiting: wait 500ms between API calls
-    await new Promise(r => setTimeout(r, 500))
+    // Rate limiting: wait 300ms between API calls
+    await new Promise(r => setTimeout(r, 300))
   }
 
   // Only write back if at least one locale succeeded
   if (successCount > 0) {
     fs.writeFileSync(lessonPath, JSON.stringify(lesson, null, 2) + '\n', 'utf-8')
-    return true
+    return successCount === Object.keys(LOCALES).length
   }
   console.log(`  ⚠️  No translations succeeded, file unchanged`)
   return false
 }
 
 async function main() {
-  const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY
+  const apiKey = process.env.ANTHROPIC_API_KEY
   if (!apiKey) {
-    console.error('❌ No GEMINI_API_KEY found. Set it in apps/backend/.env')
+    console.error('❌ No ANTHROPIC_API_KEY found. Set it in environment or apps/backend/.env')
     process.exit(1)
   }
 
-  console.log(DRY_RUN ? '🔍 DRY RUN MODE' : '🚀 TRANSLATION MODE')
+  console.log(DRY_RUN ? '🔍 DRY RUN MODE' : '🚀 TRANSLATION MODE (Claude Haiku)')
   console.log(`📂 Lessons dir: ${LESSONS_DIR}`)
 
-  const genAI = new GoogleGenerativeAI(apiKey)
-  const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' })
+  const client = new Anthropic.default({ apiKey })
 
   // Find all chapter directories
   const chapters = fs.readdirSync(LESSONS_DIR, { withFileTypes: true })
@@ -179,7 +189,7 @@ async function main() {
       console.log(`  📄 ${file}`)
 
       try {
-        const translated = await translateLesson(model, lessonPath)
+        const translated = await translateLesson(client, lessonPath)
         if (translated) {
           totalTranslated++
           console.log(`  ✅ Done`)
@@ -187,7 +197,7 @@ async function main() {
           totalSkipped++
         }
       } catch (error) {
-        console.error(`  ❌ Error: ${error.message}`)
+        console.log(`  ❌ Error: ${error.message}`)
         totalSkipped++
       }
     }

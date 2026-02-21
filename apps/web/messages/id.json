@@ -225,6 +225,12 @@
     "playEnglish": "Putar bahasa Inggris",
     "saveToFlashcards": "Simpan ke Kartu Flash",
     "addedToDeck": "Ditambahkan ke dek \"{deck}\".",
+    "selectDeckTitle": "Simpan ke Dek",
+    "selectDeckHint": "Pilih dek atau buat yang baru",
+    "newDeckLabel": "+ Dek Baru",
+    "newDeckPlaceholder": "Masukkan nama dek...",
+    "createDeckBtn": "Buat",
+    "saveToDeckBtn": "Simpan",
     "lessonProgress": "Progres pelajaran: {percent}%",
     "scoringNotComplete": "Penilaian belum selesai. Apakah Anda yakin ingin keluar? Skor yang belum selesai akan hilang.",
     "noAnswersConfirm": "Anda belum menjawab pertanyaan apa pun. Apakah Anda yakin ingin mengakhiri pelajaran?",
@@ -474,7 +480,8 @@
     "chinesePlaceholder": "Contoh: 你好",
     "pinyinLabel": "Pinyin Mandarin",
     "pinyinPlaceholder": "Contoh: nǐ hǎo",
-    "englishPlaceholder": "Contoh: Hello"
+    "englishPlaceholder": "Contoh: Hello",
+    "englishMeaning": "Arti"
   },
   "analysis": {
     "loadFailed": "Gagal memuat",
