@@ -362,7 +362,8 @@
     "autoReturning": "Automatically returning to course list in",
     "seconds": "seconds",
     "returnNow": "Return to Course List Now",
-    "generatingAnalysis": "Generating detailed analysis..."
+    "generatingAnalysis": "Generating detailed analysis...",
+    "scoring": "Scoring..."
   },
   "feedback": {
     "missing": "Missing",

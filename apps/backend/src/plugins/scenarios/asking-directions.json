@@ -16,22 +16,69 @@
       "id": 1,
       "description": "Politely ask for help and state destination",
       "chineseDescription": "禮貌地請求幫助並說明目的地",
-      "keywords": ["請問", "excuse me", "麻煩", "不好意思", "抱歉", "打擾", "去", "到", "找", "在哪裡", "怎麼走", "怎麼去"],
-      "weight": 30
+      "keywords": [
+        "請問",
+        "excuse me",
+        "麻煩",
+        "不好意思",
+        "抱歉",
+        "打擾",
+        "去",
+        "到",
+        "找",
+        "在哪裡",
+        "怎麼走",
+        "怎麼去"
+      ],
+      "weight": 30,
+      "descriptions": {
+        "vi": "Hỏi đường lịch sự.",
+        "th": "ถามทางอย่างสุภาพและบอกจุดหมาย",
+        "id": "Minta bantuan, sebut tujuan"
+      }
     },
     {
       "id": 2,
       "description": "Acknowledge directions and confirm understanding",
       "chineseDescription": "回應並確認理解方向指示",
-      "keywords": ["明白", "懂了", "知道了", "了解", "清楚", "好的", "對", "是", "這樣", "再說一次"],
-      "weight": 40
+      "keywords": [
+        "明白",
+        "懂了",
+        "知道了",
+        "了解",
+        "清楚",
+        "好的",
+        "對",
+        "是",
+        "這樣",
+        "再說一次"
+      ],
+      "weight": 40,
+      "descriptions": {
+        "vi": "Xác nhận chỉ dẫn.",
+        "th": "รับทราบและยืนยันความเข้าใจ",
+        "id": "Pahami arah, konfirmasi"
+      }
     },
     {
       "id": 3,
       "description": "Thank the person",
       "chineseDescription": "感謝對方",
-      "keywords": ["謝謝", "thank you", "麻煩你了", "感謝", "多謝", "謝啦", "謝了"],
-      "weight": 30
+      "keywords": [
+        "謝謝",
+        "thank you",
+        "麻煩你了",
+        "感謝",
+        "多謝",
+        "謝啦",
+        "謝了"
+      ],
+      "weight": 30,
+      "descriptions": {
+        "vi": "Cảm ơn người giúp.",
+        "th": "กล่าวขอบคุณ",
+        "id": "Ucapkan terima kasih"
+      }
     }
   ],
   "roles": [
@@ -39,7 +86,12 @@
       "id": "tourist",
       "name": "Tourist",
       "chineseName": "遊客",
-      "systemPrompt": "You are a tourist in Taiwan trying to find a location. You need to ask for directions politely and confirm you understand. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 捷運 not 地鐵). Keep responses concise (1-2 sentences)."
+      "systemPrompt": "You are a tourist in Taiwan trying to find a location. You need to ask for directions politely and confirm you understand. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 捷運 not 地鐵). Keep responses concise (1-2 sentences).",
+      "names": {
+        "vi": "Khách du lịch",
+        "th": "นักท่องเที่ยว",
+        "id": "Turis"
+      }
     },
     {
       "id": "local",
@@ -47,7 +99,12 @@
       "chineseName": "本地人",
       "interviewerImage": "jan.png",
       "interviewerId": "jan",
-      "systemPrompt": "You are a helpful Taiwan local resident. Give clear directions using landmarks and cardinal directions. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 捷運 not 地鐵, 公車 not 公交車). Keep responses concise (2-3 sentences). Be patient and helpful."
+      "systemPrompt": "You are a helpful Taiwan local resident. Give clear directions using landmarks and cardinal directions. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 捷運 not 地鐵, 公車 not 公交車). Keep responses concise (2-3 sentences). Be patient and helpful.",
+      "names": {
+        "vi": "Người dân địa phương",
+        "th": "คนท้องถิ่น",
+        "id": "Penduduk Lokal"
+      }
     }
   ],
   "suggestions": {
@@ -86,18 +143,69 @@
     }
   },
   "keyVocabulary": [
-    { "chinese": "請問", "pinyin": "qǐng wèn", "english": "excuse me (asking)" },
-    { "chinese": "怎麼走", "pinyin": "zěn me zǒu", "english": "how to get there" },
-    { "chinese": "直走", "pinyin": "zhí zǒu", "english": "go straight" },
-    { "chinese": "轉", "pinyin": "zhuǎn", "english": "turn" },
-    { "chinese": "在哪裡", "pinyin": "zài nǎ lǐ", "english": "where is" }
+    {
+      "chinese": "請問",
+      "pinyin": "qǐng wèn",
+      "english": "excuse me (asking)"
+    },
+    {
+      "chinese": "怎麼走",
+      "pinyin": "zěn me zǒu",
+      "english": "how to get there"
+    },
+    {
+      "chinese": "直走",
+      "pinyin": "zhí zǒu",
+      "english": "go straight"
+    },
+    {
+      "chinese": "轉",
+      "pinyin": "zhuǎn",
+      "english": "turn"
+    },
+    {
+      "chinese": "在哪裡",
+      "pinyin": "zài nǎ lǐ",
+      "english": "where is"
+    }
   ],
   "keyPatterns": [
-    { "pattern": "...怎麼走?", "example": "地鐵站怎麼走?", "english": "How do I get to...?" },
-    { "pattern": "...在哪裡?", "example": "銀行在哪裡?", "english": "Where is...?" },
-    { "pattern": "請問...", "example": "請問，這裡是哪裡?", "english": "Excuse me, ..." }
+    {
+      "pattern": "...怎麼走?",
+      "example": "地鐵站怎麼走?",
+      "english": "How do I get to...?"
+    },
+    {
+      "pattern": "...在哪裡?",
+      "example": "銀行在哪裡?",
+      "english": "Where is...?"
+    },
+    {
+      "pattern": "請問...",
+      "example": "請問，這裡是哪裡?",
+      "english": "Excuse me, ..."
+    }
   ],
-  "tags": ["directions", "travel", "navigation"],
+  "tags": [
+    "directions",
+    "travel",
+    "navigation"
+  ],
   "createdAt": "2025-01-01T00:00:00Z",
-  "isCustom": false
+  "isCustom": false,
+  "titles": {
+    "vi": "Hỏi đường",
+    "th": "การถามทาง",
+    "id": "Bertanya Arah"
+  },
+  "descriptions": {
+    "vi": "Học cách hỏi và hiểu chỉ dẫn đường đến các địa điểm khác nhau.",
+    "th": "เรียนรู้การถามและเข้าใจเส้นทางไปยังสถานที่ต่างๆ",
+    "id": "Belajar bertanya dan memahami arah ke berbagai lokasi"
+  },
+  "objectives": {
+    "vi": "Hỏi đường thành công đến điểm đến của bạn.",
+    "th": "สามารถถามทางไปยังจุดหมายปลายทางได้อย่างถูกต้อง",
+    "id": "Berhasil mendapatkan arah ke tujuan Anda"
+  }
 }

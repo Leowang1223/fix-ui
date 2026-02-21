@@ -16,29 +16,80 @@
       "id": 1,
       "description": "Ask about food and order",
       "chineseDescription": "詢問並點餐",
-      "keywords": ["有什麼", "我要", "臭豆腐", "雞排", "蚵仔煎", "來一份", "這個", "多少", "老闆"],
-      "weight": 30
+      "keywords": [
+        "有什麼",
+        "我要",
+        "臭豆腐",
+        "雞排",
+        "蚵仔煎",
+        "來一份",
+        "這個",
+        "多少",
+        "老闆"
+      ],
+      "weight": 30,
+      "descriptions": {
+        "vi": "Hỏi và gọi món",
+        "th": "ถามและสั่งอาหาร",
+        "id": "Tanya dan pesan makanan"
+      }
     },
     {
       "id": 2,
       "description": "Choose spice level or flavor",
       "chineseDescription": "選擇辣度或口味",
-      "keywords": ["辣", "不辣", "小辣", "中辣", "大辣", "蒜", "醬油", "胡椒", "要不要"],
-      "weight": 30
+      "keywords": [
+        "辣",
+        "不辣",
+        "小辣",
+        "中辣",
+        "大辣",
+        "蒜",
+        "醬油",
+        "胡椒",
+        "要不要"
+      ],
+      "weight": 30,
+      "descriptions": {
+        "vi": "Chọn độ cay/vị",
+        "th": "เลือกระดับความเผ็ด/รสชาติ",
+        "id": "Pilih tingkat pedas atau rasa"
+      }
     },
     {
       "id": 3,
       "description": "Pay and receive food",
       "chineseDescription": "付款取餐",
-      "keywords": ["多少錢", "這裡", "謝謝", "找錢", "拿", "給你"],
-      "weight": 25
+      "keywords": [
+        "多少錢",
+        "這裡",
+        "謝謝",
+        "找錢",
+        "拿",
+        "給你"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Thanh toán, nhận đồ ăn",
+        "th": "ชำระเงินและรับอาหาร",
+        "id": "Bayar dan terima makanan"
+      }
     },
     {
       "id": 4,
       "description": "Thank vendor",
       "chineseDescription": "感謝攤販",
-      "keywords": ["謝謝", "謝", "好"],
-      "weight": 15
+      "keywords": [
+        "謝謝",
+        "謝",
+        "好"
+      ],
+      "weight": 15,
+      "descriptions": {
+        "vi": "Cảm ơn người bán",
+        "th": "ขอบคุณคนขาย",
+        "id": "Ucapkan terima kasih"
+      }
     }
   ],
   "roles": [
@@ -46,7 +97,12 @@
       "id": "customer",
       "name": "Customer",
       "chineseName": "顧客",
-      "systemPrompt": "You are a customer at a Taiwanese night market (夜市) ordering street food. Ask about food, order items, and choose flavors. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary and casual expressions. Keep responses concise (1-2 sentences). Be friendly and casual."
+      "systemPrompt": "You are a customer at a Taiwanese night market (夜市) ordering street food. Ask about food, order items, and choose flavors. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary and casual expressions. Keep responses concise (1-2 sentences). Be friendly and casual.",
+      "names": {
+        "vi": "Khách hàng",
+        "th": "ลูกค้า",
+        "id": "Pelanggan"
+      }
     },
     {
       "id": "vendor",
@@ -54,7 +110,12 @@
       "chineseName": "攤販老闆",
       "interviewerImage": "night market waitor.png",
       "interviewerId": "man",
-      "systemPrompt": "You are a friendly street food vendor at a Taiwanese night market (夜市). Describe your food, take orders, and ask about preferences (spice level, toppings). IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary and casual Taiwanese expressions. Keep responses concise (1-2 sentences). Be warm and enthusiastic about your food."
+      "systemPrompt": "You are a friendly street food vendor at a Taiwanese night market (夜市). Describe your food, take orders, and ask about preferences (spice level, toppings). IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary and casual Taiwanese expressions. Keep responses concise (1-2 sentences). Be warm and enthusiastic about your food.",
+      "names": {
+        "vi": "Người bán hàng",
+        "th": "คนขาย",
+        "id": "Penjual Jajanan"
+      }
     }
   ],
   "suggestions": {
@@ -93,21 +154,86 @@
     }
   },
   "keyVocabulary": [
-    { "chinese": "臭豆腐", "pinyin": "chòu dòu fu", "english": "stinky tofu" },
-    { "chinese": "蚵仔煎", "pinyin": "ô-á-chiān", "english": "oyster omelette" },
-    { "chinese": "雞排", "pinyin": "jī pái", "english": "fried chicken cutlet" },
-    { "chinese": "夜市", "pinyin": "yè shì", "english": "night market" },
-    { "chinese": "攤販", "pinyin": "tān fàn", "english": "street vendor" },
-    { "chinese": "小辣", "pinyin": "xiǎo là", "english": "mild spicy" },
-    { "chinese": "老闆", "pinyin": "lǎo bǎn", "english": "boss/owner" }
+    {
+      "chinese": "臭豆腐",
+      "pinyin": "chòu dòu fu",
+      "english": "stinky tofu"
+    },
+    {
+      "chinese": "蚵仔煎",
+      "pinyin": "ô-á-chiān",
+      "english": "oyster omelette"
+    },
+    {
+      "chinese": "雞排",
+      "pinyin": "jī pái",
+      "english": "fried chicken cutlet"
+    },
+    {
+      "chinese": "夜市",
+      "pinyin": "yè shì",
+      "english": "night market"
+    },
+    {
+      "chinese": "攤販",
+      "pinyin": "tān fàn",
+      "english": "street vendor"
+    },
+    {
+      "chinese": "小辣",
+      "pinyin": "xiǎo là",
+      "english": "mild spicy"
+    },
+    {
+      "chinese": "老闆",
+      "pinyin": "lǎo bǎn",
+      "english": "boss/owner"
+    }
   ],
   "keyPatterns": [
-    { "pattern": "...多少錢?", "example": "這個多少錢?", "english": "How much is...?" },
-    { "pattern": "我要...", "example": "我要一份臭豆腐", "english": "I want..." },
-    { "pattern": "要不要...?", "example": "要不要加辣?", "english": "Do you want...?" },
-    { "pattern": "不要太...", "example": "不要太辣", "english": "Not too..." }
+    {
+      "pattern": "...多少錢?",
+      "example": "這個多少錢?",
+      "english": "How much is...?"
+    },
+    {
+      "pattern": "我要...",
+      "example": "我要一份臭豆腐",
+      "english": "I want..."
+    },
+    {
+      "pattern": "要不要...?",
+      "example": "要不要加辣?",
+      "english": "Do you want...?"
+    },
+    {
+      "pattern": "不要太...",
+      "example": "不要太辣",
+      "english": "Not too..."
+    }
   ],
-  "tags": ["night-market", "street-food", "taiwanese-food", "daily-life", "A0-A1"],
+  "tags": [
+    "night-market",
+    "street-food",
+    "taiwanese-food",
+    "daily-life",
+    "A0-A1"
+  ],
   "createdAt": "2025-01-01T00:00:00Z",
-  "isCustom": false
+  "isCustom": false,
+  "titles": {
+    "vi": "Gọi món ăn vặt ở chợ đêm",
+    "th": "สั่งอาหารริมทางที่ตลาดกลางคืน",
+    "id": "Pesan Jajanan di Pasar Malam"
+  },
+  "descriptions": {
+    "vi": "Thực hành gọi món ăn tại chợ đêm Đài Loan",
+    "th": "ฝึกสั่งอาหารที่ตลาดกลางคืนไต้หวัน",
+    "id": "Berlatih memesan makanan di pasar malam Taiwan"
+  },
+  "objectives": {
+    "vi": "Gọi món ăn vặt thành công tại chợ đêm",
+    "th": "สั่งอาหารริมทางที่ตลาดกลางคืนได้สำเร็จ",
+    "id": "Mampu memesan jajanan di pasar malam"
+  }
 }

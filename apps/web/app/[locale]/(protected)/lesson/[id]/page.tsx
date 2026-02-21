@@ -2973,19 +2973,37 @@ export default function LessonPage() {
           )}
 
           {/* 錄音按鈕 */}
-          <button
-            onClick={handleRecording}
-            className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all shadow-lg transform hover:scale-110 touch-manipulation ${
-              isRecording ? 'bg-red-500 hover:bg-red-600 animate-pulse' :
-              'bg-blue-500 hover:bg-blue-600'
-            }`}
-          >
-            <div className={`rounded-full ${isRecording ? 'w-5 h-5 sm:w-6 sm:h-6 bg-white' : 'w-8 h-8 sm:w-10 sm:h-10 bg-white'}`}></div>
-          </button>
-
-          <p className="mt-3 text-gray-500 font-medium text-sm text-center">
-            {isRecording ? tLesson('recording') : tLesson('yourTurn')}
-          </p>
+          {(() => {
+            const isScoring = Array.from(scoreStatus.values()).some(v => v === 'pending')
+            return isScoring ? (
+              /* 評分中：顯示轉圈 spinner */
+              <div className="flex flex-col items-center gap-3">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-blue-100 flex items-center justify-center shadow-lg">
+                  <svg className="animate-spin w-8 h-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                  </svg>
+                </div>
+                <p className="text-blue-500 font-medium text-sm">{tLesson('scoring')}</p>
+              </div>
+            ) : (
+              /* 正常：錄音按鈕 */
+              <>
+                <button
+                  onClick={handleRecording}
+                  className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all shadow-lg transform hover:scale-110 touch-manipulation ${
+                    isRecording ? 'bg-red-500 hover:bg-red-600 animate-pulse' :
+                    'bg-blue-500 hover:bg-blue-600'
+                  }`}
+                >
+                  <div className={`rounded-full ${isRecording ? 'w-5 h-5 sm:w-6 sm:h-6 bg-white' : 'w-8 h-8 sm:w-10 sm:h-10 bg-white'}`}></div>
+                </button>
+                <p className="mt-3 text-gray-500 font-medium text-sm text-center">
+                  {isRecording ? tLesson('recording') : tLesson('yourTurn')}
+                </p>
+              </>
+            )
+          })()}
         </>
       )}
 

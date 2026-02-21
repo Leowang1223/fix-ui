@@ -16,43 +16,126 @@
       "id": 1,
       "description": "Greet and introduce purpose",
       "chineseDescription": "打招呼並說明目的",
-      "keywords": ["您好", "喂", "你好", "我想", "預約", "訂", "訂位", "想預約", "想訂"],
-      "weight": 15
+      "keywords": [
+        "您好",
+        "喂",
+        "你好",
+        "我想",
+        "預約",
+        "訂",
+        "訂位",
+        "想預約",
+        "想訂"
+      ],
+      "weight": 15,
+      "descriptions": {
+        "vi": "Chào hỏi, nêu mục đích",
+        "th": "ทักทายและแจ้งวัตถุประสงค์",
+        "id": "Sapa dan sampaikan tujuan"
+      }
     },
     {
       "id": 2,
       "description": "Specify date and time",
       "chineseDescription": "指定日期和時間",
-      "keywords": ["時間", "日期", "幾點", "星期", "號", "when", "禮拜", "明天", "今天", "下午", "晚上"],
-      "weight": 25
+      "keywords": [
+        "時間",
+        "日期",
+        "幾點",
+        "星期",
+        "號",
+        "when",
+        "禮拜",
+        "明天",
+        "今天",
+        "下午",
+        "晚上"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Nêu ngày, giờ",
+        "th": "ระบุวันและเวลา",
+        "id": "Sebutkan tanggal dan waktu"
+      }
     },
     {
       "id": 3,
       "description": "Provide details (number of people, type, etc.)",
       "chineseDescription": "提供詳細信息",
-      "keywords": ["人", "幾位", "類型", "kind", "需要", "幾個人", "兩位", "三位", "四位"],
-      "weight": 25
+      "keywords": [
+        "人",
+        "幾位",
+        "類型",
+        "kind",
+        "需要",
+        "幾個人",
+        "兩位",
+        "三位",
+        "四位"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Cung cấp chi tiết",
+        "th": "ให้รายละเอียด (จำนวนคน, ประเภท)",
+        "id": "Berikan detail reservasi"
+      }
     },
     {
       "id": 4,
       "description": "Confirm booking details",
       "chineseDescription": "確認預約詳情",
-      "keywords": ["確認", "對", "correct", "是", "沒錯", "好的", "OK", "正確"],
-      "weight": 20
+      "keywords": [
+        "確認",
+        "對",
+        "correct",
+        "是",
+        "沒錯",
+        "好的",
+        "OK",
+        "正確"
+      ],
+      "weight": 20,
+      "descriptions": {
+        "vi": "Xác nhận thông tin đặt",
+        "th": "ยืนยันรายละเอียดการจอง",
+        "id": "Konfirmasi detail pemesanan"
+      }
     },
     {
       "id": 5,
       "description": "Provide contact information",
       "chineseDescription": "提供聯絡方式",
-      "keywords": ["電話", "名字", "號碼", "聯絡", "手機", "姓名", "叫"],
-      "weight": 10
+      "keywords": [
+        "電話",
+        "名字",
+        "號碼",
+        "聯絡",
+        "手機",
+        "姓名",
+        "叫"
+      ],
+      "weight": 10,
+      "descriptions": {
+        "vi": "Cung cấp liên hệ",
+        "th": "ให้ข้อมูลติดต่อ",
+        "id": "Berikan info kontak"
+      }
     },
     {
       "id": 6,
       "description": "Thank and end call",
       "chineseDescription": "道謝並結束通話",
-      "keywords": ["謝謝", "再見", "好的"],
-      "weight": 5
+      "keywords": [
+        "謝謝",
+        "再見",
+        "好的"
+      ],
+      "weight": 5,
+      "descriptions": {
+        "vi": "Cảm ơn, kết thúc",
+        "th": "ขอบคุณและวางสาย",
+        "id": "Terima kasih, akhiri panggilan"
+      }
     }
   ],
   "roles": [
@@ -60,7 +143,12 @@
       "id": "caller",
       "name": "Caller",
       "chineseName": "來電者",
-      "systemPrompt": "You are making a phone reservation (restaurant, doctor, salon, etc.) in Taiwan. Be clear about what you want. Provide necessary information. Confirm details. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences)."
+      "systemPrompt": "You are making a phone reservation (restaurant, doctor, salon, etc.) in Taiwan. Be clear about what you want. Provide necessary information. Confirm details. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences).",
+      "names": {
+        "vi": "Người gọi",
+        "th": "ผู้โทร",
+        "id": "Penelepon"
+      }
     },
     {
       "id": "staff",
@@ -68,7 +156,12 @@
       "chineseName": "服務人員",
       "interviewerImage": "coffee waiter.jpg",
       "interviewerId": "man",
-      "systemPrompt": "You are staff taking phone reservations in Taiwan. Ask for date, time, number of people, and contact information. Confirm details clearly. Be friendly and professional. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences)."
+      "systemPrompt": "You are staff taking phone reservations in Taiwan. Ask for date, time, number of people, and contact information. Confirm details clearly. Be friendly and professional. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences).",
+      "names": {
+        "vi": "Nhân viên",
+        "th": "พนักงาน",
+        "id": "Staf"
+      }
     }
   ],
   "suggestions": {
@@ -114,18 +207,69 @@
     }
   },
   "keyVocabulary": [
-    { "chinese": "預約", "pinyin": "yù yuē", "english": "reservation/appointment" },
-    { "chinese": "時間", "pinyin": "shí jiān", "english": "time" },
-    { "chinese": "日期", "pinyin": "rì qī", "english": "date" },
-    { "chinese": "電話", "pinyin": "diàn huà", "english": "phone" },
-    { "chinese": "確認", "pinyin": "què rèn", "english": "confirm" }
+    {
+      "chinese": "預約",
+      "pinyin": "yù yuē",
+      "english": "reservation/appointment"
+    },
+    {
+      "chinese": "時間",
+      "pinyin": "shí jiān",
+      "english": "time"
+    },
+    {
+      "chinese": "日期",
+      "pinyin": "rì qī",
+      "english": "date"
+    },
+    {
+      "chinese": "電話",
+      "pinyin": "diàn huà",
+      "english": "phone"
+    },
+    {
+      "chinese": "確認",
+      "pinyin": "què rèn",
+      "english": "confirm"
+    }
   ],
   "keyPatterns": [
-    { "pattern": "我想...", "example": "我想預約一個位子", "english": "I would like to..." },
-    { "pattern": "...可以嗎？", "example": "明天晚上七點可以嗎？", "english": "Is ... okay?" },
-    { "pattern": "我的...是...", "example": "我的電話號碼是...", "english": "My ... is..." }
+    {
+      "pattern": "我想...",
+      "example": "我想預約一個位子",
+      "english": "I would like to..."
+    },
+    {
+      "pattern": "...可以嗎？",
+      "example": "明天晚上七點可以嗎？",
+      "english": "Is ... okay?"
+    },
+    {
+      "pattern": "我的...是...",
+      "example": "我的電話號碼是...",
+      "english": "My ... is..."
+    }
   ],
-  "tags": ["phone", "reservation", "daily-life"],
+  "tags": [
+    "phone",
+    "reservation",
+    "daily-life"
+  ],
   "createdAt": "2025-01-01T00:00:00Z",
-  "isCustom": false
+  "isCustom": false,
+  "titles": {
+    "vi": "Đặt chỗ qua điện thoại",
+    "th": "จองทางโทรศัพท์",
+    "id": "Membuat Reservasi Telepon"
+  },
+  "descriptions": {
+    "vi": "Thực hành đặt chỗ qua điện thoại bằng tiếng Trung",
+    "th": "ฝึกจองทางโทรศัพท์เป็นภาษาจีน",
+    "id": "Berlatih membuat reservasi telepon dalam bahasa Mandarin"
+  },
+  "objectives": {
+    "vi": "Đặt chỗ qua điện thoại thành công",
+    "th": "จองทางโทรศัพท์ได้สำเร็จ",
+    "id": "Berhasil membuat reservasi telepon"
+  }
 }

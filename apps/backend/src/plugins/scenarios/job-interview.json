@@ -16,43 +16,128 @@
       "id": 1,
       "description": "Professional greeting",
       "chineseDescription": "專業問候",
-      "keywords": ["您好", "很高興", "認識", "interview", "面試", "見到", "榮幸"],
-      "weight": 10
+      "keywords": [
+        "您好",
+        "很高興",
+        "認識",
+        "interview",
+        "面試",
+        "見到",
+        "榮幸"
+      ],
+      "weight": 10,
+      "descriptions": {
+        "vi": "Chào hỏi chuyên nghiệp",
+        "th": "ทักทายอย่างมืออาชีพ",
+        "id": "Salam profesional"
+      }
     },
     {
       "id": 2,
       "description": "Self introduction",
       "chineseDescription": "自我介紹",
-      "keywords": ["我是", "我叫", "畢業", "經驗", "background", "學習", "來自", "專業", "背景"],
-      "weight": 25
+      "keywords": [
+        "我是",
+        "我叫",
+        "畢業",
+        "經驗",
+        "background",
+        "學習",
+        "來自",
+        "專業",
+        "背景"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Tự giới thiệu bản thân",
+        "th": "แนะนำตัวเอง",
+        "id": "Perkenalan diri"
+      }
     },
     {
       "id": 3,
       "description": "Discuss work experience",
       "chineseDescription": "討論工作經驗",
-      "keywords": ["工作", "公司", "負責", "項目", "team", "經驗", "之前", "曾經", "做過"],
-      "weight": 25
+      "keywords": [
+        "工作",
+        "公司",
+        "負責",
+        "項目",
+        "team",
+        "經驗",
+        "之前",
+        "曾經",
+        "做過"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Thảo luận kinh nghiệm làm việc",
+        "th": "พูดคุยประสบการณ์ทำงาน",
+        "id": "Diskusikan pengalaman kerja"
+      }
     },
     {
       "id": 4,
       "description": "Answer competency questions",
       "chineseDescription": "回答能力問題",
-      "keywords": ["能力", "strengths", "優點", "擅長", "問題解決", "專長", "強項", "善於"],
-      "weight": 20
+      "keywords": [
+        "能力",
+        "strengths",
+        "優點",
+        "擅長",
+        "問題解決",
+        "專長",
+        "強項",
+        "善於"
+      ],
+      "weight": 20,
+      "descriptions": {
+        "vi": "Trả lời câu hỏi năng lực",
+        "th": "ตอบคำถามความสามารถ",
+        "id": "Jawab pertanyaan kompetensi"
+      }
     },
     {
       "id": 5,
       "description": "Ask questions about the company",
       "chineseDescription": "詢問公司相關問題",
-      "keywords": ["請問", "公司", "team", "工作", "環境", "culture", "想了解", "可以問", "團隊"],
-      "weight": 15
+      "keywords": [
+        "請問",
+        "公司",
+        "team",
+        "工作",
+        "環境",
+        "culture",
+        "想了解",
+        "可以問",
+        "團隊"
+      ],
+      "weight": 15,
+      "descriptions": {
+        "vi": "Đặt câu hỏi về công ty",
+        "th": "ถามคำถามเกี่ยวกับบริษัท",
+        "id": "Ajukan pertanyaan tentang perusahaan"
+      }
     },
     {
       "id": 6,
       "description": "Professional closing",
       "chineseDescription": "專業結束",
-      "keywords": ["謝謝", "機會", "期待", "聯繫", "感謝", "再次", "等候"],
-      "weight": 5
+      "keywords": [
+        "謝謝",
+        "機會",
+        "期待",
+        "聯繫",
+        "感謝",
+        "再次",
+        "等候"
+      ],
+      "weight": 5,
+      "descriptions": {
+        "vi": "Kết thúc chuyên nghiệp",
+        "th": "ปิดการสนทนาอย่างมืออาชีพ",
+        "id": "Penutup profesional"
+      }
     }
   ],
   "roles": [
@@ -60,7 +145,12 @@
       "id": "candidate",
       "name": "Job Candidate",
       "chineseName": "求職者",
-      "systemPrompt": "You are a job candidate being interviewed in Taiwan. Be professional, confident, and articulate. Highlight your skills and experience. Ask thoughtful questions about the company. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise but informative (2-3 sentences)."
+      "systemPrompt": "You are a job candidate being interviewed in Taiwan. Be professional, confident, and articulate. Highlight your skills and experience. Ask thoughtful questions about the company. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise but informative (2-3 sentences).",
+      "names": {
+        "vi": "Ứng viên",
+        "th": "ผู้สมัครงาน",
+        "id": "Pelamar Kerja"
+      }
     },
     {
       "id": "interviewer",
@@ -68,7 +158,12 @@
       "chineseName": "面試官",
       "interviewerImage": "job interviewer.jpg",
       "interviewerId": "bob",
-      "systemPrompt": "You are a professional interviewer for a tech company in Taiwan. Ask about background, experience, skills, and motivations. Be professional but friendly. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep questions clear and concise (1-2 sentences)."
+      "systemPrompt": "You are a professional interviewer for a tech company in Taiwan. Ask about background, experience, skills, and motivations. Be professional but friendly. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep questions clear and concise (1-2 sentences).",
+      "names": {
+        "vi": "Người phỏng vấn",
+        "th": "ผู้สัมภาษณ์",
+        "id": "Pewawancara"
+      }
     }
   ],
   "suggestions": {
@@ -114,18 +209,70 @@
     }
   },
   "keyVocabulary": [
-    { "chinese": "面試", "pinyin": "miàn shì", "english": "interview" },
-    { "chinese": "經驗", "pinyin": "jīng yàn", "english": "experience" },
-    { "chinese": "擅長", "pinyin": "shàn cháng", "english": "good at" },
-    { "chinese": "團隊", "pinyin": "tuán duì", "english": "team" },
-    { "chinese": "能力", "pinyin": "néng lì", "english": "ability" }
+    {
+      "chinese": "面試",
+      "pinyin": "miàn shì",
+      "english": "interview"
+    },
+    {
+      "chinese": "經驗",
+      "pinyin": "jīng yàn",
+      "english": "experience"
+    },
+    {
+      "chinese": "擅長",
+      "pinyin": "shàn cháng",
+      "english": "good at"
+    },
+    {
+      "chinese": "團隊",
+      "pinyin": "tuán duì",
+      "english": "team"
+    },
+    {
+      "chinese": "能力",
+      "pinyin": "néng lì",
+      "english": "ability"
+    }
   ],
   "keyPatterns": [
-    { "pattern": "我有...經驗", "example": "我有三年的工作經驗", "english": "I have... experience" },
-    { "pattern": "我擅長...", "example": "我擅長團隊合作", "english": "I'm good at..." },
-    { "pattern": "請問...", "example": "請問工作內容是什麼?", "english": "May I ask..." }
+    {
+      "pattern": "我有...經驗",
+      "example": "我有三年的工作經驗",
+      "english": "I have... experience"
+    },
+    {
+      "pattern": "我擅長...",
+      "example": "我擅長團隊合作",
+      "english": "I'm good at..."
+    },
+    {
+      "pattern": "請問...",
+      "example": "請問工作內容是什麼?",
+      "english": "May I ask..."
+    }
   ],
-  "tags": ["professional", "interview", "career", "business"],
+  "tags": [
+    "professional",
+    "interview",
+    "career",
+    "business"
+  ],
   "createdAt": "2025-01-01T00:00:00Z",
-  "isCustom": false
+  "isCustom": false,
+  "titles": {
+    "vi": "Phỏng vấn xin việc",
+    "th": "สัมภาษณ์งาน",
+    "id": "Wawancara Kerja"
+  },
+  "descriptions": {
+    "vi": "Thực hành các cuộc phỏng vấn chuyên nghiệp bằng tiếng Trung",
+    "th": "ฝึกสนทนาสัมภาษณ์งานอย่างมืออาชีพเป็นภาษาจีน",
+    "id": "Latih percakapan wawancara profesional dalam bahasa Mandarin"
+  },
+  "objectives": {
+    "vi": "Hoàn thành thành công cuộc phỏng vấn xin việc",
+    "th": "สนทนาสัมภาษณ์งานให้สำเร็จ",
+    "id": "Berhasil menyelesaikan percakapan wawancara kerja"
+  }
 }

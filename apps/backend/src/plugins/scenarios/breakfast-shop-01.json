@@ -16,42 +16,119 @@
       "id": 1,
       "description": "Greet and order main item",
       "chineseDescription": "打招呼並點主食",
-      "keywords": ["老闆", "我要", "蛋餅", "飯糰", "三明治", "燒餅", "你好", "來", "給我"],
-      "weight": 25
+      "keywords": [
+        "老闆",
+        "我要",
+        "蛋餅",
+        "飯糰",
+        "三明治",
+        "燒餅",
+        "你好",
+        "來",
+        "給我"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Chào hỏi, gọi món chính",
+        "th": "ทักทายและสั่งอาหารหลัก",
+        "id": "Sapa dan pesan utama"
+      }
     },
     {
       "id": 2,
       "description": "Choose fillings or flavors",
       "chineseDescription": "選擇配料或口味",
-      "keywords": ["加蛋", "不要", "辣", "醬", "玉米", "培根", "起司", "鮪魚", "火腿"],
-      "weight": 20
+      "keywords": [
+        "加蛋",
+        "不要",
+        "辣",
+        "醬",
+        "玉米",
+        "培根",
+        "起司",
+        "鮪魚",
+        "火腿"
+      ],
+      "weight": 20,
+      "descriptions": {
+        "vi": "Chọn nhân hoặc vị",
+        "th": "เลือกไส้หรือรสชาติ",
+        "id": "Pilih isian atau rasa"
+      }
     },
     {
       "id": 3,
       "description": "Order drinks",
       "chineseDescription": "點飲料",
       "keywords": [
-        "豆漿", "奶茶", "紅茶", "飲料",
-        "冰豆漿", "熱豆漿", "冰奶茶", "熱奶茶", "冰紅茶", "熱紅茶",
-        "冰的", "熱的",
-        "微糖", "少糖", "無糖", "半糖", "全糖",
-        "一杯", "要喝", "來杯", "再來一杯", "點飲料", "喝什麼"
+        "豆漿",
+        "奶茶",
+        "紅茶",
+        "飲料",
+        "冰豆漿",
+        "熱豆漿",
+        "冰奶茶",
+        "熱奶茶",
+        "冰紅茶",
+        "熱紅茶",
+        "冰的",
+        "熱的",
+        "微糖",
+        "少糖",
+        "無糖",
+        "半糖",
+        "全糖",
+        "一杯",
+        "要喝",
+        "來杯",
+        "再來一杯",
+        "點飲料",
+        "喝什麼"
       ],
-      "weight": 25
+      "weight": 25,
+      "descriptions": {
+        "vi": "Gọi đồ uống",
+        "th": "สั่งเครื่องดื่ม",
+        "id": "Pesan minuman"
+      }
     },
     {
       "id": 4,
       "description": "Ask about price and pay",
       "chineseDescription": "詢問價錢並付款",
-      "keywords": ["多少錢", "幾塊", "找錢", "總共", "付", "現金", "刷卡"],
-      "weight": 20
+      "keywords": [
+        "多少錢",
+        "幾塊",
+        "找錢",
+        "總共",
+        "付",
+        "現金",
+        "刷卡"
+      ],
+      "weight": 20,
+      "descriptions": {
+        "vi": "Hỏi giá, thanh toán",
+        "th": "ถามราคาและชำระเงิน",
+        "id": "Tanya harga dan bayar"
+      }
     },
     {
       "id": 5,
       "description": "Thank and conclude",
       "chineseDescription": "感謝結束",
-      "keywords": ["好的謝謝", "謝謝老闆", "謝謝再見", "掰掰", "再見"],
-      "weight": 10
+      "keywords": [
+        "好的謝謝",
+        "謝謝老闆",
+        "謝謝再見",
+        "掰掰",
+        "再見"
+      ],
+      "weight": 10,
+      "descriptions": {
+        "vi": "Cảm ơn, kết thúc",
+        "th": "ขอบคุณและจบ",
+        "id": "Terima kasih dan selesai"
+      }
     }
   ],
   "roles": [
@@ -59,7 +136,12 @@
       "id": "customer",
       "name": "Customer",
       "chineseName": "顧客",
-      "systemPrompt": "You are a customer ordering breakfast at a traditional Taiwanese breakfast shop (早餐店). Order food and drinks. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Be friendly and casual."
+      "systemPrompt": "You are a customer ordering breakfast at a traditional Taiwanese breakfast shop (早餐店). Order food and drinks. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Be friendly and casual.",
+      "names": {
+        "vi": "Khách hàng",
+        "th": "ลูกค้า",
+        "id": "Pelanggan"
+      }
     },
     {
       "id": "owner",
@@ -67,7 +149,12 @@
       "chineseName": "老闆",
       "interviewerImage": "breakfast waitress.png",
       "interviewerId": "cendy",
-      "systemPrompt": "You are the owner of a Taiwanese breakfast shop (早餐店). Take orders warmly, ask about preferences (fillings, sugar level, hot/cold), and help customers. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary and casual Taiwanese expressions. Keep responses concise (1-2 sentences). Be friendly."
+      "systemPrompt": "You are the owner of a Taiwanese breakfast shop (早餐店). Take orders warmly, ask about preferences (fillings, sugar level, hot/cold), and help customers. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary and casual Taiwanese expressions. Keep responses concise (1-2 sentences). Be friendly.",
+      "names": {
+        "vi": "Chủ quán",
+        "th": "เจ้าของร้าน",
+        "id": "Pemilik Toko"
+      }
     }
   ],
   "suggestions": {
@@ -134,20 +221,80 @@
     }
   },
   "keyVocabulary": [
-    { "chinese": "蛋餅", "pinyin": "dàn bǐng", "english": "egg pancake" },
-    { "chinese": "飯糰", "pinyin": "fàn tuán", "english": "rice ball" },
-    { "chinese": "豆漿", "pinyin": "dòu jiāng", "english": "soy milk" },
-    { "chinese": "奶茶", "pinyin": "nǎi chá", "english": "milk tea" },
-    { "chinese": "微糖", "pinyin": "wēi táng", "english": "less sugar" },
-    { "chinese": "加蛋", "pinyin": "jiā dàn", "english": "add egg" }
+    {
+      "chinese": "蛋餅",
+      "pinyin": "dàn bǐng",
+      "english": "egg pancake"
+    },
+    {
+      "chinese": "飯糰",
+      "pinyin": "fàn tuán",
+      "english": "rice ball"
+    },
+    {
+      "chinese": "豆漿",
+      "pinyin": "dòu jiāng",
+      "english": "soy milk"
+    },
+    {
+      "chinese": "奶茶",
+      "pinyin": "nǎi chá",
+      "english": "milk tea"
+    },
+    {
+      "chinese": "微糖",
+      "pinyin": "wēi táng",
+      "english": "less sugar"
+    },
+    {
+      "chinese": "加蛋",
+      "pinyin": "jiā dàn",
+      "english": "add egg"
+    }
   ],
   "keyPatterns": [
-    { "pattern": "我要...", "example": "我要一份蛋餅", "english": "I want..." },
-    { "pattern": "加...", "example": "加蛋", "english": "Add..." },
-    { "pattern": "不要...", "example": "不要辣", "english": "No..." },
-    { "pattern": "多少錢?", "example": "總共多少錢?", "english": "How much?" }
+    {
+      "pattern": "我要...",
+      "example": "我要一份蛋餅",
+      "english": "I want..."
+    },
+    {
+      "pattern": "加...",
+      "example": "加蛋",
+      "english": "Add..."
+    },
+    {
+      "pattern": "不要...",
+      "example": "不要辣",
+      "english": "No..."
+    },
+    {
+      "pattern": "多少錢?",
+      "example": "總共多少錢?",
+      "english": "How much?"
+    }
   ],
-  "tags": ["breakfast", "taiwanese-food", "daily-life", "A0-A1"],
+  "tags": [
+    "breakfast",
+    "taiwanese-food",
+    "daily-life",
+    "A0-A1"
+  ],
   "createdAt": "2025-01-01T00:00:00Z",
-  "isCustom": false
+  "isCustom": false,
+  "titles": {
+    "vi": "Gọi món ở tiệm ăn sáng Đài Loan",
+    "th": "สั่งอาหารที่ร้านอาหารเช้าไต้หวัน",
+    "id": "Memesan di Kedai Sarapan Taiwan"
+  },
+  "descriptions": {
+    "vi": "Luyện tập gọi món ăn sáng truyền thống Đài Loan",
+    "th": "ฝึกสั่งอาหารเช้าไต้หวันแบบดั้งเดิม",
+    "id": "Berlatih memesan sarapan tradisional Taiwan"
+  },
+  "objectives": {
+    "vi": "Gọi món bữa sáng và đồ uống thành công",
+    "th": "สั่งอาหารเช้าและเครื่องดื่มได้สำเร็จ",
+    "id": "Berhasil memesan sarapan dan minuman"
+  }
 }

@@ -16,29 +16,95 @@
       "id": 1,
       "description": "Explain symptoms clearly",
       "chineseDescription": "清楚說明症狀",
-      "keywords": ["咳嗽", "頭痛", "發燒", "不舒服", "痛", "症狀", "感覺", "最近", "一直", "喉嚨", "肚子", "流鼻水", "難受"],
-      "weight": 30
+      "keywords": [
+        "咳嗽",
+        "頭痛",
+        "發燒",
+        "不舒服",
+        "痛",
+        "症狀",
+        "感覺",
+        "最近",
+        "一直",
+        "喉嚨",
+        "肚子",
+        "流鼻水",
+        "難受"
+      ],
+      "weight": 30,
+      "descriptions": {
+        "vi": "Giải thích triệu chứng rõ ràng",
+        "th": "อธิบายอาการชัดเจน",
+        "id": "Jelaskan gejala dengan jelas"
+      }
     },
     {
       "id": 2,
       "description": "Answer doctor's questions about medical history",
       "chineseDescription": "回答醫生關於病史的問題",
-      "keywords": ["有", "沒有", "過敏", "藥物", "以前", "病史", "家族", "是", "不是", "幾天", "什麼時候", "從", "開始", "大概"],
-      "weight": 25
+      "keywords": [
+        "有",
+        "沒有",
+        "過敏",
+        "藥物",
+        "以前",
+        "病史",
+        "家族",
+        "是",
+        "不是",
+        "幾天",
+        "什麼時候",
+        "從",
+        "開始",
+        "大概"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Trả lời câu hỏi tiền sử bệnh",
+        "th": "ตอบคำถามประวัติการป่วย",
+        "id": "Jawab pertanyaan riwayat medis"
+      }
     },
     {
       "id": 3,
       "description": "Acknowledge diagnosis and confirm understanding",
       "chineseDescription": "回應診斷並確認理解",
-      "keywords": ["明白", "了解", "知道了", "好的", "清楚", "懂了", "這樣啊", "原來", "需要", "好"],
-      "weight": 25
+      "keywords": [
+        "明白",
+        "了解",
+        "知道了",
+        "好的",
+        "清楚",
+        "懂了",
+        "這樣啊",
+        "原來",
+        "需要",
+        "好"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Xác nhận chẩn đoán và hiểu",
+        "th": "รับทราบและเข้าใจการวินิจฉัย",
+        "id": "Pahami diagnosis dan konfirmasi"
+      }
     },
     {
       "id": 4,
       "description": "Thank the doctor",
       "chineseDescription": "感謝醫生",
-      "keywords": ["謝謝", "感謝", "麻煩你了", "辛苦了", "謝了"],
-      "weight": 20
+      "keywords": [
+        "謝謝",
+        "感謝",
+        "麻煩你了",
+        "辛苦了",
+        "謝了"
+      ],
+      "weight": 20,
+      "descriptions": {
+        "vi": "Cảm ơn bác sĩ",
+        "th": "ขอบคุณคุณหมอ",
+        "id": "Ucapkan terima kasih dokter"
+      }
     }
   ],
   "roles": [
@@ -46,7 +112,12 @@
       "id": "patient",
       "name": "Patient",
       "chineseName": "病人",
-      "systemPrompt": "You are a patient visiting the doctor in Taiwan because you don't feel well. Describe your symptoms clearly. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Be honest about how you feel."
+      "systemPrompt": "You are a patient visiting the doctor in Taiwan because you don't feel well. Describe your symptoms clearly. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Be honest about how you feel.",
+      "names": {
+        "vi": "Bệnh nhân",
+        "th": "คนไข้",
+        "id": "Pasien"
+      }
     },
     {
       "id": "doctor",
@@ -54,7 +125,12 @@
       "chineseName": "醫生",
       "interviewerImage": "Doctor.jpg",
       "interviewerId": "john",
-      "systemPrompt": "You are a caring doctor in Taiwan. Ask about symptoms, when they started, and provide diagnosis and treatment advice. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (2-3 sentences). Be professional and reassuring."
+      "systemPrompt": "You are a caring doctor in Taiwan. Ask about symptoms, when they started, and provide diagnosis and treatment advice. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (2-3 sentences). Be professional and reassuring.",
+      "names": {
+        "vi": "Bác sĩ",
+        "th": "หมอ",
+        "id": "Dokter"
+      }
     }
   ],
   "suggestions": {
@@ -93,18 +169,69 @@
     }
   },
   "keyVocabulary": [
-    { "chinese": "不舒服", "pinyin": "bù shū fu", "english": "not feeling well" },
-    { "chinese": "症狀", "pinyin": "zhèng zhuàng", "english": "symptoms" },
-    { "chinese": "頭痛", "pinyin": "tóu tòng", "english": "headache" },
-    { "chinese": "發燒", "pinyin": "fā shāo", "english": "fever" },
-    { "chinese": "吃藥", "pinyin": "chī yào", "english": "take medicine" }
+    {
+      "chinese": "不舒服",
+      "pinyin": "bù shū fu",
+      "english": "not feeling well"
+    },
+    {
+      "chinese": "症狀",
+      "pinyin": "zhèng zhuàng",
+      "english": "symptoms"
+    },
+    {
+      "chinese": "頭痛",
+      "pinyin": "tóu tòng",
+      "english": "headache"
+    },
+    {
+      "chinese": "發燒",
+      "pinyin": "fā shāo",
+      "english": "fever"
+    },
+    {
+      "chinese": "吃藥",
+      "pinyin": "chī yào",
+      "english": "take medicine"
+    }
   ],
   "keyPatterns": [
-    { "pattern": "我...", "example": "我頭痛", "english": "I have..." },
-    { "pattern": "從...開始", "example": "從昨天開始", "english": "Started from..." },
-    { "pattern": "有沒有...?", "example": "有沒有發燒?", "english": "Do you have...?" }
+    {
+      "pattern": "我...",
+      "example": "我頭痛",
+      "english": "I have..."
+    },
+    {
+      "pattern": "從...開始",
+      "example": "從昨天開始",
+      "english": "Started from..."
+    },
+    {
+      "pattern": "有沒有...?",
+      "example": "有沒有發燒?",
+      "english": "Do you have...?"
+    }
   ],
-  "tags": ["healthcare", "doctor", "medical"],
+  "tags": [
+    "healthcare",
+    "doctor",
+    "medical"
+  ],
   "createdAt": "2025-01-01T00:00:00Z",
-  "isCustom": false
+  "isCustom": false,
+  "titles": {
+    "vi": "Đi khám bác sĩ",
+    "th": "ไปหาหมอ",
+    "id": "Mengunjungi Dokter"
+  },
+  "descriptions": {
+    "vi": "Luyện tập mô tả triệu chứng và hiểu lời khuyên của bác sĩ",
+    "th": "ฝึกอธิบายอาการและทำความเข้าใจคำแนะนำจากแพทย์",
+    "id": "Berlatih menjelaskan gejala dan memahami saran medis"
+  },
+  "objectives": {
+    "vi": "Mô tả triệu chứng của bạn và hiểu lời khuyên của bác sĩ",
+    "th": "อธิบายอาการและทำความเข้าใจคำแนะนำของแพทย์",
+    "id": "Jelaskan gejala Anda dan pahami saran dokter"
+  }
 }

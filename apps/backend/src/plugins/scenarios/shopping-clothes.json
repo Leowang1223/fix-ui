@@ -16,36 +16,110 @@
       "id": 1,
       "description": "Greet the shop assistant",
       "chineseDescription": "向店員打招呼",
-      "keywords": ["你好", "您好", "不好意思", "請問"],
-      "weight": 10
+      "keywords": [
+        "你好",
+        "您好",
+        "不好意思",
+        "請問"
+      ],
+      "weight": 10,
+      "descriptions": {
+        "vi": "Chào nhân viên bán hàng",
+        "th": "ทักทายพนักงาน",
+        "id": "Sapa penjaga toko"
+      }
     },
     {
       "id": 2,
       "description": "Ask about clothing items",
       "chineseDescription": "詢問衣物",
-      "keywords": ["有沒有", "想買", "看看", "衣服", "褲子", "鞋子", "找", "我要", "想找"],
-      "weight": 25
+      "keywords": [
+        "有沒有",
+        "想買",
+        "看看",
+        "衣服",
+        "褲子",
+        "鞋子",
+        "找",
+        "我要",
+        "想找"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Hỏi về món đồ",
+        "th": "ถามเรื่องเสื้อผ้า",
+        "id": "Tanya barang pakaian"
+      }
     },
     {
       "id": 3,
       "description": "Ask about size",
       "chineseDescription": "詢問尺寸",
-      "keywords": ["size", "尺寸", "大", "小", "中", "號", "大號", "中號", "小號", "S", "M", "L"],
-      "weight": 20
+      "keywords": [
+        "size",
+        "尺寸",
+        "大",
+        "小",
+        "中",
+        "號",
+        "大號",
+        "中號",
+        "小號",
+        "S",
+        "M",
+        "L"
+      ],
+      "weight": 20,
+      "descriptions": {
+        "vi": "Hỏi về kích cỡ",
+        "th": "ถามเรื่องขนาด",
+        "id": "Tanya ukuran"
+      }
     },
     {
       "id": 4,
       "description": "Ask about color or try on",
       "chineseDescription": "詢問顏色或試穿",
-      "keywords": ["顏色", "試穿", "可以", "紅色", "藍色", "黑色", "白色", "試", "穿穿看", "試試"],
-      "weight": 20
+      "keywords": [
+        "顏色",
+        "試穿",
+        "可以",
+        "紅色",
+        "藍色",
+        "黑色",
+        "白色",
+        "試",
+        "穿穿看",
+        "試試"
+      ],
+      "weight": 20,
+      "descriptions": {
+        "vi": "Hỏi màu hoặc thử đồ",
+        "th": "ถามสี/ลองสวม",
+        "id": "Tanya warna atau coba"
+      }
     },
     {
       "id": 5,
       "description": "Ask about price and complete purchase",
       "chineseDescription": "詢問價格並完成購買",
-      "keywords": ["多少錢", "價格", "買", "付錢", "便宜", "貴", "幾塊", "刷卡", "現金"],
-      "weight": 25
+      "keywords": [
+        "多少錢",
+        "價格",
+        "買",
+        "付錢",
+        "便宜",
+        "貴",
+        "幾塊",
+        "刷卡",
+        "現金"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Hỏi giá và thanh toán",
+        "th": "ถามราคา/ซื้อสินค้า",
+        "id": "Tanya harga dan bayar"
+      }
     }
   ],
   "roles": [
@@ -53,7 +127,12 @@
       "id": "customer",
       "name": "Customer",
       "chineseName": "顧客",
-      "systemPrompt": "You are a customer shopping for clothes in Taiwan. You want to find the right size and color. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Ask about sizes, colors, and prices."
+      "systemPrompt": "You are a customer shopping for clothes in Taiwan. You want to find the right size and color. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Ask about sizes, colors, and prices.",
+      "names": {
+        "vi": "Khách hàng",
+        "th": "ลูกค้า",
+        "id": "Pelanggan"
+      }
     },
     {
       "id": "shop-assistant",
@@ -61,7 +140,12 @@
       "chineseName": "店員",
       "interviewerImage": "clothes waitress.jpg",
       "interviewerId": "cendy",
-      "systemPrompt": "You are a helpful shop assistant in a clothing store in Taiwan. Help customers find what they need, suggest sizes and colors. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Be friendly and helpful."
+      "systemPrompt": "You are a helpful shop assistant in a clothing store in Taiwan. Help customers find what they need, suggest sizes and colors. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Be friendly and helpful.",
+      "names": {
+        "vi": "Nhân viên bán hàng",
+        "th": "พนักงานร้าน",
+        "id": "Penjaga Toko"
+      }
     }
   ],
   "suggestions": {
@@ -100,18 +184,69 @@
     }
   },
   "keyVocabulary": [
-    { "chinese": "衣服", "pinyin": "yī fu", "english": "clothes" },
-    { "chinese": "尺寸", "pinyin": "chǐ cùn", "english": "size" },
-    { "chinese": "試穿", "pinyin": "shì chuān", "english": "try on" },
-    { "chinese": "顏色", "pinyin": "yán sè", "english": "color" },
-    { "chinese": "多少錢", "pinyin": "duō shǎo qián", "english": "how much" }
+    {
+      "chinese": "衣服",
+      "pinyin": "yī fu",
+      "english": "clothes"
+    },
+    {
+      "chinese": "尺寸",
+      "pinyin": "chǐ cùn",
+      "english": "size"
+    },
+    {
+      "chinese": "試穿",
+      "pinyin": "shì chuān",
+      "english": "try on"
+    },
+    {
+      "chinese": "顏色",
+      "pinyin": "yán sè",
+      "english": "color"
+    },
+    {
+      "chinese": "多少錢",
+      "pinyin": "duō shǎo qián",
+      "english": "how much"
+    }
   ],
   "keyPatterns": [
-    { "pattern": "有沒有...?", "example": "有沒有中號的?", "english": "Do you have...?" },
-    { "pattern": "我可以...嗎?", "example": "我可以試穿嗎?", "english": "Can I...?" },
-    { "pattern": "這個...", "example": "這個多少錢?", "english": "This..." }
+    {
+      "pattern": "有沒有...?",
+      "example": "有沒有中號的?",
+      "english": "Do you have...?"
+    },
+    {
+      "pattern": "我可以...嗎?",
+      "example": "我可以試穿嗎?",
+      "english": "Can I...?"
+    },
+    {
+      "pattern": "這個...",
+      "example": "這個多少錢?",
+      "english": "This..."
+    }
   ],
-  "tags": ["shopping", "clothes", "daily-life"],
+  "tags": [
+    "shopping",
+    "clothes",
+    "daily-life"
+  ],
   "createdAt": "2025-01-01T00:00:00Z",
-  "isCustom": false
+  "isCustom": false,
+  "titles": {
+    "vi": "Mua sắm quần áo",
+    "th": "ช้อปปิ้งเสื้อผ้า",
+    "id": "Belanja Pakaian"
+  },
+  "descriptions": {
+    "vi": "Thực hành mua sắm quần áo, hỏi về kích cỡ, màu sắc và giá cả",
+    "th": "ฝึกซื้อเสื้อผ้า ถามเรื่องขนาด สี และราคา",
+    "id": "Berlatih berbelanja pakaian dan menanyakan ukuran, warna, serta harga"
+  },
+  "objectives": {
+    "vi": "Tìm và mua thành công các món đồ quần áo",
+    "th": "หาและซื้อเสื้อผ้าที่ต้องการได้สำเร็จ",
+    "id": "Berhasil menemukan dan membeli barang pakaian"
+  }
 }

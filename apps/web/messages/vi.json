@@ -362,7 +362,8 @@
     "autoReturning": "Tự động quay lại danh sách khóa học sau",
     "seconds": "giây",
     "returnNow": "Quay lại danh sách khóa học ngay",
-    "generatingAnalysis": "Đang tạo phân tích chi tiết..."
+    "generatingAnalysis": "Đang tạo phân tích chi tiết...",
+    "scoring": "Đang chấm điểm..."
   },
   "feedback": {
     "missing": "Thiếu",

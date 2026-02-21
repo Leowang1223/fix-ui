@@ -16,43 +16,130 @@
       "id": 1,
       "description": "State emergency clearly",
       "chineseDescription": "說明緊急情況",
-      "keywords": ["救命", "help", "emergency", "緊急", "需要幫助", "出事", "快來", "趕快"],
-      "weight": 25
+      "keywords": [
+        "救命",
+        "help",
+        "emergency",
+        "緊急",
+        "需要幫助",
+        "出事",
+        "快來",
+        "趕快"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Nêu rõ khẩn cấp",
+        "th": "แจ้งเหตุฉุกเฉินชัดเจน",
+        "id": "Sebutkan darurat dengan jelas"
+      }
     },
     {
       "id": 2,
       "description": "Provide location",
       "chineseDescription": "提供位置",
-      "keywords": ["在", "地址", "location", "這裡", "附近", "street", "路", "我在", "位置"],
-      "weight": 25
+      "keywords": [
+        "在",
+        "地址",
+        "location",
+        "這裡",
+        "附近",
+        "street",
+        "路",
+        "我在",
+        "位置"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Cung cấp vị trí",
+        "th": "ระบุตำแหน่งที่เกิดเหตุ",
+        "id": "Berikan lokasi"
+      }
     },
     {
       "id": 3,
       "description": "Describe the problem",
       "chineseDescription": "描述問題",
-      "keywords": ["受傷", "injured", "生病", "sick", "accident", "意外", "火災", "偷", "流血", "暈倒", "昏迷"],
-      "weight": 20
+      "keywords": [
+        "受傷",
+        "injured",
+        "生病",
+        "sick",
+        "accident",
+        "意外",
+        "火災",
+        "偷",
+        "流血",
+        "暈倒",
+        "昏迷"
+      ],
+      "weight": 20,
+      "descriptions": {
+        "vi": "Mô tả vấn đề",
+        "th": "อธิบายปัญหา",
+        "id": "Jelaskan masalahnya"
+      }
     },
     {
       "id": 4,
       "description": "Answer questions from responder",
       "chineseDescription": "回答詢問",
-      "keywords": ["是的", "yes", "沒有", "no", "不知道", "有", "幾個", "是", "對", "嗯"],
-      "weight": 15
+      "keywords": [
+        "是的",
+        "yes",
+        "沒有",
+        "no",
+        "不知道",
+        "有",
+        "幾個",
+        "是",
+        "對",
+        "嗯"
+      ],
+      "weight": 15,
+      "descriptions": {
+        "vi": "Trả lời câu hỏi",
+        "th": "ตอบคำถามผู้ช่วยเหลือ",
+        "id": "Jawab pertanyaan penolong"
+      }
     },
     {
       "id": 5,
       "description": "Confirm help is coming",
       "chineseDescription": "確認救援",
-      "keywords": ["多久", "how long", "什麼時候", "when", "來", "到", "幾分鐘", "快到"],
-      "weight": 10
+      "keywords": [
+        "多久",
+        "how long",
+        "什麼時候",
+        "when",
+        "來",
+        "到",
+        "幾分鐘",
+        "快到"
+      ],
+      "weight": 10,
+      "descriptions": {
+        "vi": "Xác nhận trợ giúp đang đến",
+        "th": "ยืนยันความช่วยเหลือ",
+        "id": "Konfirmasi bantuan datang"
+      }
     },
     {
       "id": 6,
       "description": "Thank responder",
       "chineseDescription": "感謝",
-      "keywords": ["謝謝", "謝", "好的", "知道了", "明白"],
-      "weight": 5
+      "keywords": [
+        "謝謝",
+        "謝",
+        "好的",
+        "知道了",
+        "明白"
+      ],
+      "weight": 5,
+      "descriptions": {
+        "vi": "Cảm ơn người ứng phó",
+        "th": "ขอบคุณผู้ช่วยเหลือ",
+        "id": "Ucapkan terima kasih kepada penolong"
+      }
     }
   ],
   "roles": [
@@ -60,7 +147,12 @@
       "id": "caller",
       "name": "Emergency Caller",
       "chineseName": "求助者",
-      "systemPrompt": "You are calling for emergency help in Taiwan. Clearly state what happened and where you are. Describe the problem urgently but clearly. Answer questions from the responder. Stay calm. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses clear (1-2 sentences)."
+      "systemPrompt": "You are calling for emergency help in Taiwan. Clearly state what happened and where you are. Describe the problem urgently but clearly. Answer questions from the responder. Stay calm. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses clear (1-2 sentences).",
+      "names": {
+        "vi": "Người gọi khẩn cấp",
+        "th": "ผู้โทรแจ้งเหตุฉุกเฉิน",
+        "id": "Penelepon Darurat"
+      }
     },
     {
       "id": "responder",
@@ -68,7 +160,12 @@
       "chineseName": "急救人員",
       "interviewerImage": "emergency  helper.png",
       "interviewerId": "john",
-      "systemPrompt": "You are an emergency responder (119 operator) in Taiwan. Stay calm and professional. Ask for the location first, then details about the emergency. Reassure the caller that help is on the way. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep instructions clear and concise (1-2 sentences)."
+      "systemPrompt": "You are an emergency responder (119 operator) in Taiwan. Stay calm and professional. Ask for the location first, then details about the emergency. Reassure the caller that help is on the way. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep instructions clear and concise (1-2 sentences).",
+      "names": {
+        "vi": "Người ứng phó khẩn cấp",
+        "th": "ผู้รับแจ้งเหตุฉุกเฉิน",
+        "id": "Penolong Darurat"
+      }
     }
   ],
   "suggestions": {
@@ -121,18 +218,70 @@
     }
   },
   "keyVocabulary": [
-    { "chinese": "救命", "pinyin": "jiù mìng", "english": "help/save me" },
-    { "chinese": "緊急", "pinyin": "jǐn jí", "english": "emergency" },
-    { "chinese": "受傷", "pinyin": "shòu shāng", "english": "injured" },
-    { "chinese": "救護車", "pinyin": "jiù hù chē", "english": "ambulance" },
-    { "chinese": "地址", "pinyin": "dì zhǐ", "english": "address" }
+    {
+      "chinese": "救命",
+      "pinyin": "jiù mìng",
+      "english": "help/save me"
+    },
+    {
+      "chinese": "緊急",
+      "pinyin": "jǐn jí",
+      "english": "emergency"
+    },
+    {
+      "chinese": "受傷",
+      "pinyin": "shòu shāng",
+      "english": "injured"
+    },
+    {
+      "chinese": "救護車",
+      "pinyin": "jiù hù chē",
+      "english": "ambulance"
+    },
+    {
+      "chinese": "地址",
+      "pinyin": "dì zhǐ",
+      "english": "address"
+    }
   ],
   "keyPatterns": [
-    { "pattern": "我需要...", "example": "我需要幫助", "english": "I need..." },
-    { "pattern": "有人...", "example": "有人受傷了", "english": "Someone..." },
-    { "pattern": "多久...？", "example": "救護車多久會到？", "english": "How long...?" }
+    {
+      "pattern": "我需要...",
+      "example": "我需要幫助",
+      "english": "I need..."
+    },
+    {
+      "pattern": "有人...",
+      "example": "有人受傷了",
+      "english": "Someone..."
+    },
+    {
+      "pattern": "多久...？",
+      "example": "救護車多久會到？",
+      "english": "How long...?"
+    }
   ],
-  "tags": ["emergency", "health", "safety", "urgent"],
+  "tags": [
+    "emergency",
+    "health",
+    "safety",
+    "urgent"
+  ],
   "createdAt": "2025-01-01T00:00:00Z",
-  "isCustom": false
+  "isCustom": false,
+  "titles": {
+    "vi": "Hỗ trợ khẩn cấp",
+    "th": "ความช่วยเหลือฉุกเฉิน",
+    "id": "Bantuan Darurat"
+  },
+  "descriptions": {
+    "vi": "Thực hành yêu cầu trợ giúp khẩn cấp bằng tiếng Trung",
+    "th": "ฝึกขอความช่วยเหลือฉุกเฉินเป็นภาษาจีน",
+    "id": "Berlatih meminta bantuan darurat dalam bahasa Mandarin"
+  },
+  "objectives": {
+    "vi": "Giao tiếp thành công tình huống khẩn cấp và nhận được trợ giúp",
+    "th": "สื่อสารสถานการณ์ฉุกเฉินและขอความช่วยเหลือได้สำเร็จ",
+    "id": "Berhasil mengomunikasikan situasi darurat dan mendapatkan bantuan"
+  }
 }

@@ -246,7 +246,8 @@
     "autoReturning": "Otomatis kembali ke daftar kursus dalam",
     "seconds": "detik",
     "returnNow": "Kembali ke Daftar Kursus Sekarang",
-    "generatingAnalysis": "Membuat analisis terperinci..."
+    "generatingAnalysis": "Membuat analisis terperinci...",
+    "scoring": "Menilai..."
   },
   "feedback": {
     "missing": "Tidak ada",

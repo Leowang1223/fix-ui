@@ -16,43 +16,131 @@
       "id": 1,
       "description": "Greet and state purpose",
       "chineseDescription": "打招呼並說明需求",
-      "keywords": ["您好", "我想", "我要", "辦理", "開戶", "匯款", "存款", "請問", "麻煩", "想要"],
-      "weight": 15
+      "keywords": [
+        "您好",
+        "我想",
+        "我要",
+        "辦理",
+        "開戶",
+        "匯款",
+        "存款",
+        "請問",
+        "麻煩",
+        "想要"
+      ],
+      "weight": 15,
+      "descriptions": {
+        "vi": "Chào hỏi và nêu mục đích",
+        "th": "ทักทายและแจ้งวัตถุประสงค์",
+        "id": "Sapa & sampaikan tujuan"
+      }
     },
     {
       "id": 2,
       "description": "Provide identification",
       "chineseDescription": "提供證件資料",
-      "keywords": ["身份證", "護照", "ID", "passport", "證件", "身分證", "這是", "給您"],
-      "weight": 20
+      "keywords": [
+        "身份證",
+        "護照",
+        "ID",
+        "passport",
+        "證件",
+        "身分證",
+        "這是",
+        "給您"
+      ],
+      "weight": 20,
+      "descriptions": {
+        "vi": "Cung cấp giấy tờ tùy thân",
+        "th": "แสดงบัตรประจำตัว",
+        "id": "Tunjukkan identitas"
+      }
     },
     {
       "id": 3,
       "description": "Discuss transaction details",
       "chineseDescription": "詢問業務細節",
-      "keywords": ["手續費", "fee", "利率", "interest", "帳戶", "account", "金額", "要多少", "需要", "有什麼"],
-      "weight": 25
+      "keywords": [
+        "手續費",
+        "fee",
+        "利率",
+        "interest",
+        "帳戶",
+        "account",
+        "金額",
+        "要多少",
+        "需要",
+        "有什麼"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Thảo luận chi tiết giao dịch",
+        "th": "พูดคุยรายละเอียดธุรกรรม",
+        "id": "Bahas detail transaksi"
+      }
     },
     {
       "id": 4,
       "description": "Ask clarifying questions",
       "chineseDescription": "確認交易內容",
-      "keywords": ["確認", "confirm", "對嗎", "是嗎", "correct", "需要", "是這樣嗎", "沒錯", "好的"],
-      "weight": 20
+      "keywords": [
+        "確認",
+        "confirm",
+        "對嗎",
+        "是嗎",
+        "correct",
+        "需要",
+        "是這樣嗎",
+        "沒錯",
+        "好的"
+      ],
+      "weight": 20,
+      "descriptions": {
+        "vi": "Hỏi câu hỏi làm rõ",
+        "th": "ถามคำถามเพื่อความชัดเจน",
+        "id": "Tanyakan klarifikasi"
+      }
     },
     {
       "id": 5,
       "description": "Complete transaction",
       "chineseDescription": "完成辦理",
-      "keywords": ["簽名", "sign", "完成", "好了", "done", "卡", "簽", "這裡", "辦好"],
-      "weight": 15
+      "keywords": [
+        "簽名",
+        "sign",
+        "完成",
+        "好了",
+        "done",
+        "卡",
+        "簽",
+        "這裡",
+        "辦好"
+      ],
+      "weight": 15,
+      "descriptions": {
+        "vi": "Hoàn tất giao dịch",
+        "th": "ทำธุรกรรมให้เสร็จสิ้น",
+        "id": "Selesaikan transaksi"
+      }
     },
     {
       "id": 6,
       "description": "Thank and leave",
       "chineseDescription": "感謝離開",
-      "keywords": ["謝謝", "謝", "再見", "感謝", "拜拜", "謝啦"],
-      "weight": 5
+      "keywords": [
+        "謝謝",
+        "謝",
+        "再見",
+        "感謝",
+        "拜拜",
+        "謝啦"
+      ],
+      "weight": 5,
+      "descriptions": {
+        "vi": "Cảm ơn và rời đi",
+        "th": "ขอบคุณและจากไป",
+        "id": "Terima kasih & pergi"
+      }
     }
   ],
   "roles": [
@@ -60,7 +148,12 @@
       "id": "customer",
       "name": "Bank Customer",
       "chineseName": "客戶",
-      "systemPrompt": "You are a bank customer in Taiwan needing to complete a transaction (opening account, transfer, deposit, etc.). Be clear about your needs. Provide necessary documents and information. Ask questions if unclear. Be professional. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise but informative (2-3 sentences)."
+      "systemPrompt": "You are a bank customer in Taiwan needing to complete a transaction (opening account, transfer, deposit, etc.). Be clear about your needs. Provide necessary documents and information. Ask questions if unclear. Be professional. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise but informative (2-3 sentences).",
+      "names": {
+        "vi": "Khách hàng ngân hàng",
+        "th": "ลูกค้าธนาคาร",
+        "id": "Nasabah Bank"
+      }
     },
     {
       "id": "teller",
@@ -68,7 +161,12 @@
       "chineseName": "銀行員",
       "interviewerImage": "bank clerk.png",
       "interviewerId": "nina",
-      "systemPrompt": "You are a bank teller helping customers with transactions in Taiwan. Be professional and helpful. Ask for required documents. Explain fees, procedures, and requirements clearly. Confirm transaction details. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses clear and professional (2-3 sentences)."
+      "systemPrompt": "You are a bank teller helping customers with transactions in Taiwan. Be professional and helpful. Ask for required documents. Explain fees, procedures, and requirements clearly. Confirm transaction details. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses clear and professional (2-3 sentences).",
+      "names": {
+        "vi": "Giao dịch viên ngân hàng",
+        "th": "พนักงานธนาคาร",
+        "id": "Teller Bank"
+      }
     }
   ],
   "suggestions": {
@@ -114,18 +212,70 @@
     }
   },
   "keyVocabulary": [
-    { "chinese": "銀行", "pinyin": "yín háng", "english": "bank" },
-    { "chinese": "帳戶", "pinyin": "zhàng hù", "english": "account" },
-    { "chinese": "手續費", "pinyin": "shǒu xù fèi", "english": "handling fee" },
-    { "chinese": "匯款", "pinyin": "huì kuǎn", "english": "remittance/transfer" },
-    { "chinese": "身份證", "pinyin": "shēn fèn zhèng", "english": "ID card" }
+    {
+      "chinese": "銀行",
+      "pinyin": "yín háng",
+      "english": "bank"
+    },
+    {
+      "chinese": "帳戶",
+      "pinyin": "zhàng hù",
+      "english": "account"
+    },
+    {
+      "chinese": "手續費",
+      "pinyin": "shǒu xù fèi",
+      "english": "handling fee"
+    },
+    {
+      "chinese": "匯款",
+      "pinyin": "huì kuǎn",
+      "english": "remittance/transfer"
+    },
+    {
+      "chinese": "身份證",
+      "pinyin": "shēn fèn zhèng",
+      "english": "ID card"
+    }
   ],
   "keyPatterns": [
-    { "pattern": "我想...", "example": "我想開一個新的帳戶", "english": "I would like to..." },
-    { "pattern": "請問...", "example": "請問有什麼手續費嗎？", "english": "May I ask..." },
-    { "pattern": "需要...嗎？", "example": "需要簽名嗎？", "english": "Do I need to...?" }
+    {
+      "pattern": "我想...",
+      "example": "我想開一個新的帳戶",
+      "english": "I would like to..."
+    },
+    {
+      "pattern": "請問...",
+      "example": "請問有什麼手續費嗎？",
+      "english": "May I ask..."
+    },
+    {
+      "pattern": "需要...嗎？",
+      "example": "需要簽名嗎？",
+      "english": "Do I need to...?"
+    }
   ],
-  "tags": ["bank", "finance", "transaction", "professional"],
+  "tags": [
+    "bank",
+    "finance",
+    "transaction",
+    "professional"
+  ],
   "createdAt": "2025-01-01T00:00:00Z",
-  "isCustom": false
+  "isCustom": false,
+  "titles": {
+    "vi": "Giao dịch ngân hàng",
+    "th": "ธุรกรรมธนาคาร",
+    "id": "Transaksi Perbankan"
+  },
+  "descriptions": {
+    "vi": "Thực hành xử lý giao dịch ngân hàng bằng tiếng Trung",
+    "th": "ฝึกทำธุรกรรมธนาคารเป็นภาษาจีน",
+    "id": "Latih transaksi perbankan dalam bahasa Mandarin"
+  },
+  "objectives": {
+    "vi": "Hoàn thành giao dịch ngân hàng thành công",
+    "th": "ทำธุรกรรมธนาคารให้สำเร็จ",
+    "id": "Selesaikan transaksi perbankan dengan sukses"
+  }
 }

@@ -16,36 +16,105 @@
       "id": 1,
       "description": "Greet the waiter",
       "chineseDescription": "向服務生打招呼",
-      "keywords": ["你好", "您好", "晚上好", "早上好", "午安", "不好意思", "服務生"],
-      "weight": 15
+      "keywords": [
+        "你好",
+        "您好",
+        "晚上好",
+        "早上好",
+        "午安",
+        "不好意思",
+        "服務生"
+      ],
+      "weight": 15,
+      "descriptions": {
+        "vi": "Chào nhân viên phục vụ",
+        "th": "ทักทายพนักงาน",
+        "id": "Sapa pelayan"
+      }
     },
     {
       "id": 2,
       "description": "Request the menu",
       "chineseDescription": "要求看菜單",
-      "keywords": ["菜單", "menu", "看看", "給我", "我想看", "有什麼", "麻煩給我"],
-      "weight": 20
+      "keywords": [
+        "菜單",
+        "menu",
+        "看看",
+        "給我",
+        "我想看",
+        "有什麼",
+        "麻煩給我"
+      ],
+      "weight": 20,
+      "descriptions": {
+        "vi": "Xin thực đơn",
+        "th": "ขอเมนู",
+        "id": "Minta menu"
+      }
     },
     {
       "id": 3,
       "description": "Order main dish",
       "chineseDescription": "點主菜",
-      "keywords": ["我要", "想吃", "來一份", "點菜", "點", "給我", "要一個", "想點"],
-      "weight": 30
+      "keywords": [
+        "我要",
+        "想吃",
+        "來一份",
+        "點菜",
+        "點",
+        "給我",
+        "要一個",
+        "想點"
+      ],
+      "weight": 30,
+      "descriptions": {
+        "vi": "Gọi món chính",
+        "th": "สั่งอาหารจานหลัก",
+        "id": "Pesan hidangan utama"
+      }
     },
     {
       "id": 4,
       "description": "Order drinks",
       "chineseDescription": "點飲料",
-      "keywords": ["飲料", "水", "茶", "可樂", "juice", "喝", "飲品", "來杯", "要喝"],
-      "weight": 20
+      "keywords": [
+        "飲料",
+        "水",
+        "茶",
+        "可樂",
+        "juice",
+        "喝",
+        "飲品",
+        "來杯",
+        "要喝"
+      ],
+      "weight": 20,
+      "descriptions": {
+        "vi": "Gọi đồ uống",
+        "th": "สั่งเครื่องดื่ม",
+        "id": "Pesan minuman"
+      }
     },
     {
       "id": 5,
       "description": "Request the bill",
       "chineseDescription": "要求買單",
-      "keywords": ["買單", "結帳", "check", "付錢", "多少錢", "帳單", "算帳", "埋單"],
-      "weight": 15
+      "keywords": [
+        "買單",
+        "結帳",
+        "check",
+        "付錢",
+        "多少錢",
+        "帳單",
+        "算帳",
+        "埋單"
+      ],
+      "weight": 15,
+      "descriptions": {
+        "vi": "Xin hóa đơn",
+        "th": "ขอเช็คบิล",
+        "id": "Minta tagihan"
+      }
     }
   ],
   "roles": [
@@ -53,7 +122,12 @@
       "id": "customer",
       "name": "Customer",
       "chineseName": "顧客",
-      "systemPrompt": "You are a customer at a Taiwanese restaurant. You want to order food and drinks. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Guide the conversation through the checkpoints: greeting, requesting menu, ordering food, ordering drinks, and requesting the bill."
+      "systemPrompt": "You are a customer at a Taiwanese restaurant. You want to order food and drinks. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Guide the conversation through the checkpoints: greeting, requesting menu, ordering food, ordering drinks, and requesting the bill.",
+      "names": {
+        "vi": "Khách hàng",
+        "th": "ลูกค้า",
+        "id": "Pelanggan"
+      }
     },
     {
       "id": "waiter",
@@ -61,7 +135,12 @@
       "chineseName": "服務生",
       "interviewerImage": "resturant waitor.jpg",
       "interviewerId": "man",
-      "systemPrompt": "You are a friendly waiter at a Taiwanese restaurant. Greet customers warmly, take orders, and be helpful. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Recommend popular dishes when asked."
+      "systemPrompt": "You are a friendly waiter at a Taiwanese restaurant. Greet customers warmly, take orders, and be helpful. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary. Keep responses concise (1-2 sentences). Recommend popular dishes when asked.",
+      "names": {
+        "vi": "Nhân viên phục vụ",
+        "th": "พนักงานเสิร์ฟ",
+        "id": "Pelayan"
+      }
     }
   ],
   "suggestions": {
@@ -100,18 +179,70 @@
     }
   },
   "keyVocabulary": [
-    { "chinese": "菜單", "pinyin": "cài dān", "english": "menu" },
-    { "chinese": "點餐", "pinyin": "diǎn cān", "english": "order food" },
-    { "chinese": "炒飯", "pinyin": "chǎo fàn", "english": "fried rice" },
-    { "chinese": "飲料", "pinyin": "yǐn liào", "english": "beverage" },
-    { "chinese": "買單", "pinyin": "mǎi dān", "english": "pay the bill" }
+    {
+      "chinese": "菜單",
+      "pinyin": "cài dān",
+      "english": "menu"
+    },
+    {
+      "chinese": "點餐",
+      "pinyin": "diǎn cān",
+      "english": "order food"
+    },
+    {
+      "chinese": "炒飯",
+      "pinyin": "chǎo fàn",
+      "english": "fried rice"
+    },
+    {
+      "chinese": "飲料",
+      "pinyin": "yǐn liào",
+      "english": "beverage"
+    },
+    {
+      "chinese": "買單",
+      "pinyin": "mǎi dān",
+      "english": "pay the bill"
+    }
   ],
   "keyPatterns": [
-    { "pattern": "我要...", "example": "我要一份炒飯", "english": "I want..." },
-    { "pattern": "請給我...", "example": "請給我一杯水", "english": "Please give me..." },
-    { "pattern": "有沒有...?", "example": "有沒有菜單?", "english": "Do you have...?" }
+    {
+      "pattern": "我要...",
+      "example": "我要一份炒飯",
+      "english": "I want..."
+    },
+    {
+      "pattern": "請給我...",
+      "example": "請給我一杯水",
+      "english": "Please give me..."
+    },
+    {
+      "pattern": "有沒有...?",
+      "example": "有沒有菜單?",
+      "english": "Do you have...?"
+    }
   ],
-  "tags": ["restaurant", "food", "ordering", "daily-life"],
+  "tags": [
+    "restaurant",
+    "food",
+    "ordering",
+    "daily-life"
+  ],
   "createdAt": "2025-01-01T00:00:00Z",
-  "isCustom": false
+  "isCustom": false,
+  "titles": {
+    "vi": "Gọi món tại nhà hàng",
+    "th": "สั่งอาหารที่ร้านอาหาร",
+    "id": "Memesan Makanan di Restoran"
+  },
+  "descriptions": {
+    "vi": "Thực hành gọi món ăn và đồ uống tại nhà hàng Trung Quốc",
+    "th": "ฝึกสั่งอาหารและเครื่องดื่มในร้านอาหารจีน",
+    "id": "Berlatih memesan makanan dan minuman di restoran Tiongkok"
+  },
+  "objectives": {
+    "vi": "Gọi món ăn và đồ uống thành công",
+    "th": "สั่งอาหารและเครื่องดื่มได้สำเร็จ",
+    "id": "Berhasil memesan makanan dan minuman"
+  }
 }

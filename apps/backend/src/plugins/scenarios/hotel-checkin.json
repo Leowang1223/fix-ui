@@ -16,29 +16,91 @@
       "id": 1,
       "description": "Provide reservation name and details",
       "chineseDescription": "提供預訂姓名和資料",
-      "keywords": ["我", "預訂", "訂房", "名字", "姓", "check in", "入住", "訂單", "您好", "你好", "報到"],
-      "weight": 25
+      "keywords": [
+        "我",
+        "預訂",
+        "訂房",
+        "名字",
+        "姓",
+        "check in",
+        "入住",
+        "訂單",
+        "您好",
+        "你好",
+        "報到"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Cung cấp tên, chi tiết đặt phòng",
+        "th": "แจ้งชื่อและรายละเอียดการจอง",
+        "id": "Berikan nama dan detail reservasi"
+      }
     },
     {
       "id": 2,
       "description": "Show ID and answer staff questions",
       "chineseDescription": "出示證件並回答問題",
-      "keywords": ["護照", "身分證", "ID", "證件", "這是", "給你", "有", "沒有", "是的", "對"],
-      "weight": 25
+      "keywords": [
+        "護照",
+        "身分證",
+        "ID",
+        "證件",
+        "這是",
+        "給你",
+        "有",
+        "沒有",
+        "是的",
+        "對"
+      ],
+      "weight": 25,
+      "descriptions": {
+        "vi": "Xuất trình giấy tờ, trả lời",
+        "th": "แสดงบัตรและตอบคำถาม",
+        "id": "Tunjukkan ID, jawab pertanyaan"
+      }
     },
     {
       "id": 3,
       "description": "Acknowledge room information and ask questions if needed",
       "chineseDescription": "確認房間資訊並提問（如需要）",
-      "keywords": ["好的", "明白", "了解", "知道了", "清楚", "謝謝", "請問", "有沒有", "wifi", "早餐", "幾點", "密碼", "幾樓"],
-      "weight": 30
+      "keywords": [
+        "好的",
+        "明白",
+        "了解",
+        "知道了",
+        "清楚",
+        "謝謝",
+        "請問",
+        "有沒有",
+        "wifi",
+        "早餐",
+        "幾點",
+        "密碼",
+        "幾樓"
+      ],
+      "weight": 30,
+      "descriptions": {
+        "vi": "Xác nhận thông tin phòng, hỏi",
+        "th": "รับทราบข้อมูลห้องและสอบถาม",
+        "id": "Konfirmasi info kamar, tanya"
+      }
     },
     {
       "id": 4,
       "description": "Thank the staff",
       "chineseDescription": "感謝櫃檯人員",
-      "keywords": ["謝謝", "感謝", "麻煩了", "辛苦了"],
-      "weight": 20
+      "keywords": [
+        "謝謝",
+        "感謝",
+        "麻煩了",
+        "辛苦了"
+      ],
+      "weight": 20,
+      "descriptions": {
+        "vi": "Cảm ơn nhân viên",
+        "th": "ขอบคุณพนักงาน",
+        "id": "Ucapkan terima kasih"
+      }
     }
   ],
   "roles": [
@@ -46,7 +108,12 @@
       "id": "guest",
       "name": "Hotel Guest",
       "chineseName": "客人",
-      "systemPrompt": "You are a hotel guest checking into a Taiwan hotel (飯店). Be polite and professional. Ask about your room and hotel facilities. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 飯店 not 酒店). Keep responses concise (1-2 sentences)."
+      "systemPrompt": "You are a hotel guest checking into a Taiwan hotel (飯店). Be polite and professional. Ask about your room and hotel facilities. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 飯店 not 酒店). Keep responses concise (1-2 sentences).",
+      "names": {
+        "vi": "Khách",
+        "th": "แขกโรงแรม",
+        "id": "Tamu Hotel"
+      }
     },
     {
       "id": "receptionist",
@@ -54,7 +121,12 @@
       "chineseName": "前台",
       "interviewerImage": "man.png",
       "interviewerId": "man",
-      "systemPrompt": "You are a hotel receptionist at a Taiwan hotel (飯店). Be welcoming and helpful. Confirm the guest's reservation, provide room information, and answer questions about hotel facilities. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 飯店 not 酒店). Keep responses clear and professional (1-2 sentences)."
+      "systemPrompt": "You are a hotel receptionist at a Taiwan hotel (飯店). Be welcoming and helpful. Confirm the guest's reservation, provide room information, and answer questions about hotel facilities. IMPORTANT: Use Traditional Chinese (Taiwan, 繁體中文) naturally with Taiwan-specific vocabulary (e.g., 飯店 not 酒店). Keep responses clear and professional (1-2 sentences).",
+      "names": {
+        "vi": "Lễ tân khách sạn",
+        "th": "พนักงานต้อนรับโรงแรม",
+        "id": "Resepsionis Hotel"
+      }
     }
   ],
   "suggestions": {
@@ -107,18 +179,70 @@
     }
   },
   "keyVocabulary": [
-    { "chinese": "入住", "pinyin": "rù zhù", "english": "check in" },
-    { "chinese": "預訂", "pinyin": "yù dìng", "english": "reservation" },
-    { "chinese": "房間", "pinyin": "fáng jiān", "english": "room" },
-    { "chinese": "鑰匙", "pinyin": "yào shi", "english": "key" },
-    { "chinese": "早餐", "pinyin": "zǎo cān", "english": "breakfast" }
+    {
+      "chinese": "入住",
+      "pinyin": "rù zhù",
+      "english": "check in"
+    },
+    {
+      "chinese": "預訂",
+      "pinyin": "yù dìng",
+      "english": "reservation"
+    },
+    {
+      "chinese": "房間",
+      "pinyin": "fáng jiān",
+      "english": "room"
+    },
+    {
+      "chinese": "鑰匙",
+      "pinyin": "yào shi",
+      "english": "key"
+    },
+    {
+      "chinese": "早餐",
+      "pinyin": "zǎo cān",
+      "english": "breakfast"
+    }
   ],
   "keyPatterns": [
-    { "pattern": "我來...", "example": "我來check in", "english": "I'm here to..." },
-    { "pattern": "請問...", "example": "請問早餐幾點開始？", "english": "May I ask..." },
-    { "pattern": "在幾樓？", "example": "房間在幾樓？", "english": "On which floor?" }
+    {
+      "pattern": "我來...",
+      "example": "我來check in",
+      "english": "I'm here to..."
+    },
+    {
+      "pattern": "請問...",
+      "example": "請問早餐幾點開始？",
+      "english": "May I ask..."
+    },
+    {
+      "pattern": "在幾樓？",
+      "example": "房間在幾樓？",
+      "english": "On which floor?"
+    }
   ],
-  "tags": ["hotel", "travel", "accommodation", "daily-life"],
+  "tags": [
+    "hotel",
+    "travel",
+    "accommodation",
+    "daily-life"
+  ],
   "createdAt": "2025-01-01T00:00:00Z",
-  "isCustom": false
+  "isCustom": false,
+  "titles": {
+    "vi": "Nhận phòng khách sạn",
+    "th": "เช็คอินโรงแรม",
+    "id": "Check-in Hotel"
+  },
+  "descriptions": {
+    "vi": "Thực hành nhận phòng khách sạn bằng tiếng Trung (Đài Loan)",
+    "th": "ฝึกเช็คอินโรงแรมเป็นภาษาจีน (ไต้หวัน)",
+    "id": "Berlatih check-in hotel dalam bahasa Mandarin (Taiwan)"
+  },
+  "objectives": {
+    "vi": "Hoàn tất thủ tục nhận phòng khách sạn",
+    "th": "เช็คอินโรงแรมให้สำเร็จ",
+    "id": "Berhasil menyelesaikan proses check-in hotel"
+  }
 }
