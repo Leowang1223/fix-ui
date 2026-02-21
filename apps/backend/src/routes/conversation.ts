@@ -591,10 +591,10 @@ router.post('/start', authenticateUser, async (req: AuthRequest, res) => {
         })
       }
 
-      // 初始化 checkpoints
+      // 初始化 checkpoints（locale-aware description）
       checkpoints = scenario.checkpoints.map((cp: any) => ({
         id: cp.id,
-        description: cp.description,
+        description: cp.descriptions?.[locale] || cp.description,
         chineseDescription: cp.chineseDescription,
         keywords: cp.keywords || [],
         weight: cp.weight,
@@ -896,8 +896,8 @@ ${vocabList}
       sessionId: session.sessionId,
       scenario: scenario ? {
         scenarioId: scenario.scenario_id,
-        title: scenario.title,
-        objective: scenario.objective,
+        title: scenario.titles?.[locale] || scenario.title,
+        objective: scenario.objectives?.[locale] || scenario.objective,
         userRole: userRole,
         aiRole: aiRole.name,
         checkpoints: checkpoints,

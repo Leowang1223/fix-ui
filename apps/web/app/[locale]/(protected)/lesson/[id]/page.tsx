@@ -2934,16 +2934,6 @@ export default function LessonPage() {
                 <span className="text-gray-300">|</span>
                 <div className="flex items-center gap-2">
                   <span className="text-gray-500">{currentStep.english_hint}</span>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      if (currentStep.english_hint) playTTS(currentStep.english_hint)
-                    }}
-                    className="p-1.5 rounded-full bg-purple-50 hover:bg-purple-100 text-purple-600 transition-all touch-manipulation"
-                    title={tLesson('playEnglish')}
-                  >
-                    <Volume2 size={14} />
-                  </button>
                 </div>
                 {/* 儲存到 Flashcard 小圖標 */}
                 <button
