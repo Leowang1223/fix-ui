@@ -1053,7 +1053,10 @@ export default function LessonPage() {
     async function loadLesson() {
       try {
         setLoading(true)
-        const response = await fetch(`${API_BASE}/api/lessons/${lessonId}`)
+        const locale = document.cookie.match(/NEXT_LOCALE=(\w+)/)?.[1] || document.documentElement.lang?.split('-')[0] || 'en'
+        const response = await fetch(`${API_BASE}/api/lessons/${lessonId}`, {
+          headers: { 'Accept-Language': locale }
+        })
         if (!response.ok) throw new Error('Failed to load lesson')
         const data = await response.json()
 
