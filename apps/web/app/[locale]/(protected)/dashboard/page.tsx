@@ -21,7 +21,7 @@ import DailyGoalCard from "@/components/goals/DailyGoalCard"
 import LearningPathCard from "@/components/path/LearningPathCard"
 import { TrendChart } from "@/components/ui/TrendChart"
 import { SmartRecommendationBanner } from "@/components/ui/RecommendationCard"
-import { getTopRecommendation, Recommendation } from "@/lib/recommendations"
+import { Recommendation } from "@/lib/recommendations"
 import { Tooltip } from "@/components/ui/Tooltip"
 import { PageGuide } from "@/components/onboarding"
 
@@ -304,11 +304,25 @@ export default function DashboardPage() {
     setStats(calculatedStats)
   }, [lessonProgress])
 
-  // Load top recommendation for banner
+  // Derive banner recommendation from nextLesson (uses real API lesson IDs)
   useEffect(() => {
-    const top = getTopRecommendation()
-    setTopRecommendation(top)
-  }, [lessonProgress])
+    if (!nextLesson) {
+      setTopRecommendation(null)
+      return
+    }
+    const progress = lessonProgress[nextLesson.lesson_id] || 0
+    setTopRecommendation({
+      id: `lesson-${nextLesson.lesson_id}`,
+      type: progress > 0 ? 'continue' : 'new',
+      lessonId: nextLesson.lesson_id,
+      lessonTitle: nextLesson.title,
+      reason: progress > 0 ? 'Continue your progress' : 'Continue to the next lesson',
+      priority: 10,
+      confidence: 100,
+      icon: 'book-open',
+      color: 'green',
+    })
+  }, [nextLesson])
 
   const handleLessonClick = (lessonId: string) => {
     router.push(`/lesson/${lessonId}`)
